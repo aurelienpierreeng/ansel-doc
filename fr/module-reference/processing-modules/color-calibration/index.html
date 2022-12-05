@@ -1,0 +1,3413 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+      <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>darktable 4.0 user manual - calibration des couleurs</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+      <link rel="stylesheet" href="/dtdocs/css/style.min.3b298d8f37646aff6a802627ff27a707153196970e12552ddf3f7e6fdf49ebb1.css">
+      
+
+
+<script> var indexURL="https:\/\/darktable-org.github.io\/dtdocs\/fr\/index.json"</script>
+<script src="/dtdocs/js/jquery.js"></script>
+<script src="/dtdocs/js/popper.js" type="module"></script>
+<script src="/dtdocs/js/bootstrap.js"></script>
+<script src="/dtdocs/js/lunr.js"></script>
+<script src="/dtdocs/js/app.js"></script>
+
+
+    </head>
+    <body>
+        
+
+        <header class="navbar navbar-expand-lg sticky-top  navbar-dark bg-dark">
+   <a class="navbar-brand" href="/dtdocs" rel="home" title="darktable 4.0 user manual">
+	darktable 4.0 user manual
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+	    
+	      <li class="nav-item dropdown" aria-describedby="language-picker-description">
+		   <p class="sr-only" id="language-picker-description">languages</p>
+		   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+             <img src="https://darktable-org.github.io/dtdocs//language-icons/icon20x24px-exported-transparent.png" alt="Language Icon" height="20" class="translation-icon"/>
+		     <span>translations</span>
+		   </a>
+		   <div class="dropdown-menu dropdonw-trans" role="listbox">
+		      <a class="dropdown-item" aria-selected="true" hreflang="fr" role="option" lang="fr" href="https://darktable-org.github.io/dtdocs/fr/module-reference/processing-modules/color-calibration/">Français</a>
+		        
+		      <a class="dropdown-item" hreflang="en" role="option" lang="en" href="https://darktable-org.github.io/dtdocs/en/module-reference/processing-modules/color-calibration/">English</a>
+		    
+		      <a class="dropdown-item" hreflang="de" role="option" lang="de" href="https://darktable-org.github.io/dtdocs/de/module-reference/processing-modules/color-calibration/">German</a>
+		    
+		      <a class="dropdown-item" hreflang="es" role="option" lang="es" href="https://darktable-org.github.io/dtdocs/es/module-reference/processing-modules/color-calibration/">Espanol</a>
+		    
+		      <a class="dropdown-item" hreflang="pt_br" role="option" lang="pt_br" href="https://darktable-org.github.io/dtdocs/pt_br/module-reference/processing-modules/color-calibration/">Português</a>
+		    
+		      <a class="dropdown-item" hreflang="uk" role="option" lang="uk" href="https://darktable-org.github.io/dtdocs/uk/module-reference/processing-modules/color-calibration/">Ukrainian</a>
+		    
+		      <a class="dropdown-item" hreflang="nl" role="option" lang="nl" href="https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-calibration/">Dutch</a>
+		    
+		   </div>
+	       </li>
+	    
+	</ul>
+        <ul>
+           <form class="form-inline my-2 my-lg-0">
+                <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search" autocomplete="off" aria-label="Search">
+           </form>
+        </ul>
+
+
+    </div>
+</header>
+
+<div id="search-results" class="search-results">
+</div>
+
+
+        <div class="container-fluid">
+	    <div class="row">
+		<div class="content col-sm-12 order-sm-1 col-md-9 mx-md-auto order-md-12">
+		    
+
+
+
+<div class="crumbs">
+    <span class="crumb">
+	
+
+
+<a href='/dtdocs/fr/'>darktable</a> / <a href='/dtdocs/fr/module-reference/'>Références des modules</a> / <a href='/dtdocs/fr/module-reference/processing-modules/'>modules de traitement</a> / calibration des couleurs
+    </span>
+</div>
+
+<div class="prev-next row">
+    <div class="col-6">
+    
+	<a href="/dtdocs/fr/module-reference/processing-modules/framing/" class="next">&lt; cadre décoratif</a>
+	
+    </div>
+    <div class="col-6">
+    
+	<a href="/dtdocs/fr/module-reference/processing-modules/censorize/" class="prev">censurer &gt;</a>
+	
+    </div>
+</div>
+
+
+<article role="main">
+
+    <h1 class="title">
+        calibration des couleurs
+    </h1>
+
+    
+    <div class="toc">
+	<a data-toggle="collapse" href="#collapseTOC" role="button" aria-expanded="false" aria-controls="collapseTOC">
+  
+</a>
+<div class="collapse" id="collapseTOC">
+    <div class="card card-body">
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#balance-des-blancs-dans-longlet-transformation-dadaptation-chromatique-cat">balance des blancs dans l&rsquo;onglet Transformation d&rsquo;Adaptation Chromatique (CAT)</a>
+      <ul>
+        <li><a href="#flux-de-travail-de-longlet-cat">flux de travail de l&rsquo;onglet CAT</a></li>
+        <li><a href="#contrôles-de-longlet-cat">contrôles de l&rsquo;onglet CAT</a></li>
+        <li><a href="#avertissements-cat">avertissements CAT</a></li>
+      </ul>
+    </li>
+    <li><a href="#mixeur-de-canaux">mixeur de canaux</a></li>
+    <li><a href="#onglets-r-v-et-b">onglets R, V et B</a>
+      <ul>
+        <li><a href="#contrôles-des-onglets-r-v-et-b">contrôles des onglets R, V et B</a></li>
+      </ul>
+    </li>
+    <li><a href="#onglets-luminosité-et-saturation">onglets luminosité et saturation</a>
+      <ul>
+        <li><a href="#contrôles-de-longlet-saturation">contrôles de l&rsquo;onglet saturation</a></li>
+        <li><a href="#contrôles-de-longlet-luminosité">contrôles de l&rsquo;onglet luminosité</a></li>
+      </ul>
+    </li>
+    <li><a href="#onglet-gris">onglet gris</a>
+      <ul>
+        <li><a href="#contrôles-de-longlet-gris">contrôles de l&rsquo;onglet gris</a></li>
+      </ul>
+    </li>
+    <li><a href="#mappage-des-couleurs">mappage des couleurs</a>
+      <ul>
+        <li><a href="#step-1set-the-target">step 1: set the target</a></li>
+        <li><a href="#step-2-match-the-target">step 2 : match the target</a></li>
+      </ul>
+    </li>
+    <li><a href="#extraction-de-paramètres-à-laide-dune-charte-de-couleurs">extraction de paramètres à l&rsquo;aide d&rsquo;une charte de couleurs</a>
+      <ul>
+        <li><a href="#chartes-de-couleurs-prises-en-charge">chartes de couleurs prises en charge</a></li>
+        <li><a href="#prérequis">prérequis</a></li>
+        <li><a href="#utilisation">utilisation</a></li>
+        <li><a href="#lire-le-rapport-de-profil">lire le rapport de profil</a>
+          <ul>
+            <li><a href="#delta-e-et-le-rapport-de-qualité">delta E et le rapport de qualité</a></li>
+            <li><a href="#données-du-profil">données du profil</a></li>
+            <li><a href="#valeurs-de-normalisation">valeurs de normalisation</a></li>
+            <li><a href="#superposition">superposition</a></li>
+          </ul>
+        </li>
+        <li><a href="#amélioration-du-profil">amélioration du profil</a></li>
+        <li><a href="#vérification-de-profil">vérification de profil</a></li>
+      </ul>
+    </li>
+    <li><a href="#mises-en-garde">mises en garde</a></li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+    </div>
+    
+
+    <p>Un module complet de correction de l&rsquo;espace de couleur, de réglage de la balance des blancs, ainsi qu&rsquo;un mixeur de canaux.</p>
+<p>Ce module simple mais puissant peut être utilisé des manières suivantes :</p>
+<ul>
+<li>
+<p>Pour régler la balance des blancs (<a href="#balance-des-blancs-dans-longlet-transformation-dadaptation-chromatique-cat">adaptation chromatique</a>), en travaillant en tandem avec le module <a href="/dtdocs/fr/module-reference/processing-modules/white-balance/"><em>balance des blancs</em></a>. Ici, le module <em>balance des blancs</em> effectue quelques réglages initiaux (requis pour que le module <a href="/dtdocs/fr/module-reference/processing-modules/demosaic/"><em>dématriçage</em></a> fonctionne efficacement), puis le module <em>calibration des couleurs</em> calcule ensuite une balance des blancs plus précise du point de vue perceptif une fois que le profil de couleur d&rsquo;entrée a été appliqué.</p>
+</li>
+<li>
+<p>En tant que simple <a href="#mixeur-de-canaux">mélangeur de canaux</a> RVB, permet d&rsquo;ajuster les canaux de sortie R, V et B en fonction des canaux d&rsquo;entrée R, V et B pour effectuer une gradation des couleurs par diaphonie.</p>
+</li>
+<li>
+<p>Pour régler la <a href="#onglets-luminosit%c3%a9-et-saturation">saturation et la luminosité des couleurs</a> de l&rsquo;image, en fonction de la valeur relative des canaux R, V et B de chaque pixel.</p>
+</li>
+<li>
+<p>Pour produire des <a href="#onglet-gris">niveaux de gris</a> basés sur les valeurs relatives des canaux R, V et B, d&rsquo;une manière similaire à la réponse d&rsquo;un film noir et blanc à un spectre lumineux.</p>
+</li>
+<li>
+<p>Pour améliorer la précision des couleurs du profil de couleur d&rsquo;entrée à l&rsquo;aide d&rsquo;une <a href="#extraction-de-param%c3%a8tres-%c3%a0-laide-dune-charte-de-couleurs">charte de couleurs</a>.</p>
+</li>
+</ul>
+<h1 id="balance-des-blancs-dans-longlet-transformation-dadaptation-chromatique-cat"><a href="#balance-des-blancs-dans-longlet-transformation-dadaptation-chromatique-cat">🔗</a>balance des blancs dans l&rsquo;onglet Transformation d&rsquo;Adaptation Chromatique (CAT)</h1>
+<p>L&rsquo;adaptation chromatique vise à prédire à quoi ressembleraient toutes les surfaces de la scène si elles avaient été éclairées par un autre illuminant. Ce que nous voulons en fait prédire, cependant, c&rsquo;est à quoi ces surfaces auraient ressemblé si elles avaient été éclairées par le même illuminant que votre moniteur, afin que toutes les couleurs de la scène correspondent au changement d&rsquo;illuminant. La balance des blancs, quant à elle, vise uniquement à garantir que les blancs et les gris sont vraiment neutres (R = V = B) et ne se soucie pas vraiment du reste de la gamme de couleurs. La balance des blancs n&rsquo;est donc qu&rsquo;une adaptation chromatique partielle.</p>
+<p>L&rsquo;adaptation chromatique est contrôlée dans l&rsquo;onglet Transformation d&rsquo;adaptation chromatique (CAT) du module <em>calibration des couleurs</em>. Lorsqu&rsquo;il est utilisé de cette manière, le module <em>balance des blancs</em> est toujours requis car il doit effectuer une opération de balance des blancs de base (connectée aux valeurs de profil de couleur d&rsquo;entrée). Cette balance des blancs technique (mode « neutre boîtier ») est un réglage constant qui donne un aspect achromatique aux gris éclairés par un illuminant D65 standard, et rend le processus de dématriçage plus précis, mais n&rsquo;effectue aucune adaptation perceptuelle en fonction de la scène. L&rsquo;adaptation chromatique proprement dite est alors effectuée par le module <em>calibration des couleurs</em>, en plus des corrections effectuées par les modules <em>balance des blancs</em> et <em>profil de couleur d&rsquo;entrée</em>. L&rsquo;utilisation de matrices personnalisées dans le module <em>profil de couleur d&rsquo;entrée</em> est donc déconseillée. De plus, les coefficients RVB du module <em>balance des blancs</em> doivent être précis pour que ce module fonctionne de manière prévisible.</p>
+<p>Les modules <em>calibration des couleurs</em> et <em>balance des blancs</em> peuvent être automatiquement appliqués pour effectuer une adaptation chromatique pour les nouveaux traitements en définissant l&rsquo;option de flux de travail d&rsquo;adaptation chromatique à « moderne » dans (<a href="/dtdocs/fr/preferences-settings/processing/">préférences&gt; traitement&gt; appliquer l&rsquo;adaptation chromatique par défaut</a>). Si vous préférez effectuer tous les équilibrages des blancs dans le module <em>balance des blancs</em>, une option « originel » est également disponible. Aucune des deux options n&rsquo;empêche l&rsquo;utilisation d&rsquo;autres modules tels que <a href="/dtdocs/fr/module-reference/processing-modules/color-balance-rgb/"><em>balance des couleurs RGB</em></a> plus tard dans le pipeline graphique pour le gradation créative des couleurs.</p>
+<p>Par défaut, le module <em>calibration des couleurs</em> effectue une adaptation chromatique en :</p>
+<ul>
+<li>
+<p>lisant les données Exif du fichier RAW pour récupérer la balance des blancs de la scène définie par le boîtier,</p>
+</li>
+<li>
+<p>ajustant ce paramètre depuis le module <em>balance des blancs</em> à l&rsquo;aide de la balance des blancs de référence du boîtier,</p>
+</li>
+<li>
+<p>ajustant de plus ce paramètre avec le profil de couleur d&rsquo;entrée utilisé (matrice standard uniquement).</p>
+</li>
+</ul>
+<p>Par souci de cohérence, les paramètres par défaut du module <em>calibration des couleurs</em> supposent toujours que la matrice standard est utilisée dans le module <em>profil de couleur en entrée</em> &ndash; tous les paramètres non standard de ce module sont ignorés. Cependant, le module <em>calibration des couleurs</em> peut lire ses valeurs par défaut dans n&rsquo;importe quel préréglage appliqué automatiquement dans le module <em>balance des blancs</em>.</p>
+<p>Il est également intéressant de noter que, contrairement au module <em>balance des blancs</em>, le module <em>calibration des couleurs</em> peut être utilisé avec des <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/">masques</a>. Cela signifie que vous pouvez corriger sélectivement différentes parties de l&rsquo;image pour tenir compte des différentes sources de lumière.</p>
+<p>Pour ce faire, créez une instance du module <em>calibration des couleurs</em> pour effectuer des ajustements globaux en utilisant un masque pour exclure les parties de l&rsquo;image que vous souhaitez gérer différemment. Créez ensuite une seconde instance du module réutilisant le masque de la première instance (inversé) en utilisant un <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/raster/">masque raster</a>.</p>
+<h2 id="flux-de-travail-de-longlet-cat"><a href="#flux-de-travail-de-longlet-cat">🔗</a>flux de travail de l&rsquo;onglet CAT</h2>
+<p>L&rsquo;illuminant et l&rsquo;espace colorimétrique par défaut utilisés par l&rsquo;adaptation chromatique sont initialisés à partir des métadonnées Exif du fichier RAW. Il y a quatre options disponibles dans l&rsquo;onglet CAT pour définir ces paramètres manuellement :</p>
+<ul>
+<li>
+<p>Utilisez la pipette de couleur (à droite de la pastille de couleur) pour sélectionner une couleur neutre dans l&rsquo;image ou, si aucune n&rsquo;est disponible, sélectionnez l&rsquo;image entière. Dans ce cas, l&rsquo;algorithme trouve la couleur moyenne dans la zone choisie et définit cette couleur comme illuminant. Cette méthode repose sur l&rsquo;hypothèse du « monde gris », qui prédit que la couleur moyenne d&rsquo;une scène naturelle sera neutre. Cette méthode ne fonctionnera pas pour les scènes artificielles, par exemple celles avec des surfaces peintes.</p>
+</li>
+<li>
+<p>Sélectionnez « <em>(IA) détecter depuis les bords de l&rsquo;image</em> », qui utilise une technique d&rsquo;apprentissage-machine pour détecter l&rsquo;illuminant à l&rsquo;aide de l&rsquo;image entière. Cet algorithme trouve la couleur moyenne du dégradé sur les bords de l&rsquo;image et définit cette couleur comme illuminant. Cette méthode repose sur l&rsquo;hypothèse du &ldquo;bord gris&rdquo;, qui peut échouer si de grandes aberrations chromatiques sont présentes. Comme toute méthode de détection des contours, elle est sensible au bruit et mal adaptée aux images à haute sensibilité ISO, mais elle est très bien adaptée aux scènes artificielles où aucune couleur neutre n&rsquo;est disponible.</p>
+</li>
+<li>
+<p>Sélectionnez « <em>(IA) détecter depuis les surfaces de l&rsquo;image</em> », qui combine les deux méthodes précédentes, en utilisant également l&rsquo;image entière. Cet algorithme trouve la couleur moyenne dans l&rsquo;image, donnant plus de poids aux zones où des détails précis sont trouvés et où les couleurs sont fortement corrélées. Cela l&rsquo;immunise mieux contre le bruit que la variante <em>bords</em> et l&rsquo;immunise mieux contre les surfaces réellement non-neutres que la simple moyenne, mais les textures aux couleurs vives (comme l&rsquo;herbe verte) sont susceptibles de le faire échouer.</p>
+</li>
+<li>
+<p>Sélectionnez « <em>tel que pris par le boîtier</em> » pour restaurer les paramètres par défaut du boîtier et relire le RAW Exif.</p>
+</li>
+</ul>
+<p>La pastille de couleur montre la couleur de l&rsquo;illuminant actuellement calculé projeté dans l&rsquo;espace sRGB. Le but de l&rsquo;algorithme d&rsquo;adaptation chromatique est de transformer cette couleur en blanc pur, ce qui ne signifie pas forcément déplacer l&rsquo;image vers sa couleur opposée <em>perceptive</em>. Si l&rsquo;illuminant est correctement réglé, l&rsquo;image aura la même teinte que celle indiquée dans la pastille de couleur lorsque le module est désactivé.</p>
+<p>À gauche de la pastille de couleur se trouve l&rsquo;approximation <em>CCT</em> (température de couleur corrélée). Il s&rsquo;agit de la température la plus proche, en kelvin, de l&rsquo;illuminant actuellement utilisé. Dans la plupart des logiciels de traitement d&rsquo;image, il est courant de régler la balance des blancs en utilisant une combinaison de température et de teinte. Cependant, lorsque l&rsquo;illuminant est éloigné de la lumière du jour, le CCT devient imprécis et non pertinent, et la CIE (Commission internationale de l&rsquo;éclairage) décourage son utilisation dans de telles conditions. Le texte du CCT vous informe de la correspondance CCT la plus proche trouvée :</p>
+<ul>
+<li>
+<p>Lorsque le CCT est suivi de « <em>(lumière du jour)</em> », cela signifie que l&rsquo;illuminant actuel est proche d&rsquo;un spectre de lumière du jour idéal ± 0,5 %, et le chiffre du CCT est donc significatif. Dans ce cas, il est conseillé d&rsquo;utiliser l&rsquo;illuminant « <em>D (lumière du jour)</em> ».</p>
+</li>
+<li>
+<p>Lorsque le CCT est suivi de « <em>(corps noir)</em> », cela signifie que l&rsquo;illuminant actuel est proche d&rsquo;un spectre idéal de corps noir (planckien) ± 0,5 %, et le chiffre du CCT est donc significatif. Dans ce cas, il est conseillé d&rsquo;utiliser l&rsquo;illuminant « <em>Planckien (corps noir)</em> ».</p>
+</li>
+<li>
+<p>Lorsque le CCT est suivi de « <em>(invalide)</em> » , cela signifie que le chiffre CCT n&rsquo;a pas de sens et est faux, car nous sommes trop loin d&rsquo;un spectre de lumière du jour ou d&rsquo;un spectre de la lumière du corps noir. Dans ce cas, il est conseillé d&rsquo;utiliser l&rsquo;illuminant <em>personnalisé</em>. L&rsquo;adaptation chromatique fonctionnera toujours comme prévu (voir la remarque ci-dessous), de sorte que le mot clé « <em>(invalide)</em> » signifie uniquement que la couleur de l&rsquo;illuminant actuel n&rsquo;est pas précisément liée au CCT affiché. Ce mot clé n&rsquo;a rien d&rsquo;inquiétant &ndash; il est simplement là pour vous dire de ne pas utiliser la lumière du jour et les illuminants planckiens car ils ne se comporteront pas comme vous pourriez vous y attendre.</p>
+</li>
+</ul>
+<p>Lorsqu&rsquo;une des méthodes de détection d&rsquo;illuminant ci-dessus est utilisée, le module vérifie où se trouve l&rsquo;illuminant calculé en utilisant les deux spectres idéalisés (lumière du jour et corps noir) et choisit le modèle de spectre le plus précis à utiliser dans son paramètre <em>illuminant</em>. L&rsquo;interface utilisateur changera en conséquence :</p>
+<ul>
+<li>
+<p>Un curseur de température sera fourni si l&rsquo;illuminant détecté est proche d&rsquo;un spectre <em>D (lumière du jour)</em> ou <em>planckien (corps noir)</em>, pour lesquels le CCT est significatif.</p>
+</li>
+<li>
+<p>Des curseurs de teinte et de chroma dans l&rsquo;espace CIE 1976 Luv sont proposés pour l&rsquo;illuminant <em>personnalisé</em>, ce qui permet une sélection directe de la couleur de l&rsquo;illuminant dans un cadre perceptif sans aucune hypothèse intermédiaire.</p>
+</li>
+</ul>
+<hr>
+<p><strong>Remarque :</strong> En interne, l&rsquo;illuminant est représenté par ses coordonnées de chromaticité absolue dans l&rsquo;espace colorimétrique CIE xyY. Les options de sélection de l&rsquo;illuminant dans le module ne sont que des interfaces pour configurer cette chromaticité à partir de relations du monde réel et sont destinées à accélérer ce processus. Peu importe pour l&rsquo;algorithme si le CCT est étiqueté « invalide » &ndash; cela signifie simplement que la relation entre le CCT et les coordonnées xyY correspondantes n&rsquo;est pas physiquement exacte. Quoi qu&rsquo;il en soit, la couleur définie pour l&rsquo;illuminant, telle qu&rsquo;affichée dans la pastille de couleur, sera toujours respectée par l&rsquo;algorithme.</p>
+<hr>
+<p>Lors du passage d&rsquo;un illuminant à un autre, le module tente de traduire le plus précisément possible les réglages précédents vers le nouvel illuminant. Le passage de n&rsquo;importe quel illuminant à <em>personnalisé</em> préserve entièrement vos paramètres, puisque l&rsquo;illuminant <em>personnalisé</em> est un cas général. Le basculement entre d&rsquo;autres modes, ou de <em>personnalisé</em> à tout autre mode, ne conservera pas précisément vos paramètres du mode précédent en raison d&rsquo;erreurs d&rsquo;arrondi.</p>
+<p>D&rsquo;autres <em>illuminants</em> codés en dur sont disponibles (voir ci-dessous). Leurs valeurs proviennent des illuminants standards CIE et sont absolues. Vous pouvez les utiliser directement si vous savez exactement quel type d&rsquo;ampoule a été utilisé pour éclairer la scène et si vous faites confiance au profil d&rsquo;entrée de votre boîtier et à la précision des coefficients de référence D65. Sinon, voir les <a href="#mises-en-garde"><em>mises en garde</em></a> ci-dessous.</p>
+<h2 id="contrôles-de-longlet-cat"><a href="#contr%c3%b4les-de-longlet-cat">🔗</a>contrôles de l&rsquo;onglet CAT</h2>
+<dl>
+<dt>adaptation</dt>
+<dd>L&rsquo;espace colorimétrique de travail dans lequel le module effectuera sa transformation d&rsquo;adaptation chromatique et son mixage de canal. Les options suivantes sont fournies :</dd>
+<dd>
+<ul>
+<li><em>Bradford linéaire (1985)</em>: Ceci est précis pour les illuminants proches de la lumière du jour et est compatible avec la norme standard ICC v4, mais produit des couleurs hors gamut pour les illuminants plus difficiles.</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>CAT16 (2016)</em>: Il s&rsquo;agit de l&rsquo;option par défaut. Elle est plus robuste pour éviter les couleurs imaginaires tout en travaillant avec un large gamut ou du cyan et du violet saturés. Elle est plus précise que le CAT Bradform dans la plupart des cas.</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>Bradford non-linéaire (1985)</em>: Cela peut parfois produire de meilleurs résultats que la version linéaire mais n&rsquo;est pas fiable.</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>XYZ</em>: Il s&rsquo;agit de la méthode la moins précise et n&rsquo;est généralement pas recommandée, sauf à des fins de test et de débogage.</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>aucun (contourné)</em>: Désactive toute adaptation et utiliser l&rsquo;espace de travail RVB du pipeline graphique.</li>
+</ul>
+</dd>
+<dt>illuminant</dt>
+<dd>Le type d&rsquo;illuminant supposé avoir éclairé la scène. Choisissez parmi les éléments suivants :</dd>
+<dd>
+<ul>
+<li><em>identique à la chaîne de traitement (D50)</em> : n&rsquo;effectue pas d&rsquo;adaptation chromatique dans cette instance de module, mais effectue simplement le mixage des canaux, en utilisant l&rsquo;espace colorimétrique <em>adaptation</em> sélectionné.</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>illuminant standard CIE</em> : Choisissez parmi l&rsquo;un des illuminants standard CIE (lumière du jour, incandescent, fluorescent, équi-énergie ou corps noir), ou un illuminant « lumière LED » non standard. Ces valeurs sont toutes pré-calculées - tant que le capteur de votre appareil photo est correctement profilé, vous pouvez simplement les utiliser telles quelles. Pour les illuminants proches du locus planckien, un contrôle supplémentaire de « température » est également fourni (voir ci-dessous).</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>personnalisé</em> : Si un patch gris neutre est disponible dans l&rsquo;image, la couleur de l&rsquo;illuminant peut être sélectionnée à l&rsquo;aide de la pipette de couleur, ou peut être spécifiée manuellement à l&rsquo;aide des curseurs de teinte et de saturation (dans l&rsquo;espace colorimétrique perceptuel LCh). L&rsquo;échantillon de couleur à côté de la pipette de couleur montre la couleur de l&rsquo;illuminant calculé utilisé dans la compensation CAT. La pipette de couleur peut également être utilisé pour restreindre la zone utilisée pour la détection de l&rsquo;IA (ci-dessous).</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>(AI) détecter depuis les surfaces de l&rsquo;image</em>: Cet algorithme obtient la couleur moyenne des zones de l&rsquo;image qui ont une covariance élevée entre les canaux de chroma dans l&rsquo;espace YUV et une variance intra-canal élevée. En d&rsquo;autres termes, il recherche les parties de l&rsquo;image qui semblent être grises sans considérer les surfaces colorées plates qui peuvent être réellement teintées. Il ignore également le bruit de chroma ainsi que les aberrations chromatiques.</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>(AI) détecter depuis les bords de l&rsquo;image</em> : contrairement à l&rsquo;équilibrage des blancs automatique du module <em>balance des blancs</em> qui repose sur l&rsquo;hypothèse du « monde gris », cette méthode détecte automatiquement un illuminant approprié en utilisant l&rsquo;hypothèse du « bord gris », en calculant le Minkowski p-norm (p = 8) du laplacien et en essayant de le minimiser. C&rsquo;est-à-dire qu&rsquo;il suppose que les bords doivent avoir le même dégradé sur tous les canaux (bords gris). Elle est plus sensible au bruit que la précédente méthode de détection basée sur la surface.</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>tel que pris par le boîtier</em> : calcule l&rsquo;illuminant en fonction des paramètres de balance des blancs fournis par l&rsquo;appareil photo.</li>
+</ul>
+</dd>
+<dt>température</dt>
+<dd>Ajuste la température de couleur de l&rsquo;illuminant. Déplacez le curseur vers la droite pour adopter un illuminant plus bleu, ce qui donnera à l&rsquo;image une apparence plus chaude/plus rouge. Déplacez le curseur vers la gauche pour adopter un illuminant plus rouge, ce qui rend l&rsquo;image plus froide/plus bleue après compensation.</dd>
+<dd>
+<p>Ce contrôle n&rsquo;est disponible que pour les illuminants qui se trouvent près du locus de Planck et fournit un réglage fin le long de ce locus. Pour les autres illuminants, le concept de « température de couleur » n&rsquo;a pas de sens, donc aucun curseur de température n&rsquo;est fourni.</p>
+</dd>
+<dt>teinte</dt>
+<dd>Pour une balance des blancs personnalisée, définissez la teinte de la couleur de l&rsquo;illuminant dans l&rsquo;espace colorimétrique LCh (dérivée de l&rsquo;espace CIE Luv).</dd>
+<dt>chroma</dt>
+<dd>Pour une balance des blancs personnalisée, définissez la <em>chroma</em> (ou la saturation) de la couleur de l&rsquo;illuminant dans l&rsquo;espace colorimétrique LCh (dérivé de l&rsquo;espace CIE Luv).</dd>
+<dt>compression gamut</dt>
+<dd>La plupart des capteurs de caméra sont légèrement sensibles aux longueurs d&rsquo;onde UV invisibles, qui sont enregistrées sur le canal bleu et produisent des couleurs « imaginaires ». Une fois corrigées par le profil de couleur d&rsquo;entrée, ces couleurs finiront par sortir du gamut (c&rsquo;est-à-dire qu&rsquo;il ne sera peut-être plus possible de représenter certaines couleurs comme un triplet [R, V, B] valide avec des valeurs positives dans l&rsquo;espace colorimétrique de travail) et produire des artefacts visuels dans les dégradés. L&rsquo;adaptation chromatique peut également repousser d&rsquo;autres couleurs valides hors du gamut tout en repoussant encore plus loin les couleurs déjà hors du gamut.</dd>
+<dd>La <em>compression gamut</em> utilise une méthode perceptive, non destructive, pour tenter de compresser la chroma en préservant la luminance inchangée et en conservant la teinte aussi proche que possible. L&rsquo;objectif de cette méthode est d&rsquo;adapter l&rsquo;image entière au gamut de l&rsquo;espace colorimétrique de travail. Cette fonctionnalité est par exemple très utile pour les scènes contenant des lumières LED bleues, qui sont souvent assez problématiques et peuvent entraîner un affreux écrêtage du gamut dans l&rsquo;image finale.</dd>
+<dt>écrêter les valeurs RVB négatives du gamut</dt>
+<dd>Supprime toutes les valeurs RVB négatives (les met à zéro). Cela permet de gérer un mauvais niveau de noir ainsi que les problèmes d&rsquo;écrêtage du canal bleu qui peuvent survenir avec les lumières LED bleues. Cette option est destructrice pour la couleur (elle peut changer la teinte) mais garantit une sortie RVB valide quoi qu&rsquo;il arrive. Il ne doit jamais être désactivé à moins que vous ne vouliez vous occuper du mappage du gamut manuellement et compreniez ce que vous faites. Dans ce cas, utilisez la <em>correction du niveau de noir</em> dans le module <em>exposition</em> pour vous débarrasser de toute valeur RVB négative (RVB signifie lumière, qui est de l&rsquo;énergie, et qui devrait toujours être une quantité positive), puis augmentez la <em>compression gamut</em> jusqu&rsquo;à ce qu&rsquo;il ne reste plus de taches noires unies dans l&rsquo;image. Un débruitage approprié peut également aider à éliminer les valeurs RVB incorrectes. A noter que cette approche peut encore être insuffisante pour récupérer quelques bleus profonds et lumineux.</dd>
+</dl>
+<hr>
+<p><strong>Remarque 1</strong> : il a été signalé que certains pilotes OpenCL ne fonctionnent pas correctement lorsque des valeurs RVB négatives sont présentes dans le pipeline de pixels, car de nombreux opérateurs de pixels utilisent des logarithmes et des fonctions de puissance (<em>filmique</em>, <em>balance des couleurs</em>, toutes les conversions d&rsquo;espace colorimétrique CIE Lab &lt; -&gt; CIE XYZ), qui ne sont pas définies pour les nombres négatifs. Bien que les entrées soient nettoyées avant les opérations sensibles, cela ne suffit pas pour certains pilotes OpenCL, qui produisent des valeurs isolées <code>NaN</code> (pas un nombre). Ces valeurs <code>NaN</code> peuvent ensuite être diffusées par des filtres locaux (opérations de flou et de netteté, telles que <em>netteté</em>, <em>contraste local</em>, <em>égaliseur de contraste</em>, <em>passe-bas</em>, <em>passe-haut</em>, <em>flou de surface</em> et reconstruction des hautes lumières de <em>filmique</em>), résultant en de grands carrés noirs, gris ou blancs.</p>
+<p>Dans tous ces cas, vous <strong>devez</strong> activer l&rsquo;option « écrêter les valeurs RVB négatives du gamut » dans le module <em>calibration des couleurs</em>.</p>
+<p><strong>Remarque 2</strong> : Un cas courant d&rsquo;échec des algorithmes de couleur dans le module <em>calibration des couleurs</em> (en particulier la compression du gamut) concerne les pixels qui ont une valeur de luminance de 0 (canal Y de l&rsquo;espace CIE 1931 XYZ), mais une chromaticité non nulle (canaux X et Z de l&rsquo;espace CIE 1931 XYZ). Ce cas est une bizarrerie numérique qui ne correspond à aucune réalité physique (un pixel sans luminance ne devrait pas avoir de chromaticité non plus), produira une division par zéro dans les espaces colorimétriques xyY et Yuv, et créera en conséquence des valeurs RVB <code>NaN</code>. Ce problème n&rsquo;est <strong>pas</strong> corrigé dans <em>calibration des couleurs</em> car il s&rsquo;agit du symptôme d&rsquo;un mauvais profilage d&rsquo;entrée et/ou d&rsquo;un mauvais niveau de point noir, et doit être résolu manuellement soit en ajustant le profil de couleur d&rsquo;entrée avec le mélangeur de canaux ou dans la <em>correction du niveau de noir</em> du module <em>exposition</em>.</p>
+<hr>
+<h2 id="avertissements-cat"><a href="#avertissements-cat">🔗</a>avertissements CAT</h2>
+<p>Pour que l&rsquo;adaptation chromatique fonctionne correctement il faut que soient satisfaites un certain nombre d&rsquo;hypothèses concernant les étapes antérieures du traitement dans le pipeline graphique. Il peut être facile d&rsquo;invalider ces hypothèses par inadvertance. Pour vous aider à éviter ce genre d&rsquo;erreur, le module <em>calibration des couleurs</em> affichera des avertissements dans les circonstances suivantes.</p>
+<ul>
+<li>
+<p>Si le module <em>calibration des couleurs</em> est configuré pour effectuer une adaptation chromatique mais que le module <em>balance des blancs</em> n&rsquo;est pas réglé sur « boîtier », des avertissements seront affichés dans les deux modules. Ces erreurs peuvent être résolues soit en réglant le module <em>balance des blancs</em> sur « boîtier » soit en désactivant l&rsquo;adaptation chromatique dans le module <em>calibration des couleurs</em>. Notez que certains capteurs peuvent nécessiter des corrections mineures dans le module <em>balance des blancs</em>, auquel cas ces avertissements peuvent être ignorés.</p>
+</li>
+<li>
+<p>Si deux ou plusieurs instances de <em>calibration des couleurs</em> ont été créées, chacune essayant d&rsquo;effectuer une adaptation chromatique, une erreur sera affichée sur la seconde instance. Cela peut être un cas d&rsquo;utilisation valide (par exemple, lorsque des masques ont été configurés pour appliquer différentes balances des blancs à différentes zones ne se chevauchant pas de l&rsquo;image), auquel cas les avertissements peuvent être ignorés. Dans la plupart des autres cas, l&rsquo;adaptation chromatique doit être désactivée dans l&rsquo;une des instances pour éviter les doubles corrections.</p>
+<p>Par défaut, si une instance du module <em>calibration des couleurs</em> effectue déjà une adaptation chromatique, chaque nouvelle instance que vous créez aura automatiquement son adaptation réglée sur « aucun (contourner) » pour éviter cette erreur de « double correction ».</p>
+</li>
+</ul>
+<p>Les modes d&rsquo;adaptation chromatique dans le module <em>calibration des couleurs</em> peuvent être désactivés en définissant <em>adaptation</em> sur « aucun (contourner) » ou en réglant <em>illuminant</em> sur « identique à la chaîne de traitement (D50) » dans l&rsquo;onglet CAT.</p>
+<p>Dans un flux de travail d&rsquo;édition RAW typique, ces avertissements visent à éviter les erreurs courantes que l&rsquo;on peut facilement faire quand on utilise des préréglages automatiques par défaut dans le module. Lors de l&rsquo;utilisation de préréglages personnalisés et de certains flux de travail spécifiques, tels que l&rsquo;édition de numérisations de films ou de fichiers JPEG, ces avertissements peuvent et doivent être ignorés.</p>
+<p>Les utilisateurs avancés peuvent désactiver les avertissements du module dans <a href="/dtdocs/fr/preferences-settings/processing/">préférences &gt; traitement &gt; montrer les messages d&rsquo;alerte</a>.</p>
+<h1 id="mixeur-de-canaux"><a href="#mixeur-de-canaux">🔗</a>mixeur de canaux</h1>
+<p>Le reste de ce module est un mélangeur de canaux standard, vous permettant d&rsquo;ajuster les sorties R, V, B, la couleur, la luminosité et le gris du module en fonction des valeurs relatives des canaux d&rsquo;entrée R, V et B.</p>
+<p>Le mixage des canaux est effectué dans l&rsquo;espace colorimétrique défini par le contrôle <em>adaptation</em> de l&rsquo;onglet <a href="#contr%c3%b4les-de-longlet-cat">CAT</a>. À toutes fins pratiques, ces espaces CAT sont des espaces RVB particuliers liés à la physiologie humaine et proportionnels aux émissions de lumière dans la scène, mais ils se comportent toujours de la même manière que tout autre espace RVB. L&rsquo;utilisation de l&rsquo;un des espaces CAT peut faciliter le processus de réglage du mixeur de canaux, en raison de leur connexion avec la physiologie humaine, mais il est également possible de mixer les canaux dans l&rsquo;espace de travail RVB du pipeline en réglant <em>adaptation</em> sur « aucun (contourner) ». Pour effectuer un mixage de canaux dans l&rsquo;un des espaces colorimétriques <em>adaptation</em> sans adaptation chromatique, réglez <em>illuminant</em> sur « identique à la chaîne de traitement (D50) ».</p>
+<hr>
+<p><strong>Remarque</strong> : Les couleurs réelles des couleurs primaires CAT ou RVB utilisées pour le mixage de canaux, projetées sur l&rsquo;espace d&rsquo;affichage sRVB, sont peintes à l&rsquo;arrière-plan des curseurs RVB, afin que vous puissiez avoir une idée du décalage de couleur qui résultera de la modification de vos paramètres.</p>
+<hr>
+<p>Le mixage des canaux est un processus qui définit un facteur d&rsquo;amplification/réduction pour chaque canal comme la combinaison des ratios de chaque canal d&rsquo;origine. Au lieu d&rsquo;entrer une simple correction qui lie la valeur de sortie d&rsquo;un canal à sa valeur d&rsquo;entrée (par exemple, <code>R_sortie = R_entrée × correction</code>), la correction de chaque canal dépend de l&rsquo;entrée de <em>tous</em> les canaux pour chaque pixel (par exemple, <code>R_sortie = R_entrée × R_correction + V_entrée × V_correction + B_entrée × B_correction</code>). Ainsi, chaque canal d&rsquo;un pixel contribue aux autres (un processus connu sous le nom de « diaphonie » ou « cross-talk ») qui équivaut à faire tourner les couleurs primaires de l&rsquo;espace colorimétrique en 3D. Il s&rsquo;agit en fait d&rsquo;une simulation numérique de filtres de couleurs matériels.</p>
+<p>Bien que la rotation des couleurs primaires en 3D équivaille finalement à appliquer une rotation générale de teinte, la connexion entre les corrections RVB et la rotation de teinte perceptive qui en résulte n&rsquo;est pas directement prévisible, ce qui rend le processus non intuitif. « R », « V » et « B » doivent être considérés comme trois lumières que nous composons, et non comme un ensemble de couleurs ou de teintes. De plus, puisque la trichromie RVB ne découple pas la luminance et la chromaticité mais est une configuration d&rsquo;éclairage additive, le canal « V » étant plus fortement lié à la perception de la luminance humaine que les canaux « R » et « B » ; tous les pixels ont un canal « V » différent de zéro, ce qui implique que toute correction du canal « V » affectera probablement tous les pixels.</p>
+<p>Le processus de mixage des canaux est donc lié à une interprétation physique du tristimulus RVB (en tant que lumières additives) qui le rend bien adapté à la calibration des couleurs primaires et aux corrections d&rsquo;illuminant. De plus il fusionne les changements de couleur sans cassure. Cependant, essayer de le comprendre et de le prédire d&rsquo;un point de vue perceptif (luminance, teinte et saturation) va échouer et est découragé.</p>
+<hr>
+<p><strong>Remarque</strong> : Les labels « R », « V » et « B » des canaux des espaces colorimétriques de ce module ne sont que des conventions formées par habitude. Ces canaux ne sont pas nécessairement « rouge », « vert » et « bleu », et il est déconseillé d&rsquo;essayer de leur donner un sens en se basant sur leurs noms. Il s&rsquo;agit d&rsquo;un principe général qui s&rsquo;applique à <em>tout</em> espace RVB utilisé dans n&rsquo;importe quelle application.</p>
+<hr>
+<h1 id="onglets-r-v-et-b"><a href="#onglets-r-v-et-b">🔗</a>onglets R, V et B</h1>
+<p>Au niveau le plus élémentaire, vous pouvez considérer les onglets R, V et B du module <em>calibration des couleurs</em> comme un type de multiplication matricielle entre une matrice 3x3 et les valeurs d&rsquo;entrée [R V B]. Ceci est en fait très similaire à ce que fait un profil de couleur ICC basé sur une matrice, sauf que l&rsquo;utilisateur peut entrer les coefficients de la matrice via l&rsquo;interface graphique de darktable plutôt que de lire les coefficients à partir d&rsquo;un fichier de profil ICC.</p>
+<pre tabindex="0"><code>┌ R_sortie ┐     ┌ Rr  Rv  Rb ┐      ┌ R_entrée ┐
+│ V_sortie │  =  │ Vr  Vv  Vb │   X  │ V_entrée │
+└ B_sortie ┘     └ Br  Bv  Bb ┘      └ B_entrée ┘
+</code></pre><p>Si, par exemple, une matrice vous a été fournie pour passer d&rsquo;un espace colorimétrique à un autre, vous pouvez entrer les coefficients de la matrice dans le <em>mixeur de canaux</em> comme suit :</p>
+<ul>
+<li>
+<p>sélectionnez l&rsquo;onglet <em>R</em> puis définissez les valeurs Rr, Rv et Rb à l&rsquo;aide des curseurs d&rsquo;entrée R, V et B</p>
+</li>
+<li>
+<p>sélectionnez l&rsquo;onglet <em>V</em> puis définissez les valeurs Vr, Vv et Vb à l&rsquo;aide des curseurs d&rsquo;entrée R, V et B</p>
+</li>
+<li>
+<p>sélectionnez l&rsquo;onglet <em>B</em> puis définissez les valeurs Br, Bv et Bb à l&rsquo;aide des curseurs d&rsquo;entrée R, V et B</p>
+</li>
+</ul>
+<p>Par défaut, la fonction de mixage du module <em>calibration des couleurs</em> copie simplement les canaux d&rsquo;entrée [R V B] directement sur les canaux de sortie correspondants. Cela équivaut à multiplier par la matrice identité :</p>
+<pre tabindex="0"><code>┌ R_sortie ┐     ┌ 1  0  0 ┐      ┌ R_entrée ┐
+│ V_sortie │  =  │ 0  1  0 │   X  │ V_entrée │
+└ B_sortie ┘     └ 0  0  1 ┘      └ B_entrée ┘
+</code></pre><p>Pour avoir une compréhension plus intuitive du comportement des curseurs de mixage des onglets R, V et B, considérez les points suivants :</p>
+<ul>
+<li>
+<p>pour le canal de destination <em>R</em>, le réglage des curseurs vers la droite rendra les zones R, V ou B de l&rsquo;image plus « rouges ». Déplacer le curseur vers la gauche rendra ces zones plus « cyan ».</p>
+</li>
+<li>
+<p>pour le canal de destination <em>V</em>, le réglage des curseurs vers la droite rendra les zones R, V ou B de l&rsquo;image plus « vertes ». Déplacer le curseur vers la gauche rendra ces zones plus « magenta ».</p>
+</li>
+<li>
+<p>pour le canal de destination <em>B</em>, le réglage des curseurs vers la droite rendra les zones R, V ou B de l&rsquo;image plus « bleues ». Déplacer le curseur vers la gauche rendra ces zones plus « jaunes ».</p>
+</li>
+</ul>
+<h2 id="contrôles-des-onglets-r-v-et-b"><a href="#contr%c3%b4les-des-onglets-r-v-et-b">🔗</a>contrôles des onglets R, V et B</h2>
+<p>Les contrôles suivants sont affichés pour chacun des onglets R, V et B :</p>
+<dl>
+<dt>entrée R/V/B</dt>
+<dd>Choisissez dans quelle mesure les canaux d&rsquo;entrée R, V et B influencent le canal de sortie relatif à l&rsquo;onglet concerné.</dd>
+<dt>normaliser les canaux</dt>
+<dd>Cochez cette case pour normaliser les coefficients afin d&rsquo;essayer de préserver la luminosité globale de ce canal dans l&rsquo;image finale par rapport à l&rsquo;image d&rsquo;entrée.</dd>
+</dl>
+<h1 id="onglets-luminosité-et-saturation"><a href="#onglets-luminosit%c3%a9-et-saturation">🔗</a>onglets luminosité et saturation</h1>
+<p>La luminosité et la saturation (saturation des couleurs) des pixels d&rsquo;une image peuvent également être ajustées en fonction des canaux d&rsquo;entrée R, V et B. L&rsquo;algorithme de base utilisé est le même que celui qu&rsquo;utilise le module <a href="/dtdocs/fr/module-reference/processing-modules/filmic-rgb/"><em>filmique rvb</em></a> pour le mappage des tonalités (qui préserve les ratios RVB) et pour la saturation des tons moyens (qu&rsquo;il manipule).</p>
+<dl>
+<dt>algorithme de saturation</dt>
+<dd>Ce contrôle vous permet de mettre à niveau l&rsquo;algorithme de saturation vers la nouvelle version 2021, pour les développements effectués avant darktable 3.6 &ndash; il n&rsquo;apparaîtra pas pour les développements qui utilisent déjà la dernière version.</dd>
+</dl>
+<h2 id="contrôles-de-longlet-saturation"><a href="#contr%c3%b4les-de-longlet-saturation">🔗</a>contrôles de l&rsquo;onglet saturation</h2>
+<dl>
+<dt>entrée R/V/B</dt>
+<dd>Ajuste la saturation des couleurs en fonction des canaux R, V et B de ces couleurs. Par exemple, le réglage du curseur <em>rouge (entrée)</em> affectera la saturation des couleurs contenant beaucoup de canal R bien plus que celle des couleurs contenant seulement une petite quantité de canal « R ».</dd>
+<dt>normaliser les canaux</dt>
+<dd>Cochez cette case pour essayer de maintenir constante la saturation globale entre les images d&rsquo;entrée et de sortie.</dd>
+</dl>
+<h2 id="contrôles-de-longlet-luminosité"><a href="#contr%c3%b4les-de-longlet-luminosit%c3%a9">🔗</a>contrôles de l&rsquo;onglet luminosité</h2>
+<dl>
+<dt>entrée R/V/B</dt>
+<dd>Ajuste la luminosité de certaines couleurs de l&rsquo;image, en fonction des canaux R, V et B de ces couleurs. Par exemple, le réglage du curseur <em>rouge (entrée)</em> affectera la luminosité des couleurs contenant beaucoup de canal R bien plus que celle des couleurs contenant seulement une petite quantité de canal R. Lors de l&rsquo;assombrissement/éclaircissement d&rsquo;un pixel, le rapport des canaux R, V et B pour ce pixel est conservé, afin de préserver la teinte.</dd>
+<dt>normaliser les canaux</dt>
+<dd>Cochez cette case pour essayer de maintenir la luminosité globale constante entre les images d&rsquo;entrée et de sortie.</dd>
+</dl>
+<h1 id="onglet-gris"><a href="#onglet-gris">🔗</a>onglet gris</h1>
+<p>Une autre application très utile de <em>calibration des couleurs</em> est la possibilité de mélanger les canaux pour produire une sortie en niveaux de gris &ndash; une image monochrome. Sélectionnez l&rsquo;onglet <em>gris</em> et réglez les curseurs R, V et B pour contrôler la contribution de chaque canal à la luminosité de la sortie. Cela équivaut à la multiplication matricielle suivante :</p>
+<pre tabindex="0"><code>Gris_sortie  =   [ r  v  b ]  X  ┌ R_entrée ┐
+                                 │ V_entrée │
+                                 └ B_entrée ┘
+</code></pre><p>Lorsqu&rsquo;il s&rsquo;agit des tons chair, les poids relatifs des trois canaux affecteront le niveau de détail de l&rsquo;image. Mettre plus de poids sur R (par exemple [0,9, 0,3, -0,3]) donnera des tons de peau lisses, tandis que l&rsquo;accentuation de V (par exemple [0,4, 0,75, -0,15]) fera ressortir plus de détails. Dans les deux cas, le canal B est réduit pour éviter d&rsquo;accentuer le grain de peau indésirable.</p>
+<h2 id="contrôles-de-longlet-gris"><a href="#contr%c3%b4les-de-longlet-gris">🔗</a>contrôles de l&rsquo;onglet gris</h2>
+<dl>
+<dt>entrée R/V/B</dt>
+<dd>Choisissez dans quelle mesure chacun des canaux R, V et B contribue au niveau de gris de la sortie. L&rsquo;image ne sera convertie en monochrome que si les trois curseurs totalisent une valeur non nulle. Ajouter plus de B aura tendance à faire ressortir plus de détails, ajouter plus de R aura tendance à lisser les tons chair.</dd>
+<dt>normaliser les canaux</dt>
+<dd>Cochez cette case pour essayer de maintenir la luminosité globale constante au fur et à mesure que les curseurs sont ajustés.</dd>
+</dl>
+<h1 id="mappage-des-couleurs"><a href="#mappage-des-couleurs">🔗</a>mappage des couleurs</h1>
+<p>La fonction de mappage ponctuel est conçue pour faciliter l'<a href="../../guides-tutorials/batch-editing.md">édition par lots</a> d&rsquo;une série d&rsquo;images de manière efficace. Dans ce scénario, vous développez généralement une image de référence unique pour l&rsquo;ensemble du lot, puis copiez et collez l&rsquo;historique de développement sur toutes les autres images du lot.</p>
+<p>Malheureusement, la température de couleur de la lumière change souvent légèrement entre les prises de vue, même au sein d&rsquo;une même série capturée dans les mêmes conditions. Cela peut être le résultat en lumière naturelle d&rsquo;un nuage passant devant le soleil, ou en lumière artificielle d&rsquo;un rapport différent entre la lumière indirecte colorée et la lumière principale. Chaque image aura encore besoin d&rsquo;un réglage individuel si vous voulez un look parfaitement uniforme sur toute la série, et cela peut être à la fois long et frustrant.</p>
+<p>Spot color mapping allows you to define a target chromaticity (hue and chroma) for a particular region of the image (the control sample), which you then match against the same target chromaticity in other images. The control sample can either be a critical part of your subject that needs to have constant color, or a non-moving and consistently-lit surface over your series of images.</p>
+<p>The mapping process consists of two steps.</p>
+<h2 id="step-1set-the-target"><a href="#step-1set-the-target">🔗</a>step 1: set the target</h2>
+<p>Il existe deux manières de définir la chromaticité cible pour votre échantillon de contrôle :</p>
+<ol>
+<li>
+<p>si vous connaissez ou attendez une couleur arbitraire pour l&rsquo;échantillon de contrôle (par exemple, une charte de gris, une charte de couleurs, un produit ou un logo d&rsquo;une couleur spécifiée), vous pouvez définir ses valeurs L, h et c directement, en Lch dérivé de l&rsquo;espace CIE Lab 1976,</p>
+</li>
+<li>
+<p>if you simply want to match the development of your reference image, set the <em>spot mode</em> to <em>measure</em>, then enable the color picker (to the right of the color patch) and draw a rectangle over your control sample. The <em>input</em> column will then be updated with the L, h, c values of the control sample before the color correction, and the <em>target</em> column will show the resulting L, h, c values of the control sample after the current calibration setting is applied.</p>
+</li>
+</ol>
+<p>If you reset the L, h, c values, the default value is a neutral color at 50% lightness (middle-gray) &ndash; this can be useful to quickly set the average white balance of any image. If you want to match the control sample against neutral gray, you only need to reset the chroma slider because the lightness and hue settings have no effect on chromaticity for neutral grays.</p>
+<p>Notez que la valeur cible n&rsquo;est pas réinitialisée lorsque vous réinitialisez le module lui-même, mais est stockée indéfiniment dans la configuration de darktable et sera disponible au prochain lancement ainsi que pour la prochaine image que vous développerez.</p>
+<p>The <em>take channel mixing into account</em> option lets you choose where the target is sampled. If disabled, the target color is measured immediately after the <em>CAT</em> (Chromatic Adaptation Transform) step, which takes place before any channel mixing. This means that if you have a calibrated profile in effect within the channel mixer, this profile will be discarded. If enabled, the target color is measured after the <em>CAT</em> and the channel mixing steps, including any calibrated profile. This is the recommended option for most use cases.</p>
+<hr>
+<p><strong>Note</strong>: If you are defining your target from a gray patch, you should know that the gray patch on color checkers is never entirely neutral. For example, Datacolor Spyder has a slightly warm gray (hue = 20°, chroma = 1.2) while X-Rite pre-2014 has a colder but more neutral gray (hue = 240°, chroma = 0.3) and X-Rite post-2014 is almost perfectly neutral (hue = 133°, chroma = 0.2). In general, it is not desirable to match the control sample against a perfectly neutral gray target, and it is actually wrong to do so when using gray cards and color checkers as a control sample.</p>
+<hr>
+<h2 id="step-2-match-the-target"><a href="#step-2-match-the-target">🔗</a>step 2 : match the target</h2>
+<p>When you open a new image, the <em>spot mode</em> is automatically reset to <em>correction</em>. Using the color picker attached to the color patch, you can then directly reselect your control sample in the new image. The proper illuminant settings required for the control sample to match the memorized target chromaticity will be automatically computed, and the setting will be updated in the same operation.</p>
+<p>The <em>take channel mixing into account</em> option will need to be set the same as when the measurement of the target was performed to ensure consistent results. Note that the target matching only defines the illuminant settings used in the Chromatic Adaptation Transform  &ndash; it does not alter the channel mixer settings, since the calibration is handled in the color checker calibration tool. However, the channel mixer settings can be used or discarded in the computation of the illuminant settings, depending on this option.</p>
+<p>Cette opération peut être répétée autant de fois que vous avez d&rsquo;images dans votre série sans autre travail.</p>
+<hr>
+<p><strong>Note:</strong> Perfectly matching your control sample against the target chromaticity may still not yield a similar perceptual result, even if the numbers are exactly the same. The ratio of lightness between the control sample and its surrounding, as well as the color contrasts at play in the frame, will alter the perception of colors in ways that are very difficult to model. To build an intuition of this problem, see the <a href="https://www.sciencealert.com/in-spite-of-what-your-eyes-tell-you-these-strawberries-aren-t-red" target="_blank">gray strawberries illusion</a>.</p>
+<hr>
+<h1 id="extraction-de-paramètres-à-laide-dune-charte-de-couleurs"><a href="#extraction-de-param%c3%a8tres-%c3%a0-laide-dune-charte-de-couleurs">🔗</a>extraction de paramètres à l&rsquo;aide d&rsquo;une charte de couleurs</h1>
+<p>Étant donné que le mixeur de canaux est essentiellement une matrice RVB (similaire au <a href="/dtdocs/fr/module-reference/processing-modules/input-color-profile/"><em>profil de couleur d&rsquo;entrée</em></a> utilisé pour les images RAW), il peut être utilisé pour améliorer la précision des couleurs du profil de couleur d&rsquo;entrée en calculant les paramètres ad hoc de calibration des couleurs.</p>
+<p>These computed settings aim to minimize the color difference between the scene reference and the camera recording in a given lighting situation. This is equivalent to creating a generic ICC color profile but here, the profile is instead stored as module settings that can be saved as presets or styles, to be shared and reused between images. Such profiles are meant to complement and refine the generic input profile but do not replace it.</p>
+<p>Cette fonctionnalité peut vous aider à :</p>
+<ul>
+<li>
+<p>gérer des illuminants difficiles, tels que des ampoules à faible <a href="https://fr.wikipedia.org/wiki/Indice_de_rendu_de_couleur" target="_blank">IRC</a>, pour lesquels un simple équilibrage des blancs ne suffira jamais,</p>
+</li>
+<li>
+<p>numériser des œuvres d&rsquo;art ou des produits commerciaux où une restitution fidèle des couleurs d&rsquo;origine est requise,</p>
+</li>
+<li>
+<p>neutraliser plusieurs boîtiers différents à la même référence, lors de séances de photos avec plusieurs caméras, afin d&rsquo;obtenir un aspect de base cohérent et de partager les paramètres d&rsquo;édition des couleurs pour obtenir un aspect final cohérent,</p>
+</li>
+<li>
+<p>obtenir un pipeline graphique sain dès le début, une optimisation de la balance des blancs et une suppression de toute dominante de couleur due à la lumière réfléchie, avec un minimum d&rsquo;effort et de temps.</p>
+</li>
+</ul>
+<h2 id="chartes-de-couleurs-prises-en-charge"><a href="#chartes-de-couleurs-prises-en-charge">🔗</a>chartes de couleurs prises en charge</h2>
+<p>Les utilisateurs ne sont pas actuellement autorisés à utiliser des cibles personnalisées, mais un nombre limité de chartes couleur vérifiées (de fabricants réputés) sont supportées :</p>
+<ul>
+<li>
+<p>X-Rite / Gretag MacBeth Color Checker 24 (avant et après 2014),</p>
+</li>
+<li>
+<p>Datacolor SpyderCheckr 24 (pre- and post-2018),</p>
+</li>
+<li>
+<p>Datacolor SpyderCheckr 48 (pre- and post-2018).</p>
+</li>
+</ul>
+<p>Les utilisateurs ne sont pas encouragés à acheter des chartes de couleurs bon marché, sans marque, car la constance des couleurs ne peut pas être assurée à de tels prix. Des chartes de couleurs imprécises ne permettront pas d&rsquo;atteindre l&rsquo;objectif de calibration des couleurs et aggraveront peut-être les choses.</p>
+<p>Les chartes IT7 et IT8 ne sont pas prises en charge car elles ne sont guère portables et ne sont pas pratiques pour une utilisation sur place pour les profils ad hoc. Ces chartes conviennent mieux à la création de profils de couleurs génériques, réalisés à l&rsquo;aide d&rsquo;un illuminant standard, par exemple avec <a href="https://encrypted.pcode.nl/blog/index.html%3Fp=594.html" target="_blank">Argyll CMS</a>.</p>
+<hr>
+<p><strong>Note</strong>: X-Rite changed the formula of their pigments in 2014 and Datacolor in 2018, which slightly altered the color of the patches. Both formulas are supported in darktable, but you should be careful to choose the correct reference for your target. If in doubt, try both and choose the one that yields the lowest average delta E after calibration.</p>
+<hr>
+<h2 id="prérequis"><a href="#pr%c3%a9requis">🔗</a>prérequis</h2>
+<p>Pour utiliser cette fonctionnalité, vous devrez prendre une photo test d&rsquo;une charte de couleurs prise en charge, sur place, dans des conditions d&rsquo;éclairage appropriées :</p>
+<ul>
+<li>
+<p>cadrer la charte au centre à 50% du champ du boîtier, pour vous assurer que l&rsquo;image est exempte de vignettage,</p>
+</li>
+<li>
+<p>assurez-vous que la source lumineuse principale est suffisamment éloignée de la charte pour donner un champ d&rsquo;éclairement uniforme sur la surface de la charte,</p>
+</li>
+<li>
+<p>ajustez l&rsquo;angle entre la lumière, la charte et l&rsquo;objectif pour éviter les reflets et la brillance sur les pastilles de couleur,</p>
+</li>
+<li>
+<p>pour un profil de la meilleure qualité, vous devez capturer une image avec la luminosité appropriée. Pour ce faire, prenez quelques images bracketées (entre -1 et +1 IL) de votre charte de couleurs et chargez-les dans darktable, en vous assurant que tous les modules entre <em>calibration des couleurs</em> et <em>profil de couleurs de sortie</em> sont désactivés. Choisissez l&rsquo;image où la tache blanche a une clarté L de 94-96% dans l&rsquo;espace CIE Lab ou une luminance Y de 83-88% dans l&rsquo;espace CIE XYZ (utilisez la pipette de couleur globale). Cette étape n&rsquo;est pas strictement nécessaire. Vous pouvez également prendre une seule image et appliquer la compensation d&rsquo;exposition recommandée dans le rapport de profil.</p>
+</li>
+</ul>
+<p>Si les conditions d&rsquo;éclairage sont proches d&rsquo;un illuminant standard D50 à D65 (lumière naturelle directe, pas de lumière réfléchie colorée), la photo de la charte de couleurs peut être utilisée pour produire un profil générique qui conviendra à tout éclairage de lumière du jour avec seulement un léger ajustement de la balance des blancs.</p>
+<p>Si les conditions d&rsquo;éclairage sont particulières et éloignées des illuminants standard, la photo de la charte de couleurs ne sera utilisable que comme profil ad-hoc pour des photos prises dans les mêmes conditions d&rsquo;éclairage.</p>
+<h2 id="utilisation"><a href="#utilisation">🔗</a>utilisation</h2>
+<p>Les paramètres utilisés dans le calibrage des couleurs dépendent de l&rsquo;espace CAT choisi et de tous les paramètres de couleur définis précédemment dans le pipeline graphique dans les modules <em>balance des blancs</em> et <em>profil de couleur d&rsquo;entrée</em>. En tant que tels, les résultats du profilage (par exemple, les coefficients de mixage des canaux RVB) ne sont valides que pour un ensemble précis de paramètres <em>espace CAT</em>, <em>balance des blancs</em> et <em>profil de couleur d&rsquo;entrée</em>. Si vous souhaitez créer un style générique avec votre profil, n&rsquo;oubliez pas que vous devrez également inclure les paramètres de ces modules.</p>
+<p>Utilisez le processus suivant pour créer votre profil/style prédéfini :</p>
+<ol>
+<li>
+<p>Activez le module <a href="/dtdocs/fr/module-reference/processing-modules/lens-correction/"><em>correction des objectifs</em></a> pour corriger tout vignettage qui pourrait induire en erreur la calibration,</p>
+</li>
+<li>
+<p>En bas du module <em>calibration des couleurs</em>, cliquez sur la flèche à côté du label <em>calibrer avec une charte de couleurs</em>, pour afficher les contrôles,</p>
+</li>
+<li>
+<p>Choisissez le bon modèle et le fabricant de votre charte couleur dans la liste déroulante <em>charte</em>,</p>
+</li>
+<li>
+<p>Dans l&rsquo;aperçu de l&rsquo;image, une superposition des pastilles de la charte apparaîtra. Faites glisser les coins de la charte afin qu&rsquo;ils correspondent aux références visuelles (points ou croix) autour de la cible, pour compenser toute distorsion de perspective,</p>
+</li>
+<li>
+<p>Cliquez sur le bouton <em>rafraîchir</em> pour calculer le profil,</p>
+</li>
+<li>
+<p>Vérifiez le <em>rapport de qualité du profil</em>. S&rsquo;il est &ldquo;bon&rdquo;, vous pouvez cliquer sur le bouton <em>valider</em>. Sinon, essayez de modifier la stratégie d&rsquo;optimisation et actualisez à nouveau le profil.</p>
+</li>
+<li>
+<p>Enregistrez le profil dans un préréglage ou un style, ou, à partir de la vue table lumineuse ou à partir de la pellicule, copiez et collez simplement les paramètres du module sur toutes les photos prises dans les mêmes conditions d&rsquo;éclairage.</p>
+</li>
+</ol>
+<hr>
+<p><strong>Remarque</strong> : Il n&rsquo;est pas <em>nécessaire</em> d&rsquo;utiliser la matrice standard dans le module <em>profil de couleur d&rsquo;entrée</em> lors d&rsquo;un calibrage, mais sachez que la balance des blancs par défaut &ldquo;boîtier&rdquo; ne fonctionnera pas correctement avec tout autre profil, et que vous devrez toujours utiliser le même profil d&rsquo;entrée chaque fois que vous réutilisez ces paramètres de calibration.</p>
+<hr>
+<h2 id="lire-le-rapport-de-profil"><a href="#lire-le-rapport-de-profil">🔗</a>lire le rapport de profil</h2>
+<p>Le rapport de profil vous aide à évaluer la qualité de la calibration. Les paramètres de la calibration des couleurs ne sont qu&rsquo;une optimisation de la &ldquo;meilleure correspondance&rdquo; et ne seront jamais précis à 100% pour l&rsquo;ensemble du spectre de couleurs. Nous devons donc déterminer &ldquo;à quel point il est inexact&rdquo; afin de savoir si nous pouvons ou non faire confiance à ce profil.</p>
+<p>De mauvais profils peuvent se produire et feront plus de mal que de bien s&rsquo;ils sont utilisés.</p>
+<h3 id="delta-e-et-le-rapport-de-qualité"><a href="#delta-e-et-le-rapport-de-qualit%c3%a9">🔗</a>delta E et le rapport de qualité</h3>
+<p>Le <a href="https://en.wikipedia.org/wiki/Color_difference#CIEDE2000" target="_blank">CIE delta E 2000</a> (ΔE), ou écart de couleur, est utilisé comme une mesure perceptive de l&rsquo;erreur entre la couleur de référence des pastilles et la couleur obtenue après chaque étape de calibration :</p>
+<ul>
+<li>
+<p>ΔE = 0 signifie qu&rsquo;il n&rsquo;y a pas d&rsquo;erreur &ndash; la couleur obtenue est exactement la couleur de référence. Malheureusement, cela ne se produira jamais dans la pratique.</p>
+</li>
+<li>
+<p>ΔE = 2,3 est défini comme la différence juste perceptible (JND en anglais pour <em>Just Noticeable Difference</em>).</p>
+</li>
+<li>
+<p>ΔE &lt; 2,3 signifie que l&rsquo;observateur moyen ne sera pas en mesure de faire la différence entre la couleur de référence attendue et la couleur obtenue. C&rsquo;est un résultat satisfaisant.</p>
+</li>
+<li>
+<p>ΔE &gt; 2,3 signifie que la différence de couleur entre la valeur attendue et la couleur obtenue est perceptible pour l&rsquo;observateur moyen. C&rsquo;est insatisfaisant mais parfois inévitable.</p>
+</li>
+</ul>
+<p>Le rapport qualité monitore le ΔE moyen et maximum à l&rsquo;entrée du module (avant que quoi que ce soit ne soit fait), après l&rsquo;étape d&rsquo;adaptation chromatique (balance des blancs uniquement) et à la sortie du module (balance des blancs et mixage des canaux). A chaque étape, le ΔE doit être inférieur à celui de l&rsquo;étape précédente, si tout se passe comme prévu.</p>
+<h3 id="données-du-profil"><a href="#donn%c3%a9es-du-profil">🔗</a>données du profil</h3>
+<p>The data generated by the profiling process comprises the RGB 3×3 matrix and the detected illuminant. These are expressed in the CAT <em>adaptation</em> space defined in the <em>CAT</em> tab and are provided in case you want to export these coefficients to other software. If the detected illuminant is <em>daylight</em> or <em>black body</em>, the matrix should be fairly generic and reusable for other <em>daylight</em> and <em>black body</em> illuminants with the addition of a small white balance adjustment.</p>
+<h3 id="valeurs-de-normalisation"><a href="#valeurs-de-normalisation">🔗</a>valeurs de normalisation</h3>
+<p>Ce sont les paramètres que vous devez définir, tels quels, pour les paramètres <em>exposition</em> et <em>correction du niveau du noir</em> dans le module <a href="./exposition.md"><em>exposition</em></a>, afin d&rsquo;obtenir le moins d&rsquo;erreur possible dans votre profil. Cette étape est facultative et n&rsquo;est utile que lorsque la plus grande précision est requise, mais sachez qu&rsquo;elle peut produire des valeurs RVB négatives qui seront écrêtées à divers points du pipeline.</p>
+<h3 id="superposition"><a href="#superposition">🔗</a>superposition</h3>
+<p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/color-calibration/color-checker.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/color-calibration/color-checker.png" alt="charte de couleurs"  class="w75"    /></a>
+
+</p>
+<p>Le graphique en superposition affiche un disque au centre de chaque pastille de couleur, qui représente la valeur de référence attendue de cette pastille, projetée dans l&rsquo;espace d&rsquo;affichage RVB. Cela vous aide à évaluer visuellement la différence entre la référence et la couleur réelle sans avoir à vous soucier des valeurs ΔE. Cet indice visuel ne sera fiable que si vous définissez le module <em>exposition</em> comme indiqué dans les <em>valeurs de normalisation</em> du rapport de profil.</p>
+<p>Une fois le profil calibré, certaines des pastilles carrées seront barrées en arrière-plan par une ou deux diagonales :</p>
+<ul>
+<li>
+<p>les pastilles qui ne sont pas barrées ont un ΔE &lt; 2,3 (JND), ce qui signifie qu&rsquo;elles sont suffisamment précises pour que l&rsquo;observateur moyen ne puisse pas remarquer la déviation,</p>
+</li>
+<li>
+<p>les pastilles barrées d&rsquo;une diagonale ont 2,3 &lt; ΔE &lt; 4,6, ce qui signifie qu&rsquo;elles sont légèrement inexactes,</p>
+</li>
+<li>
+<p>les pastilles barrées de deux diagonales ont un ΔE &gt; 4,6 (2 × JND), ce qui signifie qu&rsquo;elles sont très imprécises.</p>
+</li>
+</ul>
+<p>Ce retour visuel vous aidera à mettre en place le compromis d&rsquo;optimisation pour vérifier quelles couleurs sont plus ou moins précises.</p>
+<h2 id="amélioration-du-profil"><a href="#am%c3%a9lioration-du-profil">🔗</a>amélioration du profil</h2>
+<p>Étant donné que toute calibration n&rsquo;est que la recherche du « meilleur ajustement » (en utilisant une méthode des moindres carrés pondérés), il est impossible d&rsquo;avoir toutes les pastilles dans notre tolérance ΔE &lt; 2,3. Certains compromis seront donc nécessaires.</p>
+<p>Le paramètre <em>optimisé pour</em> vous permet de définir une stratégie d&rsquo;optimisation qui tente d&rsquo;augmenter la précision du profil dans certaines couleurs au détriment des autres. Les options suivantes sont disponibles :</p>
+<ul>
+<li>
+<p><em>sans</em> : n&rsquo;utilise pas de stratégie explicite mais repose sur la stratégie implicite définie par le fabricant de la charte de couleurs. Par exemple, si la charte de couleurs comporte principalement des pastilles à faible saturation, le profil sera plus précis pour les couleurs moins saturées.</p>
+</li>
+<li>
+<p><em>couleurs neutres</em> : privilégie les gris et les couleurs moins saturées. Ceci est utile pour les cas désespérés impliquant des éclairages fluorescents et LED bon marché, ayant un faible IRC. Cependant, cela peut augmenter davantage l&rsquo;erreur dans les couleurs hautement saturées qu&rsquo;une absence de profil.</p>
+</li>
+<li>
+<p><em>couleurs saturées</em> : privilégie les couleurs primaires et les couleurs très saturées. Ceci est utile dans la photographie de produits et commerciale, pour obtenir les couleurs correctes de la marque.</p>
+</li>
+<li>
+<p><em>couleurs de la peau et de terre</em>, <em>couleurs du feuillage</em>, <em>couleurs du ciel et de l&rsquo;eau</em> : Donne la priorité à la gamme de teintes choisie. Ceci est utile si le sujet de vos photos est clairement défini et a une couleur typique.</p>
+</li>
+<li>
+<p><em>delta E moyen</em> : essaye d&rsquo;uniformiser l&rsquo;erreur de couleur sur toute la gamme de couleurs et de minimiser l&rsquo;erreur de perception moyenne. Ceci est utile pour les profils génériques.</p>
+</li>
+<li>
+<p><em>delta E maximum</em> : essaye de minimiser les valeurs aberrantes et les erreurs importantes, au détriment de l&rsquo;erreur moyenne. Cela peut être utile pour faire rentrer les bleus très saturés dans le rang.</p>
+</li>
+</ul>
+<p>Quoi que vous fassiez, les stratégies qui favorisent un ΔE moyen faible auront généralement un ΔE maximum plus élevé, et vice versa. De plus, les bleus sont toujours la gamme de couleurs la plus difficile à corriger, de sorte que le calibrage revient généralement à protéger les bleus au détriment de tout le reste, ou de tout le reste au détriment des bleus.</p>
+<p>La facilité d&rsquo;obtention d&rsquo;un bon calibrage dépend de la qualité de l&rsquo;illuminant de la scène (les illuminants lumière du jour et IRC élevé doivent toujours être préférés), de la qualité du <em>profil de couleur d&rsquo;entrée</em> original, de la <em>correction du niveau du noir</em> définie dans le module <em>exposition</em>, mais avant tout des propriétés mathématiques de la grille de filtres du capteur de l&rsquo;appareil photo.</p>
+<h2 id="vérification-de-profil"><a href="#v%c3%a9rification-de-profil">🔗</a>vérification de profil</h2>
+<p>Il est possible d&rsquo;utiliser le bouton <em>vérifier le delta E de sortie</em> (en bas à gauche du module) pour effectuer un seul calcul ΔE de la référence de la charte de couleurs par rapport à la sortie du module <em>calibration des couleurs</em>. Cela peut être utilisé des manières suivantes :</p>
+<ol>
+<li>
+<p>Pour vérifier l&rsquo;exactitude d&rsquo;un profil calculé dans des conditions particulières par rapport à une charte de couleurs photographiée dans différentes conditions.</p>
+</li>
+<li>
+<p>Pour évaluer les performances de toute correction de couleur effectuée plus tôt dans le pipeline, en définissant les paramètres <em>calibration des couleurs</em> sur des valeurs qui la désactivent effectivement (<em>adaptation</em> dans CAT à <em>aucun (contourner)</em>, tout le reste est défini par défaut), et utiliser simplement le ΔE moyen comme mesure de performance.</p>
+</li>
+</ol>
+<h1 id="mises-en-garde"><a href="#mises-en-garde">🔗</a>mises en garde</h1>
+<p>La possibilité d&rsquo;utiliser des illuminants CIE standard et des interfaces basées sur CCT pour définir la couleur de l&rsquo;illuminant dépend de choix raisonnable des valeurs pour la matrice standard dans le module <em>profil de couleur d&rsquo;entrée</em> ainsi que pour les coefficients RVB dans le module <em>balance des blancs</em>.</p>
+<p>Certains appareils photo, notamment ceux d&rsquo;Olympus et de Sony, ont des coefficients de balance des blancs inattendus qui rendront toujours le CCT détecté invalide, même pour les illuminants de la scène réellement de type lumière du jour. Cette erreur provient très probablement de problèmes avec la matrice d&rsquo;entrée standard, qui provient d&rsquo;Adobe DNG Converter.</p>
+<p>Il est possible de pallier ce problème, si vous disposez d&rsquo;un écran d&rsquo;ordinateur calibré pour un illuminant D65, en utilisant le processus suivant :</p>
+<ol>
+<li>
+<p>Affichez une surface blanche sur votre écran, par exemple en affichant un fond blanc dans n&rsquo;importe quel logiciel de retouche photo que vous aimez</p>
+</li>
+<li>
+<p>Prenez une photo floue (hors mise au point) de cette surface avec votre appareil photo, en vous assurant qu&rsquo;il n&rsquo;y a pas de lumière &ldquo;parasite&rdquo; dans le cadre, que vous n&rsquo;avez pas d&rsquo;écrêtage et que vous utilisez une ouverture entre f/5,6 et f/8 ,</p>
+</li>
+<li>
+<p>Ouvrez l&rsquo;image dans darktable et extrayez la balance des blancs en utilisant l&rsquo;outil spot dans le module <em>balance des blancs</em> sur la zone centrale de l&rsquo;image (les régions non centrales peuvent être sujettes à des aberrations chromatiques). Cela générera un ensemble de 3 coefficients RVB.</p>
+</li>
+<li>
+<p>Créer un <a href="/dtdocs/fr/darkroom/processing-modules/presets/#cr%c3%a9er-et-modifier-des-pr%c3%a9r%c3%a9glages">nouveau préréglage</a> pour le module <em>balance des blancs</em> avec ces coefficients et l&rsquo;appliquer automatiquement à toute image RAW couleur créée par le même appareil photo.</p>
+</li>
+</ol>
+
+
+    
+    <h3 class="translations_head">translations</h3>
+    <ul class="translations">
+        
+        <li><a href="/dtdocs/en/module-reference/processing-modules/color-calibration/">
+            English: color calibration
+        </a></li>
+        
+        <li><a href="/dtdocs/de/module-reference/processing-modules/color-calibration/">
+            German: Farbkalibrierung
+        </a></li>
+        
+        <li><a href="/dtdocs/es/module-reference/processing-modules/color-calibration/">
+            Espanol: calibración de color
+        </a></li>
+        
+        <li><a href="/dtdocs/pt_br/module-reference/processing-modules/color-calibration/">
+            Português: calibração de cor
+        </a></li>
+        
+        <li><a href="/dtdocs/uk/module-reference/processing-modules/color-calibration/">
+            Ukrainian: калібрування кольору
+        </a></li>
+        
+        <li><a href="/dtdocs/nl/module-reference/processing-modules/color-calibration/">
+            Dutch: kleurkalibratie
+        </a></li>
+        
+    </ul>
+    
+</article>
+
+<div class="prev-next row">
+    <div class="col-6">
+    
+	<a href="/dtdocs/fr/module-reference/processing-modules/framing/" class="next">&lt; cadre décoratif</a>
+	
+    </div>
+    <div class="col-6">
+    
+	<a href="/dtdocs/fr/module-reference/processing-modules/censorize/" class="prev">censurer &gt;</a>
+	
+    </div>
+</div>
+
+
+
+      </div>
+		<nav class="navigation col-sm-12 order-sm-12 col-md-3 order-md-1">
+		    <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/" class="">
+          Présentation
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/" class="">
+          interface utilisateur
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/views/" class="">
+          vues
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/screen-layout/" class="">
+          disposition de l&#39;affichage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/filmstrip/" class="">
+          pellicule
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/top-panel/" class="">
+          panneau supérieur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/keyboard-shortcuts/" class="">
+          raccourcis clavier
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/supported-file-formats/" class="">
+          formats de fichier supportés
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/sidecar-files/" class="">
+          fichiers liés et édition non destructive
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/sidecar-files/sidecar/" class="">
+          fichiers liés
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/sidecar-files/sidecar-import/" class="">
+          importer des fichiers liés générés par d&#39;autres applications
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/sidecar-files/local-copies/" class="">
+          copies locales
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/" class="">
+          une introduction au flux de travail de darktable
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/introduction/" class="">
+          introduction
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/import-review/" class="">
+          importer et examiner
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/process/" class="">
+          processus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/export/" class="">
+          exporter
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/" class="">
+          Table lumineuse
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-view-layout/" class="">
+          disposition de la vue table lumineuse
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/undo-redo/" class="">
+          annuler/refaire
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/" class="">
+          modes de la table lumineuse
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/filemanager/" class="">
+          navigateur de fichiers
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/zoomable-lighttable/" class="">
+          table lumineuse zoomable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/culling/" class="">
+          sélection
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/full-preview/" class="">
+          aperçu complet
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/" class="">
+          gestion des données numériques
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/collections/" class="">
+          collections &amp; pellicules
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/thumbnails/" class="">
+          miniatures
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/star-color/" class="">
+          évaluation par étoiles et labels de couleur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/grouping/" class="">
+          grouper des images
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/metadata-tagging/" class="">
+          métadonnées et mots clés
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/" class="">
+          Chambre noire
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/darkroom-view-layout/" class="">
+          disposition de la vue chambre noire
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/" class="">
+          le pipeline graphique
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/the-anatomy-of-a-module/" class="">
+          l&#39;anatomie d&#39;un module de traitement
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/the-pixelpipe-and-module-order/" class="">
+          le pipeline graphique &amp; l&#39;ordre des modules
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/history-stack/" class="">
+          l&#39;historique
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/undo-redo/" class="">
+          annuler/refaire
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/" class="">
+          modules de traitement
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/module-header/" class="">
+          en-tête d&#39;un module
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/multiple-instances/" class="">
+          instances multiples
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/presets/" class="">
+          préréglages
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/module-controls/" class="">
+          contrôles du module
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/curves/" class="">
+          courbes
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/wavelets/" class="">
+          ondelettes
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/deprecated/" class="">
+          modules dépréciés
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/" class="">
+          masquage et fusion
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/blend-modes/" class="">
+          modes de fusion
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/" class="">
+          masques
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/drawn/" class="">
+          masques dessinés
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/parametric/" class="">
+          masques paramétriques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/drawn-and-parametric/" class="">
+          combiner les masques dessinés/paramétriques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/refinement-controls/" class="">
+          raffinement du masque et contrôles supplémentaires
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/raster/" class="">
+          masques raster
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/" class="">
+          organisation
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/module-groups/" class="">
+          les groupes de modules
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/quick-access-panel/" class="">
+          panneau d&#39;accès rapide
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/manage-module-layouts/" class="">
+          gérer les dispositions de modules
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/tethering/" class="">
+          Capture
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/tethering/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/tethering/tethering-view-layout/" class="">
+          disposition de la vue capture
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/tethering/troubleshooting/" class="">
+          dépannage
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/map/" class="">
+          Carte
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/map/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/map/map-view-layout/" class="">
+          disposition de la vue carte
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/slideshow/" class="">
+          Diaporama
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/slideshow/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/slideshow/usage/" class="">
+          utilisation
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/print/" class="">
+          Impression
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/print/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/print/print-view-layout/" class="">
+          disposition de la vue impression
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/" class="">
+          Références des modules
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/" class="">
+          modules de traitement
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/chromatic-aberrations/" class="">
+          aberrations chromatiques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/raw-chromatic-aberrations/" class="">
+          aberrations chromatiques raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/soften/" class="">
+          adoucir (effet Orton)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/basic-adjustments/" class="">
+          ajustements de base (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-balance/" class="">
+          balance couleur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-balance-rgb/" class="">
+          balance couleur rvb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/white-balance/" class="">
+          balance des blancs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/framing/" class="">
+          cadre décoratif
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-calibration/" class=" active">
+          calibration des couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/censorize/" class="">
+          censurer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/colorize/" class="">
+          coloriser
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-contrast/" class="">
+          contraste de couleur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/local-contrast/" class="">
+          contraste local
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/contrast-brightness-saturation/" class="">
+          contraste luminosité saturation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-correction/" class="">
+          correction des couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/lens-correction/" class="">
+          correction des objectifs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/spot-removal/" class="">
+          correction des taches (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/unbreak-input-profile/" class="">
+          correction du profil d&#39;entrée
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/base-curve/" class="">
+          courbe de base
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/tone-curve/" class="">
+          courbe des tonalités
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/rgb-curve/" class="">
+          courbe rvb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/diffuse/" class="">
+          diffusion ou netteté
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/negadoctor/" class="">
+          docteur néga
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/demosaic/" class="">
+          dématriçage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/lowlight-vision/" class="">
+          faible lumière
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/watermark/" class="">
+          filigrane
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/filmic-rgb/" class="">
+          filmique rvb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/graduated-density/" class="">
+          filtre dégradé
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/lowpass/" class="">
+          filtre passe-bas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/highpass/" class="">
+          filtre passe-haut
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/surface-blur/" class="">
+          flou de surface
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/blurs/" class="">
+          flous
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/grain/" class="">
+          grain
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/dithering/" class="">
+          homogénéisation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/invert/" class="">
+          inverser (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/liquify/" class="">
+          liquéfier
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/fill-light/" class="">
+          lumière d&#39;appoint (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/bloom/" class="">
+          lumière d&#39;arrière plan
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/lut-3d/" class="">
+          lut 3D
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-mapping/" class="">
+          mappage des couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/tone-mapping/" class="">
+          mappage des tonalités (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/global-tonemap/" class="">
+          mappage global des tonalités (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/scale-pixels/" class="">
+          mise à l&#39;échelle des pixels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/channel-mixer/" class="">
+          mixeur de canaux (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/monochrome/" class="">
+          monochrome
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/levels/" class="">
+          niveaux
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/rgb-levels/" class="">
+          niveaux rvb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/shadows-and-highlights/" class="">
+          ombres et hautes lumières
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/orientation/" class="">
+          orientation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/hot-pixels/" class="">
+          pixels chauds
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/raw-black-white-point/" class="">
+          point noir/blanc raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/input-color-profile/" class="">
+          profil de couleur d&#39;entrée
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/output-color-profile/" class="">
+          profil de couleur de sortie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/crop/" class="">
+          recadrer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/crop-rotate/" class="">
+          recadrer et pivoter (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-reconstruction/" class="">
+          reconstruction des couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/sharpen/" class="">
+          renforcer la netteté
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/retouch/" class="">
+          retouche
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/rotate-pixels/" class="">
+          rotation des pixels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/rotate-perspective/" class="">
+          rotation et perspective
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/denoise-profiled/" class="">
+          réduction du bruit (profil)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/astrophoto-denoise/" class="">
+          réduction du bruit photo astro
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/raw-denoise/" class="">
+          réduction du bruit RAW
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/haze-removal/" class="">
+          suppression de la brume
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/defringe/" class="">
+          suppression des franges (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-look-up-table/" class="">
+          table correspondance couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/velvia/" class="">
+          velvia
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/vibrance/" class="">
+          vibrance (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/vignetting/" class="">
+          vignetage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/split-toning/" class="">
+          virage partiel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/zone-system/" class="">
+          zones (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-zones/" class="">
+          zones de couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/contrast-equalizer/" class="">
+          égaliseur de contraste
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/tone-equalizer/" class="">
+          égaliseur de ton
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/" class="">
+          modules utilitaires
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/tethering/" class="">
+          capture
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/tethering/camera-settings/" class="">
+          paramètres de la capture
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/tethering/session/" class="">
+          session
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/tethering/live-view/" class="">
+          visée directe
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/map/" class="">
+          carte
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/map/locations/" class="">
+          emplacements
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/map/map-settings/" class="">
+          paramètres de carte
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/map/find-location/" class="">
+          trouver un lieu
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/" class="">
+          chambre noire
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/clipping/" class="">
+          avertissement d&#39;écrêtage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/raw-overexposed/" class="">
+          avertissement de surexposition raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/duplicate-manager/" class="">
+          gestion des clones
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/mask-manager/" class="">
+          gestion des masques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/guides-overlays/" class="">
+          guides et superpositions
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/history-stack/" class="">
+          historique
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/snapshots/" class="">
+          instantanés
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/image-info-line/" class="">
+          ligne d&#39;informations de l&#39;image
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/navigation/" class="">
+          navigation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/module-order/" class="">
+          ordre des modules
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/global-color-picker/" class="">
+          pipette de couleur globale
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/gamut/" class="">
+          vérification du gamut
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/soft-proof/" class="">
+          épreuvage écran
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/color-assessment/" class="">
+          évaluation des couleurs
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/print/" class="">
+          impression
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/print/print-settings/" class="">
+          paramètres d&#39;impression
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/" class="">
+          partagé
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/collections/" class="">
+          collections
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/focus-peaking/" class="">
+          détection de focus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/export/" class="">
+          exporter
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/geotagging/" class="">
+          géolocalisation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/image-information/" class="">
+          informations de l&#39;image
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/tagging/" class="">
+          mots-clés
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/scopes/" class="">
+          scopes
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/" class="">
+          table lumineuse
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/timeline/" class="">
+          chronologie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/history-stack/" class="">
+          historique
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/selected-image/" class="">
+          images sélectionnées
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/import/" class="">
+          importer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+          lua scripts installer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/styles/" class="">
+          styles
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/select/" class="">
+          sélectionner
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/" class="">
+          Préférences et réglages
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/import/" class="">
+          importer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/lighttable/" class="">
+          table lumineuse
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/darkroom/" class="">
+          chambre noire
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/processing/" class="">
+          traitement
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/security/" class="">
+          sécurité
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/storage/" class="">
+          stockage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/miscellaneous/" class="">
+          divers
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/shortcuts/" class="">
+          raccourcis
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/presets/" class="">
+          préréglages
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/lua-options/" class="">
+          options lua
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/" class="">
+          Automatisation avec Lua
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/basic-principles/" class="">
+          Principes de base : fichiers luarc
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/a-simple-example/" class="">
+          Un exemple Lua simple
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/printing-labeled-images/" class="">
+          impression d&#39;images étiquetées
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/simple-shortcut/" class="">
+          ajouter un raccourci simple
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/exporting-images/" class="">
+          exporter des images avec Lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/building-ui-elements/" class="">
+          Constructions d&#39;éléments de l&#39;interface utilisateur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/sharing-scripts/" class="">
+          partage de scripts
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/calling-from-dbus/" class="">
+          appeler Lua de dbus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/darktable-from-lua/" class="">
+          utiliser darktable depuis un script Lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/api/" class="">
+          API Lua
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/guides-tutorials/" class="">
+          Guides &amp; Tutoriels
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/guides-tutorials/monochrome/" class="">
+          développement d&#39;images monochromes
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/guides-tutorials/other-resources/" class="">
+          autres ressources
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/" class="">
+          Sujets spéciaux
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/" class="">
+          gestion de la couleur
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/display-profile/" class="">
+          profil d&#39;affichage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/rendering-method/" class="">
+          méthode de rendu
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/rendering-intent/" class="">
+          intention de rendu
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/color-spaces/" class="">
+          espaces colorimétriques de darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/unbounded-colors/" class="">
+          couleurs non bornées
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/color-artifacts/" class="">
+          possibles artefacts de couleur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/color-dimensions/" class="">
+          dimensions de la couleur dans darktable
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/" class="">
+          opencl
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/background/" class="">
+          le contexte
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/how-opencl-works/" class="">
+          comment travaille opencl
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/activate-opencl/" class="">
+          activer OpenCL dans darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/setting-up/" class="">
+          configurer opencl
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/problems-solutions/" class="">
+          problèmes possibles et solutions
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/scheduling-profile/" class="">
+          profil de planification
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/multiple-devices/" class="">
+          multiples périphériques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/still-doesnt-work/" class="">
+          opencl ne fonctionne toujours pas pour moi
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/" class="">
+          utilisation de darktable-chart
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/usage/" class="">
+          utilisation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/source-image/" class="">
+          image source
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/reference-values/" class="">
+          valeurs de références
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/process/" class="">
+          processus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/making-input-images/" class="">
+          faire une image d&#39;entrée pour darktable-chart
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/" class="">
+          appel du programme
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable/" class="">
+          darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable-generate-cache/" class="">
+          darktable-generate-cache
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable-chart/" class="">
+          darktable-chart
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable-cltest/" class="">
+          darktable-cltest
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable-cmstest/" class="">
+          darktable-cmstest
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/purge_non_existing_images_sh/" class="">
+          purge_non_existing_images.sh
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-pipeline/" class="">
+          pipeline graphique de darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/contributing/" class="">
+          contribuer à dtdocs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/translating/" class="">
+          traduire dtdocs
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+
+		</nav>
+	    </div>
+
+            
+
+        </div>
+
+
+    </body>
+</html>
+
+<script>
+(function($) {
+  
+
+  $.fn.scrollToMiddle = function(options) {
+    var settings = $.extend({
+        duration: 0
+    }, options );
+
+    return this.each(function() {
+      var $el = $(this);
+      var elOffset = $el.offset().top;
+      var elHeight = $el.height();
+      var windowHeight = $(window).height();
+      var offset;
+      if (elHeight < windowHeight) {
+        offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
+      }
+      else {
+        offset = elOffset;
+      }
+      $('.navigation').scrollTop(offset);
+    });
+  };
+}(jQuery));
+
+$('.navigation').css('opacity', '0');
+ $(document).ready(function(){
+     $('.parent ul').hide();
+     $('.navigation').css('opacity', 1.0);
+     $('.active').parents('ul').show();
+     $('.active').siblings('ul').show();
+     $('.active').children('i.toggle').removeClass("fa-plus-squre").addClass("fa-minus-square-o");
+     $('.active').parents('li').children('.toggle').removeClass("fa-plus-square").addClass("fa-minus-square-o");
+     $('.active').scrollToMiddle();
+
+     $('.toggle').on('click', function (e) {
+       e.stopPropagation();
+       $(this).siblings('ul').slideToggle();
+
+       if($(this).hasClass("fa-plus-square")) {
+           $(this).addClass("fa-minus-square-o");
+           $(this).removeClass("fa-plus-square");
+       }
+       else {
+           $(this).addClass("fa-plus-square");
+           $(this).removeClass("fa-minus-square-o");
+       }
+     });
+ });
+
+</script>
+
+
+<script>
+ var _paq = window._paq = window._paq || [];
+  
+ _paq.push(['trackPageView']);
+ _paq.push(['enableLinkTracking']);
+ (function() {
+     var u="https://piwik.kees.nl/";
+     _paq.push(['setTrackerUrl', u+'matomo.php']);
+     _paq.push(['setSiteId', '21']);
+     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+ })();
+</script>
+<noscript><p><img src="https://piwik.kees.nl/matomo.php?idsite=21&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+
+

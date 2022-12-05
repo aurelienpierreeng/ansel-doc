@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gestión del color on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/</link>
+    <description>Recent content in gestión del color on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/es/special-topics/color-management/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resumen</title>
+      <link>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/overview/</guid>
+      <description>darktable emplea un flujo de trabajo completamente administrado pata el color:
+  Las especificaciones de color de entrada se toman de perfiles ICC incorporados o proporcionados por el usuario o (en el caso de archivos sin procesar) de una biblioteca de matrices de color específicas de la cámara.
+  darktable lee automáticamente el perfil de visualización de su monitor (si está configurado correctamente) para obtener una reproducción precisa del color en pantalla.</description>
+    </item>
+    
+    <item>
+      <title>perfil de pantalla</title>
+      <link>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/display-profile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/display-profile/</guid>
+      <description>Para que darktable reproduzca fielmente los colores en la pantalla, debe encontrar el perfil de visualización correcto para su monitor. En general, esto requiere que su monitor esté correctamente calibrado y perfilado, y necesita que el perfil esté correctamente instalado en su sistema. darktable consulta el xatom de su servidor de visualización X así como el colord de servicio del sistema (si está disponible) para el perfil correcto. Si es necesario, puede aplicar un método específico en preferencias&amp;gt; varios.</description>
+    </item>
+    
+    <item>
+      <title>método de renderización</title>
+      <link>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/rendering-method/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/rendering-method/</guid>
+      <description>darktable puede renderizar colores con sus propios algoritmos internos o usando la biblioteca externa LittleCMS2. El método interno de darktable es, en un orden de magnitud, más rápido que el externo. La opción externa le permite elegir la intención de representación y puede ofrecer una precisión ligeramente mayor en algunos casos.
+Puede cambiar el método predeterminado en preferencias&amp;gt; procesamiento&amp;gt; usar siempre LittleCMS 2 para aplicar el perfil de color de salida</description>
+    </item>
+    
+    <item>
+      <title>intentos de representación</title>
+      <link>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/rendering-intent/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/rendering-intent/</guid>
+      <description>Si el renderizado con LittleCMS2 está activado (consulte método de renderizado), puede definir cómo manejar los colores fuera de gama al convertir entre espacios de color. Un cuadro de selección en los módulos exportar, _perfil de color de salida _ y prueba en pantalla le ofrecen una opción de las siguientes intentos de representación:
+ perceptual Se adapta mejor a las fotografías, ya que mantiene la posición relativa de los colores.</description>
+    </item>
+    
+    <item>
+      <title>espacios de color de darktable</title>
+      <link>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/color-spaces/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/color-spaces/</guid>
+      <description>Las imágenes de entrada son archivos RGB (como JPEG o TIFF) o RAW de cámara. Ambos almacenan información visual como una combinación de colores primarios (por ejemplo, rojo, verde y azul) que juntos describen una emisión de luz para ser recreada por una pantalla.
+La siguiente imagen ilustra este concepto.
+  El lado izquierdo de la imagen muestra una luz de color que necesitamos representar digitalmente. Podemos utilizar tres filtros de color ideales para descomponer esta luz en tres luces primarias de colores a diferentes intensidades.</description>
+    </item>
+    
+    <item>
+      <title>colores ilimitados</title>
+      <link>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/unbounded-colors/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/unbounded-colors/</guid>
+      <description>Las pantallas y la mayoría de los formatos de archivo de imagen solo pueden codificar intensidades RGB confinadas dentro de un cierto rango. Por ejemplo, las imágenes codificadas en 8 bits solo pueden contener valores de 0 a 255, imágenes en 10 bits de 0 a 1023, y así sucesivamente &amp;hellip; Los estándares gráficos postulan que el máximo de ese rango, sin importar su valor real, siempre representará el brillo máximo que el medio de visualización puede generar, normalmente entre 100 y 160 Cd / m² (o nits), según el estándar real.</description>
+    </item>
+    
+    <item>
+      <title>posibles artefactos de color</title>
+      <link>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/color-artifacts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/color-artifacts/</guid>
+      <description>Hay algunas situaciones poco frecuentes que aún pueden conducir a resultados problemáticos a menos que el usuario realice alguna acción. Algunos módulos en el espacio de color Lab, como niveles y monócromo, se basan en el hecho de que los canales L transportan toda la información de luminosidad, y los canales ayb representan puramente el croma y el tono. Los colores ilimitados con valores L negativos son especialmente problemáticos para estos módulos y pueden provocar artefactos de píxeles negros.</description>
+    </item>
+    
+    <item>
+      <title>dimensiones de color de darktable</title>
+      <link>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/color-dimensions/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/special-topics/color-management/color-dimensions/</guid>
+      <description>Esta sección define las propiedades perceptivas del color, tanto conceptual como cuantitativamente, con el fin de caracterizar y cuantificar los ajustes creativos y correctivos realizados al color en darktable.
+🔗definiciones Las propiedades de color como &amp;ldquo;saturación&amp;rdquo;, &amp;ldquo;brillo&amp;rdquo; o &amp;ldquo;luminosidad&amp;rdquo; han pasado a ser de uso común, pero en gran medida se utilizan incorrectamente y, a menudo, se utilizan para significar cosas diferentes. En la ciencia del color, cada uno de estos términos tiene un significado preciso.</description>
+    </item>
+    
+  </channel>
+</rss>

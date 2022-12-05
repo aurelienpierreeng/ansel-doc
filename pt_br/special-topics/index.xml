@@ -1,0 +1,60 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Tópicos especiais on manual do usuário darktable 4.0</title>
+    <link>https://darktable-org.github.io/dtdocs/pt_br/special-topics/</link>
+    <description>Recent content in Tópicos especiais on manual do usuário darktable 4.0</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/pt_br/special-topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ajuste de memória e desempenho</title>
+      <link>https://darktable-org.github.io/dtdocs/pt_br/special-topics/mem-performance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/pt_br/special-topics/mem-performance/</guid>
+      <description>🔗requisitos de memória Processar uma imagem RAW no darktable requer uma grande quantidade de memória do sistema. Um cálculo simples deixa isso claro: para uma imagem de 20 megapixels, o darktable requer uma célula de ponto flutuante de 4x32 bits para armazenar cada pixel, o que significa que cada imagem completa desse tamanho exigirá aproximadamente 300 MB de memória apenas para armazenar os dados da imagem. Para realmente processar esta imagem em um determinado módulo, o darktable precisa de pelo menos dois buffers (entrada e saída) desse tamanho, com módulos mais complexos potencialmente exigindo vários buffers adicionais para dados intermediários.</description>
+    </item>
+    
+    <item>
+      <title>pipeline de cor do darktable</title>
+      <link>https://darktable-org.github.io/dtdocs/pt_br/special-topics/color-pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/pt_br/special-topics/color-pipeline/</guid>
+      <description>A maioria dos aplicativos de processamento de imagens teve origem nos anos 1990 e/ou herdaram o fluxo de trabalho desses anos. Estes aplicativos processavam imagens codificadas com números inteiros de 8 bits sem sinal porque era mais eficiente no uso da memória e computacionalmente. No entanto, devido ao uso de um formato inteiro (o que implica em erros de arredondamento), eles tiveram que aplicar um “gama” (essencialmente uma função de transferência aplicando uma potência de 1/2,2 ou 1/2,4 para codificar os valores de RGB) e aumentar a profundidade de bits em condições de pouca luz para reduzir os erros de arredondamento (os seres humanos são muito mais sensíveis aos detalhes em pouca luz).</description>
+    </item>
+    
+    <item>
+      <title>suporte a dispositivo midi</title>
+      <link>https://darktable-org.github.io/dtdocs/pt_br/special-topics/midi-device-support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/pt_br/special-topics/midi-device-support/</guid>
+      <description>O sistema de mapeamento de atalho foi testado mais extensivamente com o Behringer X-Touch Mini e contém código personalizado para lidar com os recursos específicos deste dispositivo. Todos os outros dispositivos são tratados como &amp;ldquo;midi genéricos&amp;rdquo; e podem ou não funcionar (bem) ou precisar de alguma configuração manual a cada utilização. Uma estrutura de configuração (possivelmente em lua) para suportar recursos específicos de dispositivos adicionais está na lista de tarefas.</description>
+    </item>
+    
+    <item>
+      <title>contribuir para o dtdocs</title>
+      <link>https://darktable-org.github.io/dtdocs/pt_br/special-topics/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/pt_br/special-topics/contributing/</guid>
+      <description>Esta página define o guia de estilo para o dtdocs e fornece informações sobre como contribuir para o projeto.
+Ela está incluída no manual do usuário para que você possa ver como a página é renderizada e como ela foi escrita. Vá para o GitHub para ver a fonte desta página.
+A estrutura e conteúdo do manual considerou cuidadosamente os seguintes critérios:
+ O manual deve ser completo: deve descrever todas as funcionalidades disponíveis no darktable Deve ter uma estrutura lógica e coerente e cada parte da funcionalidade deve ter seu próprio local lógico dentro desta estrutura Deve ser tão longo quanto seja necessário mas o mais curto possível &amp;ndash; a brevidade é imprescindível Deve ser objetivo A funcionalidade deve ser explicada somente uma vez (com exceção de guias gerais sobre o fluxo de trabalho na seção sobre a visão geral) As imagens devem ser incluídas somente onde forem necessárias para aprimorar a compreensão dos princípios chave e não devem conter texto, a menos que isso seja inevitável  Geralmente não estamos interessados em:</description>
+    </item>
+    
+    <item>
+      <title>traduzir o dtdocs</title>
+      <link>https://darktable-org.github.io/dtdocs/pt_br/special-topics/translating/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/pt_br/special-topics/translating/</guid>
+      <description>A tradução da documentação do darktable é feita pela nossa instância do Weblate.
+Você pode usar a interface gráfica do Weblate para traduzir a documentação ou baixar a tradução do Weblate para seu computador, editá-la e depois enviar as mudanças.
+Por favor, faça todo o trabalho de tradução usando o Weblate. Nós não aceitaremos pull requests diretamente no github para atualizar arquivos PO.
+🔗Criar um novo branch no git  Crie um novo branch no git para trabalhar.</description>
+    </item>
+    
+  </channel>
+</rss>

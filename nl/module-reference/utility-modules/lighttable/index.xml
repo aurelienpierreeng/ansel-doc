@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>bibliotheek on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/</link>
+    <description>Recent content in bibliotheek on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>geschiedenis</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/history-stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/history-stack/</guid>
+      <description>Manipuleer de geschiedenis van een of meer geselecteerde afbeeldingen.
+🔗module instellingen  selectief kopiëren&amp;hellip; Kopieer delen van de bewerkingsstappen van de geselecteerde afbeelding. Er verschijnt een dialoogvenster waaruit je de items kunt kiezen die je van de geschiedenis wilt kopiëren. Als er meer dan één afbeelding is geselecteerd, wordt de geschiedenis overgenomen van de afbeelding die als eerste is geselecteerd. Dubbelklik op een geschiedenisitem om alleen dat item te kopiëren en sluit daarna het dialoogvenster.</description>
+    </item>
+    
+    <item>
+      <title>importeren</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/import/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/import/</guid>
+      <description>Voeg afbeeldingen toe aan de darktable-bibliotheek en kopieer ze optioneel vanaf een andere locatie op het bestandssysteem of vanaf een aangesloten camera.
+Zie ondersteunde bestandsindelingen voor meer informatie.
+🔗module instellingen De volgende knoppen worden standaard weergegeven in de gebruikersinterface van de module:
+ [toevoegen aan bibliotheek](#toevoegen aan bibliotheek) Bestaande afbeeldingen toevoegen aan de darktable-bibliotheek zonder bestanden te kopiëren of te verplaatsen. Als je slechts één afbeelding aan de bibliotheek toevoegt, wordt deze automatisch in &amp;ldquo;ontwikkelen&amp;rdquo; geladen.</description>
+    </item>
+    
+    <item>
+      <title>lua script-installatieprogramma</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/lua-scripts-installer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/lua-scripts-installer/</guid>
+      <description>Deze module biedt een interface voor het installeren van darktable lua scripts. De eerste keer dat het wordt uitgevoerd, worden instructies weergegeven in de module.
+Het kan worden uitgeschakeld met een optie in voorkeuren &amp;gt; lua opties.</description>
+    </item>
+    
+    <item>
+      <title>selecteren</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/select/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/select/</guid>
+      <description>Selecteer afbeeldingen in de bibliotheek volgens eenvoudige criteria.
+🔗module instellingen  selecteer alles alle afbeeldingen in de huidige collectie selecteren. selecteer niets deselecteer alle afbeeldingen. keer selectie om alle afbeeldingen in de huidige collectie selecteren die momenteel niet zijn geselecteerd. selecteer map (filmrol) selecteer alle afbeeldingen in de huidige collectie die zich in dezelfde filmrol bevinden als de momenteel geselecteerde afbeeldingen. selecteer onaangeraakt Selecteer alle afbeeldingen in de huidige collectie die nog niet zijn ontwikkeld.</description>
+    </item>
+    
+    <item>
+      <title>selectie bewerken</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/selected-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/selected-image/</guid>
+      <description>Bewerk afbeeldingen die zijn geselecteerd in de bibliotheekweergave.
+🔗module instellingen De modulebesturingselementen zijn verdeeld over twee tabbladen voor het manipuleren van de afbeeldingsbestanden en de bijbehorende metadata.
+🔗afbeeldingen tab  verwijderen verwijder de geselecteerde afbeeldingen uit de darktable-bibliotheek zonder ze te verwijderen. Verwijderde afbeeldingen kunnen niet langer worden bekeken of bewerkt in darktable, maar de afbeeldingsbestanden blijven op het bestandssysteem staan, samen met eventuele XMP sidecar-bestanden. Omdat darktable de XMP-bestanden up-to-date houdt met jouw laatste ontwikkelingsgeschiedenis, kan je jouw werk later volledig herstellen door de afbeeldingen opnieuw te importeren.</description>
+    </item>
+    
+    <item>
+      <title>stijlen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/styles/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/styles/</guid>
+      <description>Maak benoemde stijlen van geselecteerde afbeeldingen geschiedenis en pas stijlen toe op geselecteerde afbeeldingen.
+Stijlen kunnen worden gemaakt in dit paneel of in de geschiedenis module in ontwikkelen.
+Een lijst met alle beschikbare stijlen wordt weergegeven in de module. Met een zoekveld boven de lijst kan je een stijl zoeken op naam of beschrijving. Met deze module kunnen ook stijlen worden bewerkt en verwijderd.
+Dubbelklik op een stijlnaam om die stijl toe te passen op alle geselecteerde afbeeldingen.</description>
+    </item>
+    
+    <item>
+      <title>tijdlijn</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/timeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/lighttable/timeline/</guid>
+      <description>Bekijk jouw foto&amp;rsquo;s op de datum/tijd waarop ze zijn gemaakt.
+  In de bibliotheek-weergave kan je de tijdlijnmodule in het onderste paneel tonen/verbergen met de sneltoets Ctrl+F.
+Binnen de tijdlijn kan je de volgende en vorige datums weergeven door met jouw muis te scrollen; Ctrl+scroll om in/uit te zoomen.
+Je kan de tijdlijn ook gebruiken om afbeeldingen op datumbereik te selecteren door met jouw muis te klikken en te slepen.</description>
+    </item>
+    
+  </channel>
+</rss>

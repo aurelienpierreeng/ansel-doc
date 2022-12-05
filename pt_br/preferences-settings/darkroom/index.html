@@ -1,0 +1,3069 @@
+<!doctype html>
+<html lang="pt_br">
+    <head>
+      <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>manual do usuário darktable 4.0 - sala escura</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+      <link rel="stylesheet" href="/dtdocs/css/style.min.3b298d8f37646aff6a802627ff27a707153196970e12552ddf3f7e6fdf49ebb1.css">
+      
+
+
+<script> var indexURL="https:\/\/darktable-org.github.io\/dtdocs\/pt_br\/index.json"</script>
+<script src="/dtdocs/js/jquery.js"></script>
+<script src="/dtdocs/js/popper.js" type="module"></script>
+<script src="/dtdocs/js/bootstrap.js"></script>
+<script src="/dtdocs/js/lunr.js"></script>
+<script src="/dtdocs/js/app.js"></script>
+
+
+    </head>
+    <body>
+        
+
+        <header class="navbar navbar-expand-lg sticky-top  navbar-dark bg-dark">
+   <a class="navbar-brand" href="/dtdocs" rel="home" title="manual do usuário darktable 4.0">
+	manual do usuário darktable 4.0
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+	    
+	      <li class="nav-item dropdown" aria-describedby="language-picker-description">
+		   <p class="sr-only" id="language-picker-description">languages</p>
+		   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+             <img src="https://darktable-org.github.io/dtdocs//language-icons/icon20x24px-exported-transparent.png" alt="Language Icon" height="20" class="translation-icon"/>
+		     <span>translations</span>
+		   </a>
+		   <div class="dropdown-menu dropdonw-trans" role="listbox">
+		      <a class="dropdown-item" aria-selected="true" hreflang="pt_br" role="option" lang="pt_br" href="https://darktable-org.github.io/dtdocs/pt_br/preferences-settings/darkroom/">Português</a>
+		        
+		      <a class="dropdown-item" hreflang="en" role="option" lang="en" href="https://darktable-org.github.io/dtdocs/en/preferences-settings/darkroom/">English</a>
+		    
+		      <a class="dropdown-item" hreflang="fr" role="option" lang="fr" href="https://darktable-org.github.io/dtdocs/fr/preferences-settings/darkroom/">Français</a>
+		    
+		      <a class="dropdown-item" hreflang="de" role="option" lang="de" href="https://darktable-org.github.io/dtdocs/de/preferences-settings/darkroom/">German</a>
+		    
+		      <a class="dropdown-item" hreflang="es" role="option" lang="es" href="https://darktable-org.github.io/dtdocs/es/preferences-settings/darkroom/">Espanol</a>
+		    
+		      <a class="dropdown-item" hreflang="uk" role="option" lang="uk" href="https://darktable-org.github.io/dtdocs/uk/preferences-settings/darkroom/">Ukrainian</a>
+		    
+		      <a class="dropdown-item" hreflang="nl" role="option" lang="nl" href="https://darktable-org.github.io/dtdocs/nl/preferences-settings/darkroom/">Dutch</a>
+		    
+		   </div>
+	       </li>
+	    
+	</ul>
+        <ul>
+           <form class="form-inline my-2 my-lg-0">
+                <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search" autocomplete="off" aria-label="Search">
+           </form>
+        </ul>
+
+
+    </div>
+</header>
+
+<div id="search-results" class="search-results">
+</div>
+
+
+        <div class="container-fluid">
+	    <div class="row">
+		<div class="content col-sm-12 order-sm-1 col-md-9 mx-md-auto order-md-12">
+		    
+
+
+
+<div class="crumbs">
+    <span class="crumb">
+	
+
+<a href='/dtdocs/pt_br/'>darktable</a> / <a href='/dtdocs/pt_br/preferences-settings/'>Preferências e Configurações</a> / sala escura
+    </span>
+</div>
+
+<div class="prev-next row">
+    <div class="col-6">
+    
+	<a href="/dtdocs/pt_br/preferences-settings/lighttable/" class="next">&lt; mesa de luz</a>
+	
+    </div>
+    <div class="col-6">
+    
+	<a href="/dtdocs/pt_br/preferences-settings/processing/" class="prev">processamento &gt;</a>
+	
+    </div>
+</div>
+
+
+<article role="main">
+
+    <h1 class="title">
+        sala escura
+    </h1>
+
+    
+
+    <p>Controla as funcionalidades da vista da <a href="/dtdocs/pt_br/darkroom/">sala escura</a> e módulos associados.</p>
+<h1 id="geral"><a href="#geral">🔗</a>geral</h1>
+<dl>
+<dt>controle de pressão da caneta para máscaras de pincel</dt>
+<dd>Controla como a leitura da pressão de uma mesa digitalizadora afeta as pinceladas de uma <a href="/dtdocs/pt_br/darkroom/masking-and-blending/masks/drawn/">máscara desenhada</a> gerada. Você pode controlar a largura, a dureza e a opacidade do pincel. O controle “absoluto” significa que a leitura da pressão define diretamente o atributo com um valor entre 0% e 100%. O controle “relativo” significa que a leitura da pressão ajusta o atributo entre zero e um valor predefinido (“desligado” por padrão).</dd>
+<dt>suavização dos traços do pincel</dt>
+<dd>Estabelece o nível de suavização das pinceladas da <a href="/dtdocs/pt_br/darkroom/masking-and-blending/masks/drawn/">máscara desenhada</a>. Uma suavização mais forte leva a menos nós e a uma edição mais fácil às custas de uma precisão menor.</dd>
+<dt>deslize para baixo para aumentar os parâmetros da máscara</dt>
+<dd>Por padrão, rolar o mouse para cima aumenta o valor dos parâmetros de forma relevante em <a href="/dtdocs/pt_br/darkroom/masking-and-blending/masks/drawn/">máscaras desenhadas</a>. Configure esta preferência para reverter o comportamento (desativado por padrão).</dd>
+<dt>pattern for the image information line</dt>
+<dd>Set the information to be displayed in the <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/image-info-line/">image information line</a>. You can use any variables in the <a href="../special-topics/variables.md">variables</a> section as well as <code>$(NL)</code> for a new line. You can also include <a href="../special-topics/variables.md#formatting">formatting</a> (bold, italic, colors etc).</dd>
+<dt>posição da linha de informações da imagem</dt>
+<dd>Selecione em que painel da sala escura a <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/image-info-line/">linha de informações da imagem</a> será exibida. Escolha entre “acima, à esquerda”, “acima, à direita”, “acima, no centro”, “inferior” e “oculto” (“inferior” por padrão).</dd>
+<dt>borda ao redor da imagem no modo sala escura</dt>
+<dd>Exibe a imagem central no modo de sala escura com uma borda ao redor com o número de pixels indicado (10 por padrão).</dd>
+<dt>mostrar barras de rolagem para visualização central</dt>
+<dd>Seleciona se as barras de rolagem serão exibidas na visualização central da sala escura (desligado por padrão).</dd>
+<dt>demosaicing for zoomed out darkroom mode</dt>
+<dd>Choose how to demosaic images in the darkroom view when not viewing the image at 1:1 zoom scale. Note: this setting is only used for interactive work and does not affect exported images.</dd>
+<dd><ul>
+<li><em>default</em> uses the default demosaic mode for the camera&rsquo;s sensor (RCD or Markesteijn).</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>always bilinear (fast)</em> is fastest, but not as sharp</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>full (possibly slow)</em> will use the settings from the <a href="/dtdocs/pt_br/module-reference/processing-modules/demosaic/"><em>demosaic</em></a> module (the same settings as the export module will use).</li>
+</ul>
+</dd>
+<dt>reduzir resolução da imagem de pré-visualização</dt>
+<dd>Reduz a resolução da imagem da <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/navigation/">pré-visualização de navegação</a> (selecione entre &ldquo;original&rdquo;, &ldquo;para 1/2&rdquo;, &ldquo;para 1/3&rdquo; ou &ldquo;para 1/4&rdquo; do tamanho). Isto pode aumentar a velocidade de renderização mas também pode dificultar a precisão na seleção de cores e mascaramento (&ldquo;original&rdquo; por padrão).</dd>
+<dt>mostrar tela de carregamento entre imagens</dt>
+<dd>Mostra uma tela de carregamento cinza ao navegar entre imagens na sala escura. Desligue esta opção para mostrar uma simples mensagem flutuante e deixar a imagem anterior no local até que a próxima imagem seja carregada. Notar que desligar esta opção pode ser muito útil para comparar rapidamente duas imagens duplicadas. No entanto, pode haver problemas com tempos longos de carregamento (levando você a pensar que a próxima imagem já tenha sido carregada) e você pode observar artefatos visuais enquanto a próxima imagem estiver carregando (ligado por padrão).</dd>
+</dl>
+<h1 id="módulos"><a href="#m%c3%b3dulos">🔗</a>módulos</h1>
+<dl>
+<dt>mostrar canais individuais de cor</dt>
+<dd>Controla como as cores individuais dos canais são exibidas quando ativada a funcionalidade de <a href="/dtdocs/pt_br/darkroom/masking-and-blending/masks/parametric/">máscaras paramétricas</a>. Você pode selecionar entre &ldquo;falsa cor&rdquo; e &ldquo;tons de cinza&rdquo; (&ldquo;falsa cor&rdquo; por padrão).</dd>
+<dt>ocultar predefinições nativas para módulos de processamento</dt>
+<dd>Se ativo, somente predefinições do usuário serão exibidas no menu de predefinições para os módulos de processamento &ndash; predefinições ativas serão ocultas (desligado por padrão).</dd>
+<dt>mostrar a ferramenta de linhas guia na interface dos módulos</dt>
+<dd>Ative isso para mostrar a interface local de <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/guides-overlays/#linhas-guia-locais">linhas guia &amp; sobreposições</a> diretamente na interface do usuário dos módulos que o suportam (ativado por padrão).</dd>
+<dt>expandir um único módulo de processamento de cada vez</dt>
+<dd>Controla como os <a href="/dtdocs/pt_br/module-reference/processing-modules/">módulos de processamento</a> são expandidos na sala escura. Se ativado, expandir um módulo com um clique recolhe qualquer módulo atualmente expandido. Se você deseja expandir um módulo sem recolher os outros, você pode fazer isso com o Shift+clique. Desativar esta opção inverte o comportamento do clique e Shift+clique (ativado por padrão).</dd>
+<dt>somente recolher módulos no grupo atual</dt>
+<dd>Ao expandir um único módulo (usando a lógica definida na configuração anterior), somente recolhe os outros módulos que aparecem na grupo atualmente visível. Desativar essa opção garante que os módulos em grupos não visíveis são também recolhidos (ativado por padrão).</dd>
+<dt>expandir módulo quando estiver ativado e recolhê-lo quando estiver desativado</dt>
+<dd>Selecione esta opção para que a sala escura expanda ou recolha automaticamente os <a href="/dtdocs/pt_br/module-reference/processing-modules/">módulos de processamento</a> quando estiverem ativados ou desativados (desligado por padrão).</dd>
+<dt>deslizar módulos de processamento quando expandido/recolhido</dt>
+<dd>Com esta opção ativa, os <a href="/dtdocs/pt_br/module-reference/processing-modules/">módulos de processamento</a> são deslizados até a parte superior do painel da direita quando são expandidos ou recolhidos (ligado por padrão).</dd>
+<dt>mostrar botões do lado direito nos cabeçalhos de módulos de processamento</dt>
+<dd>Seleciona se deseja exibir os quatro botões (indicador de máscara, menu de múltiplas instâncias, redefinir parâmetros, menu de predefinições) à direita do <a href="/dtdocs/pt_br/darkroom/processing-modules/module-header/">cabeçalho do módulo</a> nos módulos de processamento. Estes botões sempre aparecem quando o mouse está sobre o módulo. Em outras ocasiões, são exibidos ou ocultados de acordo com o selecionado nesta caixa combinada:</dd>
+<dd><ul>
+<li><em>sempre</em>: mostrar sempre todos os botões</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>ativo</em>: mostrar somente os botões quando o mouse estiver sobre o módulo</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>atenuar</em>: os botões ficam atenuados quando o mouse não estiver sobre o módulo</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>automático</em>: ocultar os botões quando o painel fica estreito</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>esmaecer</em>: esmaecer todos os botões quando o painel ficar estreito</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>ajustar</em>: ocultar todos os botões se o nome do módulo não couber no cabeçalho</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>suavizar</em>: desaparecer gradualmente todos os botões do cabeçalho simultaneamente</li>
+</ul>
+</dd>
+<dd><ul>
+<li><em>deslizar</em>: ocultar gradualmente os botões individuais conforme necessário</li>
+</ul>
+</dd>
+<dd>(<em>sempre</em> por padrão)</dd>
+<dt>mostrar indicador de máscara nos cabeçalhos do módulo</dt>
+<dd>Se ativado, será exibido um ícone nos cabeçalhos de qualquer módulo de processamento que tenha uma <a href="/dtdocs/pt_br/darkroom/masking-and-blending/masks/">máscara</a> aplicada (ativado por padrão).</dd>
+<dt>perguntar por nome ao adicionar uma nova instância</dt>
+<dd>Se ativado, ao criar uma nova instância de um módulo de processamento, uma caixa será exibida imediatamente permitindo que você defina um nome para a nova instância (desativado por padrão).</dd>
+</dl>
+
+
+    
+    <h3 class="translations_head">translations</h3>
+    <ul class="translations">
+        
+        <li><a href="/dtdocs/en/preferences-settings/darkroom/">
+            English: darkroom
+        </a></li>
+        
+        <li><a href="/dtdocs/fr/preferences-settings/darkroom/">
+            Français: chambre noire
+        </a></li>
+        
+        <li><a href="/dtdocs/de/preferences-settings/darkroom/">
+            German: Dunkelkammer
+        </a></li>
+        
+        <li><a href="/dtdocs/es/preferences-settings/darkroom/">
+            Espanol: cuarto oscuro
+        </a></li>
+        
+        <li><a href="/dtdocs/uk/preferences-settings/darkroom/">
+            Ukrainian: темна кімната
+        </a></li>
+        
+        <li><a href="/dtdocs/nl/preferences-settings/darkroom/">
+            Dutch: ontwikkelen
+        </a></li>
+        
+    </ul>
+    
+</article>
+
+<div class="prev-next row">
+    <div class="col-6">
+    
+	<a href="/dtdocs/pt_br/preferences-settings/lighttable/" class="next">&lt; mesa de luz</a>
+	
+    </div>
+    <div class="col-6">
+    
+	<a href="/dtdocs/pt_br/preferences-settings/processing/" class="prev">processamento &gt;</a>
+	
+    </div>
+</div>
+
+
+
+      </div>
+		<nav class="navigation col-sm-12 order-sm-12 col-md-3 order-md-1">
+		    <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/" class="">
+          Visão geral
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/user-interface/" class="">
+          interface do usuário
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/user-interface/views/" class="">
+          vistas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/user-interface/screen-layout/" class="">
+          disposição da tela
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/user-interface/filmstrip/" class="">
+          rolo de filme
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/user-interface/top-panel/" class="">
+          painel superior
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/user-interface/keyboard-shortcuts/" class="">
+          atalhos de teclado
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/supported-file-formats/" class="">
+          formatos de arquivo suportados
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/sidecar-files/" class="">
+          arquivos auxiliares &amp; edição não destrutiva
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/sidecar-files/sidecar/" class="">
+          arquivos auxiliares
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/sidecar-files/sidecar-import/" class="">
+          importar arquivos auxiliares de outras aplicações
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/sidecar-files/local-copies/" class="">
+          cópias locais
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/workflow/" class="">
+          uma introdução do fluxo de trabalho do darktable
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/workflow/introduction/" class="">
+          introdução
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/workflow/import-review/" class="">
+          importar &amp; revisar
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/workflow/process/" class="">
+          processar
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/overview/workflow/export/" class="">
+          exportar
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/" class="">
+          Mesa de luz
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/overview/" class="">
+          visão geral
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/lighttable-view-layout/" class="">
+          disposição da mesa de luz
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/undo-redo/" class="">
+          desfazer/refazer
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/lighttable-modes/" class="">
+          modos da mesa de luz
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/lighttable-modes/filemanager/" class="">
+          gerenciador de arquivos
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/lighttable-modes/zoomable-lighttable/" class="">
+          mesa de luz ampliável
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/lighttable-modes/culling/" class="">
+          seleção (comparação)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/lighttable-modes/full-preview/" class="">
+          visualização completa
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/digital-asset-management/" class="">
+          gerenciamento de ativos digitais
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/digital-asset-management/collections/" class="">
+          coleções &amp; rolos de filme
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/digital-asset-management/thumbnails/" class="">
+          miniaturas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/digital-asset-management/star-color/" class="">
+          classificações com estrelas &amp; etiquetas de cor
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/digital-asset-management/grouping/" class="">
+          agrupamento de imagens
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lighttable/digital-asset-management/metadata-tagging/" class="">
+          metadados e etiquetas
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/" class="">
+          Sala escura
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/overview/" class="">
+          visão geral
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/darkroom-view-layout/" class="">
+          disposição da sala escura
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/pixelpipe/" class="">
+          o pixelpipe
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/pixelpipe/the-anatomy-of-a-module/" class="">
+          a anatomia de um módulo de processamento
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/pixelpipe/the-pixelpipe-and-module-order/" class="">
+          o pixelpipe e a ordem dos módulos
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/pixelpipe/history-stack/" class="">
+          o histórico
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/pixelpipe/undo-redo/" class="">
+          desfazer e refazer
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/processing-modules/" class="">
+          módulos de processamento
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/processing-modules/module-header/" class="">
+          cabeçalho de módulo
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/processing-modules/multiple-instances/" class="">
+          múltiplas instâncias
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/processing-modules/presets/" class="">
+          predefinições
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/processing-modules/module-controls/" class="">
+          controles do módulo
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/processing-modules/curves/" class="">
+          curvas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/processing-modules/wavelets/" class="">
+          wavelets
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/processing-modules/deprecated/" class="">
+          módulos obsoletos
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/masking-and-blending/" class="">
+          máscaras &amp; mesclagem
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/masking-and-blending/overview/" class="">
+          visão geral
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/masking-and-blending/blend-modes/" class="">
+          modos de mesclagem
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/masking-and-blending/masks/" class="">
+          máscaras
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/masking-and-blending/masks/overview/" class="">
+          visão geral
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/masking-and-blending/masks/drawn/" class="">
+          máscaras desenhadas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/masking-and-blending/masks/parametric/" class="">
+          máscaras paramétricas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/masking-and-blending/masks/drawn-and-parametric/" class="">
+          combinando máscaras desenhadas e paramétricas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/masking-and-blending/masks/refinement-controls/" class="">
+          refinamento da máscara e controles adicionais
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/masking-and-blending/masks/raster/" class="">
+          máscaras rasterizadas
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/organization/" class="">
+          organização
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/organization/overview/" class="">
+          visão geral
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/organization/module-groups/" class="">
+          grupos de módulos
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/organization/quick-access-panel/" class="">
+          painel de acesso rápido
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/darkroom/organization/manage-module-layouts/" class="">
+          gerenciar disposição dos módulos
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/tethering/" class="">
+          Acesso remoto
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/tethering/overview/" class="">
+          visão geral
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/tethering/tethering-view-layout/" class="">
+          disposição do acesso remoto
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/tethering/troubleshooting/" class="">
+          solução de problemas
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/map/" class="">
+          Mapa
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/map/overview/" class="">
+          visão geral
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/map/map-view-layout/" class="">
+          disposição do mapa
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/slideshow/" class="">
+          Apresentação
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/slideshow/overview/" class="">
+          visão geral
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/slideshow/usage/" class="">
+          uso
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/print/" class="">
+          Impressão
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/print/overview/" class="">
+          visão geral
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/print/print-view-layout/" class="">
+          disposição da impressão
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/" class="">
+          Referência de Módulos
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/overview/" class="">
+          visão geral
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/" class="">
+          módulos de processamento
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/chromatic-aberrations/" class="">
+          aberrações cromáticas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/raw-chromatic-aberrations/" class="">
+          aberrações cromáticas em raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/basic-adjustments/" class="">
+          ajustes básicos (obsoleto)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/negadoctor/" class="">
+          analista de negativos
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/white-balance/" class="">
+          balanço de branco
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/color-balance/" class="">
+          balanço de cor
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/color-balance-rgb/" class="">
+          balanço de cor rgb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/color-calibration/" class="">
+          calibração de cor
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/censorize/" class="">
+          censurar
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/colorize/" class="">
+          colorir
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/color-contrast/" class="">
+          contraste de cor
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/local-contrast/" class="">
+          contraste local
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/contrast-brightness-saturation/" class="">
+          contraste, brilho, saturação
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/lens-correction/" class="">
+          correção da lente
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/color-correction/" class="">
+          correção de cor
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/unbreak-input-profile/" class="">
+          correção de perfil de entrada
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/crop/" class="">
+          cortar
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/crop-rotate/" class="">
+          cortar e girar (obsoleto)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/base-curve/" class="">
+          curva base
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/tone-curve/" class="">
+          curva de tons
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/rgb-curve/" class="">
+          curva rgb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/graduated-density/" class="">
+          densidade graduada
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/surface-blur/" class="">
+          desfoque de superfície
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/blurs/" class="">
+          desfoques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/diffuse/" class="">
+          difusão ou nitidez
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/liquify/" class="">
+          distorcer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/split-toning/" class="">
+          divisão de tons
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/contrast-equalizer/" class="">
+          equalizador de contraste
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/tone-equalizer/" class="">
+          equalizador de tons
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/exposure/" class="">
+          exposição
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/grain/" class="">
+          grão
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/demosaic/" class="">
+          interpolação cromática
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/invert/" class="">
+          inverter (obsoleto)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/lut-3d/" class="">
+          lut 3D
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/fill-light/" class="">
+          luz de preenchimento (obsoleto)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/bloom/" class="">
+          luz suave
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/color-mapping/" class="">
+          mapeamento de cor
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/tone-mapping/" class="">
+          mapeamento de tons (obsoleto)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/global-tonemap/" class="">
+          mapeamento tonal global (obsoleto)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/watermark/" class="">
+          marca d&#39;água
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/dithering/" class="">
+          matização
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/sharpen/" class="">
+          melhorar nitidez
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/channel-mixer/" class="">
+          misturador de canais (obsoleto)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/framing/" class="">
+          moldura
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/monochrome/" class="">
+          monocromático
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/scale-pixels/" class="">
+          mudar escala de pixels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/levels/" class="">
+          níveis
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/rgb-levels/" class="">
+          níveis rgb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/orientation/" class="">
+          orientação
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/highpass/" class="">
+          passa-altas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/lowpass/" class="">
+          passa-baixas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/input-color-profile/" class="">
+          perfil de cor de entrada
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/output-color-profile/" class="">
+          perfil de cor de saída
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/hot-pixels/" class="">
+          pixels quentes
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/raw-black-white-point/" class="">
+          ponto de preto/branco em raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/color-reconstruction/" class="">
+          reconstrução de cor
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/highlight-reconstruction/" class="">
+          reconstrução de realce
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/defringe/" class="">
+          redução de halo (obsoleto)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/denoise-profiled/" class="">
+          redução de ruído (perfilado)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/astrophoto-denoise/" class="">
+          redução de ruído em astrofotografia
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/raw-denoise/" class="">
+          redução de ruído raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/spot-removal/" class="">
+          remoção de mancha (obsoleto)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/haze-removal/" class="">
+          remoção de névoa
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/retouch/" class="">
+          retocar
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/filmic-rgb/" class="">
+          rgb fílmico
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/rotate-pixels/" class="">
+          rotacionar pixels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/rotate-perspective/" class="">
+          rotação e perspectiva
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/zone-system/" class="">
+          sistema de zona (obsoleto)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/shadows-and-highlights/" class="">
+          sombras e realces
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/soften/" class="">
+          suavização
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/color-look-up-table/" class="">
+          tabela de cores
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/vignetting/" class="">
+          vinheta
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/lowlight-vision/" class="">
+          visão com pouca luz
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/vibrance/" class="">
+          vivacidade (obsoleto)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/velvia/" class="">
+          vélvia
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/processing-modules/color-zones/" class="">
+          zonas de cor
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/" class="">
+          módulos utilitários
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/tethering/" class="">
+          acesso remoto
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/tethering/camera-settings/" class="">
+          configurações da câmera
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/tethering/session/" class="">
+          sessão
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/tethering/live-view/" class="">
+          visualização ao vivo
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/shared/" class="">
+          compartilhados
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/shared/collections/" class="">
+          coleções
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/shared/recent-collections/" class="">
+          coleções usadas recentemente
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/shared/metadata-editor/" class="">
+          editor de metadados
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/shared/tagging/" class="">
+          etiquetas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/shared/export/" class="">
+          exportar
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/shared/collection-filters/" class="">
+          filtros de coleção
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/shared/focus-peaking/" class="">
+          foco máximo
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/shared/geotagging/" class="">
+          geoetiquetas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/shared/scopes/" class="">
+          histograma
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/shared/image-information/" class="">
+          informações da imagem
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/shared/filmstrip/" class="">
+          rolo de filme
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/print/" class="">
+          impressão
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/print/print-settings/" class="">
+          configurações de impressão
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/map/" class="">
+          mapa
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/map/map-settings/" class="">
+          configurações do mapa
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/map/find-location/" class="">
+          encontrar localização
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/map/locations/" class="">
+          localizações
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/lighttable/" class="">
+          mesa de luz
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/lighttable/styles/" class="">
+          estilos
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/lighttable/selected-image/" class="">
+          imagens selecionadas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/lighttable/import/" class="">
+          importar
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+          instalador de scripts lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/lighttable/timeline/" class="">
+          linha do tempo
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/lighttable/history-stack/" class="">
+          pilha de histórico
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/lighttable/select/" class="">
+          selecionar
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/" class="">
+          sala escura
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/color-assessment/" class="">
+          avaliação de cores
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/duplicate-manager/" class="">
+          gerenciador de duplicatas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/mask-manager/" class="">
+          gerenciador de máscaras
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/clipping/" class="">
+          indicador de recorte
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/raw-overexposed/" class="">
+          indicador de superexposição raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/snapshots/" class="">
+          instantânea
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/image-info-line/" class="">
+          linha de informações da imagem
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/guides-overlays/" class="">
+          linhas guia &amp; sobreposições
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/navigation/" class="">
+          navegação
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/module-order/" class="">
+          ordem dos módulos
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/history-stack/" class="">
+          pilha de histórico
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/soft-proof/" class="">
+          prova digital
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/global-color-picker/" class="">
+          seletor de cores global
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/module-reference/utility-modules/darkroom/gamut/" class="">
+          verificação de gama
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/preferences-settings/" class="">
+          Preferências e Configurações
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/preferences-settings/overview/" class="">
+          visão geral
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/preferences-settings/general/" class="">
+          geral
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/preferences-settings/import/" class="">
+          importar
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/preferences-settings/lighttable/" class="">
+          mesa de luz
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/preferences-settings/darkroom/" class=" active">
+          sala escura
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/preferences-settings/processing/" class="">
+          processamento
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/preferences-settings/security/" class="">
+          segurança
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/preferences-settings/storage/" class="">
+          armazenamento
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/preferences-settings/miscellaneous/" class="">
+          miscelânea
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/preferences-settings/shortcuts/" class="">
+          atalhos
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/preferences-settings/presets/" class="">
+          predefinições
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/preferences-settings/lua-options/" class="">
+          opções do lua
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lua/" class="">
+          Scripting com Lua
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lua/overview/" class="">
+          visão geral
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lua/basic-principles/" class="">
+          princípios básicos: arquivos luarc
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lua/a-simple-example/" class="">
+          um exemplo simples em lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lua/printing-labeled-images/" class="">
+          imprimir imagens com etiqueta
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lua/simple-shortcut/" class="">
+          adicionar um atalho simples
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lua/exporting-images/" class="">
+          exportar imagens com lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lua/building-ui-elements/" class="">
+          construir elementos de interface do usuário
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lua/sharing-scripts/" class="">
+          compartilhar scripts
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lua/calling-from-dbus/" class="">
+          chamar lua a partir do dbus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lua/darktable-from-lua/" class="">
+          usar o darktable a partir de um script lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/lua/api/" class="">
+          API do lua
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/guides-tutorials/" class="">
+          Guias e Tutoriais
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/guides-tutorials/monochrome/" class="">
+          processar imagens monocromáticas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/guides-tutorials/batch-editing/" class="">
+          editar imagens em lote
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/guides-tutorials/other-resources/" class="">
+          outros recursos
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/" class="">
+          Tópicos especiais
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/color-management/" class="">
+          gerenciamento de cor
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/color-management/overview/" class="">
+          visão geral
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/color-management/display-profile/" class="">
+          perfil do monitor
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/color-management/rendering-method/" class="">
+          método de renderização
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/color-management/rendering-intent/" class="">
+          intenção de renderização
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/color-management/color-spaces/" class="">
+          espaços de cor do darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/color-management/unbounded-colors/" class="">
+          cores ilimitadas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/color-management/color-artifacts/" class="">
+          possíveis artefatos de cor
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/color-management/color-dimensions/" class="">
+          dimensões da cor no darktable
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/opencl/" class="">
+          opencl
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/opencl/background/" class="">
+          os bastidores
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/opencl/how-opencl-works/" class="">
+          como funciona o opencl
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/opencl/activate-opencl/" class="">
+          ativar o opencl no darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/opencl/setting-up/" class="">
+          configurar o opencl
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/opencl/problems-solutions/" class="">
+          possíveis problemas e soluções
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/opencl/scheduling-profile/" class="">
+          perfil de agendamento de tarefas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/opencl/multiple-devices/" class="">
+          múltiplos dispositivos
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/opencl/still-doesnt-work/" class="">
+          opencl ainda não funciona para mim
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/mem-performance/" class="">
+          ajuste de memória e desempenho
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/darktable-chart/" class="">
+          usando o darktable-chart
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/darktable-chart/overview/" class="">
+          visão geral
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/darktable-chart/usage/" class="">
+          uso
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/darktable-chart/source-image/" class="">
+          imagem fonte
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/darktable-chart/reference-values/" class="">
+          valores de referência
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/darktable-chart/process/" class="">
+          processar
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/darktable-chart/making-input-images/" class="">
+          criar imagens de entrada para o darktable-chart
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/program-invocation/" class="">
+          invocação do programa
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/program-invocation/darktable/" class="">
+          darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/program-invocation/darktable-cli/" class="">
+          darktable-cli
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/program-invocation/darktable-generate-cache/" class="">
+          darktable-generate-cache
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/program-invocation/darktable-chart/" class="">
+          darktable-chart
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/program-invocation/darktable-cltest/" class="">
+          darktable-cltest
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/program-invocation/darktable-cmstest/" class="">
+          darktable-cmstest
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/program-invocation/purge_non_existing_images_sh/" class="">
+          purge_non_existing_images.sh
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/color-pipeline/" class="">
+          pipeline de cor do darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/midi-device-support/" class="">
+          suporte a dispositivo midi
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/contributing/" class="">
+          contribuir para o dtdocs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/pt_br/special-topics/translating/" class="">
+          traduzir o dtdocs
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+
+		</nav>
+	    </div>
+
+            
+
+        </div>
+
+
+    </body>
+</html>
+
+<script>
+(function($) {
+  
+
+  $.fn.scrollToMiddle = function(options) {
+    var settings = $.extend({
+        duration: 0
+    }, options );
+
+    return this.each(function() {
+      var $el = $(this);
+      var elOffset = $el.offset().top;
+      var elHeight = $el.height();
+      var windowHeight = $(window).height();
+      var offset;
+      if (elHeight < windowHeight) {
+        offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
+      }
+      else {
+        offset = elOffset;
+      }
+      $('.navigation').scrollTop(offset);
+    });
+  };
+}(jQuery));
+
+$('.navigation').css('opacity', '0');
+ $(document).ready(function(){
+     $('.parent ul').hide();
+     $('.navigation').css('opacity', 1.0);
+     $('.active').parents('ul').show();
+     $('.active').siblings('ul').show();
+     $('.active').children('i.toggle').removeClass("fa-plus-squre").addClass("fa-minus-square-o");
+     $('.active').parents('li').children('.toggle').removeClass("fa-plus-square").addClass("fa-minus-square-o");
+     $('.active').scrollToMiddle();
+
+     $('.toggle').on('click', function (e) {
+       e.stopPropagation();
+       $(this).siblings('ul').slideToggle();
+
+       if($(this).hasClass("fa-plus-square")) {
+           $(this).addClass("fa-minus-square-o");
+           $(this).removeClass("fa-plus-square");
+       }
+       else {
+           $(this).addClass("fa-plus-square");
+           $(this).removeClass("fa-minus-square-o");
+       }
+     });
+ });
+
+</script>
+
+
+<script>
+ var _paq = window._paq = window._paq || [];
+  
+ _paq.push(['trackPageView']);
+ _paq.push(['enableLinkTracking']);
+ (function() {
+     var u="https://piwik.kees.nl/";
+     _paq.push(['setTrackerUrl', u+'matomo.php']);
+     _paq.push(['setSiteId', '21']);
+     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+ })();
+</script>
+<noscript><p><img src="https://piwik.kees.nl/matomo.php?idsite=21&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+
+

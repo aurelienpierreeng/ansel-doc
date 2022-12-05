@@ -1,0 +1,3486 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+      <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>darktable 4.0 user manual - filmisch rgb</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+      <link rel="stylesheet" href="/dtdocs/css/style.min.3b298d8f37646aff6a802627ff27a707153196970e12552ddf3f7e6fdf49ebb1.css">
+      
+
+
+<script> var indexURL="https:\/\/darktable-org.github.io\/dtdocs\/nl\/index.json"</script>
+<script src="/dtdocs/js/jquery.js"></script>
+<script src="/dtdocs/js/popper.js" type="module"></script>
+<script src="/dtdocs/js/bootstrap.js"></script>
+<script src="/dtdocs/js/lunr.js"></script>
+<script src="/dtdocs/js/app.js"></script>
+
+
+    </head>
+    <body>
+        
+
+        <header class="navbar navbar-expand-lg sticky-top  navbar-dark bg-dark">
+   <a class="navbar-brand" href="/dtdocs" rel="home" title="darktable 4.0 user manual">
+	darktable 4.0 user manual
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+	    
+	      <li class="nav-item dropdown" aria-describedby="language-picker-description">
+		   <p class="sr-only" id="language-picker-description">languages</p>
+		   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+             <img src="https://darktable-org.github.io/dtdocs//language-icons/icon20x24px-exported-transparent.png" alt="Language Icon" height="20" class="translation-icon"/>
+		     <span>translations</span>
+		   </a>
+		   <div class="dropdown-menu dropdonw-trans" role="listbox">
+		      <a class="dropdown-item" aria-selected="true" hreflang="nl" role="option" lang="nl" href="https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/filmic-rgb/">Dutch</a>
+		        
+		      <a class="dropdown-item" hreflang="en" role="option" lang="en" href="https://darktable-org.github.io/dtdocs/en/module-reference/processing-modules/filmic-rgb/">English</a>
+		    
+		      <a class="dropdown-item" hreflang="fr" role="option" lang="fr" href="https://darktable-org.github.io/dtdocs/fr/module-reference/processing-modules/filmic-rgb/">Français</a>
+		    
+		      <a class="dropdown-item" hreflang="de" role="option" lang="de" href="https://darktable-org.github.io/dtdocs/de/module-reference/processing-modules/filmic-rgb/">German</a>
+		    
+		      <a class="dropdown-item" hreflang="es" role="option" lang="es" href="https://darktable-org.github.io/dtdocs/es/module-reference/processing-modules/filmic-rgb/">Espanol</a>
+		    
+		      <a class="dropdown-item" hreflang="pt_br" role="option" lang="pt_br" href="https://darktable-org.github.io/dtdocs/pt_br/module-reference/processing-modules/filmic-rgb/">Português</a>
+		    
+		      <a class="dropdown-item" hreflang="uk" role="option" lang="uk" href="https://darktable-org.github.io/dtdocs/uk/module-reference/processing-modules/filmic-rgb/">Ukrainian</a>
+		    
+		   </div>
+	       </li>
+	    
+	</ul>
+        <ul>
+           <form class="form-inline my-2 my-lg-0">
+                <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search" autocomplete="off" aria-label="Search">
+           </form>
+        </ul>
+
+
+    </div>
+</header>
+
+<div id="search-results" class="search-results">
+</div>
+
+
+        <div class="container-fluid">
+	    <div class="row">
+		<div class="content col-sm-12 order-sm-1 col-md-9 mx-md-auto order-md-12">
+		    
+
+
+
+<div class="crumbs">
+    <span class="crumb">
+	
+
+
+<a href='/dtdocs/nl/'>darktable</a> / <a href='/dtdocs/nl/module-reference/'>Module Referentie</a> / <a href='/dtdocs/nl/module-reference/processing-modules/'>verwerkingsmodules</a> / filmisch rgb
+    </span>
+</div>
+
+<div class="prev-next row">
+    <div class="col-6">
+    
+	<a href="/dtdocs/nl/module-reference/processing-modules/split-toning/" class="next">&lt; duo-toning</a>
+	
+    </div>
+    <div class="col-6">
+    
+	<a href="/dtdocs/nl/module-reference/processing-modules/bloom/" class="prev">glans &gt;</a>
+	
+    </div>
+</div>
+
+
+<article role="main">
+
+    <h1 class="title">
+        filmisch rgb
+    </h1>
+
+    
+    <div class="toc">
+	<a data-toggle="collapse" href="#collapseTOC" role="button" aria-expanded="false" aria-controls="collapseTOC">
+  
+</a>
+<div class="collapse" id="collapseTOC">
+    <div class="card card-body">
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#voorwaarden">voorwaarden</a></li>
+    <li><a href="#gebruik">gebruik</a></li>
+    <li><a href="#grafiek-weergave">grafiek weergave</a></li>
+    <li><a href="#module-instellingen">module instellingen</a>
+      <ul>
+        <li><a href="#scene">scene</a></li>
+        <li><a href="#reconstrueer">reconstrueer</a>
+          <ul>
+            <li><a href="#_hooglichten-knippen_"><em>hooglichten knippen</em></a></li>
+            <li><a href="#_witbalans_"><em>witbalans</em></a></li>
+          </ul>
+        </li>
+        <li><a href="#uiterlijk">uiterlijk</a></li>
+        <li><a href="#display">display</a></li>
+        <li><a href="#opties">opties</a></li>
+        <li><a href="#achtergrond">achtergrond</a></li>
+        <li><a href="#waarschuwingen">waarschuwingen</a>
+          <ul>
+            <li><a href="#kleur-artefacten">kleur artefacten</a></li>
+            <li><a href="#inconsistente-uitgang">inconsistente uitgang</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+    </div>
+    
+
+    <p>Breng het toonbereik van een afbeelding opnieuw in kaart door de toon- en kleurrespons van klassieke film te reproduceren.</p>
+<p>Deze module kan worden gebruikt om het dynamische bereik van de scène uit te breiden of te verkleinen, zodat het past bij het dynamische bereik van het scherm. Het beschermt kleuren en contrast in de middentonen, herstelt de schaduwen en comprimeert heldere hooglichten en donkere schaduwen. Hooglichten hebben extra aandacht nodig wanneer details behouden moeten blijven (bijv. wolken).</p>
+<p>De module is afgeleid van een andere module met dezelfde naam in <a href="https://www.blender.org/" target="_blank">Blender 3D modelleerder</a> door T.J. Sobotka. Hoewel het in de eerste plaats bedoeld is om afbeeldingen met een hoog dynamisch bereik te herstellen van onbewerkte sensorgegevens, kan het worden gebruikt met elke afbeelding in plaats van de module <a href="/dtdocs/nl/module-reference/processing-modules/base-curve/"><em>basis curve</em></a>. De volgende video (door de ontwikkelaar van deze module) geeft een nuttige introductie: <a href="https://www.youtube.com/watch?v=zbPj_TqTF880" target="_blank">filmic rgb: remap any dynamic range in darktable 3</a>.</p>
+<p><em>filmisch rgb</em> is de opvolger van de <em>filmisch</em> module van darktable 2.6. Hoewel de onderliggende principes niet veel zijn veranderd, zijn de standaardinstellingen en hun aannames dat wel, dus gebruikers van de vorige versie hoeven geen 1:1-vertaling van hun werkvolgorde naar de nieuwe versie te verwachten.</p>
+<hr>
+<p><strong>Opmerking</strong>: Ondanks het technische uiterlijk van deze module, is de beste manier om deze in te stellen het beoordelen van de kwaliteit van het visuele resultaat. Denk niet te veel na over de cijfers die in de GUI worden gepresenteerd om de sterkte van de effecten te kwantificeren.</p>
+<hr>
+<h1 id="voorwaarden"><a href="#voorwaarden">🔗</a>voorwaarden</h1>
+<p>Om het beste uit deze module te halen, hebben jouw afbeeldingen enige voorbereiding nodig:</p>
+<dl>
+<dt>vastleggen (ETTR)</dt>
+<dd>In de camera wordt aanbevolen een techniek te gebruiken die bekend staat als &ldquo;belichten naar rechts &quot; (Expose To The Right : ETTR). Dit betekent dat de opname zo wordt belicht dat de belichting zo helder mogelijk is zonder de hooglichten weg te knippen. Het wordt &ldquo;belichten naar rechts&rdquo; genoemd omdat het histogram in de camera helemaal tot aan de rechterkant moet raken zonder aan de rechterkant te pieken (wat op hooglichten afkappen zou kunnen duiden). Deze techniek zorgt ervoor dat je het dynamische bereik van de sensor van je camera maximaal benut.</dd>
+<dd>
+<p>De standaard meetmodus voor automatische belichting in jouw camera zal het beeld normaal belichten zodat de gemiddelde helderheid in het beeld neigt naar midden-grijs. Soms, voor scènes die worden gedomineerd door lichte tonen, zal de camera het beeld onderbelichten om die lichte tonen meer naar midden-grijs te brengen. Voor scènes die worden gedomineerd door donkere tinten, kan het beeld overbelicht worden en uiteindelijk de hooglichten wegknippen. In dergelijke gevallen kan je de belichtingscompensatieknop in jouw camera gebruiken om de belichting te verhogen of te verlagen - de darktable-belichtingsmodule kan hier automatisch rekening mee houden bij het verwerken van jouw afbeelding.</p>
+</dd>
+<dd>
+<p>In sommige gevallen (bijv. spiegelende hooglichten die weerkaatsen op glanzende objecten) kan het acceptabel zijn om wat bijsnijding te hebben, maar houd er rekening mee dat alle bijgesneden gegevens in jouw afbeelding onherroepelijk verloren gaan. Waar gegevens zijn geknipt, biedt <em>filmisch rgb</em> een functie voor &ldquo;hooglichten-reconstructie&rdquo; om de effecten van het knippen te verminderen en soepel te laten overvloeien met de rest van het beeld. De instellingen voor deze functie staan op het tabblad <a href="#reconstruct"><em>reconstrueer</em></a>. Sommige camera&rsquo;s bieden ook een belichtingsmeetmodus met &ldquo;prioriteit voor hooglichten&rdquo;, die kan helpen om de belichting te maximaliseren terwijl de hoge lichten worden beschermd, en veel camera&rsquo;s bieden functies zoals &ldquo;zebra&rsquo;s&rdquo; of &ldquo;blinkies&rdquo; in de liveweergave om de fotograaf te waarschuwen wanneer delen van het beeld geknipt wordt.</p>
+</dd>
+<dt>aanpassen voor de middentonen</dt>
+<dd>Pas in de module <a href="/dtdocs/nl/module-reference/processing-modules/exposure/"><em>belichting</em></a> de belichting aan totdat de middentonen helder genoeg zijn. Maak je op dit moment geen zorgen over het verliezen van de hoogtepunten - ze zullen worden hersteld als onderdeel van de filmisch verwerking. Het is echter belangrijk om negatieve pixels in zwarte gebieden te vermijden, anders kunnen de berekeningen uitgevoerd door <em>filmisch rgb</em> onvoorspelbare resultaten opleveren. Voor sommige cameramodellen (voornamelijk Canon) kan rawspeed (de onbewerkte decoderingsbibliotheek van darktable) een overdreven zwartniveau instellen, wat resulteert in verbrijzelde zwarttinten en negatieve pixelwaarden. Als dit het geval is, maakt je de zwarttinten helderder door een negatieve zwartniveaucorrectiewaarde in te stellen in de <a href="/dtdocs/nl/module-reference/processing-modules/exposure/"><em>belichting</em></a>-module.</dd>
+<dt>witbalans, ruisonderdrukking, demozaïek</dt>
+<dd>Als je van plan bent de auto-tuners van <em>filmisch rgb</em> te gebruiken, gebruikt je de module <a href="/dtdocs/nl/module-reference/processing-modules/white-balance/"><em>witbalans</em></a> om eerst eventuele kleurzweem te corrigeren en neutrale kleuren te verkrijgen. In RGB-kleurruimten zijn luminantie en chrominantie gekoppeld, en de luminantiedetectie van <em>filmisch rgb</em> is afhankelijk van nauwkeurige metingen van beide. Als jouw afbeelding veel ruis bevat, voeg je een eerste stap van ruisonderdrukking toe om de zwartbelichtingsmetingen te verbeteren en gebruik je een <a href="/dtdocs/nl/module-reference/processing-modules/demosaic/"><em>demozaïek</em></a> algoritme van hoge kwaliteit. Je hoeft je geen zorgen te maken over ruis als je van plan bent om filmisch handmatig in te stellen, zonder de auto-tuners te gebruiken.</dd>
+<dt>toonmapping uitschakelen</dt>
+<dd>Als je van plan bent om een van de chrominantiebehoudmodi van <em>filmisch rgb</em> te gebruiken, vermijd dan het gebruik van <a href="/dtdocs/nl/module-reference/processing-modules/base-curve/"><em>basis curve</em></a> en de verschillende toonmapping-modules. Deze kunnen onvoorspelbare kleurverschuivingen veroorzaken die het behoud van de chrominantie nutteloos zouden maken. Geen van deze modules zou vereist moeten zijn bij het gebruik van <em>filmisch rgb</em>.</dd>
+</dl>
+<h1 id="gebruik"><a href="#gebruik">🔗</a>gebruik</h1>
+<p>De <em>filmisch rgb</em>-module is ontworpen om het dynamische bereik van de gefotografeerde scène (RAW-beeld) in kaart te brengen met het dynamische bereik van het scherm.</p>
+<p>Deze mapping wordt gedefinieerd in drie stappen, die elk op een apart tabblad in de interface worden afgehandeld:</p>
+<ul>
+<li>
+<p>Het tabblad <a href="#scene"><em>scene</em></a> bevat de &ldquo;invoer&rdquo; -instellingen van de scene, die bepalen wat wit en zwart is in de gefotografeerde scene.</p>
+</li>
+<li>
+<p>Het tabblad <a href="#reconstruct"><em>reconstrueer</em></a> biedt tools om opgeblazen hooglichten aan te pakken.</p>
+</li>
+<li>
+<p>Het tabblad <a href="#uiterlijk"><em>uiterlijk</em></a> bevat de artistieke bedoeling van de mapping die wordt toegepast op de invoerparameters (zoals gedefinieerd op het tabblad scene). Dit deel van de module past een S-vormige parametrische curve toe om het contrast van de middentonen te verbeteren en de grijswaarde opnieuw toe te wijzen aan het midden-grijs van het scherm. Dit is vergelijkbaar met wat de modules <a href="/dtdocs/nl/module-reference/processing-modules/base-curve/"><em>basis curve</em></a> en <a href="/dtdocs/nl/module-reference/processing-modules/tone-curve/"><em>toon curve</em></a> doen. Als algemene richtlijn moet je ernaar streven de breedtegraad zo veel mogelijk te vergroten zonder de uitersten van de curve af te knippen.</p>
+</li>
+<li>
+<p>Het tabblad <a href="#display"><em>display</em></a> definieert de uitvoerinstellingen die nodig zijn om de getransformeerde afbeelding aan het scherm toe te wijzen. In typische gebruikssituaties hoeven de parameters op dit tabblad zelden te worden aangepast.</p>
+</li>
+<li>
+<p>Het tabblad <a href="#options"><em>opties</em></a> bevat enkele optionele geavanceerde instellingen en parameters.</p>
+</li>
+</ul>
+<p><em>filmisch rgb</em> heeft de neiging om lokaal contrast te comprimeren, dus nadat je klaar bent met het aanpassen van de instellingen hier, wil je dit misschien compenseren met de <a href="/dtdocs/nl/module-reference/processing-modules/local-contrast/"><em>lokaal contrast</em></a> module. Je kan ook de verzadiging in de module <a href="/dtdocs/nl/module-reference/processing-modules/color-balance-rgb/"><em>kleurenbalans rgb</em></a> verhogen en misschien de tonen verder aanpassen met de <a href="/dtdocs/nl/module-reference/processing-modules/tone-equalizer/"><em>toon equalizer</em></a>.</p>
+<p>Het bereik van de schuifregelaars van <em>filmisch rgb</em> is beperkt tot typische en veilige waarden, maar je kan waarden buiten deze limieten invoeren door met de rechtermuisknop te klikken en waarden in te voeren met het toetsenbord.</p>
+<hr>
+<p><strong>Opmerking</strong>: <em>filmisch rgb</em> kan niet worden ingesteld met volledig neutrale parameters (resulterend in een &ldquo;niet-bewerking&rdquo;) &ndash; zodra de module is ingeschakeld, wordt het beeld altijd op zijn minst enigszins beïnvloed. Je kan echter in de buurt komen van neutraal met de volgende instellingen:</p>
+<ul>
+<li>
+<p>stel in het tabblad <a href="#look"><em>uiterlijk</em></a> het contrast in op 1.0, de breedte op 99% en de verzadiging van de middentonen op 0%,</p>
+</li>
+<li>
+<p>in de <a href="#options"><em>opties</em></a> tab, stel contrast in schaduwen en in hooglichten in op <em>zacht</em>.</p>
+</li>
+</ul>
+<p>In deze configuratie voert filmisch alleen een logaritmische toonmapping uit tussen de grenzen die zijn ingesteld op het tabblad <a href="#scene"><em>scene</em></a>.</p>
+<hr>
+<h1 id="grafiek-weergave"><a href="#grafiek-weergave">🔗</a>grafiek weergave</h1>
+<p>Het grafiek bovenaan de <em>filmisch rgb</em>-module biedt meerdere weergaven om jou te helpen de functionaliteit ervan te begrijpen. Je kan door deze weergaven bladeren met behulp van het 
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/view-icon.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/filmic-rgb/view-icon.png" alt="kijk-pictorgram"  class="icon"    /></a>
+
+ pictogram rechts van de grafiekweergave. Je kan de labels op de assen ook in- en uitschakelen met het 
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/legend-icon.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/filmic-rgb/legend-icon.png" alt="legende-pictogram"  class="icon"    /></a>
+
+ pictogram.</p>
+<p>De volgende weergaven zijn beschikbaar:</p>
+<dl>
+<dt>enkel kijken</dt>
+<dd>Dit is de standaardweergave. De belangrijkste heldere curve laat zien hoe het dynamische bereik van de scène (in EV) wordt gecomprimeerd tot het door het scherm-gerefereerde uitvoerbereik. De oranje stip toont het middelste grijze punt, de witte stippen aan weerszijden markeren het breedtebereik en het oranje deel van de curve aan de bovenkant geeft een overshoot-probleem aan met de spline (het tabblad <a href="#look"><em>uiterlijk</em></a> heeft enkele controles om hiermee om te gaan).</dd>
+<dd>
+<p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-look-only.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-look-only.png" alt="filmisch-rgb-enkel-kijken"  class="w50"    /></a>
+
+</p>
+</dd>
+<dt>kijken + in kaart brengen (lineair)</dt>
+<dd>Deze weergave toont de toewijzing van invoerwaarden [0,1] aan uitvoerwaarden in lineaire ruimte, inclusief de dynamische bereiktoewijzing en de uitvoeroverdrachtsfunctie. Merk op dat in een scene-gerefereerde werkvolgorde, invoerwaarden groter mogen zijn dan 1, maar de grafiek toont alleen in/uit-waarden in het interval [0,1] om de vorm van de grafiek vergelijkbaar te maken met andere tooncurve mapping tools zoals <em>basis curve</em> of <em>toon curve</em>. De werkelijke waarde van het witpunt van de scène wordt tussen haakjes op de <em>X-as</em> weergegeven (uitgedrukt als een percentage van een invoerwaarde van 1).</dd>
+<dd>
+<p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-look-mapping-lin.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-look-mapping-lin.png" alt="filmic-rgb-kijken-in kaart brengen-lin"  class="w50"    /></a>
+
+</p>
+</dd>
+<dt>kijken + in kaart brengen (log)</dt>
+<dd>Hetzelfde als de vorige weergave, maar geplot in logaritmische ruimte.</dd>
+<dd>
+<p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-look-mapping-log.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-look-mapping-log.png" alt="filmic-rgb-kijken-in kaart brengen-lin"  class="w50"    /></a>
+
+</p>
+</dd>
+<dt>dynamisch bereik in kaart brengen</dt>
+<dd>Deze weergave is geïnspireerd op het Ansel Adams Zone-systeem, dat laat zien hoe de zones in de invoerscène (EV) worden toegewezen aan de uitvoer. Midden-grijs van de scène wordt altijd toegewezen aan 18% in de uitvoer (lineaire) ruimte, en de weergave laat zien hoe de toon bereiken naar de uitersten van het belichtingsbereik van de scène worden gecomprimeerd tot een kleiner aantal zones in de weergaveruimte, waardoor er meer overblijft ruimte om de midden tonen te spreiden over de overige zones. Het breedtebereik wordt weergegeven door het donkerdere grijze gedeelte in het midden.</dd>
+<dd>
+<p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-dynamic-range-map.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-dynamic-range-map.png" alt="filmic-rgb-kijken-in kaart brengen-lin"  class="w50"    /></a>
+
+</p>
+</dd>
+</dl>
+<hr>
+<p><strong>Opmerking:</strong> Als sommige parameters te extreem zijn, wat resulteert in een onhaalbare curve, zal <em>filmisch rgb</em> ze intern zuiveren. Zuiveren wordt op twee manieren geïllustreerd op de kijkweergaven:</p>
+<ul>
+<li>
+<p>Een rode stip geeft aan dat het lineaire deel van de curve te ver naar boven of naar beneden is geduwd. Op het tabblad <a href="#look"><em>uiterlijk</em></a> verklein je de <em>breedte</em> of plaats je het lineaire gedeelte opnieuw met behulp van de parameter <em>schaduwen ↔ hooglichten-balans</em>.</p>
+</li>
+<li>
+<p>Een punt dat een halve cirkel wordt, geeft aan dat het contrast te laag is gezien het dynamische bereik van het beeld. Verhoog <em>contrast</em> op het tabblad <a href="#uiterlijk"><em>uiterlijk</em></a> of het <em>dynamisch bereik</em> op het tabblad <a href="#scene"><em>scene</em></a>.</p>
+</li>
+</ul>
+<hr>
+<h1 id="module-instellingen"><a href="#module-instellingen">🔗</a>module instellingen</h1>
+<h2 id="scene"><a href="#scene">🔗</a>scene</h2>
+<p>De instellingen op het tabblad <em>scene</em> zijn in principe gelijk aan die van de <a href="/dtdocs/nl/module-reference/processing-modules/levels/"><em>niveaus</em></a> module (zwart, grijs, wit). Het verschil is dat <em>niveaus</em> scherm-gerefereerde pixelwaarden aanneemt (tussen 0 en 100%), terwijl <em>filmisch</em> jou in staat stelt om te werken aan scene-gerefereerde pixels (tussen &ndash;oneindig EV en +oneindig EV), wat het gebruik van een andere interface dwingt .</p>
+<dl>
+<dt>middengrijze luminantie (standaard verborgen)</dt>
+<dd>Met deze instelling kan je beslissen welke luminantie in de scène moet worden beschouwd als de middelste grijsreferentie (die op het scherm opnieuw wordt toegewezen aan 18%). Gebruik de kleurkiezer om de gemiddelde luminantie over het getekende gebied af te lezen. Als je een foto hebt van een grijskaart of een kleurenkaart (IT8-kaart of kleurchecker) die is gemaakt in de lichtomstandigheden van de scène, dan kan de grijze kleurkiezer worden gebruikt om snel de helderheid van de grijze vlek op die afbeelding te meten. In andere situaties kan de kleurkiezer worden gebruikt om de gemiddelde helderheid van het onderwerp te meten.</dd>
+<dd>
+<p>Dit heeft een effect op het beeld dat analoog is aan een helderheidscorrectie. Waarden in de buurt van 100% comprimeren de hooglichten niet, maar herstellen schaduwen niet. Waarden in de buurt van 0% herstellen de schaduwen aanzienlijk, maar comprimeren de hooglichten harder en resulteren in verlies van lokaal contrast.</p>
+</dd>
+<dd>
+<p>Bij het wijzigen van de middengrijze luminantie worden de wit- en zwartbelichting automatisch dienovereenkomstig aangepast, om te voorkomen dat het dynamisch bereik gaat knippen en om jou te helpen de juiste parameter sneller in te stellen. Als je niet tevreden bent met de automatische aanpassing van de grijsschuifregelaar, kan je achteraf de belichtingsparameters voor wit en zwart corrigeren.</p>
+</dd>
+</dl>
+<hr>
+<p><strong>Opmerking:</strong> Het wordt afgeraden om deze instelling te gebruiken om midden-grijs in te stellen, daarom is het nu standaard verborgen. Gebruik in plaats daarvan de <em>belichting</em>-module om het middelste grijsniveau in te stellen (zie <a href="#usage"><em>gebruik</em></a>, hierboven). Als je deze schuifregelaar echter zichtbaar wilt maken, kan je deze inschakelen met het selectie vakje <em>gebruik aangepaste midden-grijs waarden</em> op het tabblad <a href="#options"><em>opties</em></a>.</p>
+<hr>
+<dl>
+<dt>relatieve belichting wit</dt>
+<dd>Het aantal stops (EV) tussen de middengrijze luminantie van de scène en de scèneluminantie die opnieuw moet worden toegewezen om wit (piekwit) weer te geven. Dit is de rechtergrens van het dynamische bereik van de scène dat op het scherm zal worden weergegeven &ndash; alles dat helderder is dan deze waarde op de scène zal worden afgekapt (puur wit) op het scherm. De kleurkiezer leest de maximale luminantie in RGB-ruimte over het getekende gebied, neemt aan dat het puur wit is en stelt de witte belichtingsparameter in om het maximum opnieuw toe te wijzen aan 100% luminantie.</dd>
+<dt>relatieve belichting zwart</dt>
+<dd>Het aantal stops (EV) tussen de middengrijze luminantie van de scène en de luminantie van de scène dat opnieuw moet worden toegewezen om zwart weer te geven (maximale dichtheid). Dit is de linkergrens van het dynamische bereik van de scène die op het scherm zal worden weergegeven &ndash; alles dat donkerder is dan deze waarde op de scène zal worden afgekapt (puur zwart) op het scherm. De kleurkiezer leest de minimale luminantie in RGB-ruimte over het getekende gebied, neemt aan dat het puur zwart is en stelt de zwarte belichtingsparameter in om het minimum opnieuw toe te wijzen aan 0% luminantie. De meting van de zwarte kleurkiezer is erg gevoelig voor ruis en kan niet bepalen of de minimale luminantie puur zwart is (feitelijke gegevens) of alleen ruis. Het werkt beter op foto&rsquo;s met een lage ISO-waarde en met hoge kwaliteit demosaïcatie. Wanneer de kleurkiezer de zwarte belichting op &ndash;16 EV zet, is dit een teken dat de meting is mislukt en moet je deze handmatig aanpassen.</dd>
+<dd>
+<p>Met de relatieve zwart belichting kan je kiezen hoe ver je schaduwen wilt herstellen.</p>
+</dd>
+<dt>dynamisch bereik schalen en automatisch afstemmen</dt>
+<dd>De kleurkiezer voor automatisch afstemmen combineert de bovenstaande kleurkiezers en stelt jou in staat de witte en zwarte belichting tegelijkertijd in te stellen, waarbij het maximum van het getekende gebied als wit en het minimum als zwart wordt gebruikt. Dit geeft goede resultaten bij landschapsfotografie, maar mislukt meestal voor portretten en binnenscènes.</dd>
+<dd>
+<p>Als er geen echt wit en zwart beschikbaar is op de scène, zijn de maximale en minimale RGB-waarden die op het beeld worden gelezen geen geldige veronderstellingen meer. Dynamisch bereik schalen verkleint of vergroot het gedetecteerde dynamische bereik en de huidige parameters symmetrisch. Dit werkt met beide kleurkiezers en past de huidige waarden van de relatieve belichtingen van wit en zwart aan.</p>
+</dd>
+</dl>
+<hr>
+<p><strong>Opmerking</strong>: er is geen directe relatie tussen het dynamische bereik van je camerasensor (te vinden in DxoMark.com of PhotonsToPhotos.org metingen) en het dynamisch bereik in film (scène witte EV &ndash; scène zwarte EV). Er gebeuren veel dingen voordat <em>filmisch</em> in de pijplijn zit (bijvoorbeeld een onbewerkte zwarte offset die zwart op 0 zou kunnen zetten), zodat <em>filmisch</em> een theoretisch oneindig dynamisch bereik aan zijn invoer ziet. Dit heeft alleen te maken met pixelcoderingsmanipulatie in software, niet met daadwerkelijke sensormogelijkheden.</p>
+<p>De <em>scene-gerefereerde</em> werkvolgorde forceert een zwartniveaucorrectie van &ndash;0.0002, in de <em>belichting</em> module, wat ervoor zorgt dat het dynamische bereik gezien door <em>filmisch&rsquo;s</em> input meestal rond de 12,3 EV ligt. Verlaag deze waarde nog meer als het instellen van de relatieve belichting van zwart in <em>filmisch</em> op &ndash;16 EV zwarten niet losmaakt.</p>
+<hr>
+<h2 id="reconstrueer"><a href="#reconstrueer">🔗</a>reconstrueer</h2>
+<p>Dit tabblad biedt instellingen die overgangen tussen niet-afgekapte en afgekapte gebieden in een afbeelding overvloeien en kunnen ook helpen bij het reconstrueren van kleuren van aangrenzende pixels. Het is ontworpen om schijnwerpers aan te kunnen die onmogelijk kunnen worden losgemaakt tijdens het maken van de opname (zoals naakte gloeilampen of de zonneschijf in het frame) en heeft tot doel hun randen te verspreiden zoals film zou doen. Het is niet ontworpen om grote gebieden met afgekapte pixels of ontbrekende delen van de afbeelding te herstellen.</p>
+<p>Het kan soms handig zijn om de <a href="/dtdocs/nl/module-reference/processing-modules/highlight-reconstruction/"><em>hooglichten reconstructie</em></a> module uit te schakelen om aanvullende gegevens te leveren aan het reconstructie-algoritme (<em>hooglichten reconstructie</em> clips markeren standaard gegevens). Houd er rekening mee dat dit kan leiden tot magenta hooglichten, die moeten worden afgehandeld met de schuifregelaar <em>grijs/kleurrijke details</em>.</p>
+<p>Ten eerste moet een masker worden opgezet om de delen van het beeld te identificeren die worden beïnvloed door de reconstructie van de hooglichten. Er zijn dan enkele extra instellingen om enkele van de compromissen die door het reconstructie-algoritme zijn gemaakt, te verfijnen.</p>
+<h3 id="_hooglichten-knippen_"><a href="#_hooglichten-knippen_">🔗</a><em>hooglichten knippen</em></h3>
+<p>Met deze bedieningselementen kan je kiezen welke delen van het beeld worden beïnvloed door de algoritmen voor reconstructie van hooglichten.</p>
+<dl>
+<dt>drempel</dt>
+<dd>Pixels die helderder zijn dan deze drempel worden beïnvloed door het reconstructie-algoritme. De eenheden zijn in EV, ten opzichte van het witpunt dat is ingesteld op het tabblad <em>scene</em>. Standaard is dit besturingselement ingesteld op +3 EV, wat betekent dat pixels ten minste +3 EV helderder moeten zijn dan het witpunt dat is ingesteld in de <a href="#scene"><em>scene tab</em></a> om de reconstructie van de hooglichten enig effect te laten hebben. In de praktijk betekent dit dat reconstructie van markeringen standaard effectief is uitgeschakeld (om prestatieredenen - het mag alleen worden ingeschakeld wanneer dat nodig is). Om de functie <em>hooglichten reconstructie</em> te gebruiken, klik je daarom eerst op het pictogram <em>toon hooglichten reconstructiemasker</em> om het masker weer te geven, en verlaag je deze drempel totdat de markeringsgebieden die je wilt reconstrueren, door het masker in het wit zijn geselecteerd. Het kan handig zijn om eerst de afbeelding te bekijken met behulp van de <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/raw-overexposed/">raw overbelichte waarschuwing</a> om jou te laten zien welke pixels in het onbewerkte bestand zijn geknipt en of die pixels geknipt op slechts één RGB-kanaal of allemaal.</dd>
+<dt>overgang</dt>
+<dd>gebruik deze instelling om de overgang tussen geknipte en geldige pixels te verzachten. Als je dit besturingselement naar rechts verplaatst, neemt de hoeveelheid onscherpte in het masker toe, zodat de overgang tussen uitgeknipte en niet-uitgeknipte gebieden zachter is. Dit zorgt voor een vloeiendere vermenging tussen de geknipte en niet-geknipte gebieden. Als je dit besturingselement naar links verplaatst, wordt de vervaging in het masker verminderd, waardoor de overgang in het masker veel scherper wordt en de hoeveelheid doezeling tussen geknipte en niet-geknipte gebieden wordt verminderd.</dd>
+<dt>toon hooglichten reconstructiemasker</dt>
+<dd>Klik op het pictogram rechts van dit label om de weergave van het reconstructiemasker voor hooglichten te wisselen. Het wordt aanbevolen dat je dit inschakelt terwijl je de bovenstaande instelling aanpast.</dd>
+</dl>
+<h3 id="_witbalans_"><a href="#_witbalans_">🔗</a><em>witbalans</em></h3>
+<p>Met deze bedieningselementen kan je de afwegingen tussen de verschillende reconstructie-algoritmen balanceren.</p>
+<dl>
+<dt>structuur ↔ textuur</dt>
+<dd>gebruik dit om te bepalen of het reconstructie-algoritme de voorkeur geeft aan schilderen in een vloeiende kleurovergang (structuur), of de textuur proberen te reconstrueren met behulp van scherpe details die zijn geëxtraheerd uit niet-geknipte pixelgegevens (textuur). Standaard staat de controle in het midden op 0%, wat beide strategieën in gelijke mate begunstigt. Als je veel gebieden hebt waar alle drie de kanalen zijn afgekapt, is er geen textuurdetail beschikbaar om te reconstrueren, dus is het beter om de schuifregelaar naar links te verplaatsen om kleurreconstructie te bevorderen. Als je veel gebieden hebt waar slechts een of twee kanalen zijn geknipt, dan kunnen er wat textuurdetails in de niet-uitgeknipte kanalen zijn, en als je de schuifregelaar naar rechts verplaatst, wordt er meer nadruk gelegd op het proberen om textuur te reconstrueren met behulp van deze niet-uitgeknipte gegevens .</dd>
+<dt>bloom ↔ reconstructie</dt>
+<dd>gebruik dit om te bepalen of het algoritme scherpe details in de uitgeknipte gebieden probeert te reconstrueren (reconstrueren), of een vervaging toepast die het gloeieffect dat je met traditionele film krijgt (gloei) benadert. Standaard is dit ingesteld op 100%, waarmee wordt geprobeerd de scherpte van de details in de uitgeknipte gebieden te maximaliseren. Verplaats deze schuifregelaar naar links als u in deze gebieden meer onscherpte wilt aanbrengen. Het introduceren van meer onscherpte zal meestal de neiging hebben om de hooglichten als bijproduct donkerder te maken, wat kan leiden tot een kleurrijkere reconstructie.</dd>
+<dt>grijs ↔ kleurrijke details</dt>
+<dd>gebruik dit om te bepalen of het algoritme de voorkeur geeft aan het herstel van monochromatische hooglichten (grijs) of kleurrijke details. Verplaats de schuifregelaar naar rechts als u meer kleur in de hooglichten wilt. Verplaats de schuifregelaar naar links als je de verzadiging van de hooglichten wilt verminderen. Het kan handig zijn om de verzadiging in de hooglichten te verminderen als je magenta of kleuren die buiten het gamma vallen, begint te zien.</dd>
+</dl>
+<h2 id="uiterlijk"><a href="#uiterlijk">🔗</a>uiterlijk</h2>
+<p>Wanneer je met het <em>uiterlijk</em>-tabblad werkt, wordt aanbevolen dat je de S-curve-spline in de <em>enkel kijken</em>-grafiek in de gaten houdt. Deze curve begint bij de scène/weergave-zwartniveaus linksonder in de grafiek en zou geleidelijk moeten toenemen tot de scène-/weergave-witniveaus rechtsboven. Soms, als de beperkingen op de S-curve te krap zijn, kunnen de splines in de schaduw- en/of hooglichtengebieden de limieten van het scherm &ldquo;overschrijden&rdquo;, en wordt er een oranje waarschuwing weergegeven op die delen van de spline.</p>
+<p>Als je de oranje waarschuwingsindicator aan beide uiteinden van de S-curve ziet, moeten corrigerende maatregelen worden genomen om de S-curve terug te brengen naar een vloeiende monotoon stijgende curve. Dit kan inhouden:</p>
+<ul>
+<li>
+<p>het verminderen van de breedte en/of het contrast,</p>
+</li>
+<li>
+<p>de schuifregelaar voor schaduwen/hoogtepunten aanpassen om de breedte te verschuiven en meer ruimte voor de spline toe te staan,</p>
+</li>
+<li>
+<p>ervoor zorgen dat de naar de scene-gerefereerde zwart-wit relatieve belichtingsschuifregelaars op het tabblad <em>scene</em> correct zijn ingesteld voor de kenmerken van de scene,</p>
+</li>
+<li>
+<p>een of beide contrastinstellingen op het tabblad <a href="#options"><em>opties</em></a> instellen op <em>zacht</em> of <em>hard</em>.</p>
+</li>
+</ul>
+<p>Als de instelling <em>mikpunt zwart luminantie</em> op het tabblad <a href="#display"><em>display</em></a> niet nul is, kan dit het ook moeilijk maken voor <em>filmisch rgb</em> om een vloeiende monotone spline te vinden, en het verminderen hiervan kan ook helpen om de beperkingen te verminderen. Zie de sectie <a href="#display"><em>display</em></a> om de implicaties hiervan te begrijpen.</p>
+<dl>
+<dt>contrast</dt>
+<dd>De <em>filmisch</em> S-curve wordt gemaakt door de positie van virtuele knooppunten te berekenen uit de moduleparameters en deze te interpoleren. Dit is vergelijkbaar met hoe de tooncurvemodule werkt, maar hier kunnen de knooppunten niet handmatig worden verplaatst. De curve is opgesplitst in drie delen &ndash; een lineair middendeel en twee uiteinden die vloeiend overgaan van de helling van het middelste deel naar de uiteinden van het belichtingsbereik.</dd>
+<dd>
+<p>De contrastschuifregelaar regelt de helling van het middelste deel van de curve, zoals geïllustreerd in de grafiekweergave. Hoe groter het dynamisch bereik, hoe groter het contrast moet worden ingesteld om een natuurlijk ogend beeld te behouden. Deze parameter heeft vooral invloed op de middentonen. Merk op dat globaal contrast een impact heeft op de acutantie (waargenomen scherpte) &ndash; een beeld met weinig contrast ziet er onscherp uit, ook al is het optisch scherp in de zin van de [Optische functieoverdracht (OTF)](https://en. wikipedia.org/wiki/Optical_transfer_function).</p>
+</dd>
+<dd>
+<p>Als je het contrast op 1 instelt, wordt de S-curve bijna volledig uitgeschakeld, hoewel er een zeer klein resteffect van de splines in de hooglichten en schaduwen zal zijn.</p>
+</dd>
+<dt>hardheid (voorheen <em>doelvermogensfactorfunctie</em>)</dt>
+<dd>Bekend als de <em>mikpunt krachtfactorfunctie</em>-schuifregelaar in oudere versies van <em>filmisch rgb</em>, deze schuifregelaar is standaard verborgen en wordt automatisch aangepast op basis van waarden op het tabblad <a href="#scene"><em>scene</em></a>. Om deze schuif zichtbaar te maken, moet je <em>auto hardheid aanpassen</em> uitschakelen op het tabblad <a href="#options"><em>opties</em></a>.</dd>
+<dd>
+<p>Deze parameter is de vermogensfunctie die wordt toegepast op de uitvoeroverdrachtsfunctie en wordt vaak ten onrechte de <em>gamma</em> genoemd (wat te veel dingen kan betekenen in beeldverwerkingstoepassingen, dus we moeten stoppen met het gebruik van die term). Het wordt gebruikt om de middentonen te verhogen of te comprimeren om rekening te houden met niet-lineariteiten in de weergave of om kwantiseringsartefacten te voorkomen bij het coderen in 8-bits bestandsindelingen. Dit is een gebruikelijke bewerking bij het toepassen van ICC-kleurprofielen (behalve voor lineaire RGB-ruimten, zoals REC 709 of REC 2020, die een lineair &ldquo;gamma&rdquo; van 1,0 hebben). Aan de uitgang van <em>filmisch rgb</em> is het signaal echter logaritmisch gecodeerd, iets wat ICC-kleurprofielen niet weten te verwerken. Als we ze daarom een gamma van 1/2.2 bovenop laten toepassen, resulteert dit in een verdubbeling, waardoor het midden-grijs opnieuw wordt toegewezen aan 76% in plaats van 45% zoals het zou moeten in scherm-gerefereerde ruimte.</p>
+</dd>
+<dt>breedte</dt>
+<dd>De breedtegraad is het bereik tussen de twee knooppunten die het centrale lineaire deel van de curve omsluit, uitgedrukt als een percentage van het dynamische bereik dat is gedefinieerd op het tabblad <a href="#scene"><em>scene</em></a> (relatieve witte belichting minus zwarte relatieve belichting). Het is het luminantiebereik dat met prioriteit opnieuw wordt toegewezen en het wordt opnieuw toegewezen aan het luminantie-interval dat is gedefinieerd door de contrastparameter. Het is meestal aan te raden om de breedtegraad zo groot mogelijk te houden en afknippen te vermijden. Als er afknipping wordt waargenomen, kun je dit compenseren door ofwel de breedte te verkleinen, het breedteinterval te verschuiven met de parameter <em>schaduw ↔ hooglichten balans</em> of het contrast te verlagen.</dd>
+<dd>
+<p>De breedtegraad definieert ook het bereik van luminanties die niet onverzadigd zijn aan de uiteinden van het luminantiebereik (zie <em>verzadiging middentonen</em>).</p>
+</dd>
+<dt>schaduwen ↔ hooglichten balans</dt>
+<dd>Standaard is de breedte gecentreerd in het midden van het dynamische bereik. Als dit leidt tot afknippen aan één uiteinde van de curve, kan je met de balansparameter de breedte langs de helling, naar de schaduwen of naar de hooglichten schuiven. Hierdoor kan aan het ene uiteinde van het dynamisch bereik meer ruimte worden gegeven dan aan het andere, als de eigenschappen van het beeld daarom vragen.</dd>
+<dt>middentonen verzadiging / extreme luminantieverzadiging</dt>
+<dd>Bij extreme luminanties neigen de pixels naar wit of zwart. Omdat aan wit noch zwart een kleur is gekoppeld, moet de verzadiging van deze pixels 0% zijn. Om vloeiend over te gaan naar dit verzadigingspunt van 0%, worden pixels buiten het middentoonbereik geleidelijk onverzadigd naarmate ze de extremen naderen. De donkere curve in de <em>filmisch rgb</em>-grafiek geeft de hoeveelheid ontverzadiging aan die wordt toegepast op pixels buiten het breedtegraadbereik. Door de schuifregelaar naar rechts te verplaatsen, wordt het punt waar de ontverzadiging begint toe te passen naar de extremen geduwd, wat resulteert in een steilere ontverzadigingscurve. Als dit te ver wordt geduwd, kan dit resulteren in randen rond de hooglichten. Door de schuifregelaar naar links te verplaatsen, komt het punt waarop kleurontverzadiging wordt toegepast dichter bij het midden, wat resulteert in een zachtere ontverzadigingscurve. Als je meer kleurverzadiging in de hooglichten wilt zien, en je hebt gecontroleerd of de relatieve witte belichting op het tabblad <a href="#sc%c3%a8ne"><em>scene</em></a> die hooglichten nog niet afsnijdt, verplaats je de schuifregelaar voor verzadiging middentonen naar rechts om verzadiging verhogen.</dd>
+<dd>
+<p>Houd er rekening mee dat deze ontverzadingsstrategie is gewijzigd in vergelijking met eerdere versies van <em>filmisch rgb</em> (die een andere schuifregelaar met het label <em>extreme luminantieverzadiging</em> hadden). Je kan terugkeren naar het vorige ontverzadiginggedrag door &ldquo;v3 (2019)&rdquo; te selecteren in de instelling <em>kleurwetenschap</em> op het tabblad <a href="#options"><em>opties</em></a>.</p>
+</dd>
+<dd>
+<p>Deze parameter is standaard ingesteld op 0 en het wordt nu aanbevolen om verzadiging eerder in de pijplijn af te handelen. Hiervoor is aan de module <a href="/dtdocs/nl/module-reference/processing-modules/color-balance-rgb/"><em>kleurenbalans rgb</em></a> een voorinstelling &ldquo;basiskleurverzadiging toevoegen&rdquo; toegevoegd.</p>
+</dd>
+</dl>
+<h2 id="display"><a href="#display">🔗</a>display</h2>
+<p>De parameters op dit tabblad hoeven zelden te worden aangepast.</p>
+<dl>
+<dt>mikpunt zwart luminantie</dt>
+<dd>De bestemmingsparameters stellen de doelluminantiewaarden in die worden gebruikt om de tonen opnieuw toe te wijzen. De standaardparameters zouden 99% van de tijd moeten werken, de resterende 1% is wanneer je in lineaire RGB-ruimte (REC709, REC2020) voor mediaverwerking van log-gecodeerde gegevens uitvoert. Deze instellingen moeten daarom met de nodige voorzichtigheid worden gebruikt, omdat darktable geen afzonderlijke pijplijnen toestaat voor weergavevoorbeelden en bestandsuitvoer.</dd>
+<dd>
+<p>De parameter mikpunt zwart luminantie stelt het zwart op grondniveau van het doelmedium in. Standaard is deze ingesteld op de minimumwaarde die niet nul is die kan worden gecodeerd door het beschikbare aantal bits in de uitvoerkleurenruimte. Het terugbrengen tot nul betekent dat sommige luminanties die niet gelijk zijn aan nul, worden toegewezen aan 0 in de uitvoer, waardoor mogelijk wat detail verloren gaat in de zeer donkerste delen van de schaduwen. Als je deze schuifregelaar verhoogt, produceert je verhoogde, vervaagde zwarttinten die een &ldquo;retro&rdquo;-look kunnen geven.</p>
+</dd>
+<dt>doel midden-grijs</dt>
+<dd>Dit is het midden-grijs van het uitvoermedium dat wordt gebruikt als doel voor het centrale knooppunt van de S-curve. Op gamma-gecorrigeerde media wordt de werkelijke grijswaarde berekend met de gammacorrectie (midden-grijs^(1/gamma)), dus een midden-grijs parameter van 18% met een gamma van 2,2 geeft een werkelijke midden-grijs doelstelling van 45,87 %.</dd>
+<dt>mikpunt wit luminantie</dt>
+<dd>Met deze parameter kan je het plafondniveau wit van het doelmedium instellen. Stel het lager in dan 100% als je getemperde, gedempte wittinten wilt voor een retro-look.</dd>
+<dd>
+<p>Om dubbels en vervaagde afbeeldingen te voorkomen, past <em>filmisch rgb</em> een &ldquo;gamma&rdquo; -compressie toe die de ICC-gammacorrectie van de uitvoer terugdraait, zodat het midden-grijs aan het einde correct opnieuw wordt toegewezen. Om deze compressie te verwijderen, stel je de krachtfactor van de bestemming in op 1,0 en de midden-grijs bestemming op 45%.</p>
+</dd>
+</dl>
+<h2 id="opties"><a href="#opties">🔗</a>opties</h2>
+<dl>
+<dt>kleurwetenschap</dt>
+<dd>Deze instelling is standaard <em>v6 (2022)</em> voor nieuwe afbeeldingen en definieert de algoritmen die worden gebruikt door de <em>filmisch rgb</em>-module (bijvoorbeeld de strategie voor extreme luminantieontverzadiging). Om terug te keren naar het gedrag van eerdere versies van <em>filmisch rgb</em>, stel je deze parameter in op <em>v3 (2019)</em> of _v4 (2020)_of <em>v5 (2021)</em>. Het verschil tussen deze methoden ligt in de manier waarop ze omgaan met desaturatie in de buurt van puur zwart en puur wit (zie de sectie <a href="#background">achtergrond</a> voor details). Als u eerder een afbeelding hebt bewerkt met oudere versies van <em>filmic rgb</em>, wordt de kleurwetenschapsinstelling op het eerdere versienummer gehouden om achterwaartse compatibiliteit voor die bewerkingen te bieden.</dd>
+<dt>behoud chrominantie</dt>
+<dd>Bepaal hoe de chrominantie moet worden afgehandeld door <em>filmisch rgb</em> &ndash; helemaal niet, of gebruik een van de drie meegeleverde normen.</dd>
+<dd>
+<p>Bij het onafhankelijk toepassen van de S-curvetransformatie op elke kleur, worden de verhoudingen van de kleuren gewijzigd, waardoor de eigenschappen van het onderliggende spectrum en uiteindelijk de chrominantie van het beeld worden gewijzigd. Dit is wat er gebeurt als je &ldquo;nee&rdquo; kiest in de parameter chrominantie behouden. Deze waarde kan schijnbaar &ldquo;betere&rdquo; resultaten opleveren dan de andere waarden, maar kan een negatieve invloed hebben op latere delen van de pijplijn, bijvoorbeeld als het gaat om globale verzadiging.</p>
+</dd>
+<dd>
+<p>De andere waarden van deze parameter werken allemaal op een vergelijkbare manier. In plaats van de S-curve onafhankelijk toe te passen op de R-, G- en B-kanalen, deelt <em>filmisch rgb</em> alle drie de componenten door een norm (N) en past de S-curve toe op N. Op deze manier wordt de relatie tussen de kanalen bewaard gebleven.</p>
+</dd>
+<dd>
+<p>De waarde van de parameter chrominantie behouden geeft aan welke norm wordt gebruikt (de waarde die wordt gebruikt voor N):</p>
+</dd>
+<dd>
+<ul>
+<li><em>nee</em> betekent dat de verhoudingen tussen de RGB-kanalen niet behouden blijven. Dit heeft de neiging om de schaduwen te verzadigen en de hooglichten te verzadigen, en kan handig zijn als er blauwe of rode tinten buiten het gamma zijn.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><em>max RGB</em> is de maximale waarde van de R-, G- en B-kanalen. Dit is hetzelfde gedrag als de originele versie van de <em>filmisch rgb</em> module. Het heeft de neiging de blauwe tinten, vooral de lucht, donkerder te maken en halo&rsquo;s of randen op te leveren, vooral als sommige kanalen zijn afgekapt. Het kan ook het lokale contrast enigszins afvlakken.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><em>luminantie Y</em> is een lineaire combinatie van de R-, G- en B-kanalen. Het heeft de neiging om het lokale contrast in de rode tinten donkerder te maken en te vergroten, en heeft de neiging zich niet zo goed te gedragen bij verzadigde en buiten het gamma vallende blauwtinten.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><em>RGB-machtsnorm</em> is de som van de derde machten van de R-, G- en B-kanalen, gedeeld door de som van hun kwadraten (R³ + G³ + B³)/(R² + G² + B²). Het is meestal een goed compromis tussen de maximale RGB- en de luminantie Y-waarden.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><em>RGB Euclidische norm</em> heeft de eigenschap RGB-ruimte-agnostisch te zijn, dus het zal dezelfde resultaten opleveren, ongeacht welk werkend kleurprofiel wordt gebruikt. Het weegt zwaarder op hooglichten dan de machtsnorm en geeft meer ontverzadiging van hooglichten, en komt waarschijnlijk het dichtst in de buurt van een kleurenfilmlook.</li>
+</ul>
+</dd>
+<dd>
+<p>Er is geen &ldquo;juiste&rdquo; keuze voor de norm, en de juiste keuze hangt sterk af van het beeld waarop deze wordt toegepast. Je wordt geadviseerd om te experimenteren en zelf te beslissen welke instelling het mooiste resultaat geeft met de minste artefacten.</p>
+</dd>
+<dt>contrast in hooglichten</dt>
+<dd>Deze instelling selecteert de gewenste kromming aan het einde van de hooglichte van de <em>filmisch rgb</em> spline-curve. De standaardinstelling (<em>veilig</em>) is gegarandeerd niet te veel of te weinig, maar heeft een vrij gedempt contrast in de buurt van wit. Het selecteren van <em>hard</em> legt een strakkere beperking op de helling van de spline, waardoor de curve scherper wordt en dus meer tooncompressie in de hooglichten introduceert. Door <em>zacht</em> te selecteren, wordt deze beperking losser, wat resulteert in een zachtere curve met minder tonale compressie in de hooglichten.</dd>
+<dt>contrast in schaduwen</dt>
+<dd>Deze instelling selecteert de gewenste kromming aan het schaduweinde van de <em>filmisch rgb</em> spline-curve. De standaardinstelling (<em>veilig</em>) is gegarandeerd niet te veel of te weinig, maar heeft een vrij gedempt contrast in de buurt van zwart. Het selecteren van <em>hard</em> legt een strakkere beperking op de helling van de spline, waardoor de curve scherper wordt en dus meer tooncompressie in de schaduwen introduceert. Door <em>zacht</em> te selecteren, wordt deze beperking losser, wat resulteert in een zachtere curve met minder tonale compressie in de schaduwen.</dd>
+<dt>gebruik aangepaste midden-grijs waarden</dt>
+<dd>Als je deze instelling inschakelt, wordt de schuifregelaar <em>middel-grijs luminantie</em> zichtbaar op het tabblad <a href="#scene"><em>scene</em></a>. Met de huidige versie van <em>filmisch rgb</em> wordt jou geadviseerd om de <em>belichting</em>-module te gebruiken om het midden-grijsniveau in te stellen, dus deze instelling is standaard uitgeschakeld (en de <em>middel-grijs luminantie schuifregelaar</em> is verborgen).</dd>
+<dt>automatisch hardheid aanpassen</dt>
+<dd>Deze instelling is standaard ingeschakeld en <em>filmisch rgb</em> berekent automatisch de vermogensfunctie (ook bekend als &ldquo;gamma&rdquo;) die moet worden toegepast op de uitgangsoverdrachtscurve. Als deze instelling is uitgeschakeld, verschijnt een <em>hardheid</em>-schuifregelaar op het tabblad <a href="#look"><em>uiterlijk</em></a> zodat de waarde handmatig kan worden ingesteld.</dd>
+<dt>iteraties van hoogwaardige reconstructie</dt>
+<dd>Gebruik deze instelling om het aantal iteraties van het algoritme voor reconstructie van hooglichten te verhogen. Meer iteraties betekent meer kleur doorzetting in geclipte gebieden van pixels in de omgeving. Dit kan meer neutrale hooglichten
+opleveren, maar kost ook meer rekenkracht. Het kan handig zijn in moeilijke gevallen waar er magenta hooglichten zijn als gevolg van kanaal clipping.</dd>
+<dd>
+<p>De standaardreconstructie werkt op afzonderlijke RGB-kanalen en er wordt slechts één iteratie toegepast, terwijl de <em>hoge kwaliteit</em>-reconstructie een ander algoritme gebruikt dat werkt op RGB-verhoudingen (wat een manier is om de kleurkwaliteit te onderscheiden van de luminantie) en kan verschillende iteraties gebruiken om geleidelijk te verspreiden kleuren van aangrenzende pixels naar afgekapte gebieden. Als er echter te veel herhalingen worden gebruikt, kan de reconstructie ontaarden, wat ertoe zal leiden dat verre kleuren onjuist worden ingekleurd in geknipte objecten (kleurbloeding) - bijvoorbeeld witte wolken die worden geverfd met blauwe lucht, of de zonneschijf die door bomen wordt geschoten ingekleurd met bladgroen.</p>
+</dd>
+<dt>voeg ruis in hoogtepunten toe</dt>
+<dd>Dit introduceert kunstmatig ruis in de gereconstrueerde hooglichten om te voorkomen dat ze er te glad uitzien in vergelijking met omliggende gebieden die mogelijk al ruis bevatten. Dit kan helpen om de gereconstrueerde gebieden natuurlijker te mengen met de omliggende niet-geknipte gebieden.</dd>
+<dt>soort ruis</dt>
+<dd>Dit specificeert de statistische verdeling van de toegevoegde ruis. Het kan handig zijn om het uiterlijk van de kunstmatig gegenereerde ruis af te stemmen op de natuurlijk voorkomende ruis in de omgeving van de sensor van de camera. De <em>poissoniaanse</em> ruis komt het dichtst bij de natuurlijke sensorruis, maar is visueel minder aantrekkelijk dan de <em>gaussiaanse</em> ruis, die waarschijnlijk dichter bij filmkorrel ligt. Houd er ook rekening mee dat de meeste ruisonderdrukkingsmodules de sensorruis van poissoniaans naar licht gaussiaans zullen veranderen, dus je moet de variante kiezen die beter past bij de werkelijke ruis in jouw afbeelding.</dd>
+</dl>
+<h2 id="achtergrond"><a href="#achtergrond">🔗</a>achtergrond</h2>
+<p>De <em>kleur wetenschap</em> parameter (in de opties tab) definieert de te gebruiken strategie om de verzadiging te verminderen voor kleuren in de buurt van puur wit (maximale display emissie) en puur zwart (minimale display emissie). Het probleem kan uitgelegd worden aan de hand van onderstaande grafiek wat de gamma van de sRGB kleurruimte weergeeft bij een constante tint van primair groen met het variëren van de lichtheid (verticale as) en chroma (horizontale as):</p>
+<p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/sRGB-green.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/filmic-rgb/sRGB-green.png" alt="Gamma kegel"   /></a>
+
+</p>
+<p>Wanneer we in de buurt van puur zwart en puur wit komen krimpt de beschikbare chroma in gamma aanzienlijk, totdat het nul bereikt voor lichtheid = 0 en lichtheid = 100% van de gemiddelde emissie. Dit betekent dat erg heldere (of heel donkere) kleuren kunnen niet gelijktijdig heel verzadigd kunnen zijn als ze binnen gamma willen passen, waar de gamma bepaald wordt door de printer of scherm die gebruikt wordt.</p>
+<p>Wanneer kleuren onbeheerd blijven en buiten gamma kunnen vallen, zullen ze worden geknipt naar geldige waarden op het moment dat deze geconverteerd wordt naar scherm kleurruimte. Het probleem is dat dit knippen over het algemeen de tint niet behoud en zeker niet de luminatie behoud, waardoor hooglichten over het algemeen verschuiven naar geel en donkerder lijken dan ze zijn in vergelijking tot zijn omgeving.</p>
+<p>Om dit te voorkomen heeft filmisch meerdere strategieën gebruikt in de afgelopen jaren (de zogenoemde <em>kleur wetenschappen</em>) om de verzadiging te verminderen van extreme luminaties. Dit forceert een nul verzadiging bij minimum en maximum lichtheid en zorgt voor een zachte gradiënt bij de vermindering van de verzadiging.</p>
+<p>Sinds al deze strategieën benaderingen zijn (en vaak over conservatief) <em>v6 (2022)</em> introduceert en meer accurate en gemeten benadering. Het voert een testconversie uit om de kleurruimte weer te geven, controleert of de resulterende kleuren binnen de [0; 100]% bereik vallen . Wanneer dit niet het geval is berekent het de maximale verzadiging beschikbaar in gamma bij deze luminantie en tint en uiteindelijk de kleur klippen naar deze waarden. Dit zorgt voor een minimale kleur vervorming en meer verzadigde kleuren toe staat en beter gebruik maakt van de beschikbare gamma. Maar het zorgt ook voor een constante tint over de gehele tone mapping <strong>en</strong> gamma mapping operatie.</p>
+<p>De gamma mapping gebruikt de uitgaand kleurprofiel als definitie van de scherm kleurruimte en wordt automatisch aangepast naar elke uitgaande ruimte. Echter alleen <em>matrix</em> of _matrix + curve(n)_ICC profielen worden ondersteund. _LUT_ICC profielen worden niet ondersteund en zal de gamma mapping standaard maken naar de pijplijn werkruimte (Rec 2020 als standaard).</p>
+<p>Merk op dat de tint die als referentie voor de gamma-mapping wordt gebruikt, de tint is vóór elke toon mapping, gesampled bij de invoer van filmisch. Dit betekent dat zelfs de <em>geen</em> chrominantie conserveringsmodus (toegepast op individuele RGB-kanalen, ongeacht hun verhoudingen) de tint in <em>v6</em> behoudt. Deze modus verzadigt alleen hooglichten meer dan de andere modi, en er is een mechanisme om te voorkomen dat schaduwen opnieuw verzadigen &ndash; dit gedrag kan worden omzeild door de instelling <em>extreme luminantieverzadiging</em> te verhogen.</p>
+<h2 id="waarschuwingen"><a href="#waarschuwingen">🔗</a>waarschuwingen</h2>
+<h3 id="kleur-artefacten"><a href="#kleur-artefacten">🔗</a>kleur artefacten</h3>
+<p>Filmisch v6 is tot zover de beste versie is om verzadigde kleuren te behouden met constante tint maar is ook minder vergevensgezind voor <em>ongeldige</em> kleuren zoals chromatische aberraties en afgekapte magenta hooglichten, welke betere verborgen zijn (albeit <strong>niet opgelost</strong>) door eenvoudige curven te gebruiken op individuele kanalen (geen chrominantie behoud) zonder te letten op de verhoudingen.</p>
+<p>De toon mapping en gamma mapping hebben niet als doel om beschadigde signalen te reconstrueren en deze gebreken moeten eerder in de pijplijn worden gecorrigeerd met de beschikbare gespecialiseerde modulen. Er is echter een mechanisme in filmisch v6 die er voor zorgt dat een kleur lichter dan <em>relatief wit belichting</em> gedegradeerd wordt naar puur wit. Een snelle manier is om de <em>relatief wit belichting</em> op een waarde te zetten iets onder de belichting van de afgekapte delen. Met andere woorden: als het afgekapt is bij de ingang, laat het afgekapt aan de uitgang. Chrominantie behoud opties die het beste werken voor deze doeleinde zijn de <em>luminantie</em> en <em>euclidische</em> normen gewoon <em>niet</em>.</p>
+<h3 id="inconsistente-uitgang"><a href="#inconsistente-uitgang">🔗</a>inconsistente uitgang</h3>
+<p>Als u met filmisch v6 dezelfde afbeelding exporteert naar sRGB- en Adobe RGB-kleurruimten en vervolgens beide afbeeldingen naast elkaar vergelijkt op een groot scherm (dat Adobe RGB kan weergeven), <em>zou</em> de sRGB-export meer onverzadigde hooglichten moeten hebben dan de Adobe RGB-versie. Aangezien de sRGB-kleurruimte korter is dan Adobe RGB, ligt de grens van het gamma dichter bij de neutrale grijze as, en daarom is de maximaal toegestane chroma lager voor een bepaalde luminantie. Dit is geenszins een bug, maar is eerder een bewijs dat gamma-mapping echt zijn werk doet.</p>
+
+
+    
+    <h3 class="translations_head">translations</h3>
+    <ul class="translations">
+        
+        <li><a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/">
+            English: filmic rgb
+        </a></li>
+        
+        <li><a href="/dtdocs/fr/module-reference/processing-modules/filmic-rgb/">
+            Français: filmique rvb
+        </a></li>
+        
+        <li><a href="/dtdocs/de/module-reference/processing-modules/filmic-rgb/">
+            German: Filmic RGB
+        </a></li>
+        
+        <li><a href="/dtdocs/es/module-reference/processing-modules/filmic-rgb/">
+            Espanol: película rgb
+        </a></li>
+        
+        <li><a href="/dtdocs/pt_br/module-reference/processing-modules/filmic-rgb/">
+            Português: rgb fílmico
+        </a></li>
+        
+        <li><a href="/dtdocs/uk/module-reference/processing-modules/filmic-rgb/">
+            Ukrainian: filmic rgb
+        </a></li>
+        
+    </ul>
+    
+</article>
+
+<div class="prev-next row">
+    <div class="col-6">
+    
+	<a href="/dtdocs/nl/module-reference/processing-modules/split-toning/" class="next">&lt; duo-toning</a>
+	
+    </div>
+    <div class="col-6">
+    
+	<a href="/dtdocs/nl/module-reference/processing-modules/bloom/" class="prev">glans &gt;</a>
+	
+    </div>
+</div>
+
+
+
+      </div>
+		<nav class="navigation col-sm-12 order-sm-12 col-md-3 order-md-1">
+		    <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/" class="">
+          Overzicht
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/user-interface/" class="">
+          gebruikersomgeving
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/user-interface/views/" class="">
+          weergaven
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/user-interface/screen-layout/" class="">
+          scherm layout
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/user-interface/filmstrip/" class="">
+          filmstrip
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/user-interface/top-panel/" class="">
+          bovenpaneel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/user-interface/keyboard-shortcuts/" class="">
+          snelkoppelingen
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/supported-file-formats/" class="">
+          ondersteunde bestandsformaten
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/sidecar-files/" class="">
+          sidecar bestanden en niet-destructieve bewerking
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/sidecar-files/sidecar/" class="">
+          sidecar-bestanden
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/sidecar-files/sidecar-import/" class="">
+          sidecar-bestanden importeren van andere applicaties
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/sidecar-files/local-copies/" class="">
+          lokale kopieën
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/workflow/" class="">
+          een inleiding tot de werkvolgorde van darktable
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/workflow/introduction/" class="">
+          inleiding
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/workflow/import-review/" class="">
+          importeren &amp; beoordelen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/workflow/process/" class="">
+          proces
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/workflow/export/" class="">
+          exporteren
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/" class="">
+          Bibliotheek
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/lighttable-view-layout/" class="">
+          bibliotheek weergave layout
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/undo-redo/" class="">
+          ongedaan maken / opnieuw uitvoeren
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/lighttable-modes/" class="">
+          bibliotheek modi
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/lighttable-modes/filemanager/" class="">
+          bestandsbeheer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/lighttable-modes/zoomable-lighttable/" class="">
+          zoombare bibliotheek
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/lighttable-modes/culling/" class="">
+          vergelijk weergave
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/lighttable-modes/full-preview/" class="">
+          volledige voorbeeldweergave
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/digital-asset-management/" class="">
+          digitaal archief beheer
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/digital-asset-management/collections/" class="">
+          collecties &amp; film rollen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/digital-asset-management/thumbnails/" class="">
+          miniaturen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/digital-asset-management/star-color/" class="">
+          sterbeoordelingen en kleurlabels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/digital-asset-management/grouping/" class="">
+          afbeeldingen groeperen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/digital-asset-management/metadata-tagging/" class="">
+          metadata en labelen
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/" class="">
+          Ontwikkelen
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/darkroom-view-layout/" class="">
+          lay-out ontwikkelweergave
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/pixelpipe/" class="">
+          de pixelpijp
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/pixelpipe/the-anatomy-of-a-module/" class="">
+          de anatomie van een verwerkingsmodule
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/pixelpipe/the-pixelpipe-and-module-order/" class="">
+          de pixelpijp &amp; module volgorde
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/pixelpipe/history-stack/" class="">
+          geschiedenis
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/pixelpipe/undo-redo/" class="">
+          ongedaan maken / opnieuw uitvoeren
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/" class="">
+          verwerkingsmodules
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/module-header/" class="">
+          module koptekst
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/multiple-instances/" class="">
+          meerdere sessies
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/presets/" class="">
+          voorinstellingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/module-controls/" class="">
+          module instellingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/curves/" class="">
+          curves
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/wavelets/" class="">
+          wavelets
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/deprecated/" class="">
+          verouderde modules
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/" class="">
+          maskeren &amp; overvloeien
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/blend-modes/" class="">
+          overvloei modes
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/masks/" class="">
+          maskers
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/masks/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/masks/drawn/" class="">
+          getekende maskers
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/masks/parametric/" class="">
+          parametrische maskers
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/masks/drawn-and-parametric/" class="">
+          combineren van getekende- en parametrische- maskers
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/masks/refinement-controls/" class="">
+          Maskers verfijnen &amp; aanvullende afregeling
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/masks/raster/" class="">
+          rastermaskers
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/organization/" class="">
+          organisatie
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/organization/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/organization/module-groups/" class="">
+          modulegroepen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/organization/quick-access-panel/" class="">
+          snel toegangspaneel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/organization/manage-module-layouts/" class="">
+          module-indelingen beheren
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/tethering/" class="">
+          Tethering
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/tethering/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/tethering/tethering-view-layout/" class="">
+          lay-out van tetheringweergave
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/tethering/troubleshooting/" class="">
+          Problemen oplossen
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/map/" class="">
+          Kaart
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/map/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/map/map-view-layout/" class="">
+          lay-out kaartweergave
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/slideshow/" class="">
+          Presentatie
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/slideshow/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/slideshow/usage/" class="">
+          gebruik
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/print/" class="">
+          Print
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/print/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/print/print-view-layout/" class="">
+          afdrukweergave lay-out
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/" class="">
+          Module Referentie
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/" class="">
+          toepassings modules
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/" class="">
+          bibliotheek
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/history-stack/" class="">
+          geschiedenis
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/import/" class="">
+          importeren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+          lua script-installatieprogramma
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/select/" class="">
+          selecteren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/selected-image/" class="">
+          selectie bewerken
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/styles/" class="">
+          stijlen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/timeline/" class="">
+          tijdlijn
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/" class="">
+          gedeeld
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/image-information/" class="">
+          afbeeldingsinformatie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/collection-filters/" class="">
+          collectiefilters
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/collections/" class="">
+          collecties
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/export/" class="">
+          exporteren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/filmstrip/" class="">
+          filmstrip
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/focus-peaking/" class="">
+          focus peaking
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/geotagging/" class="">
+          geotaggen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/tagging/" class="">
+          labelen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/metadata-editor/" class="">
+          metadata-editor
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/scopes/" class="">
+          scopes
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/recent-collections/" class="">
+          snelle verzamelingen
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/map/" class="">
+          Kaart
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/map/map-settings/" class="">
+          kaartinstellingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/map/locations/" class="">
+          locaties
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/map/find-location/" class="">
+          zoek locatie
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/" class="">
+          ontwikkelen
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/image-info-line/" class="">
+          afbeelding informatie regel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/clipping/" class="">
+          clipping waarschuwing
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/duplicate-manager/" class="">
+          duplo beheerder
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/gamut/" class="">
+          gamma controle
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/history-stack/" class="">
+          geschiedenis
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/global-color-picker/" class="">
+          globale kleurkiezer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/guides-overlays/" class="">
+          hulplijnen en overlays
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/color-assessment/" class="">
+          kleurbeoordeling
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/mask-manager/" class="">
+          masker-manager
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/module-order/" class="">
+          module volgorde
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/snapshots/" class="">
+          momentopname
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/navigation/" class="">
+          navigatie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/raw-overexposed/" class="">
+          raw overbelicht waarschuwing
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/soft-proof/" class="">
+          soft proof
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/print/" class="">
+          print
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/print/print-settings/" class="">
+          printer instellingen
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/tethering/" class="">
+          tethering
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/tethering/camera-settings/" class="">
+          camera instellingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/tethering/live-view/" class="">
+          live weergave
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/tethering/session/" class="">
+          sessie
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/" class="">
+          verwerkingsmodules
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/base-curve/" class="">
+          basis curve
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/basic-adjustments/" class="">
+          basisaanpassingen (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/exposure/" class="">
+          belichting
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/censorize/" class="">
+          censureren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/chromatic-aberrations/" class="">
+          chromatische aberraties
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/contrast-equalizer/" class="">
+          contrast equalizer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/contrast-brightness-saturation/" class="">
+          contrast helderheid verzadiging
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/demosaic/" class="">
+          demozaïek
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/diffuse/" class="">
+          diffuus of verscherpen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/dithering/" class="">
+          dithering
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/rotate-pixels/" class="">
+          draai pixels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/split-toning/" class="">
+          duo-toning
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/filmic-rgb/" class=" active">
+          filmisch rgb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/bloom/" class="">
+          glans
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/global-tonemap/" class="">
+          globale toonmap (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/graduated-density/" class="">
+          grijsverloop
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/highpass/" class="">
+          highpass
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/highlight-reconstruction/" class="">
+          hooglichten herstellen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/hot-pixels/" class="">
+          hot pixels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/input-color-profile/" class="">
+          ingaand kleurprofiel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/colorize/" class="">
+          inkleuren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/invert/" class="">
+          inverteren (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/fill-light/" class="">
+          invullicht (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/channel-mixer/" class="">
+          kanaalmenger (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-reconstruction/" class="">
+          kleur reconstructie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-contrast/" class="">
+          kleurcontrast
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-correction/" class="">
+          kleurcorrectie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-balance/" class="">
+          kleurenbalans
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-balance-rgb/" class="">
+          kleurenbalans rgb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-mapping/" class="">
+          kleurenkaart
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-calibration/" class="">
+          kleurkalibratie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-look-up-table/" class="">
+          kleurzoeker
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-zones/" class="">
+          kleurzones
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/grain/" class="">
+          korrel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/lens-correction/" class="">
+          lenscorrectie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/vibrance/" class="">
+          levendigheid (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/local-contrast/" class="">
+          lokaal contrast
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/lowpass/" class="">
+          lowpass
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/lut-3d/" class="">
+          lut 3D
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/monochrome/" class="">
+          monochroom
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/negadoctor/" class="">
+          negatieven assistent
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/haze-removal/" class="">
+          nevel verwijderen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/levels/" class="">
+          niveaus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/framing/" class="">
+          omlijsten
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/astrophoto-denoise/" class="">
+          ontruis astrofoto
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/surface-blur/" class="">
+          oppervlakte vervaging
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/orientation/" class="">
+          oriëntatie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/raw-chromatic-aberrations/" class="">
+          raw chromatische aberraties
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/raw-black-white-point/" class="">
+          raw zwart/wit punt
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/retouch/" class="">
+          retoucheren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/rgb-curve/" class="">
+          rgb curve
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/rgb-levels/" class="">
+          rgb niveaus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/rotate-perspective/" class="">
+          roteren en perspectief
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/denoise-profiled/" class="">
+          ruisreductie (profiel)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/raw-denoise/" class="">
+          ruisreductie raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/scale-pixels/" class="">
+          schaal pixels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/shadows-and-highlights/" class="">
+          schaduwen en hooglichten
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/tone-mapping/" class="">
+          tonemapping (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/tone-curve/" class="">
+          toon curve
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/tone-equalizer/" class="">
+          toon equalizer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/output-color-profile/" class="">
+          uitgaand kleurprofiel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/crop/" class="">
+          uitsnijden
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/crop-rotate/" class="">
+          uitsnijden en roteren (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/liquify/" class="">
+          uitvloeien
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/velvia/" class="">
+          velvia
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/unbreak-input-profile/" class="">
+          verbreek ingaand profiel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/sharpen/" class="">
+          verscherpen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/blurs/" class="">
+          vervagen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/defringe/" class="">
+          verwijder franje (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/soften/" class="">
+          verzachten (soften)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/vignetting/" class="">
+          vignettering
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/spot-removal/" class="">
+          vlekverwijdering (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/watermark/" class="">
+          watermerk
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/white-balance/" class="">
+          witbalans
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/lowlight-vision/" class="">
+          zicht bij weinig licht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/zone-system/" class="">
+          zonesysteem (verouderd)
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/" class="">
+          Voorkeuren en instellingen
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/general/" class="">
+          algemeen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/import/" class="">
+          importeren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/lighttable/" class="">
+          bibliotheek
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/darkroom/" class="">
+          ontwikkelen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/processing/" class="">
+          verwerken
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/security/" class="">
+          veiligheid
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/storage/" class="">
+          opslag
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/miscellaneous/" class="">
+          diversen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/shortcuts/" class="">
+          snelkoppelingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/presets/" class="">
+          voorinstellingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/lua-options/" class="">
+          lua-opties
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/" class="">
+          Scripten met Lua
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/basic-principles/" class="">
+          basisprincipes: luarc bestanden
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/a-simple-example/" class="">
+          een eenvoudig lua-voorbeeld
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/printing-labeled-images/" class="">
+          gelabelde afbeeldingen afdrukken
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/simple-shortcut/" class="">
+          een eenvoudige snelkoppeling toevoegen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/exporting-images/" class="">
+          afbeeldingen exporteren met lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/building-ui-elements/" class="">
+          gebruikersinterface-elementen bouwen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/sharing-scripts/" class="">
+          scripts delen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/calling-from-dbus/" class="">
+          lua aanroepen vanuit dbus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/darktable-from-lua/" class="">
+          darktable gebruiken vanuit een lua-script
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/api/" class="">
+          lua API
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/guides-tutorials/" class="">
+          Gidsen en handleidingen
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/guides-tutorials/monochrome/" class="">
+          ontwikkeling van monochrome afbeeldingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/guides-tutorials/batch-editing/" class="">
+          batch-bewerking afbeeldingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/guides-tutorials/other-resources/" class="">
+          andere bronnen
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/" class="">
+          Speciale onderwerpen
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/" class="">
+          kleurbeheer
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/display-profile/" class="">
+          schermprofiel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/rendering-method/" class="">
+          rendermethode
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/rendering-intent/" class="">
+          renderintentie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/color-spaces/" class="">
+          kleurruimten van darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/unbounded-colors/" class="">
+          ongebonden kleuren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/color-artifacts/" class="">
+          mogelijke kleurartefacten
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/color-dimensions/" class="">
+          kleurdimensies van darktable
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/" class="">
+          opencl
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/background/" class="">
+          de achtergrond
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/how-opencl-works/" class="">
+          hoe opencl werkt
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/activate-opencl/" class="">
+          opencl activeren in darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/setting-up/" class="">
+          opencl configureren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/problems-solutions/" class="">
+          mogelijke problemen &amp; oplossingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/scheduling-profile/" class="">
+          planningsprofiel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/multiple-devices/" class="">
+          meerdere apparaten
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/still-doesnt-work/" class="">
+          opencl werkt nog steeds niet voor mij
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/mem-performance/" class="">
+          geheugen &amp; prestatie-afstemming
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/darktable-chart/" class="">
+          darktable-chart gebruiken
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/darktable-chart/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/darktable-chart/usage/" class="">
+          gebruik
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/darktable-chart/source-image/" class="">
+          bronafbeelding
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/darktable-chart/reference-values/" class="">
+          referentiewaarden
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/darktable-chart/process/" class="">
+          proces
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/darktable-chart/making-input-images/" class="">
+          invoerafbeeldingen maken voor darktable-chart
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/" class="">
+          programma oproepen
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/darktable/" class="">
+          darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/darktable-cli/" class="">
+          darktable-cli
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/darktable-generate-cache/" class="">
+          darktable-generate-cache
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/darktable-chart/" class="">
+          darktable-chart
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/darktable-cltest/" class="">
+          darktable-cltest
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/darktable-cmstest/" class="">
+          darktable-cmstest
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/purge_non_existing_images_sh/" class="">
+          purge_non_existing_images.sh
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-pipeline/" class="">
+          darktable&#39;s kleurenpijplijn
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/midi-device-support/" class="">
+          ondersteuning voor midi-apparaten
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/contributing/" class="">
+          bijdragen aan dtdocs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/translating/" class="">
+          dtdocs vertalen
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+
+		</nav>
+	    </div>
+
+            
+
+        </div>
+
+
+    </body>
+</html>
+
+<script>
+(function($) {
+  
+
+  $.fn.scrollToMiddle = function(options) {
+    var settings = $.extend({
+        duration: 0
+    }, options );
+
+    return this.each(function() {
+      var $el = $(this);
+      var elOffset = $el.offset().top;
+      var elHeight = $el.height();
+      var windowHeight = $(window).height();
+      var offset;
+      if (elHeight < windowHeight) {
+        offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
+      }
+      else {
+        offset = elOffset;
+      }
+      $('.navigation').scrollTop(offset);
+    });
+  };
+}(jQuery));
+
+$('.navigation').css('opacity', '0');
+ $(document).ready(function(){
+     $('.parent ul').hide();
+     $('.navigation').css('opacity', 1.0);
+     $('.active').parents('ul').show();
+     $('.active').siblings('ul').show();
+     $('.active').children('i.toggle').removeClass("fa-plus-squre").addClass("fa-minus-square-o");
+     $('.active').parents('li').children('.toggle').removeClass("fa-plus-square").addClass("fa-minus-square-o");
+     $('.active').scrollToMiddle();
+
+     $('.toggle').on('click', function (e) {
+       e.stopPropagation();
+       $(this).siblings('ul').slideToggle();
+
+       if($(this).hasClass("fa-plus-square")) {
+           $(this).addClass("fa-minus-square-o");
+           $(this).removeClass("fa-plus-square");
+       }
+       else {
+           $(this).addClass("fa-plus-square");
+           $(this).removeClass("fa-minus-square-o");
+       }
+     });
+ });
+
+</script>
+
+
+<script>
+ var _paq = window._paq = window._paq || [];
+  
+ _paq.push(['trackPageView']);
+ _paq.push(['enableLinkTracking']);
+ (function() {
+     var u="https://piwik.kees.nl/";
+     _paq.push(['setTrackerUrl', u+'matomo.php']);
+     _paq.push(['setSiteId', '21']);
+     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+ })();
+</script>
+<noscript><p><img src="https://piwik.kees.nl/matomo.php?idsite=21&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+
+

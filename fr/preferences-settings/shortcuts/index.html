@@ -1,0 +1,3266 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+      <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>darktable 4.0 user manual - raccourcis</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+      <link rel="stylesheet" href="/dtdocs/css/style.min.3b298d8f37646aff6a802627ff27a707153196970e12552ddf3f7e6fdf49ebb1.css">
+      
+
+
+<script> var indexURL="https:\/\/darktable-org.github.io\/dtdocs\/fr\/index.json"</script>
+<script src="/dtdocs/js/jquery.js"></script>
+<script src="/dtdocs/js/popper.js" type="module"></script>
+<script src="/dtdocs/js/bootstrap.js"></script>
+<script src="/dtdocs/js/lunr.js"></script>
+<script src="/dtdocs/js/app.js"></script>
+
+
+    </head>
+    <body>
+        
+
+        <header class="navbar navbar-expand-lg sticky-top  navbar-dark bg-dark">
+   <a class="navbar-brand" href="/dtdocs" rel="home" title="darktable 4.0 user manual">
+	darktable 4.0 user manual
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+	    
+	      <li class="nav-item dropdown" aria-describedby="language-picker-description">
+		   <p class="sr-only" id="language-picker-description">languages</p>
+		   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+             <img src="https://darktable-org.github.io/dtdocs//language-icons/icon20x24px-exported-transparent.png" alt="Language Icon" height="20" class="translation-icon"/>
+		     <span>translations</span>
+		   </a>
+		   <div class="dropdown-menu dropdonw-trans" role="listbox">
+		      <a class="dropdown-item" aria-selected="true" hreflang="fr" role="option" lang="fr" href="https://darktable-org.github.io/dtdocs/fr/preferences-settings/shortcuts/">Français</a>
+		        
+		      <a class="dropdown-item" hreflang="en" role="option" lang="en" href="https://darktable-org.github.io/dtdocs/en/preferences-settings/shortcuts/">English</a>
+		    
+		      <a class="dropdown-item" hreflang="de" role="option" lang="de" href="https://darktable-org.github.io/dtdocs/de/preferences-settings/shortcuts/">German</a>
+		    
+		      <a class="dropdown-item" hreflang="es" role="option" lang="es" href="https://darktable-org.github.io/dtdocs/es/preferences-settings/shortcuts/">Espanol</a>
+		    
+		      <a class="dropdown-item" hreflang="pt_br" role="option" lang="pt_br" href="https://darktable-org.github.io/dtdocs/pt_br/preferences-settings/shortcuts/">Português</a>
+		    
+		      <a class="dropdown-item" hreflang="uk" role="option" lang="uk" href="https://darktable-org.github.io/dtdocs/uk/preferences-settings/shortcuts/">Ukrainian</a>
+		    
+		      <a class="dropdown-item" hreflang="nl" role="option" lang="nl" href="https://darktable-org.github.io/dtdocs/nl/preferences-settings/shortcuts/">Dutch</a>
+		    
+		   </div>
+	       </li>
+	    
+	</ul>
+        <ul>
+           <form class="form-inline my-2 my-lg-0">
+                <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search" autocomplete="off" aria-label="Search">
+           </form>
+        </ul>
+
+
+    </div>
+</header>
+
+<div id="search-results" class="search-results">
+</div>
+
+
+        <div class="container-fluid">
+	    <div class="row">
+		<div class="content col-sm-12 order-sm-1 col-md-9 mx-md-auto order-md-12">
+		    
+
+
+
+<div class="crumbs">
+    <span class="crumb">
+	
+
+<a href='/dtdocs/fr/'>darktable</a> / <a href='/dtdocs/fr/preferences-settings/'>Préférences et réglages</a> / raccourcis
+    </span>
+</div>
+
+<div class="prev-next row">
+    <div class="col-6">
+    
+	<a href="/dtdocs/fr/preferences-settings/miscellaneous/" class="next">&lt; divers</a>
+	
+    </div>
+    <div class="col-6">
+    
+	<a href="/dtdocs/fr/preferences-settings/presets/" class="prev">préréglages &gt;</a>
+	
+    </div>
+</div>
+
+
+<article role="main">
+
+    <h1 class="title">
+        raccourcis
+    </h1>
+
+    
+
+    <p>Vous pouvez effectuer presque n&rsquo;importe quelle action dans darktable avec un raccourci clavier/souris. Vous pouvez également utiliser divers autres périphériques d&rsquo;entrée, y compris des périphériques MIDI et des contrôleurs de jeu &ndash; voir la section <a href="../special-topics/midi-device-support.md">prise en charge des périphériques midi</a> pour plus de détails. Ceux-ci sont appelés <em>périphériques externes</em> ou simplement <em>périphériques</em> dans ce guide.</p>
+<h1 id="définir-les-raccourcis"><a href="#d%c3%a9finir-les-raccourcis">🔗</a>définir les raccourcis</h1>
+<p>Un <em>raccourci</em> est une combinaison de touches ou de boutons et/ou de mouvements de souris ou d&rsquo;un périphérique qui effectue une <em>action</em> dans darktable.</p>
+<p>Une action peut avoir plusieurs raccourcis, mais un raccourci ne peut être lié qu&rsquo;à une seule action dans une vue darktable donnée &ndash; vous ne pouvez pas chaîner les actions, sauf en appliquant un préréglage ou un style. Vous pouvez cependant configurer un raccourci qui fait une chose dans la vue table lumineuse, par exemple, et une autre dans la vue chambre noire.</p>
+<h2 id="activer-un-raccourci"><a href="#activer-un-raccourci">🔗</a>activer un raccourci</h2>
+<p>Un raccourci peut être activé en</p>
+<ul>
+<li>
+<p>en pressant une touche du clavier ; ou</p>
+</li>
+<li>
+<p>en pressant un bouton ou en déplaçant un bouton/manette sur un périphérique externe</p>
+</li>
+</ul>
+<p>Vous ne pouvez pas activer un raccourci en déplaçant votre souris ou en appuyant sur l&rsquo;un de ses boutons, car ces actions sont utilisées pour interagir avec l&rsquo;interface utilisateur de darktable.</p>
+<h2 id="raccourcis-simples"><a href="#raccourcis-simples">🔗</a>raccourcis simples</h2>
+<p>Un raccourci qui n&rsquo;inclut que des pressions sur un bouton et/ou une touche (et non des mouvements de la souris/du périphérique) est appelé raccourci <em>simple</em>.</p>
+<p>Un raccourci simple doit être activé comme ci-dessus, mais peut inclure :</p>
+<ul>
+<li>
+<p>Une ou plusieurs touches de modification (Maj, Ctrl, Alt), maintenues enfoncées pendant l&rsquo;exécution du reste du raccourci</p>
+</li>
+<li>
+<p>Jusqu&rsquo;à trois pressions de touche, dont la dernière peut être une pression longue (plus longue que la durée du double-clic de votre système)</p>
+</li>
+<li>
+<p>De même, jusqu&rsquo;à trois pressions sur un bouton du périphérique ou clics sur un bouton de la souris, dont le dernier peut être long</p>
+</li>
+</ul>
+<p>Diverses combinaisons de touches clavier, de boutons de souris et du périphérique peuvent être utilisées pour créer des raccourcis simples.</p>
+<h3 id="création-de-modificateurs-supplémentaires"><a href="#cr%c3%a9ation-de-modificateurs-suppl%c3%a9mentaires">🔗</a>création de modificateurs supplémentaires</h3>
+<p>The only valid modifiers are the Shift, Ctrl and Alt keys on the keyboard. You can define additional keys (or device buttons) as modifiers by assigning keys/buttons to the &ldquo;global/modifier&rdquo; action. However, these will merely function as extra Ctrl, Alt or Shift keys &ndash; you cannot create &ldquo;new&rdquo; modifiers.</p>
+<h2 id="extension-des-raccourcis-simples-avec-un-mouvement"><a href="#extension-des-raccourcis-simples-avec-un-mouvement">🔗</a>extension des raccourcis simples avec un mouvement</h2>
+<p>Pour certaines actions, vous pouvez choisir d'<em>étendre</em> un raccourci simple en utilisant le mouvement de la souris/du périphérique. Par exemple, vous pouvez maintenir Ctrl+X tout en faisant défiler avec votre souris pour modifier la valeur d&rsquo;un curseur. Les éléments suivants peuvent être utilisés pour étendre un raccourci simple :</p>
+<ul>
+<li>
+<p>Mouvement de la molette de la souris</p>
+</li>
+<li>
+<p>Mouvement horizontal, vertical ou diagonal du curseur de la souris</p>
+</li>
+<li>
+<p>Mouvement d&rsquo;un bouton/manette sur un périphérique externe</p>
+</li>
+</ul>
+<p>Pour étendre un raccourci simple, vous devez maintenir la dernière touche/bouton du raccourci simple enfoncé tout en effectuant le mouvement d&rsquo;extension de la souris/du périphérique.</p>
+<p>Pour les périphériques externes, vous n&rsquo;avez pas besoin de commencer par un raccourci <em>simple</em> &ndash; vous pouvez directement affecter un bouton ou une manette à une action &ndash; bien que cela réduise considérablement la flexibilité du périphérique.</p>
+<p>Les appuis longs sur les boutons et les touches ne peuvent pas être étendus, car la durée du clic/appui est mesurée au relâchement du dernier bouton/touche.</p>
+<hr>
+<p><strong>Remarque :</strong> Vous devrez peut-être désactiver le paramètre &ldquo;désactiver le pavé tactile lors de la frappe&rdquo; si vous souhaitez utiliser des raccourcis étendus avec un pavé tactile d&rsquo;ordinateur portable.</p>
+<hr>
+<h1 id="actions"><a href="#actions">🔗</a>actions</h1>
+<p>Les raccourcis sont utilisés pour lancer des <em>actions</em> dans darktable.</p>
+<p>Une <em>action</em> est généralement (mais pas toujours) une opération que vous pouvez exécuter en utilisant l&rsquo;interface utilisateur pointer-cliquer de darktable. Par exemple :</p>
+<ul>
+<li>
+<p>Augmenter, diminuer ou réinitialiser les curseurs (réglettes)</p>
+</li>
+<li>
+<p>Faire défiler les menus déroulants</p>
+</li>
+<li>
+<p>Activer, développer ou donner le focus à un module</p>
+</li>
+<li>
+<p>Cliquez sur les boutons</p>
+</li>
+<li>
+<p>Basculer entre les vues</p>
+</li>
+</ul>
+<p>Ces <em>actions</em> de type pointer-cliquer sont normalement définies comme l&rsquo;application d&rsquo;un <em>effet</em> à un <em>élément</em> d&rsquo;un <em>widget</em>, ces termes étant définis comme suit :</p>
+<dl>
+<dt>widget</dt>
+<dd>chaque partie visible de l&rsquo;interface utilisateur est appelée <em>widget</em>. Par exemple, la fenêtre d&rsquo;application de darktable est un widget, contenant les widgets des panneaux latéraux, dont chacun contient des widgets de module, dont chacun contient des widgets de bouton, de curseur et de liste déroulante, etc&hellip; Lorsque vous attribuez un raccourci à une action, vous devez d&rsquo;abord décider à quel widget il doit être appliqué.</dd>
+<dt>element</dt>
+<dd>An <em>element</em> is the part of a UI widget that is affected by your shortcut. For example, for a slider that has a color picker, you can make a shortcut activate the color picker <em>button</em> element or change the <em>value</em> element of the slider. For a row of tabs (the row is a single widget) you can select which tab element to activate or use your mouse scroll wheel to scroll through the tabs.</dd>
+<dt>effet</dt>
+<dd>Un raccourci peut parfois avoir plusieurs <em>effets</em> possibles sur un <em>élément</em> donné. Par exemple, un bouton peut être activé comme s&rsquo;il était pressé avec un simple clic de souris ou comme s&rsquo;il était pressé avec un Ctrl+clic. La valeur d&rsquo;un curseur peut être modifiée, augmentée/diminuée ou réinitialisée.</dd>
+</dl>
+<h1 id="affectation-de-raccourcis-aux-actions"><a href="#affectation-de-raccourcis-aux-actions">🔗</a>affectation de raccourcis aux actions</h1>
+<p>Il y a deux méthodes pour attribuer un raccourci à une action.</p>
+<h2 id="mappage-visuel-des-raccourcis"><a href="#mappage-visuel-des-raccourcis">🔗</a>mappage visuel des raccourcis</h2>
+<p>Click on the 
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/preferences-settings/shortcuts/visual-mapping-button.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/preferences-settings/shortcuts/visual-mapping-button.png" alt="visual mapping button"  class="icon"    /></a>
+
+ icon in the <a href="/dtdocs/fr/overview/user-interface/top-panel/">top panel</a> of any darktable view to enter visual shortcut mapping mode. If you hold Ctrl while clicking the button, no confirmation will appear when overwriting an existing shortcut mapping.</p>
+<p>Le curseur de la souris change lorsque vous survolez les widgets de l&rsquo;interface utilisateur indiquant si un mappage peut être créé ou non :</p>
+<ul>
+<li>
+<p>Une flèche vers le bas avec une ligne 
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/preferences-settings/shortcuts/expand-icon.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/preferences-settings/shortcuts/expand-icon.png" alt="l&amp;rsquo;icône développer"  class="icon"    /></a>
+
+ apparaît lorsque vous survolez l&rsquo;en-tête d&rsquo;un module, pour indiquer que vous pouvez cliquer pour développer le module.</p>
+</li>
+<li>
+<p>Une spirale 
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/preferences-settings/shortcuts/spiral-icon.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/preferences-settings/shortcuts/spiral-icon.png" alt="spiral icon"  class="icon"    /></a>
+
+ indique qu&rsquo;un raccourci peut être défini pour le widget sous le curseur.</p>
+</li>
+<li>
+<p>Une flèche vers le haut 
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/preferences-settings/shortcuts/up-icon.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/preferences-settings/shortcuts/up-icon.png" alt="up icon"  class="icon"    /></a>
+
+ indique qu&rsquo;en plus d&rsquo;attribuer un raccourci, vous pouvez également ajouter le widget au <a href="/dtdocs/fr/darkroom/organization/quick-access-panel/">panneau d&rsquo;accès rapide</a> de la chambre noire (Ctrl+clic).</p>
+</li>
+<li>
+<p>Une flèche vers le bas 
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/preferences-settings/shortcuts/down-icon.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/preferences-settings/shortcuts/down-icon.png" alt="icône vers le bas"  class="icon"    /></a>
+
+ indique que le widget est déjà dans le panneau d&rsquo;accès rapide (Ctrl+clic pour le supprimer).</p>
+</li>
+<li>
+<p>Une croix 
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/preferences-settings/shortcuts/cross-icon.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/preferences-settings/shortcuts/cross-icon.png" alt="cross icon"  class="icon"    /></a>
+
+ indique qu&rsquo;il n&rsquo;y a pas de widget mappable sous le curseur.</p>
+</li>
+</ul>
+<p>Appuyez sur une combinaison de touches tout en survolant un widget mappable pour attribuer un raccourci à ce widget - une action par défaut sera attribuée à ce raccourci en fonction du type de widget et du raccourci, <em>simple</em> ou <em>étendu</em>, que vous avez saisi. Voir ci-dessous pour plus de détails sur les actions attribuées par défaut.</p>
+<p>Cliquez avec le bouton gauche sur un widget mappable pour ouvrir l&rsquo;écran de mappage des raccourcis sur ce widget (voir ci-dessous). Cliquez avec le bouton gauche n&rsquo;importe où ailleurs sur l&rsquo;écran pour ouvrir l&rsquo;écran de mappage des raccourcis, développé (si possible) en fonction de la partie de l&rsquo;écran sur laquelle vous avez cliqué. Cet écran permet de modifier l&rsquo;action attribuée à un raccourci et de configurer des raccourcis pour des actions non visuelles. L&rsquo;accès à l&rsquo;écran de mappage des raccourcis ferme le mode de mappage de raccourci visuel.</p>
+<p>Vous pouvez affecter autant de raccourcis que souhaité dans une session de mappage, puis quitter le mode de mappage lorsque vous avez terminé avec un clic sur l&rsquo;icône 
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/preferences-settings/shortcuts/visual-mapping-button.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/preferences-settings/shortcuts/visual-mapping-button.png" alt="visual mapping button"  class="icon"    /></a>
+
+ ou un clic-droit n&rsquo;importe où sur l&rsquo;écran.</p>
+<p>Vous pouvez supprimer un mappage de raccourci utilisateur en le redéfinissant pour le même widget. Si vous essayez d&rsquo;affecter un raccourci existant à une nouvelle action, vous en êtes averti et êtes invité à indiquer si vous souhaitez effectivement le remplacer.</p>
+<p>Finally, if you scroll with your mouse wheel while in visual mapping mode (without pressing any other buttons/keys) when hovering over a slider, this will change the default speed for that slider &ndash; scroll up to increase and down to decrease. When you leave mapping mode, normal mouse scrolls over that slider will change its value with the adjusted speed.</p>
+<h2 id="écran-de-mappage-des-raccourcis"><a href="#%c3%a9cran-de-mappage-des-raccourcis">🔗</a>écran de mappage des raccourcis</h2>
+<p>Le moyen le plus flexible de créer des raccourcis consiste à utiliser l&rsquo;écran de mappage des raccourcis, accessible à partir de la boîte de dialogue des préférences globales ou avec un clic-gauche en mode de mappage visuel. Cet écran permet d&rsquo;accéder à toutes les actions disponibles, y compris certaines qui ne sont pas directement liées à un widget de l&rsquo;interface utilisateur.</p>
+<p>The top panel of the shortcut mapping screen shows a list of available UI widgets/actions and the bottom panel shows the shortcuts currently assigned to them. You can search the top and bottom panels using the text entry boxes at the bottom of the screen (use the up/down arrow keys to navigate between matches).</p>
+<p>Double-cliquez sur un élément du panneau supérieur pour créer un nouveau raccourci pour cet élément, puis entrez le raccourci souhaité (clic-droit pour annuler). Cela fait, une nouvelle entrée apparaît dans le panneau inférieur montrant le raccourci créé. Vous pouvez ensuite modifier manuellement l'<em>élément</em>, l'<em>effet</em>, la <em>vitesse</em> ou l'<em>instance</em> de l&rsquo;action associée à ce raccourci dans le panneau inférieur. Pour supprimer un raccourci utilisateur, sélectionnez-le dans le panneau inférieur et appuyez sur la touche Suppr.</p>
+<p>Selecting an existing shortcut in the bottom panel will highlight (in bold) the matching action and its parents in the top panel. You can use this to navigate the top panel and find related actions.</p>
+<p>Les options supplémentaires suivantes sont fournies dans l&rsquo;écran de mappage des raccourcis :</p>
+<dl>
+<dt>export&hellip;</dt>
+<dd>Export the current shortcut mappings for one or all of your devices (keyboard/mouse, midi, game controller) to an external file. The dialog will show you how many shortcuts exist for each device.</dd>
+<dt>importer&hellip;</dt>
+<dd>Importe des mappages de raccourcis à partir d&rsquo;un fichier externe pour un ou tous vos périphériques. Lors du chargement d&rsquo;un périphérique, vous pouvez choisir de lui attribuer un numéro différent. Cela peut être utilisé pour échanger des mises en page midi. Vous pouvez choisir de nettoyer un périphérique avant son chargement. Charger &ldquo;tout&rdquo; à partir d&rsquo;un fichier vide supprime alors tous vos raccourcis.</dd>
+<dt>restaurer&hellip;</dt>
+<dd>Restaure vos mappages de raccourcis (a) Aux mappages par défaut de darktable, (b) Au début de votre session en cours, ou (c) Tels qu&rsquo;ils étaient lors de la dernière ouverture de l&rsquo;écran de mappage de raccourcis. Lors de la restauration, vous pouvez laisser tels quels les raccourcis qui ont été ajoutés de sorte que seuls les raccourcis modifiés retrouvent leur signification précédente. Ou vous pouvez effacer d&rsquo;abord tous les raccourcis et juste charger le point de restauration.</dd>
+</dl>
+<h2 id="supprimer-les-raccourcis-par-défaut"><a href="#supprimer-les-raccourcis-par-d%c3%a9faut">🔗</a>supprimer les raccourcis par défaut</h2>
+<p>When launching the application, darktable loads default shortcuts first, and then loads user-defined shortcuts on top. This allows default shortcuts to be overridden with a new action but prevents them from being deleted (since the deleted shortcut will be automatically reloaded on the next restart).</p>
+<p>There are two ways to delete default shortcuts:</p>
+<h3 id="prevent-default-shortcuts-from-being-reloaded"><a href="#prevent-default-shortcuts-from-being-reloaded">🔗</a>prevent default shortcuts from being reloaded</h3>
+<p>Disable <a href="/dtdocs/fr/preferences-settings/miscellaneous/">preferences &gt; miscellaneous &gt; interface &gt; load default shortcuts at startup</a> to prevent default shortcuts from being reloaded. While this option is disabled, darktable will only load user-defined shortcuts and any defaults that you have not subsequently deleted or overridden.</p>
+<h3 id="override-default-shortcut-with-a-no-op-action"><a href="#override-default-shortcut-with-a-no-op-action">🔗</a>override default shortcut with a no-op action</h3>
+<p>You can <em>override</em> the action of a default shortcut by assigning an identical shortcut to the &ldquo;global/no-op&rdquo; action (which does nothing). You can do this either in the shortcut mapping screen (above) or by directly editing your <code>$HOME/.config/darktable/shortcutsrc</code> file. If you want to disable a lot of default shortcuts the latter option is recommended (you must exit darktable first). For example, the following default shortcuts are defined in <code>shortcutsrc</code> for switching views in darktable:</p>
+<pre tabindex="0"><code>d=global/switch views/darkroom
+l=global/switch views/lighttable
+m=global/switch views/map
+p=global/switch views/print
+s=global/switch views/slideshow
+t=global/switch views/tethering
+</code></pre><p>Vous pouvez désactiver tous ces raccourcis en modifiant <code>shortcutsrc</code> comme suit :</p>
+<pre tabindex="0"><code>d=global/no-op
+l=global/no-op
+m=global/no-op
+p=global/no-op
+s=global/no-op
+t=global/no-op
+</code></pre><h1 id="actions-communes"><a href="#actions-communes">🔗</a>actions communes</h1>
+<p>Ce qui suit est une liste d&rsquo;actions auxquelles vous pouvez affecter des raccourcis, organisées par type de widget. Cette liste n&rsquo;est pas exhaustive et nous vous encourageons à parcourir l&rsquo;écran de mappage des raccourcis pour obtenir une liste complète des actions disponibles. Si vous attribuez un raccourci à un widget, une action par défaut lui sera attribuée, selon le type de widget et selon que vous avez attribué un raccourci simple ou étendu.</p>
+<p>Notez qu&rsquo;il est possible d&rsquo;attribuer un certain nombre d&rsquo;actions qui n&rsquo;ont aucun effet. Par exemple, tous les curseurs incluent un élément <em>bouton</em>, qu&rsquo;un tel bouton soit réellement présent ou non à côté du curseur.</p>
+<h2 id="options-globales"><a href="#options-globales">🔗</a>options globales</h2>
+<p>Les actions de la section &ldquo;options globales&rdquo; de l&rsquo;écran de mappage des raccourcis peuvent être exécutées à partir de n&rsquo;importe quelle vue darktable. La plupart de ces actions n&rsquo;ont pas d'<em>éléments</em> spécifiques car elles sont utilisées pour effectuer des opérations activer/désactiver.</p>
+<h2 id="vues"><a href="#vues">🔗</a>vues</h2>
+<p>Les actions de la section &ldquo;vues&rdquo; ne peuvent être exécutées qu&rsquo;à partir de la vue correspondante. Comme pour les actions globales, la plupart n&rsquo;ont pas d'<em>éléments</em> spécifiques car ils sont utilisés pour effectuer des opérations activer/désactiver.</p>
+<h2 id="boutons"><a href="#boutons">🔗</a>boutons</h2>
+<p>Un bouton est une icône cliquable dans l&rsquo;interface de darktable. L&rsquo;action par défaut, lors de l&rsquo;affectation d&rsquo;un simple raccourci à un <em>bouton</em>, est d&rsquo;activer ce bouton comme s&rsquo;il était cliqué avec le bouton gauche de la souris. Vous pouvez modifier cette action pour activer le bouton comme si vous aviez cliqué avec une touche de modification.</p>
+<h2 id="bascules"><a href="#bascules">🔗</a>bascules</h2>
+<p>Une bascule (ou case à cocher) est un bouton qui a un état marche/arrêt persistant. Il a donc des <em>effets</em> supplémentaires pour vous permettre de le basculer ou de définir explicitement son état. Comme avec un bouton normal, l&rsquo;action par défaut, lors de l&rsquo;affectation d&rsquo;un simple raccourci à une bascule, consiste à activer la bascule comme si vous cliquiez avec le bouton gauche de la souris (ce qui active/désactive le bouton).</p>
+<h2 id="modules-utilitaires"><a href="#modules-utilitaires">🔗</a>modules utilitaires</h2>
+<p>Tous les modules utilitaires ont les éléments suivants :</p>
+<dl>
+<dt><em>afficher le module</em></dt>
+<dd>Développe ou réduit le module.</dd>
+<dt><em>réinitialiser les paramètres</em></dt>
+<dd>Agit comme un <em>bouton</em> qui réinitialise tous les paramètres du module lorsqu&rsquo;il est activé. L&rsquo;action <em>ctrl-activer</em> peut être utilisée pour réappliquer les préréglages automatiques pour ce module.</dd>
+<dt><em>préréglages</em></dt>
+<dd>Vous permet de sélectionner des actions dans le menu <a href="/dtdocs/fr/darkroom/processing-modules/presets/">préréglages</a> (par exemple, modifier, mettre à jour, précédent, suivant). L&rsquo;action par défaut, lors de l&rsquo;affectation d&rsquo;un simple raccourci à un élément <em>préréglages</em>, consiste à afficher une liste des préréglages disponibles à la sélection. Les raccourcis étendus ne sont actuellement pas disponibles pour les entrées de <em>préréglages</em>.</dd>
+</dl>
+<p>L&rsquo;action par défaut, lors de l&rsquo;affectation d&rsquo;un simple raccourci à un module utilitaire, consiste à <em>basculer</em> l&rsquo;élément <em>afficher le module</em> (développer/réduire le module).</p>
+<p>De plus, des raccourcis sont disponibles pour toutes les commandes de chaque module ainsi que pour tous les préréglages de base (voir ci-dessous).</p>
+<h2 id="modules-de-traitement"><a href="#modules-de-traitement">🔗</a>modules de traitement</h2>
+<p>Les modules de traitement ont les mêmes éléments et actions par défaut que les modules utilitaires avec les éléments supplémentaires suivants :</p>
+<dl>
+<dt><em>activer</em></dt>
+<dd>Agit comme un <em>bascule</em> qui active ou désactive le module.</dd>
+<dt><em>focus</em></dt>
+<dd>Agit comme une <em>bascule</em> qui donne ou reprend le focus au module. Ceci est utile pour les modules tels que <a href="/dtdocs/fr/module-reference/processing-modules/crop/"><em>recadrer</em></a> ou <a href="/dtdocs/fr/module-reference/processing-modules/tone-equalizer/"><em>égaliseur de ton</em></a>, dont les commandes à l&rsquo;écran ne sont activées que lorsqu&rsquo;ils ont le focus. Pour <em>recadrer</em>, les modifications ne sont enregistrées que lorsque le module perd le focus.</dd>
+<dt><em>instance</em></dt>
+<dd>Vous permet de sélectionner des actions dans le menu <a href="/dtdocs/fr/darkroom/processing-modules/multiple-instances/">instances multiples</a> (par exemple, monter/descendre, créer une nouvelle instance). L&rsquo;action par défaut, lors de l&rsquo;affectation d&rsquo;un simple raccourci à l&rsquo;élément <em>instance</em>, consiste à afficher une liste des options disponibles ; un raccourci étendu déplace l'<em>instance de module préférée</em> (voir ci-dessous) de haut en bas dans le pipeline.</dd>
+</dl>
+<p>If an action affects a processing module that can have multiple instances, you can choose which instance to adjust with a given shortcut. By default, all actions will affect the &ldquo;preferred&rdquo; instance, as defined using the settings in <a href="/dtdocs/fr/preferences-settings/miscellaneous/#shortcuts-with-multiple-instances">preferences &gt; miscellaneous &gt; shortcuts with multiple instances</a>.</p>
+<p>Additional options are available in the shortcuts mapping screen to adjust the blend parameters (the &lt;blending&gt; section) and module controls (the &lt;focused&gt; section) for the currently-focused module. The latter section allows you to assign shortcuts to the first, second, third (etc.) button, drop-down, slider and tab on the module. The shortcuts will affect different module controls depending on which module currently has focus (as the available list of controls changes).</p>
+<p>You can also assign scroll shortcuts to the &lsquo;preset&rsquo; menu, which allows you to use your mouse scroll wheel to scroll through the module&rsquo;s presets.</p>
+<h2 id="menus-déroulants"><a href="#menus-d%c3%a9roulants">🔗</a>menus déroulants</h2>
+<p>Un menu déroulant est une zone de sélection multiple qui contient les éléments suivants :</p>
+<dl>
+<dt><em>sélection</em></dt>
+<dd>Permet de sélectionner des valeurs dans le menu déroulant de différentes manières. L&rsquo;action par défaut, lors de l&rsquo;affectation d&rsquo;un simple raccourci à un menu déroulant, consiste à afficher une boîte de dialogue d'<em>édition</em> avec la liste des valeurs disponibles à la sélection ; Un raccourci étendu (incluant un mouvement de souris) fait défiler les valeurs disponibles.</dd>
+<dt><em>bouton</em></dt>
+<dd>Un élément standard <em>bouton</em> qui permet d&rsquo;activer le bouton à droite du menu déroulant (si présent). Par exemple, le menu déroulant <em>aspect</em> dans le module <a href="/dtdocs/fr/module-reference/processing-modules/crop/"><em>recadrer</em></a> a un bouton qui permet de basculer le recadrage de portrait à paysage et vice versa.</dd>
+</dl>
+<h2 id="curseurs"><a href="#curseurs">🔗</a>curseurs</h2>
+<p>Une réglette (ou curseur) vous permet de modifier graphiquement une valeur entière ou décimale, et dispose des éléments suivants :</p>
+<dl>
+<dt><em>valeur</em></dt>
+<dd>Permet de modifier la valeur de la réglette. L&rsquo;action par défaut, lors de l&rsquo;affectation d&rsquo;un simple raccourci à une réglette, affiche une boîte de dialogue d'<em>édition</em> afin que vous puissiez saisir une valeur ; un raccourci étendu (incluant un mouvement de souris) change la valeur de haut en bas. Les éléments <em>valeur</em> sont également utilisés pour modifier certains graphiques à l&rsquo;écran. Lors de la modification de l&rsquo;élément <em>valeur</em> avec un raccourci, vous ne pouvez pas dépasser les limites définies pour la réglette.</dd>
+<dt><em>force</em></dt>
+<dd>C&rsquo;est le même que l&rsquo;élément <em>value</em> décrit ci-dessus, mais il vous permet de dépasser les limites définies pour la réglette.</dd>
+<dt><em>zoom</em></dt>
+<dd>Permet de modifier les limites supérieure et inférieure de la réglette sans modifier la valeur actuelle.</dd>
+<dt><em>bouton</em></dt>
+<dd>Un élément standard <em>bouton</em> qui permet d&rsquo;activer le bouton à droite de la réglette (s&rsquo;il est présent). Par exemple, une réglette peut inclure une pipette de couleur pour définir sa valeur en fonction de la zone sélectionnée de l&rsquo;image.</dd>
+</dl>
+<p>Vous pouvez modifier la valeur d&rsquo;une réglette plus rapidement ou plus lentement que la normale en définissant la <em>vitesse</em> de l&rsquo;action dans l&rsquo;écran de mappage des raccourcis. Par défaut, la vitesse est de 1,0, ce qui signifie que la valeur est modifiée au taux par défaut de la réglette. Vous pouvez modifier la réglette plus rapidement en augmentant la vitesse (une vitesse de 10 rend l&rsquo;action 10 fois plus rapide) ou plus lentement en la diminuant (une vitesse de 0,1 rend l&rsquo;action 10 fois plus lente).</p>
+<h1 id="replis"><a href="#replis">🔗</a>replis</h1>
+<p>Lorsqu&rsquo;un <em>widget</em> peut avoir plusieurs <em>actions</em> différentes, il peut être fastidieux de configurer des raccourcis individuels pour chacune de ces actions. Pour simplifier ce processus, si vous créez un raccourci simple, un certain nombre d&rsquo;effets peuvent être disponibles par défaut en tant qu&rsquo;extensions de ce raccourci. Ceux-ci sont connus sous le nom de <em>replis</em>.</p>
+<p>Bien que les replis soient un moyen puissant de configurer rapidement plusieurs actions à l&rsquo;aide de raccourcis prédéfinis et cohérents, ils attribuent automatiquement de nombreuses actions (ce qui peut ne pas être ce que vous voulez) et peuvent être difficiles à comprendre. Les replis sont donc désactivés par défaut et vous devez cliquer sur la case à cocher &ldquo;activer les replis&rdquo; dans la fenêtre de configuration des raccourcis pour les activer.</p>
+<p>Pour prendre un bref exemple, vous pouvez créer un simple raccourci (par exemple Ctrl+R) vers un module de traitement. Cela configure automatiquement les effets de <em>replis</em> suivants en utilisant le raccourci défini, étendu avec des clics de souris. Dans chaque cas (sauf le premier), vous devez maintenir le raccourci initial tout en cliquant avec votre souris. Le dernier clic de souris appliquera l&rsquo;action définie ci-dessous :</p>
+<ul>
+<li>
+<p>Ctrl+R (pas de clic de souris) pour afficher/masquer le module (le repli par défaut)</p>
+</li>
+<li>
+<p>Ctrl+R+clic gauche pour activer/désactiver le module</p>
+</li>
+<li>
+<p>Ctrl+R+double-clic gauche pour réinitialiser le module</p>
+</li>
+<li>
+<p>Ctrl+R+clic droit pour afficher le menu préréglages du module</p>
+</li>
+<li>
+<p>Ctrl+R+double-clic droit pour afficher le menu instance du module</p>
+</li>
+</ul>
+<p>Des replis similaires sont définis pour de nombreux éléments de l&rsquo;interface utilisateur et peuvent tous être remplacées manuellement.</p>
+<p>Certains replis sont définies à l&rsquo;aide de touches de modification (généralement <code>Ctrl+</code> et <code>Maj+</code>). Dans ce cas, vous devez définir un raccourci initial sans un tel modificateur afin de pouvoir utiliser ces replis. Par exemple, si vous affectez Ctrl+R à une action, vous ne pouvez pas utiliser un repli <code>Ctrl+</code>. Des replis par défaut de ce type sont fournies pour l&rsquo;élément <em>value</em> et pour les mouvements horizontaux/verticaux dans la zone centrale (zoomée) &ndash; dans ce cas, <code>Shift+</code> augmente la vitesse à 10,0 et <code>Ctrl+</code> diminue la vitesse à 0,1.</p>
+<p>Pour voir la liste de <em>tous</em> les replis par défaut, cochez la case &ldquo;activer les replis&rdquo; dans l&rsquo;écran de mappage des raccourcis et sélectionnez la catégorie &ldquo;replis&rdquo; dans le panneau supérieur. Pour voir les replis pour un widget donné (par exemple une réglette), sélectionnez simplement ce widget dans le panneau supérieur. Dans les deux cas, un élément supplémentaire (également nommé &ldquo;replis&rdquo;) apparaît alors dans le panneau inférieur contenant le détail des replis.</p>
+<p>Les replis ne sont appliqués que si aucun autre raccourci utilisant cette combinaison n&rsquo;a été explicitement créé. Dans l&rsquo;exemple ci-dessus, si vous avez affecté Ctrl+R+clic gauche à une autre action, le repli &ldquo;activer/désactiver le module&rdquo; est ignoré.</p>
+<p>Comme pour tout autre raccourci, les paramètres de repli sont entièrement personnalisables.</p>
+
+
+    
+    <h3 class="translations_head">translations</h3>
+    <ul class="translations">
+        
+        <li><a href="/dtdocs/en/preferences-settings/shortcuts/">
+            English: shortcuts
+        </a></li>
+        
+        <li><a href="/dtdocs/de/preferences-settings/shortcuts/">
+            German: Kurzbefehle
+        </a></li>
+        
+        <li><a href="/dtdocs/es/preferences-settings/shortcuts/">
+            Espanol: atajos de teclado
+        </a></li>
+        
+        <li><a href="/dtdocs/pt_br/preferences-settings/shortcuts/">
+            Português: atalhos
+        </a></li>
+        
+        <li><a href="/dtdocs/uk/preferences-settings/shortcuts/">
+            Ukrainian: клавіатурні прискорювачі
+        </a></li>
+        
+        <li><a href="/dtdocs/nl/preferences-settings/shortcuts/">
+            Dutch: snelkoppelingen
+        </a></li>
+        
+    </ul>
+    
+</article>
+
+<div class="prev-next row">
+    <div class="col-6">
+    
+	<a href="/dtdocs/fr/preferences-settings/miscellaneous/" class="next">&lt; divers</a>
+	
+    </div>
+    <div class="col-6">
+    
+	<a href="/dtdocs/fr/preferences-settings/presets/" class="prev">préréglages &gt;</a>
+	
+    </div>
+</div>
+
+
+
+      </div>
+		<nav class="navigation col-sm-12 order-sm-12 col-md-3 order-md-1">
+		    <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/" class="">
+          Présentation
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/" class="">
+          interface utilisateur
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/views/" class="">
+          vues
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/screen-layout/" class="">
+          disposition de l&#39;affichage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/filmstrip/" class="">
+          pellicule
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/top-panel/" class="">
+          panneau supérieur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/keyboard-shortcuts/" class="">
+          raccourcis clavier
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/supported-file-formats/" class="">
+          formats de fichier supportés
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/sidecar-files/" class="">
+          fichiers liés et édition non destructive
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/sidecar-files/sidecar/" class="">
+          fichiers liés
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/sidecar-files/sidecar-import/" class="">
+          importer des fichiers liés générés par d&#39;autres applications
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/sidecar-files/local-copies/" class="">
+          copies locales
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/" class="">
+          une introduction au flux de travail de darktable
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/introduction/" class="">
+          introduction
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/import-review/" class="">
+          importer et examiner
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/process/" class="">
+          processus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/export/" class="">
+          exporter
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/" class="">
+          Table lumineuse
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-view-layout/" class="">
+          disposition de la vue table lumineuse
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/undo-redo/" class="">
+          annuler/refaire
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/" class="">
+          modes de la table lumineuse
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/filemanager/" class="">
+          navigateur de fichiers
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/zoomable-lighttable/" class="">
+          table lumineuse zoomable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/culling/" class="">
+          sélection
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/full-preview/" class="">
+          aperçu complet
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/" class="">
+          gestion des données numériques
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/collections/" class="">
+          collections &amp; pellicules
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/thumbnails/" class="">
+          miniatures
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/star-color/" class="">
+          évaluation par étoiles et labels de couleur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/grouping/" class="">
+          grouper des images
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/metadata-tagging/" class="">
+          métadonnées et mots clés
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/" class="">
+          Chambre noire
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/darkroom-view-layout/" class="">
+          disposition de la vue chambre noire
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/" class="">
+          le pipeline graphique
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/the-anatomy-of-a-module/" class="">
+          l&#39;anatomie d&#39;un module de traitement
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/the-pixelpipe-and-module-order/" class="">
+          le pipeline graphique &amp; l&#39;ordre des modules
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/history-stack/" class="">
+          l&#39;historique
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/undo-redo/" class="">
+          annuler/refaire
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/" class="">
+          modules de traitement
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/module-header/" class="">
+          en-tête d&#39;un module
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/multiple-instances/" class="">
+          instances multiples
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/presets/" class="">
+          préréglages
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/module-controls/" class="">
+          contrôles du module
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/curves/" class="">
+          courbes
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/wavelets/" class="">
+          ondelettes
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/deprecated/" class="">
+          modules dépréciés
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/" class="">
+          masquage et fusion
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/blend-modes/" class="">
+          modes de fusion
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/" class="">
+          masques
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/drawn/" class="">
+          masques dessinés
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/parametric/" class="">
+          masques paramétriques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/drawn-and-parametric/" class="">
+          combiner les masques dessinés/paramétriques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/refinement-controls/" class="">
+          raffinement du masque et contrôles supplémentaires
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/raster/" class="">
+          masques raster
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/" class="">
+          organisation
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/module-groups/" class="">
+          les groupes de modules
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/quick-access-panel/" class="">
+          panneau d&#39;accès rapide
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/manage-module-layouts/" class="">
+          gérer les dispositions de modules
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/tethering/" class="">
+          Capture
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/tethering/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/tethering/tethering-view-layout/" class="">
+          disposition de la vue capture
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/tethering/troubleshooting/" class="">
+          dépannage
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/map/" class="">
+          Carte
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/map/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/map/map-view-layout/" class="">
+          disposition de la vue carte
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/slideshow/" class="">
+          Diaporama
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/slideshow/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/slideshow/usage/" class="">
+          utilisation
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/print/" class="">
+          Impression
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/print/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/print/print-view-layout/" class="">
+          disposition de la vue impression
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/" class="">
+          Références des modules
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/" class="">
+          modules de traitement
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/chromatic-aberrations/" class="">
+          aberrations chromatiques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/raw-chromatic-aberrations/" class="">
+          aberrations chromatiques raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/soften/" class="">
+          adoucir (effet Orton)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/basic-adjustments/" class="">
+          ajustements de base (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-balance/" class="">
+          balance couleur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-balance-rgb/" class="">
+          balance couleur rvb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/white-balance/" class="">
+          balance des blancs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/framing/" class="">
+          cadre décoratif
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-calibration/" class="">
+          calibration des couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/censorize/" class="">
+          censurer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/colorize/" class="">
+          coloriser
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-contrast/" class="">
+          contraste de couleur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/local-contrast/" class="">
+          contraste local
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/contrast-brightness-saturation/" class="">
+          contraste luminosité saturation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-correction/" class="">
+          correction des couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/lens-correction/" class="">
+          correction des objectifs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/spot-removal/" class="">
+          correction des taches (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/unbreak-input-profile/" class="">
+          correction du profil d&#39;entrée
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/base-curve/" class="">
+          courbe de base
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/tone-curve/" class="">
+          courbe des tonalités
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/rgb-curve/" class="">
+          courbe rvb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/diffuse/" class="">
+          diffusion ou netteté
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/negadoctor/" class="">
+          docteur néga
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/demosaic/" class="">
+          dématriçage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/lowlight-vision/" class="">
+          faible lumière
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/watermark/" class="">
+          filigrane
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/filmic-rgb/" class="">
+          filmique rvb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/graduated-density/" class="">
+          filtre dégradé
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/lowpass/" class="">
+          filtre passe-bas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/highpass/" class="">
+          filtre passe-haut
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/surface-blur/" class="">
+          flou de surface
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/blurs/" class="">
+          flous
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/grain/" class="">
+          grain
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/dithering/" class="">
+          homogénéisation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/invert/" class="">
+          inverser (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/liquify/" class="">
+          liquéfier
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/fill-light/" class="">
+          lumière d&#39;appoint (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/bloom/" class="">
+          lumière d&#39;arrière plan
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/lut-3d/" class="">
+          lut 3D
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-mapping/" class="">
+          mappage des couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/tone-mapping/" class="">
+          mappage des tonalités (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/global-tonemap/" class="">
+          mappage global des tonalités (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/scale-pixels/" class="">
+          mise à l&#39;échelle des pixels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/channel-mixer/" class="">
+          mixeur de canaux (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/monochrome/" class="">
+          monochrome
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/levels/" class="">
+          niveaux
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/rgb-levels/" class="">
+          niveaux rvb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/shadows-and-highlights/" class="">
+          ombres et hautes lumières
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/orientation/" class="">
+          orientation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/hot-pixels/" class="">
+          pixels chauds
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/raw-black-white-point/" class="">
+          point noir/blanc raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/input-color-profile/" class="">
+          profil de couleur d&#39;entrée
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/output-color-profile/" class="">
+          profil de couleur de sortie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/crop/" class="">
+          recadrer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/crop-rotate/" class="">
+          recadrer et pivoter (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-reconstruction/" class="">
+          reconstruction des couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/sharpen/" class="">
+          renforcer la netteté
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/retouch/" class="">
+          retouche
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/rotate-pixels/" class="">
+          rotation des pixels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/rotate-perspective/" class="">
+          rotation et perspective
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/denoise-profiled/" class="">
+          réduction du bruit (profil)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/astrophoto-denoise/" class="">
+          réduction du bruit photo astro
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/raw-denoise/" class="">
+          réduction du bruit RAW
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/haze-removal/" class="">
+          suppression de la brume
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/defringe/" class="">
+          suppression des franges (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-look-up-table/" class="">
+          table correspondance couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/velvia/" class="">
+          velvia
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/vibrance/" class="">
+          vibrance (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/vignetting/" class="">
+          vignetage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/split-toning/" class="">
+          virage partiel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/zone-system/" class="">
+          zones (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-zones/" class="">
+          zones de couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/contrast-equalizer/" class="">
+          égaliseur de contraste
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/tone-equalizer/" class="">
+          égaliseur de ton
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/" class="">
+          modules utilitaires
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/tethering/" class="">
+          capture
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/tethering/camera-settings/" class="">
+          paramètres de la capture
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/tethering/session/" class="">
+          session
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/tethering/live-view/" class="">
+          visée directe
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/map/" class="">
+          carte
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/map/locations/" class="">
+          emplacements
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/map/map-settings/" class="">
+          paramètres de carte
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/map/find-location/" class="">
+          trouver un lieu
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/" class="">
+          chambre noire
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/clipping/" class="">
+          avertissement d&#39;écrêtage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/raw-overexposed/" class="">
+          avertissement de surexposition raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/duplicate-manager/" class="">
+          gestion des clones
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/mask-manager/" class="">
+          gestion des masques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/guides-overlays/" class="">
+          guides et superpositions
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/history-stack/" class="">
+          historique
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/snapshots/" class="">
+          instantanés
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/image-info-line/" class="">
+          ligne d&#39;informations de l&#39;image
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/navigation/" class="">
+          navigation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/module-order/" class="">
+          ordre des modules
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/global-color-picker/" class="">
+          pipette de couleur globale
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/gamut/" class="">
+          vérification du gamut
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/soft-proof/" class="">
+          épreuvage écran
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/color-assessment/" class="">
+          évaluation des couleurs
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/print/" class="">
+          impression
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/print/print-settings/" class="">
+          paramètres d&#39;impression
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/" class="">
+          partagé
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/collections/" class="">
+          collections
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/focus-peaking/" class="">
+          détection de focus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/export/" class="">
+          exporter
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/geotagging/" class="">
+          géolocalisation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/image-information/" class="">
+          informations de l&#39;image
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/tagging/" class="">
+          mots-clés
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/scopes/" class="">
+          scopes
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/" class="">
+          table lumineuse
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/timeline/" class="">
+          chronologie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/history-stack/" class="">
+          historique
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/selected-image/" class="">
+          images sélectionnées
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/import/" class="">
+          importer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+          lua scripts installer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/styles/" class="">
+          styles
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/select/" class="">
+          sélectionner
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/" class="">
+          Préférences et réglages
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/import/" class="">
+          importer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/lighttable/" class="">
+          table lumineuse
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/darkroom/" class="">
+          chambre noire
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/processing/" class="">
+          traitement
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/security/" class="">
+          sécurité
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/storage/" class="">
+          stockage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/miscellaneous/" class="">
+          divers
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/shortcuts/" class=" active">
+          raccourcis
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/presets/" class="">
+          préréglages
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/lua-options/" class="">
+          options lua
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/" class="">
+          Automatisation avec Lua
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/basic-principles/" class="">
+          Principes de base : fichiers luarc
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/a-simple-example/" class="">
+          Un exemple Lua simple
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/printing-labeled-images/" class="">
+          impression d&#39;images étiquetées
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/simple-shortcut/" class="">
+          ajouter un raccourci simple
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/exporting-images/" class="">
+          exporter des images avec Lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/building-ui-elements/" class="">
+          Constructions d&#39;éléments de l&#39;interface utilisateur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/sharing-scripts/" class="">
+          partage de scripts
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/calling-from-dbus/" class="">
+          appeler Lua de dbus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/darktable-from-lua/" class="">
+          utiliser darktable depuis un script Lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/api/" class="">
+          API Lua
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/guides-tutorials/" class="">
+          Guides &amp; Tutoriels
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/guides-tutorials/monochrome/" class="">
+          développement d&#39;images monochromes
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/guides-tutorials/other-resources/" class="">
+          autres ressources
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/" class="">
+          Sujets spéciaux
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/" class="">
+          gestion de la couleur
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/display-profile/" class="">
+          profil d&#39;affichage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/rendering-method/" class="">
+          méthode de rendu
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/rendering-intent/" class="">
+          intention de rendu
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/color-spaces/" class="">
+          espaces colorimétriques de darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/unbounded-colors/" class="">
+          couleurs non bornées
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/color-artifacts/" class="">
+          possibles artefacts de couleur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/color-dimensions/" class="">
+          dimensions de la couleur dans darktable
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/" class="">
+          opencl
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/background/" class="">
+          le contexte
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/how-opencl-works/" class="">
+          comment travaille opencl
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/activate-opencl/" class="">
+          activer OpenCL dans darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/setting-up/" class="">
+          configurer opencl
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/problems-solutions/" class="">
+          problèmes possibles et solutions
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/scheduling-profile/" class="">
+          profil de planification
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/multiple-devices/" class="">
+          multiples périphériques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/still-doesnt-work/" class="">
+          opencl ne fonctionne toujours pas pour moi
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/" class="">
+          utilisation de darktable-chart
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/usage/" class="">
+          utilisation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/source-image/" class="">
+          image source
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/reference-values/" class="">
+          valeurs de références
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/process/" class="">
+          processus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/making-input-images/" class="">
+          faire une image d&#39;entrée pour darktable-chart
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/" class="">
+          appel du programme
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable/" class="">
+          darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable-generate-cache/" class="">
+          darktable-generate-cache
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable-chart/" class="">
+          darktable-chart
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable-cltest/" class="">
+          darktable-cltest
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable-cmstest/" class="">
+          darktable-cmstest
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/purge_non_existing_images_sh/" class="">
+          purge_non_existing_images.sh
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-pipeline/" class="">
+          pipeline graphique de darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/contributing/" class="">
+          contribuer à dtdocs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/translating/" class="">
+          traduire dtdocs
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+
+		</nav>
+	    </div>
+
+            
+
+        </div>
+
+
+    </body>
+</html>
+
+<script>
+(function($) {
+  
+
+  $.fn.scrollToMiddle = function(options) {
+    var settings = $.extend({
+        duration: 0
+    }, options );
+
+    return this.each(function() {
+      var $el = $(this);
+      var elOffset = $el.offset().top;
+      var elHeight = $el.height();
+      var windowHeight = $(window).height();
+      var offset;
+      if (elHeight < windowHeight) {
+        offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
+      }
+      else {
+        offset = elOffset;
+      }
+      $('.navigation').scrollTop(offset);
+    });
+  };
+}(jQuery));
+
+$('.navigation').css('opacity', '0');
+ $(document).ready(function(){
+     $('.parent ul').hide();
+     $('.navigation').css('opacity', 1.0);
+     $('.active').parents('ul').show();
+     $('.active').siblings('ul').show();
+     $('.active').children('i.toggle').removeClass("fa-plus-squre").addClass("fa-minus-square-o");
+     $('.active').parents('li').children('.toggle').removeClass("fa-plus-square").addClass("fa-minus-square-o");
+     $('.active').scrollToMiddle();
+
+     $('.toggle').on('click', function (e) {
+       e.stopPropagation();
+       $(this).siblings('ul').slideToggle();
+
+       if($(this).hasClass("fa-plus-square")) {
+           $(this).addClass("fa-minus-square-o");
+           $(this).removeClass("fa-plus-square");
+       }
+       else {
+           $(this).addClass("fa-plus-square");
+           $(this).removeClass("fa-minus-square-o");
+       }
+     });
+ });
+
+</script>
+
+
+<script>
+ var _paq = window._paq = window._paq || [];
+  
+ _paq.push(['trackPageView']);
+ _paq.push(['enableLinkTracking']);
+ (function() {
+     var u="https://piwik.kees.nl/";
+     _paq.push(['setTrackerUrl', u+'matomo.php']);
+     _paq.push(['setSiteId', '21']);
+     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+ })();
+</script>
+<noscript><p><img src="https://piwik.kees.nl/matomo.php?idsite=21&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+
+

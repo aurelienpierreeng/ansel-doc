@@ -1,0 +1,849 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>verwerkingsmodules on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/</link>
+    <description>Recent content in verwerkingsmodules on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>basis curve</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/base-curve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/base-curve/</guid>
+      <description>Simuleer de JPEG in de camera door een karakteristieke basiscurve op de afbeelding toe te passen.
+darktable wordt geleverd met een aantal basiscurve-voorinstellingen die proberen de curves van verschillende camerafabrikanten na te bootsen. Deze voorinstellingen worden automatisch toegepast volgens de fabrikant-ID in de Exif-gegevens van de afbeelding. Voor sommige cameramodellen zijn ook cameraspecifieke voorinstellingen voor de basiscurve beschikbaar.
+Deze module wordt standaard ingeschakeld als voorkeuren &amp;gt; verwerken &amp;gt; standaardinstellingen pixelwerkvolgorde automatisch toepassen is ingesteld op &amp;ldquo;scherm-gerefereerd&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>basisaanpassingen (verouderd)</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/basic-adjustments/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/basic-adjustments/</guid>
+      <description>Let op: deze module is verouderd vanaf darktable 3.6 en mag niet langer worden gebruikt voor nieuwe bewerkingen. Gebruik in plaats daarvan het paneel voor snelle toegang.
+ Een gemakkelijke module die bedieningselementen combineert van belichting, hooglichtenreconstructie, kleurbalans en levendigheid in een enkele module.
+Hoewel deze module een snelle en gemakkelijke manier kan bieden om eenvoudige aanpassingen aan een afbeelding aan te brengen, moet deze met zorg worden gebruikt. Normaal gesproken zouden belichtingsaanpassingen vóór ingaand kleurprofiel in de pixelpijp moeten komen, en kleuraanpassingen zouden daarna moeten komen.</description>
+    </item>
+    
+    <item>
+      <title>belichting</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/exposure/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/exposure/</guid>
+      <description>Verhoog of verlaag de algehele helderheid van een afbeelding.
+Deze module heeft twee werkingsmodi:
+ handmatig Stel de belichting, zwartniveau en knipdrempel handmatig in automatisch (alleen RAW-afbeeldingen) gebruik een analyse van het histogram van de afbeelding om de belichting automatisch in te stellen. Darktable selecteert automatisch de belichtingscompensatie die nodig is om het geselecteerde percentiel naar het geselecteerde doelniveau te verschuiven (zie onderstaande definities). Deze modus is met name handig voor het automatisch wijzigen van een groot aantal afbeeldingen om dezelfde belichting te krijgen.</description>
+    </item>
+    
+    <item>
+      <title>censureren</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/censorize/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/censorize/</guid>
+      <description>Degradeer delen van het beeld op een esthetisch aangename manier, om mensen/objecten te anonimiseren of lichaamsdelen te verbergen.
+Censuur werkt in lineaire RGB-kleurruimte om een fysiek nauwkeurige Gaussiaanse vervaging en Gaussiaanse luminantieruis toe te passen.
+Naast anonimisering kan deze module ook voor een breed scala aan creatieve doeleinden worden gebruikt, bijvoorbeeld:
+  Combineer een eenvoudige vervaging met een vermenigvuldiging overvloeimodus om een realistische bloei te creëren (Orton-effect).
+  Combineer een eenvoudige vervaging met een overvloeimodus voor aftrekken en lage dekking om een onscherp masker te maken, vergelijkbaar met de module verscherpen, maar in een RGB-scene-gerefereerde ruimte.</description>
+    </item>
+    
+    <item>
+      <title>chromatische aberraties</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/chromatic-aberrations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/chromatic-aberrations/</guid>
+      <description>Corrigeer chromatische aberraties.
+In tegenstelling tot de raw chromatische aberraties module, vereist deze module geen ruwe data als invoer.
+🔗werkvolgorde Voor het beste resultaat wordt je geadviseerd als volgt te werk te gaan:
+ Demp de chromatische aberraties zoveel mogelijk in de lens correctie module met behulp van de TCA-schuifregelaars. Verhoog de krachtschuifregelaar in deze module om het effect beter te zien. Vergroot de radius totdat de chromatische aberraties verdwijnen. Als dit onvoldoende is, probeer dan de instelling &amp;ldquo;zeer grote chromatische aberraties&amp;rdquo; in te schakelen.</description>
+    </item>
+    
+    <item>
+      <title>contrast equalizer</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/contrast-equalizer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/contrast-equalizer/</guid>
+      <description>Pas de helderheid en het chroma-contrast aan in het wavelet-domein.
+Deze veelzijdige module kan worden gebruikt om een verscheidenheid aan effecten te bereiken, waaronder bloei, ruisonderdrukking, helderheid en lokale contrastverbetering.
+Het werkt in het wavelet domein en de parameters ervan kunnen onafhankelijk worden afgesteld voor elke wavelet-detailschaal. De module werkt in CIE LCh-kleurruimte en is dus in staat om helderheid en kleurkwaliteit onafhankelijk te behandelen.
+Er zijn een aantal voorinstellingen die jou moeten helpen de mogelijkheden van de module te begrijpen.</description>
+    </item>
+    
+    <item>
+      <title>contrast helderheid verzadiging</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/contrast-brightness-saturation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/contrast-brightness-saturation/</guid>
+      <description>Een zeer eenvoudig hulpmiddel voor het aanpassen van de contrast, helderheid en verzadiging van een afbeelding. Houd er rekening mee dat een aantal andere modules veel meer veelzijdige methoden bieden om deze parameters aan te passen.
+Alle modulebesturingen staan standaard in een neutrale positie (nul) en bieden de mogelijkheid om de relevante parameter te verhogen of te verlagen
+ Opmerking: Deze module werkt in Lab-kleurruimte en is gevoelig voor halo&amp;rsquo;s. Gebruik in plaats daarvan de kleur balance rgb module.</description>
+    </item>
+    
+    <item>
+      <title>demozaïek</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/demosaic/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/demosaic/</guid>
+      <description>Bepaal hoe onbewerkte bestanden worden gedemosaïekt.
+🔗bayer filters De sensorcellen van een digitale camera zijn niet kleurgevoelig - ze kunnen alleen verschillende niveaus van helderheid opnemen. Om een kleurenbeeld te krijgen, wordt elke cel bedekt door een kleurenfilter (rood, groen of blauw) dat voornamelijk licht van die kleur doorlaat. Dit betekent dat elke pixel van de onbewerkte afbeelding alleen informatie over één kleurkanaal bevat.
+Kleurfilters zijn gewoonlijk gerangschikt in een mozaïekpatroon dat bekend staat als een Bayer-filterreeks.</description>
+    </item>
+    
+    <item>
+      <title>diffuus of verscherpen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/diffuse/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/diffuse/</guid>
+      <description>Diffusie is een familie van fysieke processen waarbij deeltjes bewegen en zich geleidelijk met de tijd verspreiden, vanuit een bron die ze genereert. Bij beeldverwerking vindt diffusie meestal op twee plaatsen plaats:
+  diffusie van fotonen door lensglas (blur) of vochtige lucht (nevel),
+  diffusie van pigmenten in natte inkten of aquarellen.
+  In beide gevallen maakt diffusie het beeld minder scherp door deeltjes te &amp;ldquo;lekken&amp;rdquo; en lokale variaties glad te strijken.</description>
+    </item>
+    
+    <item>
+      <title>dithering</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/dithering/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/dithering/</guid>
+      <description>Deze module elimineert enkele van de bandvormige-artefacten die kunnen ontstaan wanneer de interne 32-bits drijvende-kommagegevens van darktable worden overgebracht naar een discreet 8-bits of 16-bits integer-uitvoerformaat voor weergave of export.
+Hoewel het geen inherent probleem is in een van de modules van darktable, kunnen sommige bewerkingen bandvorming veroorzaken als ze een helderheidsgradiënt in het beeld produceren. Om mogelijke artefacten te verminderen, moet je overwegen om dithering te activeren wanneer je de modules vignettering of grijsverloop gebruikt.</description>
+    </item>
+    
+    <item>
+      <title>draai pixels</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/rotate-pixels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/rotate-pixels/</guid>
+      <description>De sensoren van sommige camera&amp;rsquo;s (zoals de Fujifilm FinePix S2Pro, F700 en E550) hebben een diagonaal georiënteerd Bayer-patroon in plaats van de gebruikelijke orthogonale lay-out.
+Zonder correctie zou dit leiden tot een gekanteld beeld met zwarte hoeken. Deze module past de vereiste rotatie toe.
+darktable detecteert afbeeldingen die moeten worden gecorrigeerd met behulp van hun Exif-gegevens en activeert deze module automatisch waar nodig. Voor andere afbeeldingen blijft de module altijd uitgeschakeld.</description>
+    </item>
+    
+    <item>
+      <title>duo-toning</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/split-toning/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/split-toning/</guid>
+      <description>Creëer een tweekleurig lineair toning-effect waarbij de schaduwen en hooglichten worden weergegeven door twee verschillende kleuren.
+De duo-toning-module converteert afbeeldingen niet naar zwart-wit en heeft beperkte voordelen op kleurenafbeeldingen. Om traditionele duo-toning uit te voeren, moet de invoer naar deze module daarom monochroom zijn.
+🔗module instellingen  schaduwen en hooglichten kleur stel de gewenste tint en verzadiging in voor zowel schaduwen als hooglichten. Als je op de gekleurde vierkanten klikt, wordt een dialoogvenster voor het selecteren van kleuren geopend waarin je een keuze kunt maken uit veelgebruikte kleuren, of waarmee je een kleur in de RGB-kleurruimte kunt definiëren.</description>
+    </item>
+    
+    <item>
+      <title>filmisch rgb</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/filmic-rgb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/filmic-rgb/</guid>
+      <description>Breng het toonbereik van een afbeelding opnieuw in kaart door de toon- en kleurrespons van klassieke film te reproduceren.
+Deze module kan worden gebruikt om het dynamische bereik van de scène uit te breiden of te verkleinen, zodat het past bij het dynamische bereik van het scherm. Het beschermt kleuren en contrast in de middentonen, herstelt de schaduwen en comprimeert heldere hooglichten en donkere schaduwen. Hooglichten hebben extra aandacht nodig wanneer details behouden moeten blijven (bijv.</description>
+    </item>
+    
+    <item>
+      <title>glans</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/bloom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/bloom/</guid>
+      <description>Creëer een zacht glanseffect.
+Deze module werkt door de hooglichten te vervagen en het resultaat vervolgens te vermengen met de originele afbeelding.
+ Opmerking: Deze module zorgt voor vervaging in de Lab-kleurruimte en wordt niet langer aanbevolen. Gebruik in plaats daarvan de toon equalizer module of de belichtins module met een [parametrisch masker](../../darkroom/masking-and- blending/masks/parametric.md).
+ 🔗module instellingen  afmeting De ruimtelijke omvang van het glanseffect. drempel De drempel voor de helderheidsverhoging.</description>
+    </item>
+    
+    <item>
+      <title>globale toonmap (verouderd)</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/global-tonemap/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/global-tonemap/</guid>
+      <description>Let op: deze module is verouderd vanaf darktable 3.4 en mag niet langer worden gebruikt voor nieuwe bewerkingen. Gebruik in plaats daarvan de filmisch rgb module.
+ Comprimeer het toonbereik van een HDR-afbeelding tot het beperkte toonbereik van een typisch LDR-uitvoerbestand.
+Globale toonmap verwerkt elke pixel van een HDR-afbeelding, zonder rekening te houden met de lokale omgeving. Dit is over het algemeen sneller dan lokale toon mapping (verouderd), maar kan leiden tot minder overtuigende resultaten bij scènes met een zeer hoog dynamisch bereik.</description>
+    </item>
+    
+    <item>
+      <title>grijsverloop</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/graduated-density/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/graduated-density/</guid>
+      <description>Simuleer een filter met grijsverloop om de belichting en kleur op een progressieve manier te corrigeren.
+Op het scherm wordt een lijn weergegeven waarmee de positie en rotatie van het verloop met de muis kan worden gewijzigd.
+Het is bekend dat deze module onder bepaalde omstandigheden bandvormige-artefacten veroorzaakt. Overweeg om de module dithering te activeren om deze problemen te verhelpen.
+🔗module instellingen  dichtheid Stel de dichtheid van het filter (EV) in.</description>
+    </item>
+    
+    <item>
+      <title>highpass</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/highpass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/highpass/</guid>
+      <description>Een highpassfilter.
+Deze module is primair bedoeld om te gebruiken in combinatie met een overvloeimodus. Probeer bijvoorbeeld de module te gebruiken met een mengmodus van &amp;ldquo;zacht licht&amp;rdquo; voor high pass verscherping.
+ Opmerking: Deze module zorgt voor vervaging in de Lab-kleurruimte, wat kan leiden tot ongewenste effecten, en wordt niet langer aanbevolen. Gebruik in plaats daarvan de module contrast-equalizer voor fijne scherpte of de module lokaal contrast voor algemene scherpte.</description>
+    </item>
+    
+    <item>
+      <title>hooglichten herstellen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/highlight-reconstruction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/highlight-reconstruction/</guid>
+      <description>Poging om kleurinformatie te reconstrueren voor pixels die zijn bijgesneden in een of meer RGB-kanalen.
+Als deze pixels gedeeltelijk worden afgekapt, kan dit ertoe leiden dat er onrealistische kleuren in de afbeelding verschijnen. Pixels met zowel groene als blauwe kanalen die zijn afgekapt, zullen bijvoorbeeld rood lijken zonder enige reconstructie van hoogtepunten.
+Er zijn drie reconstructiemethoden beschikbaar:
+ comprimeer hooglichten Klem alle pixels vast op het witniveau (d.w.z. knip de resterende kleurkanalen af).</description>
+    </item>
+    
+    <item>
+      <title>hot pixels</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/hot-pixels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/hot-pixels/</guid>
+      <description>Detecteer en elimineer automatisch hot pixels.
+Hotpixels zijn pixels die een lichtniveau niet correct hebben geregistreerd. Gedetecteerde hot pixels worden vervangen door een gemiddelde van hun buren.
+🔗module instellingen  drempel Hoe sterk de waarde van een pixel moet afwijken van die van zijn buren om als hot pixel te worden beschouwd. kracht De overvloeisterkte van de hot pixels met hun omgeving. detecteren door 3 naaste Verleng de detectie van hot pixels &amp;ndash; beschouw een pixel als hot als er minimaal drie (in plaats van vier) aangrenzende pixels meer afwijken dan het drempelniveau.</description>
+    </item>
+    
+    <item>
+      <title>ingaand kleurprofiel</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/input-color-profile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/input-color-profile/</guid>
+      <description>Definieer hoe darktable de kleuren van de afbeelding zal interpreteren.
+Deze module neemt de kleurruimte die wordt gebruikt door de beeldbron (bijv. camera, scanner) en converteert de pixelcoderingen naar een gestandaardiseerde werkkleurruimte. Dit betekent dat volgende modules in de pijplijn zich niet bezig hoeven te houden met de specifieke kenmerken van het invoerapparaat, en kunnen werken met en converteren naar/van een gemeenschappelijke werkkleurruimte.
+Wanneer een afbeelding is vastgelegd in een onbewerkt bestand, past de invoerkleurprofielmodule normaal gesproken een standaard of verbeterde kleurenmatrix toe die specifiek is voor dat cameramodel, die zal worden gebruikt om de kleuren in kaart te brengen in de kleurruimte van het werkprofiel.</description>
+    </item>
+    
+    <item>
+      <title>inkleuren</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/colorize/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/colorize/</guid>
+      <description>Voeg een effen kleurlaag toe aan de afbeelding.
+🔗module instellingen  tint De tint van de kleurlaag. verzadiging De verzadiging van schaduwtonen. helderheid De helderheid van de kleurlaag. bron mix Bepaalt hoe de helderheid van het invoerbeeld wordt gemengd met de kleurlaag. Als je dit op nul zet, krijgt je een egaal gekleurd vlak.  </description>
+    </item>
+    
+    <item>
+      <title>inverteren (verouderd)</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/invert/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/invert/</guid>
+      <description>Let op: deze module is verouderd vanaf darktable 3.4 en mag niet langer worden gebruikt voor nieuwe bewerkingen. Gebruik in plaats daarvan de negatieven assistent module.
+ Gescande negatieven omkeren.
+🔗module instellingen  kleur van filmmateriaal Als je op het gekleurde veld klikt, wordt een dialoogvenster voor het selecteren van kleuren geopend waarin je een keuze kan maken uit veelgebruikte kleuren of waarmee je een RGB-kleur kunt definiëren. Je kan de kleurenkiezer ook activeren om een kleurstaal van jouw afbeelding te nemen, bij voorkeur van de onbelichte rand van jouw negatief.</description>
+    </item>
+    
+    <item>
+      <title>invullicht (verouderd)</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/fill-light/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/fill-light/</guid>
+      <description>Let op: deze module is verouderd vanaf darktable 3.4 en mag niet langer worden gebruikt voor nieuwe bewerkingen. Gebruik de toon equalizer module of de belichtings module met een [getekend masker](../../darkroom/masking-and-blending /masks/drawn.md).
+ Wijzig de belichting lokaal op basis van de helderheid van de pixels.
+Deze module stimuleert de belichting door de helderheid te vergroten met een Gauss-curve van een gespecificeerde breedte, gecentreerd op een bepaalde helderheid.
+🔗module instellingen  belichting De belichting bij invullicht (EV) centrum De mediane helderheid die wordt beïnvloed door het invullicht.</description>
+    </item>
+    
+    <item>
+      <title>kanaalmenger (verouderd)</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/channel-mixer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/channel-mixer/</guid>
+      <description>Let op: deze module is verouderd van darktable 3.4 en mag niet langer worden gebruikt voor nieuwe bewerkingen. Gebruik in plaats daarvan de kleurkalibratie module.
+ Een eenvoudig maar krachtig hulpmiddel om kleurkanalen te beheren.
+Deze module accepteert rode, groene en blauwe kanalen als invoer en biedt rode, groene, blauwe, grijze, tint, verzadiging en helderheidskanalen als uitvoer. Hiermee kan je onafhankelijk bepalen hoeveel elk ingangskanaal bijdraagt aan elk uitgangskanaal.</description>
+    </item>
+    
+    <item>
+      <title>kleur reconstructie</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-reconstruction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-reconstruction/</guid>
+      <description>Herstel kleurinformatie in uitgewassen hooglichten
+Vanwege de aard van digitale sensoren missen overbelichte hooglichten geldige kleurinformatie. Meestal lijken ze neutraal wit of vertonen ze enige kleurzweem, afhankelijk van de andere beeldverwerkingsstappen. Deze module kan worden gebruikt om overbelichte hooglichten te &amp;ldquo;genezen&amp;rdquo; door hun kleuren te vervangen door beter passende. De module werkt op pixels waarvan de luminantie een door de gebruiker gedefinieerde drempel overschrijdt. Vervangende kleuren worden overgenomen van aangrenzende pixels.</description>
+    </item>
+    
+    <item>
+      <title>kleurcontrast</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-contrast/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-contrast/</guid>
+      <description>Een vereenvoudigde bediening voor het wijzigen van het contrast of de scheiding van kleuren tussen de groen/magenta en blauw/gele assen in de Lab-kleurruimte. Hogere waarden verhogen het kleurcontrast, lagere waarden verlagen het.
+🔗module instellingen  groen-magenta contrast Het groen-magenta kleurcontrast wijzigen. Dit komt overeen met het verhogen of verlagen van de steilheid van de a*-curve in Lab. Lagere waarden verzadigen groen en magenta, terwijl hogere waarden hun verzadiging verhogen. blauw-geel contrast Het blauw-gele kleurcontrast wijzigen.</description>
+    </item>
+    
+    <item>
+      <title>kleurcorrectie</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-correction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-correction/</guid>
+      <description>Wijzig de globale beeldverzadiging om de afbeelding een tint te geven of als een alternatieve methode om de afbeelding te splitsen.
+ Opmerking: Gebruik de kleurbalans rgb module voor kleuraanpassingen.
+ 🔗module instellingen  kleurenbord Voor gesplitste toning verplaats je de witte stip naar de gewenste hooglichttint en selecteer je vervolgens een tint voor schaduwen met de donkere vlek. Voor een eenvoudige globale tint stelt u beide spots in op dezelfde kleur.</description>
+    </item>
+    
+    <item>
+      <title>kleurenbalans</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-balance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-balance/</guid>
+      <description>Een veelzijdig hulpmiddel om de kleurbalans van de afbeelding aan te passen.
+Deze module kan worden gebruikt om parasitaire kleur-zweem te herstellen of om de visuele sfeer van een beeld te verbeteren met behulp van kleurcorrectie, een populaire techniek in de bioscoopindustrie. Voor een op scene-gerefereerde werkvolgorde kan je overwegen om in plaats daarvan de verbeterde module kleurenbalans rgb te gebruiken.
+🔗overzicht Met de module kleurenbalans kan je kleuren selectief verschuiven op luminantiebereik (schaduwen, middentonen en hooglichten).</description>
+    </item>
+    
+    <item>
+      <title>kleurenbalans rgb</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-balance-rgb/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-balance-rgb/</guid>
+      <description>Een geavanceerde module die tools voor kleurcorrectie uit de cinematografie in de pijplijn voor fotografisch scene-gerefereerd brengt.
+Deze module is niet geschikt voor beginners zonder voorkennis van kleurentheorie, die zich misschien aan de instellingen voor globale chroma en globale levendigheid willen houden totdat ze een goed begrip hebben van de kleurdimensies.
+🔗inleiding Kleurcorrectie is een belangrijk onderdeel van beeldbewerking. Het kan helpen om ongewenste kleurzweem te verwijderen en kan ook een creatieve kleurdraai geven die sfeer aan uw afbeeldingen toevoegt.</description>
+    </item>
+    
+    <item>
+      <title>kleurenkaart</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-mapping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-mapping/</guid>
+      <description>Breng de look en feel van de ene afbeelding over op de andere.
+Deze module analyseert statistisch de kleurkenmerken van een bron- en doelbeeld. De kleuren van de bronafbeelding worden vervolgens toegewezen aan overeenkomstige kleuren op de doelafbeelding.
+Er zijn twee stappen nodig om deze module te gebruiken:
+  Open de bronafbeelding in de ontwikkelenweergave en verkrijg de kleurkenmerken door op de knop &amp;ldquo;verwerk als bron&amp;rdquo; te drukken. Een set kleurclusters wordt gegenereerd en weergegeven in het gebied &amp;ldquo;bronclusters&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>kleurkalibratie</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-calibration/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-calibration/</guid>
+      <description>Een volledig uitgeruste kleurruimtecorrectie, witbalansaanpassing en kanaalmixer module.
+Deze eenvoudige maar krachtige module kan op de volgende manieren worden gebruikt:
+  Om de witbalans aan te passen (chromatische aanpassing), in combinatie met de witbalans module. Hier maakt de witbalans-module enkele initiële aanpassingen (vereist om de demozaïek-module effectief te laten werken), en de kleurkalibratie-module berekent vervolgens een meer perceptueel nauwkeurige witbalans nadat het invoerkleurprofiel is toegepast.
+  Als een eenvoudige RGB [kanaalmixer] (#channel-mixing), waarbij de R-, G- en B-uitgangskanalen worden aangepast op basis van de R-, G- en B-ingangskanalen, om cross-talk kleurcorrectie uit te voeren.</description>
+    </item>
+    
+    <item>
+      <title>kleurzoeker</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-look-up-table/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-look-up-table/</guid>
+      <description>Een generieke kleurzoeker geïmplementeerd in Lab-ruimte.
+De invoer voor deze module is een lijst met bron- en doelpunten en de volledige mapping wordt geïnterpoleerd met behulp van splines. De resulterende opzoektabellen (LUT&amp;rsquo;s) kunnen met de hand worden bewerkt en kunnen worden gemaakt met behulp van het darktable-chart-hulpprogramma om de gegeven invoer te matchen (zoals hald-cluts en RAW/JPEG met in-camera verwerkingsparen). Zie darktable-chart gebruiken voor details.
+🔗module instellingen  kleurenbord Het kleurenbord raster toont een lijst met gekleurde vlakken.</description>
+    </item>
+    
+    <item>
+      <title>kleurzones</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-zones/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/color-zones/</guid>
+      <description>Pas selectief de helderheid, verzadiging en tint van pixels aan op basis van hun huidige helderheid, verzadiging en tint.
+Deze module werkt in CIE LCh-kleurruimte, die pixels scheidt in helderheid, chroma (verzadiging) en tint componenten. Hiermee kan je de helderheid, verzadiging en tint van gerichte groepen pixels manipuleren door het gebruik van curves.
+Je moet eerst kiezen of je pixels wilt aanpassen (selecteren) op basis van hun helderheid, verzadiging of tint.</description>
+    </item>
+    
+    <item>
+      <title>korrel</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/grain/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/grain/</guid>
+      <description>Simuleer de korrel van analoge film. De korrel wordt verwerkt op het L-kanaal van de Lab-kleurruimte.
+🔗module instellingen  ruwheid De korrelgrootte, geschaald om een ISO-nummer te simuleren. kracht De sterkte van het effect.  </description>
+    </item>
+    
+    <item>
+      <title>lenscorrectie</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/lens-correction/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/lens-correction/</guid>
+      <description>Automatisch corrigeren voor (en simuleren) lensvervorming, transversale chromatische aberraties (TCA) en lichtafval.
+Deze module identificeert de camera/lens-combinatie uit de Exif-gegevens van de afbeelding en gebruikt de externe lensfun-bibliotheek om correctieparameters te leveren.
+Als de lensfun-bibliotheek van jouw systeem geen correctieprofiel heeft voor de automatisch geïdentificeerde camera/lens-combinatie, worden de bedieningselementen voor de drie fotometrische parameters (hieronder) vervangen door een waarschuwingsbericht. Je kan zelf proberen het juiste profiel te vinden door ernaar te zoeken in het menu.</description>
+    </item>
+    
+    <item>
+      <title>levendigheid (verouderd)</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/vibrance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/vibrance/</guid>
+      <description> Let op: deze module is verouderd vanaf darktable 3.6 en mag niet langer worden gebruikt voor nieuwe bewerkingen. Gebruik in plaats daarvan de vibratieregeling in de module kleurbalans rgb.
+ Verzadig en verminder de helderheid van de meest verzadigde pixels om de kleuren levendiger te maken.
+🔗module instellingen  levendigheid De hoeveelheid levendigheid die op de afbeelding moet worden toegepast.  </description>
+    </item>
+    
+    <item>
+      <title>lokaal contrast</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/local-contrast/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/local-contrast/</guid>
+      <description>Verbeter het lokale contrast van de afbeelding.
+Dit wordt bereikt met behulp van een lokaal laplace (standaard) of niet-genormaliseerd bilateraal filter. Beide modi werken uitsluitend op het L-kanaal van Lab. Het lokaal laplace-filter is ontworpen om robuust te zijn tegen ongewenste halo-effecten en gradiëntomkeringen langs randen.
+🔗module instellingen  modus Keuze uit lokaal laplace filter of bilateraal raster. In de volgende secties worden de bedieningselementen beschreven die beschikbaar zijn voor elk van deze modi.</description>
+    </item>
+    
+    <item>
+      <title>lowpass</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/lowpass/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/lowpass/</guid>
+      <description>Pas een lowpassfilter (bijvoorbeeld een Gaussiaanse vervaging) toe op de afbeelding, terwijl je het uitgangscontrast en de verzadiging regelt.
+Deze module is primair bedoeld om te gebruiken in combinatie met een overvloeimodus. Probeer bijvoorbeeld de voorinstelling lokaal contrastmasker te gebruiken met de overvloeimodus overlay.
+ Opmerking: Deze module zorgt voor vervaging in de Lab-kleurruimte, wat ongewenste effecten kan veroorzaken en wordt niet langer aanbevolen. Gebruik in plaats daarvan de module contrast equalizer voor vervaging of de module tone equalizer voor compressie van het dynamisch bereik.</description>
+    </item>
+    
+    <item>
+      <title>lut 3D</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/lut-3d/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/lut-3d/</guid>
+      <description>Transformeer RGB-waarden met een 3D LUT-bestand.
+Een 3D LUT is een driedimensionale tabel die wordt gebruikt om een bepaalde RGB-waarde om te zetten in een andere RGB-waarde. Het wordt normaal gesproken gebruikt voor filmsimulatie en kleurcorrectie.
+Deze module accepteert .cube, .3dl, .png (haldclut) en .gmz bestanden. Niet-gecomprimeerde 3D LUT-gegevens worden niet opgeslagen in de database of het XMP-bestand, maar worden in plaats daarvan opgeslagen in het 3D LUT-bestandspad in de 3D LUT-hoofdmap.</description>
+    </item>
+    
+    <item>
+      <title>monochroom</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/monochrome/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/monochrome/</guid>
+      <description>Converteer een afbeelding snel naar zwart-wit met behulp van een variabel kleurenfilter.
+Om deze module te gebruiken, verkleint je eerst de filtergrootte (om het effect te concentreren) en verplaats je deze over het tintpalet om de beste filterwaarde voor jouw gewenste afbeeldingsweergave te vinden. Breid vervolgens het filter geleidelijk uit om meer tinten op te nemen en een meer natuurlijke tonaliteit te bereiken.
+Hoewel deze module eenvoudig te gebruiken is, kunnen doorgaans betere resultaten worden verkregen door gebruik te maken van de voorinstellingen voor film-emulatie in de module kleurkalibratie.</description>
+    </item>
+    
+    <item>
+      <title>negatieven assistent</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/negadoctor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/negadoctor/</guid>
+      <description>Verwerk gescande filmnegatieven.
+Je kan een afbeelding van een negatief verkrijgen met behulp van een filmscanner, of door deze te fotograferen tegen een wit licht (bijvoorbeeld een lichttafel of computermonitor) of een externe flitser.
+🔗voorbereiding Als de afbeelding van het negatief is verkregen met een digitale camera, moet je met de volgende punten rekening houden om nauwkeurige kleuren in de uiteindelijke afbeelding te krijgen:
+  Pas bij het maken van de foto de belichting aan om het volledige dynamische bereik van uw camerasensor volledig te benutten &amp;ndash; d.</description>
+    </item>
+    
+    <item>
+      <title>nevel verwijderen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/haze-removal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/haze-removal/</guid>
+      <description>Verminder automatisch het effect van stof en nevel in de atmosfeer. Deze module kan ook meer in het algemeen worden gebruikt om afbeeldingen een kleurversterking te geven, met name in contrastarme delen van het beeld.
+Nevel absorbeert licht van objecten in de scène, maar is ook een bron van diffuus achtergrondlicht. De module voor het verwijderen van nevel maakt eerst voor elk beeldgebied een schatting van de hoeveelheid waas in de scène.</description>
+    </item>
+    
+    <item>
+      <title>niveaus</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/levels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/levels/</guid>
+      <description>Pas zwarte, witte en midden-grijs punten aan.
+De niveaustool biedt twee werkingsmodi:
+ manueel Het hulpmiddel Niveaus toont een histogram van de afbeelding en toont drie balken met handvatten. Versleep de handvatten om de zwarte, middelgrijze en witte punten in absolute waarden voor de helderheid van de afbeelding te wijzigen (de L-waarde van Lab).  Door de zwarte en witte balken te verplaatsen zodat ze overeenkomen met de linker- en rechterrand van het histogram, zal het uitvoerbeeld het volledige beschikbare toonbereik overspannen, waardoor het contrast van het beeld toeneemt.</description>
+    </item>
+    
+    <item>
+      <title>omlijsten</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/framing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/framing/</guid>
+      <description>Genereer een kader rond de afbeelding.
+Het kader bestaat uit een rand (met een door de gebruiker gedefinieerde kleur) en een kaderlijn binnen die rand (met een tweede door de gebruiker gedefinieerde kleur). Er zijn verschillende opties beschikbaar om de geometrie en kleur van het kader te regelen.
+🔗module instellingen  randdikte De grootte van het kader als percentage van het onderliggende volledige beeld. verhouding De beeldverhouding van de uiteindelijke module-uitvoer (d.</description>
+    </item>
+    
+    <item>
+      <title>ontruis astrofoto</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/astrophoto-denoise/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/astrophoto-denoise/</guid>
+      <description>Verwijder beeldruis met behoud van structuur.
+Dit wordt bereikt door het gemiddelde te nemen van elke pixel met enkele omringende pixels in de afbeelding. Het gewicht van een dergelijke pixel in het middelingsproces hangt af van de gelijkenis van zijn omgeving met de omgeving van de pixel waarvan de ruis wordt verwijderd. Een patch met een gedefinieerde grootte wordt gebruikt om die overeenkomst te meten.
+Omdat het verwijderen van ruis een proces is dat veel resources nodig heeft, vertraagt het de verwerking van pixelpijpe aanzienlijk.</description>
+    </item>
+    
+    <item>
+      <title>oppervlakte vervaging</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/surface-blur/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/surface-blur/</guid>
+      <description>Gladde beeldoppervlakken met behoud van scherpe randen met behulp van een bilateraal filter.
+Deze module kan worden gebruikt om beelden te ontruisen, maar je moet je ervan bewust zijn dat bilaterale filters gevoelig zijn voor overdrijving en darktable biedt veel betere alternatieven. De module ontruis astrophoto gebruikt bijvoorbeeld een niet-lokaal ruisonderdrukkingsalgoritme, en de module ruisreductie (profiel) biedt een keuze tussen niet-lokale middelen en wavelet-ruisonderdrukkingsalgoritmen.
+De module oppervlakte vervagen vervaagt ruis binnen de oppervlakken van een afbeelding door pixels te middelen met hun buren, waarbij niet alleen rekening wordt gehouden met hun geometrische afstand, maar ook met hun afstand op de bereikschaal (d.</description>
+    </item>
+    
+    <item>
+      <title>oriëntatie</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/orientation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/orientation/</guid>
+      <description>Draai de afbeelding 90 graden per keer of draai de afbeelding horizontaal en/of verticaal.
+De module is standaard ingeschakeld en de oriëntatie (rotatie) wordt automatisch ingesteld op basis van de Exif-gegevens van de afbeelding.
+De oriëntatie kan ook worden ingesteld met behulp van de module geselecteerde beelden in de weergave lighttable.
+🔗module instellingen  transformeren Dubbelklik op het label om de standaardtransformaties terug te zetten   tegen de klok in draaien De afbeelding 90 graden tegen de klok in draaien.</description>
+    </item>
+    
+    <item>
+      <title>raw chromatische aberraties</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/raw-chromatic-aberrations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/raw-chromatic-aberrations/</guid>
+      <description>Corrigeer chromatische aberraties van RAW afbeeldingen.
+Omdat deze module werkt op onbewerkte data, gaat het onderliggende model uit van een niet uitgesneden fotografisch beeld als invoer. Het zal daarom waarschijnlijk mislukken wanneer je inzoomt, omdat het alleen in staat is om op het zichtbare deel van het beeld te werken. De module wordt dus overbrugd bij hoge zoomniveaus en er verschijnt een &amp;ldquo;overbrugd&amp;rdquo; bericht bovenaan de module. Deze beperking geldt alleen voor interactief werk en niet voor de uiteindelijke export.</description>
+    </item>
+    
+    <item>
+      <title>raw zwart/wit punt</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/raw-black-white-point/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/raw-black-white-point/</guid>
+      <description>Definieer cameraspecifieke zwart-witpunten.
+Deze module wordt automatisch geactiveerd voor alle onbewerkte afbeeldingen. Standaardinstellingen worden toegepast op alle ondersteunde camera&amp;rsquo;s. Wijzigingen in de standaardinstellingen zijn normaal gesproken niet vereist.
+🔗module instellingen  zwartniveau 0-3 Het cameraspecifieke zwartniveau van de vier pixels in het RGGB Bayer-patroon. Pixels met waarden lager dan dit niveau worden niet geacht geldige gegevens te bevatten. witpunt Het cameraspecifieke witniveau. Alle pixels met waarden daarboven worden waarschijnlijk afgekapt en worden dienovereenkomstig verwerkt in de hooglichten reconstructie module.</description>
+    </item>
+    
+    <item>
+      <title>retoucheren</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/retouch/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/retouch/</guid>
+      <description>Verwijder ongewenste elementen uit je afbeelding door te klonen, helen, vervagen en vullen met getekende vormen.
+Deze module breidt de mogelijkheden van de verouderde spot verwijderen module (gelijk aan de &amp;ldquo;kloon&amp;rdquo;-tool van deze module) uit door een &amp;ldquo;herstel&amp;rdquo;-tool op te nemen (gebaseerd op de hersteltool van GIMP), zoals evenals &amp;ldquo;opvullen&amp;rdquo; en &amp;ldquo;vervagen&amp;rdquo; modi. Het kan ook profiteren van wavelet-decompositie, waardoor het beeld kan worden gescheiden in lagen met verschillende details (van grof tot fijn) die selectief kunnen worden geretoucheerd voordat ze opnieuw worden gecombineerd om het uitvoerbeeld te produceren.</description>
+    </item>
+    
+    <item>
+      <title>rgb curve</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/rgb-curve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/rgb-curve/</guid>
+      <description>Een klassiek hulpmiddel voor digitale fotografie om de tonen van een afbeelding te wijzigen met behulp van curves.
+Deze module lijkt erg op de toon curve module, maar werkt in RGB-kleurruimte.
+Activeer de kleurenkiezer aan de linkerkant om de gekozen waarden in de grafiek weer te geven (Ctrl+klik of klik met de rechtermuisknop om de kiezer in de gebiedsmodus te gebruiken). Numerieke (Lab) waarden van de invoer en uitvoer (zie hieronder) op de geselecteerde plek of gebied worden linksboven in de widget weergegeven.</description>
+    </item>
+    
+    <item>
+      <title>rgb niveaus</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/rgb-levels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/rgb-levels/</guid>
+      <description>Pas zwarte, witte en midden-grijs punten aan in de RGB-kleurruimte. Deze module is vergelijkbaar met de niveaus module, die werkt in Lab-kleurruimte.
+De tool RGB-niveaus toont een histogram van de afbeelding en toont drie balken met handvatten. Versleep de hendels om de zwarte, middel-grijs en witte punten in helderheid te wijzigen (in de modus &amp;ldquo;RGB, gekoppelde kanalen&amp;rdquo;) of afzonderlijk voor elk van de R-, G- en B-kanalen (in de modus &amp;ldquo;RGB, onafhankelijke kanalen&amp;rdquo;).</description>
+    </item>
+    
+    <item>
+      <title>roteren en perspectief</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/rotate-perspective/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/rotate-perspective/</guid>
+      <description>Automatisch corrigeren voor convergerende lijnen, een vorm van perspectiefvervorming. Het onderliggende mechanisme is geïnspireerd op het programma ShiftN van Markus Hebel. Met deze module kan ook de rotatie van het beeld worden aangepast.
+Perspectiefvervormingen zijn een natuurlijk effect bij het projecteren van een driedimensionale scène op een tweedimensionaal vlak en zorgen ervoor dat objecten dichtbij de kijker groter lijken dan objecten verder weg. Convergerende lijnen zijn een speciaal geval van perspectiefvervormingen die vaak worden gezien in architectuurfoto&amp;rsquo;s - parallelle lijnen, wanneer ze onder een hoek worden gefotografeerd, worden omgezet in convergerende lijnen die elkaar op een bepaald uitkijkpunt binnen of buiten het beeldframe ontmoeten.</description>
+    </item>
+    
+    <item>
+      <title>ruisreductie (profiel)</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/denoise-profiled/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/denoise-profiled/</guid>
+      <description>Een gebruiksvriendelijke en zeer efficiënte ruisonderdrukkingsmodule, aangepast aan de individuele ruisprofielen van een breed scala aan camerasensoren.
+Een probleem met veel ruisonderdrukkingsalgoritmen is dat ze aannemen dat de variantie van de ruis onafhankelijk is van de helderheid van het signaal. Door de ruiskarakteristieken van de sensor van een camera bij verschillende ISO-instellingen te profileren, kan de variantie bij verschillende lichtsterkten worden beoordeeld en kan het ruisonderdrukkingsalgoritme worden aangepast om de ruis gelijkmatiger af te vlakken.</description>
+    </item>
+    
+    <item>
+      <title>ruisreductie raw</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/raw-denoise/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/raw-denoise/</guid>
+      <description>Voer ruisonderdrukking uit op onbewerkte afbeeldingsgegevens voordat deze demozaïekt zijn.
+Deze module is overgedragen van dcraw.
+🔗module instellingen  ruis drempel De drempel voor ruisdetectie. Hogere waarden leiden tot een sterkere ruisonderdrukking en een groter verlies aan beelddetail. grove/fijne curves De ruis van een afbeelding is meestal een combinatie van fijnkorrelige en grofkorrelige ruis. Met deze curven kan het beeld min of meer worden ontdaan van ruis, afhankelijk van de grofheid van de zichtbare ruis.</description>
+    </item>
+    
+    <item>
+      <title>schaal pixels</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/scale-pixels/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/scale-pixels/</guid>
+      <description>Sommige camera&amp;rsquo;s (zoals de Nikon D1X) hebben rechthoekige in plaats van de gebruikelijke vierkante sensorcellen. Zonder correctie zou dit leiden tot vervormde beelden. Deze module past de vereiste schaling toe.
+darktable detecteert afbeeldingen die moeten worden gecorrigeerd met behulp van hun Exif-gegevens en activeert deze module automatisch waar nodig. Voor andere afbeeldingen blijft de module altijd uitgeschakeld.
+De module heeft geen instellingen.</description>
+    </item>
+    
+    <item>
+      <title>schaduwen en hooglichten</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/shadows-and-highlights/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/shadows-and-highlights/</guid>
+      <description>Wijzig het toonbereik van de schaduwen en hooglichten van een afbeelding door het lokale contrast te verbeteren.
+ Opmerking: Deze module zorgt voor vervaging in de Lab-kleurruimte, wat kan leiden tot een aantal problemen als de parameters overdreven gewijzigd worden, waaronder halo&amp;rsquo;s, hoog lokaal contrast in hoge lichten en tintverschuivingen naar blauw in de schaduwen. Het is aangeraden om de toon equalizer module te gebruiken.
+ 🔗module instellingen  schaduwen Het effect op schaduwen regelen.</description>
+    </item>
+    
+    <item>
+      <title>tonemapping (verouderd)</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/tone-mapping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/tone-mapping/</guid>
+      <description>Let op: deze module is verouderd vanaf darktable 3.4 en mag niet langer worden gebruikt voor nieuwe bewerkingen. Gebruik in plaats daarvan de toon equalizer module.
+ Comprimeer het toonbereik van HDR-afbeeldingen zodat ze binnen de limieten van een LDR-afbeelding passen, met behulp van het 2002-algoritme van Durand.
+Het onderliggende algoritme gebruikt een bilateraal filter om een afbeelding op te splitsen in een grove basislaag en een detaillaag. Het contrast van de basislaag wordt gecomprimeerd, terwijl de detaillaag behouden blijft, waarna beide lagen opnieuw worden gecombineerd.</description>
+    </item>
+    
+    <item>
+      <title>toon curve</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/tone-curve/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/tone-curve/</guid>
+      <description>Een klassiek hulpmiddel voor digitale fotografie om de tonen van een afbeelding te veranderen met behulp van curven.
+Deze module lijkt erg op de rgb curve module, maar werkt in Lab-kleurruimte.
+Activeer de kleurenkiezer om de gekozen waarden op het weergegeven histogram weer te geven (Ctrl+klik of klik met de rechtermuisknop om de kiezer in de gebiedsmodus te gebruiken). Numerieke (Lab) waarden van de invoer en uitvoer (zie hieronder) op de geselecteerde plek of gebied worden linksboven in de grafiek weergegeven.</description>
+    </item>
+    
+    <item>
+      <title>toon equalizer</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/tone-equalizer/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/tone-equalizer/</guid>
+      <description>Tegenhouden en doordrukken met behoud van lokaal contrast.
+In combinatie met filmisch rgb, vervangt deze module de behoefte aan andere toonmapping-modules zoals de basis curve, schaduwen en hooglichten , toon curve en zone system (verouderd) modules. Het werkt in lineaire RGB-ruimte en maakt gebruik van een door de gebruiker gedefinieerd masker om de aanpassingen voor tegenhouden en doordrukken te begeleiden, waardoor het lokale contrast in het beeld behouden blijft.
+Het volgende diagram beschrijft hoe de toon-equalizer werkt:</description>
+    </item>
+    
+    <item>
+      <title>uitgaand kleurprofiel</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/output-color-profile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/output-color-profile/</guid>
+      <description>Beheer het uitvoerprofiel voor export en de weergave-intentie die moet worden gebruikt bij het toewijzen tussen kleurruimten.
+Darktable wordt geleverd met vooraf gedefinieerde profielen sRGB, Adobe RGB, XYZ en linear RGB. Je kan extra profielen opgeven door ze in $DARKTABLE/share/darktable/color/out en $HOME/.config/darktable/color/out te plaatsen (waarbij $DARKTABLE de darktable-installatiemap is en $HOME  is jouw thuismap).
+Het uitvoerkleurprofiel kan ook worden gedefinieerd in de module export.
+🔗module instellingen  uitgangs intentie De weergave-intentie voor uitvoer/export.</description>
+    </item>
+    
+    <item>
+      <title>uitsnijden</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/crop/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/crop/</guid>
+      <description>Snijd een afbeelding uit met behulp van hulplijnen op het scherm.
+Deze module verschijnt later in de pijplijn dan de verouderde uitsnijden en roteren module, wat betekent dat het volledige beeld beschikbaar kan blijven voor bronspots in de retoucheer module . Voor de beste resultaten wordt jou aangeraden de module roteren en perspectief te gebruiken om rotatie en perspectiefcorrectie uit te voeren (indien nodig), en vervolgens de laatste creatieve uitsnijding uit te voeren met deze module.</description>
+    </item>
+    
+    <item>
+      <title>uitsnijden en roteren (verouderd)</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/crop-rotate/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/crop-rotate/</guid>
+      <description>Let op: deze module is verouderd vanaf darktable 3.8 en mag niet langer worden gebruikt voor nieuwe bewerkingen. Gebruik de bijsnijden module om de afbeelding bij te snijden, de roteren en perspectief module om rotatie en keystone-correctie uit te voeren, en de [orientatie](./ Orientation.md) module om de afbeelding om de horizontale/verticale assen te spiegelen.
+ Uitsnijden, roteren en corrigeren van perspectiefvervormingen met behulp van hulplijnen op het scherm.
+Telkens wanneer de gebruikersinterface van deze module in beeld is, wordt de volledige niet-uitgesneden afbeelding weergegeven, bedekt met uitsneegrepen en optionele hulplijnen.</description>
+    </item>
+    
+    <item>
+      <title>uitvloeien</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/liquify/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/liquify/</guid>
+      <description>Verplaats pixels rond door vrije stijl-vervormingen toe te passen op delen van de afbeelding met behulp van punten, lijnen en curven.
+🔗knopen Elk van de tools van vervloeien is gebaseerd op knooppunten. Een punt bestaat uit een enkele knoop en een lijn of curve bestaat uit een reeks gekoppelde knopen die een pad definiëren.
+Elke instantie van de vervloeien-module is beperkt tot maximaal 100 knooppunten &amp;ndash; voor meer knooppunten gebruik je extra instanties.</description>
+    </item>
+    
+    <item>
+      <title>velvia</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/velvia/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/velvia/</guid>
+      <description>Verzadig pixels op een gewogen manier die meer gewicht geeft aan zwart, wit en minder verzadigde pixels.
+ Opmerking: Deze module veroorzaakt verschuivingen in tint en helderheid die moeilijk te beheren zijn. Gebruik in plaats daarvan de module kleurbalans rgb voor kleuraanpassingen.
+ 🔗module instellingen  kracht De kracht van het effect middenkleuren Verminder het effect op middentonen om onnatuurlijke huidtinten te voorkomen. Het verminderen van de middenkleuren vermindert de bescherming van de middentoon en maakt het algehele velvia-effect sterker.</description>
+    </item>
+    
+    <item>
+      <title>verbreek ingaand profiel</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/unbreak-input-profile/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/unbreak-input-profile/</guid>
+      <description>Voeg een correctiecurve toe aan afbeeldingsgegevens. Dit is vereist als u bepaalde invoerprofielen heeft geselecteerd in de module input kleurprofiel.
+Als u besluit een ICC-profiel van de camerafabrikant te gebruiken in de module input kleurprofiel moet er vaak vooraf een correctiecurve worden toegepast op beeldgegevens om de uiteindelijke uitvoer te voorkomen van te donker te lijken. Deze extra bewerking is niet nodig als u de standaard of verbeterde kleurmatrices van darktable gebruikt.</description>
+    </item>
+    
+    <item>
+      <title>verscherpen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/sharpen/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/sharpen/</guid>
+      <description>Verscherp de details in de afbeelding met een standaard UnSharp Mask (USM).
+Deze module werkt door het contrast rond de randen te vergroten en daardoor de indruk van de scherpte van een afbeelding te verbeteren. Deze module wordt toegepast op het L-kanaal in de Lab-kleurruimte.
+ Opmerking: Het USM-algoritme dat in deze module wordt gebruikt, zorgt voor vervaging in de Lab-kleurruimte, wat ongewenste effecten kan veroorzaken en wordt niet langer aanbevolen.</description>
+    </item>
+    
+    <item>
+      <title>vervagen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/blurs/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/blurs/</guid>
+      <description>Simuleer fysiek nauwkeurige vervaging in scene-gerefereerd RGB-ruimte.
+🔗soorten vervaging Er zijn drie soorten vervaging beschikbaar:
+  lens vervaging: Simuleert een lensdiafragma met een configureerbaar aantal lamellen en bladkromming om synthetische bokeh te creëren.
+  bewegingsvervaging: Simuleert het effect van camerabeweging met een configureerbaar pad.
+  gaussiaanse vervaging: Dit is niet echt een optische vervaging, maar kan worden gebruikt voor ruisonderdrukking of voor creatieve effecten met behulp van overvloeimodi</description>
+    </item>
+    
+    <item>
+      <title>verwijder franje (verouderd)</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/defringe/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/defringe/</guid>
+      <description>Let op: deze module is verouderd van darktable 3.6 en mag niet langer worden gebruikt voor nieuwe bewerkingen. Gebruik in plaats daarvan de module chromatische aberratie.
+ Verwijder kleurranden, die vaak het gevolg zijn van longitudinale chromatische aberraties (LCA), ook bekend als axiale chromatische aberraties.
+Deze module maakt gebruik van randdetectie. Waar pixels worden gedetecteerd als een rand, wordt de kleur opnieuw opgebouwd uit minder verzadigde aangrenzende pixels.
+🔗module instellingen  operatie modus Algemeen gemiddelde: Deze modus is meestal de snelste, maar kan bij hoge vergroting enigszins onjuiste voorvertoning weergeven.</description>
+    </item>
+    
+    <item>
+      <title>verzachten (soften)</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/soften/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/soften/</guid>
+      <description>Maak een verzachte afbeelding met behulp van het Orton-effect.
+Michael Orton bereikte zijn resultaten op diafilm door twee belichtingen van dezelfde scène te gebruiken, één goed belicht en één overbelicht. Vervolgens gebruikte hij een dokatechniek om deze twee afbeeldingen samen te voegen tot een uiteindelijke afbeelding waarbij het overbelichte beeld wazig was.
+Deze module is een bijna-kopie van Orton&amp;rsquo;s analoge proces in het digitale domein.
+🔗module instellingen  afmeting De mate van vervaging van de overbelichte afbeelding.</description>
+    </item>
+    
+    <item>
+      <title>vignettering</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/vignetting/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/vignetting/</guid>
+      <description>Pas een vignetteringseffect toe op de afbeelding.
+Vignettering is een wijziging van de helderheid en verzadiging aan de randen van de afbeelding in een bepaalde vorm. Veel van de onderstaande parameters kunnen ook worden gewijzigd met een grafisch besturingselement dat de afbeelding overlapt wanneer de module focus heeft, waarbij de vorm en omvang van het effect wordt weergegeven.
+ Opmerking: Van deze module is bekend dat deze onder bepaalde omstandigheden bandvormende-artefacten veroorzaakt.</description>
+    </item>
+    
+    <item>
+      <title>vlekverwijdering (verouderd)</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/spot-removal/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/spot-removal/</guid>
+      <description>Let op: deze module is verouderd vanaf darktable 3.6 en mag niet langer worden gebruikt voor nieuwe bewerkingen. Gebruik in plaats daarvan de tool &amp;ldquo;klonen&amp;rdquo; in de module retoucheer.
+ Corrigeer delen van een afbeelding (het doel) met behulp van details uit een ander deel van de afbeelding (de bron).
+Deze module gebruikt enkele van de vormen die beschikbaar zijn voor getekende maskers (cirkels, ellipsen en paden), en de gebruikersinterface is vergelijkbaar .</description>
+    </item>
+    
+    <item>
+      <title>watermerk</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/watermark/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/watermark/</guid>
+      <description>Render een op vectoren gebaseerde overlay op uw afbeelding. Watermerken zijn standaard SVG-documenten en kunnen worden ontworpen met Inkscape.
+Je kan ook bitmapafbeeldingen (PNG) gebruiken.
+De SVG-processor in darktable kan ook tekenreeks in een SVG-document vervangen, waardoor afbeeldingsafhankelijke informatie in het watermerk kan worden opgenomen.
+Door de gebruiker ontworpen watermerken moeten in de map $HOME/.config/darktable/watermarks worden geplaatst. Eenmaal op zijn plaats, gebruik de herlaadknop om de lijst met beschikbare watermerken bij te werken.</description>
+    </item>
+    
+    <item>
+      <title>witbalans</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/white-balance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/white-balance/</guid>
+      <description>Pas de witbalans van het beeld aan door de temperatuur en tint te wijzigen, een coëfficiënt voor elk RGB-kanaal te definiëren of te kiezen uit een lijst met vooraf gedefinieerde witbalansinstellingen.
+De standaardinstellingen voor deze module zijn afgeleid van de witbalans van de camera die is opgeslagen in de Exif-gegevens van de afbeelding.
+Witbalans is niet bedoeld als een &amp;ldquo;creatieve&amp;rdquo; module &amp;ndash; het primaire doel is om de witbalans van het beeld technisch te corrigeren en ervoor te zorgen dat neutraal gekleurde objecten in de scène worden weergegeven met neutrale kleuren in het beeld.</description>
+    </item>
+    
+    <item>
+      <title>zicht bij weinig licht</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/lowlight-vision/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/lowlight-vision/</guid>
+      <description>Simuleer het zicht van mensen bij weinig licht. Deze module kan ook gebruikt worden om een dag-naar-nacht conversie uit te voeren.
+Het idee is om een scotopisch zicht afbeelding te berekenen, die bij weinig licht wordt waargenomen door de staafjes in plaats van de kegeltjes in de ogen. Scotopische helderheid wordt vervolgens gemengd met fotopische waarde (normale kleurenbeeldpixel) met behulp van een mengfunctie. Deze module kan ook het Purkinje-effect simuleren door wat blauw toe te voegen aan de donkere delen van de afbeelding.</description>
+    </item>
+    
+    <item>
+      <title>zonesysteem (verouderd)</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/zone-system/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/zone-system/</guid>
+      <description>Let op: deze module is verouderd vanaf darktable 3.4 en mag niet langer worden gebruikt voor nieuwe bewerkingen. Gebruik de toon equalizer of meerdere instanties van de belichtings module met [parametrische maskers](../../darkroom/masking-and- blending/masks/parametric.md) om een zone te verfijnen.
+ Pas de helderheid van een afbeelding aan met het zonesysteem van Ansel Adams.
+De helderheid van het beeld (het L-kanaal in de Lab-kleurruimte) is verdeeld in een aantal zones variërend van puur zwart tot puur wit.</description>
+    </item>
+    
+  </channel>
+</rss>

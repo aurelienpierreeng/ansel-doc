@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Voorkeuren en instellingen on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/nl/preferences-settings/</link>
+    <description>Recent content in Voorkeuren en instellingen on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/nl/preferences-settings/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overzicht</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/preferences-settings/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/preferences-settings/overview/</guid>
+      <description>Darktable wordt geleverd met een aantal door de gebruiker configureerbare voorkeuren. Deze kunnen worden aangepast in het voorkeurenvenster, dat kan worden bereikt door op het tandwielpictogram rechts van het bovenpaneel te klikken. Voorkeuren zijn onderverdeeld in tabbladen, die in de volgende secties in meer detail worden beschreven.
+Wanneer geopend vanuit de bibliotheek- of ontwikkelenweergaven, wordt standaard het juiste tabblad geladen, zodat je de instellingen van die weergave kan wijzigen.
+Alle gewijzigde instellingen (d.</description>
+    </item>
+    
+    <item>
+      <title>algemeen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/preferences-settings/general/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/preferences-settings/general/</guid>
+      <description>Bepaal de algehele look and feel van darktable.
+ interfacetaal Stel de taal van de gebruikersinterface in. De systeemstandaard is gemarkeerd met een * (opnieuw opstarten vereist) thema Stel het thema voor de gebruikersinterface in. Afgezien van eventuele esthetische overwegingen, is de aanbevolen interfacekleur voor kleurevaluatie midden-grijs. De visuele waarneming wordt beïnvloed door de helderheid van de omgeving en een lage helderheid van de gebruikersinterface veroorzaakt allerlei illusies. Het gebruik van een donkere interface om foto&amp;rsquo;s te retoucheren kan daarom leiden tot overmatig retoucheren (misbruik van contrast en verzadiging) en tot een foto die te donker is bij het afdrukken.</description>
+    </item>
+    
+    <item>
+      <title>importeren</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/preferences-settings/import/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/preferences-settings/import/</guid>
+      <description>Beheer standaard bestandsnaamconventies die worden gebruikt bij het importeren afbeeldingen.
+🔗sessie opties De volgende opties definiëren het standaard naampatroon voor gebruik in de opties &amp;ldquo;kopiëren &amp;amp; importeren&amp;rdquo; of &amp;ldquo;kopiëren &amp;amp; importeren van camera&amp;rdquo; in de importmodule, of bij het maken van foto&amp;rsquo;s in de tethering visie.
+Het naamgevingspatroon bestaat uit drie delen: een basisdeel dat de bovenliggende map definieert, een sessiedeel dat een submap definieert (die specifiek is voor de individuele importsessie) en een bestandsnaamdeel dat de bestandsnaamstructuur voor elke geïmporteerde afbeelding definieert.</description>
+    </item>
+    
+    <item>
+      <title>bibliotheek</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/preferences-settings/lighttable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/preferences-settings/lighttable/</guid>
+      <description>Instelling functionaliteit in de bibliotheek weergave en modules.
+🔗algemeen  verberg ingebouwde voorinstellingen voor hulpprogramma-modules Indien ingeschakeld, worden alleen door de gebruiker gedefinieerde voorinstellingen weergegeven in het menu voorinstellingen voor utiliteitsmodules &amp;ndash; ingebouwde voorinstellingen worden verborgen (standaard uit). gebruik een enkele klik in de collecties-module Schakel de modus &amp;ldquo;enkele klik&amp;rdquo; in de module collecties in, waarmee bereiken kunnen worden geselecteerd (standaard uitgeschakeld). vouw een enkele utiliteitsmodule tegelijk uit Bepaalt hoe hulpprogramma-modules worden uitgebreid.</description>
+    </item>
+    
+    <item>
+      <title>ontwikkelen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/preferences-settings/darkroom/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/preferences-settings/darkroom/</guid>
+      <description>Instellingen functionaliteit in de ontwikkelen weergave en bijbehorende modules.
+🔗algemeen  pendruk uitlezing voor penseelmaskers Bepaalt hoe de drukmeting van een grafisch tablet de nieuw gegenereerde getekende masker penseelstreken beïnvloedt. Je kan de penseelbreedte, hardheid en dekking regelen. &amp;ldquo;Absolute&amp;rdquo; regeling betekent dat de drukmeting direct het attribuut definieert met een waarde tussen 0% en 100%. &amp;ldquo;Relatief&amp;rdquo; betekent dat de drukmeting het attribuut aanpast tussen nul en de vooraf gedefinieerde standaardwaarde (standaard uit).</description>
+    </item>
+    
+    <item>
+      <title>verwerken</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/preferences-settings/processing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/preferences-settings/processing/</guid>
+      <description>Bepaal hoe afbeeldingen worden verwerkt.
+🔗beeldverweking  gebruik altijd LittleCMS 2 om het uitvoerkleurprofiel toe te passen Als deze optie is geactiveerd, zal darktable de LittleCMS 2-systeembibliotheek gebruiken om het uitvoerkleurprofiel toe te passen in plaats van zijn eigen interne routines. Dit is aanzienlijk langzamer dan de standaardinstelling, maar kan in sommige gevallen nauwkeurigere resultaten opleveren.  Als de gegeven ICC LUT-gebaseerd is of zowel een LUT als een matrix bevat, zal darktable LittleCMS 2 gebruiken om de kleuren weer te geven, ongeacht de waarde van deze parameter (standaard uit).</description>
+    </item>
+    
+    <item>
+      <title>veiligheid</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/preferences-settings/security/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/preferences-settings/security/</guid>
+      <description>Controleer of waarschuwingsberichten worden weergegeven voordat je bepaalde activiteiten uitvoert.
+🔗algemeen  vraag voordat je afbeeldingen uit de bibliotheek verwijdert Vraag altijd voordat je afbeelding informatie verwijdert uit de bibliotheekdatabase van darktable, waar het xmp-bestand wordt bewaard (standaard aan). vraag voordat je afbeeldingen van de schijf verwijdert Vraag altijd voordat je een afbeeldingsbestand verwijdert (standaard aan). vraag om bevestiging voordat de bewerkingsstappen (geschiedenis) wordt weggegooid Vraag altijd voordat je de geschiedenis van een afbeelding weggooit (standaard aan).</description>
+    </item>
+    
+    <item>
+      <title>opslag</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/preferences-settings/storage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/preferences-settings/storage/</guid>
+      <description>De volgende opties hebben betrekking op de bibliotheekdatabase van darktable en XMP sidecar-bestanden.
+🔗database  maak een momentopname van database Specificeert hoe vaak darktable database-momentopnames moet maken. De opties zijn &amp;ldquo;nooit&amp;rdquo;, &amp;ldquo;eenmaal per maand&amp;rdquo;, &amp;ldquo;eenmaal per week&amp;rdquo;, &amp;ldquo;eenmaal per dag&amp;rdquo; en &amp;ldquo;bij het afsluiten&amp;rdquo; (standaard &amp;ldquo;eenmaal per week&amp;rdquo;) hoeveel momentopnamen bewaard worden Aantal momentopnames dat moet worden bewaard na het maken van een nieuwe momentopname, de databaseback-ups die zijn gemaakt bij het wisselen tussen darktable-versies niet meegerekend.</description>
+    </item>
+    
+    <item>
+      <title>diversen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/preferences-settings/miscellaneous/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/preferences-settings/miscellaneous/</guid>
+      <description>🔗interface  laad standaard snelkoppelingen bij opstarten Bij het starten van de toepassing laadt darktable eerst de standaard snelkoppelingen en vervolgens de door de gebruiker gedefinieerde snelkoppelingen hier bovenop. Hierdoor kunnen standaard snelkoppelingen worden overschreven met een nieuwe actie, maar wordt voorkomen dat ze worden verwijderd (aangezien de verwijderde snelkoppeling automatisch opnieuw wordt geladen bij de volgende herstart). Deactiveer deze voorkeur om te stoppen met het laden van standaard snelkoppelingen bij het opstarten &amp;ndash; laad alleen de door de gebruiker gedefinieerde snelkoppelingen (inclusief eventuele standaardinstellingen die u daarna niet hebt verwijderd of overschreven).</description>
+    </item>
+    
+    <item>
+      <title>snelkoppelingen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/preferences-settings/shortcuts/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/preferences-settings/shortcuts/</guid>
+      <description>Je kan bijna elke actie in darktable uitvoeren met een sneltoets voor toetsenbord/muis. Je kan ook verschillende andere invoerapparaten gebruiken, waaronder MIDI-apparaten en spelconsoles &amp;ndash; zie de sectie ondersteuning voor midi-apparaten voor details. Deze worden in deze handleiding externe apparaten of gewoon apparaten genoemd.
+🔗snelkoppelingen definiëren Een snelkoppeling is een combinatie van het indrukken van een toets of knop en/of muis- of apparaatbewegingen die een actie in darktable uitvoert.
+Een enkele actie kan meerdere snelkoppelingen hebben, maar een enkele snelkoppeling kan slechts aan één actie worden gekoppeld in een bepaalde darktable-weergave &amp;ndash; ja ka geen acties aan elkaar koppelen, behalve door een voorinstelling of stijl toe te passen.</description>
+    </item>
+    
+    <item>
+      <title>voorinstellingen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/preferences-settings/presets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/preferences-settings/presets/</guid>
+      <description>Dit menu geeft een overzicht van de voorinstellingen die zijn gedefinieerd voor de modules van darktable, en stelt je in staat om enkele van hun eigenschappen te wijzigen.
+Vooraf gedefinieerde voorinstellingen (die standaard zijn opgenomen in darktable) worden weergegeven met een slotsymbool. Hun eigenschappen kunnen niet worden gewijzigd.
+Door de gebruiker gedefinieerde voorinstellingen kunnen worden geïmporteerd uit geëxporteerde .dtpreset-bestanden met behulp van de knop &amp;ldquo;importeren&amp;rdquo; onder aan het scherm. Je kan alle door de gebruiker gedefinieerde voorinstellingen exporteren naar een enkele map met behulp van de knop &amp;ldquo;exporteren&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>lua-opties</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/preferences-settings/lua-options/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/preferences-settings/lua-options/</guid>
+      <description> lua scripts-installatieprogramma wordt niet meer weergegeven Vink dit vakje aan om het lua scripts installatieprogramma in de bibliotheek te verbergen als er geen lua-scripts zijn geïnstalleerd.  </description>
+    </item>
+    
+  </channel>
+</rss>

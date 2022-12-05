@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>máscaras y fusión on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/es/darkroom/masking-and-blending/</link>
+    <description>Recent content in máscaras y fusión on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/es/darkroom/masking-and-blending/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Resumen</title>
+      <link>https://darktable-org.github.io/dtdocs/es/darkroom/masking-and-blending/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/darkroom/masking-and-blending/overview/</guid>
+      <description>Cada módulo de procesamiento toma su entrada del módulo anterior en el pixelpipe, realiza su operación en los datos de la imagen y luego entrega la salida al siguiente módulo en el pixelpipe.
+Los datos de salida de un módulo se pueden reprocesar (combinar) opcionalmente con sus datos de entrada antes de pasarlos al siguiente módulo. Este paso de procesamiento adicional se llama fusión&amp;ndash; los datos de entrada y salida se reprocesan utilizando algoritmos llamados operadores de combinación o modos de combinación.</description>
+    </item>
+    
+    <item>
+      <title>modos de fusión</title>
+      <link>https://darktable-org.github.io/dtdocs/es/darkroom/masking-and-blending/blend-modes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/darkroom/masking-and-blending/blend-modes/</guid>
+      <description>Los modos de fusión definen cómo se combinan (fusionan) la entrada y la salida de un módulo antes de que la salida final del módulo pase al siguiente módulo en el pixelpipe.
+Los modos de fusión clásicos, diseñados para RGB referido a la pantalla (restringido a 0-100%), definen implícitamente un punto de apoyo al 50% (gris) o al 100% (blanco) en sus algoritmos, según el modo de fusión. Debido a que la referencia a la escena no está sujeta a estas restricciones, este punto de apoyo debe ser definido explícitamente por el usuario al realizar operaciones de combinación en el espacio de color &amp;ldquo;RGB (escena)&amp;rdquo;.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,3375 @@
+<!doctype html>
+<html lang="fr">
+    <head>
+      <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>darktable 4.0 user manual - filmique rvb</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+      <link rel="stylesheet" href="/dtdocs/css/style.min.3b298d8f37646aff6a802627ff27a707153196970e12552ddf3f7e6fdf49ebb1.css">
+      
+
+
+<script> var indexURL="https:\/\/darktable-org.github.io\/dtdocs\/fr\/index.json"</script>
+<script src="/dtdocs/js/jquery.js"></script>
+<script src="/dtdocs/js/popper.js" type="module"></script>
+<script src="/dtdocs/js/bootstrap.js"></script>
+<script src="/dtdocs/js/lunr.js"></script>
+<script src="/dtdocs/js/app.js"></script>
+
+
+    </head>
+    <body>
+        
+
+        <header class="navbar navbar-expand-lg sticky-top  navbar-dark bg-dark">
+   <a class="navbar-brand" href="/dtdocs" rel="home" title="darktable 4.0 user manual">
+	darktable 4.0 user manual
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+	    
+	      <li class="nav-item dropdown" aria-describedby="language-picker-description">
+		   <p class="sr-only" id="language-picker-description">languages</p>
+		   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+             <img src="https://darktable-org.github.io/dtdocs//language-icons/icon20x24px-exported-transparent.png" alt="Language Icon" height="20" class="translation-icon"/>
+		     <span>translations</span>
+		   </a>
+		   <div class="dropdown-menu dropdonw-trans" role="listbox">
+		      <a class="dropdown-item" aria-selected="true" hreflang="fr" role="option" lang="fr" href="https://darktable-org.github.io/dtdocs/fr/module-reference/processing-modules/filmic-rgb/">Français</a>
+		        
+		      <a class="dropdown-item" hreflang="en" role="option" lang="en" href="https://darktable-org.github.io/dtdocs/en/module-reference/processing-modules/filmic-rgb/">English</a>
+		    
+		      <a class="dropdown-item" hreflang="de" role="option" lang="de" href="https://darktable-org.github.io/dtdocs/de/module-reference/processing-modules/filmic-rgb/">German</a>
+		    
+		      <a class="dropdown-item" hreflang="es" role="option" lang="es" href="https://darktable-org.github.io/dtdocs/es/module-reference/processing-modules/filmic-rgb/">Espanol</a>
+		    
+		      <a class="dropdown-item" hreflang="pt_br" role="option" lang="pt_br" href="https://darktable-org.github.io/dtdocs/pt_br/module-reference/processing-modules/filmic-rgb/">Português</a>
+		    
+		      <a class="dropdown-item" hreflang="uk" role="option" lang="uk" href="https://darktable-org.github.io/dtdocs/uk/module-reference/processing-modules/filmic-rgb/">Ukrainian</a>
+		    
+		      <a class="dropdown-item" hreflang="nl" role="option" lang="nl" href="https://darktable-org.github.io/dtdocs/nl/module-reference/processing-modules/filmic-rgb/">Dutch</a>
+		    
+		   </div>
+	       </li>
+	    
+	</ul>
+        <ul>
+           <form class="form-inline my-2 my-lg-0">
+                <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search" autocomplete="off" aria-label="Search">
+           </form>
+        </ul>
+
+
+    </div>
+</header>
+
+<div id="search-results" class="search-results">
+</div>
+
+
+        <div class="container-fluid">
+	    <div class="row">
+		<div class="content col-sm-12 order-sm-1 col-md-9 mx-md-auto order-md-12">
+		    
+
+
+
+<div class="crumbs">
+    <span class="crumb">
+	
+
+
+<a href='/dtdocs/fr/'>darktable</a> / <a href='/dtdocs/fr/module-reference/'>Références des modules</a> / <a href='/dtdocs/fr/module-reference/processing-modules/'>modules de traitement</a> / filmique rvb
+    </span>
+</div>
+
+<div class="prev-next row">
+    <div class="col-6">
+    
+	<a href="/dtdocs/fr/module-reference/processing-modules/watermark/" class="next">&lt; filigrane</a>
+	
+    </div>
+    <div class="col-6">
+    
+	<a href="/dtdocs/fr/module-reference/processing-modules/graduated-density/" class="prev">filtre dégradé &gt;</a>
+	
+    </div>
+</div>
+
+
+<article role="main">
+
+    <h1 class="title">
+        filmique rvb
+    </h1>
+
+    
+    <div class="toc">
+	<a data-toggle="collapse" href="#collapseTOC" role="button" aria-expanded="false" aria-controls="collapseTOC">
+  
+</a>
+<div class="collapse" id="collapseTOC">
+    <div class="card card-body">
+	<nav id="TableOfContents">
+  <ul>
+    <li><a href="#prérequis">prérequis</a></li>
+    <li><a href="#utilisation">utilisation</a></li>
+    <li><a href="#affichage-graphique">affichage graphique</a></li>
+    <li><a href="#contrôles-du-module">contrôles du module</a>
+      <ul>
+        <li><a href="#scène">scène</a></li>
+        <li><a href="#reconstruire">reconstruire</a>
+          <ul>
+            <li><a href="#_hautes-lumières-tronquées_"><em>hautes lumières tronquées</em></a></li>
+            <li><a href="#_répartition_"><em>répartition</em></a></li>
+          </ul>
+        </li>
+        <li><a href="#look">look</a></li>
+        <li><a href="#affichage">affichage</a></li>
+        <li><a href="#options">options</a></li>
+        <li><a href="#background">background</a></li>
+        <li><a href="#mises-en-garde">mises en garde</a>
+          <ul>
+            <li><a href="#color-artifacts">color artifacts</a></li>
+            <li><a href="#sortie-incohérente">sortie incohérente</a></li>
+          </ul>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</nav>
+    </div>
+</div>
+
+    </div>
+    
+
+    <p>Remappe la gamme tonale d&rsquo;une image en reproduisant la réponse tonale et colorée d&rsquo;un film classique.</p>
+<p>Ce module peut être utilisé soit pour élargir soit pour contracter la plage dynamique d&rsquo;une scène pour rentrer dans la plage dynamique de l&rsquo;affichage. Il protège les couleurs et le contraste dans les tons moyens, récupère les ombres et comprime les hautes lumières très brillantes et les ombres très sombres. Les hautes lumières auront besoin d&rsquo;une attention particulière quand des détails doivent être préservés (comme des nuages).</p>
+<p>Ce module est dérivé d&rsquo;un autre module du même nom dans le modeleur 3D <a href="https://www.blender.org/" target="_blank">Blender</a> by T. J. Sobotka. Bien qu&rsquo;il soit principalement prévu pour récupérer les images à haute plage dynamique à partir des données brutes de capteur, il peut être utilisé pour toute image à la place du module <a href="/dtdocs/fr/module-reference/processing-modules/base-curve/">courbe de base</a>. La vidéo suivante (en anglais, par le développeur du module) fournit une introduction utile : <a href="https://www.youtube.com/watch?v=zbPj_TqTF880" target="_blank">filmic rgb : remap any dynamic range in darktable 3</a>.</p>
+<p><em>filmique rvb</em> est le successeur du module <em>filmique</em> de darktable 2.6. Bien que les principes de base n&rsquo;aient pas beaucoup changé, les réglages par défaut et leurs hypothèses de base ne sont plus exactement les mêmes, de sortie que les utilisateurs de la version précédente ne devraient pas attendre une traduction 1:1 de leur flux de travail avec la nouvelle version.</p>
+<hr>
+<p><strong>Note</strong> : Malgré l&rsquo;apparence technique de ce module, la meilleure façon de l&rsquo;ajuster est d&rsquo;évaluer la qualité du résultat visuel. Ne réfléchissez pas trop aux nombres qui sont présentés dans l&rsquo;interface pour quantifier la force des effets.</p>
+<hr>
+<h1 id="prérequis"><a href="#pr%c3%a9requis">🔗</a>prérequis</h1>
+<p>Pour obtenir le meilleur de ce module, vos images ont besoin d&rsquo;un minimum de préparation :</p>
+<dl>
+<dt>capture (exposer à droite)</dt>
+<dd>À la prise de vue, dans l&rsquo;appareil photo, il est recommandé d&rsquo;utiliser une technique connue sous le nom &ldquo;d&rsquo;exposition à droite&rdquo; (ETTR, en anglais). Ceci signifie exposer la capture de sorte que l&rsquo;image soit la plus lumineuse possible sans pour autant écrêter les hautes lumières. La technique est appelée &ldquo;exposition à droite&rdquo; car l&rsquo;histogramme sur l&rsquo;appareil photo devrait tout juste toucher le bord droit du graphique sans montrer de pic directement sur le bord (qui indiquerait un écrêtage). Cette technique assure que vous tirez le maximum de la plage dynamique du capteur de votre appareil.</dd>
+<dd>
+<p>Le mode par défaut du posemètre de l&rsquo;appareil photo va normalement exposer l&rsquo;image de sorte que la luminosité moyenne dans l&rsquo;image tende vers un gris moyen. Parfois, pour des scènes dominées par des tons clairs, l&rsquo;appareil va sous-exposer l&rsquo;image pour forcer ces tons clairs à converger vers le gris moyen. Pour des scènes dominées par des tons sombres, il peut sur-exposer l&rsquo;image et finir par écrêter les hautes lumières. Dans ce type de cas, vous pouvez utiliser la compensation d&rsquo;exposition de votre appareil pour augmenter au diminuer l&rsquo;exposition &ndash; le module exposition de darktable peut automatiquement tenir compte de cette compensation en traitant l&rsquo;image.</p>
+</dd>
+<dd>
+<p>Dans certains cas (par exemple, des lumières spéculaires qui se réfléchissent sur des objets brillants), il peut être acceptable d&rsquo;avoir un peu d&rsquo;écrêtage, mais prenez en compte que tout donnée écrêtée dans votre image est irrémédiablement perdue. Là où les données ont été écrêtées, <em>filmique rvb</em> propose une &ldquo;reconstruction des hautes lumières&rdquo; qui aide à mitiger ce problème et à fondre ces régions dans le reste de l&rsquo;image. Les réglages des cette fonctionnalité sont dans l&rsquo;onglet <a href="#reconstruire"><em>reconstruire</em></a>. Certains appareils photo propose un mode de posemètre &ldquo;priorité hautes lumières&rdquo; qui peut vous aider à maximiser l&rsquo;exposition tout en protégeant les hautes lumières, et beaucoup offrent une fonction &ldquo;zebras&rdquo; ou clignotement dans la visée écran pour alerter le photographe que certaines parties de l&rsquo;image sont écrêtées.</p>
+</dd>
+<dt>ajuster pour les tons moyens</dt>
+<dd>Dans le module <a href="./exposure.md"><em>exposition</em></a>, ajustez l&rsquo;exposition jusqu&rsquo;à ce que les tons moyens sont assez clairs. Ne vous préoccupez pas de perdre les hautes lumières à cette étape &ndash; elles seront récupérées lors du traitement par filmique. Cependant, il est important d&rsquo;éviter les pixels ayant des valeurs négatives dans les zones noires, autrement les calculs réalisés par <em>filmique rvb</em> peuvent produire des résultats imprévisibles. Pour certains modèles de caméras (principalement Canon), rawspeed (la librairie de décodage de darktable) peut définir un niveau de noir exagéré, résultant en des noirs bouchés et des pixels négatifs. Dans ce cas, éclaircissez les noirs en réglant une valeur de compensation du niveau de noir négative dans le module <a href="./exposure.md"><em>exposition</em></a>.</dd>
+<dt>balance des blancs, débruitage, dématriçage</dt>
+<dd>Si vous planifiez utiliser les réglages automatisés de <em>filmique rvb</em>, utilisez le module <a href="/dtdocs/fr/module-reference/processing-modules/white-balance/"><em>balance des blancs</em></a> pour corriger toute déviation de couleur et obtenir des couleurs neutres. Dans les espaces de couleur RVB, la luminance et la chrominance sont liés, et la détection de luminance de <em>filmique rvb</em> repose sur une mesure précise des deux. Si votre image est très bruitée, ajoutez une étape initiale de débruitage pour améliorer la lecture des noirs, et utilisez un algorithme de <a href="/dtdocs/fr/module-reference/processing-modules/demosaic/"><em>dématriçage</em></a> de haute qualité. Vous n&rsquo;avez pas à vous soucier du bruit si vous planifiez régler filmique à la main, sans utiliser les optimiseurs automatiques.</dd>
+<dt>désactiver les modules de mappage tonal</dt>
+<dd>Si vous prévoyez utiliser l&rsquo;un des modes de préservation de chrominance de <em>filmique rvb</em>, évitez d&rsquo;utiliser la <a href="/dtdocs/fr/module-reference/processing-modules/base-curve/"><em>courbe de base</em></a> et les divers modules de mappage de tonalités. Ceci peut produire des virages de couleur imprévisibles qui rendraient la préservation de chrominance sans objet. Aucun de ces modules n&rsquo;est requis en utilisant <em>filmique rvb</em>.</dd>
+</dl>
+<h1 id="utilisation"><a href="#utilisation">🔗</a>utilisation</h1>
+<p>Le module <em>filmique rvb</em> est conçu pour mapper la plage dynamique de la scène photographiée (image RAW) vers la plage dynamique du moniteur.</p>
+<p>Ce mappage est défini en trois étapes, chacune traitée dans un onglet séparé dans l&rsquo;interface.</p>
+<ul>
+<li>
+<p>L&rsquo;onglet <a href="#sc%c3%a8ne"><em>scène</em></a> contient les paramètres &ldquo;entrée&rdquo; de la scène, définissant ce qui constitue le blanc et le noir dans la scène photographiée.</p>
+</li>
+<li>
+<p>L&rsquo;onglet <a href="#reconstruire"><em>reconstruire</em></a> offre les outils pour gérer les hautes lumières brûlées.</p>
+</li>
+<li>
+<p>L&rsquo;onglet <a href="#look"><em>look</em></a> contient l&rsquo;intention artistique du traitement appliqué aux paramètres d&rsquo;entrée (tels que définis dans l&rsquo;onglet scène). Cette partie du module applique un courbe paramétrique en &ldquo;S&rdquo; pour améliorer le contraste des tons moyens et recaler la valeur du gris sur le gris moyen du moniteur. C&rsquo;est similaire à ce que font les modules <a href="/dtdocs/fr/module-reference/processing-modules/base-curve/"><em>courbe de base</em></a> et <a href="/dtdocs/fr/module-reference/processing-modules/tone-curve/"><em>courbe des tonalités</em></a>. La ligne directrice générale est ici d&rsquo;augmenter la latitude autant que possible sans couper les extrêmes de la courbe.</p>
+</li>
+<li>
+<p>L&rsquo;onglet <a href="#affichage"><em>affichage</em></a> définit les réglages de sortie requis pour mapper l&rsquo;image transformée vers l&rsquo;écran. Dans les cas typiques d&rsquo;utilisation, les paramètres dans cet onglet ont rarement besoin d&rsquo;être ajustés.</p>
+</li>
+<li>
+<p>L&rsquo;onglet <a href="#options"><em>options</em></a> inclut quelques paramètres et réglages avancés optionnels</p>
+</li>
+</ul>
+<p><em>filmique rvb</em> tend à compresser le contraste local, ainsi, après avoir fini d&rsquo;y ajuster les réglages, vous voudrez peut-être les compenser en utilisant le module <a href="/dtdocs/fr/module-reference/processing-modules/local-contrast/"><em>contraste local</em></a>. Il se peut aussi que vous vouliez augmenter la saturation dans le module <a href="/dtdocs/fr/module-reference/processing-modules/color-balance-rgb/"><em>balance couleur rvb</em></a>, et peut-être ajuster plus précisément les tons en utilisant <a href="/dtdocs/fr/module-reference/processing-modules/tone-equalizer/"><em>égaliseur de ton</em></a>.</p>
+<p>Les étendues des curseurs de <em>filmique rvb</em> sont limitées au valeurs typiques et sécuritaires, mais vous pouvez entrer des valeurs hors limites en faisant un clic doit puis en saisissant les valeurs au clavier.</p>
+<hr>
+<p><strong>Note</strong> : <em>filmique rvb</em> ne peut pas définir les réglages entièrement neutres (résultat en une « non-opération ») &ndash; dès que le module est activé, l&rsquo;image est toujours au moins légèrement affectée. Vous pouvez en revanche arriver proche de réglages neutres avec les paramètres suivants :</p>
+<ul>
+<li>
+<p>dans l&rsquo;onglet <a href="#look"><em>look</em></a>, réglez le contraste à 1,0, la latitude à 99 % et la saturation des tons moyens à 0 %,</p>
+</li>
+<li>
+<p>dans l&rsquo;onglet <a href="#options"><em>options</em></a>, réglez le contraste des ombres et des hautes lumières à <em>doux</em>.</p>
+</li>
+</ul>
+<p>Dans cette configuration, filmique va seulement appliquer un mappage de tonalités logarithmique dans les limites définies à l&rsquo;onglet <a href="#sc%c3%a8ne"><em>scène</em></a>.</p>
+<hr>
+<h1 id="affichage-graphique"><a href="#affichage-graphique">🔗</a>affichage graphique</h1>
+<p>L&rsquo;affichage graphique en haut du module <em>filmique rvb</em> offre plusieurs vues pour vous aider à comprendre ses fonctionnalités. Vous pouvez parcourir ces vues en utilisant l&rsquo;icône 
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/view-icon.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/filmic-rgb/view-icon.png" alt="icône-vue"  class="icon"    /></a>
+
+ à droite de l&rsquo;affichage graphique. Vous pouvez également activer et désactiver les étiquettes sur les axes à l&rsquo;aide de l&rsquo;icône 
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/legend-icon.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/filmic-rgb/legend-icon.png" alt="icône-légende"  class="icon"    /></a>
+
+.</p>
+<p>Les vues suivantes sont disponibles :</p>
+<dl>
+<dt>look only</dt>
+<dd>This is the default view. The main bright curve shows how the dynamic range of the scene (in EV) is compressed into the display-referred output range. The orange dot shows the middle-gray point, the white dots either side mark out the latitude range, and the orange part of the curve at the bottom and top indicates an overshoot problem with the spline (the <a href="#look"><em>look</em></a> tab has some controls to deal with this).</dd>
+<dd>
+<p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-look-only.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-look-only.png" alt="filmique-rvb-look-seulement"  class="w50"    /></a>
+
+</p>
+</dd>
+<dt>look + mappage (linéaire)</dt>
+<dd>Cette vue montre le mappage des valeurs d&rsquo;entrée [0, 1] vers les valeurs de sortie dans l&rsquo;espace linéaire. Elle montre aussi le mappage de la plage dynamique et la fonction de transfert de sortie. Notez que dans un flux de travail relatif à la scène, les valeurs d&rsquo;entrée sont autorisées à dépasser 1. Cependant le graphique n&rsquo;affiche que les valeurs d&rsquo;entrée/sortie dans l&rsquo;intervalle [0, 1] afin de rendre la forme du graphique comparable à celle obtenue par d&rsquo;autres outils de mappage de courbe de tonalité tels que <em>courbe de base</em> ou <em>courbe des tonalités</em>. La valeur réelle du point blanc de la scène est indiquée entre parenthèses sur l'<em>axe X</em> (exprimée en pourcentage d&rsquo;une valeur d&rsquo;entrée égale à 1).</dd>
+<dd>
+<p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-look-mapping-lin.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-look-mapping-lin.png" alt="filmique-rvb-look-mappage-lin"  class="w50"    /></a>
+
+</p>
+</dd>
+<dt>look + mappage (log)</dt>
+<dd>Identique à la vue précédente, mais tracée avec une échelle logarithmique.</dd>
+<dd>
+<p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-look-mapping-log.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-look-mapping-log.png" alt="filmique-rvb-look-mapping-lin"  class="w50"    /></a>
+
+</p>
+</dd>
+<dt>mappage plage dynamique</dt>
+<dd>Cette vue est inspirée du <em>Zone System</em> d&rsquo;Ansel Adams, montrant comment les zones de la scène en entrée (IL) sont mappées vers les zones en sortie. Le gris moyen de la scène est toujours mappé à 18% dans l&rsquo;espace de sortie (linéaire). La vue montre aussi comment les plages de tons aux extrêmes de la plage d&rsquo;exposition de la scène sont compressées en un plus petit nombre de zones dans l&rsquo;espace d&rsquo;affichage, laissant ainsi plus de place aux demi-tons répartis sur les zones restantes. La plage latitude est représentée par la partie grise plus foncée au milieu.</dd>
+<dd>
+<p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-dynamic-range-map.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/filmic-rgb/filmic-dynamic-range-map.png" alt="filmique-rvb-look-mappage-lin"  class="w50"    /></a>
+
+</p>
+</dd>
+</dl>
+<hr>
+<p><strong>Remarque :</strong> Lorsque certains paramètres sont trop extrêmes, entraînant une courbe irréalisable, <em>filmique rvb</em> les assainit en interne. Cela est illustré de deux manières différentes sur les vues look :</p>
+<ul>
+<li>
+<p>A dot becoming red indicates that the linear part of the curve is pushed too far towards the top or the bottom. In the <a href="#look"><em>look</em></a> tab, reduce the <em>latitude</em> or recenter the linear part using the <em>shadows ↔ highlights balance</em> parameter.</p>
+</li>
+<li>
+<p>Un point devenant un demi-cercle indique que le contraste est trop faible compte tenu de la plage dynamique de l&rsquo;image. Augmentez le <em>contraste</em> dans l&rsquo;onglet <a href="#look"><em>look</em></a> ou la <em>échelle de la plage dynamique</em> dans l&rsquo;onglet <a href="#sc%c3%a8ne"><em>scène</em></a>.</p>
+</li>
+</ul>
+<hr>
+<h1 id="contrôles-du-module"><a href="#contr%c3%b4les-du-module">🔗</a>contrôles du module</h1>
+<h2 id="scène"><a href="#sc%c3%a8ne">🔗</a>scène</h2>
+<p>Les contrôles de l&rsquo;onglet <em>scène</em> sont similaires dans leur principe à ceux du module <a href="/dtdocs/fr/module-reference/processing-modules/levels/"><em>niveaux</em></a> (noir, gris, blanc). La différence est que le module <em>niveaux</em> suppose des valeurs de pixels relatives à l&rsquo;affichage (entre 0 et 100 %), alors que le module <em>filmique</em> vous permet de travailler avec des pixels relatifs à la scène (entre &ndash;infinity IL et +infinity IL), ce qui contraint à l&rsquo;utilisation d&rsquo;une interface différente.</p>
+<dl>
+<dt>luminance gris moyen (masquée par défaut)</dt>
+<dd>Ce paramètre vous permet de décider quelle luminance dans la scène doit être considérée comme le gris moyen de référence (qui sera remappé à 18% à l&rsquo;affichage). Utilisez la pipette de couleur pour lire la luminance moyenne de la zone dessinée. Si vous avez une photographie d&rsquo;une carte grise ou d&rsquo;un nuancier (nuancier IT8 ou colorchecker) prise dans les conditions d&rsquo;éclairage de la scène, la pipette de couleur grise peut être utilisée pour échantillonner rapidement la luminance de la tache grise sur cette image. Dans d&rsquo;autres situations, la pipette de couleur peut être utilisée pour échantillonner la luminance moyenne du sujet.</dd>
+<dd>
+<p>Cela a un effet sur l&rsquo;image qui est analogue à une correction de luminosité. Les valeurs proches de 100 % ne compressent pas les hautes lumières mais ne récupèrent pas les ombres. Des valeurs proches de 0% récupèrent considérablement les ombres mais compressent les hautes lumières plus durement et entraînent des pertes de contraste local.</p>
+</dd>
+<dd>
+<p>Lors de la modification de la luminance du gris moyen, les expositions du blanc et du noir sont automatiquement ajustées en conséquence, pour éviter l&rsquo;écrêtage de la plage dynamique et pour vous aider à définir le bon paramètre plus rapidement. Si vous n&rsquo;êtes pas satisfait du réglage automatique effectué par le curseur gris, vous pourrez corriger les paramètres d&rsquo;exposition du blanc et du noir par la suite.</p>
+</dd>
+</dl>
+<hr>
+<p><strong>Remarque :</strong> Il n&rsquo;est pas conseillé d&rsquo;utiliser ce contrôle pour définir le gris moyen, il est donc désormais masqué par défaut. Vous devriez plutôt utiliser le module <em>exposition</em> pour définir le niveau de gris moyen (voir <a href="#utilisation"><em>utilisation</em></a>, ci-dessus). Cependant, si vous souhaitez rendre ce curseur visible, vous pouvez l&rsquo;activer avec la case à cocher <em>utiliser un gris moyen spécifique</em> dans l&rsquo;onglet <a href="#options"><em>options</em></a>.</p>
+<hr>
+<dl>
+<dt>exposition relative du blanc</dt>
+<dd>Le nombre de stops (IL) entre la luminance du gris moyen de la scène et la luminance maximale de la scène à remapper vers le blanc de l&rsquo;affichage. Il s&rsquo;agit de la limite droite de la plage dynamique de luminance de la scène qui sera représentée à l&rsquo;affichage &ndash; n&rsquo;importe quoi de plus clair sur la scène que cette valeur sera écrêté et sortira en blanc pur à l&rsquo;affichage. La pipette de couleur lit la luminance maximale à l&rsquo;intérieur de la zone dessinée, suppose qu&rsquo;il s&rsquo;agit d&rsquo;un blanc pur, et règle l&rsquo;exposition du blanc de manière à remapper le maximum vers une luminance de 100 %.</dd>
+<dt>exposition relative du noir</dt>
+<dd>Le nombre de stops (IL) entre la luminance du gris moyen de la scène et la luminance de la scène à remapper vers le noir de l&rsquo;affichage (densité maximale). Il s&rsquo;agit de la limite gauche de la plage dynamique de luminance de la scène qui sera représentée à l&rsquo;affichage &ndash; n&rsquo;importe quoi de plus sombre dans la scène sera représenté en noir pur à l&rsquo;affichage. La pipette de couleur lit le minimum de luminance à l&rsquo;intérieur de la zone dessinée, suppose que c&rsquo;est celle d&rsquo;un noir pur, et règle le paramètre d&rsquo;exposition du noir pour le remapper vers une luminance de 0 %. La mesure du minimum de luminance par la pipette de couleur, quand il est proche de zéro, ne permet pas de déterminer si le minimum détecté est un noir pur (donnée réelle) ou simplement du bruit. Cela fonctionne mieux sur des images à bas ISO et des méthodes de dématriçage de haute qualité. Quand la pipette de couleur place l&rsquo;exposition du noir à -16 IL, c&rsquo;est un signe que la mesure a échoué et que vous devrez l&rsquo;ajuster à la main.</dd>
+<dd>
+<p>L&rsquo;exposition relative du noir vous permet de choisir jusqu&rsquo;où vous souhaitez récupérer les basses lumières.</p>
+</dd>
+<dt>mise à l&rsquo;échelle de la plage dynamique et réglage automatique</dt>
+<dd>La pipette de couleur à réglage automatique combine les pipettes de couleur ci-dessus et vous permet de définir simultanément les expositions du blanc pur et du noir pur, en utilisant le maximum de la région dessinée pour le blanc et le minimum pour le noir. Cela donne de bons résultats en photographie de paysage, mais échoue généralement pour les portraits et les scènes d&rsquo;intérieur.</dd>
+<dd>
+<p>Lorsque ni un vrai blanc pur, ni un vrai noir pur ne sont disponibles dans la scène, les valeurs RVB maximales et minimales lues dans l&rsquo;image ne sont plus des hypothèses valides. La mise à l&rsquo;échelle de la plage dynamique réduit ou agrandit symétriquement la plage dynamique détectée et les paramètres actuels. Cela fonctionne avec les deux pipettes de couleur et ajuste les valeurs actuelles des expositions relatives du blanc et du noir.</p>
+</dd>
+</dl>
+<hr>
+<p><strong>Remarque</strong> : il n&rsquo;y a pas de relation directe entre la plage dynamique du capteur de votre boîtier (à trouver dans les mesures DxoMark.com ou PhotonsToPhotos.org) et la plage dynamique dans <em>filmique</em> dont les extrémités sont noir pur et blanc pur exprimées en IL. Beaucoup de choses se produisent avant <em>filmique</em> dans le pipeline graphique (par exemple un décalage du noir RAW qui pourrait mapper le noir à 0) de sorte que <em>filmique</em> voie dans son entrée une plage dynamique qui peut théoriquement être infinie. Cela concerne uniquement la manipulation de l&rsquo;encodage des pixels dans le logiciel, et non les capacités réelles du capteur.</p>
+<p>Dans le module <em>exposition</em>, le flux de travail <em>relatif à la scène</em> force une correction du niveau du noir à &ndash;0.0002, ce qui garantit que la plupart du temps, la plage dynamique vue par l&rsquo;entrée de <em>filmique</em> est d&rsquo;environ 12,3 IL. Diminuez encore plus cette valeur si le réglage de l&rsquo;exposition relative du noir dans <em>filmique</em> à &ndash;16 IL ne parvient pas à récupérer les noirs.</p>
+<hr>
+<h2 id="reconstruire"><a href="#reconstruire">🔗</a>reconstruire</h2>
+<p>Cet onglet fournit des contrôles qui fusionnent les transitions entre les zones non écrêtées et les zones écrêtées et qui peuvent également aider à reconstruire les couleurs à partir des pixels adjacents. Il est conçu pour gérer les projecteurs impossibles à décrocher lors de la prise de vue (comme les ampoules nues ou le disque solaire dans le champ de l&rsquo;appareil) et il vise à diffuser leurs bords comme le ferait un film. Il n&rsquo;est pas conçu pour récupérer de grandes zones de pixels tronqués ou des parties manquantes de l&rsquo;image.</p>
+<p>Il peut parfois être utile de désactiver le module <a href="./highlight-reconstruction.md"><em>reconstruire hautes lumières</em></a> afin de fournir des données supplémentaires à l&rsquo;algorithme de reconstruction (<em>reconstruire hautes lumières</em> écrête les données hautes lumières par défaut). Vous devez noter que cela peut conduire à des reflets magenta, qui devront être gérés avec le curseur <em>détails gris &lt;-&gt; colorés</em>.</p>
+<p>Tout d&rsquo;abord, un masque doit être mis en place pour identifier les parties de l&rsquo;image qui seront affectées par la reconstruction des hautes lumières. Il y a ensuite quelques contrôles supplémentaires pour affiner certains des compromis faits par l&rsquo;algorithme de reconstruction.</p>
+<h3 id="_hautes-lumières-tronquées_"><a href="#_hautes-lumi%c3%a8res-tronqu%c3%a9es_">🔗</a><em>hautes lumières tronquées</em></h3>
+<p>Ces contrôles vous permettent de choisir quelles zones de l&rsquo;image sont impactées par les algorithmes de reconstruction des hautes lumières.</p>
+<dl>
+<dt>seuil</dt>
+<dd>Tout pixel plus lumineux que ce seuil sera affecté par l&rsquo;algorithme de reconstruction. Les unités sont en IL, par rapport au point blanc défini dans l&rsquo;onglet <em>scène</em>. Par défaut, ce contrôle est défini sur +3 IL, ce qui signifie que les pixels doivent être au moins +3 IL plus lumineux que le point blanc défini dans <a href="#sc%c3%a8ne"><em>l&rsquo;onglet scène</em></a> pour que la reconstruction des hautes lumières ait un effet. En pratique, cela signifie que la reconstruction des hautes lumières est effectivement désactivée par défaut (pour des raisons de performances &ndash; elle ne doit être activée que lorsque cela est nécessaire). Par conséquent, pour utiliser la fonction <em>reconstruire hautes lumières</em>, cliquez d&rsquo;abord sur l&rsquo;icône <em>afficher masque de reconstruction</em> pour afficher le masque, et abaissez ce seuil jusqu&rsquo;à ce que les zones de surbrillance que vous souhaitez reconstruire soient sélectionnées en blanc par le masque. Il peut être utile d&rsquo;examiner d&rsquo;abord l&rsquo;image à l&rsquo;aide de l'<a href="/dtdocs/fr/module-reference/utility-modules/darkroom/raw-overexposed/">avertissement de surexposition raw</a> pour vous montrer quels pixels dans le fichier RAW ont été écrêtés, et si ces pixels sont écrêtés sur un seul canal RVB ou sur tous.</dd>
+<dt>transition</dt>
+<dd>Utilisez ce contrôle pour adoucir la transition entre les pixels écrêtés et valides. Déplacer ce contrôle vers la droite augmentera la quantité de flou dans le masque, de sorte que la transition entre les zones écrêtées et non écrêtées soit plus douce. Cela permet une fusion plus fluide entre ces régions. Déplacer ce contrôle vers la gauche réduira le flou dans le masque, rendant la transition dans le masque beaucoup plus nette et réduisant ainsi la quantité de flou entre les zones écrêtées et non écrêtées.</dd>
+<dt>afficher masque de reconstruction</dt>
+<dd>Cliquez sur l&rsquo;icône à droite de cette étiquette pour basculer l&rsquo;affichage du masque de reconstruction des hautes lumière. Il est recommandé d&rsquo;activer cette fonction tout en ajustant les contrôles ci-dessus.</dd>
+</dl>
+<h3 id="_répartition_"><a href="#_r%c3%a9partition_">🔗</a><em>répartition</em></h3>
+<p>Ces contrôles vous permettent d&rsquo;équilibrer les compromis entre les différents algorithmes de reconstruction.</p>
+<dl>
+<dt>structure ↔ texture</dt>
+<dd>Utilisez ce curseur pour contrôler si l&rsquo;algorithme de reconstruction doit privilégier la peinture dans un dégradé de couleurs lisse (structure), ou essayer de reconstruire la texture à l&rsquo;aide de détails précis extraits de données de pixels non écrêtées (texture). Par défaut, le contrôle est au milieu à 0%, ce qui ne privilégie aucune des deux stratégies. Si vous avez beaucoup de zones où les trois canaux sont écrêtés, il n&rsquo;y a pas de détail de texture disponible à reconstruire, il est donc préférable de déplacer le curseur vers la gauche pour favoriser la reconstruction des couleurs. Si vous avez beaucoup de zones où seulement un ou deux canaux sont écrêtés, il peut y avoir des détails de texture dans le ou les canaux non écrêtés, et déplacer le curseur vers la droite mettra davantage l&rsquo;accent sur la tentative de reconstruction de la texture à l&rsquo;aide de ces données non écrêtées .</dd>
+<dt>rayonnement ↔ reconstruction</dt>
+<dd>Utilisez ce curseur pour contrôler si l&rsquo;algorithme doit essayer de reconstruire des détails nets dans les zones écrêtées (reconstruire), ou s&rsquo;il doit appliquer un flou qui se rapproche de l&rsquo;effet flamboyant que vous obtenez avec un film traditionnel (bloom). Par défaut, ce curseur est défini sur 100 %, ce qui essaie de maximiser la netteté des détails dans les zones écrêtées. Déplacez ce curseur vers la gauche si vous souhaitez introduire plus de flou dans ces zones. Comme effet secondaire, l&rsquo;introduction de plus de flou aura généralement tendance à assombrir les hautes lumières, ce qui peut conduire à une reconstruction plus colorée.</dd>
+<dt>détails gris ↔ colorés</dt>
+<dd>Utilisez ce curseur pour contrôler si l&rsquo;algorithme doit favoriser la récupération des hautes lumières monochromatiques (gris) ou la récupération des détails colorés. Déplacez le curseur vers la droite si vous souhaitez plus de couleur dans les hautes lumières. Déplacez-le vers la gauche si vous souhaitez réduire la saturation des hautes lumières. Il peut être utile de réduire leur saturation si vous commencer à voir des couleurs magenta ou hors gamut.</dd>
+</dl>
+<h2 id="look"><a href="#look">🔗</a>look</h2>
+<p>Lorsque vous travaillez sur l&rsquo;onglet <em>look</em>, il est recommandé de surveiller la spline de la courbe en S sur le graphique <em>look uniquement</em>. Cette courbe part des niveaux de noir de la scène/de l&rsquo;affichage en bas à gauche du graphique et devrait augmenter progressivement jusqu&rsquo;aux niveaux de blanc de la scène/de l&rsquo;affichage en haut à droite. Parfois, si les contraintes sur la courbe en S sont trop serrées, les splines dans les zones d&rsquo;ombre et/ou de hautes lumières peuvent « dépasser » les limites de l&rsquo;affichage, et un avertissement orange s&rsquo;affiche sur ces parties de la spline.</p>
+<p>Si vous voyez l&rsquo;indicateur d&rsquo;avertissement orange à chaque extrémité de la courbe en S, des actions correctives doivent être effectuées pour ramener la courbe en S à une courbe lisse et monotone croissante. Cela peut impliquer :</p>
+<ul>
+<li>
+<p>réduire la latitude et/ou le contraste,</p>
+</li>
+<li>
+<p>ajuster le curseur ombres/hautes lumières pour décaler la latitude et laisser plus de place à la spline,</p>
+</li>
+<li>
+<p>s&rsquo;assurer que les curseurs d&rsquo;exposition relative du noir et du blanc, relatifs à la scène, de l&rsquo;onglet <em>scène</em> ont été correctement réglés pour les caractéristiques de la scène,</p>
+</li>
+<li>
+<p>dans l&rsquo;onglet <a href="#options"><em>options</em></a>, définir <em>contraste hautes lumières</em> ou <em>contraste des ombres</em> ou les deux à <em>dur</em> ou à <em>sûr</em>.</p>
+</li>
+</ul>
+<p>Si le paramètre <em>luminance du noir cible</em> dans l&rsquo;onglet <a href="#affichage"><em>affichage</em></a> a une valeur différente de zéro, il peut également être difficile pour <em>filmique rvb</em> de trouver une spline monotone lisse. Réduire cette valeur peut aider à assouplir les contraintes. Voir la section <a href="#affichage"><em>affichage</em></a> pour comprendre ce que cela implique.</p>
+<dl>
+<dt>contraste</dt>
+<dd>La courbe en S de <em>filmique</em> est créée en calculant la position des nœuds virtuels à partir des paramètres du module et en les interpolant. Ceci est similaire au fonctionnement du module <em>courbe des tonalités</em>, mais ici, les nœuds ne peuvent pas être déplacés manuellement. La courbe est divisée en trois parties. La partie médiane est un segment de droite. Les deux parties extrêmes se raccordent de façon lisse (sans pointe) à la partie médiane. Les abscisses de la courbe en S couvrent toute la plage d&rsquo;exposition.</dd>
+<dd>
+<p>Le curseur <em>contraste</em> contrôle la pente de la partie médiane de la courbe, comme illustré dans l&rsquo;affichage graphique. Plus la plage dynamique est grande, plus le contraste doit être élevé, afin de préserver une image d&rsquo;aspect naturel. Ce paramètre affecte principalement les tons moyens. Notez que le contraste global a un impact sur la netteté perçue de l&rsquo;image &ndash; une image à faible contraste semblera floue même si elle est optiquement nette au sens de la <a href="https://fr.wikipedia.org/wiki/Fonction_de_transfert_optique" target="_blank">Fonction de transfert optique (OTF)</a>.</p>
+</dd>
+<dd>
+<p>Le réglage du contraste sur 1 désactive presque complètement la courbe en S, bien qu&rsquo;il y ait un très petit effet résiduel des splines dans les hautes lumières et les ombres.</p>
+</dd>
+<dt>dureté (auparavant <em>fonction du facteur de puissance cible</em>)</dt>
+<dd>Connu sous le nom de curseur <em>fonction de facteur de puissance cible</em> dans les anciennes versions de <em>filmique rvb</em>, ce curseur est masqué par défaut et est ajusté automatiquement en fonction des valeurs de l&rsquo;onglet <a href="#sc%c3%a8ne"><em>scène</em></a>. Pour rendre ce curseur visible, vous devez décocher <em>ajustement automatique de la dureté</em> dans l&rsquo;onglet <a href="#options"><em>options</em></a>.</dd>
+<dd>
+<p>Ce paramètre est la fonction de puissance appliquée à la fonction de transfert de sortie, et il est souvent appelé à tort le <em>gamma</em> (ce qui peut signifier trop de choses dans les applications d&rsquo;imagerie, nous devrions donc arrêter d&rsquo;utiliser ce terme). Il est utilisé pour augmenter ou compresser les tons moyens pour tenir compte des non-linéarités d&rsquo;affichage ou pour éviter les artefacts de quantification lors de l&rsquo;encodage dans des formats de fichier 8 bits. Il s&rsquo;agit d&rsquo;une opération courante lors de l&rsquo;application de profils de couleurs ICC (sauf pour les espaces RVB linéaires, comme REC 709 ou REC 2020, qui ont un « gamma » linéaire de 1,0). Cependant, à la sortie de <em>filmique rvb</em>, le signal est codé de manière logarithmique, ce que les profils de couleurs ICC ne savent pas gérer. En conséquence, si, à la fin du traitement, nous les laissons appliquer un gamma de 1/2,2, il en résulterait un doublement des valeurs qui donnerait un gris moyen égal à 76 % au lieu d&rsquo;égal à 45 %, comme il se doit dans un espace relatif à l&rsquo;affichage.</p>
+</dd>
+<dt>latitude</dt>
+<dd>La latitude est la plage exprimée en pourcentage de la plage dynamique de luminances délimitée par les contrôles <em>exposition relative du noir</em> et <em>exposition relative du blanc</em> de l&rsquo;onglet <a href="#sc%c3%a8ne"><em>scène</em></a>. C&rsquo;est cette plage de luminances qui est remappée en priorité, et elle est remappée sur l&rsquo;intervalle de luminances défini par le paramètre <em>contraste</em>. Il est généralement conseillé de garder la latitude la plus large possible, tout en évitant l&rsquo;écrêtage. Si un écrêtage est observé, vous pouvez compenser en diminuant la latitude, en décalant l&rsquo;intervalle latitude avec le paramètre <em>balance ombres ↔ hautes lumières</em>, ou en diminuant le paramètre <em>contraste</em>.</dd>
+<dd>
+<p>La latitude définit également la plage des luminances qui ne sont pas désaturées aux extrémités de la plage de luminances (Voir le contrôle <em>saturation tons moyens</em>).</p>
+</dd>
+<dt>balance ombres ↔ hautes lumières</dt>
+<dd>Par défaut, la latitude est centrée au milieu de la plage dynamique. Si cela produit un écrêtage à une extrémité de la courbe, le paramètre <em>balance</em> permet de faire glisser la latitude le long de la pente, vers les ombres ou vers les hautes lumières. Cela permet de donner plus de place à une extrémité de la plage dynamique qu&rsquo;à l&rsquo;autre, si les propriétés de l&rsquo;image l&rsquo;exigent.</dd>
+<dt>mid-tones saturation / extreme luminance saturation</dt>
+<dd>At extreme luminances, the pixels will tend towards either white or black. Because neither white nor black have color associated with them, the saturation of these pixels must be 0%. In order to gracefully transition towards this 0% saturation point, pixels outside the mid-tone latitude range are progressively desaturated as they approach the extremes. The darker curve in the <em>filmic rgb</em> graph indicates the amount of desaturation that is applied to pixels outside the latitude range. Moving the slider to the right pushes the point where desaturation will start to be applied towards the extremes, resulting in a steeper desaturation curve. If pushed too far, this can result in fringing around the highlights. Moving the slider to the left brings the point at which color desaturation will start to be applied closer to the center, resulting in a gentler desaturation curve. If you would like to see more color saturation in the highlights, and you have checked that the white relative exposure in the <a href="#scene"><em>scene</em></a> tab is not yet clipping those highlights, move the mid-tones saturation slider to the right to increase the saturation.</dd>
+<dd>
+<p>Veuillez noter que cette stratégie de désaturation a changé par rapport aux versions précédentes de <em>filmique rvb</em> (qui fournissait une curseur de contrôle différent intitulé <em>saturation de luminance extrême</em>). Vous pouvez revenir au comportement de désaturation précédent en sélectionnant « v3 (2019) » dans le contrôle <em>science de couleur</em> de l&rsquo;onglet <a href="#options"><em>options</em></a>.</p>
+</dd>
+<dd>
+<p>Ce contrôle est défini à 0 par défaut et il est désormais recommandé de gérer la saturation plus tôt dans le pipeline graphique. Un préréglage « ajoute saturation de base » a été ajouté au module <a href="/dtdocs/fr/module-reference/processing-modules/color-balance-rgb/"><em>balance couleur rvb</em></a> à cet effet.</p>
+</dd>
+</dl>
+<h2 id="affichage"><a href="#affichage">🔗</a>affichage</h2>
+<p>Les paramètres de cet onglet devraient rarement nécessiter un ajustement.</p>
+<dl>
+<dt>luminance du noir cible</dt>
+<dd>Les paramètres de destination définissent les valeurs de luminance cible utilisées pour remapper les tons. Les paramètres par défaut doivent fonctionner 99 % du temps, les 1 % restants étant lorsque vous sortez dans l&rsquo;espace RVB linéaire (REC709, REC2020) pour le traitement des données encodées en mode logarithme. Ces paramètres doivent donc être utilisés avec prudence car darktable n&rsquo;autorise pas de pipelines séparés pour l&rsquo;aperçu de l&rsquo;affichage et la sortie du fichier.</dd>
+<dd>
+<p>Le paramètre de luminance du noir cible définit le noir de niveau de base du média cible. Par défaut, il est défini à la valeur minimale non nulle pouvant être encodée par le nombre de bits disponibles dans l&rsquo;espace colorimétrique de sortie. Le réduire à zéro signifie que certaines luminances non nulles seront mappées à 0 dans la sortie, perdant potentiellement certains détails dans les parties les plus sombres des ombres. L&rsquo;augmentation de ce curseur produira des noirs profonds et fades qui peuvent donner un aspect &ldquo;rétro&rdquo;.</p>
+</dd>
+<dt>gris moyen cible</dt>
+<dd>Il s&rsquo;agit du gris moyen du support de sortie qui est utilisé comme cible pour le nœud central de la courbe en S. Sur les média à correction gamma, le gris réel est calculé avec la correction gamma (gris-moyen^(1/gamma)), donc un paramètre de gris moyen de 18 % avec un gamma de 2,2 donne une cible réelle de gris moyen de 45,87 %.</dd>
+<dt>luminance du blanc cible</dt>
+<dd>Ce paramètre vous permet de définir le niveau de blanc plafond du média cible. Réglez-le à une valeur inférieure à 100 % si vous voulez des blancs tamisés et atténués pour obtenir un look rétro.</dd>
+<dd>
+<p>Pour éviter les images délavées <em>filmique rvb</em> applique une compression « gamma » remplaçant la correction gamma ICC de sortie, de sorte que le gris moyen soit, à la fin, correctement remappé. Pour supprimer cette compression, définissez le facteur de puissance de destination sur 1,0 et la destination gris moyen sur 45 %.</p>
+</dd>
+</dl>
+<h2 id="options"><a href="#options">🔗</a>options</h2>
+<dl>
+<dt>color science</dt>
+<dd>This setting defaults to <em>v6 (2022)</em> for new images, and defines the algorithms used by the <em>filmic rgb</em> module (e.g. the extreme luminance desaturation strategy). To revert to the behavior of previous versions of <em>filmic rgb</em>, set this parameter to <em>v3 (2019)</em>, <em>v4 (2020)</em> or <em>v5 (2021)</em>. The difference between these methods lies in the way in which they handle desaturation close to pure black and pure white (see the <a href="#background">background</a> section for details). If you have previously edited an image using older versions of <em>filmic rgb</em>, the color science setting will be kept at the earlier version number in order to provide backward compatibility for those edits.</dd>
+<dt>préserver chrominance</dt>
+<dd>Définissez comment la chrominance doit être gérée par <em>filmique rvb</em> &ndash; soit pas du tout, soit en utilisant l&rsquo;une des trois normes fournies.</dd>
+<dd>
+<p>En appliquant la transformation de courbe en S indépendamment sur chaque couleur, les proportions des couleurs sont modifiées, ce qui modifie les propriétés du spectre sous-jacent, et finalement la chrominance de l&rsquo;image. C&rsquo;est ce qui se passe si vous choisissez « non » dans le contrôle <em>préserver chrominance</em>. Cette valeur peut donner des résultats apparemment « meilleurs » que les autres valeurs, mais elle peut avoir un impact négatif sur les parties ultérieures du pipeline, par exemple, en ce qui concerne la saturation globale.</p>
+</dd>
+<dd>
+<p>Les autres valeurs de ce paramètre fonctionnent toutes de la même manière. Au lieu d&rsquo;appliquer la courbe en S aux canaux R, V et B indépendamment, <em>filmique rvb</em>, divise les trois composantes par une norme (N) puis applique la courbe en S. De cette façon, la relation entre les canaux est conservée.</p>
+</dd>
+<dd>
+<p>La valeur du contrôle <em>préserver chrominance</em> indique quelle norme est utilisée (la valeur utilisée pour N) :</p>
+</dd>
+<dd>
+<ul>
+<li><em>non</em> signifie que les ratios entre les canaux RVB ne sont pas conservés. Cela aura tendance à saturer les ombres et à désaturer les hautes lumières, et peut être utile lorsqu&rsquo;il y a des bleus ou des rouges hors gamut.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><em>max RVGB</em> est la valeur maximale des canaux R, V et B. C&rsquo;est le même comportement que la version originale du module <em>filmique rvb</em>. Il a tendance à assombrir les bleus, en particulier le ciel, et à produire des halos ou des franges, surtout si certains canaux sont écrêtés. Cela peut également diminuer quelque peu le contraste local.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><em>luminance Y</em> est une combinaison linéaire des canaux R, V et B. Il a tendance à assombrir et à augmenter le contraste local dans les rouges, et à se comporter moins bien avec les bleus saturés et hors gamut.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li><em>norme puissance RVB</em> est la somme des cubes des canaux R, G et B, divisée par la somme de leurs carrés (R³ + G³ + B³)/(R² + G² + B²). C&rsquo;est généralement un bon compromis entre les valeurs max RVB et luminance Y.</li>
+</ul>
+</dd>
+<dd>
+<ul>
+<li>La <em>norme euclidienne RVB</em> a la propriété d&rsquo;être indépendante de l&rsquo;espace RVB, elle produira donc les mêmes résultats quel que soit le profil de couleur de travail utilisé. Elle pèse plus sur les hautes lumières que la norme de puissance et donne plus de désaturation des hautes lumières, et renvoie probablement un résultat le plus proche d&rsquo;un aspect de film couleur.</li>
+</ul>
+</dd>
+<dd>
+<p>Il n&rsquo;y a pas de « bon » choix pour la norme, et le choix approprié dépend fortement de l&rsquo;image à laquelle elle est appliquée. Il est conseillé d&rsquo;expérimenter et de décider par vous-même quel réglage donne le résultat le plus agréable avec le moins d&rsquo;artefacts.</p>
+</dd>
+<dt>contraste hautes lumières</dt>
+<dd>Ce contrôle sélectionne la forme souhaitée pour l&rsquo;extrémité droite (hautes lumières) de la spline de <em>filmique rvb</em>. Le réglage par défaut (<em>sûr</em>) garantit qu&rsquo;il n&rsquo;y aura pas de dépassement, mais donne un contraste assez faible près du blanc. Sélectionner <em>dur</em> place une contrainte plus stricte sur la pente de la spline qui rend la courbe plus « pointue » et qui introduit donc plus de compression tonale dans les hautes lumières. Sélectionner <em>doux</em> relâche cette contrainte et donne une courbe plus douce avec moins de compression tonale dans les hautes lumières.</dd>
+<dt>contraste des ombres</dt>
+<dd>Ce contrôle sélectionne la forme souhaitée pour l&rsquo;extrémité gauche (ombres) de la spline de <em>filmique rvb</em>. Le réglage par défaut (<em>sûr</em>) garantit qu&rsquo;il n&rsquo;y aura pas de dépassement, mais donne un contraste assez faible près du noir. Sélectionner <em>dur</em> place une contrainte plus stricte sur la pente de la spline qui rend la courbe plus « pointue » et qui introduit donc plus de compression tonale dans les ombres. Sélectionner <em>doux</em> relâche cette contrainte et donne une courbe plus douce avec moins de compression tonale dans les ombres.</dd>
+<dt>utiliser un gris moyen spécifique</dt>
+<dd>Activer ce paramètre rend le curseur <em>luminance du gris moyen</em> visible dans l&rsquo;onglet <a href="#sc%c3%a8ne"><em>scène</em></a>. Avec la version actuelle de <em>filmique rvb</em>, il est conseillé d&rsquo;utiliser le module <em>exposition</em> pour définir le niveau du gris moyen, ce paramètre est donc désactivé par défaut (et le curseur <em>luminance du gris moyen</em> est masqué).</dd>
+<dt>ajustement automatique de la dureté</dt>
+<dd>Par défaut, ce paramètre est activé, et <em>filmique rvb</em> calculera automatiquement la fonction puissance (alias « gamma ») à appliquer à la courbe de transfert de sortie. Si ce paramètre est désactivé, un curseur <em>dureté</em> apparaîtra dans l&rsquo;onglet <a href="#look"><em>look</em></a> afin que cette valeur puisse être définie manuellement.</dd>
+<dt>itérations pour reconstruction haute qualité</dt>
+<dd>Utilisez ce paramètre pour augmenter le nombre de passes de l&rsquo;algorithme de reconstruction des hautes lumières. Plus d&rsquo;itérations signifie plus de propagation de couleur vers les zones écrêtées depuis les pixels voisins. Cela peut produire des hautes lumières plus neutres, mais est aussi plus coûteux en termes de puissance de traitement. Cela peut être utile dans les cas difficiles où il y a des hautes lumières magenta en raison de l&rsquo;écrêtage de canal.</dd>
+<dd>
+<p>La reconstruction par défaut fonctionne sur des canaux RVB séparés et n&rsquo;applique qu&rsquo;une seule itération, par contre la reconstruction <em>haute qualité</em> utilise un algorithme différent. Il travaille sur les rapports RVB (ce qui est un moyen de séparer la chromaticité de la luminance). Il peut utiliser plusieurs itérations pour propager progressivement dans les zones écrêtées des couleurs provenant des pixels voisins. Cependant, si trop d&rsquo;itérations sont utilisées, la reconstruction peut dégénérer, ce qui entraînera des couleurs tranchées mal rendues sur des objets écrêtés (couleurs qui bavent) &ndash; par exemple des nuages blancs remplis avec un ciel bleu, ou le disque solaire photographié au travers d&rsquo;arbres peint en vert-feuille.</p>
+</dd>
+<dt>ajouter du bruit dans les hautes lumières</dt>
+<dd>Cela introduit artificiellement du bruit dans les hautes lumières reconstruites pour éviter qu&rsquo;elles ne paraissent trop lisses par rapport aux zones environnantes qui peuvent déjà contenir du bruit. Cela peut aider à fondre plus naturellement les zones reconstruites avec les zones non écrêtées environnantes.</dd>
+<dt>type de bruit</dt>
+<dd>Ceci spécifie la distribution statistique du bruit ajouté. Il peut être utile de faire correspondre l&rsquo;apparence du bruit généré artificiellement avec le bruit naturel dans les zones environnantes provenant du capteur de la caméra. Le bruit <em>poissonien</em> est le plus proche du bruit naturel du capteur mais est moins agréable visuellement que le <em>gaussien</em>, qui est probablement plus proche du grain du film. Notez également que la plupart des modules de débruitage transformeront le bruit du capteur de poissonien en légèrement gaussien, vous devez donc choisir la variante qui se fond mieux dans le bruit réel de votre image.</dd>
+</dl>
+<h2 id="background"><a href="#background">🔗</a>background</h2>
+<p>The <em>color science</em> parameter (in the <em>options</em> tab) defines the strategy that is used to desaturate colors near pure white (maximum display emission) and pure black (minimum display emission). The problem can be explained with the graph below, which represents the gamut of the sRGB color space at the constant hue of its green primary, with varying lightness (vertical axis) and chroma (horizontal axis):</p>
+<p>
+
+
+
+
+
+
+
+
+  
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+<a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/sRGB-green.png" target="_blank" rel="noopener noreferrer"><img src="/dtdocs/en/module-reference/processing-modules/filmic-rgb/sRGB-green.png" alt="Gamut cone"   /></a>
+
+</p>
+<p>Au fur et à mesure que l&rsquo;on approche du noir pur et du blanc pur, la chrominance disponible dans le gamut se réduit considérablement jusqu&rsquo;à atteindre zéro pour une luminosité = 0 et une luminosité = 100% de l&rsquo;émission moyenne. Cela signifie que des couleurs très claires (ou très sombres) ne peuvent pas être très saturées en même temps si on veut qu&rsquo;elles rentrent dans le gamut, le gamut étant imposé par le dispositif d&rsquo;impression ou d&rsquo;affichage que l&rsquo;on utilise.</p>
+<p>Si les couleurs ne sont pas gérées et sont autorisées sortir du gamut, elles seront tronquées à des valeurs valides au moment de la conversion pour afficher l&rsquo;espace colorimétrique. Le problème est que cet écrêtage ne préserve généralement pas la teinte et certainement pas la luminance, de sorte que les reflets passeront généralement au jaune et apparaîtront plus sombres qu&rsquo;ils ne le devraient, lorsqu&rsquo;ils sont évalués par rapport à leur voisinage.</p>
+<p>To overcome this, filmic has used various strategies over the years (the so-called <em>color sciences</em>) to desaturate extreme luminances, forcing a zero saturation at minimum and maximum lightness and a smooth desaturation gradient. These strategies were all intended to minimize the hue shifts that come with gamut clipping.</p>
+<p>Étant donné que toutes ces stratégies étaient des approximations (et souvent trop conservatrices), <em>v6 (2022)</em> introduit une approche plus précise et mesurée. Il effectue un test de conversion pour afficher l&rsquo;espace colorimétrique, vérifie si la couleur résultante correspond à l&rsquo;espace [0; 100]%, et si ce n&rsquo;est pas le cas, calcule la saturation maximale disponible dans le gamut à cette luminance et cette teinte, en écrêtant finalement la couleur à cette valeur. Cela garantit une distorsion minimale des couleurs, permettant des couleurs plus saturées et une meilleure utilisation de la gamme disponible, mais applique également une teinte constante tout au long de l&rsquo;opération de mappage des tons <strong>et</strong> de mappage de la gamme.</p>
+<p>This gamut mapping uses the output color profile as a definition of the display color space and automatically adjusts to any output space. However, only <em>matrix</em> or <em>matrix + curve(s)</em> ICC profiles are supported. <em>LUT</em> ICC profiles are not supported and, if used, will make the gamut mapping default to the pipeline working space (Rec 2020 by default).</p>
+<p>Note that the hue used as a reference for the gamut mapping is the hue before any tone mapping, sampled at the input of filmic. This means that even the <em>none</em> chrominance preservation mode (applied on individual RGB channels regardless of their ratios) preserves hue in <em>v6</em>. This mode will only desaturate highlights more than the other modes, and a mechanism is in place to prevent it from resaturating shadows &ndash; this behaviour can be bypassed by increasing the <em>extreme luminance saturation</em> setting.</p>
+<h2 id="mises-en-garde"><a href="#mises-en-garde">🔗</a>mises en garde</h2>
+<h3 id="color-artifacts"><a href="#color-artifacts">🔗</a>color artifacts</h3>
+<p>As filmic v6 is so far the best version to retain saturated colors at constant hue, it gets also much less forgiving to <strong>invalid</strong> colors like chromatic aberrations and clipped magenta highlights, that are much better hidden (albeit <strong>not solved</strong>) by simple curves applied on individual channels (no chrominance preservation) with no care given to their ratios.</p>
+<p>It is not the purpose of a tone mapping and gamut mapping operators to reconstruct damaged signals, and these flaws need to be corrected earlier in the pipeline with the specialized modules provided. However, there is a mechanism in filmic v6 that ensures that any color brighter than the <em>white relative exposure</em> degrades to pure white, so a quick workaround is to simply set the <em>white relative exposure</em> to a value slightly lower than the exposure of the clipped parts. In other words: if it is clipped at the input, let it be clipped at the output. Chrominance preservation options that work the best for this purpose are the <em>luminance</em> and <em>euclidean</em> norms, or simply <em>none</em>.</p>
+<h3 id="sortie-incohérente"><a href="#sortie-incoh%c3%a9rente">🔗</a>sortie incohérente</h3>
+<p>With filmic v6, if you export the same image to sRGB and Adobe RGB color spaces, and then compare both images side by side on a large-gamut screen (that can cover Adobe RGB), the sRGB export <em>should</em> have more desaturated highlights than the Adobe RGB version. Since the sRGB color space is shorter than Adobe RGB, its gamut boundary is closer to the neutral grey axis, and therefore the maximum allowed chroma is lower for any given luminance. This is by no means a bug but rather is proof that the gamut mapping is actually doing its job.</p>
+
+
+    
+    <h3 class="translations_head">translations</h3>
+    <ul class="translations">
+        
+        <li><a href="/dtdocs/en/module-reference/processing-modules/filmic-rgb/">
+            English: filmic rgb
+        </a></li>
+        
+        <li><a href="/dtdocs/de/module-reference/processing-modules/filmic-rgb/">
+            German: Filmic RGB
+        </a></li>
+        
+        <li><a href="/dtdocs/es/module-reference/processing-modules/filmic-rgb/">
+            Espanol: película rgb
+        </a></li>
+        
+        <li><a href="/dtdocs/pt_br/module-reference/processing-modules/filmic-rgb/">
+            Português: rgb fílmico
+        </a></li>
+        
+        <li><a href="/dtdocs/uk/module-reference/processing-modules/filmic-rgb/">
+            Ukrainian: filmic rgb
+        </a></li>
+        
+        <li><a href="/dtdocs/nl/module-reference/processing-modules/filmic-rgb/">
+            Dutch: filmisch rgb
+        </a></li>
+        
+    </ul>
+    
+</article>
+
+<div class="prev-next row">
+    <div class="col-6">
+    
+	<a href="/dtdocs/fr/module-reference/processing-modules/watermark/" class="next">&lt; filigrane</a>
+	
+    </div>
+    <div class="col-6">
+    
+	<a href="/dtdocs/fr/module-reference/processing-modules/graduated-density/" class="prev">filtre dégradé &gt;</a>
+	
+    </div>
+</div>
+
+
+
+      </div>
+		<nav class="navigation col-sm-12 order-sm-12 col-md-3 order-md-1">
+		    <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/" class="">
+          Présentation
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/" class="">
+          interface utilisateur
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/views/" class="">
+          vues
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/screen-layout/" class="">
+          disposition de l&#39;affichage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/filmstrip/" class="">
+          pellicule
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/top-panel/" class="">
+          panneau supérieur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/user-interface/keyboard-shortcuts/" class="">
+          raccourcis clavier
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/supported-file-formats/" class="">
+          formats de fichier supportés
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/sidecar-files/" class="">
+          fichiers liés et édition non destructive
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/sidecar-files/sidecar/" class="">
+          fichiers liés
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/sidecar-files/sidecar-import/" class="">
+          importer des fichiers liés générés par d&#39;autres applications
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/sidecar-files/local-copies/" class="">
+          copies locales
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/" class="">
+          une introduction au flux de travail de darktable
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/introduction/" class="">
+          introduction
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/import-review/" class="">
+          importer et examiner
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/process/" class="">
+          processus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/overview/workflow/export/" class="">
+          exporter
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/" class="">
+          Table lumineuse
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-view-layout/" class="">
+          disposition de la vue table lumineuse
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/undo-redo/" class="">
+          annuler/refaire
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/" class="">
+          modes de la table lumineuse
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/filemanager/" class="">
+          navigateur de fichiers
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/zoomable-lighttable/" class="">
+          table lumineuse zoomable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/culling/" class="">
+          sélection
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/lighttable-modes/full-preview/" class="">
+          aperçu complet
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/" class="">
+          gestion des données numériques
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/collections/" class="">
+          collections &amp; pellicules
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/thumbnails/" class="">
+          miniatures
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/star-color/" class="">
+          évaluation par étoiles et labels de couleur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/grouping/" class="">
+          grouper des images
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lighttable/digital-asset-management/metadata-tagging/" class="">
+          métadonnées et mots clés
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/" class="">
+          Chambre noire
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/darkroom-view-layout/" class="">
+          disposition de la vue chambre noire
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/" class="">
+          le pipeline graphique
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/the-anatomy-of-a-module/" class="">
+          l&#39;anatomie d&#39;un module de traitement
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/the-pixelpipe-and-module-order/" class="">
+          le pipeline graphique &amp; l&#39;ordre des modules
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/history-stack/" class="">
+          l&#39;historique
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/pixelpipe/undo-redo/" class="">
+          annuler/refaire
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/" class="">
+          modules de traitement
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/module-header/" class="">
+          en-tête d&#39;un module
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/multiple-instances/" class="">
+          instances multiples
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/presets/" class="">
+          préréglages
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/module-controls/" class="">
+          contrôles du module
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/curves/" class="">
+          courbes
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/wavelets/" class="">
+          ondelettes
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/processing-modules/deprecated/" class="">
+          modules dépréciés
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/" class="">
+          masquage et fusion
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/blend-modes/" class="">
+          modes de fusion
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/" class="">
+          masques
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/drawn/" class="">
+          masques dessinés
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/parametric/" class="">
+          masques paramétriques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/drawn-and-parametric/" class="">
+          combiner les masques dessinés/paramétriques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/refinement-controls/" class="">
+          raffinement du masque et contrôles supplémentaires
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/masking-and-blending/masks/raster/" class="">
+          masques raster
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/" class="">
+          organisation
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/module-groups/" class="">
+          les groupes de modules
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/quick-access-panel/" class="">
+          panneau d&#39;accès rapide
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/darkroom/organization/manage-module-layouts/" class="">
+          gérer les dispositions de modules
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/tethering/" class="">
+          Capture
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/tethering/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/tethering/tethering-view-layout/" class="">
+          disposition de la vue capture
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/tethering/troubleshooting/" class="">
+          dépannage
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/map/" class="">
+          Carte
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/map/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/map/map-view-layout/" class="">
+          disposition de la vue carte
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/slideshow/" class="">
+          Diaporama
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/slideshow/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/slideshow/usage/" class="">
+          utilisation
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/print/" class="">
+          Impression
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/print/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/print/print-view-layout/" class="">
+          disposition de la vue impression
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/" class="">
+          Références des modules
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/" class="">
+          modules de traitement
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/chromatic-aberrations/" class="">
+          aberrations chromatiques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/raw-chromatic-aberrations/" class="">
+          aberrations chromatiques raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/soften/" class="">
+          adoucir (effet Orton)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/basic-adjustments/" class="">
+          ajustements de base (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-balance/" class="">
+          balance couleur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-balance-rgb/" class="">
+          balance couleur rvb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/white-balance/" class="">
+          balance des blancs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/framing/" class="">
+          cadre décoratif
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-calibration/" class="">
+          calibration des couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/censorize/" class="">
+          censurer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/colorize/" class="">
+          coloriser
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-contrast/" class="">
+          contraste de couleur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/local-contrast/" class="">
+          contraste local
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/contrast-brightness-saturation/" class="">
+          contraste luminosité saturation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-correction/" class="">
+          correction des couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/lens-correction/" class="">
+          correction des objectifs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/spot-removal/" class="">
+          correction des taches (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/unbreak-input-profile/" class="">
+          correction du profil d&#39;entrée
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/base-curve/" class="">
+          courbe de base
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/tone-curve/" class="">
+          courbe des tonalités
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/rgb-curve/" class="">
+          courbe rvb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/diffuse/" class="">
+          diffusion ou netteté
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/negadoctor/" class="">
+          docteur néga
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/demosaic/" class="">
+          dématriçage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/lowlight-vision/" class="">
+          faible lumière
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/watermark/" class="">
+          filigrane
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/filmic-rgb/" class=" active">
+          filmique rvb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/graduated-density/" class="">
+          filtre dégradé
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/lowpass/" class="">
+          filtre passe-bas
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/highpass/" class="">
+          filtre passe-haut
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/surface-blur/" class="">
+          flou de surface
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/blurs/" class="">
+          flous
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/grain/" class="">
+          grain
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/dithering/" class="">
+          homogénéisation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/invert/" class="">
+          inverser (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/liquify/" class="">
+          liquéfier
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/fill-light/" class="">
+          lumière d&#39;appoint (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/bloom/" class="">
+          lumière d&#39;arrière plan
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/lut-3d/" class="">
+          lut 3D
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-mapping/" class="">
+          mappage des couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/tone-mapping/" class="">
+          mappage des tonalités (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/global-tonemap/" class="">
+          mappage global des tonalités (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/scale-pixels/" class="">
+          mise à l&#39;échelle des pixels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/channel-mixer/" class="">
+          mixeur de canaux (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/monochrome/" class="">
+          monochrome
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/levels/" class="">
+          niveaux
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/rgb-levels/" class="">
+          niveaux rvb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/shadows-and-highlights/" class="">
+          ombres et hautes lumières
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/orientation/" class="">
+          orientation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/hot-pixels/" class="">
+          pixels chauds
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/raw-black-white-point/" class="">
+          point noir/blanc raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/input-color-profile/" class="">
+          profil de couleur d&#39;entrée
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/output-color-profile/" class="">
+          profil de couleur de sortie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/crop/" class="">
+          recadrer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/crop-rotate/" class="">
+          recadrer et pivoter (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-reconstruction/" class="">
+          reconstruction des couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/sharpen/" class="">
+          renforcer la netteté
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/retouch/" class="">
+          retouche
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/rotate-pixels/" class="">
+          rotation des pixels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/rotate-perspective/" class="">
+          rotation et perspective
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/denoise-profiled/" class="">
+          réduction du bruit (profil)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/astrophoto-denoise/" class="">
+          réduction du bruit photo astro
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/raw-denoise/" class="">
+          réduction du bruit RAW
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/haze-removal/" class="">
+          suppression de la brume
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/defringe/" class="">
+          suppression des franges (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-look-up-table/" class="">
+          table correspondance couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/velvia/" class="">
+          velvia
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/vibrance/" class="">
+          vibrance (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/vignetting/" class="">
+          vignetage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/split-toning/" class="">
+          virage partiel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/zone-system/" class="">
+          zones (déprécié)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/color-zones/" class="">
+          zones de couleurs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/contrast-equalizer/" class="">
+          égaliseur de contraste
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/processing-modules/tone-equalizer/" class="">
+          égaliseur de ton
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/" class="">
+          modules utilitaires
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/tethering/" class="">
+          capture
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/tethering/camera-settings/" class="">
+          paramètres de la capture
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/tethering/session/" class="">
+          session
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/tethering/live-view/" class="">
+          visée directe
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/map/" class="">
+          carte
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/map/locations/" class="">
+          emplacements
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/map/map-settings/" class="">
+          paramètres de carte
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/map/find-location/" class="">
+          trouver un lieu
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/" class="">
+          chambre noire
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/clipping/" class="">
+          avertissement d&#39;écrêtage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/raw-overexposed/" class="">
+          avertissement de surexposition raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/duplicate-manager/" class="">
+          gestion des clones
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/mask-manager/" class="">
+          gestion des masques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/guides-overlays/" class="">
+          guides et superpositions
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/history-stack/" class="">
+          historique
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/snapshots/" class="">
+          instantanés
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/image-info-line/" class="">
+          ligne d&#39;informations de l&#39;image
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/navigation/" class="">
+          navigation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/module-order/" class="">
+          ordre des modules
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/global-color-picker/" class="">
+          pipette de couleur globale
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/gamut/" class="">
+          vérification du gamut
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/soft-proof/" class="">
+          épreuvage écran
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/darkroom/color-assessment/" class="">
+          évaluation des couleurs
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/print/" class="">
+          impression
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/print/print-settings/" class="">
+          paramètres d&#39;impression
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/" class="">
+          partagé
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/collections/" class="">
+          collections
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/focus-peaking/" class="">
+          détection de focus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/export/" class="">
+          exporter
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/geotagging/" class="">
+          géolocalisation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/image-information/" class="">
+          informations de l&#39;image
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/tagging/" class="">
+          mots-clés
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/shared/scopes/" class="">
+          scopes
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/" class="">
+          table lumineuse
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/timeline/" class="">
+          chronologie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/history-stack/" class="">
+          historique
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/selected-image/" class="">
+          images sélectionnées
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/import/" class="">
+          importer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+          lua scripts installer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/styles/" class="">
+          styles
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/module-reference/utility-modules/lighttable/select/" class="">
+          sélectionner
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/" class="">
+          Préférences et réglages
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/import/" class="">
+          importer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/lighttable/" class="">
+          table lumineuse
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/darkroom/" class="">
+          chambre noire
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/processing/" class="">
+          traitement
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/security/" class="">
+          sécurité
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/storage/" class="">
+          stockage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/miscellaneous/" class="">
+          divers
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/shortcuts/" class="">
+          raccourcis
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/presets/" class="">
+          préréglages
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/preferences-settings/lua-options/" class="">
+          options lua
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/" class="">
+          Automatisation avec Lua
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/basic-principles/" class="">
+          Principes de base : fichiers luarc
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/a-simple-example/" class="">
+          Un exemple Lua simple
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/printing-labeled-images/" class="">
+          impression d&#39;images étiquetées
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/simple-shortcut/" class="">
+          ajouter un raccourci simple
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/exporting-images/" class="">
+          exporter des images avec Lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/building-ui-elements/" class="">
+          Constructions d&#39;éléments de l&#39;interface utilisateur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/sharing-scripts/" class="">
+          partage de scripts
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/calling-from-dbus/" class="">
+          appeler Lua de dbus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/darktable-from-lua/" class="">
+          utiliser darktable depuis un script Lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/lua/api/" class="">
+          API Lua
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/guides-tutorials/" class="">
+          Guides &amp; Tutoriels
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/guides-tutorials/monochrome/" class="">
+          développement d&#39;images monochromes
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/guides-tutorials/other-resources/" class="">
+          autres ressources
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/" class="">
+          Sujets spéciaux
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/" class="">
+          gestion de la couleur
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/display-profile/" class="">
+          profil d&#39;affichage
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/rendering-method/" class="">
+          méthode de rendu
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/rendering-intent/" class="">
+          intention de rendu
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/color-spaces/" class="">
+          espaces colorimétriques de darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/unbounded-colors/" class="">
+          couleurs non bornées
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/color-artifacts/" class="">
+          possibles artefacts de couleur
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-management/color-dimensions/" class="">
+          dimensions de la couleur dans darktable
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/" class="">
+          opencl
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/background/" class="">
+          le contexte
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/how-opencl-works/" class="">
+          comment travaille opencl
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/activate-opencl/" class="">
+          activer OpenCL dans darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/setting-up/" class="">
+          configurer opencl
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/problems-solutions/" class="">
+          problèmes possibles et solutions
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/scheduling-profile/" class="">
+          profil de planification
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/multiple-devices/" class="">
+          multiples périphériques
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/opencl/still-doesnt-work/" class="">
+          opencl ne fonctionne toujours pas pour moi
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/" class="">
+          utilisation de darktable-chart
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/overview/" class="">
+          présentation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/usage/" class="">
+          utilisation
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/source-image/" class="">
+          image source
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/reference-values/" class="">
+          valeurs de références
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/process/" class="">
+          processus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/darktable-chart/making-input-images/" class="">
+          faire une image d&#39;entrée pour darktable-chart
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/" class="">
+          appel du programme
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable/" class="">
+          darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable-generate-cache/" class="">
+          darktable-generate-cache
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable-chart/" class="">
+          darktable-chart
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable-cltest/" class="">
+          darktable-cltest
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/darktable-cmstest/" class="">
+          darktable-cmstest
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/program-invocation/purge_non_existing_images_sh/" class="">
+          purge_non_existing_images.sh
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/color-pipeline/" class="">
+          pipeline graphique de darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/contributing/" class="">
+          contribuer à dtdocs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/fr/special-topics/translating/" class="">
+          traduire dtdocs
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+
+		</nav>
+	    </div>
+
+            
+
+        </div>
+
+
+    </body>
+</html>
+
+<script>
+(function($) {
+  
+
+  $.fn.scrollToMiddle = function(options) {
+    var settings = $.extend({
+        duration: 0
+    }, options );
+
+    return this.each(function() {
+      var $el = $(this);
+      var elOffset = $el.offset().top;
+      var elHeight = $el.height();
+      var windowHeight = $(window).height();
+      var offset;
+      if (elHeight < windowHeight) {
+        offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
+      }
+      else {
+        offset = elOffset;
+      }
+      $('.navigation').scrollTop(offset);
+    });
+  };
+}(jQuery));
+
+$('.navigation').css('opacity', '0');
+ $(document).ready(function(){
+     $('.parent ul').hide();
+     $('.navigation').css('opacity', 1.0);
+     $('.active').parents('ul').show();
+     $('.active').siblings('ul').show();
+     $('.active').children('i.toggle').removeClass("fa-plus-squre").addClass("fa-minus-square-o");
+     $('.active').parents('li').children('.toggle').removeClass("fa-plus-square").addClass("fa-minus-square-o");
+     $('.active').scrollToMiddle();
+
+     $('.toggle').on('click', function (e) {
+       e.stopPropagation();
+       $(this).siblings('ul').slideToggle();
+
+       if($(this).hasClass("fa-plus-square")) {
+           $(this).addClass("fa-minus-square-o");
+           $(this).removeClass("fa-plus-square");
+       }
+       else {
+           $(this).addClass("fa-plus-square");
+           $(this).removeClass("fa-minus-square-o");
+       }
+     });
+ });
+
+</script>
+
+
+<script>
+ var _paq = window._paq = window._paq || [];
+  
+ _paq.push(['trackPageView']);
+ _paq.push(['enableLinkTracking']);
+ (function() {
+     var u="https://piwik.kees.nl/";
+     _paq.push(['setTrackerUrl', u+'matomo.php']);
+     _paq.push(['setSiteId', '21']);
+     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+ })();
+</script>
+<noscript><p><img src="https://piwik.kees.nl/matomo.php?idsite=21&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+
+

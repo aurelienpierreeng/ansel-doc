@@ -1,0 +1,3036 @@
+<!doctype html>
+<html lang="nl">
+    <head>
+      <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>darktable 4.0 user manual - ontwikkeling van monochrome afbeeldingen</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+      <link rel="stylesheet" href="/dtdocs/css/style.min.3b298d8f37646aff6a802627ff27a707153196970e12552ddf3f7e6fdf49ebb1.css">
+      
+
+
+<script> var indexURL="https:\/\/darktable-org.github.io\/dtdocs\/nl\/index.json"</script>
+<script src="/dtdocs/js/jquery.js"></script>
+<script src="/dtdocs/js/popper.js" type="module"></script>
+<script src="/dtdocs/js/bootstrap.js"></script>
+<script src="/dtdocs/js/lunr.js"></script>
+<script src="/dtdocs/js/app.js"></script>
+
+
+    </head>
+    <body>
+        
+
+        <header class="navbar navbar-expand-lg sticky-top  navbar-dark bg-dark">
+   <a class="navbar-brand" href="/dtdocs" rel="home" title="darktable 4.0 user manual">
+	darktable 4.0 user manual
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+	    
+	      <li class="nav-item dropdown" aria-describedby="language-picker-description">
+		   <p class="sr-only" id="language-picker-description">languages</p>
+		   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+             <img src="https://darktable-org.github.io/dtdocs//language-icons/icon20x24px-exported-transparent.png" alt="Language Icon" height="20" class="translation-icon"/>
+		     <span>translations</span>
+		   </a>
+		   <div class="dropdown-menu dropdonw-trans" role="listbox">
+		      <a class="dropdown-item" aria-selected="true" hreflang="nl" role="option" lang="nl" href="https://darktable-org.github.io/dtdocs/nl/guides-tutorials/monochrome/">Dutch</a>
+		        
+		      <a class="dropdown-item" hreflang="en" role="option" lang="en" href="https://darktable-org.github.io/dtdocs/en/guides-tutorials/monochrome/">English</a>
+		    
+		      <a class="dropdown-item" hreflang="fr" role="option" lang="fr" href="https://darktable-org.github.io/dtdocs/fr/guides-tutorials/monochrome/">Français</a>
+		    
+		      <a class="dropdown-item" hreflang="de" role="option" lang="de" href="https://darktable-org.github.io/dtdocs/de/guides-tutorials/monochrome/">German</a>
+		    
+		      <a class="dropdown-item" hreflang="es" role="option" lang="es" href="https://darktable-org.github.io/dtdocs/es/guides-tutorials/monochrome/">Espanol</a>
+		    
+		      <a class="dropdown-item" hreflang="pt_br" role="option" lang="pt_br" href="https://darktable-org.github.io/dtdocs/pt_br/guides-tutorials/monochrome/">Português</a>
+		    
+		      <a class="dropdown-item" hreflang="uk" role="option" lang="uk" href="https://darktable-org.github.io/dtdocs/uk/guides-tutorials/monochrome/">Ukrainian</a>
+		    
+		   </div>
+	       </li>
+	    
+	</ul>
+        <ul>
+           <form class="form-inline my-2 my-lg-0">
+                <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search" autocomplete="off" aria-label="Search">
+           </form>
+        </ul>
+
+
+    </div>
+</header>
+
+<div id="search-results" class="search-results">
+</div>
+
+
+        <div class="container-fluid">
+	    <div class="row">
+		<div class="content col-sm-12 order-sm-1 col-md-9 mx-md-auto order-md-12">
+		    
+
+
+
+<div class="crumbs">
+    <span class="crumb">
+	
+
+<a href='/dtdocs/nl/'>darktable</a> / <a href='/dtdocs/nl/guides-tutorials/'>Gidsen en handleidingen</a> / ontwikkeling van monochrome afbeeldingen
+    </span>
+</div>
+
+<div class="prev-next row">
+    <div class="col-6">
+    
+	<a href="/dtdocs/nl/guides-tutorials/" class="next">&lt; Gidsen en handleidingen</a>
+	
+    </div>
+    <div class="col-6">
+    
+	<a href="/dtdocs/nl/guides-tutorials/batch-editing/" class="prev">batch-bewerking afbeeldingen &gt;</a>
+	
+    </div>
+</div>
+
+
+<article role="main">
+
+    <h1 class="title">
+        ontwikkeling van monochrome afbeeldingen
+    </h1>
+
+    
+
+    <p>Fotografie heeft een lange geschiedenis van het produceren van monochrome afbeeldingen en velen genieten nog steeds van dit aspect van fotografie. Hoewel er enkele gespecialiseerde/aangepaste camera&rsquo;s zijn met een echt monochrome sensor, gebruiken de meeste nog steeds een gewone camera om een kleurenafbeelding vast te leggen en deze tijdens de nabewerking om te zetten in een monochrome afbeelding.</p>
+<p>Er zijn twee hoofdbenaderingen voor deze omzetting:</p>
+<ul>
+<li>
+<p>Een <em>fysieke benadering</em>, waarbij we proberen te simuleren hoe een op zilver gebaseerde fotografische filmemulsie zou reageren op het licht dat ter plaatse wordt vastgelegd</p>
+</li>
+<li>
+<p>Een <em>perceptuele benadering</em>, waarbij we een kleurenbeeld ontwikkelen en de kleurverzadiging verminderen in een perceptuele kleurruimte zoals <em>CIE Lab</em>.</p>
+</li>
+</ul>
+<p>Deze benaderingen en andere aan zwart-wit gerelateerde functies in darktable worden in de volgende secties besproken.</p>
+<h1 id="afbeeldingen-importeren-en-markeren-als-monochroom"><a href="#afbeeldingen-importeren-en-markeren-als-monochroom">🔗</a>afbeeldingen importeren en markeren als monochroom</h1>
+<p>Bij het importeren van een afbeelding zijn er een aantal eigenschappen die kunnen worden gebruikt om aan te geven dat de afbeelding een monochrome behandeling vereist:</p>
+<ul>
+<li>
+<p>Als de afbeelding is gemaakt met een achromatische camera, wordt de afbeelding automatisch gemarkeerd als monochroom.</p>
+</li>
+<li>
+<p>Wanneer je een scene vastlegt waarvan je een monochroom beeld wilt maken, kan het handig zijn om jouw camera in een creatieve modus &ldquo;zwart-wit&rdquo; te zetten. Hierdoor kan je via het liveview-scherm of de elektronische zoeker van jouw camera visualiseren hoe de scène er in zwart-wit uit zou zien. De camera legt nog steeds de volledige kleurgegevens vast in het onbewerkte bestand, maar de ingesloten JPEG-voorbeeldafbeelding is zwart-wit. Wanneer je een dergelijke afbeelding importeert, kan darktable de afbeelding automatisch markeren als monochroom op basis van de voorbeeldafbeelding.</p>
+<p>Controleren of het voorbeeld monochroom is, vertraagt het importproces, dus dit is standaard uitgeschakeld. Je kan deze controle inschakelen in <a href="/dtdocs/nl/preferences-settings/processing/">voorkeuren &gt; verwerken &gt; detecteer monochrome voorbeelden</a></p>
+</li>
+<li>
+<p>Bij het verwerken van een onbewerkt bestand is een van de eerste stappen het <a href="/dtdocs/nl/module-reference/processing-modules/demosaic/"><em>demosaïek</em></a> van de afbeelding. Als u de <em>demosaïek-methode</em> instelt op &ldquo;passthrough (monochroom)&rdquo;, wordt de kleurinformatie tijdens het demosaïek-proces genegeerd en wordt de afbeelding door darktable als zwart-wit gemarkeerd.</p>
+<p><strong>Opmerking:</strong> Gebruik dit alleen voor afbeeldingen die zijn gemaakt met een camera waarvan de kleurenfilterreeks is verwijderd.</p>
+</li>
+<li>
+<p>Nadat je de afbeelding hebt geïmporteerd, kan je een afbeelding handmatig markeren als monochroom (of niet) met behulp van het tabblad <em>metadata</em> op de [geselecteerde afbeeldingen] van de bibliotheek (../module-reference/utility-modules/lighttable/selected-image.md) module,</p>
+</li>
+</ul>
+<p>Als een van de bovenstaande methodes ertoe leidt dat een afbeelding wordt gemarkeerd als monochroom, kunnen darktable-modules deze informatie gebruiken om de gebruiker een aantal monochrome-specifieke modulebesturingselementen voor te stellen en/of speciale verwerking op de afbeelding toe te passen.</p>
+<p>Het label <code>darktable|mode|monochrome</code> wordt automatisch toegepast op alle afbeeldingen die zijn gemarkeerd als monochroom en, als je permanente overlay-informatie in jouw bibliotheekminiaturen hebt ingeschakeld, worden dergelijke afbeeldingen gemarkeerd met een visuele indicator <code>B&amp;W</code> naast het bestand informatie typen. Door dit label en visuele indicator automatisch toe te passen, maakt darktable het gemakkelijk om filters in te stellen om afbeeldingen te selecteren voor monochrome behandeling, en om in één oogopslag te zien welke afbeeldingen in de huidige collectie het <em>monochroom</em> label dragen.</p>
+<p>Wanneer darktable een ware monochroom afbeelding detecteert of van een monochroom geconverteerde camera (gebruik makend van de &ldquo;passthrough monochroom&rdquo; demosaicer) worden sommige modulen (b.v. demosaic en witbalans) automatisch uitgeschakeld.</p>
+<h1 id="monochrome-omzetting"><a href="#monochrome-omzetting">🔗</a>monochrome omzetting</h1>
+<h2 id="fysische-benadering"><a href="#fysische-benadering">🔗</a>fysische benadering</h2>
+<p>Deze benadering heeft de neiging om te werken met lineaire scene-gerefereerde gegevens van de sensor, en probeert de respons van een fotografische film na te bootsen met een zilver-emulsie. Het bestaat uit drie stappen:</p>
+<ol>
+<li>
+<p>Breng de kleurkanalen van de sensor in kaart in een enkel zwart-wit kanaal. Verschillende soorten monochrome fotografische film hebben verschillende niveaus van gevoeligheid voor verschillende golflengten van licht, en dit kan worden gesimuleerd door de drie kleurkanalen verschillende wegingen te geven wanneer ze worden gecombineerd tot één enkel zwart-wit kanaal. Met de <a href="/dtdocs/nl/module-reference/processing-modules/color-calibration/"><em>kleurkalibratie</em></a> module kunnen de drie kanalen in verschillende hoeveelheden worden gemengd tot een grijskanaal, en het bevat een aantal voorinstellingen die zijn ontworpen om de kenmerken van een aantal bekende soorten fotografische film te emuleren.</p>
+</li>
+<li>
+<p>Pas een helderheidsverzadigingscurve toe. Als een stuk fotografische film wordt blootgesteld aan intenser licht, zal de respons ervan afnemen naarmate de zilveremulsie verzadigd raakt. Deze verzadigingscurve kan worden gesimuleerd binnen de <a href="/dtdocs/nl/module-reference/processing-modules/filmic-rgb/"><em>filmisch rgb</em></a> module.</p>
+</li>
+<li>
+<p>Het ontwikkelen van een monochrome film in ontwikkelen omvat traditioneel &ldquo;tegenhouden en doordrukken&rdquo; om het belichtingsniveau over verschillende delen van het beeld te regelen. Dit kan in darktable worden geëmuleerd door ofwel de module <a href="/dtdocs/nl/module-reference/processing-modules/exposure/"><em>belichting</em></a> te gebruiken met handmatig aangemaakte [maskers](../darkroom/masking-and-blending/overview. md), of door de module <a href="/dtdocs/nl/module-reference/processing-modules/tone-equalizer/"><em>toon equalizer</em></a> te gebruiken, die een masker genereert met behulp van een geleide filter.</p>
+</li>
+</ol>
+<h2 id="perceptuele-benadering"><a href="#perceptuele-benadering">🔗</a>perceptuele benadering</h2>
+<p>De andere optie voor het produceren van een monochrome afbeelding is om de kleurverzadiging in de afbeelding te verminderen, wat kan worden gedaan in een lineaire kleurruimte, of in een kleurruimte die is gericht op het modelleren van menselijke waarneming.</p>
+<ul>
+<li>
+<p>De module <a href="/dtdocs/nl/module-reference/processing-modules/color-balance/"><em>kleur balans</em></a> werkt in lineaire RGB en stelt jou in staat de kleurverzadiging in de afbeelding te verminderen met behulp van de schuifregelaar voor invoer- of uitvoerkleurverzadiging - - welke je kiest, hangt af van of je nog andere aanpassingen wilt maken aan de kleur of monochrome afbeelding in de kleurbalansmodule. De kleurbalansmodule heeft de neiging om een voorspelbaar en perceptueel uniform resultaat te geven.</p>
+</li>
+<li>
+<p>De module <a href="/dtdocs/nl/module-reference/processing-modules/monochrome/"><em>monochroom</em></a> werkt in de Lab-kleurruimte en stelt de gebruiker in staat om grafisch een gewogen combinatie van kleuren te definiëren om de dichtheid van het zwart in het zwart-wit te bepalen afbeelding. De interface kan enigszins gevoelig zijn voor de instellingen, met kleine wijzigingen die grote effecten opleveren, en u kunt problemen ondervinden met het globale contrast en/of zwarte pixelartefacten.</p>
+</li>
+<li>
+<p>Andere modules zoals <a href="/dtdocs/nl/module-reference/processing-modules/color-zones/"><em>kleurzones</em></a> kunnen ook worden gebruikt om kleurverzadiging uit de afbeelding te verwijderen, maar deze bieden geen echt voordeel ten opzichte van de eenvoud van de verzadigingsschuifregelaars van de module <em>kleurbalans</em>.</p>
+</li>
+</ul>
+
+
+    
+    <h3 class="translations_head">translations</h3>
+    <ul class="translations">
+        
+        <li><a href="/dtdocs/en/guides-tutorials/monochrome/">
+            English: developing monochrome images
+        </a></li>
+        
+        <li><a href="/dtdocs/fr/guides-tutorials/monochrome/">
+            Français: développement d&#39;images monochromes
+        </a></li>
+        
+        <li><a href="/dtdocs/de/guides-tutorials/monochrome/">
+            German: Entwicklung von monochromen Bildern
+        </a></li>
+        
+        <li><a href="/dtdocs/es/guides-tutorials/monochrome/">
+            Espanol: desarrollo de imágenes monocromas
+        </a></li>
+        
+        <li><a href="/dtdocs/pt_br/guides-tutorials/monochrome/">
+            Português: processar imagens monocromáticas
+        </a></li>
+        
+        <li><a href="/dtdocs/uk/guides-tutorials/monochrome/">
+            Ukrainian: обробка монохромних зображень
+        </a></li>
+        
+    </ul>
+    
+</article>
+
+<div class="prev-next row">
+    <div class="col-6">
+    
+	<a href="/dtdocs/nl/guides-tutorials/" class="next">&lt; Gidsen en handleidingen</a>
+	
+    </div>
+    <div class="col-6">
+    
+	<a href="/dtdocs/nl/guides-tutorials/batch-editing/" class="prev">batch-bewerking afbeeldingen &gt;</a>
+	
+    </div>
+</div>
+
+
+
+      </div>
+		<nav class="navigation col-sm-12 order-sm-12 col-md-3 order-md-1">
+		    <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/" class="">
+          Overzicht
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/user-interface/" class="">
+          gebruikersomgeving
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/user-interface/views/" class="">
+          weergaven
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/user-interface/screen-layout/" class="">
+          scherm layout
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/user-interface/filmstrip/" class="">
+          filmstrip
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/user-interface/top-panel/" class="">
+          bovenpaneel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/user-interface/keyboard-shortcuts/" class="">
+          snelkoppelingen
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/supported-file-formats/" class="">
+          ondersteunde bestandsformaten
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/sidecar-files/" class="">
+          sidecar bestanden en niet-destructieve bewerking
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/sidecar-files/sidecar/" class="">
+          sidecar-bestanden
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/sidecar-files/sidecar-import/" class="">
+          sidecar-bestanden importeren van andere applicaties
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/sidecar-files/local-copies/" class="">
+          lokale kopieën
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/workflow/" class="">
+          een inleiding tot de werkvolgorde van darktable
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/workflow/introduction/" class="">
+          inleiding
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/workflow/import-review/" class="">
+          importeren &amp; beoordelen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/workflow/process/" class="">
+          proces
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/overview/workflow/export/" class="">
+          exporteren
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/" class="">
+          Bibliotheek
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/lighttable-view-layout/" class="">
+          bibliotheek weergave layout
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/undo-redo/" class="">
+          ongedaan maken / opnieuw uitvoeren
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/lighttable-modes/" class="">
+          bibliotheek modi
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/lighttable-modes/filemanager/" class="">
+          bestandsbeheer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/lighttable-modes/zoomable-lighttable/" class="">
+          zoombare bibliotheek
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/lighttable-modes/culling/" class="">
+          vergelijk weergave
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/lighttable-modes/full-preview/" class="">
+          volledige voorbeeldweergave
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/digital-asset-management/" class="">
+          digitaal archief beheer
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/digital-asset-management/collections/" class="">
+          collecties &amp; film rollen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/digital-asset-management/thumbnails/" class="">
+          miniaturen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/digital-asset-management/star-color/" class="">
+          sterbeoordelingen en kleurlabels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/digital-asset-management/grouping/" class="">
+          afbeeldingen groeperen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lighttable/digital-asset-management/metadata-tagging/" class="">
+          metadata en labelen
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/" class="">
+          Ontwikkelen
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/darkroom-view-layout/" class="">
+          lay-out ontwikkelweergave
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/pixelpipe/" class="">
+          de pixelpijp
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/pixelpipe/the-anatomy-of-a-module/" class="">
+          de anatomie van een verwerkingsmodule
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/pixelpipe/the-pixelpipe-and-module-order/" class="">
+          de pixelpijp &amp; module volgorde
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/pixelpipe/history-stack/" class="">
+          geschiedenis
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/pixelpipe/undo-redo/" class="">
+          ongedaan maken / opnieuw uitvoeren
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/" class="">
+          verwerkingsmodules
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/module-header/" class="">
+          module koptekst
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/multiple-instances/" class="">
+          meerdere sessies
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/presets/" class="">
+          voorinstellingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/module-controls/" class="">
+          module instellingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/curves/" class="">
+          curves
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/wavelets/" class="">
+          wavelets
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/processing-modules/deprecated/" class="">
+          verouderde modules
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/" class="">
+          maskeren &amp; overvloeien
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/blend-modes/" class="">
+          overvloei modes
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/masks/" class="">
+          maskers
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/masks/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/masks/drawn/" class="">
+          getekende maskers
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/masks/parametric/" class="">
+          parametrische maskers
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/masks/drawn-and-parametric/" class="">
+          combineren van getekende- en parametrische- maskers
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/masks/refinement-controls/" class="">
+          Maskers verfijnen &amp; aanvullende afregeling
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/masking-and-blending/masks/raster/" class="">
+          rastermaskers
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/organization/" class="">
+          organisatie
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/organization/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/organization/module-groups/" class="">
+          modulegroepen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/organization/quick-access-panel/" class="">
+          snel toegangspaneel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/darkroom/organization/manage-module-layouts/" class="">
+          module-indelingen beheren
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/tethering/" class="">
+          Tethering
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/tethering/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/tethering/tethering-view-layout/" class="">
+          lay-out van tetheringweergave
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/tethering/troubleshooting/" class="">
+          Problemen oplossen
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/map/" class="">
+          Kaart
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/map/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/map/map-view-layout/" class="">
+          lay-out kaartweergave
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/slideshow/" class="">
+          Presentatie
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/slideshow/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/slideshow/usage/" class="">
+          gebruik
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/print/" class="">
+          Print
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/print/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/print/print-view-layout/" class="">
+          afdrukweergave lay-out
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/" class="">
+          Module Referentie
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/" class="">
+          toepassings modules
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/" class="">
+          bibliotheek
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/history-stack/" class="">
+          geschiedenis
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/import/" class="">
+          importeren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+          lua script-installatieprogramma
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/select/" class="">
+          selecteren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/selected-image/" class="">
+          selectie bewerken
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/styles/" class="">
+          stijlen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/lighttable/timeline/" class="">
+          tijdlijn
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/" class="">
+          gedeeld
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/image-information/" class="">
+          afbeeldingsinformatie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/collection-filters/" class="">
+          collectiefilters
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/collections/" class="">
+          collecties
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/export/" class="">
+          exporteren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/filmstrip/" class="">
+          filmstrip
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/focus-peaking/" class="">
+          focus peaking
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/geotagging/" class="">
+          geotaggen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/tagging/" class="">
+          labelen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/metadata-editor/" class="">
+          metadata-editor
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/scopes/" class="">
+          scopes
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/shared/recent-collections/" class="">
+          snelle verzamelingen
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/map/" class="">
+          Kaart
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/map/map-settings/" class="">
+          kaartinstellingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/map/locations/" class="">
+          locaties
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/map/find-location/" class="">
+          zoek locatie
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/" class="">
+          ontwikkelen
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/image-info-line/" class="">
+          afbeelding informatie regel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/clipping/" class="">
+          clipping waarschuwing
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/duplicate-manager/" class="">
+          duplo beheerder
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/gamut/" class="">
+          gamma controle
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/history-stack/" class="">
+          geschiedenis
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/global-color-picker/" class="">
+          globale kleurkiezer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/guides-overlays/" class="">
+          hulplijnen en overlays
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/color-assessment/" class="">
+          kleurbeoordeling
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/mask-manager/" class="">
+          masker-manager
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/module-order/" class="">
+          module volgorde
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/snapshots/" class="">
+          momentopname
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/navigation/" class="">
+          navigatie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/raw-overexposed/" class="">
+          raw overbelicht waarschuwing
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/darkroom/soft-proof/" class="">
+          soft proof
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/print/" class="">
+          print
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/print/print-settings/" class="">
+          printer instellingen
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/tethering/" class="">
+          tethering
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/tethering/camera-settings/" class="">
+          camera instellingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/tethering/live-view/" class="">
+          live weergave
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/utility-modules/tethering/session/" class="">
+          sessie
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/" class="">
+          verwerkingsmodules
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/base-curve/" class="">
+          basis curve
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/basic-adjustments/" class="">
+          basisaanpassingen (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/exposure/" class="">
+          belichting
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/censorize/" class="">
+          censureren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/chromatic-aberrations/" class="">
+          chromatische aberraties
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/contrast-equalizer/" class="">
+          contrast equalizer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/contrast-brightness-saturation/" class="">
+          contrast helderheid verzadiging
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/demosaic/" class="">
+          demozaïek
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/diffuse/" class="">
+          diffuus of verscherpen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/dithering/" class="">
+          dithering
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/rotate-pixels/" class="">
+          draai pixels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/split-toning/" class="">
+          duo-toning
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/filmic-rgb/" class="">
+          filmisch rgb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/bloom/" class="">
+          glans
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/global-tonemap/" class="">
+          globale toonmap (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/graduated-density/" class="">
+          grijsverloop
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/highpass/" class="">
+          highpass
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/highlight-reconstruction/" class="">
+          hooglichten herstellen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/hot-pixels/" class="">
+          hot pixels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/input-color-profile/" class="">
+          ingaand kleurprofiel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/colorize/" class="">
+          inkleuren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/invert/" class="">
+          inverteren (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/fill-light/" class="">
+          invullicht (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/channel-mixer/" class="">
+          kanaalmenger (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-reconstruction/" class="">
+          kleur reconstructie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-contrast/" class="">
+          kleurcontrast
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-correction/" class="">
+          kleurcorrectie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-balance/" class="">
+          kleurenbalans
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-balance-rgb/" class="">
+          kleurenbalans rgb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-mapping/" class="">
+          kleurenkaart
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-calibration/" class="">
+          kleurkalibratie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-look-up-table/" class="">
+          kleurzoeker
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/color-zones/" class="">
+          kleurzones
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/grain/" class="">
+          korrel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/lens-correction/" class="">
+          lenscorrectie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/vibrance/" class="">
+          levendigheid (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/local-contrast/" class="">
+          lokaal contrast
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/lowpass/" class="">
+          lowpass
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/lut-3d/" class="">
+          lut 3D
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/monochrome/" class="">
+          monochroom
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/negadoctor/" class="">
+          negatieven assistent
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/haze-removal/" class="">
+          nevel verwijderen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/levels/" class="">
+          niveaus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/framing/" class="">
+          omlijsten
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/astrophoto-denoise/" class="">
+          ontruis astrofoto
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/surface-blur/" class="">
+          oppervlakte vervaging
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/orientation/" class="">
+          oriëntatie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/raw-chromatic-aberrations/" class="">
+          raw chromatische aberraties
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/raw-black-white-point/" class="">
+          raw zwart/wit punt
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/retouch/" class="">
+          retoucheren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/rgb-curve/" class="">
+          rgb curve
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/rgb-levels/" class="">
+          rgb niveaus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/rotate-perspective/" class="">
+          roteren en perspectief
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/denoise-profiled/" class="">
+          ruisreductie (profiel)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/raw-denoise/" class="">
+          ruisreductie raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/scale-pixels/" class="">
+          schaal pixels
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/shadows-and-highlights/" class="">
+          schaduwen en hooglichten
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/tone-mapping/" class="">
+          tonemapping (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/tone-curve/" class="">
+          toon curve
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/tone-equalizer/" class="">
+          toon equalizer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/output-color-profile/" class="">
+          uitgaand kleurprofiel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/crop/" class="">
+          uitsnijden
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/crop-rotate/" class="">
+          uitsnijden en roteren (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/liquify/" class="">
+          uitvloeien
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/velvia/" class="">
+          velvia
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/unbreak-input-profile/" class="">
+          verbreek ingaand profiel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/sharpen/" class="">
+          verscherpen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/blurs/" class="">
+          vervagen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/defringe/" class="">
+          verwijder franje (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/soften/" class="">
+          verzachten (soften)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/vignetting/" class="">
+          vignettering
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/spot-removal/" class="">
+          vlekverwijdering (verouderd)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/watermark/" class="">
+          watermerk
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/white-balance/" class="">
+          witbalans
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/lowlight-vision/" class="">
+          zicht bij weinig licht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/module-reference/processing-modules/zone-system/" class="">
+          zonesysteem (verouderd)
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/" class="">
+          Voorkeuren en instellingen
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/general/" class="">
+          algemeen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/import/" class="">
+          importeren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/lighttable/" class="">
+          bibliotheek
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/darkroom/" class="">
+          ontwikkelen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/processing/" class="">
+          verwerken
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/security/" class="">
+          veiligheid
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/storage/" class="">
+          opslag
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/miscellaneous/" class="">
+          diversen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/shortcuts/" class="">
+          snelkoppelingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/presets/" class="">
+          voorinstellingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/preferences-settings/lua-options/" class="">
+          lua-opties
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/" class="">
+          Scripten met Lua
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/basic-principles/" class="">
+          basisprincipes: luarc bestanden
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/a-simple-example/" class="">
+          een eenvoudig lua-voorbeeld
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/printing-labeled-images/" class="">
+          gelabelde afbeeldingen afdrukken
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/simple-shortcut/" class="">
+          een eenvoudige snelkoppeling toevoegen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/exporting-images/" class="">
+          afbeeldingen exporteren met lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/building-ui-elements/" class="">
+          gebruikersinterface-elementen bouwen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/sharing-scripts/" class="">
+          scripts delen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/calling-from-dbus/" class="">
+          lua aanroepen vanuit dbus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/darktable-from-lua/" class="">
+          darktable gebruiken vanuit een lua-script
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/lua/api/" class="">
+          lua API
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/guides-tutorials/" class="">
+          Gidsen en handleidingen
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/guides-tutorials/monochrome/" class=" active">
+          ontwikkeling van monochrome afbeeldingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/guides-tutorials/batch-editing/" class="">
+          batch-bewerking afbeeldingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/guides-tutorials/other-resources/" class="">
+          andere bronnen
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/" class="">
+          Speciale onderwerpen
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/" class="">
+          kleurbeheer
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/display-profile/" class="">
+          schermprofiel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/rendering-method/" class="">
+          rendermethode
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/rendering-intent/" class="">
+          renderintentie
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/color-spaces/" class="">
+          kleurruimten van darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/unbounded-colors/" class="">
+          ongebonden kleuren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/color-artifacts/" class="">
+          mogelijke kleurartefacten
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-management/color-dimensions/" class="">
+          kleurdimensies van darktable
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/" class="">
+          opencl
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/background/" class="">
+          de achtergrond
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/how-opencl-works/" class="">
+          hoe opencl werkt
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/activate-opencl/" class="">
+          opencl activeren in darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/setting-up/" class="">
+          opencl configureren
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/problems-solutions/" class="">
+          mogelijke problemen &amp; oplossingen
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/scheduling-profile/" class="">
+          planningsprofiel
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/multiple-devices/" class="">
+          meerdere apparaten
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/opencl/still-doesnt-work/" class="">
+          opencl werkt nog steeds niet voor mij
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/mem-performance/" class="">
+          geheugen &amp; prestatie-afstemming
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/darktable-chart/" class="">
+          darktable-chart gebruiken
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/darktable-chart/overview/" class="">
+          overzicht
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/darktable-chart/usage/" class="">
+          gebruik
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/darktable-chart/source-image/" class="">
+          bronafbeelding
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/darktable-chart/reference-values/" class="">
+          referentiewaarden
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/darktable-chart/process/" class="">
+          proces
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/darktable-chart/making-input-images/" class="">
+          invoerafbeeldingen maken voor darktable-chart
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/" class="">
+          programma oproepen
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/darktable/" class="">
+          darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/darktable-cli/" class="">
+          darktable-cli
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/darktable-generate-cache/" class="">
+          darktable-generate-cache
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/darktable-chart/" class="">
+          darktable-chart
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/darktable-cltest/" class="">
+          darktable-cltest
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/darktable-cmstest/" class="">
+          darktable-cmstest
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/program-invocation/purge_non_existing_images_sh/" class="">
+          purge_non_existing_images.sh
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/color-pipeline/" class="">
+          darktable&#39;s kleurenpijplijn
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/midi-device-support/" class="">
+          ondersteuning voor midi-apparaten
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/contributing/" class="">
+          bijdragen aan dtdocs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/nl/special-topics/translating/" class="">
+          dtdocs vertalen
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+
+		</nav>
+	    </div>
+
+            
+
+        </div>
+
+
+    </body>
+</html>
+
+<script>
+(function($) {
+  
+
+  $.fn.scrollToMiddle = function(options) {
+    var settings = $.extend({
+        duration: 0
+    }, options );
+
+    return this.each(function() {
+      var $el = $(this);
+      var elOffset = $el.offset().top;
+      var elHeight = $el.height();
+      var windowHeight = $(window).height();
+      var offset;
+      if (elHeight < windowHeight) {
+        offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
+      }
+      else {
+        offset = elOffset;
+      }
+      $('.navigation').scrollTop(offset);
+    });
+  };
+}(jQuery));
+
+$('.navigation').css('opacity', '0');
+ $(document).ready(function(){
+     $('.parent ul').hide();
+     $('.navigation').css('opacity', 1.0);
+     $('.active').parents('ul').show();
+     $('.active').siblings('ul').show();
+     $('.active').children('i.toggle').removeClass("fa-plus-squre").addClass("fa-minus-square-o");
+     $('.active').parents('li').children('.toggle').removeClass("fa-plus-square").addClass("fa-minus-square-o");
+     $('.active').scrollToMiddle();
+
+     $('.toggle').on('click', function (e) {
+       e.stopPropagation();
+       $(this).siblings('ul').slideToggle();
+
+       if($(this).hasClass("fa-plus-square")) {
+           $(this).addClass("fa-minus-square-o");
+           $(this).removeClass("fa-plus-square");
+       }
+       else {
+           $(this).addClass("fa-plus-square");
+           $(this).removeClass("fa-minus-square-o");
+       }
+     });
+ });
+
+</script>
+
+
+<script>
+ var _paq = window._paq = window._paq || [];
+  
+ _paq.push(['trackPageView']);
+ _paq.push(['enableLinkTracking']);
+ (function() {
+     var u="https://piwik.kees.nl/";
+     _paq.push(['setTrackerUrl', u+'matomo.php']);
+     _paq.push(['setSiteId', '21']);
+     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+ })();
+</script>
+<noscript><p><img src="https://piwik.kees.nl/matomo.php?idsite=21&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+
+

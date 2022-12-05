@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>el pixelpipe on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/es/darkroom/pixelpipe/</link>
+    <description>Recent content in el pixelpipe on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/es/darkroom/pixelpipe/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>la anatomía de un módulo de procesamiento</title>
+      <link>https://darktable-org.github.io/dtdocs/es/darkroom/pixelpipe/the-anatomy-of-a-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/darkroom/pixelpipe/the-anatomy-of-a-module/</guid>
+      <description>El elemento básico del procesamiento de imágenes en darktable es el módulo de procesamiento. Para procesar una imagen en bruto, varios de estos módulos actúan sobre la imagen de entrada en secuencia, cada uno de los cuales realiza una operación diferente sobre los datos de la imagen. Para aquellos familiarizados con Adobe Photoshop, el concepto de un módulo de procesamiento en darktable es análogo al de una capa de ajuste en que ambos hacen un ajuste incremental a la imagen, construyendo sobre los ajustes que vinieron antes.</description>
+    </item>
+    
+    <item>
+      <title>el pixelpipe y orden de módulos</title>
+      <link>https://darktable-org.github.io/dtdocs/es/darkroom/pixelpipe/the-pixelpipe-and-module-order/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/darkroom/pixelpipe/the-pixelpipe-and-module-order/</guid>
+      <description>La secuencia ordenada de módulos de procesamiento que operan en un archivo de entrada para generar una imagen de salida se conoce como &amp;ldquo;pixelpipe&amp;rdquo;.
+El orden del pixelpipe se representa gráficamente por el orden en el que se presentan los módulos en la interfaz de usuario: el pixelpipe comienza con una imagen RAW en la parte inferior de la lista de módulos y aplica los módulos de procesamiento uno por uno, acumulando capas sobre capa de procesamiento de abajo hacia arriba, hasta que alcanza la parte superior de la lista, donde genera la imagen completamente procesada.</description>
+    </item>
+    
+    <item>
+      <title>el historial</title>
+      <link>https://darktable-org.github.io/dtdocs/es/darkroom/pixelpipe/history-stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/darkroom/pixelpipe/history-stack/</guid>
+      <description>La pila de historial almacena todo el historial de edición de una imagen determinada, en el orden en que se aplicaron esas ediciones. Se guarda en la base de datos de la biblioteca de darktable y en el archivo sidecar XMP de la imagen y persiste entre las sesiones de edición.
+Cada vez que se habilita, deshabilita, mueve o modifica un módulo de procesamiento, se agrega una nueva entrada a la parte superior de la pila de historial.</description>
+    </item>
+    
+    <item>
+      <title>hacer y deshacer</title>
+      <link>https://darktable-org.github.io/dtdocs/es/darkroom/pixelpipe/undo-redo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/darkroom/pixelpipe/undo-redo/</guid>
+      <description>Mientras edita su imagen, darktable registra todas las modificaciones que realiza en esa imagen. Esto significa que es posible deshacer y rehacer cambios para recuperar un estado de edición anterior. Tenga en cuenta que la función de deshacer / rehacer es ilimitada en el número de pasos durante la edición de una imagen, pero se restablece cada vez que se cambia el cuarto oscuro a una nueva imagen.
+Presione Ctrl + Z para deshacer la última modificación y Ctrl + Y para rehacer la última modificación deshecha (si corresponde).</description>
+    </item>
+    
+  </channel>
+</rss>

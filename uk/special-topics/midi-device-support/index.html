@@ -1,0 +1,3009 @@
+<!doctype html>
+<html lang="uk">
+    <head>
+      <meta charset="utf-8">
+<meta http-equiv="x-ua-compatible" content="ie=edge">
+<title>darktable 4.0 user manual - підтримка пристроїв MIDI</title>
+<meta name="description" content="">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+
+
+
+
+
+
+
+
+      <link rel="stylesheet" href="/dtdocs/css/style.min.3b298d8f37646aff6a802627ff27a707153196970e12552ddf3f7e6fdf49ebb1.css">
+      
+
+
+<script> var indexURL="https:\/\/darktable-org.github.io\/dtdocs\/uk\/index.json"</script>
+<script src="/dtdocs/js/jquery.js"></script>
+<script src="/dtdocs/js/popper.js" type="module"></script>
+<script src="/dtdocs/js/bootstrap.js"></script>
+<script src="/dtdocs/js/lunr.js"></script>
+<script src="/dtdocs/js/app.js"></script>
+
+
+    </head>
+    <body>
+        
+
+        <header class="navbar navbar-expand-lg sticky-top  navbar-dark bg-dark">
+   <a class="navbar-brand" href="/dtdocs" rel="home" title="darktable 4.0 user manual">
+	darktable 4.0 user manual
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ml-auto">
+	    
+	      <li class="nav-item dropdown" aria-describedby="language-picker-description">
+		   <p class="sr-only" id="language-picker-description">languages</p>
+		   <a class="nav-link dropdown-toggle" href="#" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">
+             <img src="https://darktable-org.github.io/dtdocs//language-icons/icon20x24px-exported-transparent.png" alt="Language Icon" height="20" class="translation-icon"/>
+		     <span>translations</span>
+		   </a>
+		   <div class="dropdown-menu dropdonw-trans" role="listbox">
+		      <a class="dropdown-item" aria-selected="true" hreflang="uk" role="option" lang="uk" href="https://darktable-org.github.io/dtdocs/uk/special-topics/midi-device-support/">Ukrainian</a>
+		        
+		      <a class="dropdown-item" hreflang="en" role="option" lang="en" href="https://darktable-org.github.io/dtdocs/en/special-topics/midi-device-support/">English</a>
+		    
+		      <a class="dropdown-item" hreflang="de" role="option" lang="de" href="https://darktable-org.github.io/dtdocs/de/special-topics/midi-device-support/">German</a>
+		    
+		      <a class="dropdown-item" hreflang="pt_br" role="option" lang="pt_br" href="https://darktable-org.github.io/dtdocs/pt_br/special-topics/midi-device-support/">Português</a>
+		    
+		      <a class="dropdown-item" hreflang="nl" role="option" lang="nl" href="https://darktable-org.github.io/dtdocs/nl/special-topics/midi-device-support/">Dutch</a>
+		    
+		   </div>
+	       </li>
+	    
+	</ul>
+        <ul>
+           <form class="form-inline my-2 my-lg-0">
+                <input id="search-input" class="form-control mr-sm-2" type="search" placeholder="Search" autocomplete="off" aria-label="Search">
+           </form>
+        </ul>
+
+
+    </div>
+</header>
+
+<div id="search-results" class="search-results">
+</div>
+
+
+        <div class="container-fluid">
+	    <div class="row">
+		<div class="content col-sm-12 order-sm-1 col-md-9 mx-md-auto order-md-12">
+		    
+
+
+
+<div class="crumbs">
+    <span class="crumb">
+	
+
+<a href='/dtdocs/uk/'>darktable</a> / <a href='/dtdocs/uk/special-topics/'>Спеціальні теми</a> / підтримка пристроїв MIDI
+    </span>
+</div>
+
+<div class="prev-next row">
+    <div class="col-6">
+    
+	<a href="/dtdocs/uk/special-topics/color-pipeline/" class="next">&lt; колірний конвеєр darktable</a>
+	
+    </div>
+    <div class="col-6">
+    
+	<a href="/dtdocs/uk/special-topics/contributing/" class="prev">внесок у dtdocs &gt;</a>
+	
+    </div>
+</div>
+
+
+<article role="main">
+
+    <h1 class="title">
+        підтримка пристроїв MIDI
+    </h1>
+
+    
+
+    <p>Система зіставлення прискорювачів була найбільш ретельно протестована за допомогою Behringer X-Touch Mini й містить користувальницький код для роботи з особливими функціями цього пристрою. Усі інші пристрої розглядаються як &ldquo;загальні midi&rdquo; і можуть працювати або не працювати (добре) або щоразу потребувати ручного налаштування. Конфігураційний фреймворк (можливо, в lua) для підтримки додаткових функцій пристрою є у списку справ.</p>
+<p>Якщо вам вдасться запустити пристрій MIDI, який не був згаданий нижче, будемо дуже вдячні, якщо ви надасте зворотній зв’язок, щоб допомогти іншим, якщо знадобляться якісь спеціальні дії. Ви можете зробити це, надіславши <a href="https://github.com/darktable-org/dtdocs/pulls" target="_blank">запит на прийняття змін</a> до документації, щоб змінити цю сторінку, або <a href="https://github.com/darktable-org/dtdocs/issues" target="_blank">підняти проблему</a>, що містить необхідну інформацію. Крім того, ви можете прочитати або відповісти на будь-яку із (можливо, закритих) MIDI або &ldquo;inputng&rdquo; <a href="https://github.com/darktable-org/darktable/issues" target="_blank">проблем</a> або <a href="https://github.com/darktable-org/darktable/pull" target="_blank">запитів на прийняття змін</a> у головному репозиторії darktable, якщо вам самому потрібна додаткова допомога чи вказівки.</p>
+<h1 id="behringer-x-touch-mini"><a href="#behringer-x-touch-mini">🔗</a>Behringer X-touch Mini</h1>
+<p>Пристрій має бути в стандартному режимі (не MC). Шари A і B певною мірою підтримуються, проте, оскільки пристрій не надсилає сповіщення при перемиканні між шарами, а також оскільки оновлення &ldquo;прихованих&rdquo; роторів та індикаторів (як під кнопками, так і візерунком, що використовується навколо роторів) ігноруються, все буде повністю оновлено лише після того, як ви натиснете або повернете щось у &ldquo;новому&rdquo; шарі.</p>
+<p>Світлові кільця навколо роторів показують різний малюнок залежно від того, чи має пов’язаний повзунок симетричний діапазон +/- з центром навколо 0, 0-100 (або 0-1) або будь-що інше. Якщо він пов’язаний зі спадним списком (або рейтингом зірок), ротор буде перемикатися по одному світлу за раз. Якщо спадне меню містить багато (більше 13) елементів (наприклад, спадне меню режиму змішування), ротор буде обертатися двічі; перший раз з одним увімкненим світлом, а другий раз з двома сусідніми.</p>
+<h1 id="arturia-beatstep"><a href="#arturia-beatstep">🔗</a>Arturia Beatstep</h1>
+<p>Окремі ротори можна налаштувати на передачу абсолютних (0-127) значень або змін (+/- 1,2,3,&hellip; у різних кодуваннях). Рекомендовано значення Relative #1 для всіх регуляторів, у яких для параметра Knob Acceleration (прискорення регулятора) встановлено значення Slow (Off) або Medium. Це можна налаштувати за допомогою <a href="https://www.arturia.com/support/downloads&amp;manuals" target="_blank">Midi Control Center</a>, доступного для Windows або MacOS. За замовчуванням модуль darktable midi передбачає, для невідомих пристроїв, що ротори використовують абсолютне кодування. Тому після запуску йому потрібно повідомити, що пристрій надсилає відносні рухи. Ви можете зробити це, повільно повернувши один із кодерів ліворуч (вниз) 5 разів. Це дозволяє модулю визначити, яке з кількох відносних кодувань використовується. Якщо вам не вдасться змінити кодування з першої спроби, ви можете повторно ініціалізувати вхідні модулі, натиснувши Ctrl+Shift+Alt+I і повторити спробу. Якщо у вас все ще виникають проблеми, спробуйте <a href="https://wd40.co.uk/product/fast-drying-contact-cleaner/" target="_blank">це</a>.</p>
+<p>Якщо ви зіставите кнопки Beatstep з рейтингами, кольоровими позначками або кнопками перемикання, вони повинні засвітитися, коли відповідний елемент увімкнено.</p>
+<h1 id="behringer-bcr2000"><a href="#behringer-bcr2000">🔗</a>Behringer BCR2000</h1>
+<p>(і, можливо, BCF2000)</p>
+<p>Ці машини гнучко конфігуруються, тому є багато налаштувань, які можуть ускладнити взаємодію з MIDI-модулем darktable. Для їх конфігурування можна використовувати <a href="https://mountainutilities.eu/bcmanager" target="_blank">BC Manager</a> (доступний для Windows і MacOS). Найпростіше скинути всі кодери та кнопки до найпростіших налаштувань, що можна зробити (для BCR2000) за допомогою <a href="https://github.com/dterrahe/darktable/files/6539400/bcr2000.all.buttons.and.encoders.zip" target="_blank">цього файлу</a>. Ви можете надіслати його на машину за допомогою BC Manager або (під Linux) за допомогою amidi. Існує також глобальне налаштування під назвою &ldquo;Deadtime&rdquo;, яке визначає, як довго BCR ігнорує повідомлення, що надходять після надсилання оновлень. Це робиться для того, щоб уникнути циклів зворотного зв’язку, але для darktable це означає, що воно блокує коригування, надіслані назад одразу після кожного руху ротора. Тому Deadtime потрібно встановити на 0.</p>
+<p>Після налаштування таким чином всі індикатори кнопок і ротора повинні працювати. Верхній ряд роторів (або єдиний ряд для BCF2000) підтримує різні схеми індикації (як X-Touch Midi, з деякими додатковими опціями і має 15 замість 13 світлодіодів). Однак їх налаштування є складнішим і ще не реалізовано. Він також здається повільнішим, тому може бути неможливим у реальному часі для кожного оновлення (як це робиться для X-touch). Тому на даний момент використовується лише 12-точковий візерунок. Для роторів, пов’язаних зі спадними списками, так само, як і на роторі X-touch, світло обходить двічі; для перших 15 варіантів горить тільки одна лампочка, для других 15 варіантів світяться два сусідніх індикатора.</p>
+<h1 id="loupedeck"><a href="#loupedeck">🔗</a>Loupedeck</h1>
+<p>(і Loupedeck+, але не пізніші пристрої, які не мають MIDI)</p>
+<p>Виходячи з інформації, наданої <a href="https://discuss.pixls.us/t/midi-controller-for-darktable/2582/92" target="_blank">тут</a>, більшість функціональних можливостей перших двох моделей Loupedeck (обидві на базі MIDI) повинні підтримуватися, з такими винятками та застереженнями:</p>
+<ul>
+<li>
+<p>Кнопки Hue/Sat/Lum можна зіставити з вкладками блокнота в модулі колірних зон, але маленькі індикатори поруч з ними можуть не реагувати на повідомлення про оновлення, надіслані, коли користувач перемикає вкладки за допомогою миші, тому вони можуть вийти з синхронізації</p>
+</li>
+<li>
+<p>8 повзунків/колес можна окремо зіставити з елементами графіка в колірних зонах</p>
+</li>
+</ul>
+<p>Крім цього, оскільки Loupedeck використовує відносне кодування (тому схоже на Beatstep), йому потрібно буде повідомляти midi-модулю під час кожного запуску (доки не буде впроваджено систему конфігурації). Ви робите це, повертаючи будь-яку ручку (або колеса) повільно вниз/вліво 5 разів. Повторно ініціалізуйте вхідний шар за допомогою Ctrl+Shift+Alt+I, якщо це не спрацювало з першого разу, щоб ви могли спробувати ще раз.</p>
+<h1 id="korg-nanokontrol2"><a href="#korg-nanokontrol2">🔗</a>Korg nanoKONTROL2</h1>
+<p>Пристрій слід спочатку налаштувати за допомогою програми Korg Kontrol Editor, щоб він перебував у режимі CC, і кожна кнопка повинна бути налаштована на тип Note та поведінку кнопки Momentary. Щоб керувати підсвічуванням кнопок, режим LED має бути встановлений на External. Важливо відзначити, що кнопки Track і Marker не мають світлодіодів.</p>
+<p><a href="https://github.com/darktable-org/darktable/files/7603658/note_buttons.zip" target="_blank">Тут</a> доступний профіль Kontrol Editor, який можна завантажити за допомогою програми Windows, щоб безпосередньо налаштувати всі ці параметри для правильної роботи з darktable.</p>
+<h1 id="додаткові-налаштування-midi"><a href="#%d0%b4%d0%be%d0%b4%d0%b0%d1%82%d0%ba%d0%be%d0%b2%d1%96-%d0%bd%d0%b0%d0%bb%d0%b0%d1%88%d1%82%d1%83%d0%b2%d0%b0%d0%bd%d0%bd%d1%8f-midi">🔗</a>додаткові налаштування MIDI</h1>
+<p>Якщо darktable скомпільовано з portmidi, він під час запуску намагатиметься відкрити до 10 MIDI-пристроїв у порядку їх знаходження. У командному рядку ви можете побачити щось на зразок цього:</p>
+<pre tabindex="0"><code>[midi_open_devices] opened midi device 'Arturia BeatStep' via 'MMSystem' as midi0
+[midi_open_devices] opened midi device 'BCR2000' via 'MMSystem' as midi1
+[midi_open_devices] opened midi device 'X-TOUCH MINI' via 'MMSystem' as midi2
+</code></pre><p>Можуть виникнути дві проблеми:</p>
+<ul>
+<li>
+<p>пристрій, який ви не хочете використовувати, все одно може бути відкрито (і потенційно це може спричинити неадекватну поведінку, як-от передчасний запуск феєрверку (див. <a href="http://webcache.googleusercontent.com/search?q=cache:6EcEOjfjiAkJ:gmbh.pyropak.com/docs/downloads/surefire-prologic-digital-controller_rev2010.pdf&#43;&amp;cd=1&amp;hl=uk&amp;ct=clnk&amp;gl=us" target="_blank">цей документ</a>), або</p>
+</li>
+<li>
+<p>пристрої можуть відображатися в іншому порядку під час наступного запуску (наприклад, тому що вони підключені до іншого порту USB). Оскільки конфігурації зберігаються лише з номером пристрою, зміна порядку призведе до вибору неправильної розкладки.</p>
+</li>
+</ul>
+<p>Ви можете вказати, які пристрої явно завантажувати в певному місці, а які пропускати, використовуючи параметр конфігурації <a href="/dtdocs/uk/preferences-settings/miscellaneous/#%d1%96%d0%bd%d1%82%d0%b5%d1%80%d1%84%d0%b5%d0%b9%d1%81">налаштування &gt; різне &gt; інтерфейс &gt; впорядкувати або виключити MIDI-пристрої</a>. Щоб пропустити завантаження BCR2000 у наведеному вище прикладі та закріпити два інші пристрої в слотах 0 і 2, ви можете встановити цей параметр конфігурації на &ldquo;<code>BeatStep;dontuse;X-TOUCH;-BCR2000</code>&rdquo;. Це залишить BeatStep як пристрій midi0, midi1 завжди залишиться невикористаним, взагалі не завантажить BCR2000, але якщо підключені будь-які інші пристрої, вони відображатимуться як midi3, midi4 тощо. Додавання &ldquo;<code>;-</code>&rdquo; в кінці запобігатиме завантаженню подальших пристроїв. Або, якщо ви просто вкажете параметр конфігурації як один знак мінус &ldquo;<code>-</code>&rdquo;, то жодні пристрої не завантажуватимуться взагалі.</p>
+<p>Ручки міді-контролера можуть використовувати кілька різних &ldquo;кодувань&rdquo;. Кодування за замовчуванням, абсолютне, надсилає значення від 0 (повністю ліворуч) до 127 (повністю праворуч) &ndash; повзунки також можуть використовувати абсолютне кодування. Відносні кодування надсилають значення &ldquo;вниз&rdquo;, якщо ви повертаєте їх ліворуч, і значення &ldquo;вгору&rdquo;, якщо повертаєте їх праворуч. Тому повільне повертання такої ручки &ldquo;вгору&rdquo; призведе, наприклад, до надсилання &ldquo;1, 1, 1, 1&rdquo;. Але залежно від того, скільки бітів використовується і яке кодування, повільний поворот ліворуч може бути 127 (8 біт -1) або 63, 31 або 15. Або навіть 65. Якщо нічого не вказано в цьому параметрі, передбачається, що MIDI-пристрої використовують абсолютне кодування. Але якщо перші п’ять отриманих повідомлень ідентичні, передбачається, що користувач повільно повернув ручку вліво/вниз, і кодування виводиться з цього та відображається у вигляді тимчасового повідомлення. Кодування не запам’ятовується для кожного пристрою, тому цей маневр потрібно повторювати при кожному запуску. Щоб визначити виведене кодування для наступного запуску, ви можете додати цей параметр до налаштування &ldquo;впорядкувати або виключити MIDI-пристрої&rdquo;. Наприклад &ldquo;<code>Loupedeck:127</code>&rdquo;.</p>
+<p>Деякі MIDI-контролери мають клавіші з підсвічуванням під ними. Їх можна використовувати для перемикання налаштувань і показу поточного положення, увімкнувши або вимкнувши світло. У цьому випадку darktable періодично (кілька разів на секунду) перевіряє, чи не було змінено, скажімо, положення екранної кнопки перемикання, і надсилає повідомлення будь-яким пов’язаним кнопкам MIDI-пристроїв, щоб увімкнути або вимкнути їх світло. Але якщо ненавмисно було підключено невідомий пристрій, це може бути небажаним. Таким чином, за замовчуванням darktable чекає, доки не буде отримано повідомлення &ldquo;note&rdquo; від MIDI-кнопки, перш ніж надсилати будь-які &ldquo;note&rdquo;-повідомлення про увімкнення/вимкнення підсвічування для цієї кнопки. Таким чином також не адресується більше кнопок, ніж є на пристрої. Якщо ви хочете негайно використовувати всі підсвічування кнопок (замість того, щоб натискати найвищу ноту один раз для кожного сеансу), ви можете вказати кількість кнопок у параметрі &ldquo;впорядкувати або виключити MIDI-пристрої&rdquo;, наприклад, &ldquo;<code>BeatStep:63:16</code>&rdquo;.</p>
+
+
+    
+    <h3 class="translations_head">translations</h3>
+    <ul class="translations">
+        
+        <li><a href="/dtdocs/en/special-topics/midi-device-support/">
+            English: midi device support
+        </a></li>
+        
+        <li><a href="/dtdocs/de/special-topics/midi-device-support/">
+            German: MIDI-Geräteunterstützung
+        </a></li>
+        
+        <li><a href="/dtdocs/pt_br/special-topics/midi-device-support/">
+            Português: suporte a dispositivo midi
+        </a></li>
+        
+        <li><a href="/dtdocs/nl/special-topics/midi-device-support/">
+            Dutch: ondersteuning voor midi-apparaten
+        </a></li>
+        
+    </ul>
+    
+</article>
+
+<div class="prev-next row">
+    <div class="col-6">
+    
+	<a href="/dtdocs/uk/special-topics/color-pipeline/" class="next">&lt; колірний конвеєр darktable</a>
+	
+    </div>
+    <div class="col-6">
+    
+	<a href="/dtdocs/uk/special-topics/contributing/" class="prev">внесок у dtdocs &gt;</a>
+	
+    </div>
+</div>
+
+
+
+      </div>
+		<nav class="navigation col-sm-12 order-sm-12 col-md-3 order-md-1">
+		    <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/" class="">
+          Огляд
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/user-interface/" class="">
+          інтерфейс користувача
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/user-interface/views/" class="">
+          режими
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/user-interface/screen-layout/" class="">
+          макет екрана
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/user-interface/filmstrip/" class="">
+          стрічка знімків
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/user-interface/top-panel/" class="">
+          верхня панель
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/user-interface/keyboard-shortcuts/" class="">
+          клавіатурні прискорювачі
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/supported-file-formats/" class="">
+          підтримувані формати файлів
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/sidecar-files/" class="">
+          файли xmp та неруйнівне редагування
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/sidecar-files/sidecar/" class="">
+          файли xmp
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/sidecar-files/sidecar-import/" class="">
+          імпортування файлів xmp, створених іншими програмами
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/sidecar-files/local-copies/" class="">
+          локальні копії
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/workflow/" class="">
+          введення в робочий процес darktable
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/workflow/introduction/" class="">
+          вступ
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/workflow/import-review/" class="">
+          імпорт і огляд
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/workflow/process/" class="">
+          обробка
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/overview/workflow/export/" class="">
+          експорт
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/" class="">
+          Світлий стіл
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/overview/" class="">
+          огляд
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/lighttable-view-layout/" class="">
+          розкладка режиму світлого стола
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/undo-redo/" class="">
+          скасувати/повторити
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/lighttable-modes/" class="">
+          режими світлого стола
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/lighttable-modes/filemanager/" class="">
+          файловий менеджер
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/lighttable-modes/zoomable-lighttable/" class="">
+          масштабований світлий стіл
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/lighttable-modes/culling/" class="">
+          вибракування
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/lighttable-modes/full-preview/" class="">
+          повний попередній перегляд
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/digital-asset-management/" class="">
+          управління цифровими активами
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/digital-asset-management/collections/" class="">
+          колекції та плівки
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/digital-asset-management/thumbnails/" class="">
+          мініатюри
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/digital-asset-management/star-color/" class="">
+          рейтинги зірок та кольорові позначки
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/digital-asset-management/grouping/" class="">
+          групування зображень
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lighttable/digital-asset-management/metadata-tagging/" class="">
+          метадані та тегування
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/" class="">
+          Темна кімната
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/overview/" class="">
+          огляд
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/darkroom-view-layout/" class="">
+          розкладка режиму темної кімнати
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/pixelpipe/" class="">
+          конвеєр обробки
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/pixelpipe/the-anatomy-of-a-module/" class="">
+          анатомія модуля обробки
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/pixelpipe/the-pixelpipe-and-module-order/" class="">
+          конвеєр обробки та порядок модулів
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/pixelpipe/history-stack/" class="">
+          стек історії змін
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/pixelpipe/undo-redo/" class="">
+          скасування і повторення
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/processing-modules/" class="">
+          модулі обробки
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/processing-modules/module-header/" class="">
+          заголовок модуля
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/processing-modules/multiple-instances/" class="">
+          кілька екземплярів
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/processing-modules/presets/" class="">
+          пресети
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/processing-modules/module-controls/" class="">
+          елементи керування модулем
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/processing-modules/curves/" class="">
+          криві
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/processing-modules/wavelets/" class="">
+          вейвлети
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/processing-modules/deprecated/" class="">
+          застарілі модулі
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/masking-and-blending/" class="">
+          маскування і змішування
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/masking-and-blending/overview/" class="">
+          огляд
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/masking-and-blending/blend-modes/" class="">
+          режими змішування
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/masking-and-blending/masks/" class="">
+          маски
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/masking-and-blending/masks/overview/" class="">
+          огляд
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/masking-and-blending/masks/drawn/" class="">
+          намальовані маски
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/masking-and-blending/masks/parametric/" class="">
+          параметричні маски
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/masking-and-blending/masks/drawn-and-parametric/" class="">
+          поєднання намальованих та параметричних масок
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/masking-and-blending/masks/refinement-controls/" class="">
+          уточнення маски та додаткові елементи керування
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/masking-and-blending/masks/raster/" class="">
+          растрові маски
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/organization/" class="">
+          організація
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/organization/overview/" class="">
+          огляд
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/organization/module-groups/" class="">
+          групи модулів
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/organization/quick-access-panel/" class="">
+          панель швидкого доступу
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/darkroom/organization/manage-module-layouts/" class="">
+          керування розкладкою модулів
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/tethering/" class="">
+          Керування камерою
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/tethering/overview/" class="">
+          огляд
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/tethering/tethering-view-layout/" class="">
+          розкладка режиму камери
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/tethering/troubleshooting/" class="">
+          вирішення проблем
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/map/" class="">
+          Мапа
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/map/overview/" class="">
+          огляд
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/map/map-view-layout/" class="">
+          розкладка режиму мапи
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/slideshow/" class="">
+          Слайд-шоу
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/slideshow/overview/" class="">
+          огляд
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/slideshow/usage/" class="">
+          використання
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/print/" class="">
+          Друк
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/print/overview/" class="">
+          огляд
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/print/print-view-layout/" class="">
+          розкладка режиму друку
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/" class="">
+          Довідка про модулі
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/overview/" class="">
+          огляд
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/" class="">
+          модулі обробки
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/filmic-rgb/" class="">
+          filmic rgb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/lut-3d/" class="">
+          lut 3D
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/raw-chromatic-aberrations/" class="">
+          raw хроматичні аберації
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/velvia/" class="">
+          velvia
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/base-curve/" class="">
+          базова крива
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/white-balance/" class="">
+          баланс білого
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/spot-removal/" class="">
+          видалення плям (застарілий)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/haze-removal/" class="">
+          видалення серпанку
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/output-color-profile/" class="">
+          вихідний ICC профіль
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/watermark/" class="">
+          водяний знак
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/input-color-profile/" class="">
+          вхідний ICC профіль
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/color-reconstruction/" class="">
+          відновлення кольору
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/highlight-reconstruction/" class="">
+          відновлення переекспонованих ділянок
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/vignetting/" class="">
+          віньєтування
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/global-tonemap/" class="">
+          глобальне тональне відображення (застарілий)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/graduated-density/" class="">
+          градієнтний фільтр
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/demosaic/" class="">
+          демозаїкізація
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/hot-pixels/" class="">
+          дефектні пікселі
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/dithering/" class="">
+          дизеринг
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/diffuse/" class="">
+          дифузія / різкість
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/contrast-equalizer/" class="">
+          еквалайзер контрасту
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/tone-equalizer/" class="">
+          еквалайзер тонів
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/exposure/" class="">
+          експозиція
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/fill-light/" class="">
+          заповнююче світло (застарілий)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/grain/" class="">
+          зерно
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/channel-mixer/" class="">
+          змішувач каналів (застарілий)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/denoise-profiled/" class="">
+          знешумлення (профільоване)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/raw-denoise/" class="">
+          знешумлення raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/astrophoto-denoise/" class="">
+          знешумлення астрофото
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/zone-system/" class="">
+          зонна система (застарілий)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/crop/" class="">
+          кадрування
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/color-calibration/" class="">
+          калібрування кольору
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/color-balance/" class="">
+          колірний баланс
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/color-balance-rgb/" class="">
+          колірний баланс rgb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/color-contrast/" class="">
+          колірний контраст
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/color-zones/" class="">
+          колірні зони
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/contrast-brightness-saturation/" class="">
+          контраст, яскравість, насиченість
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/unbreak-input-profile/" class="">
+          корекція вхідного профілю
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/color-correction/" class="">
+          корекція кольору
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/lens-correction/" class="">
+          корекція оптики
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/rgb-curve/" class="">
+          крива rgb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/local-contrast/" class="">
+          локальний контраст
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/scale-pixels/" class="">
+          масштабування пікселів
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/monochrome/" class="">
+          монохром
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/negadoctor/" class="">
+          негадоктор
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/lowlight-vision/" class="">
+          нічне бачення
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/rotate-pixels/" class="">
+          обертання пікселів
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/rotate-perspective/" class="">
+          обертання та перспектива
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/framing/" class="">
+          обрамлення
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/orientation/" class="">
+          орієнтація
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/basic-adjustments/" class="">
+          основні коригування (застарілий)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/color-mapping/" class="">
+          перенос кольорів
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/liquify/" class="">
+          пластика
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/surface-blur/" class="">
+          поверхневе розмиття
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/soften/" class="">
+          пом&#39;якшення
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/defringe/" class="">
+          прибирання кайми (застарілий)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/vibrance/" class="">
+          резонанс (застарілий)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/retouch/" class="">
+          ретуш
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/blurs/" class="">
+          розмиття
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/levels/" class="">
+          рівні
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/rgb-levels/" class="">
+          рівні rgb
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/sharpen/" class="">
+          різкість
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/bloom/" class="">
+          світіння
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/split-toning/" class="">
+          спліт-тонування
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/color-look-up-table/" class="">
+          таблиця пошуку кольорів
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/tone-mapping/" class="">
+          тональне відображення (застарілий)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/tone-curve/" class="">
+          тонова крива
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/colorize/" class="">
+          тонування
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/raw-black-white-point/" class="">
+          точки чорного і білого в raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/crop-rotate/" class="">
+          трансформації (застарілий)
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/shadows-and-highlights/" class="">
+          тіні та світлі тони
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/highpass/" class="">
+          фільтр високих частот
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/lowpass/" class="">
+          фільтр низьких частот
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/chromatic-aberrations/" class="">
+          хроматичні аберації
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/censorize/" class="">
+          цензурування
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/processing-modules/invert/" class="">
+          інверсія (застарілий)
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/" class="">
+          сервісні модулі
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/print/" class="">
+          друк
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/print/print-settings/" class="">
+          налаштування друку
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/tethering/" class="">
+          керування камерою
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/tethering/live-view/" class="">
+          live view
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/tethering/camera-settings/" class="">
+          налаштування камери
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/tethering/session/" class="">
+          сеанс
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/map/" class="">
+          мапа
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/map/locations/" class="">
+          місця
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/map/map-settings/" class="">
+          налаштування мапи
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/map/find-location/" class="">
+          пошук на мапі
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/lighttable/" class="">
+          світлий стіл
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/lighttable/lua-scripts-installer/" class="">
+          lua scripts installer
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/lighttable/select/" class="">
+          вибрати
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/lighttable/selected-image/" class="">
+          дії з вибраними зображеннями
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/lighttable/styles/" class="">
+          стилі
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/lighttable/timeline/" class="">
+          шкала часу
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/lighttable/import/" class="">
+          імпорт
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/lighttable/history-stack/" class="">
+          історія змін
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/shared/" class="">
+          спільні
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/shared/focus-peaking/" class="">
+          виділення контурів у фокусі
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/shared/geotagging/" class="">
+          геотегування
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/shared/scopes/" class="">
+          гістограми
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/shared/export/" class="">
+          експорт
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/shared/collections/" class="">
+          колекції
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/shared/recent-collections/" class="">
+          недавно використані колекції
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/shared/metadata-editor/" class="">
+          редактор метаданих
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/shared/filmstrip/" class="">
+          стрічка знімків
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/shared/tagging/" class="">
+          теги
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/shared/collection-filters/" class="">
+          фільтри для колекцій
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/shared/image-information/" class="">
+          інформація про зображення
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/" class="">
+          темна кімната
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/soft-proof/" class="">
+          екранна кольоропроба
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/duplicate-manager/" class="">
+          менеджер дублікатів
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/mask-manager/" class="">
+          менеджер масок
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/snapshots/" class="">
+          миттєві знімки
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/navigation/" class="">
+          навігація
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/guides-overlays/" class="">
+          напрямні та накладки
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/color-assessment/" class="">
+          оцінка кольорів
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/gamut/" class="">
+          перевірка охоплення
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/clipping/" class="">
+          попередження про кліппінг
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/raw-overexposed/" class="">
+          попередження про переекспозицію в raw
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/module-order/" class="">
+          порядок застосування модулів
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/global-color-picker/" class="">
+          піпетка кольору
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/image-info-line/" class="">
+          рядок інформації про зображення
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/module-reference/utility-modules/darkroom/history-stack/" class="">
+          історія змін
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/preferences-settings/" class="">
+          Налаштування
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/preferences-settings/overview/" class="">
+          огляд
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/preferences-settings/general/" class="">
+          загальні
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/preferences-settings/import/" class="">
+          імпорт
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/preferences-settings/lighttable/" class="">
+          світлий стіл
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/preferences-settings/darkroom/" class="">
+          темна кімната
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/preferences-settings/processing/" class="">
+          обробка
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/preferences-settings/security/" class="">
+          безпека
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/preferences-settings/storage/" class="">
+          збереження даних
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/preferences-settings/miscellaneous/" class="">
+          різне
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/preferences-settings/shortcuts/" class="">
+          клавіатурні прискорювачі
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/preferences-settings/presets/" class="">
+          пресети
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/preferences-settings/lua-options/" class="">
+          опції lua
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lua/" class="">
+          Сценарії за допомогою Lua
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lua/overview/" class="">
+          огляд
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lua/basic-principles/" class="">
+          основні принципи: файли luarc
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lua/a-simple-example/" class="">
+          простий приклад lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lua/printing-labeled-images/" class="">
+          друк зображень із міткою
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lua/simple-shortcut/" class="">
+          додавання простого прискорювача
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lua/exporting-images/" class="">
+          експортування зображень за допомогою lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lua/building-ui-elements/" class="">
+          побудова елементів інтерфейсу користувача
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lua/sharing-scripts/" class="">
+          обмін сценаріями
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lua/calling-from-dbus/" class="">
+          виклик lua з dbus
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lua/darktable-from-lua/" class="">
+          використання darktable зі сценарію lua
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/lua/api/" class="">
+          lua API
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/guides-tutorials/" class="">
+          Посібники та підручники
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/guides-tutorials/monochrome/" class="">
+          обробка монохромних зображень
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/guides-tutorials/batch-editing/" class="">
+          пакетне редагування зображень
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/guides-tutorials/other-resources/" class="">
+          інші ресурси
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/" class="">
+          Спеціальні теми
+      </a>
+
+   <ul>
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/color-management/" class="">
+          управління кольором
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/color-management/overview/" class="">
+          огляд
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/color-management/display-profile/" class="">
+          профіль дисплея
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/color-management/rendering-method/" class="">
+          метод візуалізації
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/color-management/rendering-intent/" class="">
+          метод візуалізації
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/color-management/color-spaces/" class="">
+          колірні простори darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/color-management/unbounded-colors/" class="">
+          необмежені кольори
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/color-management/color-artifacts/" class="">
+          можливі кольорові артефакти
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/color-management/color-dimensions/" class="">
+          виміри кольору darktable
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/opencl/" class="">
+          opencl
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/opencl/background/" class="">
+          загальна інформація
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/opencl/how-opencl-works/" class="">
+          як працює opencl
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/opencl/activate-opencl/" class="">
+          активація opencl у darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/opencl/setting-up/" class="">
+          налаштування opencl
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/opencl/problems-solutions/" class="">
+          можливі проблеми та рішення
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/opencl/scheduling-profile/" class="">
+          профіль планування
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/opencl/multiple-devices/" class="">
+          кілька пристроїв
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/opencl/still-doesnt-work/" class="">
+          opencl все ще не працює в мене
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/mem-performance/" class="">
+          налаштування пам&#39;яті та продуктивності
+      </a>
+
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/darktable-chart/" class="">
+          використання darktable-chart
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/darktable-chart/overview/" class="">
+          огляд
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/darktable-chart/usage/" class="">
+          використання
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/darktable-chart/source-image/" class="">
+          джерельне зображення
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/darktable-chart/reference-values/" class="">
+          контрольні значення
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/darktable-chart/process/" class="">
+          обробка
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/darktable-chart/making-input-images/" class="">
+          створення вхідних зображень для darktable-chart
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li class="parent">
+      <i class="fa fa-plus-square toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/program-invocation/" class="">
+          виклик програми
+      </a>
+
+   <ul>
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/program-invocation/darktable/" class="">
+          darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/program-invocation/darktable-cli/" class="">
+          darktable-cli
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/program-invocation/darktable-generate-cache/" class="">
+          darktable-generate-cache
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/program-invocation/darktable-chart/" class="">
+          darktable-chart
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/program-invocation/darktable-cltest/" class="">
+          darktable-cltest
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/program-invocation/darktable-cmstest/" class="">
+          darktable-cmstest
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/program-invocation/purge_non_existing_images_sh/" class="">
+          purge_non_existing_images.sh
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/color-pipeline/" class="">
+          колірний конвеєр darktable
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/midi-device-support/" class=" active">
+          підтримка пристроїв MIDI
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/contributing/" class="">
+          внесок у dtdocs
+      </a>
+
+   </li>
+   
+   <li>
+      <i class="no-toggle"></i>
+   
+
+      <a href="/dtdocs/uk/special-topics/translating/" class="">
+          переклад dtdocs
+      </a>
+
+   </li>
+   </ul>
+   </li>
+   </ul>
+
+		</nav>
+	    </div>
+
+            
+
+        </div>
+
+
+    </body>
+</html>
+
+<script>
+(function($) {
+  
+
+  $.fn.scrollToMiddle = function(options) {
+    var settings = $.extend({
+        duration: 0
+    }, options );
+
+    return this.each(function() {
+      var $el = $(this);
+      var elOffset = $el.offset().top;
+      var elHeight = $el.height();
+      var windowHeight = $(window).height();
+      var offset;
+      if (elHeight < windowHeight) {
+        offset = elOffset - ((windowHeight / 2) - (elHeight / 2));
+      }
+      else {
+        offset = elOffset;
+      }
+      $('.navigation').scrollTop(offset);
+    });
+  };
+}(jQuery));
+
+$('.navigation').css('opacity', '0');
+ $(document).ready(function(){
+     $('.parent ul').hide();
+     $('.navigation').css('opacity', 1.0);
+     $('.active').parents('ul').show();
+     $('.active').siblings('ul').show();
+     $('.active').children('i.toggle').removeClass("fa-plus-squre").addClass("fa-minus-square-o");
+     $('.active').parents('li').children('.toggle').removeClass("fa-plus-square").addClass("fa-minus-square-o");
+     $('.active').scrollToMiddle();
+
+     $('.toggle').on('click', function (e) {
+       e.stopPropagation();
+       $(this).siblings('ul').slideToggle();
+
+       if($(this).hasClass("fa-plus-square")) {
+           $(this).addClass("fa-minus-square-o");
+           $(this).removeClass("fa-plus-square");
+       }
+       else {
+           $(this).addClass("fa-plus-square");
+           $(this).removeClass("fa-minus-square-o");
+       }
+     });
+ });
+
+</script>
+
+
+<script>
+ var _paq = window._paq = window._paq || [];
+  
+ _paq.push(['trackPageView']);
+ _paq.push(['enableLinkTracking']);
+ (function() {
+     var u="https://piwik.kees.nl/";
+     _paq.push(['setTrackerUrl', u+'matomo.php']);
+     _paq.push(['setSiteId', '21']);
+     var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+     g.async=true; g.src=u+'matomo.js'; s.parentNode.insertBefore(g,s);
+ })();
+</script>
+<noscript><p><img src="https://piwik.kees.nl/matomo.php?idsite=21&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+
+

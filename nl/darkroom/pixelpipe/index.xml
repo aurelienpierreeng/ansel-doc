@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>de pixelpijp on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/nl/darkroom/pixelpipe/</link>
+    <description>Recent content in de pixelpijp on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/nl/darkroom/pixelpipe/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>de anatomie van een verwerkingsmodule</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/pixelpipe/the-anatomy-of-a-module/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/pixelpipe/the-anatomy-of-a-module/</guid>
+      <description>Het basis element van beeldverwerking in darktable is de verwerkingsmodule. Om een raw beeld te verwerken worden een aantal van deze modules in volgorde uitgevoerd op de afbeelding, waarbij elke module zijn eigen bewerking uitvoert. Voor degenen die bekend zijn met Adobe Photoshop, het concept van een verwerkingsmodule in darktable is vergelijkbaar met een aanpassingslaag in die zin dat beide een stapsgewijze aanpassing van de afbeelding maken, voortbouwend op de eerdere aanpassingen.</description>
+    </item>
+    
+    <item>
+      <title>de pixelpijp &amp; module volgorde</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/pixelpipe/the-pixelpipe-and-module-order/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/pixelpipe/the-pixelpipe-and-module-order/</guid>
+      <description>De geordende reeks van verwerkingsmodules die op een invoerbestand werken om een uitvoerbeeld te genereren, staat bekend als de &amp;ldquo;pixelpijp&amp;rdquo;.
+De volgorde van de pixelpipe wordt grafisch weergegeven door de volgorde waarin modules worden gepresenteerd in de gebruikersinterface - de pixelpijp begint met een RAW-afbeelding onderaan de modulelijst en past de verwerkingsmodules één voor één toe, laag op verwerkingslaag van onder naar boven, totdat het de top van de lijst bereikt, waar het de volledig verwerkte afbeelding uitvoert.</description>
+    </item>
+    
+    <item>
+      <title>geschiedenis</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/pixelpipe/history-stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/pixelpipe/history-stack/</guid>
+      <description>De geschiedenis slaat de volledige bewerkingsgeschiedenis voor een bepaalde afbeelding op in de volgorde waarin die bewerkingen zijn toegepast. Het wordt opgeslagen in de bibliotheek database van darktable en het XMP sidecar-bestand van de afbeelding en blijft bestaan tussen bewerkingssessies.
+Elke keer dat een verwerkingsmodule wordt ingeschakeld, uitgeschakeld, verplaatst of gewijzigd, wordt er een nieuw item toegevoegd aan de bovenkant van de geschiedenis.
+De geschiedenis kan worden opgevraagd en gewijzigd binnen de geschiedenis module in ontwikkelen.</description>
+    </item>
+    
+    <item>
+      <title>ongedaan maken / opnieuw uitvoeren</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/pixelpipe/undo-redo/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/pixelpipe/undo-redo/</guid>
+      <description>Terwijl je jouw afbeelding bewerkt, registreert darktable alle wijzigingen die je aan die afbeelding aanbrengt. Dit betekent dat het mogelijk is om wijzigingen ongedaan te maken en opnieuw uit te voeren om een eerdere bewerkingsstatus te herstellen. Houd er rekening mee dat de functie voor ongedaan maken/opnieuw uitvoeren onbeperkt is in het aantal stappen tijdens het bewerken van een afbeelding, maar wordt iedere keer gereset als ontwikkelen overschakelt naar een nieuwe afbeelding.</description>
+    </item>
+    
+  </channel>
+</rss>

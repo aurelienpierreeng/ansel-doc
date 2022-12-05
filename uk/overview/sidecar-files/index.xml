@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>файли xmp та неруйнівне редагування on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/uk/overview/sidecar-files/</link>
+    <description>Recent content in файли xmp та неруйнівне редагування on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/uk/overview/sidecar-files/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>файли xmp</title>
+      <link>https://darktable-org.github.io/dtdocs/uk/overview/sidecar-files/sidecar/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/uk/overview/sidecar-files/sidecar/</guid>
+      <description>darktable &amp;ndash; це неруйнівний редактор зображень, який відкриває всі зображення в режимі лише для читання. Будь-які дані, створені в darktable (метадані, теги та кроки обробки зображень), зберігаються в окремих файлах .XMP. Ці файли зберігаються поряд із оригінальними файлами raw і дозволяють darktable зберігати інформацію про зображення, а також повну історію редагування, не торкаючись оригінальних raw файлів. Коли ви вперше імпортуєте зображення в darktable, файл XMP автоматично створюється. Генерування файлів XMP можна відключити в налаштування &amp;gt; збереження даних &amp;gt; xmp, але це не рекомендується у звичайному використанні.</description>
+    </item>
+    
+    <item>
+      <title>імпортування файлів xmp, створених іншими програмами</title>
+      <link>https://darktable-org.github.io/dtdocs/uk/overview/sidecar-files/sidecar-import/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/uk/overview/sidecar-files/sidecar-import/</guid>
+      <description>When importing an image, darktable automatically checks if it is accompanied by a sidecar file. As well as looking for files named &amp;lt;basename&amp;gt;.&amp;lt;extension&amp;gt;.xmp and &amp;lt;basename&amp;gt;_nn.&amp;lt;extension&amp;gt;.xmp (darktable&amp;rsquo;s XMP file naming formats) darktable also checks for the presence of a file in the form &amp;lt;basename&amp;gt;.xmp (the naming format for Lightroom&amp;rsquo;s XMP sidecar files). Files with the latter naming format will be read by darktable but will not be written to. Once the image has been imported, darktable will generate an additional XMP file using its own naming convention.</description>
+    </item>
+    
+    <item>
+      <title>локальні копії</title>
+      <link>https://darktable-org.github.io/dtdocs/uk/overview/sidecar-files/local-copies/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/uk/overview/sidecar-files/local-copies/</guid>
+      <description>Багато користувачів мають величезні колекції зображень, що зберігаються на додаткових жорстких дисках у настільному комп&amp;rsquo;ютері або на зовнішньому носії інформації (RAID NAS, зовнішні жорсткі диски тощо).
+Загальною вимогою є можливість обробити ряд зображень під час подорожі за допомогою ноутбука, а потім згодом синхронізувати їх назад до початкового носія інформації. Однак копіювання зображень вручну з основного сховища на ноутбук і назад є громіздким і схильним до помилок процесом. Функція “локальних копій” darktable була розроблена для безпосередньої підтримки цих випадків використання.</description>
+    </item>
+    
+  </channel>
+</rss>

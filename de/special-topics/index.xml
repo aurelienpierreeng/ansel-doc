@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Spezielle Themen on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/de/special-topics/</link>
+    <description>Recent content in Spezielle Themen on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/de/special-topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Memory und Leistungs-Optimierung</title>
+      <link>https://darktable-org.github.io/dtdocs/de/special-topics/mem-performance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/de/special-topics/mem-performance/</guid>
+      <description>🔗Memory Anforderungen Die Bearbeitung eines RAW Bildes in darktable braucht sehr viel Speicher. Eine ganz einfache Rechnung kann das zeigen: Für eine 20 Megapixel-Bild braucht darktable eine 4x32-bit Fliesskomma-Zelle, um jedes Pixel zu speichern, was bedeutet, jedes ganze Bild dieser Grösse wird deshalb ca 300 MB Speicher erfordern, um die Bilddaten zu speichern. Um dieses Bild nun tatsächlich in einem bestimmten Modul zu bearbeiten, braucht darktable zwei Pufferspeicher dieser Grösse (für die Eingabe und für die Ausgabe).</description>
+    </item>
+    
+    <item>
+      <title>Die Farb-Pipeline von darktable</title>
+      <link>https://darktable-org.github.io/dtdocs/de/special-topics/color-pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/de/special-topics/color-pipeline/</guid>
+      <description>Die meisten Bild-Bearbeitungs-Anwendungen kommen aus den 1990ern und/oder erben einen 1990 Arbeitsablauf. Diese Anwendungen kodierten mit 8 bit vorzeichenlosen Ganzzahl, weil es Speicher- und Rechner-effizienter war. Jedoch, durch den Gebrauch eines Ganzzahl-Formates (was Rundungsfehler zur Folge hat) musste man ein &amp;ldquo;Gamma&amp;rdquo; hinzufügen (notwendigerweise eine Transfer-Funktion eine Potenz von 1/2.2 0der 1/2.4 um RGB Werte zu kodieren) und erhöhe die Bit-Tiefe in den Schatten, um Rundungsfehler zu reduzieren (Menschen sind sehr sensitiv für Schatten-Details).</description>
+    </item>
+    
+    <item>
+      <title>MIDI-Geräteunterstützung</title>
+      <link>https://darktable-org.github.io/dtdocs/de/special-topics/midi-device-support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/de/special-topics/midi-device-support/</guid>
+      <description>Das System der Kurzbefehl-Mappings wurde intensiv mit dem Behringer X-Touch Mini getestet und enthält den zugehörigen Code mit den spezifischen Eigenschaften dieses Gerätes. Alle anderen Geräte werden als &amp;ldquo;generische MIDI&amp;rdquo; behandelt und können oder auch nicht (gut) funktionieren oder erfordern gewisse manuelle Nachjustierung. Konfigurations-Rahmenbedingungen (möglicherweise in lua), um zusätzliche Geräte-spezifische zu unterstützen sind auf der Aufgabenliste.
+If you succeed in getting a midi device up and running that hasn&amp;rsquo;t been mentioned below, it would be greatly appreciated if you would provide feedback in order to assist others, if any special steps are required.</description>
+    </item>
+    
+    <item>
+      <title>Mitarbeiten an dtdocs</title>
+      <link>https://darktable-org.github.io/dtdocs/de/special-topics/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/de/special-topics/contributing/</guid>
+      <description>Diese Seite beinhaltet die Gestaltungsrichtlinien für dtdocs und Informationen, wie an diesem Projekt mitgemacht werden kann.
+Sie wird in das Benutzerhandbuch eingefügt, damit du sehen kannst, wie die Seite zusammengestellt wird und wie es geschrieben wird. Bitte gehe zu GitHub, um die Quelle für diese Seite zu sehen.
+Die Struktur der Anleitung und der Inhalt wurden nach den folgenden Kriterien sorgfältig ausgewählt:
+ Die Anleitung soll umfassend sein, d.h. sie sollte in darktable enthaltenen Funktionalität vollständig beschreiben.</description>
+    </item>
+    
+    <item>
+      <title>dtdocs übersetzen</title>
+      <link>https://darktable-org.github.io/dtdocs/de/special-topics/translating/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/de/special-topics/translating/</guid>
+      <description>Die Übersetzung der Dokumentation von darktable wird mit unserer Weblate Instanz ausgeführt.
+Du kannst die Übersetzungsarbeiten der Dokumentation entweder über das Web von Weblate machen, oder die Übersetzung herunterladen, diese editieren und die Änderungen wieder hochladen.
+Bitte erstelle alle Übersetzungen in Weblate. Wir akzeptieren keine Pull-Anfragen direkt auf GitHub, um PO-Dateien zu aktualisieren.
+🔗Erstellen eines neuen Zweiges in git  Erstelle einen neuen Zweig in git, um daran zu arbeiten. Zum Beispiel: git checkout -b fr-translation-init  🔗Eine neue Sprache zu Hugo hinzufügen   Lokalisiere die Zeile languages: in den Dateien config.</description>
+    </item>
+    
+  </channel>
+</rss>

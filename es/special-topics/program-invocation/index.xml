@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>invocación del programa on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/es/special-topics/program-invocation/</link>
+    <description>Recent content in invocación del programa on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/es/special-topics/program-invocation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>darktable</title>
+      <link>https://darktable-org.github.io/dtdocs/es/special-topics/program-invocation/darktable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/special-topics/program-invocation/darktable/</guid>
+      <description>El binario darktable comienza darktable con su GUI y funcionalidad completa. Esta es la forma estándar de usar darktable.
+Se puede llamar a darktable con los siguientes parámetros de línea de comando:
+darktable [-d {all,act_on,cache,camctl,camsupport,control,demosaic, dev,fswatch,imageio,input,ioporder,lighttable,lua, masks,memory,nan,opencl,params,perf,print,pwstorage, signal,sql,tiling,undo,verbose}] [&amp;lt;input file&amp;gt;|&amp;lt;image folder&amp;gt;] [--version] [--disable-opencl] [--library &amp;lt;library file&amp;gt;] [--datadir &amp;lt;data directory&amp;gt;] [--moduledir &amp;lt;module directory&amp;gt;] [--tmpdir &amp;lt;tmp directory&amp;gt;] [--configdir &amp;lt;user config directory&amp;gt;] [--cachedir &amp;lt;user cache directory&amp;gt;] [--localedir &amp;lt;locale directory&amp;gt;] [--luacmd &amp;lt;lua command&amp;gt;] [--noiseprofiles &amp;lt;noiseprofiles json file&amp;gt;] [--d-signal &amp;lt;signal&amp;gt;] [--d-signal-act &amp;lt;all,raise,connect,disconnect,print-trace&amp;gt;] [--conf &amp;lt;key&amp;gt;=&amp;lt;value&amp;gt;] [-t &amp;lt;num openmp threads&amp;gt;] Todos los parámetros son opcionales.</description>
+    </item>
+    
+    <item>
+      <title>darktable-generate-cache</title>
+      <link>https://darktable-org.github.io/dtdocs/es/special-topics/program-invocation/darktable-generate-cache/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/special-topics/program-invocation/darktable-generate-cache/</guid>
+      <description>El binario darktable-generate-cache actualiza el caché de miniaturas de darktable. Invoque este programa para generar todas las miniaturas que faltan en segundo plano cuando su computadora esté inactiva.
+darktable-generate-cache se puede llamar con los siguientes parámetros de línea de comando:
+darktable-generate-cache [-h, --help] [--version] [--min-mip &amp;lt;0-8&amp;gt;] [-m, --max-mip &amp;lt;0 - 8&amp;gt;] [--min-imgid &amp;lt;N&amp;gt;] [--max-imgid &amp;lt;N&amp;gt;] [--core &amp;lt;opciones de darktable&amp;gt;] Todos los parámetros son opcionales. Si se inicia sin parámetros, darktable-generate-cache utiliza valores predeterminados razonables.</description>
+    </item>
+    
+    <item>
+      <title>darktable-chart</title>
+      <link>https://darktable-org.github.io/dtdocs/es/special-topics/program-invocation/darktable-chart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/special-topics/program-invocation/darktable-chart/</guid>
+      <description>El binario darktable-chart es una utilidad dedicada para crear estilos a partir de pares de imágenes como RAW + JPEG con procesamiento en la cámara. Los detalles sobre su uso se pueden encontrar en la sección usando darktable-chart.
+darktable-chart puede iniciar una GUI o usarse como un programa de línea de comandos.
+darktable-chart [--help] [&amp;lt;fichero Lab pfm de entrada&amp;gt;] [&amp;lt;fichero cht&amp;gt;] [&amp;lt;fichero de referencia cgats/it8 or Lab pfm&amp;gt;] Todos los parámetros son opcionales, sin embargo, si desea proporcionar el segundo nombre de archivo, también debe proporcionar el primero.</description>
+    </item>
+    
+    <item>
+      <title>darktable-cltest</title>
+      <link>https://darktable-org.github.io/dtdocs/es/special-topics/program-invocation/darktable-cltest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/special-topics/program-invocation/darktable-cltest/</guid>
+      <description>El binario darktable-cltest comprueba si hay un entorno OpenCL utilizable en su sistema que darktable pueda usar. Emite una salida de depuración que es equivalente a llamar a darktable -d opencl y luego termina.
+darktable-cltest se llama sin parámetros de línea de comando.</description>
+    </item>
+    
+    <item>
+      <title>darktable-cmstest</title>
+      <link>https://darktable-org.github.io/dtdocs/es/special-topics/program-invocation/darktable-cmstest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/special-topics/program-invocation/darktable-cmstest/</guid>
+      <description>El binario darktable-cmstest (solo Linux) investiga si el subsistema de gestión del color de su computadora está configurado correctamente y muestra información útil sobre los perfiles de monitor instalados.
+darktable-cmstest se llama sin parámetros de línea de comando.</description>
+    </item>
+    
+    <item>
+      <title>purge_non_existing_images.sh</title>
+      <link>https://darktable-org.github.io/dtdocs/es/special-topics/program-invocation/purge_non_existing_images_sh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/special-topics/program-invocation/purge_non_existing_images_sh/</guid>
+      <description>Encontrar y remover entradas de la base de datos de la biblioteca que referencian imágenes que ya no existen en el sistema de archivos. Se debe cerrar darktable antes de correr el script.
+El script se puede llamar con los siguientes parámetros de línea de comando:
+purge_non_existing_images.sh [-c|--configdir &amp;lt;path&amp;gt;] [-l|--library &amp;lt;path&amp;gt;] [-p|--purge] Correr el script sin opciones para realizar una &amp;ldquo;corrida de prueba&amp;rdquo;, que genera un reporte de los archivos faltantes sin realizar ningún cambio en la base de datos.</description>
+    </item>
+    
+  </channel>
+</rss>

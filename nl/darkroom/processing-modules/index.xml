@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>verwerkingsmodules on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/</link>
+    <description>Recent content in verwerkingsmodules on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>module koptekst</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/module-header/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/module-header/</guid>
+      <description>Bovenaan elke verwerkingsmodule staat de module koptekst.
+  Klik op de modulenaam om de module uit te vouwen en de parameters weer te geven die de werking ervan regelen.
+Darktable staat standaard toe dat slechts één verwerkingsmodule tegelijk wordt uitgevouwen &amp;ndash; als je op de koptekst van een andere module klikt, worden de besturingselementen van de eerder geopende module samengevouwen. Als je meer dan één module wilt uitbreiden, kan je verdere modules uitvouwen door Shift+klikken op de koptekst en alle eerder uitgevouwen modules blijven open.</description>
+    </item>
+    
+    <item>
+      <title>meerdere sessies</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/multiple-instances/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/multiple-instances/</guid>
+      <description>Veel van darktable&amp;rsquo;s modules kunnen meer dan eens in de pixelpijp worden toegepast. Elke sessie van een module gedraagt zich onafhankelijk, neemt zijn input van de module eronder in de pixelpijp en levert zijn output aan de volgende module.
+Net als bij de basissessie van een module, kunnen alle sessies onafhankelijk binnen de pixelpijp worden verplaatst door Ctrl+Shift ingedrukt te houden tijdens het slepen en neerzetten of door &amp;ldquo;omhoog&amp;rdquo; of &amp;ldquo;omlaag&amp;rdquo; te kiezen in het vervolgkeuzemenu meerdere sessies.</description>
+    </item>
+    
+    <item>
+      <title>voorinstellingen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/presets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/presets/</guid>
+      <description>Met voor-instellingen kan je veelgebruikte module-instellingen opslaan voor toekomstig gebruik. Sommige modules worden al geleverd met voorgedefinieerde (interne) voorinstellingen en kan je ook jouw eigen (gebruiker gedefinieerd) instellingen definiëren. Zowel interne als door de gebruiker gedefinieerde voorinstellingen kunnen worden weergegeven door op het voorinstelling menu in de module koptekst te klikken.
+De meeste functionaliteit die hier wordt beschreven, is alleen van toepassing op verwerkingsmodules. Voorinstellingen kunnen echter ook worden gebruikt met sommige hulpprogramma-modules.</description>
+    </item>
+    
+    <item>
+      <title>module instellingen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/module-controls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/module-controls/</guid>
+      <description>In dit gedeelte wordt beschreven hoe u kunt werken met de besturingselementen van de verwerkingsmodule.
+🔗schuifregelaars Schuifregelaars bieden vijf verschillende interactiemethoden, afhankelijk van het controleniveau dat je nodig heeft.
+ links-klik Klik ergens in het gebied van de schuifregelaar om de waarde in te stellen. Je kan ook klikken en slepen om het te wijzigen. Je hoeft niet op de driehoek of zelfs de lijn te mikken &amp;ndash; je kan overal in de volledige hoogte van de schuifregelaar klikken, inclusief het label.</description>
+    </item>
+    
+    <item>
+      <title>curves</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/curves/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/curves/</guid>
+      <description>De basiscurve, [toon curve](../../module-reference/processing-modules/tone-curve. md) en rgb curve modules gebruiken curves om de tonen in de afbeelding te regelen. Deze modules hebben een aantal gemeenschappelijke kenmerken die een aparte bespreking rechtvaardigen.
+  🔗knopen In hun standaardstatus zijn curves rechte lijnen, gedefinieerd door twee ankerknooppunten rechtsboven en linksonder in de grafiek. Je kan de knooppunten verplaatsen om de curve aan te passen of nieuwe knooppunten te genereren door op de curve te klikken.</description>
+    </item>
+    
+    <item>
+      <title>wavelets</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/wavelets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/wavelets/</guid>
+      <description>Wavelets worden gebruikt om een afbeelding te scheiden (of te ontbinden) in een aantal verschillende lagen, die elk een ander detailniveau bevatten. Na het op deze manier ontleden van een afbeelding, kan een module de verwerking ervan beperken tot een of meer van deze detaillagen, en vervolgens de lagen aan het einde weer samenvoegen om de uitvoer te vormen. Dit stelt ons in staat om chirurgisch te zijn over welke kenmerken in het beeld we willen beïnvloeden bij het werken met een module.</description>
+    </item>
+    
+    <item>
+      <title>verouderde modules</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/deprecated/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/processing-modules/deprecated/</guid>
+      <description>Het darktable-team beoordeelt regelmatig oude modules en werkt hun implementatie bij waar problemen worden gevonden of bijgewerkte wetenschap betekent dat ze kunnen worden verbeterd. Meestal proberen we bestaande modules bij te werken met nieuwe functionaliteit, maar af en toe wordt dat problematisch, vaak vanwege de overhead van het onderhouden van meerdere versies van de module. In dergelijke omstandigheden wordt een nieuwe vervangende module gemaakt en wordt de oude module afgeschaft.</description>
+    </item>
+    
+  </channel>
+</rss>

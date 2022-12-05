@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>compartido on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/</link>
+    <description>Recent content in compartido on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>colecciones</title>
+      <link>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/collections/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/collections/</guid>
+      <description>Filtre las imágenes que se muestran en la vista de la mesa de luz y el panel de tira de película utilizando atributos de imagen. Este conjunto de imágenes filtradas se conoce como colección.
+Importar imágenes en darktable almacena información sobre ellas (nombre de archivo, carpeta, datos Exif, datos de los archivos XMP, etc.) en la base de datos de la biblioteca de darktable. Se puede definir una colección aplicando reglas de filtrado a estos atributos, creando así un subconjunto de imágenes para mostrar en la vista de la mesa de luz y el módulo de tira de película.</description>
+    </item>
+    
+    <item>
+      <title>etiquetado</title>
+      <link>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/tagging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/tagging/</guid>
+      <description>Administre las etiquetas adjuntas a las imágenes.
+Las etiquetas proporcionan un medio para agregar información a las imágenes mediante un diccionario de palabras clave. También puede administrar las etiquetas como un árbol jerárquico, lo que puede resultar útil cuando su número aumenta.
+Las etiquetas se almacenan físicamente en los archivos sidecar XMP y así mismo en la base de datos de librería de darktable y pueden ser incluidos en las imágenes exportadas.</description>
+    </item>
+    
+    <item>
+      <title>exportar</title>
+      <link>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/export/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/export/</guid>
+      <description>Exportar imágenes seleccionadas.
+Cuando se usa en la vista de cámara oscura, la imagen actualmente editada será exportada si no hay otras imágenes seleccionadas en la tira de imágenes.
+Los archivos se pueden exportar a un archivo en el disco, correo electrónico, varias ubicaciones de almacenamiento en línea, un álbum web o una plantilla de libro.
+🔗controles del módulo 🔗opciones de almacenamiento  almacenamiento de destino El tipo de ubicación para almacenar las imágenes seleccionadas.</description>
+    </item>
+    
+    <item>
+      <title>geoetiquetado</title>
+      <link>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/geotagging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/geotagging/</guid>
+      <description>Importe y aplique datos de seguimiento GPX a una selección de imágenes.
+Este módulo es común a [mesa de luz] (../../../ lighttable / _index.md) y [mapa] (../../../ map / _index.md). El mapa proporciona un modo mejorado en la vista de mapa que le permite obtener una vista previa de la posición de las imágenes a lo largo de las pistas GPS mientras ajusta la fecha / hora (desplazamiento) y la zona horaria de las imágenes.</description>
+    </item>
+    
+    <item>
+      <title>información de la imagen</title>
+      <link>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/image-information/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/image-information/</guid>
+      <description>Muestra la información incrustada dentro de los datos Exif de una imagen, así como una serie de campos de datos adicionales definidos por darktable.
+Al pasar el ratón sobre las miniaturas de imágenes, los datos presentados se actualizan automáticamente para mostrar información sobre la imagen que se encuentra actualmente debajo del cursor del ratón.
+Cuando varias imágenes están seleccionadas y el foco no está en una sola imagen, el módulo solo muestra la información común para todas las imágenes.</description>
+    </item>
+    
+    <item>
+      <title>monitor de gráficos</title>
+      <link>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/scopes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/scopes/</guid>
+      <description>Este módulo proporciona varias representaciones gráficas de los niveles de luz o cromaticidad de la imagen revelada.
+  Mueva el mouse sobre el panel para mostrar los botones que le permiten ajustar la pantalla. El botón más a la izquierda alterna el modo entre histograma, alcance de forma de onda, alcance de desfile RGB y vectorscopio. Los botones restantes controlan cómo se dibuja la trama para el alcance actual.</description>
+    </item>
+    
+    <item>
+      <title>picos de enfoque</title>
+      <link>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/focus-peaking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/focus-peaking/</guid>
+      <description>Identifica las partes de la imagen conteniendo bordes definidos, lo que normalmente indica áreas en foco
+Active el módulo clickando sobre el icono  . Se destacarán las partes nítidas de la imagen con una superposición de color amarillo, verde y azul:
+Los picos de enfoque (Focus peacking) funcionan filtrando el ruido de la imagen, midiendo los gradientes de intensidad en la imagen y calculando las estadísticas de desviación estándar y promedio.</description>
+    </item>
+    
+    <item>
+      <title>tira de película</title>
+      <link>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/filmstrip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/shared/filmstrip/</guid>
+      <description>La tira de película se puede utilizar para cambiar rápidamente entre imágenes. Las imágenes que se muestran son las mismas que se muestran en la vista de la mesa de luz y están definidas por la colección seleccionada actualmente.
+  La tira de película se puede encender y apagar usando el atajo Ctrl + F. La altura del panel de la tira de película se puede cambiar haciendo clic y arrastrando su borde superior.</description>
+    </item>
+    
+  </channel>
+</rss>

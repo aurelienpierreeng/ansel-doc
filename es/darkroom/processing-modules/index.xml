@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>módulos de procesamiento on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/</link>
+    <description>Recent content in módulos de procesamiento on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>encabezado del módulo</title>
+      <link>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/module-header/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/module-header/</guid>
+      <description>En la parte superior de cada módulo de procesamiento se encuentra el _ encabezado del módulo_.
+  Haga clic en el nombre del módulo para expandir el módulo y mostrar los parámetros que controlan su funcionamiento.
+De forma predeterminada, darktable solo permitirá expandir un módulo de procesamiento a la vez; si hace clic en el encabezado de otro módulo, los controles del módulo previamente abierto se contraen. Si desea expandir más de un módulo, puede expandir más módulos presionando Shift + clic en el encabezado y todos los módulos expandidos previamente permanecerán abiertos.</description>
+    </item>
+    
+    <item>
+      <title>múltiples instancias</title>
+      <link>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/multiple-instances/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/multiple-instances/</guid>
+      <description>Muchos de los módulos de darktable se pueden aplicar más de una vez en el pixelpipe. Cada instancia de un módulo se comporta de forma independiente, tomando su entrada del módulo debajo de él en el pixelpipe y entregando su salida al siguiente módulo.
+Al igual que con la instancia base de un módulo, todas las instancias se pueden mover de forma independiente dentro del pixelpipe manteniendo presionadas las teclas Ctrl + Shift mientras arrastra y suelta o eligiendo &amp;ldquo;mover hacia arriba&amp;rdquo; o &amp;ldquo;mover hacia abajo&amp;rdquo; en el menú desplegable múltiples instancias.</description>
+    </item>
+    
+    <item>
+      <title>preajustes</title>
+      <link>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/presets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/presets/</guid>
+      <description>Los ajustes preestablecidos le permiten almacenar configuraciones de módulos de uso común para uso futuro. Algunos módulos ya vienen con ajustes preestablecidos predefinidos (internos) y también puede definir los suyos propios (definidos por el usuario). Tanto los preajustes internos como los definidos por el usuario se pueden mostrar haciendo clic en el menú de preajustes en el encabezado del módulo.
+La mayor parte de la funcionalidad descrita aquí se aplica únicamente a los módulos de procesamiento.</description>
+    </item>
+    
+    <item>
+      <title>controles del módulo</title>
+      <link>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/module-controls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/module-controls/</guid>
+      <description>Esta sección describe cómo interactuar con los controles del módulo de procesamiento.
+🔗deslizadores Los controles deslizantes ofrecen cinco métodos diferentes de interacción, según el nivel de control que requiera.
+ click izquierdo Haga clic en cualquier lugar del área del control deslizante para establecer el valor. También puede hacer clic y arrastrar para cambiarlo. No tiene que apuntar al triángulo o incluso a la línea; puede hacer clic en cualquier parte de la altura completa del control deslizante, incluida la etiqueta.</description>
+    </item>
+    
+    <item>
+      <title>curvas</title>
+      <link>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/curves/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/curves/</guid>
+      <description>La curva base, curva de tono y los módulos curva rgb usan curvas para controlar los tonos en la imagen. Estos módulos tienen algunas características comunes que requieren discusión por separado.
+  🔗nodos En su estado predeterminado, las curvas son líneas rectas, definidas por dos nodos de ancla en la parte superior derecha e inferior izquierda del gráfico. Puede mover los nodos para modificar la curva o generar nuevos nodos haciendo clic en la curva.</description>
+    </item>
+    
+    <item>
+      <title>ondículas</title>
+      <link>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/wavelets/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/wavelets/</guid>
+      <description>Las ondículas se utilizan para separar (o descomponer) una imagen en varias capas distintas, cada una de las cuales contiene un nivel de detalle diferente. Después de descomponer una imagen de esta manera, un módulo puede limitar su procesamiento a una o más de estas capas de detalle, y luego volver a juntar las capas al final para formar su salida. Esto nos permite ser quirúrgicos sobre qué características de la imagen deseamos impactar cuando trabajamos con un módulo.</description>
+    </item>
+    
+    <item>
+      <title>módulos obsoletos</title>
+      <link>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/deprecated/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/darkroom/processing-modules/deprecated/</guid>
+      <description>El equipo de darktable revisa regularmente los módulos antiguos y actualiza su implementación donde se encuentran problemas o la ciencia actualizada indica que se pueden mejorar. La mayoría de las veces tratamos de actualizar los módulos existentes con nuevas funciones, pero en ocasiones eso se vuelve problemático, a menudo debido a la sobrecarga de tener que mantener varias versiones del módulo. En tales circunstancias, se crea un nuevo módulo de reemplazo y el módulo anterior queda obsoleto.</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>ontwikkelen on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/</link>
+    <description>Recent content in ontwikkelen on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>afbeelding informatie regel</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/image-info-line/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/image-info-line/</guid>
+      <description>Geef informatie over het huidige beeld weer in een ontwikkelenpaneel.
+De inhoud van deze regel kan worden ingesteld in [voorkeuren &amp;gt; ontwikkelen(../../../preferences-settings/darkroom.md). Zie de sectie variabelen voor informatie over de variabelen die hier kunnen worden gebruikt. Je kan ook een nieuwe regel invoegen met $(NL).
+De afbeeldingsinformatieregel kan worden weergegeven in het bovenste, onderste, linker- of rechterpaneel, afhankelijk van een extra configuratie-item in voorkeuren &amp;gt; ontwikkelen.</description>
+    </item>
+    
+    <item>
+      <title>clipping waarschuwing</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/clipping/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/clipping/</guid>
+      <description>Markeer delen van de afbeelding die luminantie of gamma clipping (afknippen) kunnen vertonen.
+Wanneer een afbeelding naar een weergaveapparaat wordt gestuurd, wordt elke pixel normaal gesproken weergegeven als een set van 3 getallen, die de intensiteit van de rode, groene en blauwe primaire kleuren in de uitvoerkleurenruimte vertegenwoordigen. Omdat de uitvoerkleurruimte meestal nauw verwant is aan hardware met fysieke beperkingen, is er een maximaal toegestane waarde voor de [R,G,B]-kanalen, die de maximaal beschikbare intensiteit voor die kleurruimte vertegenwoordigt.</description>
+    </item>
+    
+    <item>
+      <title>duplo beheerder</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/duplicate-manager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/duplicate-manager/</guid>
+      <description>Bekijk en maak meerdere versies van de huidige afbeelding. Elke versie kan onafhankelijk worden bewerkt zonder andere versies te beïnvloeden &amp;ndash; alle versies gebruiken hetzelfde onderliggende afbeeldingsbestand, maar de bewerkingsgeschiedenis van elke versie wordt opgeslagen in een eigen onafhankelijk XMP sidecar-bestand.
+De duplo beheerder vermeldt elke versie van de huidige ontwikkelingsafbeelding samen met de voorbeeldminiatuur. Houd de linkermuisknop op een miniatuur ingedrukt om die versie tijdelijk in de middelste weergave weer te geven.</description>
+    </item>
+    
+    <item>
+      <title>gamma controle</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/gamut/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/gamut/</guid>
+      <description>Markeer delen van de afbeelding die mogelijk worden afgekapt.
+Klik op het pictogram  om de weergavemodus voor gammacontrole voor jouw afbeelding te activeren. Deze functie markeert, in cyaan, alle pixels die buiten het gamma vallen ten opzichte van het geselecteerde softproof-profiel. Je kan de gammacontrole ook activeren met de sneltoets Ctrl+G. Een bericht &amp;ldquo;gammacontrole&amp;rdquo; linksonder in jouw afbeelding geeft aan dat je jou in de weergavemodus voor gammacontrole bevindt. Gammacontrole en soft proof sluiten elkaar wederzijds uit.</description>
+    </item>
+    
+    <item>
+      <title>geschiedenis</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/history-stack/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/history-stack/</guid>
+      <description>Bekijk en wijzig de geschiedenis van de huidige &amp;ldquo;ontwikkelen&amp;quot;afbeelding.
+Deze module geeft een overzicht van elke statuswijziging (activeren/de-activeren/verplaatsen/wijzigen parameters) voor alle verwerkingsmodules die zijn aangepast voor de huidige afbeelding. Selecteer een punt in de stapel om terug te keren naar dat punt in de ontwikkelingsgeschiedenis van de afbeelding. Shift+klik op een item in de geschiedenis om die module in het rechter modulepaneel uit te vouwen zonder de huidige bewerking te wijzigen.</description>
+    </item>
+    
+    <item>
+      <title>globale kleurkiezer</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/global-color-picker/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/global-color-picker/</guid>
+      <description>Neem kleurstalen van de huidige afbeelding in &amp;ldquo;ontwikkelen&amp;rdquo;, geef hun waarden op meerdere manieren weer en vergelijk kleuren van verschillende locaties.
+De kleurenkiezer wordt geactiveerd door op het kleurenkiezerpictogram te drukken. De parameters van de module blijven van kracht totdat je de ontwikkelenmodus verlaat.
+Naast de globale kleurkiezer die hier wordt beschreven, bevatten veel darktable-modules (bijv. toon curve) ook lokale kleurkiezers die worden gebruikt om individuele moduleparameters in te stellen. Houd er rekening mee dat deze twee vormen van kleurkiezer niet altijd in dezelfde kleurruimte werken.</description>
+    </item>
+    
+    <item>
+      <title>hulplijnen en overlays</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/guides-overlays/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/guides-overlays/</guid>
+      <description>Een aantal veelgebruikte hulplijnen voor compositie kunnen tijdens het bewerken over jouw afbeelding worden gelegd. Deze kunnen globaal (altijd) of lokaal (wanneer bepaalde modules actief zijn) ingeschakeld worden.
+Andere ontwikkelen-functionaliteit tekent ook gekleurde overlay-lijnen op de afbeelding (bijvoorbeeld getekende maskers). Er is ook een optie om de kleur van die overlays te wijzigen (zie hieronder).
+🔗globale hulplijnen Klik met de linkermuisknop op het  pictogram in de onderste balk om de hulplijnen-overlays globaal weer te geven.</description>
+    </item>
+    
+    <item>
+      <title>kleurbeoordeling</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/color-assessment/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/color-assessment/</guid>
+      <description>Beoordeel kleuren en helderheid in jouw afbeelding met behulp van ISO 12646:2008 aanbevolen kijkomstandigheden.
+Bij het ontwikkelen van een afbeelding wordt de manier waarop we helderheid, contrast en verzadiging waarnemen, beïnvloed door de omringende omgevingsomstandigheden. Als een afbeelding wordt weergegeven tegen een donkere achtergrond, kan dit een aantal nadelige effecten hebben op onze perceptie van die afbeelding:
+  Door overdrijving van de waargenomen belichting lijkt het beeld helderder dan het in werkelijkheid is.</description>
+    </item>
+    
+    <item>
+      <title>masker-manager</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/mask-manager/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/mask-manager/</guid>
+      <description>Beheer alle maskers en vormen voor de huidige afbeelding.
+  Deze module kan worden gebruikt om vormen te maken, hernoemen, bewerken en verwijderen. Je kan vormen toevoegen aan en verwijderen uit een masker, vormen groeperen en combineren met behulp van set-operators.
+De bovenste regel van de masker-manager bevat knoppen die kunnen worden gebruikt om nieuwe vormen te maken. Deze zijn hetzelfde als in de getekende masker interface van in verwerkingsmodules.</description>
+    </item>
+    
+    <item>
+      <title>module volgorde</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/module-order/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/module-order/</guid>
+      <description>Verander de volgorde van de verwerkingsmodules in &amp;ldquo;ontwikkelen&amp;rdquo; met behulp van voorinstellingen.
+Bij het verwerken van een afbeelding worden de actieve modules in een bepaalde volgorde toegepast, die wordt weergegeven onderaan in het rechterpaneel van de ontwikkelenweergave. Deze module geeft informatie over de huidige volgorde van de verwerkingsmodules in de pixelpijp. De naam van de momenteel geselecteerde voorinstelling wordt weergegeven in de module-koptekst (of &amp;ldquo;custom&amp;rdquo; als de gebruiker de instelling handmatig heeft gewijzigd).</description>
+    </item>
+    
+    <item>
+      <title>momentopname</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/snapshots/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/snapshots/</guid>
+      <description>Sla ontwikkeling momentopname op en vergelijk deze met de huidige bewerking.
+Een momentopname is een opgeslagen bitmap van de middelste afbeelding in de ontwikkelingsweergave. Momentopnames kunnen op elk punt in het ontwikkelingsproces worden gemaakt en later over het huidige middenaanzicht worden gelegd. Dit stelt jou in staat om een zij aan zij vergelijking uit te voeren (standaard links=momentopname, rechts=actieve bewerking) terwijl je parameters van een module afstemt. Dit kan ook gecombineerd worden met de geschiedenis module om een momentopname te vergelijken met verschillende ontwikkelingsstadia.</description>
+    </item>
+    
+    <item>
+      <title>navigatie</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/navigation/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/navigation/</guid>
+      <description>Zoom en pan de huidige afbeelding.
+Linksboven in de ontwikkeling toont het navigatiepaneel een volledig voorbeeld van de huidige afbeelding met een rechthoek die het gebied toont dat momenteel zichtbaar is in het centrale paneel. Sleep de rechthoek rond om de ingezoomde weergave te pannen. De huidige zoomschaal wordt rechts van de voorbeeldafbeelding weergegeven. Klik op dat cijfer voor snelle toegang tot enkele veelgebruikte zoomniveaus.
+Het navigatiepaneel kan worden in-/uitgeschakeld met een sneltoets (standaard Ctrl+Shift+N).</description>
+    </item>
+    
+    <item>
+      <title>raw overbelicht waarschuwing</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/raw-overexposed/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/raw-overexposed/</guid>
+      <description>Markeer gebieden van de afbeelding waar kleurkanalen van het onbewerkte invoerbestand zijn geknipt.
+Geklipte kleurkanalen impliceren een overbelicht beeld met verlies van informatie in de getroffen gebieden. Sommige van deze informatie kan worden hersteld met behulp van de hooglichten reconstructueer, kleur reconstructie of filmisch rgb modules.
+Klik op het  pictogram om de waarschuwingsoverlay te tonen/verbergen. Klik met de rechtermuisknop op het pictogram om een dialoogvenster te openen met de volgende configuratieparameters.</description>
+    </item>
+    
+    <item>
+      <title>soft proof</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/soft-proof/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/darkroom/soft-proof/</guid>
+      <description>Bekijk jouw afbeelding weergegeven met een geselecteerd kleurprofiel.
+Klik op het pictogram  om de softproof-weergavemodus op jouw afbeelding te activeren. Hiermee kan je een voorbeeld van jouw afbeelding bekijken die is weergegeven met behulp van een printerprofiel om te zien hoe kleuren op de uiteindelijke afdruk terechtkomen. Je kan soft proof ook activeren met de sneltoets Ctrl+S. Een bericht &amp;ldquo;soft proof&amp;rdquo; linksonder in jouw afbeelding geeft aan dat je jou in de softproof-weergavemodus bevindt.</description>
+    </item>
+    
+  </channel>
+</rss>

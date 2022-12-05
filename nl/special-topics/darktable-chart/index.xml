@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>darktable-chart gebruiken on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/nl/special-topics/darktable-chart/</link>
+    <description>Recent content in darktable-chart gebruiken on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/nl/special-topics/darktable-chart/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overzicht</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/darktable-chart/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/darktable-chart/overview/</guid>
+      <description>darktable-chart is een hulpmiddel voor het extraheren van luminantie- en kleurwaarden uit afbeeldingen van kleurreferentiekaarten zoals IT8.7/1-kaarten. Het belangrijkste doel is om een bronafbeelding (meestal een grotendeels onbewerkte RAW afbeelding) te vergelijken met een doelafbeelding (meestal een JPEG-afbeelding die in de camera is gemaakt) en een darktable-stijl te produceren die de luminantie- en kleurwaarden van de bronafbeelding kan gebruiken om het doelbeeld te produceren. Deze stijl maakt gebruik van de toon curve module, de [ingaande kleurprofiel](.</description>
+    </item>
+    
+    <item>
+      <title>gebruik</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/darktable-chart/usage/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/darktable-chart/usage/</guid>
+      <description>De tool is georganiseerd in drie tabbladen in het bovenste gedeelte en een tekstuitvoerkader in het onderste gedeelte.
+  Het eerste tabblad wordt gebruikt om de bronafbeelding te definiëren, het tweede tabblad definieert de referentie (doel) en het derde tabblad bevat de bedieningselementen om de resulterende darktable-stijl te genereren.</description>
+    </item>
+    
+    <item>
+      <title>bronafbeelding</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/darktable-chart/source-image/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/darktable-chart/source-image/</guid>
+      <description>Op het tabblad &amp;ldquo;bronafbeelding&amp;rdquo; stel je jouw bronafbeelding in, waarvoor twee elementen nodig zijn. Het eerste element is een invoerbestand in Lab Portable Float Map-formaat (extensie .pfm). Het bronbestand vertegenwoordigt de grotendeels ongewijzigde gegevens zoals de camera deze ziet. Informatie over het maken van foto&amp;rsquo;s van een kleurreferentiekaart en het maken van een .pfm-uitvoerbestand wordt hieronder beschreven. Het tweede element is een grafiekbestand dat een formele beschrijving bevat van de lay-out van de onderliggende kleurreferentiekaart (extensie .</description>
+    </item>
+    
+    <item>
+      <title>referentiewaarden</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/darktable-chart/reference-values/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/darktable-chart/reference-values/</guid>
+      <description>Het tabblad &amp;ldquo;referentiewaarden&amp;rdquo; bepaalt de doelwaarden waarnaar de bronafbeelding moet worden gewijzigd door de resulterende stijl. Je kan ofwel referentiewaarden aanleveren in de vorm van meetgegevens van uw kleurreferentiekaart (modus &amp;ldquo;cie/it8-bestand&amp;rdquo;), of je kan een fotografisch beeld aanleveren (modus &amp;ldquo;kleurenkaartafbeelding&amp;rdquo;) op ongeveer dezelfde manier als hierboven beschreven . Deze tweede afbeelding moet ook worden aangeleverd in Lab Portable Float Map-formaat. Het is niet nodig om het grafiekbestand opnieuw aan te leveren, aangezien darktable-chart hetzelfde gebruikt als gedefinieerd onder &amp;ldquo;bronafbeelding&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>proces</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/darktable-chart/process/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/darktable-chart/process/</guid>
+      <description>Als alle vereiste instellingen in de tabbladen &amp;ldquo;bronafbeelding&amp;rdquo; en &amp;ldquo;referentiewaarden&amp;rdquo; gereed zijn, kan je doorgaan naar het tabblad &amp;ldquo;proces&amp;rdquo;.
+  Eerst moet je darktable-chart vertellen welke van de vlakken de grijze helling voorstelt. In de bovenstaande schermafbeelding is de grijze helling gepositioneerd in het onderste deel van de kleurreferentiekaart, aangeduid als &amp;ldquo;GS00&amp;hellip;GS23&amp;rdquo;.
+De invoer &amp;ldquo;aantal laatste vlakken&amp;rdquo; bepaalt hoeveel bewerkbare kleurvlakken de resulterende stijl zal gebruiken in de kleuropzoektabel module.</description>
+    </item>
+    
+    <item>
+      <title>invoerafbeeldingen maken voor darktable-chart</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/darktable-chart/making-input-images/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/darktable-chart/making-input-images/</guid>
+      <description>Om te beginnen heb je een geschikte foto nodig van je kleurreferentiekaart in RAW+JPEG-formaat. Het gaat het bestek van deze handleiding te buiten om de details van het maken van deze foto uit te leggen, maar in een notendop moet je de foto maken op een zonnige dag rond het middaguur met de lichtbron (de zon) die schuin op de kaart schijnt. . Je moet elke schittering in de afbeelding vermijden.</description>
+    </item>
+    
+  </channel>
+</rss>

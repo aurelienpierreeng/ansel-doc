@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>programma oproepen on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/</link>
+    <description>Recent content in programma oproepen on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>darktable</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/darktable/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/darktable/</guid>
+      <description>Het binaire bestand `darktable&#39; start darktable met zijn GUI en volledige functionaliteit. Dit is de standaard manier om darktable te gebruiken.
+darktable kan worden aangeroepen met de volgende opdrachtregelparameters:
+darktable [-d {all,act_on,cache,camctl,camsupport,control,demosaic, dev,fswatch,imageio,invoer,ioporder,bibliotheek,lua, maskers,geheugen,nan,opencl,params,perf,print,pwstorage, signaal,sql,tegels,ongedaan maken,uitgebreide}] [&amp;lt;input file&amp;gt;|&amp;lt;afbeelding map&amp;gt;] [--version] [--disable-opencl] [--library &amp;lt;bibliotheek bestand&amp;gt;] [--datadir &amp;lt;data map&amp;gt;] [--moduledir &amp;lt;module map&amp;gt;] [--tmpdir &amp;lt;tmp map&amp;gt;] [--configdir &amp;lt;gebruiker config map&amp;gt;] [--cachedir &amp;lt;gebruiker cache map&amp;gt;] [--localedir &amp;lt;lokale map&amp;gt;] [--luacmd &amp;lt;lua commando&amp;gt;] [--noiseprofiles &amp;lt;ruisprofiel json bestand&amp;gt;] [--d-signal &amp;lt;signaal&amp;gt;] [--d-signal-act &amp;lt;alle, verhoog, verbind, verbreek, printtrace&amp;gt;] [--conf &amp;lt;key&amp;gt;=&amp;lt;waarde&amp;gt;] [-t &amp;lt;num openmp threads&amp;gt;] Alle parameters zijn optioneel.</description>
+    </item>
+    
+    <item>
+      <title>darktable-cli</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/darktable-cli/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/darktable-cli/</guid>
+      <description>Het binaire bestand darktable-cli start de opdrachtregelinterfacevariant van darktable waarmee afbeeldingen kunnen worden geëxporteerd.
+Deze variant opent geen enkel scherm &amp;ndash; het werkt in pure consolemodus zonder een GUI te starten. Deze modus is met name handig voor servers die achtergrondtaken uitvoeren.
+darktable-cli kan worden aangeroepen met de volgende opdrachtregelparameters:
+darktable-cli [&amp;lt;invoer bestand of map&amp;gt;] [&amp;lt;xmp bestand&amp;gt;] &amp;lt;uitvoer bestand of map&amp;gt; [--breedte &amp;lt;max breedte&amp;gt;] [--hoogte &amp;lt;max hoogte&amp;gt;] [--hq &amp;lt;0|1|waar|niet-waar&amp;gt;] [--upscale &amp;lt;0|1|waar|niet-waar&amp;gt;] [--stijl &amp;lt;stijl naam&amp;gt;] [--stijl-overschrijven] [--aangepaste-voorinstellingen toepassen &amp;lt;0|1|waar|niet-waar&amp;gt;] [--uit-ext &amp;lt;extensie&amp;gt;] [--importeer &amp;lt;bestand of map&amp;gt;] [--icc-type &amp;lt;type&amp;gt;] [--icc-bestand &amp;lt;bestand&amp;gt;] [--icc-intentie &amp;lt;intentie&amp;gt;] [--uitgebreid] [--help [optie]] [--kern &amp;lt;darktable opties&amp;gt;] De gebruiker moet een invoerbestandsnaam en een uitvoerbestandsnaam opgeven.</description>
+    </item>
+    
+    <item>
+      <title>darktable-generate-cache</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/darktable-generate-cache/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/darktable-generate-cache/</guid>
+      <description>Het binaire bestand darktable-generate-cache werkt de miniatuurcache van darktable bij. Roep dit programma op om alle ontbrekende miniaturen op de achtergrond te genereren wanneer jouw computer niet actief is.
+darktable-generate-cache kan worden aangeroepen met de volgende opdrachtregelparameters:
+darktable-generate-cache [-h, --help] [--version] [--min-mip &amp;lt;0-8&amp;gt;] [-m, --max-mip &amp;lt;0-8&amp;gt;] [--min-imgid &amp;lt;N&amp;gt;] [--max-imgid &amp;lt;N&amp;gt;] [--core &amp;lt;darktable options&amp;gt;] Alle parameters zijn optioneel. Indien gestart zonder parameters gebruikt darktable-generate-cache redelijke standaardwaarden.
+ -h, --help gebruiksinformatie weergeven en beëindigen.</description>
+    </item>
+    
+    <item>
+      <title>darktable-chart</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/darktable-chart/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/darktable-chart/</guid>
+      <description>Het binaire bestand darktable-chart is een speciaal hulpprogramma om stijlen te creëren uit paren afbeeldingen zoals RAW+JPEG met verwerking in de camera. Details over het gebruik ervan zijn te vinden in de sectie met behulp van darktable-chart.
+darktable-chart kan een GUI starten of worden gebruikt als een opdrachtregelprogramma.
+darktable-chart [--help] [&amp;lt;input Lab pfm file&amp;gt;] [&amp;lt;cht file&amp;gt;] [&amp;lt;reference cgats/it8 or Lab pfm file&amp;gt;] Alle parameters zijn optioneel, maar als je de tweede bestandsnaam wilt opgeven, moet je ook de eerste opgeven.</description>
+    </item>
+    
+    <item>
+      <title>darktable-cltest</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/darktable-cltest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/darktable-cltest/</guid>
+      <description>Het binaire bestand darktable-cltest&#39; controleert of er een bruikbare OpenCL-omgeving op jouw systeem is die darktable kan gebruiken. Het zendt een debug-output uit die gelijk is aan het aanroepen van darktable -d opencl` en wordt dan beëindigd.
+darktable-cltest wordt aangeroepen zonder opdrachtregelparameters.</description>
+    </item>
+    
+    <item>
+      <title>darktable-cmstest</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/darktable-cmstest/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/darktable-cmstest/</guid>
+      <description>Het binaire bestand darktable-cmstest (alleen Linux) onderzoekt of het subsysteem voor kleurbeheer van jouw computer correct is geconfigureerd en geeft nuttige informatie weer over de geïnstalleerde monitorprofielen.
+darktable-cmstest wordt aangeroepen zonder opdrachtregelparameters.</description>
+    </item>
+    
+    <item>
+      <title>purge_non_existing_images.sh</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/purge_non_existing_images_sh/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/program-invocation/purge_non_existing_images_sh/</guid>
+      <description>Zoek en verwijder items uit de bibliotheekdatabase die verwijzen naar afbeeldingen die niet langer in het bestandssysteem bestaan. Je moet darktable sluiten voordat je dit script uitvoert.
+Het script kan worden aangeroepen met de volgende opdrachtregelparameters:
+purge_non_existing_images.sh [-c|--configdir &amp;lt;path&amp;gt;] [-l|--library &amp;lt;path&amp;gt;] [-p|--purge] Voer het script uit zonder opties om een &amp;ldquo;dry run&amp;rdquo; uit te voeren, die een rapport genereert van de ontbrekende bestanden zonder enige wijzigingen in de database door te voeren.</description>
+    </item>
+    
+  </channel>
+</rss>

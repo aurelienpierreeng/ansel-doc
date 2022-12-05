@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>mapa on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/map/</link>
+    <description>Recent content in mapa on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/map/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>ajustes de mapa</title>
+      <link>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/map/map-settings/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/map/map-settings/</guid>
+      <description>Seleccione los datos de mapas preferidos de varios proveedores. Algunos proporcionarán capas adicionales (vista de satélite, etc.) que puede alternar.
+🔗controles del módulo  fuente de mapas Escoja entre los proveedores de información de fuente de mapas puntos máximos de polígono El módulo encontrar ubicación no muestra polígonos con más puntos que estos por razón de velocidad. Habitualmente un polígono de país tiene entre 50.000 y 150.000 puntos. mostrar OSD Escoger si mostrar los controles OSD (controles en pantalla) en la esquina superior izquierda de la vista central.</description>
+    </item>
+    
+    <item>
+      <title>encontrar ubicación</title>
+      <link>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/map/find-location/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/map/find-location/</guid>
+      <description>Busque una ubicación en el mapa. Debe estar conectado a Internet para utilizar esta función.
+Para usar este módulo, escriba el nombre o la dirección de un lugar, presione Entrar y se mostrará una lista de resultados. Haga clic en un elemento de la lista y el mapa se acercará a esa ubicación. Se mostrará un esquema que cubre esa ubicación o un alfiler que apunta a la ubicación.
+Se puede utilizar un contorno (polígono) para crear una ubicación de usuario.</description>
+    </item>
+    
+    <item>
+      <title>ubicaciones</title>
+      <link>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/map/locations/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/es/module-reference/utility-modules/map/locations/</guid>
+      <description>Crea áreas o ubicaciones y las organiza como etiquetas jerárquicas.
+Una ubicación se muestra como una forma en el mapa cuando se selecciona. Inicialmente, cada ubicación se representa como un cuadrado o círculo y se puede cambiar a un rectángulo o elipse ajustando el ancho y / o alto de la forma.
+También se puede crear una ubicación a partir de un polígono de región (ciudad / país) de OpenStreetMap. Para lograr esto, primero asegúrese de que el parámetro puntos máximos de polígono sea lo suficientemente grande (algunos polígonos de países usan más de 150,000 puntos).</description>
+    </item>
+    
+  </channel>
+</rss>

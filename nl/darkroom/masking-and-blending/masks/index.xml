@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>maskers on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/nl/darkroom/masking-and-blending/masks/</link>
+    <description>Recent content in maskers on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/nl/darkroom/masking-and-blending/masks/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>overzicht</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/masking-and-blending/masks/overview/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/masking-and-blending/masks/overview/</guid>
+      <description>Maskers maken het mogelijk om het effect van een module te beperken zodat het enkel op een deel van het beeld wordt toegepast.
+Een masker kan gezien worden als een grijstoonafbeelding waarvan elke pixel een waarde heeft tussen 0 en 1.0 (of tussen 0% en 100%). Deze waarde is de dekking en wordt gebruikt om het effect van de module op elke pixel te bepalen.
+De volgende secties beschrijven hoe maskers in darktable worden opgebouwd.</description>
+    </item>
+    
+    <item>
+      <title>getekende maskers</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/masking-and-blending/masks/drawn/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/masking-and-blending/masks/drawn/</guid>
+      <description>Met de functie voor getekend masker kunt u een masker maken door vormen rechtstreeks op het afbeeldingsdoek te tekenen. Vormen kunnen alleen of in combinatie worden gebruikt. Zodra een vorm op een afbeelding is getekend, kan deze worden aangepast, verwijderd of opnieuw worden gebruikt in andere modules.
+Vormen worden intern opgeslagen als vectoren en worden weergegeven met de vereiste resolutie tijdens pixelpijp-verwerking. Vormen worden uitgedrukt in het coördinatensysteem van de originele afbeelding en worden samen met de rest van de afbeelding getransformeerd door actieve vervormende modules in de pijp (lens correctie, roteren en perspectief bijvoorbeeld).</description>
+    </item>
+    
+    <item>
+      <title>parametrische maskers</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/masking-and-blending/masks/parametric/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/masking-and-blending/masks/parametric/</guid>
+      <description>De parametrische maskerfunctie biedt fijnmazige selectieve controle over hoe individuele pixels worden gemaskeerd. Het doet dit door automatisch een tussenliggend overvloeimasker te genereren op basis van door de gebruiker gedefinieerde parameters. Deze parameters zijn kleurcoördinaten in plaats van de geometrische coördinaten die in getekende maskers worden gebruikt.
+Voor elk datakanaal van een module (bijv. Lab, RGB) en meerdere virtuele datakanalen (bijv. tint, verzadiging) kunt u een per kanaal opaciteitsfunctie opbouwen. Afhankelijk van de waarde van elke pixel voor een bepaald datakanaal berekent deze functie een mengfactor tussen 0 en 1 (100%) voor die pixel.</description>
+    </item>
+    
+    <item>
+      <title>combineren van getekende- en parametrische- maskers</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/masking-and-blending/masks/drawn-and-parametric/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/masking-and-blending/masks/drawn-and-parametric/</guid>
+      <description>Getekende- en parametrische- maskers kunnen gecombineerd worden tot één masker om in een module te gebruiken.
+Er zijn twee hoofdelementen om de combinatie van individuele maskers aan te passen : de polariteit instelling van elk individueel masker (gedefinieerd door de plus- of min-knoppen) en de instelling in de &amp;ldquo;combineer maskers&amp;rdquo; in de keuzemenu.
+De keuzemenu &amp;ldquo;combineer maskers&amp;rdquo; bevat de volgende keuzes, definieer hoe de getekende- en parametrische- maskers zullen worden gecombineerd:</description>
+    </item>
+    
+    <item>
+      <title>Maskers verfijnen &amp; aanvullende afregeling</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/masking-and-blending/masks/refinement-controls/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/masking-and-blending/masks/refinement-controls/</guid>
+      <description>Als een masker actief is verschijnen er verschillende schuifregelaars om de instellingen te verfijnen.
+ drempelwaarde details Met dit besturingselement kan je de dekking van het masker wijzigen op basis van de hoeveelheid detail in de afbeelding. Gebruik deze schuifregelaar om gebieden met veel detail (positieve waarden) of gebieden die vlak en weinig gedetailleerd zijn (negatieve waarden) te selecteren. De standaardwaarde (nul) omzeilt effectief de verfijning van details. Dit is vooral handig om verscherpings- en vervagingseffecten toe te passen die onscherpe (bokeh) gebieden negeren of om alleen onscherpe delen te verscherpen, waardoor overmatige verscherping van onscherpe gebieden wordt voorkomen.</description>
+    </item>
+    
+    <item>
+      <title>rastermaskers</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/darkroom/masking-and-blending/masks/raster/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/darkroom/masking-and-blending/masks/raster/</guid>
+      <description>Zoals in de vorige secties beschreven is het samengesteld masker van een modulemasker (het samengesteld effect van een elk vectormasker en parametrisch masker) een grijswaardebeeld waarvan de grijswaarde de sterkte van het module-effect op elke pixel weergeeft. Dit grijswaardebeeld wordt voor actieve modules intern opgeslagen en kan opnieuw gebruikt worden in andere modules.
+Zoals met elk masker wordt de input van een module door de module niet gewijzigd als de dekking de waarde 0 heeft.</description>
+    </item>
+    
+  </channel>
+</rss>

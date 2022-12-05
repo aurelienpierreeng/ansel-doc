@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Speciale onderwerpen on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/nl/special-topics/</link>
+    <description>Recent content in Speciale onderwerpen on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/nl/special-topics/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>geheugen &amp; prestatie-afstemming</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/mem-performance/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/mem-performance/</guid>
+      <description>🔗geheugenvereisten Het verwerken van een Raw-afbeelding in darktable vereist veel systeemgeheugen. Een eenvoudige berekening maakt dit duidelijk: voor een afbeelding van 20 megapixels heeft darktable een 4x32-bit floating point cel nodig om elke pixel op te slaan, wat betekent dat elke volledige afbeelding van deze grootte ongeveer 300 MB geheugen nodig heeft om de afbeeldingsgegevens op te slaan. Om deze afbeelding daadwerkelijk via een bepaalde module te verwerken, heeft darktable ten minste twee buffers (invoer en uitvoer) van deze grootte nodig, waarbij complexere modules mogelijk meerdere extra buffers nodig hebben voor tussenliggende gegevens.</description>
+    </item>
+    
+    <item>
+      <title>darktable&#39;s kleurenpijplijn</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/color-pipeline/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/color-pipeline/</guid>
+      <description>De meeste beeldverwerkingstoepassingen stammen uit de jaren 90 en/of erven een werkvolgorde uit de jaren 90. Deze toepassingen verwerkten afbeeldingen die waren gecodeerd met 8-bits gehele getallen zonder teken omdat het geheugen- en rekenkundig efficiënter was. Vanwege het gebruik van een gehele-getallen-formaat (wat afrondingsfouten impliceert) moesten ze een &amp;ldquo;gamma&amp;rdquo; toepassen (in wezen een overdrachtsfunctie die een macht 1/2.2 of 1/2.4 toepast om de RGB-waarden te coderen) en de bit- diepte in de schaduwen verhoigen om afrondingsfouten te verminderen (mensen zijn erg gevoelig voor details bij weinig licht).</description>
+    </item>
+    
+    <item>
+      <title>ondersteuning voor midi-apparaten</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/midi-device-support/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/midi-device-support/</guid>
+      <description>Het snelkoppelingssysteem is het meest uitgebreid getest met de Behringer X-Touch Mini en bevat aangepaste code voor de specifieke functies van dit apparaat. Alle andere apparaten worden behandeld als &amp;ldquo;generieke midi&amp;rdquo; en kunnen al dan niet (goed) werken of moeten elke keer handmatig worden ingesteld. Een configuratieframework (mogelijk in lua) om aanvullende apparaatspecifieke functies te ondersteunen, staat op de takenlijst.
+Als het je lukt om een midi-apparaat aan de gang te krijgen dat hieronder niet is genoemd, zou het zeer op prijs worden gesteld als je feedback zou geven om anderen te helpen, als er speciale stappen nodig zijn.</description>
+    </item>
+    
+    <item>
+      <title>bijdragen aan dtdocs</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/contributing/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/contributing/</guid>
+      <description>Deze pagina definieert de stijlgids voor dtdocs en informatie over hoe je kan bijdragen aan het project.
+Het is opgenomen in de gebruikershandleiding, zodat je kunt zien hoe de pagina wordt weergegeven en hoe deze is geschreven. Ga naar GitHub om de bron voor deze pagina te zien.
+De structuur en inhoud van de handleiding zijn zorgvuldig overwogen op basis van de volgende criteria:
+ De handleiding moet uitgebreid zijn &amp;ndash; het moet alle functionaliteit beschrijven die beschikbaar is in darktable Het moet een consistente en logische structuur hebben en elk stukje functionaliteit moet zijn eigen logische plaats binnen die structuur hebben Het moet zo lang zijn als nodig is, maar zo kort mogelijk - beknoptheid is een must Het moet objectief zijn Functionaliteit moet eenmalig worden uitgelegd (met uitzondering van de basis workflow richtlijnen in het overzichtsgedeelte) Afbeeldingen mogen alleen worden toegevoegd als dat nodig is om het begrip van de belangrijkste principes te verbeteren en mogen geen tekst bevatten, tenzij dit onvermijdelijk is  We zijn over het algemeen niet geïnteresseerd in:</description>
+    </item>
+    
+    <item>
+      <title>dtdocs vertalen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/special-topics/translating/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/special-topics/translating/</guid>
+      <description>Vertaling van de darktable-documentatie wordt gedaan via onze Weblate-instantie.
+Je kan de web-UI van Weblate gebruiken om de documentatie te vertalen of de vertaling van Weblate naar jouw computer downloaden, bewerken en vervolgens de wijzigingen uploaden.
+Doe al het vertaalwerk via Weblate. We accepteren geen pull-verzoeken rechtstreeks op github om PO-bestanden bij te werken.
+🔗Een nieuwe branch maken in git  Maak een nieuwe branch om eraan te werken in git.</description>
+    </item>
+    
+  </channel>
+</rss>

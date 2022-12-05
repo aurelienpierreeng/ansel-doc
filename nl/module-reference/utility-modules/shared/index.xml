@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>gedeeld on darktable 4.0 user manual</title>
+    <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/</link>
+    <description>Recent content in gedeeld on darktable 4.0 user manual</description>
+    <generator>Hugo -- gohugo.io</generator><atom:link href="https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>afbeeldingsinformatie</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/image-information/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/image-information/</guid>
+      <description>Geef informatie weer die is ingesloten in de Exif-gegevens van een afbeelding, evenals een aantal extra gegevensvelden die zijn gedefinieerd door darktable.
+Wanneer je met de muis over miniatuurafbeeldingen beweegt, worden de weergegeven gegevens automatisch bijgewerkt om informatie weer te geven over de afbeelding die zich momenteel onder de muiscursor bevindt.
+Wanneer meerdere afbeeldingen zijn geselecteerd en de focus niet op één afbeelding ligt, geeft de module alleen informatie weer die voor alle afbeeldingen hetzelfde is.</description>
+    </item>
+    
+    <item>
+      <title>collectiefilters</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/collection-filters/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/collection-filters/</guid>
+      <description>Filter the collection of images displayed in the lighttable view and filmstrip panel using image attributes, optionally pinning filters to the top panel for quick access.
+Wanneer eenmaal een collectie van afbeeldingen is gedefinieerd met de collecties module, kan met de collectie filters module extra filters en sorteer criteria gedefinieerd worden. Je kan bijvoorbeeld alle afbeeldingen willen weergeven uit een bepaalde map met de collecties module en daarna extra snelle filters voor ster waardering en/of kleurlabels toevoegen.</description>
+    </item>
+    
+    <item>
+      <title>collecties</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/collections/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/collections/</guid>
+      <description>Filter de afbeeldingen die worden weergegeven in de bibliotheektafelweergave en het filmstrippaneel met behulp van afbeeldingskenmerken. Deze set gefilterde afbeeldingen staat bekend als een collectie.
+Het importeren van afbeeldingen in darktable slaat informatie over hen op (bestandsnaam, pad, Exif-gegevens, gegevens van XMP sidecar-bestanden enz.) in de bibliotheekdatabase van darktable. Een collectie kan worden gedefinieerd door filterregels toe te passen op deze attributen, waardoor een subset van afbeeldingen wordt gecreëerd om weer te geven in de bibliotheekweergave en de filmstripmodule.</description>
+    </item>
+    
+    <item>
+      <title>exporteren</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/export/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/export/</guid>
+      <description>Geselecteerde afbeeldingen exporteren.
+Bij gebruik in de ontwikkelenweergave wordt de momenteel bewerkte afbeelding geëxporteerd als er geen andere afbeeldingen in de filmstrip zijn geselecteerd.
+Bestanden kunnen worden geëxporteerd naar een bestand op schijf, e-mail, verschillende online opslaglocaties, een webalbum of een boeksjabloon.
+🔗module instellingen 🔗opslaginstellingen  doel opslag Het type locatie om jouw geselecteerde afbeeldingen op te slaan. Er zijn een aantal verschillende back-ends geïmplementeerd, waaronder een bestand op schijf, een LaTeX-boeksjabloon en verschillende webalbums.</description>
+    </item>
+    
+    <item>
+      <title>filmstrip</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/filmstrip/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/filmstrip/</guid>
+      <description>De filmstrip kan worden gebruikt om snel te schakelen tussen afbeeldingen. De getoonde afbeeldingen zijn dezelfde als die weergegeven in de bibliotheekweergave en worden gedefinieerd door de momenteel geselecteerde collectie.
+  De filmstrip kan worden in- en uitgeschakeld met de sneltoets Ctrl+F. De hoogte van het filmstrippaneel kan worden gewijzigd door op de bovenrand te klikken en te slepen.
+Navigeer snel door de afbeeldingen in de filmstrip door met de muis te scrollen.</description>
+    </item>
+    
+    <item>
+      <title>focus peaking</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/focus-peaking/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/focus-peaking/</guid>
+      <description>Bepaal welke delen van de afbeelding scherpe randen bevatten, wat meestal aangeeft dat die gebieden scherp zijn.
+Activeer de module door op het  pictogram te klikken. De scherpe delen van de afbeelding worden gemarkeerd met een gele, groene en blauwe overlay:
+Focus peaking werkt door beeldruis uit te filteren, de intensiteitsgradiënten in het beeld te meten en statistieken voor gemiddelde en standaarddeviatie te berekenen. Wanneer het verloop van een rand significant afwijkt van het gemiddelde, worden de bijbehorende pixels gemarkeerd met een &amp;ldquo;hittemap&amp;rdquo; die aangeeft hoe scherp de rand is.</description>
+    </item>
+    
+    <item>
+      <title>geotaggen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/geotagging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/geotagging/</guid>
+      <description>Importeer en pas GPX-trackgegevens toe op een selectie van afbeeldingen.
+Deze module is gemeenschappelijk voor de weergaven bibliotheek en map. De kaartweergave biedt een verbeterde modus waarmee je een voorbeeld van de positie van de afbeeldingen langs de GPS-tracks kunt bekijken terwijl je de datum/tijd-offset en tijdzone van de afbeeldingen aanpast.
+🔗overzicht werkvolgorde Een GPS-ontvanger berekent zijn huidige positie op basis van informatie die hij ontvangt van satellieten en legt deze samen met de huidige datum en tijd vast in een GPX-bestand.</description>
+    </item>
+    
+    <item>
+      <title>labelen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/tagging/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/tagging/</guid>
+      <description>Beheer labels die aan afbeeldingen zijn gekoppeld.
+Labels bieden een manier om informatie aan afbeeldingen toe te voegen met behulp van een trefwoordenwoordenboek. Je kan labels ook beheren als een hiërarchische boomstructuur, wat handig kan zijn wanneer hun aantal groot wordt.
+Labels worden fysiek opgeslagen in XMP sidecar-bestanden en in de bibliotheekdatabase van darktable en kunnen worden opgenomen in [geëxporteerde](./export. md) afbeeldingen.
+🔗definities De volgende definities gaan ervan uit dat je een enkele tag hebt ingesteld met de naam &amp;ldquo;places|France|Nord|Lille&amp;rdquo;.</description>
+    </item>
+    
+    <item>
+      <title>metadata-editor</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/metadata-editor/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/metadata-editor/</guid>
+      <description>Bewerk de metadata van geselecteerde afbeeldingen.
+Metadata is tekst in vrije vorm (titel, beschrijving, maker, uitgever, rechten enz.) die jouw afbeeldingen beschrijft.
+Wanneer meerdere geselecteerde afbeeldingen verschillende waarde bevatten voor een bepaalde metadata veld laat de module  voor dat veld zien. Wanneer je kiest om de wijzigen toe te passen, worden deze velden niet gewijzigd. Als je met de rechtermuisknop klikt op het veld, worden de verschillen in waarden in een lijst weergegeven aan het einde van het contextueel menu.</description>
+    </item>
+    
+    <item>
+      <title>scopes</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/scopes/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/scopes/</guid>
+      <description>Deze module biedt verschillende grafische afbeeldingen van de lichtniveaus van de ontwikkelde afbeelding of chromaticiteit.
+  Beweeg de muis over het paneel om knoppen weer te geven waarmee je de weergave kan aanpassen. De meest linkse knop schakelt de modus tussen histogram, waveform (golfvormbereik), RGB-paradebereik en vectorscoop. De overige knoppen bepalen hoe de plot voor het huidige bereik wordt getekend.
+Wanneer de muis zich boven het scopespaneel bevindt, scrol je met de muis terwijl je de Ctrl-toets ingedrukt houdt om de hoogte van het paneel te wijzigen.</description>
+    </item>
+    
+    <item>
+      <title>snelle verzamelingen</title>
+      <link>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/recent-collections/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://darktable-org.github.io/dtdocs/nl/module-reference/utility-modules/shared/recent-collections/</guid>
+      <description>Geef een lijst weer van recent gebruikte collecties die zijn gegenereerd door de module collecties.
+Deze module kan verborgen zijn, afhankelijk van de voorkeuren die zijn ingesteld in de module collecties.
+Klik op een item om de geselecteerde collectie opnieuw te openen. Hiermee wordt ook de collecties-module bijgewerkt met de juiste filtercriteria en -regels.
+🔗voorkeuren Met de optie &amp;ldquo;voorkeuren&amp;hellip;&amp;rdquo; in het menu voorinstellingen kan je het gedrag van de module snelle verzamelingen als volgt aanpassen:</description>
+    </item>
+    
+  </channel>
+</rss>
