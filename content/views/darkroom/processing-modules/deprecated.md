@@ -12,4 +12,4 @@ Module deprecation follows a fairly standard process: In the release that deprec
 
 After a year, the module is removed from the _deprecated modules_ group and is then only available for use in old edits (where that module was already active against a given image). Deprecated modules are never fully removed from Ansel (in order to retain old edits) but development ceases and you are advised to use supported modules instead if you encounter an issue.
 
-For example, modules deprecated in Ansel 3.4 will be removed from the _deprecated modules_ group in Ansel 3.8 (assuming two major releases each year).
+For example, modules deprecated in darktable 3.4 will be removed from the _deprecated modules_ group in darktable 3.8 (assuming two major releases each year).

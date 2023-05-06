@@ -1921,8 +1921,8 @@ msgstr "_modules : tous_"
 #. type: Plain text
 #: content/darkroom/organization/module-groups.md
 #, no-wrap
-msgid "This preset contains all modules, sorted according to the traditional module groupings used prior to Ansel 3.4, as follows:\n"
-msgstr "Ce préréglage contient comme suit tous les modules, triés selon les groupes de modules traditionnels utilisés avant Ansel 3.4 :\n"
+msgid "This preset contains all modules, sorted according to the traditional module groupings used prior to darktable 3.4, as follows:\n"
+msgstr "Ce préréglage contient comme suit tous les modules, triés selon les groupes de modules traditionnels utilisés avant darktable 3.4 :\n"
 
 #. type: Plain text
 #: content/darkroom/organization/module-groups.md
@@ -1983,8 +1983,8 @@ msgstr "_modules : défaut_"
 #. type: Plain text
 #: content/darkroom/organization/module-groups.md
 #, no-wrap
-msgid "This preset is the default module group layout from Ansel 3.4 onwards and consists of a simplified set of module groups, as follows:\n"
-msgstr "Ce préréglage est la disposition par défaut de groupes de modules à partir de Ansel 3.4. Il est constitué comme suit d'un ensemble simplifié de groupes de modules :\n"
+msgid "This preset is the default module group layout from darktable 3.4 onwards and consists of a simplified set of module groups, as follows:\n"
+msgstr "Ce préréglage est la disposition par défaut de groupes de modules à partir de darktable 3.4. Il est constitué comme suit d'un ensemble simplifié de groupes de modules :\n"
 
 #. type: Plain text
 #: content/darkroom/organization/module-groups.md
@@ -2549,8 +2549,8 @@ msgstr "flux de travail relatif à la scène"
 #. type: Plain text
 #: content/darkroom/pixelpipe/the-pixelpipe-and-module-order.md
 #, no-wrap
-msgid "_Scene-referred_ workflow (auto-apply pixel workflow defaults = \"scene-referred\") was introduced as part of Ansel 3.0. The module order was entirely rearranged to place the [_filmic rgb_](../../../module-reference/processing-modules/filmic-rgb.md) and [_base curve_](../../../module-reference/processing-modules/base-curve.md) tone mapping modules much later in the pixelpipe. This means that most modules now operate in _linear rgb_ space with only a few modules remaining within the non-linear _display-referred_ space. Within this workflow it is now recommended that the majority of image processing takes place using the modules up to and including [_filmic rgb_](../../../module-reference/processing-modules/filmic-rgb.md). Operations in this section of the pixelpipe, being truly linear, are much more physically realistic and produce fewer artifacts.\n"
-msgstr "Le nouveau flux de travail _relatif à la scène_ (dans les préférences globales l'option flux de travail par défaut = « relatif à la scène ») a été introduit dans le cadre de Ansel 3.0. L'ordre des modules a été entièrement réorganisé pour placer les modules de mappage de tonalité [_filmique rvb_](../../../module-reference/processing-modules/filmic-rgb.md) et [_courbe de base_](../../../module-reference/processing-modules/base-curve.md) beaucoup plus tard dans le pipeline graphique. Cela signifie que la plupart des modules opèrent désormais dans l'espace _linéaire RVB_ avec seulement quelques modules restant dans l'espace non linéaire _relatif à l'affichage_. Dans ce flux de travail, il est maintenant recommandé que la majorité du traitement d'image ait lieu en utilisant les modules qui, dans la liste ordonnée des modules, sont situés avant [_filmique rvb_](../../../module-reference/processing-modules/filmic-rgb.md) (compris). Étant vraiment linéaires, les opérations de cette section du pipeline graphique sont beaucoup plus réalistes physiquement et produisent moins d'artefacts.\n"
+msgid "_Scene-referred_ workflow (auto-apply pixel workflow defaults = \"scene-referred\") was introduced as part of darktable 3.0. The module order was entirely rearranged to place the [_filmic rgb_](../../../module-reference/processing-modules/filmic-rgb.md) and [_base curve_](../../../module-reference/processing-modules/base-curve.md) tone mapping modules much later in the pixelpipe. This means that most modules now operate in _linear rgb_ space with only a few modules remaining within the non-linear _display-referred_ space. Within this workflow it is now recommended that the majority of image processing takes place using the modules up to and including [_filmic rgb_](../../../module-reference/processing-modules/filmic-rgb.md). Operations in this section of the pixelpipe, being truly linear, are much more physically realistic and produce fewer artifacts.\n"
+msgstr "Le nouveau flux de travail _relatif à la scène_ (dans les préférences globales l'option flux de travail par défaut = « relatif à la scène ») a été introduit dans le cadre de darktable 3.0. L'ordre des modules a été entièrement réorganisé pour placer les modules de mappage de tonalité [_filmique rvb_](../../../module-reference/processing-modules/filmic-rgb.md) et [_courbe de base_](../../../module-reference/processing-modules/base-curve.md) beaucoup plus tard dans le pipeline graphique. Cela signifie que la plupart des modules opèrent désormais dans l'espace _linéaire RVB_ avec seulement quelques modules restant dans l'espace non linéaire _relatif à l'affichage_. Dans ce flux de travail, il est maintenant recommandé que la majorité du traitement d'image ait lieu en utilisant les modules qui, dans la liste ordonnée des modules, sont situés avant [_filmique rvb_](../../../module-reference/processing-modules/filmic-rgb.md) (compris). Étant vraiment linéaires, les opérations de cette section du pipeline graphique sont beaucoup plus réalistes physiquement et produisent moins d'artefacts.\n"
 
 #. type: Plain text
 #: content/darkroom/pixelpipe/the-pixelpipe-and-module-order.md
@@ -3426,8 +3426,8 @@ msgstr "Après une année, le module est supprimé du groupe _des modules dépr�
 #. type: Plain text
 #: content/darkroom/processing-modules/deprecated.md
 #, no-wrap
-msgid "For example, modules deprecated in Ansel 3.4 will be removed from the _deprecated modules_ group in Ansel 3.8 (assuming two major releases each year).\n"
-msgstr "Par exemple, les modules dépréciés dans Ansel 3.4 seront supprimés du groupe de _modules dépréciés_ dans Ansel 3.8 (en supposant deux versions majeures chaque année).\n"
+msgid "For example, modules deprecated in darktable 3.4 will be removed from the _deprecated modules_ group in darktable 3.8 (assuming two major releases each year).\n"
+msgstr "Par exemple, les modules dépréciés dans darktable 3.4 seront supprimés du groupe de _modules dépréciés_ dans darktable 3.8 (en supposant deux versions majeures chaque année).\n"
 
 #. type: YAML Front Matter: title
 #: content/darkroom/processing-modules/multiple-instances.md
@@ -4063,20 +4063,20 @@ msgstr "Les articles suivants fournissent des informations générales utiles su
 #. type: Bullet: '- '
 #: content/guides-tutorials/other-resources.md
 #, no-wrap
-msgid "[Ansel 3.0 for dummies in 3 modules](https://discuss.pixls.us/t/Ansel-3-0-for-dummies-in-3-modules/15849)\n"
-msgstr "[Ansel 3.0 for dummies in 3 modules](https://discuss.pixls.us/t/Ansel-3-0-for-dummies-in-3-modules/15849)\n"
+msgid "[darktable 3.0 for dummies in 3 modules](https://discuss.pixls.us/t/Ansel-3-0-for-dummies-in-3-modules/15849)\n"
+msgstr "[darktable 3.0 for dummies in 3 modules](https://discuss.pixls.us/t/Ansel-3-0-for-dummies-in-3-modules/15849)\n"
 
 #. type: Bullet: '- '
 #: content/guides-tutorials/other-resources.md
 #, no-wrap
-msgid "[Ansel 3.0 for dummies -- hardcore edition](https://discuss.pixls.us/t/Ansel-3-0-for-dummies-hardcore-edition/15864)\n"
-msgstr "[Ansel 3.0 for dummies -- hardcore edition](https://discuss.pixls.us/t/Ansel-3-0-for-dummies-hardcore-edition/15864)\n"
+msgid "[darktable 3.0 for dummies -- hardcore edition](https://discuss.pixls.us/t/Ansel-3-0-for-dummies-hardcore-edition/15864)\n"
+msgstr "[darktable 3.0 for dummies -- hardcore edition](https://discuss.pixls.us/t/Ansel-3-0-for-dummies-hardcore-edition/15864)\n"
 
 #. type: Bullet: '- '
 #: content/guides-tutorials/other-resources.md
 #, no-wrap
-msgid "[Ansel 3.0: RGB or Lab? Which modules? Help!](https://pixls.us/articles/Ansel-3-rgb-or-lab-which-modules-help/)\n"
-msgstr "[Ansel 3.0 : RGB or Lab ? Which modules ? Help !](https ://pixls.us/articles/Ansel-3-rgb-or-lab-which-modules-help/)\n"
+msgid "[darktable 3.0: RGB or Lab? Which modules? Help!](https://pixls.us/articles/Ansel-3-rgb-or-lab-which-modules-help/)\n"
+msgstr "[darktable 3.0 : RGB or Lab ? Which modules ? Help !](https ://pixls.us/articles/Ansel-3-rgb-or-lab-which-modules-help/)\n"
 
 #. type: Bullet: '- '
 #: content/guides-tutorials/other-resources.md
@@ -4099,38 +4099,38 @@ msgstr "Les ressources suivantes peuvent fournir une compréhension plus approfo
 #. type: Bullet: '- '
 #: content/guides-tutorials/other-resources.md
 #, no-wrap
-msgid "[Image processing and the pixel pipeline in Ansel 3.0](https://youtu.be/3FFU-Ltvm0I)\n"
-msgstr "[Image processing and the pixel pipeline in Ansel 3.0](https://youtu.be/3FFU-Ltvm0I)\n"
+msgid "[Image processing and the pixel pipeline in darktable 3.0](https://youtu.be/3FFU-Ltvm0I)\n"
+msgstr "[Image processing and the pixel pipeline in darktable 3.0](https://youtu.be/3FFU-Ltvm0I)\n"
 
 #. type: Bullet: '- '
 #: content/guides-tutorials/other-resources.md
 #, no-wrap
-msgid "[Filmic RGB v3: remapping any dynamic range in Ansel 3.0](https://youtu.be/zbPj_TqTF88)\n"
-msgstr "[Filmic RGB v3: remapping any dynamic range in Ansel 3.0](https://youtu.be/zbPj_TqTF88)\n"
+msgid "[Filmic RGB v3: remapping any dynamic range in darktable 3.0](https://youtu.be/zbPj_TqTF88)\n"
+msgstr "[Filmic RGB v3: remapping any dynamic range in darktable 3.0](https://youtu.be/zbPj_TqTF88)\n"
 
 #. type: Bullet: '- '
 #: content/guides-tutorials/other-resources.md
 #, no-wrap
-msgid "[Filmic RGB v4: highlights reconstruction in Ansel 3.2](https://youtu.be/leZVK2s68QA)\n"
-msgstr "[Filmic RGB v4: highlights reconstruction in Ansel 3.2](https://youtu.be/leZVK2s68QA)\n"
+msgid "[Filmic RGB v4: highlights reconstruction in darktable 3.2](https://youtu.be/leZVK2s68QA)\n"
+msgstr "[Filmic RGB v4: highlights reconstruction in darktable 3.2](https://youtu.be/leZVK2s68QA)\n"
 
 #. type: Bullet: '- '
 #: content/guides-tutorials/other-resources.md
 #, no-wrap
-msgid "[Dodging and burning with tone equalizer in Ansel 3.0](https://youtu.be/kzACn3l49HM)\n"
-msgstr "[Dodging and burning with tone equalizer in Ansel 3.0](https://youtu.be/kzACn3l49HM)\n"
+msgid "[Dodging and burning with tone equalizer in darktable 3.0](https://youtu.be/kzACn3l49HM)\n"
+msgstr "[Dodging and burning with tone equalizer in darktable 3.0](https://youtu.be/kzACn3l49HM)\n"
 
 #. type: Bullet: '- '
 #: content/guides-tutorials/other-resources.md
 #, no-wrap
-msgid "[Noise reduction (profiled) with non-local means in Ansel 3.0](https://youtu.be/InsCJAPSdjI)\n"
-msgstr "[Noise reduction (profiled) with non-local means in Ansel 3.0](https://youtu.be/InsCJAPSdjI)\n"
+msgid "[Noise reduction (profiled) with non-local means in darktable 3.0](https://youtu.be/InsCJAPSdjI)\n"
+msgstr "[Noise reduction (profiled) with non-local means in darktable 3.0](https://youtu.be/InsCJAPSdjI)\n"
 
 #. type: Bullet: '- '
 #: content/guides-tutorials/other-resources.md
 #, no-wrap
-msgid "[Noise reduction (profiled) with wavelets in Ansel 3.0](https://youtu.be/7ZhbeXpx2W8)\n"
-msgstr "[Noise reduction (profiled) with wavelets in Ansel 3.0](https://youtu.be/7ZhbeXpx2W8)\n"
+msgid "[Noise reduction (profiled) with wavelets in darktable 3.0](https://youtu.be/7ZhbeXpx2W8)\n"
+msgstr "[Noise reduction (profiled) with wavelets in darktable 3.0](https://youtu.be/7ZhbeXpx2W8)\n"
 
 #. type: Bullet: '- '
 #: content/guides-tutorials/other-resources.md
@@ -9128,8 +9128,8 @@ msgstr "ajustements de base (déprécié)"
 #. type: Plain text
 #: content/module-reference/processing-modules/basic-adjustments.md
 #, no-wrap
-msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from Ansel 3.6 and should no longer be used for new edits. Please use the [quick access panel](../../darkroom/organization/quick-access-panel.md) instead.**\n"
-msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis Ansel 3.6 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le [panneau d'accès rapide](../../darkroom/organization/quick-access-panel.md) à la place.**\n"
+msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from darktable 3.6 and should no longer be used for new edits. Please use the [quick access panel](../../darkroom/organization/quick-access-panel.md) instead.**\n"
+msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis darktable 3.6 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le [panneau d'accès rapide](../../darkroom/organization/quick-access-panel.md) à la place.**\n"
 
 #. type: Plain text
 #: content/module-reference/processing-modules/basic-adjustments.md
@@ -9274,8 +9274,8 @@ msgstr "mixeur de canaux (déprécié)"
 #. type: Plain text
 #: content/module-reference/processing-modules/channel-mixer.md
 #, no-wrap
-msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from Ansel 3.4 and should no longer be used for new edits. Please use the [_color calibration_](./color-calibration.md) module instead.**\n"
-msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis Ansel 3.4 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le module [_calibration des couleurs_](./color-calibration.md) à la place.**\n"
+msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from darktable 3.4 and should no longer be used for new edits. Please use the [_color calibration_](./color-calibration.md) module instead.**\n"
+msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis darktable 3.4 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le module [_calibration des couleurs_](./color-calibration.md) à la place.**\n"
 
 #. type: Plain text
 #: content/module-reference/processing-modules/channel-mixer.md
@@ -9486,8 +9486,8 @@ msgstr "lumière d'appoint (déprécié)"
 #. type: Plain text
 #: content/module-reference/processing-modules/fill-light.md
 #, no-wrap
-msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from Ansel 3.4 and should no longer be used for new edits. Please use the [_tone equalizer_](./tone-equalizer.md) module or the [_exposure_](./exposure.md) module with a [drawn mask](../../darkroom/masking-and-blending/masks/drawn.md).**\n"
-msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis Ansel 3.4 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le module[_égaliseur de ton_](./tone-equalizer.md) ou encore le module [_exposition_](./exposure.md) avec un [_masque dessiné_](../../darkroom/masking-and-blending/masks/drawn.md) à la place.**\n"
+msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from darktable 3.4 and should no longer be used for new edits. Please use the [_tone equalizer_](./tone-equalizer.md) module or the [_exposure_](./exposure.md) module with a [drawn mask](../../darkroom/masking-and-blending/masks/drawn.md).**\n"
+msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis darktable 3.4 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le module[_égaliseur de ton_](./tone-equalizer.md) ou encore le module [_exposition_](./exposure.md) avec un [_masque dessiné_](../../darkroom/masking-and-blending/masks/drawn.md) à la place.**\n"
 
 #. type: Plain text
 #: content/module-reference/processing-modules/fill-light.md
@@ -9642,8 +9642,8 @@ msgstr "mappage global des tonalités (déprécié)"
 #. type: Plain text
 #: content/module-reference/processing-modules/global-tonemap.md
 #, no-wrap
-msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from Ansel 3.4 and should no longer be used for new edits. Please use the [_filmic rgb_](./filmic-rgb.md) module instead.**\n"
-msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis Ansel 3.4 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le module [_filmique rvb_](./filmic-rgb.md) à la place.**\n"
+msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from darktable 3.4 and should no longer be used for new edits. Please use the [_filmic rgb_](./filmic-rgb.md) module instead.**\n"
+msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis darktable 3.4 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le module [_filmique rvb_](./filmic-rgb.md) à la place.**\n"
 
 #. type: Plain text
 #: content/module-reference/processing-modules/global-tonemap.md
@@ -9712,8 +9712,8 @@ msgstr "inverser (déprécié)"
 #. type: Plain text
 #: content/module-reference/processing-modules/invert.md
 #, no-wrap
-msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from Ansel 3.4 and should no longer be used for new edits. Please use the [_negadoctor_](./negadoctor.md) module instead.**\n"
-msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis Ansel 3.6 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le module [_docteur néga_](./negadoctor.md) à la place.**.**\n"
+msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from darktable 3.4 and should no longer be used for new edits. Please use the [_negadoctor_](./negadoctor.md) module instead.**\n"
+msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis darktable 3.6 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le module [_docteur néga_](./negadoctor.md) à la place.**.**\n"
 
 #. type: Plain text
 #: content/module-reference/processing-modules/invert.md
@@ -10273,8 +10273,8 @@ msgstr "correction des taches (déprécié)"
 #. type: Plain text
 #: content/module-reference/processing-modules/spot-removal.md
 #, no-wrap
-msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from Ansel 3.6 and should no longer be used for new edits. Please use the \"cloning\" tool in the [_retouch_](./retouch.md) module instead.**\n"
-msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis Ansel 3.6 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le module [retouche](./retouch.md) à la place.**\n"
+msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from darktable 3.6 and should no longer be used for new edits. Please use the \"cloning\" tool in the [_retouch_](./retouch.md) module instead.**\n"
+msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis darktable 3.6 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le module [retouche](./retouch.md) à la place.**\n"
 
 #. type: Plain text
 #: content/module-reference/processing-modules/spot-removal.md
@@ -10353,8 +10353,8 @@ msgstr "mappage des tonalités (déprécié)"
 #. type: Plain text
 #: content/module-reference/processing-modules/tone-mapping.md
 #, no-wrap
-msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from Ansel 3.4 and should no longer be used for new edits. Please use the [_tone equalizer_](./tone-equalizer.md) module instead.**\n"
-msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis Ansel 3.6 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le module [_égaliseur de tons_](./tone-equalizer.md) à la place.**\n"
+msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from darktable 3.4 and should no longer be used for new edits. Please use the [_tone equalizer_](./tone-equalizer.md) module instead.**\n"
+msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis darktable 3.6 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le module [_égaliseur de tons_](./tone-equalizer.md) à la place.**\n"
 
 #. type: Plain text
 #: content/module-reference/processing-modules/tone-mapping.md
@@ -10397,8 +10397,8 @@ msgstr "vibrance (déprécié)"
 #. type: Plain text
 #: content/module-reference/processing-modules/vibrance.md
 #, no-wrap
-msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from Ansel 3.6 and should no longer be used for new edits. Please use the vibrance control in the [_color balance rgb_](./color-balance-rgb.md) module instead.**\n"
-msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis Ansel 3.4 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le réglage de vibrance du module [_balance couleur rvb_](./color-balance-rgb.md) à la place.**\n"
+msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from darktable 3.6 and should no longer be used for new edits. Please use the vibrance control in the [_color balance rgb_](./color-balance-rgb.md) module instead.**\n"
+msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis darktable 3.4 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le réglage de vibrance du module [_balance couleur rvb_](./color-balance-rgb.md) à la place.**\n"
 
 #. type: Plain text
 #: content/module-reference/processing-modules/vibrance.md
@@ -10425,8 +10425,8 @@ msgstr "zones (déprécié)"
 #. type: Plain text
 #: content/module-reference/processing-modules/zone-system.md
 #, no-wrap
-msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from Ansel 3.4 and should no longer be used for new edits. Please use the [_tone equalizer_](./tone-equalizer.md) or multiple instances of the [_exposure_](./exposure.md) module with [parametric masks](../../darkroom/masking-and-blending/masks/parametric.md) to narrow down on a zone.**\n"
-msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis Ansel 3.4 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser l'[_égaliseur de tons_](./tone-equalizer.md) ou plusieurs instances du module [_exposition_](./exposure.md) avec des [masques paramétriques](../../darkroom/masking-and-blending/masks/parametric.md) pour affiner le ciblage d'une zone.**\n"
+msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from darktable 3.4 and should no longer be used for new edits. Please use the [_tone equalizer_](./tone-equalizer.md) or multiple instances of the [_exposure_](./exposure.md) module with [parametric masks](../../darkroom/masking-and-blending/masks/parametric.md) to narrow down on a zone.**\n"
+msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis darktable 3.4 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser l'[_égaliseur de tons_](./tone-equalizer.md) ou plusieurs instances du module [_exposition_](./exposure.md) avec des [masques paramétriques](../../darkroom/masking-and-blending/masks/parametric.md) pour affiner le ciblage d'une zone.**\n"
 
 #. type: Plain text
 #: content/module-reference/processing-modules/zone-system.md
@@ -10951,8 +10951,8 @@ msgstr "recadrer et pivoter (déprécié)"
 #. type: Plain text
 #: content/module-reference/processing-modules/crop-rotate.md
 #, no-wrap
-msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from Ansel 3.8 and should no longer be used for new edits. Please use the [_crop_](./crop.md) module to crop the image, the [_rotate and perspective_](./rotate-perspective.md) module to perform rotation and keystone correction, and the [_orientation_](./orientation.md) module to flip the image on the horizontal/vertical axes.**\n"
-msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis Ansel 3.8 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser les modules [_recadrer_](./crop.md) pour recadrer l'image, [rotation et perspective](./rotate-perspective.md) pour effectuer une rotation ou pour corriger la distorsion trapézoïdale, et [_orientation_](./orientation.md) pour retourner l'image sur les axes horizontal/vertical.**\n"
+msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from darktable 3.8 and should no longer be used for new edits. Please use the [_crop_](./crop.md) module to crop the image, the [_rotate and perspective_](./rotate-perspective.md) module to perform rotation and keystone correction, and the [_orientation_](./orientation.md) module to flip the image on the horizontal/vertical axes.**\n"
+msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis darktable 3.8 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser les modules [_recadrer_](./crop.md) pour recadrer l'image, [rotation et perspective](./rotate-perspective.md) pour effectuer une rotation ou pour corriger la distorsion trapézoïdale, et [_orientation_](./orientation.md) pour retourner l'image sur les axes horizontal/vertical.**\n"
 
 #. type: Plain text
 #: content/module-reference/processing-modules/crop-rotate.md
@@ -12383,8 +12383,8 @@ msgstr "suppression des franges (déprécié)"
 #. type: Plain text
 #: content/module-reference/processing-modules/defringe.md
 #, no-wrap
-msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from Ansel 3.6 and should no longer be used for new edits. Please use the [_chromatic aberrations_](./chromatic-aberrations.md) module instead.**\n"
-msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis Ansel 3.6 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le module [aberrations chromatiques](./chromatic-aberrations.md) à la place.**\n"
+msgid "**Please note that this module is [deprecated](../../darkroom/processing-modules/deprecated.md) from darktable 3.6 and should no longer be used for new edits. Please use the [_chromatic aberrations_](./chromatic-aberrations.md) module instead.**\n"
+msgstr "**Veuillez noter que ce module est [déprécié](../../darkroom/processing-modules/deprecated.md) depuis darktable 3.6 et ne devrait plus être utilisé pour de nouveaux développements. Veuillez utiliser le module [aberrations chromatiques](./chromatic-aberrations.md) à la place.**\n"
 
 #. type: Plain text
 #: content/module-reference/processing-modules/defringe.md
@@ -13870,14 +13870,14 @@ msgstr "Ce module peut être utilisé soit pour élargir soit pour contracter la
 #. type: Plain text
 #: content/module-reference/processing-modules/filmic-rgb.md
 #, no-wrap
-msgid "The module is derived from another module of the same name in [Blender 3D modeller](https://www.blender.org/) by T. J. Sobotka. While it is primarily intended to recover high-dynamic-range images from raw sensor data it can be used with any image in place of the [_base curve_](./base-curve.md) module. The following video (by the developer of this module) provides a useful introduction: [filmic rgb: remap any dynamic range in Ansel 3](https://www.youtube.com/watch?v=zbPj_TqTF880).\n"
-msgstr "Ce module est dérivé d'un autre module du même nom dans le modeleur 3D [Blender](https://www.blender.org/) by T. J. Sobotka. Bien qu'il soit principalement prévu pour récupérer les images à haute plage dynamique à partir des données brutes de capteur, il peut être utilisé pour toute image à la place du module [courbe de base](./base-curve.md). La vidéo suivante (en anglais, par le développeur du module) fournit une introduction utile : [filmic rgb : remap any dynamic range in Ansel 3](https://www.youtube.com/watch?v=zbPj_TqTF880).\n"
+msgid "The module is derived from another module of the same name in [Blender 3D modeller](https://www.blender.org/) by T. J. Sobotka. While it is primarily intended to recover high-dynamic-range images from raw sensor data it can be used with any image in place of the [_base curve_](./base-curve.md) module. The following video (by the developer of this module) provides a useful introduction: [filmic rgb: remap any dynamic range in darktable 3](https://www.youtube.com/watch?v=zbPj_TqTF880).\n"
+msgstr "Ce module est dérivé d'un autre module du même nom dans le modeleur 3D [Blender](https://www.blender.org/) by T. J. Sobotka. Bien qu'il soit principalement prévu pour récupérer les images à haute plage dynamique à partir des données brutes de capteur, il peut être utilisé pour toute image à la place du module [courbe de base](./base-curve.md). La vidéo suivante (en anglais, par le développeur du module) fournit une introduction utile : [filmic rgb : remap any dynamic range in darktable 3](https://www.youtube.com/watch?v=zbPj_TqTF880).\n"
 
 #. type: Plain text
 #: content/module-reference/processing-modules/filmic-rgb.md
 #, no-wrap
-msgid "_filmic rgb_ is the successor to the _filmic_ module from Ansel 2.6. While the underlying principles have not changed much, the default settings and their assumptions have, so users of the previous version should not expect a 1:1 translation of their workflow to the new version.\n"
-msgstr "_filmique rvb_ est le successeur du module _filmique_ de Ansel 2.6. Bien que les principes de base n'aient pas beaucoup changé, les réglages par défaut et leurs hypothèses de base ne sont plus exactement les mêmes, de sortie que les utilisateurs de la version précédente ne devraient pas attendre une traduction 1:1 de leur flux de travail avec la nouvelle version.\n"
+msgid "_filmic rgb_ is the successor to the _filmic_ module from darktable 2.6. While the underlying principles have not changed much, the default settings and their assumptions have, so users of the previous version should not expect a 1:1 translation of their workflow to the new version.\n"
+msgstr "_filmique rvb_ est le successeur du module _filmique_ de darktable 2.6. Bien que les principes de base n'aient pas beaucoup changé, les réglages par défaut et leurs hypothèses de base ne sont plus exactement les mêmes, de sortie que les utilisateurs de la version précédente ne devraient pas attendre une traduction 1:1 de leur flux de travail avec la nouvelle version.\n"
 
 #. type: Plain text
 #: content/module-reference/processing-modules/filmic-rgb.md
@@ -15948,10 +15948,10 @@ msgstr "D'autres préréglages fournissent des émulations de films Kodak. De ce
 #, no-wrap
 msgid ""
 "mode\n"
-": _lift, gamma, gain (sRGB)_ is the legacy mode from Ansel 2.4 and earlier. In this mode, the color transformations are applied in sRGB color space encoded with the sRGB gamma (average gamma of 2.2).\n"
+": _lift, gamma, gain (sRGB)_ is the legacy mode from darktable 2.4 and earlier. In this mode, the color transformations are applied in sRGB color space encoded with the sRGB gamma (average gamma of 2.2).\n"
 msgstr ""
 "mode\n"
-": _lift, gamma, gain (sRGB)_ est le mode originel de Ansel 2.4 et des versions antérieures. Dans ce mode, les transformations de couleur sont appliquées dans l'espace colorimétrique sRVB encodé avec le gamma sRVB (gamma moyen de 2,2).\n"
+": _lift, gamma, gain (sRGB)_ est le mode originel de darktable 2.4 et des versions antérieures. Dans ce mode, les transformations de couleur sont appliquées dans l'espace colorimétrique sRVB encodé avec le gamma sRVB (gamma moyen de 2,2).\n"
 
 #. type: Plain text
 #: content/module-reference/processing-modules/color-balance.md
@@ -17644,10 +17644,10 @@ msgstr "La luminosité et la saturation (saturation des couleurs) des pixels d'u
 #, no-wrap
 msgid ""
 "saturation algorithm\n"
-": This control allows you to upgrade the saturation algorithm to the new 2021 version, for edits produced prior to Ansel 3.6 -- it will not appear for edits that already use the latest version.\n"
+": This control allows you to upgrade the saturation algorithm to the new 2021 version, for edits produced prior to darktable 3.6 -- it will not appear for edits that already use the latest version.\n"
 msgstr ""
 "algorithme de saturation\n"
-": Ce contrôle vous permet de mettre à niveau l'algorithme de saturation vers la nouvelle version 2021, pour les développements effectués avant Ansel 3.6 -- il n'apparaîtra pas pour les développements qui utilisent déjà la dernière version.\n"
+": Ce contrôle vous permet de mettre à niveau l'algorithme de saturation vers la nouvelle version 2021, pour les développements effectués avant darktable 3.6 -- il n'apparaîtra pas pour les développements qui utilisent déjà la dernière version.\n"
 
 #. type: Title ##
 #: content/module-reference/processing-modules/color-calibration.md
@@ -18988,8 +18988,8 @@ msgstr "_écrêtage du gamut_ : l'espace colorimétrique de sortie définit un 
 #. type: Plain text
 #: content/module-reference/utility-modules/darkroom/clipping.md
 #, no-wrap
-msgid "The \"clipping warning\" module is used to highlight those pixels that cannot be accurately represented in the output color space, either due to luminance or gamut clipping. Prior to Ansel 3.4, the clipping highlighted any pixels that exceeded the maximum allowed value on any of the [R,G,B] channels, or that had been completely crushed to black. From Ansel 3.4 onwards, the clipping warning indicator has some additional modes to help you to differentiate between luminance and gamut clipping, so that you can make better decisions about how to address any issues.\n"
-msgstr "Le module «avertissement d'écrêtage» est utilisé pour mettre en évidence les pixels qui ne peuvent pas être représentés avec précision dans l'espace couleur de sortie, en raison de l'écrêtage de la luminance ou du gamut. Avant Ansel 3.4, l'écrêtage mettait en évidence tous les pixels qui dépassaient la valeur maximale autorisée sur l'un des canaux [R, V, B], ou qui avaient été complètement noircis. À partir de Ansel 3.4, l'indicateur d'avertissement d'écrêtage propose des modes supplémentaires pour vous aider à faire la différence entre l'écrêtage de la luminance et l'écrêtage du gamut, afin que vous puissiez prendre de meilleures décisions sur la façon de résoudre les problèmes.\n"
+msgid "The \"clipping warning\" module is used to highlight those pixels that cannot be accurately represented in the output color space, either due to luminance or gamut clipping. Prior to darktable 3.4, the clipping highlighted any pixels that exceeded the maximum allowed value on any of the [R,G,B] channels, or that had been completely crushed to black. From darktable 3.4 onwards, the clipping warning indicator has some additional modes to help you to differentiate between luminance and gamut clipping, so that you can make better decisions about how to address any issues.\n"
+msgstr "Le module «avertissement d'écrêtage» est utilisé pour mettre en évidence les pixels qui ne peuvent pas être représentés avec précision dans l'espace couleur de sortie, en raison de l'écrêtage de la luminance ou du gamut. Avant darktable 3.4, l'écrêtage mettait en évidence tous les pixels qui dépassaient la valeur maximale autorisée sur l'un des canaux [R, V, B], ou qui avaient été complètement noircis. À partir de darktable 3.4, l'indicateur d'avertissement d'écrêtage propose des modes supplémentaires pour vous aider à faire la différence entre l'écrêtage de la luminance et l'écrêtage du gamut, afin que vous puissiez prendre de meilleures décisions sur la façon de résoudre les problèmes.\n"
 
 #. type: Plain text
 #: content/module-reference/utility-modules/darkroom/clipping.md
@@ -19038,12 +19038,12 @@ msgid ""
 ": - _any RGB channel_: Provides an over-clipping indication if any one of the three [R,G,B] channels exceeds the maximum permitted value for the histogram color space, or an under-clipping indication if the three [R,G,B] channels are too dark and are all forced to black. This was the default mode prior to Ansel version 3.4.\n"
 ": - _luminance only_: Indicates any pixels that are clipped because their luminance falls outside of the range set in the \"upper threshold\" and \"lower threshold\" sliders. If this happens, it generally means that tone mapping or exposure settings have been poorly set\n"
 ": - _saturation only_: Indicates where over-saturated colors have pushed one or more of the [R,G,B] channels towards a value outside the permitted range of the histogram color space, even though the overall luminance of the pixel may lie within acceptable limits. This means that the pixel's color is impossible to represent in the histogram color space, and can arise from poorly set gamut mapping or saturation settings,\n"
-": - _full gamut_: Shows a combination of the three previous options. This is the default mode from Ansel 3.4 onwards, and it gives the most complete indication of potentially problematic pixels.\n"
+": - _full gamut_: Shows a combination of the three previous options. This is the default mode from darktable 3.4 onwards, and it gives the most complete indication of potentially problematic pixels.\n"
 msgstr ""
 ": - _un canal RVB_ : Fournit une indication de sur-écrêtage si l'un des trois canaux [R,V,B] dépasse la valeur maximale autorisée pour l'espace colorimétrique de l'histogramme, ou une indication de sous-écrêtage si les trois canaux [R, V, B] sont trop sombres et sont tous forcés au noir. C'était le mode par défaut avant la version 3.4 de Ansel.\n"
 ": - _luminance seulement_ : Indique les pixels écrêtés car leur luminance se situe en dehors de la plage définie par les curseurs «seuil bas» et «seuil haut». Si cela se produit, cela signifie généralement que le mappage des tons ou les paramètres d'exposition ont été mal définis.\n"
 ": - _saturation seulement_ : Indique où les couleurs sursaturées ont poussé un ou plusieurs des canaux [R,V,B] vers une valeur en dehors de la plage autorisée de l'espace colorimétrique de l'histogramme, même si la luminance globale du pixel peut se situer dans des limites acceptables. Cela signifie que la couleur du pixel est impossible à représenter dans l'espace colorimétrique de l'histogramme et peut provenir d'un mappage du gamut ou de paramètres de saturation mal définis.\n"
-": - _gamut complet_ : Affiche une combinaison des trois options précédentes. C'est le mode par défaut à partir de Ansel 3.4. C'est celui qui signale le mieux les pixels potentiellement problématiques.\n"
+": - _gamut complet_ : Affiche une combinaison des trois options précédentes. C'est le mode par défaut à partir de darktable 3.4. C'est celui qui signale le mieux les pixels potentiellement problématiques.\n"
 
 #. type: Plain text
 #: content/module-reference/utility-modules/darkroom/clipping.md
@@ -28347,8 +28347,8 @@ msgstr ""
 #. type: Bullet: '- '
 #: content/preferences-settings/processing.md
 #, no-wrap
-msgid "_scene-referred_ workflow (default) assumes that most processing will be performed in a linear RGB color space. Selecting this option will automatically enable the [_filmic rgb_](../module-reference/processing-modules/filmic-rgb.md) and [_exposure_](../module-reference/processing-modules/exposure.md) modules and will set the pixelpipe order to _v3.0_ which is the (scene-referred) order defined for Ansel 3.0 and later. \n"
-msgstr "Le flux de travail _relatif à la scène_ (défaut) suppose que la plupart des traitements seront effectués dans un espace colorimétrique RVB linéaire. La sélection de cette option activera automatiquement les modules [_filmique rvb_](../module-reference/processing-modules/filmic-rgb.md) et [_exposition_](../module-reference/processing-modules/exposure.md) et définira l'ordre du pipeline graphique sur _v3.0_ qui est l'ordre (relatif à la scène) défini pour Ansel 3.0 et les versions ultérieures. \n"
+msgid "_scene-referred_ workflow (default) assumes that most processing will be performed in a linear RGB color space. Selecting this option will automatically enable the [_filmic rgb_](../module-reference/processing-modules/filmic-rgb.md) and [_exposure_](../module-reference/processing-modules/exposure.md) modules and will set the pixelpipe order to _v3.0_ which is the (scene-referred) order defined for darktable 3.0 and later. \n"
+msgstr "Le flux de travail _relatif à la scène_ (défaut) suppose que la plupart des traitements seront effectués dans un espace colorimétrique RVB linéaire. La sélection de cette option activera automatiquement les modules [_filmique rvb_](../module-reference/processing-modules/filmic-rgb.md) et [_exposition_](../module-reference/processing-modules/exposure.md) et définira l'ordre du pipeline graphique sur _v3.0_ qui est l'ordre (relatif à la scène) défini pour darktable 3.0 et les versions ultérieures. \n"
 
 #. type: Plain text
 #: content/preferences-settings/processing.md
@@ -28365,14 +28365,14 @@ msgstr "  Enfin, ce paramètre active automatiquement l'option «compenser expos
 #. type: Bullet: '- '
 #: content/preferences-settings/processing.md
 #, no-wrap
-msgid "_display-referred_ workflow assumes that most processing will be performed in the Lab color space and is the legacy mode from Ansel 2.6 and earlier. Selecting this option will automatically enable the [_base curve_](../module-reference/processing-modules/base-curve.md) module and set the pixelpipe order to the _legacy_ (display-referred) order used by default up to version 2.6.\n"
-msgstr "Le flux de travail _relatif à l'affichage_ suppose que la plupart des traitements seront effectués dans l'espace colorimétrique Lab et correspond au mode originel de Ansel 2.6 et des versions antérieures. La sélection de cette option activera automatiquement le module [_courbe de base_](../module-reference/processing-modules/base-curve.md) et définira l'ordre du pipeline graphique sur l'ordre _originel_ (relatif à l'affichage) utilisé par défaut jusqu'à la version 2.6.\n"
+msgid "_display-referred_ workflow assumes that most processing will be performed in the Lab color space and is the legacy mode from darktable 2.6 and earlier. Selecting this option will automatically enable the [_base curve_](../module-reference/processing-modules/base-curve.md) module and set the pixelpipe order to the _legacy_ (display-referred) order used by default up to version 2.6.\n"
+msgstr "Le flux de travail _relatif à l'affichage_ suppose que la plupart des traitements seront effectués dans l'espace colorimétrique Lab et correspond au mode originel de darktable 2.6 et des versions antérieures. La sélection de cette option activera automatiquement le module [_courbe de base_](../module-reference/processing-modules/base-curve.md) et définira l'ordre du pipeline graphique sur l'ordre _originel_ (relatif à l'affichage) utilisé par défaut jusqu'à la version 2.6.\n"
 
 #. type: Bullet: '- '
 #: content/preferences-settings/processing.md
 #, no-wrap
-msgid "_none_ will not enable any modules by default and will set the pixelpipe to the _v3.0_ (scene-referred) order defined for Ansel 3.0 and later.\n"
-msgstr "_aucun_ n'activera aucun module par défaut et définira l'ordre d'application des modules dans le pipeline graphique sur _v3.0_ (relatif à la scène), soit celui de Ansel 3.0 et plus.\n"
+msgid "_none_ will not enable any modules by default and will set the pixelpipe to the _v3.0_ (scene-referred) order defined for darktable 3.0 and later.\n"
+msgstr "_aucun_ n'activera aucun module par défaut et définira l'ordre d'application des modules dans le pipeline graphique sur _v3.0_ (relatif à la scène), soit celui de darktable 3.0 et plus.\n"
 
 #. type: Plain text
 #: content/preferences-settings/processing.md
@@ -31418,20 +31418,20 @@ msgstr "Les versions de Ansel antérieures à 2.6 avaient un pipeline relatif à
 #. type: Plain text
 #: content/special-topics/color-pipeline.md
 #, no-wrap
-msgid "The _filmic_ module's view transform, introduced in Ansel 2.6, was the first step toward a scene-referred pipeline, and deferred the mandatory, non-linear, display preparation to the end of the pipe, along with the ability to set custom black, gray and white values. The _color balance_ module then introduced a way to deal with a variable definition of middle-gray.\n"
-msgstr "La transformation de vue du module _filmique_, introduit dans Ansel 2.6, était la première étape vers un pipeline relatif à la scène. Elle a reporté la préparation, obligatoire, non linéaire, de l'affichage à la fin du pipeline. Elle a aussi donné la possibilité de définir des valeurs personnalisées de noir, de gris et de blanc. Le module _balance couleur_ a ensuite introduit un moyen de traiter une définition variable du gris moyen.\n"
+msgid "The _filmic_ module's view transform, introduced in darktable 2.6, was the first step toward a scene-referred pipeline, and deferred the mandatory, non-linear, display preparation to the end of the pipe, along with the ability to set custom black, gray and white values. The _color balance_ module then introduced a way to deal with a variable definition of middle-gray.\n"
+msgstr "La transformation de vue du module _filmique_, introduit dans darktable 2.6, était la première étape vers un pipeline relatif à la scène. Elle a reporté la préparation, obligatoire, non linéaire, de l'affichage à la fin du pipeline. Elle a aussi donné la possibilité de définir des valeurs personnalisées de noir, de gris et de blanc. Le module _balance couleur_ a ensuite introduit un moyen de traiter une définition variable du gris moyen.\n"
 
 #. type: Plain text
 #: content/special-topics/color-pipeline.md
 #, no-wrap
-msgid "Starting in Ansel 3.2, users could choose between two workflows that defined consistent default settings, modules and pipeline order for both _display-referred_ and _scene-referred_ processing.\n"
-msgstr "À partir de Ansel 3.2, les utilisateurs pouvaient choisir entre deux flux de travail qui définissaient des paramètres par défaut cohérents, un choix de modules et leur ordre dans le pipeline graphique, à la fois, pour le traitement _relatif à l'affichage_ et pour le traitement _relatif à la scène_.\n"
+msgid "Starting in darktable 3.2, users could choose between two workflows that defined consistent default settings, modules and pipeline order for both _display-referred_ and _scene-referred_ processing.\n"
+msgstr "À partir de darktable 3.2, les utilisateurs pouvaient choisir entre deux flux de travail qui définissaient des paramètres par défaut cohérents, un choix de modules et leur ordre dans le pipeline graphique, à la fois, pour le traitement _relatif à l'affichage_ et pour le traitement _relatif à la scène_.\n"
 
 #. type: Plain text
 #: content/special-topics/color-pipeline.md
 #, no-wrap
-msgid "In Ansel 3.4, a full scene-referred masking and blending option was introduced, allowing masks to be defined for pixel values above 100% and using only unbounded blending operators.\n"
-msgstr "Dans Ansel 3.4, une option complète de masquage et de fusion relative à la scène a été introduite, permettant de définir des masques pour des valeurs de pixel supérieures à 100% et utilisant uniquement des opérateurs de fusion non bornés.\n"
+msgid "In darktable 3.4, a full scene-referred masking and blending option was introduced, allowing masks to be defined for pixel values above 100% and using only unbounded blending operators.\n"
+msgstr "Dans darktable 3.4, une option complète de masquage et de fusion relative à la scène a été introduite, permettant de définir des masques pour des valeurs de pixel supérieures à 100% et utilisant uniquement des opérateurs de fusion non bornés.\n"
 
 #. type: Plain text
 #: content/special-topics/color-pipeline.md
@@ -31454,8 +31454,8 @@ msgstr "De même, les modes de fusion tels que superposer, lumière linéaire, l
 #. type: Plain text
 #: content/special-topics/color-pipeline.md
 #, no-wrap
-msgid "In Ansel 3.4 and above, hovering the cursor over a module header shows a tooltip detailing the color spaces, ranges and encodings that the module expects, uses and produces. Here are the definitions of the terms used:\n"
-msgstr "Dans Ansel 3.4 et les versions ultérieures, le passage du curseur sur un en-tête de module affiche une info-bulle détaillant les espaces colorimétriques, les plages et les encodages que le module attend, utilise et produit. Voici les définitions des termes utilisés :\n"
+msgid "In darktable 3.4 and above, hovering the cursor over a module header shows a tooltip detailing the color spaces, ranges and encodings that the module expects, uses and produces. Here are the definitions of the terms used:\n"
+msgstr "Dans darktable 3.4 et les versions ultérieures, le passage du curseur sur un en-tête de module affiche une info-bulle détaillant les espaces colorimétriques, les plages et les encodages que le module attend, utilise et produit. Voici les définitions des termes utilisés :\n"
 
 #. type: Plain text
 #: content/special-topics/color-pipeline.md
@@ -31562,11 +31562,11 @@ msgstr "Ajoutez la langue que vous souhaitez traduire. Par exemple, l'anglais re
 #, no-wrap
 msgid ""
 "     en-us:\n"
-"       title: Ansel 3.4 user manual\n"
+"       title: darktable 3.4 user manual\n"
 "       weight: 1\n"
 msgstr ""
 "     en-us:\n"
-"       title: Ansel 3.4 user manual\n"
+"       title: darktable 3.4 user manual\n"
 "       weight: 1\n"
 
 #. type: Bullet: '3. '
@@ -33723,7 +33723,7 @@ msgstr "Le paramétrage par défaut de Ansel devrait donner des performances GPU
 #. type: Plain text
 #: content/special-topics/mem-performance.md
 #, no-wrap
-msgid "Since Ansel 4.0 most of the OpenCL-related options are managed with a \"per device\" strategy. The configuration parameter for each device looks like:\n"
+msgid "Since darktable 4.0 most of the OpenCL-related options are managed with a \"per device\" strategy. The configuration parameter for each device looks like:\n"
 msgstr ""
 
 #. type: Plain text
@@ -34422,8 +34422,8 @@ msgstr "Cette documentation est publiée sous la licence [GPL 3.0](https://www.g
 #~ msgstr "La porte de sortie de Ansel s'appelle le tuilage. Pour chaque module de traitement, au lieu de traiter une image en un seul gros morceau, Ansel la divise en parties plus petites (des tuiles). Cela nécessite encore un tampon d'entrée et de sortie, mais ces tampons intermédiaires peuvent être suffisamment petits pour tout faire rentrer dans les limites du matériel.\n"
 
 #, no-wrap
-#~ msgid "Unfortunately this is not yet the full story. An effect called memory fragmentation can and will hit software that needs to perform extensive memory management. If such a program allocates 5 times 300MB at a time and frees it again, that memory should normally be available for one big 1.5GB allocation afterwards. However this is often not the case. The system's memory allocator may no longer see this area as one contiguous 1.5GB block but as a row of separate 300MB areas. If there is no other free area of 1.5GB available, a subsequent allocation would fail. During a program run this mechanism will take away more and more of the larger memory blocks in favor of smaller ones. Ansel's mip map cache allocates several small memory blocks per thumbnail, so this problem is even bigger. For this reason, as of Ansel 2.0, 32-bit support is soft-deprecated.\n"
-#~ msgstr "Malheureusement, ce n’est pas encore la fin de l’histoire. Un effet appelé fragmentation de la mémoire peut toucher et touchera les logiciels qui doivent réaliser une gestion étendue de la mémoire. Si un tel programme alloue 5 fois 300 Mo à la fois et ensuite les libère, cette mémoire devrait normalement être disponible pour une grande allocation ultérieure de 1,5 Go. Cependant ce n'est pas souvent le cas. L'allocateur de mémoire du système peut ne plus voir cette zone comme un bloc contigu de 1,5 Go mais comme une rangée de blocs séparés de 300 Mo. S'il n'y a pas d'autre zone libre de 1,5 Go disponible, une allocation ultérieure échouera. Pendant l'exécution d'un programme, ce mécanisme enlèvera de plus en plus de blocs de mémoire plus gros au profit de blocs plus petits. Le cache mip map de Ansel alloue plusieurs petits blocs de mémoire par miniature, ce problème est donc encore plus important. Pour cette raison, à partir de Ansel 2.0, la prise en charge des systèmes 32 bits est obsolète.\n"
+#~ msgid "Unfortunately this is not yet the full story. An effect called memory fragmentation can and will hit software that needs to perform extensive memory management. If such a program allocates 5 times 300MB at a time and frees it again, that memory should normally be available for one big 1.5GB allocation afterwards. However this is often not the case. The system's memory allocator may no longer see this area as one contiguous 1.5GB block but as a row of separate 300MB areas. If there is no other free area of 1.5GB available, a subsequent allocation would fail. During a program run this mechanism will take away more and more of the larger memory blocks in favor of smaller ones. Ansel's mip map cache allocates several small memory blocks per thumbnail, so this problem is even bigger. For this reason, as of darktable 2.0, 32-bit support is soft-deprecated.\n"
+#~ msgstr "Malheureusement, ce n’est pas encore la fin de l’histoire. Un effet appelé fragmentation de la mémoire peut toucher et touchera les logiciels qui doivent réaliser une gestion étendue de la mémoire. Si un tel programme alloue 5 fois 300 Mo à la fois et ensuite les libère, cette mémoire devrait normalement être disponible pour une grande allocation ultérieure de 1,5 Go. Cependant ce n'est pas souvent le cas. L'allocateur de mémoire du système peut ne plus voir cette zone comme un bloc contigu de 1,5 Go mais comme une rangée de blocs séparés de 300 Mo. S'il n'y a pas d'autre zone libre de 1,5 Go disponible, une allocation ultérieure échouera. Pendant l'exécution d'un programme, ce mécanisme enlèvera de plus en plus de blocs de mémoire plus gros au profit de blocs plus petits. Le cache mip map de Ansel alloue plusieurs petits blocs de mémoire par miniature, ce problème est donc encore plus important. Pour cette raison, à partir de darktable 2.0, la prise en charge des systèmes 32 bits est obsolète.\n"
 
 #, no-wrap
 #~ msgid "further limitations"
@@ -34480,10 +34480,10 @@ msgstr "Cette documentation est publiée sous la licence [GPL 3.0](https://www.g
 #, no-wrap
 #~ msgid ""
 #~ "memory in megabytes to use for thumbnail cache\n"
-#~ ": This controls how many thumbnails (or mip maps) can be stored in memory at a time. As a starting point set this to something like 256MB. Since Ansel 2.0, the cache does allocate a few small buffers per thumbnail in cache, thus causing significant memory fragmentation. As explained before, this poses a problem for 32-bit systems. For this reason, as of Ansel 2.0, 32-bit support is soft-deprecated.\n"
+#~ ": This controls how many thumbnails (or mip maps) can be stored in memory at a time. As a starting point set this to something like 256MB. Since darktable 2.0, the cache does allocate a few small buffers per thumbnail in cache, thus causing significant memory fragmentation. As explained before, this poses a problem for 32-bit systems. For this reason, as of darktable 2.0, 32-bit support is soft-deprecated.\n"
 #~ msgstr ""
 #~ "mémoire en mégaoctets à utiliser pour le cache des miniatures\n"
-#~ ": Ceci contrôle combien de miniatures (ou mip maps) peuvent être stockées à la fois en mémoire. Comme point de départ fixez ce nombre à quelque chose comme 256 MB. Depuis Ansel 2.0, le cache doit allouer de petits buffers pour chaque miniature, causant ainsi une significative fragmentation de la mémoire. Comme expliqué auparavant, ceci pose problème aux systèmes 32-bits. Pour cette raison, à partir de Ansel 2.0, le support du 32-bits est déconseillé.\n"
+#~ ": Ceci contrôle combien de miniatures (ou mip maps) peuvent être stockées à la fois en mémoire. Comme point de départ fixez ce nombre à quelque chose comme 256 MB. Depuis darktable 2.0, le cache doit allouer de petits buffers pour chaque miniature, causant ainsi une significative fragmentation de la mémoire. Comme expliqué auparavant, ceci pose problème aux systèmes 32-bits. Pour cette raison, à partir de darktable 2.0, le support du 32-bits est déconseillé.\n"
 
 #, no-wrap
 #~ msgid "Ansel on 64-bit systems"
@@ -35850,5 +35850,5 @@ msgstr "Cette documentation est publiée sous la licence [GPL 3.0](https://www.g
 #~ msgstr "[_monochrome_](../module-reference/processing-modules/monochrome.md)\n"
 
 #, no-wrap
-#~ msgid "Ansel 3.4"
-#~ msgstr "Ansel 3.4"
+#~ msgid "darktable 3.4"
+#~ msgstr "darktable 3.4"

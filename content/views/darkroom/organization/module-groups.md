@@ -13,7 +13,7 @@ All of these presets (with the exception of _modules: deprecated_ and _search on
 
 ## _modules: all_
 
-This preset contains all modules, sorted according to the traditional module groupings used prior to Ansel 3.4, as follows:
+This preset contains all modules, sorted according to the traditional module groupings used prior to darktable 3.4, as follows:
 
 ![module-group-basic-icon](./module-groups/module-group-basic-icon.png#icon) base modules
 : The minimal set of modules normally required to render a presentable image.
@@ -32,7 +32,7 @@ This preset contains all modules, sorted according to the traditional module gro
 
 ## _modules: default_
 
-This preset is the default module group layout from Ansel 3.4 onwards and consists of a simplified set of module groups, as follows:
+This preset is the default module group layout from darktable 3.4 onwards and consists of a simplified set of module groups, as follows:
 
 ![module-group-technical-icon](./module-groups/module-group-technical-icon.png#icon) technical modules
 : Modules that deal with technical issues relating to the physics of sensors and denoising, lenses and associated corrections, color profiles, dynamic range and tone mapping, and recovering from damage to the image by physical limitations (hot pixels, clipped highlights, etc.).
