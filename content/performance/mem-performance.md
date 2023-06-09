@@ -95,7 +95,7 @@ If you want to make maximal use of your GPU memory for OpenCL, you have three op
 
 The default Ansel settings should deliver a reasonable GPU performance on most systems. However, if you want to try to optimize things further, this section describes the relevant configuration parameters (all of which are set in your Anselrc file).
 
-Since Ansel 4.0 most of the OpenCL-related options are managed with a "per device" strategy. The configuration parameter for each device looks like:
+Since darktable 4.0 most of the OpenCL-related options are managed with a "per device" strategy. The configuration parameter for each device looks like:
 
 `cldevice_v4_quadrortx4000=0 250 0 16 16 1024 0 0 0.017853`
 

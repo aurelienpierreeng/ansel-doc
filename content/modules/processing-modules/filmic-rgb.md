@@ -13,9 +13,9 @@ Remap the tonal range of an image by reproducing the tone and color response of 
 
 This module can be used either to expand or to contract the dynamic range of the scene to fit the dynamic range of the display. It protects colors and contrast in the mid-tones, recovers the shadows, and compresses bright highlights and dark shadows. Highlights will need extra care when details need to be preserved (e.g. clouds).
 
-The module is derived from another module of the same name in [Blender 3D modeller](https://www.blender.org/) by T. J. Sobotka. While it is primarily intended to recover high-dynamic-range images from raw sensor data it can be used with any image. The following video (by the developer of this module) provides a useful introduction: [filmic rgb: remap any dynamic range in Ansel 3](https://www.youtube.com/watch?v=zbPj_TqTF880).
+The module is derived from another module of the same name in [Blender 3D modeller](https://www.blender.org/) by T. J. Sobotka. While it is primarily intended to recover high-dynamic-range images from raw sensor data it can be used with any image. The following video (by the developer of this module) provides a useful introduction: [filmic rgb: remap any dynamic range in darktable 3](https://www.youtube.com/watch?v=zbPj_TqTF880).
 
-_filmic rgb_ is the successor to the _filmic_ module from Ansel 2.6. While the underlying principles have not changed much, the default settings and their assumptions have, so users of the previous version should not expect a 1:1 translation of their workflow to the new version.
+_filmic rgb_ is the successor to the _filmic_ module from darktable 2.6. While the underlying principles have not changed much, the default settings and their assumptions have, so users of the previous version should not expect a 1:1 translation of their workflow to the new version.
 
 ---
 
