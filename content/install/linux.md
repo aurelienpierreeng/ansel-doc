@@ -1,6 +1,7 @@
 ---
 title: Install on Linux
 date: 2022-12-11
+lastmod: 2023-06-16
 draft: false
 weight: 10
 ---
@@ -60,7 +61,7 @@ This will most likely put the AppImage package into your `~/Downloads` folder, y
 - [Give it execution permission](https://discourse.appimage.org/t/how-to-run-an-appimage/80/4).
 - Either double-click on the AppImage file from your file browser or launch `./Ansel-xxxx-x86_64.AppImage` in terminal.
 
-To create a system shortcut and have Ansel accessible from your dash/app menu, you can use [AppImageLauncher](https://assassinate-you.net/posts/2020/09/appimagelauncher-2.2.0-released/).
+To create a system shortcut and have Ansel accessible from your dash/app menu, you can use [AppImageLauncher](https://assassinate-you.net/posts/2020/09/appimagelauncher-2.2.0-released/), available as `.deb`, `.rpm` and `.AppImage` packages ([download](https://github.com/TheAssassin/AppImageLauncher/releases/tag/v2.2.0)). It will integrate the AppImage with your desktop environment with or without running extra services in background, upon request, and can update the Ansel AppImage.
 
 ### Update the AppImage
 
@@ -116,6 +117,7 @@ $ sudo apt-get -y install \
 	libcmocka-dev \
 	libcups2-dev \
 	libcurl4-gnutls-dev \
+	libexiv2-dev \
 	libimage-exiftool-perl \
 	libgdk-pixbuf2.0-dev \
 	libglib2.0-dev \
@@ -185,10 +187,11 @@ $ sh build.sh --install --sudo --clean-all
 This will:
 
 - cleanup any remnant of a previous Ansel build and installation (avoiding weird corner-cases),
-- build the software with the most aggressive level of optimizations for your hardware,
+- build the software with the most aggressive level of optimizations for your particular hardware (the produced binary will not be portable to another hardware),
 - install the software in `/opt/ansel`
 - install a system-wide command `ansel` that can be invoked in a terminal,
-- install a system-wide desktop launcher.
+- install a system-wide desktop launcher,
+- update Lensfun database of lenses profiles.
 
 To enable less-aggressive optimizations (if you discover picture artifacts) and install the software somewhere else, use:
 
@@ -206,7 +209,7 @@ If you don't have a good reason to do that, don't, and use the previous method.
 $ cd ansel
 $ mkdir build
 $ cd build
-$ export CXXFLAGS="-O3 -fno-strict-aliasing "
+$ export CXXFLAGS="-O3 -fno-strict-aliasing"
 $ export CFLAGS="$CXXFLAGS"
 $ cmake .. -DCMAKE_INSTALL_PREFIX=/usr -G Ninja -DCMAKE_BUILD_TYPE=Release -DBINARY_PACKAGE_BUILD=ON -DCMAKE_INSTALL_LIBDIR=lib64
 $ sudo cmake --build . --target install -- -j 8
@@ -218,7 +221,13 @@ You can run `ansel` or `/opt/ansel/bin/ansel` from the terminal, or use your app
 
 ### Update the self-built application
 
-In a terminal, run :
+You can run the build script above with the extra argument `--update` like:
+
+```bash
+$ sh build.sh --install --sudo --clean-all --update
+```
+
+The caveat is this will update the source code except the build script itself, which may cause issues if the build script was modified (but that rarely happens). To overcome this, you can execute the script twice, or update manually with:
 
 ```bash
 $ cd ansel
