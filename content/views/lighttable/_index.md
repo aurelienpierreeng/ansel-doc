@@ -1,6 +1,7 @@
 ---
 title: Lighttable
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-10-11
 id: lighttable-and-dam
 draft: false
 weight: 20
@@ -12,7 +13,7 @@ The lighttable view allows you to view and manage your image collection.
 
 The centre view contains thumbnails of your images -- how they are displayed depends on which [mode](./lighttable-modes/_index.md) you are working in.
 
-While the mouse is over an image thumbnail or images are selected, there are a number of actions you can perform with keyboard shortcuts:
+While images are selected, there are a number of actions you can perform with keyboard shortcuts:
 
 - `F1, F2, F3, F4, F5` adds or removes a color label (red, yellow, green, blue, purple, respectively). A color label will be added if _any_ selected image does not currently have the label; otherwise the label will be removed
 
@@ -20,18 +21,14 @@ While the mouse is over an image thumbnail or images are selected, there are a n
 
 - `R` rejects the image(s)
 
-- `Ctrl+D` duplicates the image(s)
+- `Ctrl+N` creates new development
 
-- `Ctrl+C` copies the full history stack
+- `Ctrl+D` duplicates existing development
 
-- `Ctrl+V` pastes all of the copied history stack
+- `Ctrl+C` copies development
 
-- `Ctrl+Shift+C` selectively copies the history stack
+- `Ctrl+V` pastes development (all)
 
-- `Ctrl+Shift+V` selectively pastes from the copied history stack
+- `Ctrl+Shift+V` pastes development (parts)
 
-- `D` opens the image in the darkroom view for developing
-
-- `W ` fully zooms into the current image while the key is pressed
-
-- `Ctrl+W ` fully zooms into the current image and show areas in focus
+- `Enter` opens the image in the darkroom view for developing
