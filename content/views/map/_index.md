@@ -1,21 +1,22 @@
 ---
 title: Map
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-10-11
 id: map
 weight: 50
 draft: false
 author: "people"
 ---
 
-The map view allows you to see where your geo-tagged images were taken, and to add location information to non-geo-tagged images.
+The Map view is optional and needs to be activated in [Preferences > Other views](../../preferences-settings/other-views.md). It allows you to see where your geo-tagged images were taken, and to add location information to non-geo-tagged images.
 
-The map view shows a world map with the images in the current [collection](../lighttable/digital-asset-management/collections.md) pinned to their geo-tagged location (if available). This requires that images are tagged with location information. Some newer cameras, including smartphones, are already equipped with GPS receivers. Other cameras may need additional GPS hardware to do this.
+The Map view shows a world map with the images in the current [collection](../lighttable/digital-asset-management/collections.md) pinned to their geo-tagged location (if available). This requires that images are tagged with location information. Some newer cameras, including smartphones, are already equipped with GPS receivers. Other cameras may need additional GPS hardware to do this.
 
-Even if your camera doesn't support this feature, there is an alternative method -- Ansel can match the Exif date/time in your image(s) to a separate GPX data tracking file created by a GPS tracker, that has recorded your movements. GPS trackers can be purchased as standalone handheld devices or you can install a GPS tracker app on your smartphone. Location tagging with GPS tracking data can be done using the [geotagging](../../modules/utility-modules/shared/geotagging.md) module, in the lighttable and map views.
+Even if your camera doesn't support this feature, there is an alternative method -- Ansel can match the Exif date/time in your image(s) to a separate GPX data tracking file created by a GPS tracker, that has recorded your movements. GPS trackers can be purchased as standalone handheld devices or you can install a GPS tracker app on your smartphone. Location tagging with GPS tracking data can be done using the [geotagging](../../modules/utility-modules/shared/geotagging.md) module, in the lighttable and Map views.
 
-## center map view
+## Center Map view
 
-In the center of the map view you will see a world map.
+In the center of the Map view you will see a world map.
 
 Map data is taken from open map sources on the internet. As such, new map data is only available if you are connected to the internet -- Ansel keeps a disk cache of previously loaded map data.
 
@@ -31,14 +32,14 @@ In order to remove location data from an image simply drag it from the map and d
 
 Images close to each other are grouped under a single image group. You can use the  [map settings](../../modules/utility-modules/map/map-settings.md) module to control the grouping as needed. The number displayed on the bottom left of the thumbnail is the number of images inside the group. A white number means that all images in the group are at exactly the same location, whereas a yellow number means they are not. Use the mouse scroll wheel while hovering over a group of images to scroll through the thumbnails of the images in that group.
 
-Normally, images in the center map view have black borders. If an image is selected in the filmstrip, then the corresponding image on the map will be highlighted with a white border.
+Normally, images in the center Map view have black borders. If an image is selected in the filmstrip, then the corresponding image on the map will be highlighted with a white border.
 
 Click+drag to adjust the location of an image. Shift+click to move a complete group of images.
 
-The left and right panels provide additional controls (see [map view layout](./map-view-layout.md)).
+The left and right panels provide additional controls (see [Map view layout](./map-view-layout.md)).
 
-## undo/redo
+## Undo/Redo
 
-All image movements in the map view are recorded by Ansel. It is possible to undo or redo such changes to recover a previous state. Note that this undo/redo facility is unlimited while moving images but it is reset each time you leave the map view.
+All image movements in the Map view are recorded by Ansel. It is possible to undo or redo such changes to recover a previous state. Note that this undo/redo facility is unlimited while moving images but it is reset each time you leave the Map view.
 
 Press Ctrl+Z to undo the last modification and Ctrl+Y to redo the last undone modification (if any).
