@@ -1,15 +1,16 @@
 ---
 title: Print
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-10-11
 id: print
 weight: 70
 draft: false
 author: "people"
 ---
 
-This view allows you to print your images. Because printing is not easy, there are many technical aspects to be taken into account.
+The Print view is optional and needs to be activated in [Preferences > Other views](../../preferences-settings/other-views.md). This view allows you to print your images. Because printing is not easy, there are many technical aspects to be taken into account.
 
-After selecting an image in the [lighttable view](../lighttable/_index.md) you can enter the [print settings](../../modules/utility-modules/print/print-settings.md) module to adjust printer settings and initiate printing.
+After selecting an image in the [Lighttable view](../lighttable/_index.md) you can enter the [Print settings](../../modules/utility-modules/print/print-settings.md) module to adjust printer settings and initiate printing.
 
 This module supports the printer's ICC profile, which is somewhat mandatory if you want to obtain a high quality print close to the image displayed on the screen.
 
