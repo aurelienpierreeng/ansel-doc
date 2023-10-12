@@ -1,9 +1,10 @@
 ---
 title: import
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-10-12
 id: import
 applicable-version: 3.8
-tags:
+tags: 
 view: lighttable
 ---
 
@@ -15,24 +16,11 @@ See [supported file formats](../../../overview/supported-file-formats.md) for mo
 
 The following buttons are shown in the module's UI by default:
 
-[add to library](#add-to-library)
+[Open from disk](#open-from-disk)
 : Add existing images to the darktable library without copying or moving files. If you only add a single image to the library it will be automatically loaded in the darkroom.
 
-[copy & import](#copy--import)
-: Create copies of images from the filesystem and then add those copies to the darktable library.
-
-When a camera is detected, a new section will appear in the module for that device. If you hover your mouse over the camera label, a tooltip will display information about the camera (model, firmware version etc.)
-
-Depending on the capabilities of the camera, the following additional buttons may be displayed:
-
-mount camera
-: Mount the camera for exclusive use by darktable. This button only appears if the camera is not currently mounted and is not locked by another process.
-
-[copy & import from camera](#copy--import-from-camera)
-: Create copies of images from the connected camera and then add those images to the darktable library. This button only appears if the camera is currently mounted.
-
-unmount camera
-: Unmount the camera and release it for use by other applications. This button only appears if the camera is currently mounted.
+[Import from camera](#import-from-camera)
+: Create copies of images from the filesystem and then add those copies to the Ansel library.
 
 ## module parameters
 
@@ -61,9 +49,7 @@ tags
 
 ## import dialog
 
-Each of the three import buttons (add to library, copy & import, copy & import from camera) uses a similar dialog for the import process, described in this section.
-
-The following example screenshot is taken from the "add to library" button:
+The following example screenshot is taken from the "Open from disk" button:
 
 ![import-dialog](./import/import-dialog.png#w100)
 
@@ -97,22 +83,22 @@ recursive directory
 ignore JPEG images
 : Check this option if there are `JPEG` images in the same folder that you do not wish to import. This option is usually used where the camera stores `RAW+JPEG` and you only want to work on the `RAW` files, leaving the `JPEG` images untouched.
 
-### add to library
+### Open from disk
 
-The "add to library" button allows you to add one or more existing images to the darktable library from the local filesystem. This process does not copy or move images but merely adds their details to the library database and creates XMP sidecar files for them.
+The "Open from disk" button allows you to add one or more existing images to the darktable library from the local filesystem. This process does not copy or move images but merely adds their details to the library database and creates XMP sidecar files for them.
 
 select only new pictures
 : Tick this box to restrict the _initial_ selection (when the dialog is loaded) to only those images that have not already been loaded into the darktable library. If you attempt to reload existing images into the darktable library, data for those images will be reloaded from the XMP sidecar files. A button is also available at the bottom of the dialog to select only "new" images for the currently-selected folder.
 
 ---
 
-**Note:** "Add to library" does not create duplicates of your image files in a separate folder structure but processes them in-situ. The "add to library" process simply adds details of those images to darktable's library database (and creates an XMP sidecar file if applicable) allowing the images to be viewed and developed.
+**Note:** "Open from disk" does not create duplicates of your image files in a separate folder structure but processes them in-situ. The "Open from disk" process simply adds details of those images to darktable's library database (and creates an XMP sidecar file if applicable) allowing the images to be viewed and developed.
 
 This means that if you delete images from disk after having added them, darktable cannot access them any more. Moreover, darktable does not watch for changes in the filesystem. Any new images will not be shown until they are explicitly imported.
 
 ---
 
-### copy & import
+### Import from camera
 
 This option copies images from another location on your filesystem (including mounted storage devices) and then adds the copied images to the darktable library.
 
@@ -138,9 +124,3 @@ file naming pattern
 
 keep this window open
 : Keep the window open after the import is complete, allowing multiple imports but with different naming options.
-
-Most of these options can also be set in [preferences > import](../../../../preferences-settings/import.md). See this section for more information about the available variables.
-
-### copy & import from camera
-
-This option copies files from a connected camera to the local filesystem and then adds the copied images to the darktable library. It provides the same naming options as the "copy & import" dialog but does not allow places or folders to be selected.

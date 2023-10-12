@@ -1,6 +1,7 @@
 ---
 title: scopes
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-10-12
 id: scopes
 applicable-version: 3.8
 tags:
@@ -83,18 +84,6 @@ The graph includes a "hue ring" representing the maximum chroma of each hue (in 
 - When adjusting an image based upon a color checker, faster and more accurate results will come from using [calibrate with a color checker](../../processing-modules/color-calibration#extracting-settings-using-a-color-checker) in the _color calibration_ module.
 - The vectorscope does not have a "skin tone line", which is a flawed generalization rather than a universal standard.
 - The vectorscope represents a colorimetric encoding of an image, which inevitably diverges from a viewer's perception of the image.
-
-## exposure adjustment
-
-The histogram, waveform, and RGB parade scopes can be used to directly alter the _exposure_ and _black level_ of the [_exposure_](../../processing-modules/exposure.md) module.
-
-For the histogram, click towards the right-hand side of the histogram and then drag right to increase or drag left to decrease the exposure. In a similar manner you can control the black level by clicking and dragging in the left-hand side.
-
-For horizontal waveform and RGB parade, drag the upper portion of the scope up/down to increase/decrease exposure. Drag the lower portion up/down to increase/decrease the black level.
-
-For vertical waveform and RGB parade scopes, the corresponding regions are to the right (exposure) and left (black level).
-
-You can also scroll in the appropriate area -- rather than dragging -- to adjust exposure and black point. Double-click in the scope to reset the exposure module's parameters to their defaults.
 
 ## histogram profile
 
