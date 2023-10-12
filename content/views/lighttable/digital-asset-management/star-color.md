@@ -1,6 +1,7 @@
 ---
 title: star ratings & color labels
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-10-12
 id: star-color
 draft: false
 weight: 40
@@ -19,9 +20,8 @@ You can also directly click on the star icons that are overlaid on the thumbnail
 
 As rejecting an image removes the currently-applied star rating, you can undo the rejection by clicking x or pressing R again.
 
-Similarly you can click the first star for a second time to reset the image rating to unranked, or zero stars. This behavior can be changed in [preferences > lighttable](../../../../preferences-settings/lighttable.md).
 
-To rate multiple images at once, select those images in the lighttable or filmstrip and then press the appropriate shortcut key, or click the desired star rating in the bottom panel of the lighttable view.
+To rate multiple images at once, select those images in the lighttable or filmstrip and then press the appropriate shortcut key.
 
 You can filter images by star rating in the [top panel](../../../overview/user-interface/top-panel.md).
 

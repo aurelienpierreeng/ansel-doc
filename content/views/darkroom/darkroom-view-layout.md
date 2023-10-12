@@ -1,6 +1,7 @@
 ---
 title: darkroom view layout
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-10-12
 id: the-darkroom-view
 weight: 20
 draft: false
@@ -22,17 +23,12 @@ From top to bottom:
 [global color picker](../../modules/utility-modules/darkroom/global-color-picker.md)
 : Select and display color information taken from parts of the image.
 
-[tagging](../../modules/utility-modules/shared/tagging.md)
-: Manage tags.
-
 [image information](../../modules/utility-modules/shared/image-information.md)
 : Display information about the current image.
 
 [mask manager](../../modules/utility-modules/darkroom/mask-manager.md)
 : View and edit drawn shapes.
 
-[export](../../modules/utility-modules/shared/export.md)
-: Export selected images to local files or external services.
 
 ## right panel
 
@@ -59,17 +55,9 @@ search module
 
 From left to right:
 
-![presets-icon](./darkroom-view-layout/presets-icon.png#icon) [presets](./processing-modules/presets.md)
-: Quick access menu for module presets. You can manage the contents of this menu by selecting "manage quick presets list...".
-
 ![styles-icon](./darkroom-view-layout/styles-icon.png#icon) [styles](../../modules/utility-modules/lighttable/styles.md)
 : Quick access menu for styles. Hover over a style name with your mouse to show a preview of the current darkroom image with the selected style applied.
 
-![second-window-icon](./darkroom-view-layout/second-window-icon.png#icon) second darkroom window
-: For multi-monitor setup, allows the user to display a second image on another screen.
-
-![focus-peak-icon](./darkroom-view-layout/focus-peak-icon.png#icon) [focus peaking](../../modules/utility-modules/shared/focus-peaking.md)
-: Toggle focus peaking mode.
 
 ![color-assessment-icon](./darkroom-view-layout/color-assessment-icon.png#icon) [color assessment](../../modules/utility-modules/darkroom/color-assessment.md)
 : Toggle the ISO12646 color assessment view.
