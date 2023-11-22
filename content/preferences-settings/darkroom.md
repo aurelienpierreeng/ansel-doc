@@ -1,6 +1,7 @@
 ---
 title: darkroom
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-11-22
 id: darkroom
 weight: 50
 draft: false
@@ -28,19 +29,6 @@ position of the image information line
 border around image in darkroom mode
 : Display the center image in darkroom mode with an outside border of the given number of pixels (default 20).
 
-show scrollbars for center view
-: Choose whether to show scrollbars in the center view of the darkroom (default off).
-
-demosaicing for zoomed out darkroom mode
-: Choose how to demosaic images in the darkroom view when not viewing the image at 1:1 zoom scale. Note: this setting is only used for interactive work and does not affect exported images.
-: - _always bilinear (fast)_ is fastest, but not as sharp
-: - _at most RCD (reasonable)_ uses RCD + interpolation modes. X-Trans sensors will use VNG as the middle-ground setting.
-: - _full (possibly slow)_ will use the settings from the [_demosaic_](../modules/processing-modules/demosaic.md) module.
-: (default "_at most RCD (reasonable)_").
-
-reduce resolution of preview image
-: Reduce the resolution of the [navigation preview](../modules/utility-modules/darkroom/navigation.md) image (choose from "original", "1/2", "1/3" or "1/4" size). This may improve the speed of the rendering but take care as it can also hinder accurate color picking and masking (default "original").
-
 show loading screen between images
 : Show gray loading screen when navigating between images in the darkroom. Switch this option off to just show a simple toast message and leave the previous image in place until the next image is loaded. Note that switching this option off can be very useful to quickly compare duplicate images, however, there might be issues with long loading times (leading you to think the next image has already loaded) and you may observe visual artifacts while the next image is loading (default on).
 
@@ -55,18 +43,6 @@ hide built-in presets for processing modules
 show the guides widget in modules UI
 : Enable this to show the local [guides & overlays](../modules/utility-modules/darkroom/guides-overlays.md#local-guides) interface directly within the UI of the modules that support it (default on).
 
-expand a single processing module at a time
-: Control how [processing modules](../modules/processing-modules/_index.md) are expanded in the darkroom. If this option is enabled, expanding a module by clicking collapses any currently expanded module. If you want to expand a module without collapsing the others you can do so with Shift+click. Disabling this option inverts the meaning of click and Shift+click (default on).
-
-only collapse modules in current group
-: When choosing to expand a single processing module at a time (using the logic defined in the previous setting), only collapse other modules that appear in the current visible group. Disable this option to ensure that modules in non-visible groups are also collapsed (default on).
-
-expand the module when it is activated, and collapse it when disabled
-: Select this option for the darkroom to automatically expand or collapse [processing modules](../modules/processing-modules/_index.md) when they are enabled or disabled. (default off)
-
-scroll to processing modules when expanded/collapsed
-: With this option enabled [processing modules](../modules/processing-modules/_index.md) are scrolled to the top of the right-hand panel when expanded or collapsed (default on).
-
 show right-side buttons in processing module headers
 : Choose whether to show the four buttons (mask indicator, multi-instance menu, reset, presets menu) on the right-hand-side of the [module header](../views/darkroom/processing-modules/module-header.md) for processing modules. These buttons will always appear when the mouse is over the module. At other times they will be shown or hidden according to this preference selection:
 : - _always_: always show all buttons
@@ -79,8 +55,5 @@ show right-side buttons in processing module headers
 : - _glide_: gradually hide individual buttons as needed
 : (default _always_)
 
-show mask indicator in module headers
-: If enabled, an icon will be shown in the header of any processing modules that have a [mask](../views/darkroom/masking-and-blending/masks/_index.md) applied (default on).
-
 prompt for name on addition of new instance
-: If enabled, when creating a new instance of a processing module, a prompt will be immediately displayed allowing you to set a name for the new instance (default off).
+: If enabled, when creating a new instance of a processing module, a prompt will be immediately displayed allowing you to set a name for the new instance (default on).

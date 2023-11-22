@@ -1,6 +1,7 @@
 ---
 title: general
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-11-22
 id: general
 weight: 20
 draft: false
@@ -49,9 +50,9 @@ create theme tweaks
 
 ### understanding Ansel's themes
 
-All of Ansel's pre-built themes are provided as CSS files in `$Ansel/share/Ansel/themes/` (where `$Ansel` is Ansel's installation directory). The default theme is `Ansel.css` and this contains the bulk of the code used to control the look-and-feel of Ansel. A number of other themes are also provided but most of them use `Ansel.css` as a base (by importing `Ansel.css` using the `@import url` directive).
+All of Ansel's pre-built themes are provided as CSS files in `$Ansel/share/Ansel/themes/` (where `$Ansel` is Ansel's installation directory). The default theme is `Ansel.css` and this contains the bulk of the code used to control the look-and-feel of Ansel.
 
-If you choose to create your own custom theme file you are advised to follow a similar approach -- import one of Ansel's existing theme files using `@import url` (this directive expects relative paths) and then apply your own customisations on top. You do not need to do this when using the CSS text box in the preferences dialog -- attempting to use `@import url` in the CSS tweaks text box will not work correctly.
+If you choose to create your own custom theme file you are advised to import Ansel's existing theme files using `@import url` (this directive expects relative paths) and then apply your own customisations on top. You do not need to do this when using the CSS text box in the preferences dialog -- attempting to use `@import url` in the CSS tweaks text box will not work correctly.
 
 Themes use the same basic CSS principles as in html browsers (with some minor exceptions -- see the [Gtk documentation](https://developer-old.gnome.org/gtk3/stable/chap-css-overview.html) for details):
 
@@ -59,6 +60,6 @@ Themes use the same basic CSS principles as in html browsers (with some minor ex
 - Next, related groups of Ansel-specific UI elements are given _class names_ allowing them to be styled as a group
 - Finally, some unique UI elements are assigned a CSS _id_ so that they can be styled independently
 
-You are encouraged to explore the existing themes (`Ansel.css` in particular is very well commented) and to make use of the [Gtk Inspector](https://wiki.gnome.org/Projects/GTK/Inspector) tool to figure out how to select the specific UI element (or class of elements) you wish to modify. Some experimentation will be required.
+You are encouraged to explore the existing theme and to make use of the [Gtk Inspector](https://wiki.gnome.org/Projects/GTK/Inspector) tool to figure out how to select the specific UI element (or class of elements) you wish to modify. Some experimentation will be required.
 
 Please note that Ansel themes are grayscale by default in order that users not be distracted by strong colors while editing images. You are advised to retain this practice in your own themes and to keep the average shade as close to middle-gray as possible. In addition you are advised to review your custom CSS each time Ansel is updated, to ensure that changes to the application have not adversely affected your tweaks.
