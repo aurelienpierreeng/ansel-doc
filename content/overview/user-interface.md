@@ -1,7 +1,7 @@
 ---
 title: user interface
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2023-01-21
+lastmod: 2023-10-12
 id: user-interface
 draft: false
 weight: 10
@@ -55,7 +55,7 @@ Bottom panel
 : Provides buttons to access to view-specific settings and shortcuts. Can be hidden and shown by pressing <kbd>Shift + Ctrl + B</kbd>
 
 [Filmstrip](../../modules/utility-modules/shared/filmstrip.md)
-: An optional panel that can be enabled at the bottom of the screen to display a timeline (in the lighttable view) or a filmstrip (in other views) of images in the current collection. Can be shown and hidden by pressing <kbd>Shift + Ctrl + F</kbd>.
+: An optional panel that can be enabled at the bottom of the screen in Darkroom, Maps and Print view to display a filmstrip of images in the current collection. Can be shown and hidden by pressing <kbd>Shift + Ctrl + F</kbd>.
 
 ### Resizing
 
@@ -95,7 +95,6 @@ Grouping
 
 Thumbnail overlays
 : Define what information is overlaid on to thumbnails in the lighttable/filmstrip.
-: You can define different settings depending on the thumbnail size. See [preferences > lighttable](../../preferences-settings/lighttable.md#thumbnails) for details of how size delimiters are set.
 
 
 ### Filmstrip

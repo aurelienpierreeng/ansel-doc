@@ -1,6 +1,7 @@
 ---
 title: export
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-10-12
 id: export-selected
 applicable-version: 3.6
 tags:
@@ -8,8 +9,6 @@ view: lighttable
 ---
 
 Export selected images.
-
-When used in the darkroom view, the currently-edited image will be exported if no other images are selected in the filmstrip.
 
 Files can be exported to a file on disk, email, various online storage locations, a web album, or a book template.
 
