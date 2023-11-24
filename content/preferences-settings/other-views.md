@@ -13,6 +13,6 @@ Enable optional views:
 * [slideshow](../views/slideshow/)
 * [print](../views/print/)
 
-Once you restart Ansel the enabled view(s) will be available in the Ateliers menu.
+Once you restart Ansel the enabled view(s) will be available in the *Ateliers* menu.
 
 These views are all hidden by default to spare some computing resources.
