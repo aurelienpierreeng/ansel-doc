@@ -17,14 +17,8 @@ scale slider step with min/max
 sort built-in presets first
 : Choose how the presets menu is sorted. If this option is enabled, built-in presets are shown first. If the option is disabled, user presets are shown first (default on).
 
-mouse wheel scrolls modules side panel by default
-: When enabled, the mouse wheel scrolls side panels by default and Ctrl+Alt+wheel scrolls data entry fields. When disabled, this behavior is reversed (default off).
-
 always show panels' scrollbars
 : Defines whether the panel scrollbars should be always visible or activated only depending on the panel content (default on). (needs a restart)
-
-duration of the ui transitions in ms
-: Defines how long modules and other ui elements will take to transition between states (expand/collapse). Set to 0 to disable animation (default 250ms).
 
 position of the scopes module
 : Choose whether to show the [scopes](../modules/utility-modules/shared/scopes.md) module in the left or right panel (default right). (needs a restart)

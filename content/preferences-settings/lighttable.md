@@ -1,6 +1,7 @@
 ---
 title: lighttable
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-10-12
 id: lighttable
 weight: 40
 draft: false
@@ -12,21 +13,6 @@ Control functionality in the [lighttable](../lighttable/_index.md) view and modu
 
 hide built-in presets for utility modules
 : If enabled, only user-defined presets will be shown in presets menu for utility modules -- built-in presets will be hidden (default off).
-
-use single-click in the collections module
-: Enable "single click" mode in the [collections](../modules/utility-modules/shared/collections.md) module, which allows ranges to be selected (default off).
-
-expand a single utility module at a time
-: Controls how utility modules are expanded. If this option is enabled, expanding a module by clicking collapses any other currently expanded panel. If you want to expand a panel without collapsing the others you can do so with Shift+click. Disabling this option inverts the meaning of click and Shift+click (default off).
-
-scroll to utility modules when expanded/collapsed
-: With this option enabled the side panels will scroll a utility module to the top of the panel when it is expanded or collapsed (default off).
-
-rating an image one star twice will not zero out the rating
-: Normally clicking a one star rating twice will set a zero star rating to that image. Check this option to disable this functionality (default off).
-
-show scrollbars for center view
-: Choose whether to show scrollbars in the center view of the lighttable (default on).
 
 show image time with milliseconds
 : Choose whether to include milliseconds when displaying time values (default off). If set, milliseconds are shown in the [image information](../../modules/utility-modules/shared/image-information.md) module and can also be used in the [geotagging](../../modules/utility-modules/shared/geotagging.md) module.
@@ -41,9 +27,3 @@ high quality processing from size
 
 delimiters for size categories
 : Size categories are used to allow different thumbnail overlays to be shown depending on the thumbnail size. A pipe delimited set of values defines at what image sizes the category changes. The default value of "120|400" means that there will be 3 categories of thumbnail: 0-120px, 120-400px and >400px.
-
-pattern for the thumbnail extended overlay text
-: If you have chosen to show extended overlay text over thumbnail images, this setting allows you to define what information is displayed. This pattern can use any of the variables defined in the [variables](../special-topics/variables.md) section. You can also include [formatting](../special-topics/variables.md#formatting) (bold, italic, colors etc).
-
-pattern for the thumbnail tooltip (empty to disable)
-: Defines what information is displayed in the tooltip when the mouse hovers over image thumbnails. This pattern can also use the same variables and formatting as the extended overlay text.

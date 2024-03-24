@@ -1,6 +1,7 @@
 ---
 title: processing
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-10-12
 id: processing
 weight: 70
 draft: false
@@ -28,17 +29,9 @@ pixel interpolator (scaling)
 3D lut root folder
 : Define the root folder (and sub-folders) containing Lut files used by the [_lut 3D_](../modules/processing-modules/lut-3D.md) module
 
-auto-apply chromatic adaptation defaults
-: Choose which module is responsible for performing white balance adjustments (chromatic adaptation) by default. Select "legacy" (default) to perform basic chromatic adaptation within the [_white balance_](../modules/processing-modules/white-balance.md) module only. Select "modern" to use a combination of the _white balance_ and [_color calibration_](../modules/processing-modules/color-calibration.md) modules to perform modern chromatic adaptation with improved color science. These settings are applied by default to new edits and will not impact old edits.
-
-auto-apply per camera basecurve presets
-: Use a per-camera base curve by default (if available) instead of the generic manufacturer one. This should only be used in conjunction with the _display-referred_ workflow defined above (default off).
-
 detect monochrome previews
 : Enable this option to analyse images during import and tag them with the `darkroom|mode|monochrome` tag if they are found to be monochrome. The analysis is based on the preview image embedded within the imported file. This makes for a more convenient workflow when working with monochrome images, but it slows down the import, so this setting is disabled by default.
 
-show warning messages
-: Enable this option to display warning messages in processing modules where non-standard and possibly harmful settings have been used in the pipeline. Such messages can sometimes be false-positives (because of intentional non-standard settings) and can be disregarded if you know what you are doing. Disable to hide these warnings. (default on).
 
 ## CPU, GPU, Memory
 
@@ -49,9 +42,6 @@ Ansel resources
 : - _large_ takes roughly 75% of your system memory and 90% of your GPU memory. This is the best option if you are only using Ansel on your system and/or are exporting a lot of images.
 : - _unrestricted_ is not generally recommended. In this mode Ansel may attempt to use more memory than your system has available. This might be _possible_ if your system uses swapping when all of its system memory is taken, but it could lead to system instability. Use this mode with care, only when exporting very large images that Ansel cannot otherwise handle.
 : See the [memory & performance tuning](../performance/mem-performance.md#ansel-resources) section for more information.
-
-prefer performance over quality
-: Enable this option to render thumbnails and previews at a lower quality. This increases the rendering speed by a factor of 4, and is useful when working on slower computers (default off). This also improves the performance of slideshow image rendering.
 
 enable disk backend for thumbnail cache
 : If activated, Ansel stores all thumbnails on disk as a secondary cache, and thereby keeps thumbnails accessible if they are dropped from the primary cache. This needs more disk space but speeds up the [lighttable](../lighttable/_index.md) view as it avoids the reprocessing of thumbnails (default on).

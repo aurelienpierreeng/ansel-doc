@@ -1,6 +1,7 @@
 ---
 title: lighttable view layout
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-10-12
 id: lighttable-view-layout
 draft: false
 weight: 20
@@ -15,7 +16,7 @@ From top to bottom:
 : Import images from the filesystem or a connected camera.
 
 [collections](../../modules/utility-modules/shared/collections.md)
-: Filter the images displayed in the lighttable center panel -- also used to control the images displayed in the [filmstrip](../../modules/utility-modules/shared/filmstrip.md) and [timeline](../../../modules/utility-modules/lighttable/timeline.md) modules.
+: Filter the images displayed in the lighttable center panel -- also used to control the images displayed in the [filmstrip](../../modules/utility-modules/shared/filmstrip.md) modules.
 
 [recently used collections](../../modules/utility-modules/shared/recent-collections.md)
 : View recently used collections of images.

@@ -1,6 +1,7 @@
 ---
 title: color calibration
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-10-12
 id: color-calibration
 applicable-version: 4.0
 working-color-space: RGB
@@ -127,22 +128,6 @@ In all these cases, you **must** enable the "clip negative RGB from gamut" optio
 **Note 2**: A common case for failure of the color algorithms in _color calibration_ (especially the gamut compression) is pixels that have a luminance value of 0 (Y channel of the CIE 1931 XYZ space), but non-zero chromaticity values (X and Z channels of the CIE 1931 XYZ space). This case is a numerical oddity that matches no physical reality (a pixel with no luminance should have no chromaticity either), will produce a division by zero in xyY and Yuv color spaces, and will create `NaN` RGB values as a result. This issue is **not** corrected inside _color calibration_ because it is a symptom of a bad input profiling and/or a bad black point level, and needs to be addressed manually either by adjusting the input color profile with the channel mixer or in the _exposure_ module's _black level correction_.
 
 ---
-
-### CAT warnings
-
-The chromatic adaptation in this module relies on a number of assumptions about the earlier processing steps in the pipeline in order to work correctly, and it can be easy to inadvertently break those assumptions in subtle ways. To help you to avoid these kinds of mistakes, the _color calibration_ module will show warnings in the following circumstances.
-
-- If the _color calibration_ module is set up to perform chromatic adaptation but the _white balance_ module is not set to "camera reference", warnings will be shown in both modules. These errors can be resolved either by setting the _white balance_ module to "camera reference" or by disabling chromatic adaptation in the _color calibration_ module. Note that some sensors may require minor corrections within the _white balance_ module in which case these warnings can be ignored.
-
-- If two or more instances of _color calibration_ have been created, each attempting to perform chromatic adaptation, an error will be shown on the second instance. This could be a valid use case (for instance where masks have been set up to apply different white balances to different non-overlapping areas of the image) in which case the warnings can be ignored. For most other cases, chromatic adaptation should be disabled in one of the instances to avoid double-corrections.
-
-  By default, if an instance of the _color calibration_ module is already performing chromatic adaptation, each new instance you create will automatically have its adaptation set to "none (bypass)" to avoid this "double-correction" error.
-
-The chromatic adaptation modes in _color calibration_ can be disabled by either setting the _adaptation_ to "none (bypass)" or setting the _illuminant_ to "same as pipeline (D50)" in the CAT tab.
-
-These warnings are intended to prevent common and easy mistakes while using the automatic default presets in the module in a typical RAW editing workflow. When using custom presets and some specific workflows, such as editing film scans or JPEGs, these warnings can and should be ignored.
-
-Advanced users can disable module warnings in [preferences > processing > show warning messages](../../preferences-settings/processing.md).
 
 ## channel mixing
 

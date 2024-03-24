@@ -1,6 +1,7 @@
 ---
 title: soft proof
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2023-10-12
 id: soft-proof
 applicable-version: 3.6
 tags:
@@ -16,8 +17,6 @@ Right-click on the icon to open a dialog with the following configuration parame
 display profile
 : Set the color profile for the display. The option “system display profile” is the preferred setting when working with a calibrated display. The profile is taken either from your system's color manager or from your X display server. The method darktable uses to detect your system display profile can be changed in [preferences > miscellaneous](../../../preferences-settings/miscellaneous.md). For more information see the [display profile](../../../color-management/display-profile.md) section.
 
-preview display profile
-: Set the color profile for the preview image if you are using a second window.
 
 intent
 : Set the rendering intent for your display -- only available if rendering with LittleCMS2 is activated. See [rendering intent](../../../color-management/rendering-intent.md) for a list of available options. This option appears twice -- once for the "display profile" and once for the "preview display profile".
