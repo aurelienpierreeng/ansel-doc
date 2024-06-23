@@ -58,3 +58,18 @@ There might also be interactions with the `udev` stack that you might need to de
 {{< note >}}
 Buying a 20 $ memory card reader will save you a lot of headaches and give you much faster I/O. Connection issues with USB cameras are out of the scope of Ansel and will not be debugged.
 {{< /note >}}
+
+
+## What next ?
+
+Photos are imported into _filmrolls_, which are the primary collection type in Ansel. Filmrolls are related to filesystem folders, but they are not equivalent :
+
+- a filmroll contains images from a single folder ; the folder's name is the identifier (unique name) of the filmroll,
+- a filmroll does not necessarily contain __all__ images from its sibling folder, for example JPEG files from the folder may have been discarded from the filmroll,
+- filmrolls are not recursive or hierarchical, but it is possible to list all filmrolls attached to the sub-folders of an high-level folder,
+- if 2 sets of images are imported, at different times, from the same folder, they will be added to the same filmroll,
+- filmrolls will not be automatically updated when new images are added to the filesystem folders.
+
+In other words, filmrolls are _views_ of filesystem folders that exist only in Ansel's database, and containing only images that Ansel is aware of (because they were imported).
+
+When the import completes, the import window will close and the lighttable view will be updated to the last filmroll created during import.
