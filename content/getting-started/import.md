@@ -27,17 +27,25 @@ Copy to disk
 
 ## Importing from cameras
 
-__It is highly recommended to import from memory cards using a card reader__. Using an USB link through the camera is discouraged. This is both for read/write performance (card readers are much faster, especially when using USB 3.0) and to avoid MTP/PTP drivers issues, which are numerous as you will see later.
+__It is highly recommended to import from memory cards using a card reader__. Mounting the memory card through the camera, using an USB link and PTP/MTP drivers, is possible in most cases but discouraged :
 
-If you still want to import through your camera, here is some important information.
+- read/write performance is bad (in any case, worse),
+- there are many possible camera MTP/PTP drivers issues on Linux, possibly involving the `udev` stack,
+- recent cameras may not be supported at all for a while,
+- several applications (and the OS file browser) may compete for access to PTP/MTP cameras and have auto-mount enabled (only one can lock it at a time),
+- the camera will need to be powered on during the whole process, draining batteries for no reason.
+
+If you still want to proceed, here is some important information to do so.
 
 ### All OS
 
 Ansel uses the [Gio](https://docs.gtk.org/gio/index.html) library to handle files. This library essentially communicates with the operating system to handle local and distant storages, which means the proper drivers need to be installed. Depending on the generation of your cameras, you might look into 3 drivers :
 
-- [USB Mass Storage Class](https://en.wikipedia.org/wiki/USB_mass_storage_device_class), used by card readers, by some cameras and by USB sticks. This is the most reliable and most widely supported, as the drivers already are in all OS since the early 2000's. Prefer this whenever possible.
-- [Picture Transfer Protocol (PTP)](https://en.wikipedia.org/wiki/Picture_Transfer_Protocol), used by cameras.
-- [Media Transfer Protocol (MTP)](https://en.wikipedia.org/wiki/Media_Transfer_Protocol), used by some cameras and smartphones.
+- [USB Mass Storage Device Class (UMS or MSDC)](https://en.wikipedia.org/wiki/USB_mass_storage_device_class), used by card readers, by some cameras and by USB sticks. This is the most reliable and most widely supported, as the drivers already are in all OS since the early 2000's. Prefer this whenever possible,
+- [Picture Transfer Protocol (PTP)](https://en.wikipedia.org/wiki/Picture_Transfer_Protocol), used by cameras, especially DSLR,
+- [Media Transfer Protocol (MTP)](https://en.wikipedia.org/wiki/Media_Transfer_Protocol), used by some cameras and by smartphones.
+
+Some cameras will let you choose the USB driver to load, in their menu. When that is the case, choose preferably mass storage or MTP. In any case, check that your camera is not in PictBridge mode (used only for direct connexion between a camera and a printer).
 
 ### Windows
 
@@ -59,6 +67,33 @@ There might also be interactions with the `udev` stack that you might need to de
 Buying a 20 $ memory card reader will save you a lot of headaches and give you much faster I/O. Connection issues with USB cameras are out of the scope of Ansel and will not be debugged.
 {{< /note >}}
 
+### Mac OS
+
+No idea.
+
+## Importing with copy
+
+When emptying your memory card to a permanent storage, that is when you copy the files before importing to the library, you can rename files in batch and split them automatically into subfolders. This is done through the _project directory naming pattern_ and _file naming pattern_ fields, using [variables](../special-topics/variables.md). The final path of each image imported with copy will be `Base directory / Project directory / Filename`, where `Base directory` will be selected directly from the filesystem (usually the user's `Pictures` default folder), without variables.
+
+Some particular variable's values can be set from the import window :
+
+Project Date
+: By default, it is (explicitly) set to today's date, and the time defaults to 00:00:00 UTC+0 if not explicitly set. Date and time can be changed to any past of future date, either in plain-text (using ISO 8601 format), or using the calendar widget. This date and time will be used by the variables `$(YEAR)`, `$(MONTH)`, `$(DAY)`, `$(HOUR)`, `$(MINUTE)`, `$(SECOND)`, `$(MSEC)`. If you plan on using time (hour, minute, second and below), you should manually set it in plain-text in the entry.
+
+Jobcode
+: This is the project name, like the subject of your photo session. It is retrieved in patterns with the `$(JOBCODE)` variable.
+
+Those values are constant among images for a whole import session.
+
+EXIF variables can also be used in file and directory names, like `$(EXIF.YEAR)`, `$(EXIF.MONTH)`, `$(EXIF.DAY)`, etc. for the date and time of image capture. These variables are a property of each image, which means that, if you use them into directory names, images may be split into different directories and later to different _filmrolls_ (see below).
+
+{{< warning >}}
+Dumping all new images into a (few) single, massive directories is discouraged as it doesn't promote sane culling workflows and might need insane filtering options in lighttable to be workable. (See Darktable's 4.0 new collections/filtering monstruosity…).
+{{< / warning >}}
+
+While Ansel allows you to perform advanced SQL queries into the library database, to find images using many properties (including date/time, EXIF, rating, editing history, etc.), you should not rely on it to customarily access your images. Opening images from other applications, or uploading them to websites (for example : to send print orders) will use your native filesystem interface. Even within Ansel, accessing large collections of images at once will be slower.
+
+With this in mind, you should try to keep a tidy file structure, organizing photos into per-project or per-session directories, containing no more than a few hundreds pictures at once. Directories and file names should be self-explanatory, to allow text search into filenames from any file browser. Those are old and low technologies, supported on any platform, and relying on those makes for efficient and simple workflows.
 
 ## What next ?
 
