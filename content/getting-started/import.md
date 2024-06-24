@@ -18,12 +18,43 @@ The import modal window can be accessed from the global menu _File_ → _Import.
 The _file handling_ setting allows to enforce 2 different strategies :
 
 Import in library
-: This simply makes the library aware of pictures that already exist somewhere on a local or distant storage. You will need to ensure that those images stay available on this storage in the future, at the exact same path, because Ansel needs to access them prior to applying any history or generating exports and thumbnails. Ansel does not keep track of file moves on the filesystem,[^2] meaning displaced images will appear lost in the interface (displayed as skull thumbnails).
+: This simply makes the library aware of pictures that already exist somewhere on a local or distant storage.
 
 [^2]: though there are manual way to update file pathes in the library, if you ever move entire folders.
 
 Copy to disk
 : The typical use case for this strategy is when you want to empty your camera memory cards and save the photos to a permanent storage. It adds a copying step, with bulk files and folders renaming, prior to the same insertion to library as in the previous strategy.
+
+### Importing without copy
+
+You will need to ensure that those images stay available on the same storage in the future, at the exact same address, because Ansel needs to access them prior to applying any history or generating exports and thumbnails. Ansel does not keep track of file moves on the filesystem,[^2] meaning displaced images will appear lost in the interface (displayed as skull thumbnails).
+
+### Importing with copy
+
+When emptying your memory card to a permanent storage, that is when you copy the files before importing to the library, you can rename files in batch and split them automatically into subfolders. This is done through the _project directory naming pattern_ and _file naming pattern_ fields, using [variables](../special-topics/variables.md). The final path of each image imported with copy will be `Base directory / Project directory / Filename`, where `Base directory` will be selected directly from the filesystem (usually the user's `Pictures` default folder), without variables.
+
+Some particular variable's values can be set from the import window :
+
+Project Date
+: By default, it is (explicitly) set to today's date, and the time defaults to 00:00:00 UTC+0 if not explicitly set. Date and time can be changed to any past of future date, either in plain-text (using ISO 8601 format), or using the calendar widget. This date and time will be used by the variables `$(YEAR)`, `$(MONTH)`, `$(DAY)`, `$(HOUR)`, `$(MINUTE)`, `$(SECOND)`, `$(MSEC)`. If you plan on using time (hour, minute, second and below), you should manually set it in plain-text in the entry.
+
+Jobcode
+: This is the project name, like the subject of your photo session. It is retrieved in patterns with the `$(JOBCODE)` variable.
+
+Those values are constant among images for a whole import session.
+
+EXIF variables can also be used in file and directory names, like `$(EXIF.YEAR)`, `$(EXIF.MONTH)`, `$(EXIF.DAY)`, etc. for the date and time of image capture. These variables are a property of each image, which means that, if you use them into directory names, images may be split into different directories and later to different _filmrolls_ (see below). EXIF variables are fetched from reading the actual files, which triggers I/O from the filesystem holding them, and can significantly slow-down importation for files hosted on remote storages or USB 2.0 cameras.
+
+To fast-track per-picture date/time retrieval, you can also use the variables `$(FILE.YEAR)`, `$(FILE.MONTH)`, `$(FILE.DAY)`, `$(FILE.HOUR)`, `$(FILE.MINUTE)` and `$(FILE.SECOND)`. These variables read the file modification date from the filesystem, without reading the actual files, which reduces I/O and brings substantial speed-up when accessing memory cards from within cameras. Provided no third-party application tampered with raw files, the date/time should be the same as EXIF, at least down to the second. Issues may arise if pictures were opened and saved from other applications, and their time of modification changed.
+
+{{< warning >}}
+Dumping all new images into a (few) single, massive directories is discouraged as it doesn't promote sane culling workflows and might need insane filtering options in lighttable to be workable. (See Darktable's 4.0 new collections/filtering monstruosity…).
+{{< / warning >}}
+
+While Ansel allows you to perform advanced SQL queries into the library database, to find images using many properties (including date/time, EXIF, rating, editing history, etc.), you should not rely on it to customarily access your images. Opening images from other applications, or uploading them to websites (for example : to send print orders) will use your native filesystem interface. Even within Ansel, accessing large collections of images at once will be slower.
+
+With this in mind, you should try to keep a tidy file structure, organizing photos into per-project or per-session directories, containing no more than a few hundreds pictures at once. Directories and file names should be self-explanatory, to allow text search into filenames from any file browser. Those are old and low technologies, supported on any platform, and relying on those makes for efficient and simple workflows.
+
 
 ## Importing from cameras
 
@@ -70,30 +101,6 @@ Buying a 20 $ memory card reader will save you a lot of headaches and give you m
 ### Mac OS
 
 No idea.
-
-## Importing with copy
-
-When emptying your memory card to a permanent storage, that is when you copy the files before importing to the library, you can rename files in batch and split them automatically into subfolders. This is done through the _project directory naming pattern_ and _file naming pattern_ fields, using [variables](../special-topics/variables.md). The final path of each image imported with copy will be `Base directory / Project directory / Filename`, where `Base directory` will be selected directly from the filesystem (usually the user's `Pictures` default folder), without variables.
-
-Some particular variable's values can be set from the import window :
-
-Project Date
-: By default, it is (explicitly) set to today's date, and the time defaults to 00:00:00 UTC+0 if not explicitly set. Date and time can be changed to any past of future date, either in plain-text (using ISO 8601 format), or using the calendar widget. This date and time will be used by the variables `$(YEAR)`, `$(MONTH)`, `$(DAY)`, `$(HOUR)`, `$(MINUTE)`, `$(SECOND)`, `$(MSEC)`. If you plan on using time (hour, minute, second and below), you should manually set it in plain-text in the entry.
-
-Jobcode
-: This is the project name, like the subject of your photo session. It is retrieved in patterns with the `$(JOBCODE)` variable.
-
-Those values are constant among images for a whole import session.
-
-EXIF variables can also be used in file and directory names, like `$(EXIF.YEAR)`, `$(EXIF.MONTH)`, `$(EXIF.DAY)`, etc. for the date and time of image capture. These variables are a property of each image, which means that, if you use them into directory names, images may be split into different directories and later to different _filmrolls_ (see below).
-
-{{< warning >}}
-Dumping all new images into a (few) single, massive directories is discouraged as it doesn't promote sane culling workflows and might need insane filtering options in lighttable to be workable. (See Darktable's 4.0 new collections/filtering monstruosity…).
-{{< / warning >}}
-
-While Ansel allows you to perform advanced SQL queries into the library database, to find images using many properties (including date/time, EXIF, rating, editing history, etc.), you should not rely on it to customarily access your images. Opening images from other applications, or uploading them to websites (for example : to send print orders) will use your native filesystem interface. Even within Ansel, accessing large collections of images at once will be slower.
-
-With this in mind, you should try to keep a tidy file structure, organizing photos into per-project or per-session directories, containing no more than a few hundreds pictures at once. Directories and file names should be self-explanatory, to allow text search into filenames from any file browser. Those are old and low technologies, supported on any platform, and relying on those makes for efficient and simple workflows.
 
 ## What next ?
 

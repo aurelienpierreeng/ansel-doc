@@ -23,6 +23,12 @@ $(ROLL.NAME)               film roll of the input image
 $(FILE.FOLDER)             folder containing the input image
 $(FILE.NAME)               basename of the input image
 $(FILE.EXTENSION)          extension of the input image
+$(FILE.YEAR)               year of modification of the input image (read on the filesystem)
+$(FILE.MONTH)              month of modification of the input image (read on the filesystem)
+$(FILE.DAY)                day of modification of the input image (read on the filesystem)
+$(FILE.HOUR)               hour of modification of the input image (read on the filesystem)
+$(FILE.MINUTE)             minute of modification of the input image (read on the filesystem)
+$(FILE.SECOND)             second of modification of the input image (read on the filesystem)
 $(ID)                      the image id
 $(VERSION)                 the duplicate version number
 $(VERSION.IF_MULTI)        same as $(VERSION) but null string if only one version exists
