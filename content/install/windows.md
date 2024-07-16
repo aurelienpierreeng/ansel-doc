@@ -48,6 +48,10 @@ The Ansel project provides an official `.exe` package, built for the stable, pre
     ```bash
     $ pacman -S --needed mingw-w64-x86_64-portmidi
     ```
+  - if you plan and developing, install the unit-tests library
+    ```bash
+    $ pacman -S --needed mingw-w64-x86_64-cmocka
+    ```
 - Open the MINGW64 terminal (from the application menu) and update your lensfun database:
   ```bash
   $ lensfun-update-data
