@@ -79,7 +79,9 @@ date: 2022-12-04T02:19:02+01:00
 lastmod: 2022-12-31
 draft: false
 weight: 120
-tags: [color science, pipeline]
+tags:
+    - color science
+    - pipeline
 ---
 ```
 
@@ -223,7 +225,9 @@ Mermaid graphs are rendered client-side in SVG at display size and can be transl
 Sometimes, it makes sense to reorganize the content and to changes the path of some pages. To not break external links, you must record the old url of the new page as an alias, in the frontmatter of the new page like so:
 
 ```toml
-aliases: ["/my-old-url/", "/another-even-older-url"]
+aliases:
+    - /my-old-url/
+    - /another-even-older-url
 ```
 
 ## Notes

@@ -8,7 +8,8 @@ working-color-space: RGB
 view: darkroom
 masking: true
 include_toc: true
-tags: [batch editing]
+tags:
+  - batch editing
 ---
 
 A fully-featured color-space correction, white balance adjustment and channel mixer module.

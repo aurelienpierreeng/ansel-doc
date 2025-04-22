@@ -4,7 +4,8 @@ date: 2022-12-04T02:19:02+01:00
 weight: 30
 draft: false
 author: "people"
-alias: [module-reference]
+alias:
+  - module-reference
 ---
 
 The modules in this reference section are broken down into two distinct types:

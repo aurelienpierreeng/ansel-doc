@@ -37,16 +37,9 @@ else
     exit 1
 fi
 
-#get list of disabled languages
-disabled_languages=$(cat "$PROJECT_ROOT/disable-languages")
-
-#remove disabled languages from the list
 for lang in `find po -name '*.po' | cut -d . -f 2 | sort -u`
 do
-   if [[ ! "$disabled_languages" == *$lang* ]]
-   then
-      languages="$languages $lang"
-   fi
+   languages="$languages $lang"
 done
 
 # Create a temporary po4a config file.

@@ -7,7 +7,8 @@ tags:
 working-color-space: RGB
 view: darkroom
 masking: true
-tags: [batch editing]
+tags:
+  - batch editing
 ---
 
 Increase or decrease the overall brightness of an image.
