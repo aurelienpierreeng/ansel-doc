@@ -57,7 +57,7 @@ for section in content; do
 EOF
     # for f in $section/*.md; do
     for f in  $(find content -type f -name '*.md'); do
-	echo "[type: markdown] $f \$lang:_gen/$(dirname $f)/$(basename $f .md).\$lang.md" >> $po4a_conf
+	echo "[type: markdown] $f \$lang:_gen/\$lang/$(dirname $f)/$(basename $f .md).md" >> $po4a_conf
     done
     po4a $1 --verbose $po4a_conf &
 done
