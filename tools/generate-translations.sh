@@ -59,7 +59,7 @@ EOF
     for f in  $(find content -type f -name '*.md'); do
 	echo "[type: markdown] $f \$lang:_gen/\$lang/$(dirname $f)/$(basename $f .md).md" >> $po4a_conf
     done
-    po4a $1 --verbose $po4a_conf &
+    po4a $1 --verbose $po4a_conf --keep 0 &
 done
 wait
 
