@@ -57,11 +57,11 @@ Colors can be described in many different color spaces, but no matter the color 
 
 While the previous definitions are useful to give a meaning to the words, they don't tell us what we should be looking at. The following charts show luminance, lightness, chroma, brilliance/brightness and saturation varying from a "0" base color and how the resulting colors degrade:
 
-![swatches](./color-dimensions/swatches.png)
+![swatches](swatches.png)
 
 (Lightness + Chroma) or (Brilliance/Brightness + Saturation) are two different ways to encode the same reality. They are orthogonal spaces that can be converted from one to another by a simple rotation of the base. This means that chroma evolves at constant lightness, saturation evolves at constant brilliance/brightness, and vice versa:
 
-![lightness and chroma to brilliance and saturation](./color-dimensions/lightness-chroma-to-brilliance-saturation.png)
+![lightness and chroma to brilliance and saturation](lightness-chroma-to-brilliance-saturation.png)
 
 Lines of equal chroma are vertical (following the patches grid), meaning that chroma has the same direction for all colors in the gamut (see below). However, lines of equal saturation are oblique (drawn dashed on the graph) and all go from black through each color patch, meaning that their directions are particular to each color.
 
@@ -83,9 +83,9 @@ The gamut is the volume of colors that a certain color space can encompass and e
 
 The following examples show the gamut volume of the sRGB space on hue slices containing the primary red, green and blue lights of the sRGB space, over a lightness-chroma plane with a uniform scale:
 
-![sRGB-red](./color-dimensions/sRGB-red.png)
-![sRGB-green](./color-dimensions/sRGB-green.png)
-![sRGB-blue](./color-dimensions/sRGB-blue.png)
+![sRGB-red](sRGB-red.png)
+![sRGB-green](sRGB-green.png)
+![sRGB-blue](sRGB-blue.png)
 
 This shows that increasing the chroma (displacement over the horizontal axis) of some quantity can be safe for some hues at some lightness, but can push other hue-lightness coordinates way out of gamut. For example, we have much more margin in green or magenta than in cyan.
 
@@ -95,9 +95,9 @@ Many gamut issues at export are actually user-induced and the result of harsh ch
 
 Cyan, magenta, yellow (CMY) are complementary colors of red, green, blue (RGB). However, the complementary CMY spaces computed from RGB spaces are not perceptually complementary. To show this, we create a CMY space from sRGB, where cyan has sRGB coordinates (0, 1, 1), magenta (1, 0, 1) and yellow (1, 1, 0), and display it in a lightness-chroma space:
 
-![sRGB-cyan](./color-dimensions/sRGB-cyan.png)
-![sRGB-magenta](./color-dimensions/sRGB-magenta.png)
-![sRGB-yellow](./color-dimensions/sRGB-yellow.png)
+![sRGB-cyan](sRGB-cyan.png)
+![sRGB-magenta](sRGB-magenta.png)
+![sRGB-yellow](sRGB-yellow.png)
 
 By comparing with the hue slices of the primary colors in the previous section, it is easy to see not only that the gamuts don't have the same shapes, but that the colors do not match.
 

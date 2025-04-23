@@ -30,7 +30,7 @@ Two sliders can be shown for each associated data channel: one that works on the
 
 The _boost factor_ slider allows the range of values targeted by the parametric mask sliders to be extended. It may be used in scene referred editing, where luminance values may extend beyond 100%, to target highlights. This slider is only available for channels where it is meaningful.
 
-![input and output sliders](./parametric/input-output-sliders.png#w33)
+![input and output sliders](input-output-sliders.png#w33)
 
 ### inspecting data channels & masks
 
@@ -54,15 +54,15 @@ A polarity (+/-) button to the right of each the slider switches between "range 
 
 **range select**
 
-![range select slider](./parametric/blendif_2a.png#w33)
+![range select slider](blendif_2a.png#w33)
 
-![range select graph](./parametric/blendif_2b.png#w33)
+![range select graph](blendif_2b.png#w33)
 
 **range deselect**
 
-![range deselect slider](./parametric/blendif_3a.png#w33)
+![range deselect slider](blendif_3a.png#w33)
 
-![range deselect graph](./parametric/blendif_3b.png#w33)
+![range deselect graph](blendif_3b.png#w33)
 
 In their default state all markers are at their extreme positions.
 

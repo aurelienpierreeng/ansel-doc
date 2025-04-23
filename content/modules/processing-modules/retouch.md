@@ -17,19 +17,19 @@ This module includes a "heal" tool (based on the heal tool from GIMP), as well a
 
 Cloning allows a part of the image (the _target_) to be hidden by replacing it with an area copied from elsewhere in the image (the _source_). For example, you may wish to remove a small cloud from a blue sky:
 
-![retouch-original](./retouch/rt-original.png#w33)
+![retouch-original](rt-original.png#w33)
 
-The simplest way to do this is with the _cloning_ tool ![retouch-clone-icon](./retouch/rt-clone-icon.png#icon). The following example uses a circular shape to clone out the cloud using the circle of blue sky beside it:
+The simplest way to do this is with the _cloning_ tool ![retouch-clone-icon](rt-clone-icon.png#icon). The following example uses a circular shape to clone out the cloud using the circle of blue sky beside it:
 
-![retouch-clone](./retouch/rt-clone.png#w33)
+![retouch-clone](rt-clone.png#w33)
 
 In many cases, the edges of the _source_ shape won't precisely match the surroundings of the _target_, leading to unnatural looking results. In this example, the sample of sky we chose as the source was slightly darker than the target, leaving a faint outline of the circular shape used in the cloning process:
 
-![retouch-clone-nocontrol](./retouch/rt-clone-nocontrol.png#w33)
+![retouch-clone-nocontrol](rt-clone-nocontrol.png#w33)
 
-In such cases, the _heal_ tool ![retouch-heal-icon](./retouch/rt-heal-icon.png#icon) is more appropriate. With this tool, the color and luma of the sample is blended to fit better with the surroundings. In this example, using _heal_ instead of _clone_ produces a much more pleasing result:
+In such cases, the _heal_ tool ![retouch-heal-icon](rt-heal-icon.png#icon) is more appropriate. With this tool, the color and luma of the sample is blended to fit better with the surroundings. In this example, using _heal_ instead of _clone_ produces a much more pleasing result:
 
-![retouch-heal-nocontrol](./retouch/rt-heal-nocontrol.png#w33)
+![retouch-heal-nocontrol](rt-heal-nocontrol.png#w33)
 
 ### source and target shapes
 
@@ -37,7 +37,7 @@ Once you have chosen _heal_ or _clone_ mode, you must choose the shape you wish 
 
 When you hover over the image with your mouse, a plus symbol (+) will appear to indicate where the _source_ shape will be placed by default. Your normal mouse cursor will indicate the position of the target shape:
 
-![retouch-source-cross](./retouch/rt-source-cross.png)
+![retouch-source-cross](rt-source-cross.png)
 
 It is recommended that you choose the position of the source shape first, followed by the position of the target, as follows:
 
@@ -57,10 +57,10 @@ Once you have placed your source and target shapes on the image, they can be adj
 
 The _clone_ and _heal_ tools both require the use of another part of the image to "fill in" the region being hidden. Sometimes there is no suitable sample in the image to use for this purpose. In such cases, the _retouch_ module offers two further options:
 
-![retouch-fill-icon](./retouch/rt-fill-icon.png#icon) fill tool
+![retouch-fill-icon](rt-fill-icon.png#icon) fill tool
 : Fill the drawn region with a selected color.
 
-![retouch-blur-icon](./retouch/rt-blur-icon.png#icon) blur tool
+![retouch-blur-icon](rt-blur-icon.png#icon) blur tool
 : Apply a blur to the drawn region, smoothing out any details.
 
 These two options are most useful when used together with wavelet decomposition, where they can be used to smooth over features within a selected detail layer.
@@ -71,13 +71,13 @@ Wavelets allow an image to be decomposed into a number of layers each containing
 
 This method can be used with the healing tool, for example, to paint over a spot that appears in one of the coarse detail layers, while leaving the hairs in the fine detail layers intact:
 
-![retouch-beard-preserve](./retouch/rt-beard-preserve.jpg#w50)
+![retouch-beard-preserve](rt-beard-preserve.jpg#w50)
 
 It can also be used with the blur tool to even out coarse blotches in the skin, again without impacting the finer details (see the [_wavelets_](../../views/darkroom/processing-modules/wavelets.md) section for details on this technique).
 
 ## module controls
 
-![retouch-overview](./retouch/rt-overview.png#w33)
+![retouch-overview](rt-overview.png#w33)
 
 ### retouch tools
 
@@ -90,7 +90,7 @@ shapes
 
 : Ctrl+click on a shape icon to draw multiple shapes continuously (right-click to cancel).
 
-: Click the _show and edit shapes_ ![retouch-shapes-icon](./retouch/rt-shapes-icon.png#icon) button to show and edit any existing shapes for the currently-selected wavelet scale.
+: Click the _show and edit shapes_ ![retouch-shapes-icon](rt-shapes-icon.png#icon) button to show and edit any existing shapes for the currently-selected wavelet scale.
 
 algorithms
 : Choose a retouching algorithm (clone, heal, fill or blur). Ctrl+click to change the algorithm used for the currently-selected shape. Shift+click to set the default algorithm (used for new images or when you reset module parameters).
@@ -130,22 +130,22 @@ merge from
        o                    scale 1 edits
 ```
 
-![retouch-display-icon](./retouch/rt-display-icon.png#icon) display wavelet scale
+![retouch-display-icon](rt-display-icon.png#icon) display wavelet scale
 : Display the currently-selected wavelet layer on the center image. Selecting this option brings up an additional control -- _preview single scale_.
 
 preview single scale
-: An additional control that allows the black, white and gray points of the wavelet scale preview to be adjusted to make it easier to see. Click the ![auto-levels-icon](./retouch/rt-auto-levels-icon.png#icon) to set these values automatically. This does not affect the module's operation -- only the wavelet scale preview.
+: An additional control that allows the black, white and gray points of the wavelet scale preview to be adjusted to make it easier to see. Click the ![auto-levels-icon](rt-auto-levels-icon.png#icon) to set these values automatically. This does not affect the module's operation -- only the wavelet scale preview.
 
-![retouch-cut-icon](./retouch/rt-cut-icon.png#icon) cut
+![retouch-cut-icon](rt-cut-icon.png#icon) cut
 : Cut all shapes from the currently-selected layer and place them into the clipboard.
 
-![retouch-paste-icon](./retouch/rt-paste-icon.png#icon) paste
+![retouch-paste-icon](rt-paste-icon.png#icon) paste
 : Move the shapes on the clipboard to the currently-selected layer.
 
-![retouch-hide-icon](./retouch/rt-hide-icon.png#icon) temporarily switch off shapes
+![retouch-hide-icon](rt-hide-icon.png#icon) temporarily switch off shapes
 : Toggle all shapes (whether on the current layer or not) on or off, temporarily removing the module's effect.
 
-![retouch-mask-icon](./retouch/rt-mask-icon.png#icon) display masks
+![retouch-mask-icon](rt-mask-icon.png#icon) display masks
 : Show the target shapes associated with the currently-selected layer with a yellow overlay.
 
 ### shapes

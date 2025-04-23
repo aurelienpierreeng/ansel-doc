@@ -51,30 +51,30 @@ search module
 
 ## bottom panel
 
-![darkroom-view-layout](./darkroom-view-layout/darkroom-bottom-panel.png#w100)
+![darkroom-view-layout](darkroom-bottom-panel.png#w100)
 
 From left to right:
 
-![styles-icon](./darkroom-view-layout/styles-icon.png#icon) [styles](../../modules/utility-modules/lighttable/styles.md)
+![styles-icon](styles-icon.png#icon) [styles](../../modules/utility-modules/lighttable/styles.md)
 : Quick access menu for styles. Hover over a style name with your mouse to show a preview of the current darkroom image with the selected style applied.
 
 
-![color-assessment-icon](./darkroom-view-layout/color-assessment-icon.png#icon) [color assessment](../../modules/utility-modules/darkroom/color-assessment.md)
+![color-assessment-icon](color-assessment-icon.png#icon) [color assessment](../../modules/utility-modules/darkroom/color-assessment.md)
 : Toggle the ISO12646 color assessment view.
 
-![raw-overexposed-icon](./darkroom-view-layout/raw-overexposed-icon.png#icon) [raw overexposed warning](../../modules/utility-modules/darkroom/raw-overexposed.md)
+![raw-overexposed-icon](raw-overexposed-icon.png#icon) [raw overexposed warning](../../modules/utility-modules/darkroom/raw-overexposed.md)
 : Toggle raw overexposed indicators (right-click for options).
 
-![clipping-icon](./darkroom-view-layout/clipping-icon.png#icon) [clipping warning](../../modules/utility-modules/darkroom/clipping.md)
+![clipping-icon](clipping-icon.png#icon) [clipping warning](../../modules/utility-modules/darkroom/clipping.md)
 : Toggle clipping warnings (right-click for options).
 
-![softproof-icon](./darkroom-view-layout/softproof-icon.png#icon) [soft proof](../../modules/utility-modules/darkroom/soft-proof.md)
+![softproof-icon](softproof-icon.png#icon) [soft proof](../../modules/utility-modules/darkroom/soft-proof.md)
 : Toggle softproofing overlays (right-click for options).
 
-![gamut-check-icon](./darkroom-view-layout/gamut-check-icon.png#icon) [gamut check](../../modules/utility-modules/darkroom/gamut.md)
+![gamut-check-icon](gamut-check-icon.png#icon) [gamut check](../../modules/utility-modules/darkroom/gamut.md)
 : Toggle gamut checking (right-click for options).
 
-![guides-overlays-icon](./darkroom-view-layout/guides-overlays-icon.png#icon) [guides & overlays](../../modules/utility-modules/darkroom/guides-overlays.md)
+![guides-overlays-icon](guides-overlays-icon.png#icon) [guides & overlays](../../modules/utility-modules/darkroom/guides-overlays.md)
 : Left-click to switch global guide overlays on/off and right-click to change the guide settings, including the color of all on-image drawing (masks, crop guides etc.)
 
 You can also enable the [filmstrip](../../modules/utility-modules/shared/filmstrip.md) module at the bottom of the screen to allow you select and interact with the currently selected collection in the [lighttable](../lighttable/_index.md) view.

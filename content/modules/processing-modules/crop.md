@@ -15,7 +15,7 @@ This module appears late in the pipeline, meaning that the full image can remain
 
 Whenever this module is in focus, the full uncropped image will be shown, overlaid with crop handles and optional guiding lines.
 
-![screen controls](./crop/screen-controls.png#w75)
+![screen controls](screen-controls.png#w75)
 
 Resize the crop by dragging the border and corner handles.
 

@@ -19,16 +19,16 @@ The orientation can also be set using the [selected images](../utility-modules/l
 transform
 : Double click the label to reset to the default transformations
 
-![rotate counter-clockwise](./orientation/rotate-counter-clockwise.png#icon) rotate counter-clockwise
+![rotate counter-clockwise](rotate-counter-clockwise.png#icon) rotate counter-clockwise
 : Rotate the image 90 degrees counter-clockwise
 
-![rotate clockwise](./orientation/rotate-clockwise.png#icon) rotate clockwise
+![rotate clockwise](rotate-clockwise.png#icon) rotate clockwise
 : Rotate the image 90 degrees clockwise
 
-![flip horizontally](./orientation/flip-horizontal.png#icon) flip horizontally
+![flip horizontally](flip-horizontal.png#icon) flip horizontally
 : Flip the image (mirror) horizontally
 
-![flip vertically](./orientation/flip-vertical.png#icon) flip vertically
+![flip vertically](flip-vertical.png#icon) flip vertically
 : Flip the image (mirror) vertically
 
 show guides

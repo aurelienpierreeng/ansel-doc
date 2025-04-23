@@ -57,7 +57,7 @@ From top to bottom:
 
 ## bottom panel
 
-![lighttable-bottom-panel](./lighttable-view-layout/lighttable-bottom-panel.png#w100)
+![lighttable-bottom-panel](lighttable-bottom-panel.png#w100)
 
 From left to right:
 
@@ -73,8 +73,8 @@ From left to right:
 [zoom](./lighttable-modes/filemanager.md)
 : Adjust the size of thumbnails.
 
-![focus icon](./lighttable-view-layout/lighttable-bottom-panel_focus.png#icon) enable [focus-peaking](../../modules/utility-modules/shared/focus-peaking.md) mode
+![focus icon](lighttable-bottom-panel_focus.png#icon) enable [focus-peaking](../../modules/utility-modules/shared/focus-peaking.md) mode
 : Highlight the parts of the image that are in focus.
 
-![display icon](./lighttable-view-layout/lighttable-bottom-panel_display.png#icon) [set display profile](../../color-management/display-profile.md)
+![display icon](lighttable-bottom-panel_display.png#icon) [set display profile](../../color-management/display-profile.md)
 : Set the display profile of your monitor(s).

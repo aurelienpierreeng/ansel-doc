@@ -12,7 +12,7 @@ The basic element of image processing in Ansel is the [processing module](../../
 
 Every processing module acts independently of the others, but all modules perform their processing in a similar manner:
 
-![module anatomy](./the-anatomy-of-a-module/module-anatomy.png#w100)
+![module anatomy](module-anatomy.png#w100)
 
 1. Receive the _module input_ from the last executed module and perform an _operation_ on it to produce the _processed output_. This _operation_ is different for every [processing module](../../../modules/processing-modules/_index.md).
 

@@ -73,29 +73,29 @@ In this configuration, filmic will only perform a logarithmic tone mapping betwe
 
 ## graphic display
 
-The graphic display at the top of the _filmic rgb_ module offers multiple views to help you to understand its functionality. You can cycle through these views using the ![view-icon](./filmic-rgb/view-icon.png#icon) icon to the right of the graph display. You can also toggle the labels on the axes on and off using the ![legend-icon](./filmic-rgb/legend-icon.png#icon) icon.
+The graphic display at the top of the _filmic rgb_ module offers multiple views to help you to understand its functionality. You can cycle through these views using the ![view-icon](view-icon.png#icon) icon to the right of the graph display. You can also toggle the labels on the axes on and off using the ![legend-icon](legend-icon.png#icon) icon.
 
 The following views are available:
 
 look only
 : This is the default view. The main bright curve shows how the dynamic range of the scene (in EV) is compressed into the display-referred output range. The orange dot shows the middle-gray point, the white dots either side mark out the latitude range, and the orange part of the curve at the bottom and top indicates an overshoot problem with the spline (the [_look_](#look) tab has some controls to deal with this).
 
-: ![filmic-rgb-look-only](./filmic-rgb/filmic-look-only.png#w50)
+: ![filmic-rgb-look-only](filmic-look-only.png#w50)
 
 look + mapping (linear)
 : This view shows the mapping of input values [0,1] to output values in linear space, including the dynamic range mapping and the output transfer function. Note that in a scene-referred workflow, input values are allowed to exceed 1, however the graph only shows in/out values in the interval [0,1] in order to make the shape of the graph comparable to other tone curve mapping tools such as _base curve_ or _tone curve_. The actual value of the scene white point is shown in brackets on the _X axis_ (expressed as a percentage of an input value of 1).
 
-: ![filmic-rgb-look-mapping-lin](./filmic-rgb/filmic-look-mapping-lin.png#w50)
+: ![filmic-rgb-look-mapping-lin](filmic-look-mapping-lin.png#w50)
 
 look + mapping (log)
 : The same as the previous view, but plotted in log space.
 
-: ![filmic-rgb-look-mapping-lin](./filmic-rgb/filmic-look-mapping-log.png#w50)
+: ![filmic-rgb-look-mapping-lin](filmic-look-mapping-log.png#w50)
 
 dynamic range mapping
 : This view is inspired by the Ansel Adams Zone System, showing how the zones in the input scene (EV) are mapped to the output. Middle gray from the scene is always mapped to 18% in the output (linear) space, and the view shows how the tonal ranges towards the extremes of the scene exposure range are compressed into a smaller number of zones in the display space, leaving more room for the mid-tones to be spread out over the remaining zones. The latitude range is represented by the darker gray portion in the middle.
 
-: ![filmic-rgb-look-mapping-lin](./filmic-rgb/filmic-dynamic-range-map.png#w50)
+: ![filmic-rgb-look-mapping-lin](filmic-dynamic-range-map.png#w50)
 
 ---
 
@@ -293,7 +293,7 @@ type of noise
 
 The _color science_ parameter (in the _options_ tab) defines the strategy that is used to desaturate colors near pure white (maximum display emission) and pure black (minimum display emission). The problem can be explained with the graph below, which represents the gamut of the sRGB color space at the constant hue of its green primary, with varying lightness (vertical axis) and chroma (horizontal axis):
 
-![Gamut cone](./filmic-rgb/sRGB-green.png)
+![Gamut cone](sRGB-green.png)
 
 As we approach pure black and pure white, the chroma available in gamut shrinks considerably until it reaches zero for lightness = 0 and lightness = 100% of the medium emission. This means that very bright (or very dark) colors cannot be very saturated at the same time if we want them to fit in gamut, with the gamut being imposed by the printing or displaying device we use.
 

@@ -15,7 +15,7 @@ It works in linear RGB space and utilizes a user-defined mask to guide the dodgi
 
 The following diagram describes how the tone equalizer works:
 
-![tone-equalizer-mask](./tone-equalizer/tone-equalizer-overview.png#w100)
+![tone-equalizer-mask](tone-equalizer-overview.png#w100)
 
 1. Create a monochrome [_guided mask_](#masking-tab) that divides the input image into regions of similar luminosity. The resulting mask should blur the fine details within the image so that pixels within each region are all treated similarly, preserving local contrast.
 
@@ -58,7 +58,7 @@ The purpose of the guided mask is to separate out areas with different tonal ran
 
 To avoid having to switch back and forth between the _advanced_ and _masking_ tabs, a gray bar under the "mask post processing" label displays a representation of the middle 80% of the histogram. By using the controls in this tab to center and spread out this gray bar, you can expect to have a nicely shaped histogram when you return to the "advanced" tab. If you see orange at either end of the gray bar, this means that part of the histogram is outside of the 9 EV range of the mask, and needs to be further adjusted.
 
-![tone-equalizer-mask-histogram](./tone-equalizer/tone-equalizer-mask-histogram.png#w33)
+![tone-equalizer-mask-histogram](tone-equalizer-mask-histogram.png#w33)
 
 When setting up the guided mask you will need to strike a balance between obtaining a smooth blur within tonal regions (to preserve local contrast) and preservation of the boundaries between those regions. Some experimentation will be required to find the best settings. Often the key controls to adjust are the _exposure/contrast compensation_ sliders at the bottom of the module.
 
@@ -102,7 +102,7 @@ mask contrast compensation
 
 When the _tone equalizer_ module is enabled and expanded, you can move the mouse pointer over the preview image to show a cursor that displays information about the pixel under the pointer. When this cursor is shown, the mouse wheel can be used to brighten or darken the areas of your image that match the mask intensity level at that point. This provides a convenient way to quickly brighten or darken specific parts of the image.
 
-![tone-equalizer-simple](./tone-equalizer/tone-equalizer-cursor.png#w25)
+![tone-equalizer-simple](tone-equalizer-cursor.png#w25)
 
 - the cross-hairs indicate the position of the pixel under the cursor
 - the text label shows the intensity of the guided mask at that point, in EV

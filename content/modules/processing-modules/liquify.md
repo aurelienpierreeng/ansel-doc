@@ -32,29 +32,29 @@ The strength vector of a point has three different modes. These can be toggled b
 linear
 : A linear distortion inside the circle, starting from the opposite side of the strength vector and following the vector's direction. This is the default mode.
 
-: ![linear](./liquify/liquify_ex1.png#w33)
+: ![linear](liquify_ex1.png#w33)
 
 radial growing
 : The strength vector's effect is radial, starting with a strength of 0% in the center and increasing away from the center. This mode is depicted by an additional circle with the arrow pointing outwards.
 
-: ![radial growing](./liquify/liquify_ex4.png#w33)
+: ![radial growing](liquify_ex4.png#w33)
 
 radial shrinking
 : The strength vector's effect is radial, starting with a strength of 100% in the center and decreasing away from the center. This mode is depicted by an additional circle with the arrow pointing inwards.
 
-: ![radial shrinking](./liquify/liquify_ex3.png#w33)
+: ![radial shrinking](liquify_ex3.png#w33)
 
 ### feathering
 
 default mode
 : By default the strength varies linearly from 0% to 100% between the center and the radius of the control point. It is possible to modify the feathering effect by clicking on the center of the circle.
 
-: ![default](./liquify/liquify_ex1.png#w33)
+: ![default](liquify_ex1.png#w33)
 
 feathered mode
 : In "feathered" mode, two control circles are displayed, which can be modified independently to feather the strength of the effect. Note that clicking the center of the circle again hides the feathering controls but does _not_ return to the default mode.
 
-: ![feathered](./liquify/liquify_ex2.png#w33)
+: ![feathered](liquify_ex2.png#w33)
 
 ### removing points
 
@@ -69,10 +69,10 @@ Click the appropriate icon to activate the line or curve tool and then click on 
 Hold Ctrl while clicking on the line/curve icon to add multiple lines/curves without having to click the icon again each time. Right-click a second time to exit creation mode after the final line or curve has been completed.
 
 lines
-: ![lines](./liquify/liquify_ex5.png#w50)
+: ![lines](liquify_ex5.png#w50)
 
 curves
-: ![curves](./liquify/liquify_ex6.png#w50)
+: ![curves](liquify_ex6.png#w50)
 
 Ctrl+click on a line or curve segment to add a new control point. Ctrl+right-click on the center of a node to remove a control point.
 

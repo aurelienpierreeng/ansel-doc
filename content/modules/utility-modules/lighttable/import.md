@@ -4,7 +4,7 @@ date: 2022-12-04T02:19:02+01:00
 lastmod: 2023-10-12
 id: import
 applicable-version: 3.8
-tags: 
+tags:
 view: lighttable
 ---
 
@@ -51,7 +51,7 @@ tags
 
 The following example screenshot is taken from the "Open from disk" button:
 
-![import-dialog](./import/import-dialog.png#w100)
+![import-dialog](import-dialog.png#w100)
 
 ### common functionality
 
@@ -67,7 +67,7 @@ In the example screenshot above, you can see that a "place" has been created for
 
 Once you have selected a folder, the files pane will automatically be populated with a list of the files found in that folder. By default, all files in the chosen folder are selected.
 
-You can view thumbnails for any of the images by clicking on the ![eye icon](./import/eye-icon.png#icon) icon. In addition, buttons are available at the bottom of the screen to select "all" files or "none".
+You can view thumbnails for any of the images by clicking on the ![eye icon](eye-icon.png#icon) icon. In addition, buttons are available at the bottom of the screen to select "all" files or "none".
 
 Once you are happy with your selection, press Enter or click on the button at the bottom-right of the screen to import (this button will be named differently depending on the type of import being performed).
 

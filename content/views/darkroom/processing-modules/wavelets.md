@@ -18,13 +18,13 @@ Some of the operations that Ansel can perform in this way are:
 
 A wavelet is an oscillating mathematical function that starts and ends at zero. The following diagram shows some simple wavelets of differing sizes.
 
-![wavelets-overview](./wavelets/wavelets-overview.png#w50)
+![wavelets-overview](wavelets-overview.png#w50)
 
 These wavelet functions are used to scan and decompose an image using a mathematical operation called _convolution_. This picks out details from the image that are on a similar scale to the size of a given wavelet, and builds a number of these detail layers, each corresponding to a different wavelet scale.
 
 The following is an example where detail layers have been extracted from the above image. In this case, the images were produced using the [_retouch_](../../../modules/processing-modules/retouch.md) module, splitting the image into 8 different layers, and using the module's "display wavelet scale" button to visualise each of the detail layers:
 
-![wavelets-retouch-gui](./wavelets/clean-retouch.png#w33)
+![wavelets-retouch-gui](clean-retouch.png#w33)
 
 The bars in the _wavelet decompose_ section indicate the layers that have been extracted at different wavelet scales. The darkest rectangle at the left represents the entire image (before decomposition) and the gray boxes each represent one of the decomposed layers. Clicking on the staircase icon below the bar graph enables the layer visualisation overlay so that you can see what the currently selected layer looks like.
 
@@ -32,17 +32,17 @@ Let's take a look at some of the layers generated for the above image.
 
 At scale #2, the image contains only very fine details, including the model's eyebrows, eye lashes and the pores of his skin. It doesn't include the coarser details of the image, because those details have been extracted to other layers:
 
-![wavelets-layer-scale-2](./wavelets/wavelets-layer-scale-2.png#w50)
+![wavelets-layer-scale-2](wavelets-layer-scale-2.png#w50)
 
 At scales #5 and #6 we begin to see larger and larger features:
 
-![wavelets-layer-scale-5](./wavelets/wavelets-layer-scale-5.png#w50)
+![wavelets-layer-scale-5](wavelets-layer-scale-5.png#w50)
 
-![wavelets-layer-scale-6](./wavelets/wavelets-layer-scale-6.png#w50)
+![wavelets-layer-scale-6](wavelets-layer-scale-6.png#w50)
 
 By scale #8 we only see very high-level features such as the overall shape of the model's nose, eye and cheek:
 
-![wavelets-layer-scale-8](./wavelets/wavelets-layer-scale-8.png#w50)
+![wavelets-layer-scale-8](wavelets-layer-scale-8.png#w50)
 
 ## why use wavelets?
 
@@ -50,11 +50,11 @@ Suppose, in the above example, that we wanted to smooth out some of the blotchin
 
 The sequence of images below shows (1) The original image; (2) The layer (scale 5) that we wish to blur; and (3) The final image after the scale 5 layer has been blurred and the layers recombined:
 
-![wavelets-original](./wavelets/wavelets-original.png#w50)
+![wavelets-original](wavelets-original.png#w50)
 
-![wavelets-layer-scale-5](./wavelets/wavelets-layer-scale-5.png#w50)
+![wavelets-layer-scale-5](wavelets-layer-scale-5.png#w50)
 
-![wavelets-blur-layered](./wavelets/wavelets-blur-layered.png#w50)
+![wavelets-blur-layered](wavelets-blur-layered.png#w50)
 
 As you can see, the large-scale skin blotches have been removed, but the small-scale details remain untouched.
 
@@ -66,7 +66,7 @@ There are two methods by which processing modules allow you to modify their oper
 
 As discussed above, the _retouch_ module allows you to choose how many detail levels to split your image into. It decomposes the image into separate layers and allows you to perform operations selectively on each individual layer or on the image as a whole:
 
-![wavelets-retouch-gui](./wavelets/clean-retouch.png#w33)
+![wavelets-retouch-gui](clean-retouch.png#w33)
 
 See the [_retouch_](../../../../modules/processing-modules/retouch.md) module documentation for more details.
 
@@ -74,7 +74,7 @@ See the [_retouch_](../../../../modules/processing-modules/retouch.md) module do
 
 The [_denoise (profiled)_](../../../modules/processing-modules/denoise-profiled.md), [_raw denoise_](../../../modules/processing-modules/raw-denoise.md) and [_contrast equalizer_](../../../modules/processing-modules/contrast-equalizer.md) modules allow their effects to be applied more or less to each wavelet scale using _splines_.
 
-![spline](./wavelets/clean-spline.png#w33)
+![spline](clean-spline.png#w33)
 
 Here, each node in the graph represents a different level of detail in the image, from coarse detail on the left to fine detail on the right. You can raise or lower each of these nodes with your mouse to increase or decrease the module's effect, respectively, on that wavelet scale.
 

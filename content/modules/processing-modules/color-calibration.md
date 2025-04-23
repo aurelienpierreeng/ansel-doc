@@ -371,7 +371,7 @@ These are the settings that you should define, as-is, for the _exposure_ and _bl
 
 #### overlay
 
-![color checker](./color-calibration/color-checker.png#w75)
+![color checker](color-checker.png#w75)
 
 The chart overlay displays a disc in the center of each color patch, which represents the expected reference value of that patch, projected into the display RGB space. This helps you to visually assess the difference between the reference and the actual color without having to bother with ΔE values. This visual clue will be reliable only if you set the _exposure_ module as instructed in the _normalization values_ of the profile report.
 
