@@ -37,9 +37,16 @@ else
     exit 1
 fi
 
+#get list of disabled languages
+disabled_languages=$(cat "$PROJECT_ROOT/po/disable-languages")
+
+#remove disabled languages from the list
 for lang in `find po -name '*.po' | cut -d . -f 2 | sort -u`
 do
-   languages="$languages $lang"
+   if [[ ! "$disabled_languages" == *$lang* ]]
+   then
+      languages="$languages $lang"
+   fi
 done
 
 # Create a temporary po4a config file.
@@ -57,7 +64,8 @@ for section in content; do
 EOF
     # for f in $section/*.md; do
     for f in  $(find content -type f -name '*.md'); do
-	echo "[type: markdown] $f \$lang:_gen/\$lang/$(dirname $f)/$(basename $f .md).md" >> $po4a_conf
+        # Enqueue the translations
+	    echo "[type: markdown] $f \$lang:$(dirname $f)/$(basename $f .md).\$lang.md" >> $po4a_conf
     done
     po4a $1 --verbose $po4a_conf --keep 0 &
 done
