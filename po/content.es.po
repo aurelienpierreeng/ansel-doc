@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-04-23 00:20+0200\n"
+"POT-Creation-Date: 2025-04-23 16:30+0200\n"
 "PO-Revision-Date: 2022-07-22 23:01+0000\n"
 "Last-Translator: Paolo Benvenuto <paolobenve@gmail.com>\n"
 "Language-Team: Spanish <https://weblate.pixls.us/projects/Ansel/dtdocs/es/>\n"
@@ -1159,7 +1159,7 @@ msgstr "La siguiente sección proporciona más detalles sobre el [uso](usage.md)
 
 #. type: Title ##
 #: content/views/_index.md content/special-topics/from-darktable.md
-#: content/overview/user-interface.md
+#: content/preferences-settings/shortcuts.md content/overview/user-interface.md
 #, fuzzy, no-wrap
 #| msgid "views"
 msgid "Views"
@@ -3262,9 +3262,8 @@ msgstr "Por ejemplo, los módulos en desuso en darktable 3.4 se eliminarán del 
 msgid "This section describes how to interact with processing module controls.\n"
 msgstr "Esta sección describe cómo interactuar con los controles del módulo de procesamiento.\n"
 
-#. type: Title ###
+#. type: Title ##
 #: content/views/darkroom/processing-modules/module-controls.md
-#: content/preferences-settings/shortcuts.md
 #, no-wrap
 msgid "sliders"
 msgstr "deslizadores"
@@ -3419,7 +3418,6 @@ msgstr "Los parámetros del módulo también se pueden ajustar mediante atajos d
 
 #. type: Title ###
 #: content/views/darkroom/processing-modules/_index.md
-#: content/preferences-settings/shortcuts.md
 #: content/modules/processing-modules/_index.md content/modules/_index.md
 #, no-wrap
 msgid "processing modules"
@@ -9121,173 +9119,108 @@ msgstr "atajos de teclado"
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "You can perform almost any action in Ansel with a keyboard/mouse shortcut. You can also use various other input devices, including MIDI devices and game controllers -- see the [midi device support](../special-topics/midi-device-support.md) section for details. These are referred to as _external devices_ or just _devices_ in this guide.\n"
-msgstr "Puede realizar casi cualquier acción en Ansel con un atajo de teclado/ratón. También puede usar varios otros dispositivos de entrada, incluidos dispositivos MIDI y controladores de juegos -- consulte la sección [compatibilidad con dispositivos midi](../special-topics/midi-device-support.md) para obtener más detalles. Estos se denominan _dispositivos externos_ o simplemente _dispositivos_ en esta guía.\n"
+msgid "Some actions in Ansel can be performed with a keyboard shortcut. A table of key shortcuts is available in _Help > Table of key shortcuts_. \n"
+msgstr ""
+
+#. type: Plain text
+#: content/preferences-settings/shortcuts.md
+#, no-wrap
+msgid "**Note:** The table shows different key shortcuts for different Views.\n"
+msgstr ""
 
 #. type: Title ##
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "defining shortcuts"
+#, fuzzy, no-wrap
+#| msgid "defining shortcuts"
+msgid "Assigning key shortcuts"
 msgstr "definición de atajos de teclado"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "A _shortcut_ is a combination of key or button presses and/or mouse or device movements that performs an _action_ in Ansel.\n"
-msgstr "Un _atajo_ es una combinación de pulsaciones de teclas o botones y/o movimientos del mouse o dispositivo que realiza una _acción_ en Ansel.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A single action may have multiple shortcuts but a single shortcut can only be linked to one action in a given Ansel view -- you can't chain actions together except by applying a preset or style. You can, however, set up a single shortcut that does one thing in the lighttable view, say, and another in the darkroom view.\n"
-msgstr "Una sola acción puede tener varios atajos, pero un atajo solo se puede vincular a una acción en una vista determinada de Ansel; no puede encadenar acciones excepto aplicando un ajuste preestablecido o un estilo. Sin embargo, puede configurar un solo atajo que haga una cosa en la vista de la mesa de luz, por ejemplo, y otra en la vista del cuarto oscuro.\n"
+msgid "For the time being shortcuts can only be defined or changed by editing your `$HOME/.config/Ansel/shortcutsrc` file. There is no support for MIDI-devices in Ansel.\n"
+msgstr ""
 
 #. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "initiating a shortcut"
-msgstr "iniciando un atajo de teclado"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A shortcut must be initiated by either\n"
-msgstr "Un atajo debe ser iniciado bien\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "pressing a key on the keyboard; or\n"
-msgstr "presionando un botón del teclado; o bien\n"
-
-#. type: Bullet: '- '
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
-#| msgid "pressing a button or moving a knob/joystick on an external device \n"
-msgid "pressing a button or moving a knob/joystick on an external device\n"
-msgstr "presionando un botón o moviendo una palanca/joystick en un dispositivo externo \n"
+#| msgid "deleting default shortcuts"
+msgid "Deleting default shortcuts"
+msgstr "borrando los atajos de teclado por defecto"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "You cannot initiate a shortcut by moving your mouse or pressing one of its buttons, as these actions are used to interact with Ansel's UI.\n"
-msgstr "No puede iniciar un atajo moviendo su ratón o presionando uno de sus botones, dado que esas acciones se usan para interactuar con la interfaz de Ansel,\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "simple shortcuts"
-msgstr "atajos de teclado simples"
+msgid "When launching the application, Ansel loads default shortcuts first, and then loads user-defined shortcuts on top. This allows default shortcuts to be overridden with a new action but prevents them from being deleted (since the deleted shortcut will be automatically reloaded on the next restart).\n"
+msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A shortcut that only includes button and/or key presses (and not mouse/device movements) is referred to as a _simple_ shortcut.\n"
-msgstr "Un atajo que solo incluye un botón y/o pulsación de teclas (y no movimientos de ratón/dispositivo) es referido como un \"atajo simple\".\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A simple shortcut must be initiated as above, but can include:\n"
-msgstr "Un atajo simple puede ser iniciado como arriba, pero puede incluir:\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "One or more modifier keys (Shift, Ctrl, Alt), held down while executing the remainder of the shortcut\n"
-msgstr "Una o más teclas modificadoras (Shift, Ctrl, Alt), mantenidas pulsadas mientras se ejecuta el resto del atajo\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Up to three key presses, the last one of which may be a long-press (defined as a key-press longer than your system's double-click duration)\n"
-msgstr "Hasta tres pulsaciones, la última de las cuales puede ser larga (definida como una pulsación más larga que la duración de doble click de su sistema)\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Similarly, up to three device-button presses or mouse-button clicks, the last of which may be long\n"
-msgstr "Del mismo modo, hasta tres pulsaciones del botón del dispositivo o clics del botón del ratón, el último de los cuales puede ser largo\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Various combinations of keyboard, mouse, and device buttons can be used to create simple shortcuts.\n"
-msgstr "Varias combinaciones de teclado, ratón y botones de dispositivo pueden usarse para crear atajos simples.\n"
+#, fuzzy, no-wrap
+#| msgid "deleting default shortcuts"
+msgid "There are two ways to delete default shortcuts:\n"
+msgstr "borrando los atajos de teclado por defecto"
 
 #. type: Title ####
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "creating additional modifiers"
-msgstr "creando modificadores adicionales"
+msgid "Prevent default shortcuts from being reloaded"
+msgstr ""
+
+#. type: Plain text
+#: content/preferences-settings/shortcuts.md
+#, no-wrap
+msgid "Disable [Preferences > Miscellaneous > Interface > Load default shortcuts at startup](./miscellaneous.md) to prevent default shortcuts from being reloaded. While this option is disabled, Ansel will only load user-defined shortcuts and any defaults that you have not subsequently deleted or overridden.\n"
+msgstr ""
+
+#. type: Title ####
+#: content/preferences-settings/shortcuts.md
+#, no-wrap
+msgid "Override default shortcut with a no-op action"
+msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
-#| msgid "The only valid modifiers are the Shift, Ctrl and Alt keys on the keyboard. You can define additional keys (or device buttons) as modifiers by assigning keys/buttons to the the \"global/modifier\" action. However, these will merely function as extra Ctrl, Alt or Shift keys -- you cannot create \"new\" modifiers.\n"
-msgid "The only valid modifiers are the Shift, Ctrl and Alt keys on the keyboard. You can define additional keys (or device buttons) as modifiers by assigning keys/buttons to the \"global/modifier\" action. However, these will merely function as extra Ctrl, Alt or Shift keys -- you cannot create \"new\" modifiers.\n"
-msgstr "Los únicos modificadores válidos son las teclas Shift, Ctrl y Alt del teclado. Puede definir teclas adicionales (o botones de dispositivo) como modificadores asignando teclas/botones a la acción \"global/modificador\". Sin embargo, estos simplemente funcionarán como teclas Ctrl, Alt o Shift adicionales; no puede crear modificadores \"nuevos\".\n"
+#| msgid "As a workaround, you can _override_ the default by assigning an identical shortcut to the \"global/no-op\" action (which does nothing). You can do this either in the shortcut mapping screen (above) or by directly editing your `$HOME/.config/Ansel/shortcutsrc` file. If you want to disable a lot of default shortcuts the latter option is recommended (you must exit Ansel first). For example, the following default shortcuts are defined in `shortcutsrc` for switching views in Ansel:\n"
+msgid "You can _override_ the action of a default shortcut by assigning an identical shortcut to the \"global/no-op\" action (which does nothing). You can do this by directly editing your `$HOME/.config/Ansel/shortcutsrc` file (you must exit Ansel first). For example, the following default shortcuts are defined in `shortcutsrc` for switching views in Ansel:\n"
+msgstr "Como solución alternativa, puede _anular_ el valor predeterminado asignando un acceso directo idéntico a la acción \"global/sin operación\" (que no hace nada). Puede hacerlo en la pantalla de asignación de accesos directos (arriba) o editando directamente su archivo `$HOME/.config/Ansel/shortcutsrc`. Si desea deshabilitar muchos accesos directos predeterminados, se recomienda la última opción (primero debe salir de Ansel). Por ejemplo, los siguientes accesos directos predeterminados están definidos en `shortcutsrc` para cambiar de vista en Ansel:\n"
 
-#. type: Title ###
+#. type: Fenced code block
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "extending simple shortcuts with movement"
-msgstr "extendiendo atajos simples con movimiento"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "For certain actions you can choose to _extend_ a simple shortcut using mouse/device movement. For example you might hold Ctrl+X while scrolling with your mouse to change the value of a slider. The following can be used to extend a simple shortcut:\n"
-msgstr "Para ciertas acciones, puede elegir _extender_ un atajo simple usando el movimiento del mouse/dispositivo. Por ejemplo, puede mantener presionadas las teclas Ctrl+X mientras se desplaza con el mouse para cambiar el valor de un control deslizante. Lo siguiente se puede usar para extender un atajo simple:\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Movement of the mouse scroll wheel\n"
-msgstr "Movimiento de la rueda de scroll del ratón\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Horizontal, vertical or diagonal movement of the mouse cursor\n"
-msgstr "movimiento horizontal, vertical o diagonal del cursor del ratón\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Movement of a knob/joystick on an external device\n"
-msgstr "Movimiento de una palanca/joystick de un dispositivo externo\n"
+msgid ""
+"Return=global/switch views/darkroom\n"
+"Escape=global/Ateliers/Lighttable\n"
+msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
-#| msgid "To extend a simple shortcut, you must hold the final key/button of the simple shortcut while performing the extending mouse/device movement. \n"
-msgid "To extend a simple shortcut, you must hold the final key/button of the simple shortcut while performing the extending mouse/device movement.\n"
-msgstr "Para extender un atajo simple, debe mantener el último botón/tecla del atajo simple mientras realiza el movimiento extendido del ratón/dispositivo. \n"
+#| msgid "You can disable all of these shortcuts by changing `shortcutsrc` as follows:\n"
+msgid "You could disable these shortcuts by changing `shortcutsrc` as follows:\n"
+msgstr "Puede deshabilitar estos atajos cambiando `shortcutsrc` como se indica a continuación:\n"
 
-#. type: Plain text
+#. type: Fenced code block
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "For external devices you do not need to start with a _simple_ shortcut -- you can directly assign a control knob or joystick to an action -- though this will significantly reduce the flexibility of such devices.\n"
-msgstr "Para dispositivos externos, no necesita comenzar con un atajo _simple_; puede asignar directamente una perilla de control o joystick a una acción, aunque esto reducirá significativamente la flexibilidad de dichos dispositivos.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Long button and key presses cannot be extended, as the length of the click/press is timed using the release of the final button/key -- such shortcuts must be terminated with the raising of the final button/key.\n"
-msgstr "Las pulsaciones prolongadas de botones y teclas no se pueden extender, ya que la duración del clic/pulsación se cronometra usando la liberación del último botón/tecla; dichos accesos directos deben terminar con la elevación del último botón/tecla.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "**Note:** You may need to switch off the \"disable touchpad while typing\" setting if you want to use extended shortcuts with a laptop touchpad.\n"
-msgstr "**Nota:** Es posible que deba desactivar la configuración \"Deshabilitar el panel táctil mientras escribe\" si desea usar accesos directos extendidos con el panel táctil de una computadora portátil.\n"
+msgid ""
+"Return=global/no-op\n"
+"Escape=global/no-op\n"
+msgstr ""
 
 #. type: Title ##
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "actions"
+#, fuzzy, no-wrap
+#| msgid "actions"
+msgid "Actions"
 msgstr "acciones"
+
+#. type: Plain text
+#: content/preferences-settings/shortcuts.md
+#, no-wrap
+msgid "**Note:** The following two section were used to explain the deprecated shortcut mapping screen and are left here for future reference or development.\n"
+msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9340,9 +9273,12 @@ msgstr "Estas _acciones_ de tipo apuntar y hacer clic normalmente se definen com
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "widget\n"
+#| ": Each visible part of the user interface is known as a _widget_. For example the Ansel application window is a widget, containing side panel widgets, each of which contains module widgets, each of which contains button, slider and dropdown list widgets etc... When assigning a shortcut to an action, you must first decide which widget it is to be applied to.\n"
 msgid ""
-"widget\n"
+"Widget\n"
 ": Each visible part of the user interface is known as a _widget_. For example the Ansel application window is a widget, containing side panel widgets, each of which contains module widgets, each of which contains button, slider and dropdown list widgets etc... When assigning a shortcut to an action, you must first decide which widget it is to be applied to.\n"
 msgstr ""
 "widget\n"
@@ -9355,7 +9291,7 @@ msgstr ""
 #| "element\n"
 #| ": An _element_ is the part of a UI widget that is affected by your shortcut. For example, for a slider that has a color picker, you can make a shortcut activate the color picker _button_ element or change the _value_ element of the slider. For a row of tabs (the row is a single widget) you can select which tab element to activate.\n"
 msgid ""
-"element\n"
+"Element\n"
 ": An _element_ is the part of a UI widget that is affected by your shortcut. For example, for a slider that has a color picker, you can make a shortcut activate the color picker _button_ element or change the _value_ element of the slider. For a row of tabs (the row is a single widget) you can select which tab element to activate or use your mouse scroll wheel to scroll through the tabs.\n"
 msgstr ""
 "elemento\n"
@@ -9363,9 +9299,12 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "effect\n"
+#| ": A shortcut can sometimes have multiple possible _effects_ on a given _element_. For example, a button can be activated as if it was pressed with a plain mouse-click or as if it was pressed with Ctrl+click. A slider's value can be edited, increased/decreased or reset.\n"
 msgid ""
-"effect\n"
+"Effect\n"
 ": A shortcut can sometimes have multiple possible _effects_ on a given _element_. For example, a button can be activated as if it was pressed with a plain mouse-click or as if it was pressed with Ctrl+click. A slider's value can be edited, increased/decreased or reset.\n"
 msgstr ""
 "efecto\n"
@@ -9373,293 +9312,30 @@ msgstr ""
 
 #. type: Title ##
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "assigning shortcuts to actions"
-msgstr "asignando atajos a acciones"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "There are two primary methods of assigning a shortcut to an action.\n"
-msgstr "Hay dos métodos principales para asignar un atajo a una acción.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "visual shortcut mapping"
-msgstr "mapeo visual de atajos de teclado"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
-#| msgid "Click on the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon in the [top panel](../overview/user-interface/top-panel.md) of any Ansel view to enter visual shortcut mapping mode. \n"
-msgid "Click on the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon in the [top panel](../overview/user-interface/top-panel.md) of any Ansel view to enter visual shortcut mapping mode. If you hold Ctrl while clicking the button, no confirmation will appear when overwriting an existing shortcut mapping.\n"
-msgstr "Haga clic en el icono ![botón de mapeo visual](./shortcuts/visual-mapping-button.png#icon) en el [panel superior](../overview/user-interface/top-panel.md) de cualquier vista de Ansel para ingresar al modo de mapeo de atajos visuales. \n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The mouse cursor will change as you hover over UI widgets, to indicate whether or not a mapping can be created:\n"
-msgstr "El cursor del mouse cambiará a medida que pase el mouse sobre los widgets de la interfaz de usuario, para indicar si se puede crear o no una asignación:\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A down arrow with a line ![expand icon](./shortcuts/expand-icon.png#icon) appears when you hover over a module header, to indicate that you can click to expand the module.\n"
-msgstr "Aparece una flecha hacia abajo con una línea ![expand icon](./shortcuts/expand-icon.png#icon) cuando se desplaza sobre el encabezado de un módulo, para indicar que puede hacer clic para expandir el módulo.\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "A spiral ![spiral icon](./shortcuts/spiral-icon.png#icon) indicates that a shortcut can be defined for the widget under the cursor. \n"
-msgid "A spiral ![spiral icon](./shortcuts/spiral-icon.png#icon) indicates that a shortcut can be defined for the widget under the cursor.\n"
-msgstr "Una espiral ![icono de espiral](./shortcuts/spiral-icon.png#icon) indica que se puede definir un acceso directo para el widget debajo del cursor. \n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "An up arrow ![up icon](./shortcuts/up-icon.png#icon) indicates that, in addition to assigning a shortcut, you can also add the widget to the [quick access panel](../darkroom/organization/quick-access-panel.md) in the darkroom (by Ctrl+clicking on it).\n"
-msgid "An up arrow ![up icon](./shortcuts/up-icon.png#icon) indicates that, in addition to assigning a shortcut, you can also add the widget to the [quick access panel](../views/darkroom/organization/quick-access-panel.md) in the darkroom (by Ctrl+clicking on it).\n"
-msgstr "Una flecha hacia arriba ![icono arriba](./shortcuts/up-icon.png#icon) indica que, además de asignar un acceso directo, también puede agregar el widget al [panel de acceso rápido](../cuarto oscuro/ organization/quick-access-panel.md) en el cuarto oscuro (pulsando Ctrl+clic sobre él).\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A down arrow ![down icon](./shortcuts/down-icon.png#icon) indicates that the widget is already in the quick access panel (Ctrl+click to remove it).\n"
-msgstr "Una flecha hacia abajo ![icono hacia abajo](./shortcuts/down-icon.png#icon) indica que el widget ya está en el panel de acceso rápido (Ctrl+clic para eliminarlo).\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "A cross ![cross icon](./shortcuts/cross-icon.png#icon) indicates that there is no mappable widget under the cursor. \n"
-msgid "A cross ![cross icon](./shortcuts/cross-icon.png#icon) indicates that there is no mappable widget under the cursor.\n"
-msgstr "Una cruz ![icono de cruz](./shortcuts/cross-icon.png#icon) indica que no hay ningún widget asignable debajo del cursor. \n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "Press a key combination while hovering over a mappable widget to assign a shortcut to that widget -- a default action will be assigned to that shortcut based on the type of widget and whether you have keyed a _simple_ or _extended_ shortcut.  See below for details of some of the default assigned actions. \n"
-msgid "Press a key combination while hovering over a mappable widget to assign a shortcut to that widget -- a default action will be assigned to that shortcut based on the type of widget and whether you have keyed a _simple_ or _extended_ shortcut.  See below for details of some of the default assigned actions.\n"
-msgstr "Presione una combinación de teclas mientras se desplaza sobre un widget mapeable para asignar un atajo a ese widget; se asignará una acción predeterminada a ese atajo según el tipo de widget y si ha ingresado un atajo _simple_ o _extendido_. Consulte a continuación los detalles de algunas de las acciones asignadas por defecto. \n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Left-click on a mappable widget to open the shortcut mapping screen for that widget (see below). Left-click anywhere else on the screen to open the shortcut mapping screen, expanded (where possible) based on the part of the screen you have clicked on. This screen can be used to alter the action assigned to a shortcut and to configure shortcuts for non-visual actions. Entering the shortcut mapping screen exits visual shortcut mapping mode.\n"
-msgstr "Haga clic con el botón izquierdo en un widget asignable para abrir la pantalla de asignación de accesos directos para ese widget (ver más abajo). Haga clic con el botón izquierdo en cualquier otro lugar de la pantalla para abrir la pantalla de asignación de accesos directos, expandida (siempre que sea posible) según la parte de la pantalla en la que haya hecho clic. Esta pantalla se puede utilizar para modificar la acción asignada a un atajo y para configurar atajos para acciones no visuales. Al ingresar a la pantalla de asignación de accesos directos, se sale del modo de asignación de accesos directos visuales.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can assign as many shortcuts as you like in a single mapping session and then exit mapping mode when you are finished by clicking the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon again or right-clicking anywhere on the screen.\n"
-msgstr "Puede asignar tantos accesos directos como desee en una sola sesión de mapeo y luego salir del modo de mapeo cuando haya terminado haciendo clic en el icono ![botón de mapeo visual](./shortcuts/visual-mapping-button.png#icon) nuevamente o haciendo clic derecho en cualquier parte de la pantalla.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can delete a user-defined shortcut mapping by defining it a second time against the same widget. If you attempt to reallocate an existing shortcut to a new action, you will be notified of the conflict and asked whether you wish to replace the existing shortcut.\n"
-msgstr "Puede eliminar una asignación de acceso directo definida por el usuario definiéndola una segunda vez en el mismo widget. Si intenta reasignar un atajo existente a una nueva acción, se le notificará el conflicto y se le preguntará si desea reemplazar el atajo existente.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Finally, if you scroll with your mouse wheel while in visual mapping mode (without pressing any other buttons/keys) when hovering over a slider, this will change the default speed for that slider -- scroll up to increase and down to decrease. When you leave mapping mode, normal mouse scrolls over that slider will change its value with the adjusted speed.\n"
-msgstr ""
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "shortcut mapping screen"
-msgstr "pantallla de mapeo de atajos de teclado"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The most flexible way to create shortcuts is by using the shortcut mapping screen, which can be accessed from the global preferences dialog or by left-clicking in visual mapping mode. This screen allows access to all available actions, including some that are not directly linked to a UI widget.\n"
-msgstr "La forma más flexible de crear accesos directos es mediante la pantalla de asignación de accesos directos, a la que se puede acceder desde el cuadro de diálogo de preferencias globales o haciendo clic con el botón izquierdo en el modo de asignación visual. Esta pantalla permite el acceso a todas las acciones disponibles, incluidas algunas que no están directamente vinculadas a un widget de IU.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "The top panel of the shortcut mapping screen shows a list of available UI widgets/actions and the bottom panel shows the shortcuts currently assigned to them. You can search the top and bottom panels using the text entry boxes at the bottom of the screen.\n"
-msgid "The top panel of the shortcut mapping screen shows a list of available UI widgets/actions and the bottom panel shows the shortcuts currently assigned to them. You can search the top and bottom panels using the text entry boxes at the bottom of the screen (use the up/down arrow keys to navigate between matches).\n"
-msgstr "El panel superior de la pantalla de asignación de accesos directos muestra una lista de widgets/acciones de IU disponibles y el panel inferior muestra los accesos directos que tienen asignados actualmente. Puede buscar en los paneles superior e inferior utilizando los cuadros de entrada de texto en la parte inferior de la pantalla.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Double-click an item in the top panel to create a new shortcut for that item, and then enter your desired shortcut (right-click to cancel). Once you have done this, a new entry will appear in the bottom panel showing the shortcut you have created. You can then manually alter the _element_, _effect_, _speed_ or _instance_ of the assigned action against that shortcut in the bottom panel. To delete a user-defined shortcut, select it in the bottom panel and press the Delete key.\n"
-msgstr "Haga doble clic en un elemento en el panel superior para crear un nuevo acceso directo para ese elemento y luego ingrese el acceso directo deseado (haga clic con el botón derecho para cancelar). Una vez que haya hecho esto, aparecerá una nueva entrada en el panel inferior que muestra el acceso directo que ha creado. Luego puede modificar manualmente el _elemento_, el _efecto_, la _velocidad_ o la _instancia_ de la acción asignada contra ese atajo en el panel inferior. Para eliminar un acceso directo definido por el usuario, selecciónelo en el panel inferior y presione la tecla Eliminar.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Selecting an existing shortcut in the bottom panel will highlight (in bold) the matching action and its parents in the top panel. You can use this to navigate the top panel and find related actions.\n"
-msgstr ""
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The following additional options are provided in the shortcut mapping screen:\n"
-msgstr "Las siguientes opciones adicionales se proporcionan en la pantalla de asignación de accesos directos:\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "export...\n"
-#| ": Export the current shortcut mappings for one or all of your devices (keyboard/mouse, midi, game) to an external file. The dialog will show you how many shortcuts exist for each device.\n"
-msgid ""
-"export...\n"
-": Export the current shortcut mappings for one or all of your devices (keyboard/mouse, midi, game controller) to an external file. The dialog will show you how many shortcuts exist for each device.\n"
-msgstr ""
-"exportar...\n"
-": exporte las asignaciones de accesos directos actuales para uno o todos sus dispositivos (teclado/mouse, midi, juego) a un archivo externo. El cuadro de diálogo le mostrará cuántos accesos directos existen para cada dispositivo.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "import...\n"
-#| ": Import shortcut mappings from an external file for one or all of your devices. When loading a device, you can chose to assign it a different number. This can for example be used to exchange midi layouts. Before loading, you can chose to wipe the specific device first. When loading all from an empty file, this will effectively delete all your shortcuts. \n"
-msgid ""
-"import...\n"
-": Import shortcut mappings from an external file for one or all of your devices. When loading a device, you can chose to assign it a different number. This can for example be used to exchange midi layouts. Before loading, you can chose to wipe the specific device first. When loading all from an empty file, this will effectively delete all your shortcuts.\n"
-msgstr ""
-"importar...\n"
-": importe asignaciones de accesos directos desde un archivo externo para uno o todos sus dispositivos. Al cargar un dispositivo, puede optar por asignarle un número diferente. Esto se puede usar, por ejemplo, para intercambiar diseños midi. Antes de cargar, puede optar por borrar primero el dispositivo específico. Al cargar todo desde un archivo vacío, esto eliminará efectivamente todos sus accesos directos. \n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid ""
-"restore...\n"
-": Restore your shortcut mappings to (a) The mappings shipped with Ansel by default, (b) The start of your current session, or (c) The point at which the shortcut mapping screen was last opened. When restoring, you can choose to leave any additional shortcuts that were added after the relevant checkpoint as they are, so that only changed shortcuts are restored to their previous meaning. Or you can choose to first clear all shortcuts and just load the restore point.\n"
-msgstr ""
-"restaurar...\n"
-": Restaure sus asignaciones de accesos directos a (a) las asignaciones enviadas con Ansel de forma predeterminada, (b) el inicio de su sesión actual o (c) el punto en el que se abrió por última vez la pantalla de asignación de accesos directos. Al restaurar, puede optar por dejar cualquier acceso directo adicional que se haya agregado después del punto de control relevante tal como está, de modo que solo los accesos directos modificados se restablezcan a su significado anterior. O puede optar por borrar primero todos los accesos directos y simplemente cargar el punto de restauración.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "deleting default shortcuts"
-msgstr "borrando los atajos de teclado por defecto"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "When launching the application, Ansel loads default shortcuts first, and then loads user-defined shortcuts on top. This allows default shortcuts to be overridden with a new action but prevents them from being deleted (since the deleted shortcut will be automatically reloaded on the next restart).\n"
-msgstr ""
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "deleting default shortcuts"
-msgid "There are two ways to delete default shortcuts:\n"
-msgstr "borrando los atajos de teclado por defecto"
-
-#. type: Title ####
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "prevent default shortcuts from being reloaded"
-msgstr ""
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Disable [preferences > miscellaneous > interface > load default shortcuts at startup](./miscellaneous.md) to prevent default shortcuts from being reloaded. While this option is disabled, Ansel will only load user-defined shortcuts and any defaults that you have not subsequently deleted or overridden.\n"
-msgstr ""
-
-#. type: Title ####
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "override default shortcut with a no-op action"
-msgstr ""
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "As a workaround, you can _override_ the default by assigning an identical shortcut to the \"global/no-op\" action (which does nothing). You can do this either in the shortcut mapping screen (above) or by directly editing your `$HOME/.config/Ansel/shortcutsrc` file. If you want to disable a lot of default shortcuts the latter option is recommended (you must exit Ansel first). For example, the following default shortcuts are defined in `shortcutsrc` for switching views in Ansel:\n"
-msgid "You can _override_ the action of a default shortcut by assigning an identical shortcut to the \"global/no-op\" action (which does nothing). You can do this either in the shortcut mapping screen (above) or by directly editing your `$HOME/.config/Ansel/shortcutsrc` file. If you want to disable a lot of default shortcuts the latter option is recommended (you must exit Ansel first). For example, the following default shortcuts are defined in `shortcutsrc` for switching views in Ansel:\n"
-msgstr "Como solución alternativa, puede _anular_ el valor predeterminado asignando un acceso directo idéntico a la acción \"global/sin operación\" (que no hace nada). Puede hacerlo en la pantalla de asignación de accesos directos (arriba) o editando directamente su archivo `$HOME/.config/Ansel/shortcutsrc`. Si desea deshabilitar muchos accesos directos predeterminados, se recomienda la última opción (primero debe salir de Ansel). Por ejemplo, los siguientes accesos directos predeterminados están definidos en `shortcutsrc` para cambiar de vista en Ansel:\n"
-
-#. type: Fenced code block
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid ""
-"d=global/switch views/darkroom\n"
-"l=global/switch views/lighttable\n"
-"m=global/switch views/map\n"
-"p=global/switch views/print\n"
-"s=global/switch views/slideshow\n"
-"t=global/switch views/tethering\n"
-msgstr ""
-"d=global/switch views/darkroom\n"
-"l=global/switch views/lighttable\n"
-"m=global/switch views/map\n"
-"p=global/switch views/print\n"
-"s=global/switch views/slideshow\n"
-"t=global/switch views/tethering\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can disable all of these shortcuts by changing `shortcutsrc` as follows:\n"
-msgstr "Puede deshabilitar estos atajos cambiando `shortcutsrc` como se indica a continuación:\n"
-
-#. type: Fenced code block
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid ""
-"d=global/no-op\n"
-"l=global/no-op\n"
-"m=global/no-op\n"
-"p=global/no-op\n"
-"s=global/no-op\n"
-"t=global/no-op\n"
-msgstr ""
-"d=global/no-op\n"
-"l=global/no-op\n"
-"m=global/no-op\n"
-"p=global/no-op\n"
-"s=global/no-op\n"
-"t=global/no-op\n"
-
-#. type: Title ##
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "common actions"
+#| msgid "common actions"
+msgid "Common actions"
 msgstr "acciones comunes"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "The following is a list of some of the actions to which you can assign shortcuts, organized by widget type. This is not an exhaustive list and you are encouraged to browse the shortcut mapping screen for a complete list of available actions. If you assign a shortcut to a widget, it will be given a default action, depending on the type of widget and on whether you have assigned a simple or extended shortcut.\n"
-msgstr "La siguiente es una lista de algunas de las acciones a las que puede asignar accesos directos, organizadas por tipo de widget. Esta no es una lista exhaustiva y le recomendamos que explore la pantalla de asignación de accesos directos para obtener una lista completa de las acciones disponibles. Si asigna un atajo a un widget, se le dará una acción predeterminada, dependiendo del tipo de widget y de si ha asignado un atajo simple o extendido.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Note that it is possible to assign a number of actions that have no effect. For example, all sliders include a _button_ element, regardless of whether such a button is actually present alongside a given slider.\n"
-msgstr "Tenga en cuenta que es posible asignar una serie de acciones que no tienen ningún efecto. Por ejemplo, todos los controles deslizantes incluyen un elemento _button_, independientemente de si dicho botón está realmente presente junto a un control deslizante determinado.\n"
+msgid "The following is a list of some of the actions to which you can assign shortcuts, organized by widget type. \n"
+msgstr ""
 
 #. type: Title ###
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "global"
+#, fuzzy, no-wrap
+#| msgid "global"
+msgid "Global"
 msgstr "opciones globales"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Actions in the \"global\" section of the shortcut mapping screen can be executed from any Ansel view. Most of these actions do not have specific _elements_ as they are used to perform one-off operations.\n"
+#, fuzzy, no-wrap
+#| msgid "Actions in the \"global\" section of the shortcut mapping screen can be executed from any Ansel view. Most of these actions do not have specific _elements_ as they are used to perform one-off operations.\n"
+msgid "Actions in the \"global\" section can be executed from any Ansel view. Most of these actions do not have specific _elements_ as they are used to perform one-off operations.\n"
 msgstr "Las acciones en la sección \"global\" de la pantalla de asignación de accesos directos se pueden ejecutar desde cualquier vista de Ansel. La mayoría de estas acciones no tienen _elementos_ específicos ya que se utilizan para realizar operaciones puntuales.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "views"
-msgstr "vistas"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9671,32 +9347,35 @@ msgstr "Las acciones en la sección \"vistas\" solo se pueden ejecutar desde la 
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
 #| msgid "buttons "
-msgid "buttons"
+msgid "Buttons"
 msgstr "botones "
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A button is a clickable icon in the Ansel interface. The default action, when assigning a simple shortcut to a _button_, is to activate that button as if clicked with the left mouse button. You can modify this action to activate the button as if clicked while holding a modifier key.\n"
+#, fuzzy, no-wrap
+#| msgid "A button is a clickable icon in the Ansel interface. The default action, when assigning a simple shortcut to a _button_, is to activate that button as if clicked with the left mouse button. You can modify this action to activate the button as if clicked while holding a modifier key.\n"
+msgid "A button is a clickable icon in the Ansel interface. The default action, when assigning shortcut to a _button_, is to activate that button as if clicked with the left mouse button. You can modify this action to activate the button as if clicked while holding a modifier key.\n"
 msgstr "Un botón es un icono en el que se puede hacer clic en la interfaz de Ansel. La acción predeterminada, cuando se asigna un acceso directo simple a un _botón_, es activar ese botón como si se hiciera clic con el botón izquierdo del mouse. Puede modificar esta acción para activar el botón como si hiciera clic mientras mantiene presionada una tecla modificadora.\n"
 
 #. type: Title ###
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "toggles"
+#, fuzzy, no-wrap
+#| msgid "toggles"
+msgid "Toggles"
 msgstr "conmutadores"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A toggle is a button that has a persistent on/off state. It therefore has additional _effects_ to allow you to toggle it or explicitly set its state. As with a normal button the default action, when assigning a simple shortcut to a toggle, is to activate the toggle as if clicked with the left mouse button (which toggles the button on/off).\n"
+#, fuzzy, no-wrap
+#| msgid "A toggle is a button that has a persistent on/off state. It therefore has additional _effects_ to allow you to toggle it or explicitly set its state. As with a normal button the default action, when assigning a simple shortcut to a toggle, is to activate the toggle as if clicked with the left mouse button (which toggles the button on/off).\n"
+msgid "A toggle is a button that has a persistent on/off state. It therefore has additional _effects_ to allow you to toggle it or explicitly set its state. As with a normal button the default action, when assigning a shortcut to a toggle, is to activate the toggle as if clicked with the left mouse button (which toggles the button on/off).\n"
 msgstr "Un conmutador es un botón que tiene un estado de encendido/apagado persistente. Por lo tanto, tiene _efectos_ adicionales que le permiten cambiarlo o establecer explícitamente su estado. Al igual que con un botón normal, la acción predeterminada, cuando se asigna un atajo simple a un conmutador, es activar el conmutador como si se hiciera clic con el botón izquierdo del mouse (lo que activa/desactiva el botón).\n"
 
 #. type: Title ###
 #: content/preferences-settings/shortcuts.md
-#: content/modules/utility-modules/_index.md content/modules/_index.md
-#, no-wrap
-msgid "utility modules"
+#, fuzzy, no-wrap
+#| msgid "utility modules"
+msgid "Utility modules"
 msgstr "módulos de utilidad"
 
 #. type: Plain text
@@ -9707,9 +9386,12 @@ msgstr "Todos los módulos de utilidades tienen los siguientes elementos:\n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_show_\n"
+#| ": Acts as a _toggle_ that expands and collapses the module.\n"
 msgid ""
-"_show_\n"
+"_Show_\n"
 ": Acts as a _toggle_ that expands and collapses the module.\n"
 msgstr ""
 "_mostrar_\n"
@@ -9717,9 +9399,12 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_reset_\n"
+#| ": Acts as a _button_ that resets all module parameters when activated. The _ctrl-activate_ action can be used to re-apply any automatic presets for that module.\n"
 msgid ""
-"_reset_\n"
+"_Reset_\n"
 ": Acts as a _button_ that resets all module parameters when activated. The _ctrl-activate_ action can be used to re-apply any automatic presets for that module.\n"
 msgstr ""
 "_Reiniciar_\n"
@@ -9732,16 +9417,17 @@ msgstr ""
 #| "_presets_\n"
 #| ": Allows you to select actions from the [presets](../darkroom/processing-modules/presets.md) menu (e.g. edit, update, previous, next). The default action, when assigning a simple shortcut to a _preset_ element, is to display a list of the available presets for selection. Extended shortcuts are not currently available for preset elements.\n"
 msgid ""
-"_presets_\n"
-": Allows you to select actions from the [presets](../views/darkroom/processing-modules/presets.md) menu (e.g. edit, update, previous, next). The default action, when assigning a simple shortcut to a _preset_ element, is to display a list of the available presets for selection. Extended shortcuts are not currently available for preset elements.\n"
+"_Presets_\n"
+": Allows you to select actions from the [Presets](../views/darkroom/processing-modules/presets.md) menu (e.g. edit, update, previous, next). The default action, when assigning a shortcut to a _preset_ element, is to display a list of the available presets for selection. \n"
 msgstr ""
 "_Preajustes_\n"
 ": Le permite seleccionar acciones del menú [preajustes](../darkroom/processing-modules/presets.md) (por ejemplo, editar, actualizar, anterior, siguiente). La acción predeterminada, al asignar un acceso directo simple a un elemento _preajuste_, es mostrar una lista de los presets disponibles para su selección. Los accesos directos extendidos no están disponibles actualmente para elementos preestablecidos.\n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The default action, when assigning a simple shortcut to a utility module, is to _toggle_ the _show_ element (expand/collapse the module).\n"
+#, fuzzy, no-wrap
+#| msgid "The default action, when assigning a simple shortcut to a utility module, is to _toggle_ the _show_ element (expand/collapse the module).\n"
+msgid "The default action, when assigning a shortcut to a utility module, is to _toggle_ the _show_ element (expand/collapse the module).\n"
 msgstr "La acción predeterminada, al asignar un acceso directo simple a un módulo de utilidad, es _alternar_ el elemento _mostrar_ (expandir/contraer el módulo).\n"
 
 #. type: Plain text
@@ -9749,6 +9435,13 @@ msgstr "La acción predeterminada, al asignar un acceso directo simple a un mód
 #, no-wrap
 msgid "In addition, shortcuts are available for all of the controls on each module as well as any stored presets (see below).\n"
 msgstr "Además, los accesos directos están disponibles para todos los controles de cada módulo, así como para cualquier preajuste almacenado (ver más abajo).\n"
+
+#. type: Title ###
+#: content/preferences-settings/shortcuts.md
+#, fuzzy, no-wrap
+#| msgid "processing modules"
+msgid "Processing modules"
+msgstr "módulos de procesamiento"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9758,9 +9451,12 @@ msgstr "Los módulos de procesamiento tienen los mismos elementos y valores pred
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_enable_\n"
+#| ": Acts as a _toggle_ that switches the module on and off.\n"
 msgid ""
-"_enable_\n"
+"_Enable_\n"
 ": Acts as a _toggle_ that switches the module on and off.\n"
 msgstr ""
 "_permitir_\n"
@@ -9770,14 +9466,14 @@ msgstr ""
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
 #| msgid ""
-#| "_focus_\n"
-#| ": Acts as a _toggle_ that focuses or defocuses the module. This is useful for modules such as [_crop_](../module-reference/processing-modules/crop.md) or [_tone equalizer_](../module-reference/processing-modules/tone-equalizer.md), whose on-screen controls are only activated when those modules have focus. For _crop_, changes are saved only when the module loses focus.\n"
+#| "_show_\n"
+#| ": Acts as a _toggle_ that expands and collapses the module.\n"
 msgid ""
-"_focus_\n"
-": Acts as a _toggle_ that focuses or defocuses the module. This is useful for modules such as [_crop_](../modules/processing-modules/crop.md) or [_tone equalizer_](../modules/processing-modules/tone-equalizer.md), whose on-screen controls are only activated when those modules have focus. For _crop_, changes are saved only when the module loses focus.\n"
+"_Focus_\n"
+": Acts as a _toggle_ that focuses or defocuses the module.\n"
 msgstr ""
-"_enfocar_\n"
-": Actúa como un _toggle_ que enfoca o desenfoca el módulo. Esto es útil para módulos como [_crop_](../module-reference/processing-modules/crop.md) o [_tone equalizer_](../module-reference/processing-modules/tone-equalizer.md), cuyos controles en pantalla solo se activan cuando esos módulos tienen foco. Para _crop_, los cambios se guardan solo cuando el módulo pierde el foco.\n"
+"_mostrar_\n"
+": Actúa como un _interruptor_ que expande y contrae el módulo.\n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9786,8 +9482,8 @@ msgstr ""
 #| "_instance_\n"
 #| ": Allows you to select actions from the [multiple-instance](../darkroom/processing-modules/multiple-instances.md) menu (e.g. move up/down, create new instance). The default action, when assigning a simple shortcut to the _instance_ element, is to display a list of the available options for selection; An extended shortcut will move the _preferred module instance_ (see below) up and down the pixelpipe.\n"
 msgid ""
-"_instance_\n"
-": Allows you to select actions from the [multiple-instance](../views/darkroom/processing-modules/multiple-instances.md) menu (e.g. move up/down, create new instance). The default action, when assigning a simple shortcut to the _instance_ element, is to display a list of the available options for selection; An extended shortcut will move the _preferred module instance_ (see below) up and down the pixelpipe.\n"
+"_Instance_\n"
+": Allows you to select actions from the [Multiple-instance](../views/darkroom/processing-modules/multiple-instances.md) menu (e.g. move up/down, create new instance). The default action, when assigning a shortcut to the _instance_ element, is to display a list of the available options for selection; \n"
 msgstr ""
 "_instancia_\n"
 ": Le permite seleccionar acciones del menú [instancias múltiples](../darkroom/processing-modules/multiple-instances.md) (p. ej., subir/bajar, crear una nueva instancia). La acción predeterminada, al asignar un acceso directo simple al elemento _instance_, es mostrar una lista de las opciones disponibles para la selección; Un atajo extendido moverá la _instancia preferida del módulo_ (ver más abajo) hacia arriba y hacia abajo en el pixelpipe.\n"
@@ -9796,25 +9492,14 @@ msgstr ""
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
 #| msgid "If an action affects a processing module that can have multiple instances, you can choose which instance to adjust with a given shortcut. By default, all actions will affect the \"preferred\" instance, as defined using the settings in [preferences > miscellaneous > keyboard shortcuts with multiple instances](./miscellaneous.md#keyboard-shortcuts-with-multiple-instances).\n"
-msgid "If an action affects a processing module that can have multiple instances, you can choose which instance to adjust with a given shortcut. By default, all actions will affect the \"preferred\" instance, as defined using the settings in [preferences > miscellaneous > shortcuts with multiple instances](./miscellaneous.md#shortcuts-with-multiple-instances).\n"
+msgid "If an action affects a processing module that can have multiple instances, you can choose which instance to adjust with a given shortcut. By default, all actions will affect the \"preferred\" instance, as defined using the settings in [Preferences > Miscellaneous > Shortcuts with multiple instances](./miscellaneous.md#shortcuts-with-multiple-instances).\n"
 msgstr "Si una acción afecta a un módulo de procesamiento que puede tener varias instancias, puede elegir qué instancia ajustar con un atajo determinado. De forma predeterminada, todas las acciones afectarán a la instancia \"preferida\", según se define mediante la configuración en [preferencias > varios > atajos de teclado con varias instancias] (./miscellaneous.md#keyboard-shortcuts-with-multiple-instances).\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Additional options are available in the shortcuts mapping screen to adjust the blend parameters (the \\<blending\\> section) and module controls (the \\<focused\\> section) for the currently-focused module. The latter section allows you to assign shortcuts to the first, second, third (etc.) button, drop-down, slider and tab on the module. The shortcuts will affect different module controls depending on which module currently has focus (as the available list of controls changes).\n"
-msgstr ""
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can also assign scroll shortcuts to the 'preset' menu, which allows you to use your mouse scroll wheel to scroll through the module's presets.\n"
-msgstr ""
 
 #. type: Title ###
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "dropdowns"
+#, fuzzy, no-wrap
+#| msgid "dropdowns"
+msgid "Dropdowns"
 msgstr "desplegables"
 
 #. type: Plain text
@@ -9830,8 +9515,8 @@ msgstr "Un menú desplegable es un cuadro de selección múltiple y tiene los si
 #| "_selection_\n"
 #| ": Allows values to be selected from the dropdown list in various ways. The default action, when assigning a simple shortcut to a dropdown, is to display a popup _edit_ box with a list of the available values for selection; An extended shortcut (including a mouse movement) will scroll through the available values. \n"
 msgid ""
-"_selection_\n"
-": Allows values to be selected from the dropdown list in various ways. The default action, when assigning a simple shortcut to a dropdown, is to display a popup _edit_ box with a list of the available values for selection; An extended shortcut (including a mouse movement) will scroll through the available values.\n"
+"_Selection_\n"
+": Allows values to be selected from the dropdown list in various ways. The default action, when assigning a shortcut to a dropdown, is to display a popup _edit_ box with a list of the available values for selection.\n"
 msgstr ""
 "_selección_\n"
 ": Permite seleccionar valores de la lista desplegable de varias formas. La acción predeterminada, cuando se asigna un acceso directo simple a un menú desplegable, es mostrar un cuadro emergente de _editar_ con una lista de los valores disponibles para la selección; Un atajo extendido (que incluye un movimiento del mouse) se desplazará a través de los valores disponibles. \n"
@@ -9843,11 +9528,18 @@ msgstr ""
 #| "_button_\n"
 #| ": A standard _button_ element that allows the button to the right of the dropdown (if present) to be activated. For example, the _aspect_ dropdown in the [_crop_](../module-reference/processing-modules/crop.md) module has a button that allows the crop controls to be changed from portrait to landscape and vice versa.\n"
 msgid ""
-"_button_\n"
-": A standard _button_ element that allows the button to the right of the dropdown (if present) to be activated. For example, the _aspect_ dropdown in the [_crop_](../modules/processing-modules/crop.md) module has a button that allows the crop controls to be changed from portrait to landscape and vice versa.\n"
+"_Button_\n"
+": A standard _button_ element that allows the button to the right of the dropdown (if present) to be activated. For example, the _aspect_ dropdown in the [_Crop_](../modules/processing-modules/crop.md) module has a button that allows the crop controls to be changed from portrait to landscape and vice versa.\n"
 msgstr ""
 "_botón_\n"
 ": Un elemento _butón_ estándar que permite activar el botón a la derecha del menú desplegable (si está presente). Por ejemplo, el menú desplegable _aspecto_ en el módulo [_crop_](../module-reference/processing-modules/crop.md) tiene un botón que permite cambiar los controles de recorte de vertical a horizontal y viceversa.\n"
+
+#. type: Title ###
+#: content/preferences-settings/shortcuts.md
+#, fuzzy, no-wrap
+#| msgid "sliders"
+msgid "Sliders"
+msgstr "deslizadores"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9857,19 +9549,25 @@ msgstr "Un control deslizante le permite modificar continuamente un valor entero
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_value_\n"
+#| ": Allows the current value of the slider to be altered. The default action, when assigning a simple shortcut to a slider, is to display a popup _edit_ box so you can enter a value; An extended shortcut (including a mouse movement) will change the value up and down.  Value elements are also used for modifying some on-screen graphs. When modifying the _value_ element with a shortcut you may not exceed the bounds set in the visual slider.\n"
 msgid ""
-"_value_\n"
-": Allows the current value of the slider to be altered. The default action, when assigning a simple shortcut to a slider, is to display a popup _edit_ box so you can enter a value; An extended shortcut (including a mouse movement) will change the value up and down.  Value elements are also used for modifying some on-screen graphs. When modifying the _value_ element with a shortcut you may not exceed the bounds set in the visual slider.\n"
+"_Value_\n"
+": Allows the current value of the slider to be altered. The default action, when assigning a shortcut to a slider, is to display a popup _edit_ box so you can enter a value. Value elements are also used for modifying some on-screen graphs. When modifying the _value_ element with a shortcut you may not exceed the bounds set in the visual slider.\n"
 msgstr ""
 "_valor_\n"
 ": Permite modificar el valor actual del control deslizante. La acción predeterminada, cuando se asigna un acceso directo simple a un control deslizante, es mostrar un cuadro de _edición_ emergente para que pueda ingresar un valor; Un atajo extendido (incluido el movimiento del mouse) cambiará el valor hacia arriba y hacia abajo. Los elementos de valor también se utilizan para modificar algunos gráficos en pantalla. Al modificar el elemento _valor_ con un atajo, no puede exceder los límites establecidos en el control deslizante visual.\n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_force_\n"
+#| ": This is the same as the _value_ element described above, but it allows you to exceed the bounds set in the visual slider.\n"
 msgid ""
-"_force_\n"
+"_Force_\n"
 ": This is the same as the _value_ element described above, but it allows you to exceed the bounds set in the visual slider.\n"
 msgstr ""
 "_fuerza_\n"
@@ -9877,9 +9575,12 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_zoom_\n"
+#| ": Allows you to change the upper and lower bounds of the visual slider without altering the current value.\n"
 msgid ""
-"_zoom_\n"
+"_Zoom_\n"
 ": Allows you to change the upper and lower bounds of the visual slider without altering the current value.\n"
 msgstr ""
 "_zoom_\n"
@@ -9887,104 +9588,16 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_button_\n"
+#| ": A standard _button_ element that allows the button to the right of the slider (if present) to be activated. For example, a slider may include a color picker to visually set its value based on selected elements of the image.\n"
 msgid ""
-"_button_\n"
+"_Button_\n"
 ": A standard _button_ element that allows the button to the right of the slider (if present) to be activated. For example, a slider may include a color picker to visually set its value based on selected elements of the image.\n"
 msgstr ""
 "_botón_\n"
 ": Un elemento _botón_ estándar que permite activar el botón a la derecha del control deslizante (si está presente). Por ejemplo, un control deslizante puede incluir un selector de color para establecer visualmente su valor en función de los elementos seleccionados de la imagen.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can alter the value of a slider more quickly or slowly than normal by defining the _speed_ of the action in the shortcut mapping screen. By default a _value_ (or _force_) effect is given a speed of 1.0, which means that it is changed at the default rate defined by the given slider. You can alter the slider more quickly by increasing the speed (a speed of 10 makes the action 10x faster) or more slowly by decreasing it (a speed of 0.1 makes the action 10x slower).\n"
-msgstr "Puede modificar el valor de un control deslizante más rápido o más lento de lo normal definiendo la _velocidad_ de la acción en la pantalla de asignación de accesos directos. Por defecto, a un efecto _value_ (o _force_) se le da una velocidad de 1.0, lo que significa que se cambia a la tasa predeterminada definida por el control deslizante dado. Puede modificar el control deslizante más rápidamente aumentando la velocidad (una velocidad de 10 hace que la acción sea 10 veces más rápida) o más lentamente al disminuirla (una velocidad de 0,1 hace que la acción sea 10 veces más lenta).\n"
-
-#. type: Title ##
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "fallbacks"
-msgstr "alternativas (fallbacks)"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Where a _widget_ can have multiple different _actions_ applied to it, it can be tedious to set up individual shortcuts for each one of those actions. To make this process simpler, if you create a simple shortcut a number of effects can be made available by default as extensions to that shortcut. These are known as _fallbacks_.\n"
-msgstr "Cuando un _widget_ puede tener varias _acciones_ diferentes aplicadas, puede ser tedioso configurar accesos directos individuales para cada una de esas acciones. Para simplificar este proceso, si crea un atajo simple, una serie de efectos pueden estar disponibles de forma predeterminada como extensiones de ese atajo. Estos se conocen como _alternativas (fallbacks)_.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "While fallbacks are a powerful way to quickly set up multiple actions using predefined and consistent shortcuts, they will assign a lot of actions automatically (which might not be what you want), and can be hard to understand. Fallbacks are therefore disabled by default and you will need to click on the \"enable fallbacks\" check box in the shortcuts setup window to enable them.\n"
-msgstr "Si bien las alternativas (fallbacks) son una forma poderosa de configurar rápidamente múltiples acciones usando accesos directos predefinidos y consistentes, asignarán muchas acciones automáticamente (lo que podría no ser lo que desea) y pueden ser difíciles de entender. Por lo tanto, las alternativas están deshabilitadas de forma predeterminada y deberá hacer clic en la casilla de verificación \"habilitar alternativas\" en la ventana de configuración de accesos directos para habilitarlos.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "To take a brief example, you could create a simple shortcut (e.g. Ctrl+R) against a processing module. This will automatically set up the following _fallback_ effects using the defined shortcut, extended with mouse-clicks. In each case (except the first) you should hold the initial shortcut while clicking with your mouse. The final mouse-click will apply the action defined below:\n"
-msgstr "Para tomar un breve ejemplo, puede crear un acceso directo simple (por ejemplo, Ctrl+R) contra un módulo de procesamiento. Esto configurará automáticamente los siguientes efectos _alternativos_ utilizando el atajo definido, ampliado con clics del mouse. En cada caso (excepto en el primero), debe mantener presionado el acceso directo inicial mientras hace clic con el mouse. El clic final del mouse aplicará la acción definida a continuación:\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R (no mouse-click) to show/hide the module (the default fallback)\n"
-msgstr "Ctrl+R (sin hacer clic con el mouse) para mostrar/ocultar el módulo (la alternativa predeterminada)\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R+left-click to enable/disable the module\n"
-msgstr "Ctrl+R+clic izquierdo para habilitar/deshabilitar el módulo\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R+left-double-click to reset the module\n"
-msgstr "Ctrl+R+doble clic izquierdo para restablecer el módulo\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R+right-click to show the module's preset menu\n"
-msgstr "Ctrl+R+clic derecho para mostrar el menú de preajustes del módulo\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R+right-double-click to show the module's multiple instance menu\n"
-msgstr "Ctrl+R+doble clic derecho para mostrar el menú de múltiples instancias del módulo\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Similar fallbacks are defined for many common UI elements and all can be manually overridden.\n"
-msgstr "Se definen respaldos similares para muchos elementos comunes de la interfaz de usuario y todos se pueden anular manualmente.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Some fallback actions are defined using modifier keys (usually `Ctrl+` and `Shift+`). In this case you must define an initial shortcut without such a modifier in order to be able to use these fallbacks. For example, if you assign Ctrl+R to an action, you cannot use a `Ctrl+` fallback. Some default fallbacks of this type are provided for the _value_ element and for horizontal/vertical movements in the (zoomed) central area -- in this case, `Shift+` increases the speed to 10.0 and `Ctrl+` decreases the speed to 0.1.\n"
-msgstr "Algunas acciones alternativas se definen mediante teclas modificadoras (generalmente `Ctrl+` y `Shift+`). En este caso, debe definir un acceso directo inicial sin dicho modificador para poder utilizar estos recursos alternativos. Por ejemplo, si asigna Ctrl+R a una acción, no puede usar una alternativa `Ctrl+`. Se proporcionan algunas opciones predeterminadas de este tipo para el elemento _valor_ y para los movimientos horizontales/verticales en el área central (ampliada); en este caso, `Shift+` aumenta la velocidad a 10,0 y `Ctrl+` disminuye la velocidad a 0,1.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "To see a list of _all_ of the default fallbacks, click the \"enable fallbacks\" checkbox in the shortcut mapping screen and select the \"fallbacks\" category in the top panel. To see the fallbacks for a given widget (e.g. a slider) just select that widget in the top panel. In both cases an additional item (also named \"fallbacks\") will then appear in the bottom panel containing full details of the available fallbacks.\n"
-msgstr "Para ver una lista de _todas_ las alternativas predeterminadas, haga clic en la casilla de verificación \"habilitar alternativas\" en la pantalla de asignación de accesos directos y seleccione la categoría \"alternativas\" en el panel superior. Para ver los recursos alternativos para un widget determinado (por ejemplo, un control deslizante), simplemente seleccione ese widget en el panel superior. En ambos casos, aparecerá un elemento adicional (también llamado \"alternativas\") en el panel inferior que contiene todos los detalles de las alternativas disponibles.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Fallbacks are only applied if no other shortcut using that combination has been explicitly created. In the above example, if you were to explicitly assign Ctrl+R+left-click to another action, the \"enable/disable module\" fallback would be ignored.\n"
-msgstr "Las alternativas solo se aplican si no se ha creado explícitamente ningún otro atajo que use esa combinación. En el ejemplo anterior, si tuviera que asignar explícitamente Ctrl+R+clic izquierdo a otra acción, se ignoraría la alternativa de \"habilitar/deshabilitar módulo\".\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "As with any other shortcut, fallback settings are fully customizable. \n"
-msgid "As with any other shortcut, fallback settings are fully customizable.\n"
-msgstr "Al igual que con cualquier otro atajo, la configuración de alternativas es totalmente personalizable. \n"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/preferences-settings/security.md
@@ -14951,6 +14564,12 @@ msgstr ""
 ": - _contador_: Simplemente muestra el número de imágenes (para liberar espacio en el mapa). Desplácese sobre el número de imágenes para mostrar las miniaturas correspondientes. Un marcador de solo recuento se comporta de la misma manera que una miniatura de imagen normal, en términos de codificación de colores, desplazamiento, arrastrar y soltar, etc.\n"
 ": - _ninguno_: no muestra nada.\n"
 ": También puede desplazarse por estas opciones presionando Mayús+S.\n"
+
+#. type: Title ###
+#: content/modules/utility-modules/_index.md content/modules/_index.md
+#, no-wrap
+msgid "utility modules"
+msgstr "módulos de utilidad"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/modules/utility-modules/shared/scopes.md
@@ -31600,6 +31219,345 @@ msgstr "No se muestra ningún mensaje una vez finalizado el ejemplo, solo la bar
 #, no-wrap
 msgid "We use `coroutine.yield` to call an external program. The normal `os.execute` would block other lua codes from happening.\n"
 msgstr "Usamos `coroutine.yield` para llamar a un programa externo. El `os.execute` normal bloquearía otros códigos lua para que no sucedan.\n"
+
+#, no-wrap
+#~ msgid "You can perform almost any action in Ansel with a keyboard/mouse shortcut. You can also use various other input devices, including MIDI devices and game controllers -- see the [midi device support](../special-topics/midi-device-support.md) section for details. These are referred to as _external devices_ or just _devices_ in this guide.\n"
+#~ msgstr "Puede realizar casi cualquier acción en Ansel con un atajo de teclado/ratón. También puede usar varios otros dispositivos de entrada, incluidos dispositivos MIDI y controladores de juegos -- consulte la sección [compatibilidad con dispositivos midi](../special-topics/midi-device-support.md) para obtener más detalles. Estos se denominan _dispositivos externos_ o simplemente _dispositivos_ en esta guía.\n"
+
+#, no-wrap
+#~ msgid "A _shortcut_ is a combination of key or button presses and/or mouse or device movements that performs an _action_ in Ansel.\n"
+#~ msgstr "Un _atajo_ es una combinación de pulsaciones de teclas o botones y/o movimientos del mouse o dispositivo que realiza una _acción_ en Ansel.\n"
+
+#, no-wrap
+#~ msgid "A single action may have multiple shortcuts but a single shortcut can only be linked to one action in a given Ansel view -- you can't chain actions together except by applying a preset or style. You can, however, set up a single shortcut that does one thing in the lighttable view, say, and another in the darkroom view.\n"
+#~ msgstr "Una sola acción puede tener varios atajos, pero un atajo solo se puede vincular a una acción en una vista determinada de Ansel; no puede encadenar acciones excepto aplicando un ajuste preestablecido o un estilo. Sin embargo, puede configurar un solo atajo que haga una cosa en la vista de la mesa de luz, por ejemplo, y otra en la vista del cuarto oscuro.\n"
+
+#, no-wrap
+#~ msgid "initiating a shortcut"
+#~ msgstr "iniciando un atajo de teclado"
+
+#, no-wrap
+#~ msgid "A shortcut must be initiated by either\n"
+#~ msgstr "Un atajo debe ser iniciado bien\n"
+
+#, no-wrap
+#~ msgid "pressing a key on the keyboard; or\n"
+#~ msgstr "presionando un botón del teclado; o bien\n"
+
+#, fuzzy, no-wrap
+#~| msgid "pressing a button or moving a knob/joystick on an external device \n"
+#~ msgid "pressing a button or moving a knob/joystick on an external device\n"
+#~ msgstr "presionando un botón o moviendo una palanca/joystick en un dispositivo externo \n"
+
+#, no-wrap
+#~ msgid "You cannot initiate a shortcut by moving your mouse or pressing one of its buttons, as these actions are used to interact with Ansel's UI.\n"
+#~ msgstr "No puede iniciar un atajo moviendo su ratón o presionando uno de sus botones, dado que esas acciones se usan para interactuar con la interfaz de Ansel,\n"
+
+#, no-wrap
+#~ msgid "simple shortcuts"
+#~ msgstr "atajos de teclado simples"
+
+#, no-wrap
+#~ msgid "A shortcut that only includes button and/or key presses (and not mouse/device movements) is referred to as a _simple_ shortcut.\n"
+#~ msgstr "Un atajo que solo incluye un botón y/o pulsación de teclas (y no movimientos de ratón/dispositivo) es referido como un \"atajo simple\".\n"
+
+#, no-wrap
+#~ msgid "A simple shortcut must be initiated as above, but can include:\n"
+#~ msgstr "Un atajo simple puede ser iniciado como arriba, pero puede incluir:\n"
+
+#, no-wrap
+#~ msgid "One or more modifier keys (Shift, Ctrl, Alt), held down while executing the remainder of the shortcut\n"
+#~ msgstr "Una o más teclas modificadoras (Shift, Ctrl, Alt), mantenidas pulsadas mientras se ejecuta el resto del atajo\n"
+
+#, no-wrap
+#~ msgid "Up to three key presses, the last one of which may be a long-press (defined as a key-press longer than your system's double-click duration)\n"
+#~ msgstr "Hasta tres pulsaciones, la última de las cuales puede ser larga (definida como una pulsación más larga que la duración de doble click de su sistema)\n"
+
+#, no-wrap
+#~ msgid "Similarly, up to three device-button presses or mouse-button clicks, the last of which may be long\n"
+#~ msgstr "Del mismo modo, hasta tres pulsaciones del botón del dispositivo o clics del botón del ratón, el último de los cuales puede ser largo\n"
+
+#, no-wrap
+#~ msgid "Various combinations of keyboard, mouse, and device buttons can be used to create simple shortcuts.\n"
+#~ msgstr "Varias combinaciones de teclado, ratón y botones de dispositivo pueden usarse para crear atajos simples.\n"
+
+#, no-wrap
+#~ msgid "creating additional modifiers"
+#~ msgstr "creando modificadores adicionales"
+
+#, fuzzy, no-wrap
+#~| msgid "The only valid modifiers are the Shift, Ctrl and Alt keys on the keyboard. You can define additional keys (or device buttons) as modifiers by assigning keys/buttons to the the \"global/modifier\" action. However, these will merely function as extra Ctrl, Alt or Shift keys -- you cannot create \"new\" modifiers.\n"
+#~ msgid "The only valid modifiers are the Shift, Ctrl and Alt keys on the keyboard. You can define additional keys (or device buttons) as modifiers by assigning keys/buttons to the \"global/modifier\" action. However, these will merely function as extra Ctrl, Alt or Shift keys -- you cannot create \"new\" modifiers.\n"
+#~ msgstr "Los únicos modificadores válidos son las teclas Shift, Ctrl y Alt del teclado. Puede definir teclas adicionales (o botones de dispositivo) como modificadores asignando teclas/botones a la acción \"global/modificador\". Sin embargo, estos simplemente funcionarán como teclas Ctrl, Alt o Shift adicionales; no puede crear modificadores \"nuevos\".\n"
+
+#, no-wrap
+#~ msgid "extending simple shortcuts with movement"
+#~ msgstr "extendiendo atajos simples con movimiento"
+
+#, no-wrap
+#~ msgid "For certain actions you can choose to _extend_ a simple shortcut using mouse/device movement. For example you might hold Ctrl+X while scrolling with your mouse to change the value of a slider. The following can be used to extend a simple shortcut:\n"
+#~ msgstr "Para ciertas acciones, puede elegir _extender_ un atajo simple usando el movimiento del mouse/dispositivo. Por ejemplo, puede mantener presionadas las teclas Ctrl+X mientras se desplaza con el mouse para cambiar el valor de un control deslizante. Lo siguiente se puede usar para extender un atajo simple:\n"
+
+#, no-wrap
+#~ msgid "Movement of the mouse scroll wheel\n"
+#~ msgstr "Movimiento de la rueda de scroll del ratón\n"
+
+#, no-wrap
+#~ msgid "Horizontal, vertical or diagonal movement of the mouse cursor\n"
+#~ msgstr "movimiento horizontal, vertical o diagonal del cursor del ratón\n"
+
+#, no-wrap
+#~ msgid "Movement of a knob/joystick on an external device\n"
+#~ msgstr "Movimiento de una palanca/joystick de un dispositivo externo\n"
+
+#, fuzzy, no-wrap
+#~| msgid "To extend a simple shortcut, you must hold the final key/button of the simple shortcut while performing the extending mouse/device movement. \n"
+#~ msgid "To extend a simple shortcut, you must hold the final key/button of the simple shortcut while performing the extending mouse/device movement.\n"
+#~ msgstr "Para extender un atajo simple, debe mantener el último botón/tecla del atajo simple mientras realiza el movimiento extendido del ratón/dispositivo. \n"
+
+#, no-wrap
+#~ msgid "For external devices you do not need to start with a _simple_ shortcut -- you can directly assign a control knob or joystick to an action -- though this will significantly reduce the flexibility of such devices.\n"
+#~ msgstr "Para dispositivos externos, no necesita comenzar con un atajo _simple_; puede asignar directamente una perilla de control o joystick a una acción, aunque esto reducirá significativamente la flexibilidad de dichos dispositivos.\n"
+
+#, no-wrap
+#~ msgid "Long button and key presses cannot be extended, as the length of the click/press is timed using the release of the final button/key -- such shortcuts must be terminated with the raising of the final button/key.\n"
+#~ msgstr "Las pulsaciones prolongadas de botones y teclas no se pueden extender, ya que la duración del clic/pulsación se cronometra usando la liberación del último botón/tecla; dichos accesos directos deben terminar con la elevación del último botón/tecla.\n"
+
+#, no-wrap
+#~ msgid "**Note:** You may need to switch off the \"disable touchpad while typing\" setting if you want to use extended shortcuts with a laptop touchpad.\n"
+#~ msgstr "**Nota:** Es posible que deba desactivar la configuración \"Deshabilitar el panel táctil mientras escribe\" si desea usar accesos directos extendidos con el panel táctil de una computadora portátil.\n"
+
+#, no-wrap
+#~ msgid "actions"
+#~ msgstr "acciones"
+
+#, no-wrap
+#~ msgid "assigning shortcuts to actions"
+#~ msgstr "asignando atajos a acciones"
+
+#, no-wrap
+#~ msgid "There are two primary methods of assigning a shortcut to an action.\n"
+#~ msgstr "Hay dos métodos principales para asignar un atajo a una acción.\n"
+
+#, no-wrap
+#~ msgid "visual shortcut mapping"
+#~ msgstr "mapeo visual de atajos de teclado"
+
+#, fuzzy, no-wrap
+#~| msgid "Click on the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon in the [top panel](../overview/user-interface/top-panel.md) of any Ansel view to enter visual shortcut mapping mode. \n"
+#~ msgid "Click on the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon in the [top panel](../overview/user-interface/top-panel.md) of any Ansel view to enter visual shortcut mapping mode. If you hold Ctrl while clicking the button, no confirmation will appear when overwriting an existing shortcut mapping.\n"
+#~ msgstr "Haga clic en el icono ![botón de mapeo visual](./shortcuts/visual-mapping-button.png#icon) en el [panel superior](../overview/user-interface/top-panel.md) de cualquier vista de Ansel para ingresar al modo de mapeo de atajos visuales. \n"
+
+#, no-wrap
+#~ msgid "The mouse cursor will change as you hover over UI widgets, to indicate whether or not a mapping can be created:\n"
+#~ msgstr "El cursor del mouse cambiará a medida que pase el mouse sobre los widgets de la interfaz de usuario, para indicar si se puede crear o no una asignación:\n"
+
+#, no-wrap
+#~ msgid "A down arrow with a line ![expand icon](./shortcuts/expand-icon.png#icon) appears when you hover over a module header, to indicate that you can click to expand the module.\n"
+#~ msgstr "Aparece una flecha hacia abajo con una línea ![expand icon](./shortcuts/expand-icon.png#icon) cuando se desplaza sobre el encabezado de un módulo, para indicar que puede hacer clic para expandir el módulo.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "A spiral ![spiral icon](./shortcuts/spiral-icon.png#icon) indicates that a shortcut can be defined for the widget under the cursor. \n"
+#~ msgid "A spiral ![spiral icon](./shortcuts/spiral-icon.png#icon) indicates that a shortcut can be defined for the widget under the cursor.\n"
+#~ msgstr "Una espiral ![icono de espiral](./shortcuts/spiral-icon.png#icon) indica que se puede definir un acceso directo para el widget debajo del cursor. \n"
+
+#, fuzzy, no-wrap
+#~| msgid "An up arrow ![up icon](./shortcuts/up-icon.png#icon) indicates that, in addition to assigning a shortcut, you can also add the widget to the [quick access panel](../darkroom/organization/quick-access-panel.md) in the darkroom (by Ctrl+clicking on it).\n"
+#~ msgid "An up arrow ![up icon](./shortcuts/up-icon.png#icon) indicates that, in addition to assigning a shortcut, you can also add the widget to the [quick access panel](../views/darkroom/organization/quick-access-panel.md) in the darkroom (by Ctrl+clicking on it).\n"
+#~ msgstr "Una flecha hacia arriba ![icono arriba](./shortcuts/up-icon.png#icon) indica que, además de asignar un acceso directo, también puede agregar el widget al [panel de acceso rápido](../cuarto oscuro/ organization/quick-access-panel.md) en el cuarto oscuro (pulsando Ctrl+clic sobre él).\n"
+
+#, no-wrap
+#~ msgid "A down arrow ![down icon](./shortcuts/down-icon.png#icon) indicates that the widget is already in the quick access panel (Ctrl+click to remove it).\n"
+#~ msgstr "Una flecha hacia abajo ![icono hacia abajo](./shortcuts/down-icon.png#icon) indica que el widget ya está en el panel de acceso rápido (Ctrl+clic para eliminarlo).\n"
+
+#, fuzzy, no-wrap
+#~| msgid "A cross ![cross icon](./shortcuts/cross-icon.png#icon) indicates that there is no mappable widget under the cursor. \n"
+#~ msgid "A cross ![cross icon](./shortcuts/cross-icon.png#icon) indicates that there is no mappable widget under the cursor.\n"
+#~ msgstr "Una cruz ![icono de cruz](./shortcuts/cross-icon.png#icon) indica que no hay ningún widget asignable debajo del cursor. \n"
+
+#, fuzzy, no-wrap
+#~| msgid "Press a key combination while hovering over a mappable widget to assign a shortcut to that widget -- a default action will be assigned to that shortcut based on the type of widget and whether you have keyed a _simple_ or _extended_ shortcut.  See below for details of some of the default assigned actions. \n"
+#~ msgid "Press a key combination while hovering over a mappable widget to assign a shortcut to that widget -- a default action will be assigned to that shortcut based on the type of widget and whether you have keyed a _simple_ or _extended_ shortcut.  See below for details of some of the default assigned actions.\n"
+#~ msgstr "Presione una combinación de teclas mientras se desplaza sobre un widget mapeable para asignar un atajo a ese widget; se asignará una acción predeterminada a ese atajo según el tipo de widget y si ha ingresado un atajo _simple_ o _extendido_. Consulte a continuación los detalles de algunas de las acciones asignadas por defecto. \n"
+
+#, no-wrap
+#~ msgid "Left-click on a mappable widget to open the shortcut mapping screen for that widget (see below). Left-click anywhere else on the screen to open the shortcut mapping screen, expanded (where possible) based on the part of the screen you have clicked on. This screen can be used to alter the action assigned to a shortcut and to configure shortcuts for non-visual actions. Entering the shortcut mapping screen exits visual shortcut mapping mode.\n"
+#~ msgstr "Haga clic con el botón izquierdo en un widget asignable para abrir la pantalla de asignación de accesos directos para ese widget (ver más abajo). Haga clic con el botón izquierdo en cualquier otro lugar de la pantalla para abrir la pantalla de asignación de accesos directos, expandida (siempre que sea posible) según la parte de la pantalla en la que haya hecho clic. Esta pantalla se puede utilizar para modificar la acción asignada a un atajo y para configurar atajos para acciones no visuales. Al ingresar a la pantalla de asignación de accesos directos, se sale del modo de asignación de accesos directos visuales.\n"
+
+#, no-wrap
+#~ msgid "You can assign as many shortcuts as you like in a single mapping session and then exit mapping mode when you are finished by clicking the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon again or right-clicking anywhere on the screen.\n"
+#~ msgstr "Puede asignar tantos accesos directos como desee en una sola sesión de mapeo y luego salir del modo de mapeo cuando haya terminado haciendo clic en el icono ![botón de mapeo visual](./shortcuts/visual-mapping-button.png#icon) nuevamente o haciendo clic derecho en cualquier parte de la pantalla.\n"
+
+#, no-wrap
+#~ msgid "You can delete a user-defined shortcut mapping by defining it a second time against the same widget. If you attempt to reallocate an existing shortcut to a new action, you will be notified of the conflict and asked whether you wish to replace the existing shortcut.\n"
+#~ msgstr "Puede eliminar una asignación de acceso directo definida por el usuario definiéndola una segunda vez en el mismo widget. Si intenta reasignar un atajo existente a una nueva acción, se le notificará el conflicto y se le preguntará si desea reemplazar el atajo existente.\n"
+
+#, no-wrap
+#~ msgid "shortcut mapping screen"
+#~ msgstr "pantallla de mapeo de atajos de teclado"
+
+#, no-wrap
+#~ msgid "The most flexible way to create shortcuts is by using the shortcut mapping screen, which can be accessed from the global preferences dialog or by left-clicking in visual mapping mode. This screen allows access to all available actions, including some that are not directly linked to a UI widget.\n"
+#~ msgstr "La forma más flexible de crear accesos directos es mediante la pantalla de asignación de accesos directos, a la que se puede acceder desde el cuadro de diálogo de preferencias globales o haciendo clic con el botón izquierdo en el modo de asignación visual. Esta pantalla permite el acceso a todas las acciones disponibles, incluidas algunas que no están directamente vinculadas a un widget de IU.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "The top panel of the shortcut mapping screen shows a list of available UI widgets/actions and the bottom panel shows the shortcuts currently assigned to them. You can search the top and bottom panels using the text entry boxes at the bottom of the screen.\n"
+#~ msgid "The top panel of the shortcut mapping screen shows a list of available UI widgets/actions and the bottom panel shows the shortcuts currently assigned to them. You can search the top and bottom panels using the text entry boxes at the bottom of the screen (use the up/down arrow keys to navigate between matches).\n"
+#~ msgstr "El panel superior de la pantalla de asignación de accesos directos muestra una lista de widgets/acciones de IU disponibles y el panel inferior muestra los accesos directos que tienen asignados actualmente. Puede buscar en los paneles superior e inferior utilizando los cuadros de entrada de texto en la parte inferior de la pantalla.\n"
+
+#, no-wrap
+#~ msgid "Double-click an item in the top panel to create a new shortcut for that item, and then enter your desired shortcut (right-click to cancel). Once you have done this, a new entry will appear in the bottom panel showing the shortcut you have created. You can then manually alter the _element_, _effect_, _speed_ or _instance_ of the assigned action against that shortcut in the bottom panel. To delete a user-defined shortcut, select it in the bottom panel and press the Delete key.\n"
+#~ msgstr "Haga doble clic en un elemento en el panel superior para crear un nuevo acceso directo para ese elemento y luego ingrese el acceso directo deseado (haga clic con el botón derecho para cancelar). Una vez que haya hecho esto, aparecerá una nueva entrada en el panel inferior que muestra el acceso directo que ha creado. Luego puede modificar manualmente el _elemento_, el _efecto_, la _velocidad_ o la _instancia_ de la acción asignada contra ese atajo en el panel inferior. Para eliminar un acceso directo definido por el usuario, selecciónelo en el panel inferior y presione la tecla Eliminar.\n"
+
+#, no-wrap
+#~ msgid "The following additional options are provided in the shortcut mapping screen:\n"
+#~ msgstr "Las siguientes opciones adicionales se proporcionan en la pantalla de asignación de accesos directos:\n"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "export...\n"
+#~| ": Export the current shortcut mappings for one or all of your devices (keyboard/mouse, midi, game) to an external file. The dialog will show you how many shortcuts exist for each device.\n"
+#~ msgid ""
+#~ "export...\n"
+#~ ": Export the current shortcut mappings for one or all of your devices (keyboard/mouse, midi, game controller) to an external file. The dialog will show you how many shortcuts exist for each device.\n"
+#~ msgstr ""
+#~ "exportar...\n"
+#~ ": exporte las asignaciones de accesos directos actuales para uno o todos sus dispositivos (teclado/mouse, midi, juego) a un archivo externo. El cuadro de diálogo le mostrará cuántos accesos directos existen para cada dispositivo.\n"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "import...\n"
+#~| ": Import shortcut mappings from an external file for one or all of your devices. When loading a device, you can chose to assign it a different number. This can for example be used to exchange midi layouts. Before loading, you can chose to wipe the specific device first. When loading all from an empty file, this will effectively delete all your shortcuts. \n"
+#~ msgid ""
+#~ "import...\n"
+#~ ": Import shortcut mappings from an external file for one or all of your devices. When loading a device, you can chose to assign it a different number. This can for example be used to exchange midi layouts. Before loading, you can chose to wipe the specific device first. When loading all from an empty file, this will effectively delete all your shortcuts.\n"
+#~ msgstr ""
+#~ "importar...\n"
+#~ ": importe asignaciones de accesos directos desde un archivo externo para uno o todos sus dispositivos. Al cargar un dispositivo, puede optar por asignarle un número diferente. Esto se puede usar, por ejemplo, para intercambiar diseños midi. Antes de cargar, puede optar por borrar primero el dispositivo específico. Al cargar todo desde un archivo vacío, esto eliminará efectivamente todos sus accesos directos. \n"
+
+#, no-wrap
+#~ msgid ""
+#~ "restore...\n"
+#~ ": Restore your shortcut mappings to (a) The mappings shipped with Ansel by default, (b) The start of your current session, or (c) The point at which the shortcut mapping screen was last opened. When restoring, you can choose to leave any additional shortcuts that were added after the relevant checkpoint as they are, so that only changed shortcuts are restored to their previous meaning. Or you can choose to first clear all shortcuts and just load the restore point.\n"
+#~ msgstr ""
+#~ "restaurar...\n"
+#~ ": Restaure sus asignaciones de accesos directos a (a) las asignaciones enviadas con Ansel de forma predeterminada, (b) el inicio de su sesión actual o (c) el punto en el que se abrió por última vez la pantalla de asignación de accesos directos. Al restaurar, puede optar por dejar cualquier acceso directo adicional que se haya agregado después del punto de control relevante tal como está, de modo que solo los accesos directos modificados se restablezcan a su significado anterior. O puede optar por borrar primero todos los accesos directos y simplemente cargar el punto de restauración.\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "d=global/switch views/darkroom\n"
+#~ "l=global/switch views/lighttable\n"
+#~ "m=global/switch views/map\n"
+#~ "p=global/switch views/print\n"
+#~ "s=global/switch views/slideshow\n"
+#~ "t=global/switch views/tethering\n"
+#~ msgstr ""
+#~ "d=global/switch views/darkroom\n"
+#~ "l=global/switch views/lighttable\n"
+#~ "m=global/switch views/map\n"
+#~ "p=global/switch views/print\n"
+#~ "s=global/switch views/slideshow\n"
+#~ "t=global/switch views/tethering\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "d=global/no-op\n"
+#~ "l=global/no-op\n"
+#~ "m=global/no-op\n"
+#~ "p=global/no-op\n"
+#~ "s=global/no-op\n"
+#~ "t=global/no-op\n"
+#~ msgstr ""
+#~ "d=global/no-op\n"
+#~ "l=global/no-op\n"
+#~ "m=global/no-op\n"
+#~ "p=global/no-op\n"
+#~ "s=global/no-op\n"
+#~ "t=global/no-op\n"
+
+#, no-wrap
+#~ msgid "The following is a list of some of the actions to which you can assign shortcuts, organized by widget type. This is not an exhaustive list and you are encouraged to browse the shortcut mapping screen for a complete list of available actions. If you assign a shortcut to a widget, it will be given a default action, depending on the type of widget and on whether you have assigned a simple or extended shortcut.\n"
+#~ msgstr "La siguiente es una lista de algunas de las acciones a las que puede asignar accesos directos, organizadas por tipo de widget. Esta no es una lista exhaustiva y le recomendamos que explore la pantalla de asignación de accesos directos para obtener una lista completa de las acciones disponibles. Si asigna un atajo a un widget, se le dará una acción predeterminada, dependiendo del tipo de widget y de si ha asignado un atajo simple o extendido.\n"
+
+#, no-wrap
+#~ msgid "Note that it is possible to assign a number of actions that have no effect. For example, all sliders include a _button_ element, regardless of whether such a button is actually present alongside a given slider.\n"
+#~ msgstr "Tenga en cuenta que es posible asignar una serie de acciones que no tienen ningún efecto. Por ejemplo, todos los controles deslizantes incluyen un elemento _button_, independientemente de si dicho botón está realmente presente junto a un control deslizante determinado.\n"
+
+#, no-wrap
+#~ msgid "views"
+#~ msgstr "vistas"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "_focus_\n"
+#~| ": Acts as a _toggle_ that focuses or defocuses the module. This is useful for modules such as [_crop_](../module-reference/processing-modules/crop.md) or [_tone equalizer_](../module-reference/processing-modules/tone-equalizer.md), whose on-screen controls are only activated when those modules have focus. For _crop_, changes are saved only when the module loses focus.\n"
+#~ msgid ""
+#~ "_focus_\n"
+#~ ": Acts as a _toggle_ that focuses or defocuses the module. This is useful for modules such as [_crop_](../modules/processing-modules/crop.md) or [_tone equalizer_](../modules/processing-modules/tone-equalizer.md), whose on-screen controls are only activated when those modules have focus. For _crop_, changes are saved only when the module loses focus.\n"
+#~ msgstr ""
+#~ "_enfocar_\n"
+#~ ": Actúa como un _toggle_ que enfoca o desenfoca el módulo. Esto es útil para módulos como [_crop_](../module-reference/processing-modules/crop.md) o [_tone equalizer_](../module-reference/processing-modules/tone-equalizer.md), cuyos controles en pantalla solo se activan cuando esos módulos tienen foco. Para _crop_, los cambios se guardan solo cuando el módulo pierde el foco.\n"
+
+#, no-wrap
+#~ msgid "You can alter the value of a slider more quickly or slowly than normal by defining the _speed_ of the action in the shortcut mapping screen. By default a _value_ (or _force_) effect is given a speed of 1.0, which means that it is changed at the default rate defined by the given slider. You can alter the slider more quickly by increasing the speed (a speed of 10 makes the action 10x faster) or more slowly by decreasing it (a speed of 0.1 makes the action 10x slower).\n"
+#~ msgstr "Puede modificar el valor de un control deslizante más rápido o más lento de lo normal definiendo la _velocidad_ de la acción en la pantalla de asignación de accesos directos. Por defecto, a un efecto _value_ (o _force_) se le da una velocidad de 1.0, lo que significa que se cambia a la tasa predeterminada definida por el control deslizante dado. Puede modificar el control deslizante más rápidamente aumentando la velocidad (una velocidad de 10 hace que la acción sea 10 veces más rápida) o más lentamente al disminuirla (una velocidad de 0,1 hace que la acción sea 10 veces más lenta).\n"
+
+#, no-wrap
+#~ msgid "fallbacks"
+#~ msgstr "alternativas (fallbacks)"
+
+#, no-wrap
+#~ msgid "Where a _widget_ can have multiple different _actions_ applied to it, it can be tedious to set up individual shortcuts for each one of those actions. To make this process simpler, if you create a simple shortcut a number of effects can be made available by default as extensions to that shortcut. These are known as _fallbacks_.\n"
+#~ msgstr "Cuando un _widget_ puede tener varias _acciones_ diferentes aplicadas, puede ser tedioso configurar accesos directos individuales para cada una de esas acciones. Para simplificar este proceso, si crea un atajo simple, una serie de efectos pueden estar disponibles de forma predeterminada como extensiones de ese atajo. Estos se conocen como _alternativas (fallbacks)_.\n"
+
+#, no-wrap
+#~ msgid "While fallbacks are a powerful way to quickly set up multiple actions using predefined and consistent shortcuts, they will assign a lot of actions automatically (which might not be what you want), and can be hard to understand. Fallbacks are therefore disabled by default and you will need to click on the \"enable fallbacks\" check box in the shortcuts setup window to enable them.\n"
+#~ msgstr "Si bien las alternativas (fallbacks) son una forma poderosa de configurar rápidamente múltiples acciones usando accesos directos predefinidos y consistentes, asignarán muchas acciones automáticamente (lo que podría no ser lo que desea) y pueden ser difíciles de entender. Por lo tanto, las alternativas están deshabilitadas de forma predeterminada y deberá hacer clic en la casilla de verificación \"habilitar alternativas\" en la ventana de configuración de accesos directos para habilitarlos.\n"
+
+#, no-wrap
+#~ msgid "To take a brief example, you could create a simple shortcut (e.g. Ctrl+R) against a processing module. This will automatically set up the following _fallback_ effects using the defined shortcut, extended with mouse-clicks. In each case (except the first) you should hold the initial shortcut while clicking with your mouse. The final mouse-click will apply the action defined below:\n"
+#~ msgstr "Para tomar un breve ejemplo, puede crear un acceso directo simple (por ejemplo, Ctrl+R) contra un módulo de procesamiento. Esto configurará automáticamente los siguientes efectos _alternativos_ utilizando el atajo definido, ampliado con clics del mouse. En cada caso (excepto en el primero), debe mantener presionado el acceso directo inicial mientras hace clic con el mouse. El clic final del mouse aplicará la acción definida a continuación:\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R (no mouse-click) to show/hide the module (the default fallback)\n"
+#~ msgstr "Ctrl+R (sin hacer clic con el mouse) para mostrar/ocultar el módulo (la alternativa predeterminada)\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R+left-click to enable/disable the module\n"
+#~ msgstr "Ctrl+R+clic izquierdo para habilitar/deshabilitar el módulo\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R+left-double-click to reset the module\n"
+#~ msgstr "Ctrl+R+doble clic izquierdo para restablecer el módulo\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R+right-click to show the module's preset menu\n"
+#~ msgstr "Ctrl+R+clic derecho para mostrar el menú de preajustes del módulo\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R+right-double-click to show the module's multiple instance menu\n"
+#~ msgstr "Ctrl+R+doble clic derecho para mostrar el menú de múltiples instancias del módulo\n"
+
+#, no-wrap
+#~ msgid "Similar fallbacks are defined for many common UI elements and all can be manually overridden.\n"
+#~ msgstr "Se definen respaldos similares para muchos elementos comunes de la interfaz de usuario y todos se pueden anular manualmente.\n"
+
+#, no-wrap
+#~ msgid "Some fallback actions are defined using modifier keys (usually `Ctrl+` and `Shift+`). In this case you must define an initial shortcut without such a modifier in order to be able to use these fallbacks. For example, if you assign Ctrl+R to an action, you cannot use a `Ctrl+` fallback. Some default fallbacks of this type are provided for the _value_ element and for horizontal/vertical movements in the (zoomed) central area -- in this case, `Shift+` increases the speed to 10.0 and `Ctrl+` decreases the speed to 0.1.\n"
+#~ msgstr "Algunas acciones alternativas se definen mediante teclas modificadoras (generalmente `Ctrl+` y `Shift+`). En este caso, debe definir un acceso directo inicial sin dicho modificador para poder utilizar estos recursos alternativos. Por ejemplo, si asigna Ctrl+R a una acción, no puede usar una alternativa `Ctrl+`. Se proporcionan algunas opciones predeterminadas de este tipo para el elemento _valor_ y para los movimientos horizontales/verticales en el área central (ampliada); en este caso, `Shift+` aumenta la velocidad a 10,0 y `Ctrl+` disminuye la velocidad a 0,1.\n"
+
+#, no-wrap
+#~ msgid "To see a list of _all_ of the default fallbacks, click the \"enable fallbacks\" checkbox in the shortcut mapping screen and select the \"fallbacks\" category in the top panel. To see the fallbacks for a given widget (e.g. a slider) just select that widget in the top panel. In both cases an additional item (also named \"fallbacks\") will then appear in the bottom panel containing full details of the available fallbacks.\n"
+#~ msgstr "Para ver una lista de _todas_ las alternativas predeterminadas, haga clic en la casilla de verificación \"habilitar alternativas\" en la pantalla de asignación de accesos directos y seleccione la categoría \"alternativas\" en el panel superior. Para ver los recursos alternativos para un widget determinado (por ejemplo, un control deslizante), simplemente seleccione ese widget en el panel superior. En ambos casos, aparecerá un elemento adicional (también llamado \"alternativas\") en el panel inferior que contiene todos los detalles de las alternativas disponibles.\n"
+
+#, no-wrap
+#~ msgid "Fallbacks are only applied if no other shortcut using that combination has been explicitly created. In the above example, if you were to explicitly assign Ctrl+R+left-click to another action, the \"enable/disable module\" fallback would be ignored.\n"
+#~ msgstr "Las alternativas solo se aplican si no se ha creado explícitamente ningún otro atajo que use esa combinación. En el ejemplo anterior, si tuviera que asignar explícitamente Ctrl+R+clic izquierdo a otra acción, se ignoraría la alternativa de \"habilitar/deshabilitar módulo\".\n"
+
+#, fuzzy, no-wrap
+#~| msgid "As with any other shortcut, fallback settings are fully customizable. \n"
+#~ msgid "As with any other shortcut, fallback settings are fully customizable.\n"
+#~ msgstr "Al igual que con cualquier otro atajo, la configuración de alternativas es totalmente personalizable. \n"
 
 #, no-wrap
 #~ msgid "overview"

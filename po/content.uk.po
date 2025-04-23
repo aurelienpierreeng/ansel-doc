@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-04-23 00:20+0200\n"
+"POT-Creation-Date: 2025-04-23 16:30+0200\n"
 "PO-Revision-Date: 2022-09-16 23:00+0000\n"
 "Last-Translator: Victor Forsiuk <vvforce@gmail.com>\n"
 "Language-Team: Ukrainian <https://weblate.pixls.us/projects/darktable/dtdocs/uk/>\n"
@@ -1166,7 +1166,7 @@ msgstr "У наступному розділі наведено докладні
 
 #. type: Title ##
 #: content/views/_index.md content/special-topics/from-darktable.md
-#: content/overview/user-interface.md
+#: content/preferences-settings/shortcuts.md content/overview/user-interface.md
 #, fuzzy, no-wrap
 #| msgid "views"
 msgid "Views"
@@ -3280,9 +3280,8 @@ msgstr "Наприклад, модулі, застарілі в darktable 3.4, �
 msgid "This section describes how to interact with processing module controls.\n"
 msgstr "У цьому розділі описано, як взаємодіяти з елементами керування модулем обробки.\n"
 
-#. type: Title ###
+#. type: Title ##
 #: content/views/darkroom/processing-modules/module-controls.md
-#: content/preferences-settings/shortcuts.md
 #, no-wrap
 msgid "sliders"
 msgstr "повзунки"
@@ -3443,7 +3442,6 @@ msgstr "Параметри модуля також можна регулюват
 
 #. type: Title ###
 #: content/views/darkroom/processing-modules/_index.md
-#: content/preferences-settings/shortcuts.md
 #: content/modules/processing-modules/_index.md content/modules/_index.md
 #, no-wrap
 msgid "processing modules"
@@ -9234,177 +9232,112 @@ msgstr "клавіатурні прискорювачі"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "You can perform almost any action in darktable with a keyboard/mouse shortcut. You can also use various other input devices, including MIDI devices and game controllers -- see the [midi device support](../special-topics/midi-device-support.md) section for details. These are referred to as _external devices_ or just _devices_ in this guide.\n"
-msgid "You can perform almost any action in Ansel with a keyboard/mouse shortcut. You can also use various other input devices, including MIDI devices and game controllers -- see the [midi device support](../special-topics/midi-device-support.md) section for details. These are referred to as _external devices_ or just _devices_ in this guide.\n"
-msgstr "За допомогою комбінації клавіш на клавіатурі/миші ви можете виконувати майже будь-які дії в darktable. Ви також можете використовувати різні інші пристрої введення, включаючи MIDI-пристрої та ігрові контролери -- дивіться розділ [підтримка пристроїв MIDI](../special-topics/midi-device-support.md) для отримання детальної інформації. У цьому посібнику вони називаються _зовнішніми пристроями_ або просто _пристроями_.\n"
+#, no-wrap
+msgid "Some actions in Ansel can be performed with a keyboard shortcut. A table of key shortcuts is available in _Help > Table of key shortcuts_. \n"
+msgstr ""
+
+#. type: Plain text
+#: content/preferences-settings/shortcuts.md
+#, no-wrap
+msgid "**Note:** The table shows different key shortcuts for different Views.\n"
+msgstr ""
 
 #. type: Title ##
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "defining shortcuts"
+#, fuzzy, no-wrap
+#| msgid "defining shortcuts"
+msgid "Assigning key shortcuts"
 msgstr "визначення прискорювачів"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "A _shortcut_ is a combination of key or button presses and/or mouse or device movements that performs an _action_ in darktable.\n"
-msgid "A _shortcut_ is a combination of key or button presses and/or mouse or device movements that performs an _action_ in Ansel.\n"
-msgstr "_Прискорювач_ -- це комбінація натискань клавіш або кнопок та/або рухів миші чи пристрою, що виконує _дію_ в darktable.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "A single action may have multiple shortcuts but a single shortcut can only be linked to one action in a given darktable view -- you can't chain actions together except by applying a preset or style. You can, however, set up a single shortcut that does one thing in the lighttable view, say, and another in the darkroom view.\n"
-msgid "A single action may have multiple shortcuts but a single shortcut can only be linked to one action in a given Ansel view -- you can't chain actions together except by applying a preset or style. You can, however, set up a single shortcut that does one thing in the lighttable view, say, and another in the darkroom view.\n"
-msgstr "Одна дія може мати кілька прискорювачів, але один прискорювач може бути пов’язаний лише з однією дією в заданому режимі darktable -- ви не можете з’єднати дії разом, окрім як застосувавши пресет або стиль. Однак ви можете налаштувати прискорювач, який виконує одну дію в режимі світлого столу, скажімо, і іншу в режимі темної кімнати.\n"
+#, no-wrap
+msgid "For the time being shortcuts can only be defined or changed by editing your `$HOME/.config/Ansel/shortcutsrc` file. There is no support for MIDI-devices in Ansel.\n"
+msgstr ""
 
 #. type: Title ###
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "initiating a shortcut"
-msgstr "ініціювання прискорювача"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A shortcut must be initiated by either\n"
-msgstr "Прискорювач має бути ініційований або\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "pressing a key on the keyboard; or\n"
-msgstr "натисканням клавіші на клавіатурі; або\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
-#| msgid "pressing a button or moving a knob/joystick on an external device \n"
-msgid "pressing a button or moving a knob/joystick on an external device\n"
-msgstr "натисканням кнопки або переміщенням ручки/джойстика на зовнішньому пристрої \n"
+#| msgid "deleting default shortcuts"
+msgid "Deleting default shortcuts"
+msgstr "видалення прискорювачів за замовчуванням"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
-#| msgid "You cannot initiate a shortcut by moving your mouse or pressing one of its buttons, as these actions are used to interact with darktable's UI.\n"
-msgid "You cannot initiate a shortcut by moving your mouse or pressing one of its buttons, as these actions are used to interact with Ansel's UI.\n"
-msgstr "Ви не можете ініціювати прискорювач, переміщуючи мишу або натискаючи одну з її кнопок, оскільки ці дії використовуються для взаємодії з інтерфейсом darktable.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "simple shortcuts"
-msgstr "прості прискорювачі"
+#| msgid "When launching the application, darktable loads default shortcuts first, and then loads user-defined shortcuts on top. This allows default shortcuts to be overridden with a new action but prevents them from being deleted (since the deleted shortcut will be automatically reloaded on the next restart). \n"
+msgid "When launching the application, Ansel loads default shortcuts first, and then loads user-defined shortcuts on top. This allows default shortcuts to be overridden with a new action but prevents them from being deleted (since the deleted shortcut will be automatically reloaded on the next restart).\n"
+msgstr "Під час запуску програми darktable спочатку завантажує прискорювачі за замовчуванням, а потім зверху завантажує визначені користувачем прискорювачі. Це дозволяє замінити прискорювачі за замовчуванням новою дією, але запобігає їх видаленню (оскільки видалений прискорювач буде автоматично перезавантажено під час наступного перезапуску). \n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "A shortcut that only includes button and/or key presses (and not mouse/device movements) is referred to as a _simple_ shortcut.\n"
-msgstr "Прискорювач, який включає лише натискання кнопок та/або клавіш (а не рухи миші/пристрою), називається _простим_ прискорювачем.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A simple shortcut must be initiated as above, but can include:\n"
-msgstr "Простий прискорювач потрібно ініціювати, як описано вище, але він може включати:\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "One or more modifier keys (Shift, Ctrl, Alt), held down while executing the remainder of the shortcut\n"
-msgstr "Одну або кілька клавіш-модифікаторів (Shift, Ctrl, Alt), що утримуються під час виконання решти прискорювача\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Up to three key presses, the last one of which may be a long-press (defined as a key-press longer than your system's double-click duration)\n"
-msgstr "До трьох натискань клавіш, останнє з яких може бути тривалим (визначається як натискання клавіші довше, ніж тривалість подвійного натискання вашої системи)\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Similarly, up to three device-button presses or mouse-button clicks, the last of which may be long\n"
-msgstr "Аналогічно, до трьох натискань кнопки пристрою або кнопки миші, останнє з яких може бути тривалим\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Various combinations of keyboard, mouse, and device buttons can be used to create simple shortcuts.\n"
-msgstr "Для створення простих прискорювачів можна використовувати різні комбінації кнопок клавіатури, миші та пристрою.\n"
+msgid "There are two ways to delete default shortcuts:\n"
+msgstr "Є два способи видалити прискорювачі за замовчуванням:\n"
 
 #. type: Title ####
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "creating additional modifiers"
-msgstr "створення додаткових модифікаторів"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The only valid modifiers are the Shift, Ctrl and Alt keys on the keyboard. You can define additional keys (or device buttons) as modifiers by assigning keys/buttons to the \"global/modifier\" action. However, these will merely function as extra Ctrl, Alt or Shift keys -- you cannot create \"new\" modifiers.\n"
-msgstr "Єдиними дійсними модифікаторами є клавіші Shift, Ctrl і Alt на клавіатурі. Ви можете визначити додаткові клавіші (або кнопки пристрою) як модифікатори, призначивши клавіші/кнопки на дію \"глобальний/модифікатор\". Однак вони функціонуватимуть лише як додаткові клавіші Ctrl, Alt або Shift -- ви не можете створювати \"нові\" модифікатори.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "extending simple shortcuts with movement"
-msgstr "розширення простих прискорювачів за допомогою руху"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "For certain actions you can choose to _extend_ a simple shortcut using mouse/device movement. For example you might hold Ctrl+X while scrolling with your mouse to change the value of a slider. The following can be used to extend a simple shortcut:\n"
-msgstr "Для певних дій ви можете _розширити_ простий прискорювач за допомогою руху миші/пристрою. Наприклад, ви можете утримувати Ctrl+X під час прокручування мишею, щоб змінити значення повзунка. Для розширення простого прискорювача можна використовувати наступне:\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Movement of the mouse scroll wheel\n"
-msgstr "Рух коліщатка прокрутки миші\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Horizontal, vertical or diagonal movement of the mouse cursor\n"
-msgstr "Горизонтальне, вертикальне або діагональне переміщення курсору миші\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Movement of a knob/joystick on an external device\n"
-msgstr "Рух ручки/джойстика на зовнішньому пристрої\n"
+#, fuzzy, no-wrap
+#| msgid "prevent default shortcuts from being reloaded"
+msgid "Prevent default shortcuts from being reloaded"
+msgstr "запобігти перезавантаженню прискорювачів за замовчуванням"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
-#| msgid "To extend a simple shortcut, you must hold the final key/button of the simple shortcut while performing the extending mouse/device movement. \n"
-msgid "To extend a simple shortcut, you must hold the final key/button of the simple shortcut while performing the extending mouse/device movement.\n"
-msgstr "Щоб розширити простий прискорювач, ви повинні утримувати останню клавішу/кнопку простого прискорювача під час виконання розширювального руху миші/пристрою. \n"
+#| msgid "Disable [preferences > miscellaneous > interface > load default shortcuts at startup](./miscellaneous.md) to prevent default shortcuts from being reloaded. While this option is disabled, darktable will only load user-defined shortcuts and any defaults that you have not subsequently deleted or overridden.\n"
+msgid "Disable [Preferences > Miscellaneous > Interface > Load default shortcuts at startup](./miscellaneous.md) to prevent default shortcuts from being reloaded. While this option is disabled, Ansel will only load user-defined shortcuts and any defaults that you have not subsequently deleted or overridden.\n"
+msgstr "Вимкніть [налаштування > різне > інтерфейс > завантажувати стандартні прискорювачі під час запуску](./miscellaneous.md), щоб запобігти перезавантаженню стандартних прискорювачів. Доки цей параметр вимкнено, darktable завантажуватиме лише визначені користувачем прискорювачі та будь-які стандартні, які ви згодом не видалили чи не замінили.\n"
+
+#. type: Title ####
+#: content/preferences-settings/shortcuts.md
+#, fuzzy, no-wrap
+#| msgid "override default shortcut with a no-op action"
+msgid "Override default shortcut with a no-op action"
+msgstr "заміна стандартного прискорювача на дію, яка нічого не робить"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
+#, fuzzy, no-wrap
+#| msgid "You can _override_ the action of a default shortcut by assigning an identical shortcut to the \"global/no-op\" action (which does nothing). You can do this either in the shortcut mapping screen (above) or by directly editing your `$HOME/.config/darktable/shortcutsrc` file. If you want to disable a lot of default shortcuts the latter option is recommended (you must exit darktable first). For example, the following default shortcuts are defined in `shortcutsrc` for switching views in darktable:\n"
+msgid "You can _override_ the action of a default shortcut by assigning an identical shortcut to the \"global/no-op\" action (which does nothing). You can do this by directly editing your `$HOME/.config/Ansel/shortcutsrc` file (you must exit Ansel first). For example, the following default shortcuts are defined in `shortcutsrc` for switching views in Ansel:\n"
+msgstr "Ви можете _замінити_ дію прискорювача за замовчуванням, призначивши прискорювач, якого ви хочете позбутися, дії \"global/no-op\" (яка нічого не робить). Ви можете зробити це або на екрані зіставлення прискорювачів (вгорі), або безпосередньо відредагувавши файл `$HOME/.config/darktable/shortcutsrc`. Якщо ви хочете вимкнути багато прискорювачів за замовчуванням, рекомендується другий варіант (спочатку потрібно вийти з darktable). Наприклад, такі прискорювачі за замовчуванням визначені в `shortcutsrc` для перемикання режимів darktable:\n"
+
+#. type: Fenced code block
+#: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "For external devices you do not need to start with a _simple_ shortcut -- you can directly assign a control knob or joystick to an action -- though this will significantly reduce the flexibility of such devices.\n"
-msgstr "Для зовнішніх пристроїв вам не потрібно починати з _простого_ прискорювача -- ви можете безпосередньо призначити ручку керування або джойстик дії -- хоча це значно зменшить гнучкість таких пристроїв.\n"
+msgid ""
+"Return=global/switch views/darkroom\n"
+"Escape=global/Ateliers/Lighttable\n"
+msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Long button and key presses cannot be extended, as the length of the click/press is timed using the release of the final button/key -- such shortcuts must be terminated with the raising of the final button/key.\n"
-msgstr "Тривале натискання кнопок і клавіш не може бути розширено, оскільки тривалість кліку/натискання фіксується за допомогою відпускання останньої кнопки/клавіші -- такі прискорювачі повинні бути припинені з підняттям останньої кнопки/клавіші.\n"
+#, fuzzy, no-wrap
+#| msgid "You can disable all of these shortcuts by changing `shortcutsrc` as follows:\n"
+msgid "You could disable these shortcuts by changing `shortcutsrc` as follows:\n"
+msgstr "Ви можете вимкнути всі ці прискорювачі, змінивши `shortcutsrc` таким чином:\n"
 
-#. type: Plain text
+#. type: Fenced code block
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "**Note:** You may need to switch off the \"disable touchpad while typing\" setting if you want to use extended shortcuts with a laptop touchpad.\n"
-msgstr "**Примітка:** Якщо ви хочете використовувати розширені прискорювачі з тачпадом ноутбука, вам може знадобитися вимкнути налаштування \"вимкнути тачпад під час введення\".\n"
+msgid ""
+"Return=global/no-op\n"
+"Escape=global/no-op\n"
+msgstr ""
 
 #. type: Title ##
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "actions"
+#, fuzzy, no-wrap
+#| msgid "actions"
+msgid "Actions"
 msgstr "дії"
+
+#. type: Plain text
+#: content/preferences-settings/shortcuts.md
+#, no-wrap
+msgid "**Note:** The following two section were used to explain the deprecated shortcut mapping screen and are left here for future reference or development.\n"
+msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9463,7 +9396,7 @@ msgstr "Такий тип _дій_ (навести та клікнути), як 
 #| "widget\n"
 #| ": Each visible part of the user interface is known as a _widget_. For example the darktable application window is a widget, containing side panel widgets, each of which contains module widgets, each of which contains button, slider and dropdown list widgets etc... When assigning a shortcut to an action, you must first decide which widget it is to be applied to.\n"
 msgid ""
-"widget\n"
+"Widget\n"
 ": Each visible part of the user interface is known as a _widget_. For example the Ansel application window is a widget, containing side panel widgets, each of which contains module widgets, each of which contains button, slider and dropdown list widgets etc... When assigning a shortcut to an action, you must first decide which widget it is to be applied to.\n"
 msgstr ""
 "віджет\n"
@@ -9471,9 +9404,12 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "element\n"
+#| ": An _element_ is the part of a UI widget that is affected by your shortcut. For example, for a slider that has a color picker, you can make a shortcut activate the color picker _button_ element or change the _value_ element of the slider. For a row of tabs (the row is a single widget) you can select which tab element to activate or use your mouse scroll wheel to scroll through the tabs.\n"
 msgid ""
-"element\n"
+"Element\n"
 ": An _element_ is the part of a UI widget that is affected by your shortcut. For example, for a slider that has a color picker, you can make a shortcut activate the color picker _button_ element or change the _value_ element of the slider. For a row of tabs (the row is a single widget) you can select which tab element to activate or use your mouse scroll wheel to scroll through the tabs.\n"
 msgstr ""
 "елемент\n"
@@ -9481,9 +9417,12 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "effect\n"
+#| ": A shortcut can sometimes have multiple possible _effects_ on a given _element_. For example, a button can be activated as if it was pressed with a plain mouse-click or as if it was pressed with Ctrl+click. A slider's value can be edited, increased/decreased or reset.\n"
 msgid ""
-"effect\n"
+"Effect\n"
 ": A shortcut can sometimes have multiple possible _effects_ on a given _element_. For example, a button can be activated as if it was pressed with a plain mouse-click or as if it was pressed with Ctrl+click. A slider's value can be edited, increased/decreased or reset.\n"
 msgstr ""
 "ефект\n"
@@ -9491,294 +9430,30 @@ msgstr ""
 
 #. type: Title ##
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "assigning shortcuts to actions"
-msgstr "призначення прискорювачів для дій"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "There are two primary methods of assigning a shortcut to an action.\n"
-msgstr "Існує два основних способи призначення прискорювача дії.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "visual shortcut mapping"
-msgstr "візуальне зіставлення прискорювачів"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
-#| msgid "Click on the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon in the [top panel](../overview/user-interface/top-panel.md) of any darktable view to enter visual shortcut mapping mode. If you hold Ctrl while clicking the button, no confirmation will appear when overwriting an existing shortcut mapping.\n"
-msgid "Click on the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon in the [top panel](../overview/user-interface/top-panel.md) of any Ansel view to enter visual shortcut mapping mode. If you hold Ctrl while clicking the button, no confirmation will appear when overwriting an existing shortcut mapping.\n"
-msgstr "Натисніть на значок ![кнопка візуального зіставлення](./shortcuts/visual-mapping-button.png#icon) на [верхній панелі](../overview/user-interface/top-panel.md) будь-якого режиму darktable, щоб увійти в режим візуального зіставлення прискорювачів. Якщо ви утримуєте Ctrl під час натискання цієї кнопки, запиту на підтвердження не буде під час перезапису наявного зіставлення прискорювачів.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The mouse cursor will change as you hover over UI widgets, to indicate whether or not a mapping can be created:\n"
-msgstr "Курсор миші змінюватиметься під час наведення курсора на віджети інтерфейсу користувача, щоб вказати, чи можна створити зіставлення:\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A down arrow with a line ![expand icon](./shortcuts/expand-icon.png#icon) appears when you hover over a module header, to indicate that you can click to expand the module.\n"
-msgstr "Стрілка вниз із лінією ![expand icon](./shortcuts/expand-icon.png#icon) з’являється, коли ви наводите курсор на заголовок модуля, щоб вказати, що ви можете клікнути, щоб розгорнути модуль.\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "A spiral ![spiral icon](./shortcuts/spiral-icon.png#icon) indicates that a shortcut can be defined for the widget under the cursor. \n"
-msgid "A spiral ![spiral icon](./shortcuts/spiral-icon.png#icon) indicates that a shortcut can be defined for the widget under the cursor.\n"
-msgstr "Спіраль ![spiral icon](./shortcuts/spiral-icon.png#icon) вказує, що прискорювач можна визначити для віджета під курсором. \n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "An up arrow ![up icon](./shortcuts/up-icon.png#icon) indicates that, in addition to assigning a shortcut, you can also add the widget to the [quick access panel](../darkroom/organization/quick-access-panel.md) in the darkroom (by Ctrl+clicking on it).\n"
-msgid "An up arrow ![up icon](./shortcuts/up-icon.png#icon) indicates that, in addition to assigning a shortcut, you can also add the widget to the [quick access panel](../views/darkroom/organization/quick-access-panel.md) in the darkroom (by Ctrl+clicking on it).\n"
-msgstr "Стрілка вгору ![up icon](./shortcuts/up-icon.png#icon) вказує, що, крім призначення прискорювача, ви також можете додати віджет до [панелі швидкого доступу](../darkroom/organization/quick-access-panel.md) у темній кімнаті (за допомогою кліку по ньому з утриманням Ctrl).\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A down arrow ![down icon](./shortcuts/down-icon.png#icon) indicates that the widget is already in the quick access panel (Ctrl+click to remove it).\n"
-msgstr "Стрілка вниз ![down icon](./shortcuts/down-icon.png#icon) вказує, що віджет уже знаходиться на панелі швидкого доступу (клікніть з утриманням Ctrl, щоб видалити його).\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "A cross ![cross icon](./shortcuts/cross-icon.png#icon) indicates that there is no mappable widget under the cursor. \n"
-msgid "A cross ![cross icon](./shortcuts/cross-icon.png#icon) indicates that there is no mappable widget under the cursor.\n"
-msgstr "Хрестик ![cross icon](./shortcuts/cross-icon.png#icon) вказує, що під курсором немає віджета, який можна зіставити. \n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "Press a key combination while hovering over a mappable widget to assign a shortcut to that widget -- a default action will be assigned to that shortcut based on the type of widget and whether you have keyed a _simple_ or _extended_ shortcut.  See below for details of some of the default assigned actions. \n"
-msgid "Press a key combination while hovering over a mappable widget to assign a shortcut to that widget -- a default action will be assigned to that shortcut based on the type of widget and whether you have keyed a _simple_ or _extended_ shortcut.  See below for details of some of the default assigned actions.\n"
-msgstr "Натисніть комбінацію клавіш, наводячи курсор на віджет, який можна зіставити, щоб призначити прискорювач цьому віджету -- дія за замовчуванням буде призначена цьому прискорювачу на основі типу віджета та того, набрали ви _простий_ чи _розширений_ прискорювач. Нижче наведено деталі деяких дій, призначених за замовчуванням. \n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Left-click on a mappable widget to open the shortcut mapping screen for that widget (see below). Left-click anywhere else on the screen to open the shortcut mapping screen, expanded (where possible) based on the part of the screen you have clicked on. This screen can be used to alter the action assigned to a shortcut and to configure shortcuts for non-visual actions. Entering the shortcut mapping screen exits visual shortcut mapping mode.\n"
-msgstr "Клікніть лівою кнопкою миші віджет, який можна зіставити, щоб відкрити екран зіставлення прискорювачів для цього віджета (див. нижче). Клікніть лівою кнопкою миші будь-де на екрані, щоб відкрити екран зіставлення прискорювачів, розгорнутий (де це можливо) відповідно до частини екрана, яку ви клікнули. Цей екран можна використовувати для зміни дії, призначеної для прискорювача, і для налаштування прискорювачів для невізуальних дій. Перехід на екран зіставлення прискорювачів приводить до виходу з режиму візуального зіставлення прискорювачів.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can assign as many shortcuts as you like in a single mapping session and then exit mapping mode when you are finished by clicking the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon again or right-clicking anywhere on the screen.\n"
-msgstr "Ви можете призначити скільки завгодно прискорювачів в одному сеансі зіставлення, а потім вийти з режиму зіставлення знову натиснувши значок ![кнопка візуального зіставлення](./shortcuts/visual-mapping-button.png#icon) або клікнувши правою кнопкою миші в будь-якому місці екрана.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can delete a user-defined shortcut mapping by defining it a second time against the same widget. If you attempt to reallocate an existing shortcut to a new action, you will be notified of the conflict and asked whether you wish to replace the existing shortcut.\n"
-msgstr "Ви можете видалити зіставлення визначеного користувачем прискорювача, визначивши його вдруге для того самого віджета. Якщо ви спробуєте перепризначити існуючий прискорювач для нової дії, ви отримаєте сповіщення про конфлікт і запит, чи бажаєте замінити наявний прискорювач.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Finally, if you scroll with your mouse wheel while in visual mapping mode (without pressing any other buttons/keys) when hovering over a slider, this will change the default speed for that slider -- scroll up to increase and down to decrease. When you leave mapping mode, normal mouse scrolls over that slider will change its value with the adjusted speed.\n"
-msgstr "Нарешті, якщо ви прокручуєте коліщатко миші в режимі візуального зіставлення (без натискання будь-яких інших кнопок/клавіш) під час наведення курсора на повзунок, це змінить швидкість за замовчуванням для цього повзунка -- прокручуйте вгору, щоб збільшити, і вниз, щоб зменшити. Коли ви виходите з режиму зіставлення, звичайне прокручування миші над цим повзунком змінюватиме його значення з налаштованою швидкістю.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "shortcut mapping screen"
-msgstr "екран зіставлення прискорювачів"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The most flexible way to create shortcuts is by using the shortcut mapping screen, which can be accessed from the global preferences dialog or by left-clicking in visual mapping mode. This screen allows access to all available actions, including some that are not directly linked to a UI widget.\n"
-msgstr "Найгнучкішим способом створення прискорювачів є використання екрана зіставлення прискорювачів, доступ до якого можна отримати з діалогового вікна глобальних налаштувань або клікнувши лівою кнопкою миші в режимі візуального зіставлення. Цей екран надає доступ до всіх доступних дій, включаючи деякі, які не пов’язані безпосередньо з віджетом інтерфейсу користувача.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The top panel of the shortcut mapping screen shows a list of available UI widgets/actions and the bottom panel shows the shortcuts currently assigned to them. You can search the top and bottom panels using the text entry boxes at the bottom of the screen (use the up/down arrow keys to navigate between matches).\n"
-msgstr "Верхня панель екрана зіставлення прискорювачів показує список доступних віджетів/дій інтерфейсу користувача, а нижня панель показує прискорювачі, призначені їм наразі. Ви можете здійснювати пошук у верхній і нижній панелях за допомогою текстових полів у нижній частині екрана (використовуйте клавіші зі стрілками вгору/вниз для переходу між знайденими збігами).\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Double-click an item in the top panel to create a new shortcut for that item, and then enter your desired shortcut (right-click to cancel). Once you have done this, a new entry will appear in the bottom panel showing the shortcut you have created. You can then manually alter the _element_, _effect_, _speed_ or _instance_ of the assigned action against that shortcut in the bottom panel. To delete a user-defined shortcut, select it in the bottom panel and press the Delete key.\n"
-msgstr "Двічі клікніть елемент на верхній панелі, щоб створити новий прискорювач для цього елемента, а потім введіть потрібний прискорювач (клікніть правою кнопкою миші, щоб скасувати). Після цього на нижній панелі з’явиться новий запис із створеним вами прискорювачем. Потім ви можете вручну змінити _елемент_, _ефект_, _швидкість_ або _примірник_ призначеної для цього прискорювача дії на нижній панелі. Щоб видалити визначений користувачем прискорювач, виберіть його на нижній панелі та натисніть клавішу Delete.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Selecting an existing shortcut in the bottom panel will highlight (in bold) the matching action and its parents in the top panel. You can use this to navigate the top panel and find related actions.\n"
-msgstr "Якщо вибрати наявний прискорювач на нижній панелі, буде виділено (жирним шрифтом) відповідну дію та її батьків на верхній панелі. Ви можете використовувати це для навігації по верхній панелі та пошуку пов’язаних дій.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The following additional options are provided in the shortcut mapping screen:\n"
-msgstr "На екрані зіставлення прискорювачів надаються такі додаткові параметри:\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid ""
-"export...\n"
-": Export the current shortcut mappings for one or all of your devices (keyboard/mouse, midi, game controller) to an external file. The dialog will show you how many shortcuts exist for each device.\n"
-msgstr ""
-"експортувати...\n"
-": Експортувати поточні прискорювачі для одного або всіх ваших пристроїв (клавіатури/миші, MIDI, ігрового контролера) у зовнішній файл. У діалоговому вікні буде показано, скільки прискорювачів існує для кожного пристрою.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "import...\n"
-#| ": Import shortcut mappings from an external file for one or all of your devices. When loading a device, you can chose to assign it a different number. This can for example be used to exchange midi layouts. Before loading, you can chose to wipe the specific device first. When loading all from an empty file, this will effectively delete all your shortcuts. \n"
-msgid ""
-"import...\n"
-": Import shortcut mappings from an external file for one or all of your devices. When loading a device, you can chose to assign it a different number. This can for example be used to exchange midi layouts. Before loading, you can chose to wipe the specific device first. When loading all from an empty file, this will effectively delete all your shortcuts.\n"
-msgstr ""
-"імпортувати...\n"
-": Імпортувати зіставлення прискорювачів із зовнішнього файлу для одного або всіх ваших пристроїв. Під час завантаження пристрою ви можете призначити йому інший номер. Це можна, наприклад, використовувати для обміну розкладками MIDI. Перед завантаженням ви можете спочатку стерти певний пристрій. Завантаження всіх пристроїв з порожнього файлу видалить усі ваші прискорювачі. \n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "restore...\n"
-#| ": Restore your shortcut mappings to (a) The mappings shipped with darktable by default, (b) The start of your current session, or (c) The point at which the shortcut mapping screen was last opened. When restoring, you can choose to leave any additional shortcuts that were added after the relevant checkpoint as they are, so that only changed shortcuts are restored to their previous meaning. Or you can choose to first clear all shortcuts and just load the restore point.\n"
-msgid ""
-"restore...\n"
-": Restore your shortcut mappings to (a) The mappings shipped with Ansel by default, (b) The start of your current session, or (c) The point at which the shortcut mapping screen was last opened. When restoring, you can choose to leave any additional shortcuts that were added after the relevant checkpoint as they are, so that only changed shortcuts are restored to their previous meaning. Or you can choose to first clear all shortcuts and just load the restore point.\n"
-msgstr ""
-"відновити...\n"
-": Відновити зіставлення прискорювачів до (a) зіставлень, що поставляються з darktable за замовчуванням, (b) початку поточного сеансу або (c) точки, в якій востаннє відкривався екран зіставлення прискорювачів. Під час відновлення ви можете залишити як вони є будь-які додаткові прискорювачі, які були додані після відповідної контрольної точки, так що лише змінені прискорювачі відновлюються до їхнього попереднього значення. Або ви можете спочатку очистити всі прискорювачі та просто завантажити точку відновлення.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "deleting default shortcuts"
-msgstr "видалення прискорювачів за замовчуванням"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "When launching the application, darktable loads default shortcuts first, and then loads user-defined shortcuts on top. This allows default shortcuts to be overridden with a new action but prevents them from being deleted (since the deleted shortcut will be automatically reloaded on the next restart). \n"
-msgid "When launching the application, Ansel loads default shortcuts first, and then loads user-defined shortcuts on top. This allows default shortcuts to be overridden with a new action but prevents them from being deleted (since the deleted shortcut will be automatically reloaded on the next restart).\n"
-msgstr "Під час запуску програми darktable спочатку завантажує прискорювачі за замовчуванням, а потім зверху завантажує визначені користувачем прискорювачі. Це дозволяє замінити прискорювачі за замовчуванням новою дією, але запобігає їх видаленню (оскільки видалений прискорювач буде автоматично перезавантажено під час наступного перезапуску). \n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "There are two ways to delete default shortcuts:\n"
-msgstr "Є два способи видалити прискорювачі за замовчуванням:\n"
-
-#. type: Title ####
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "prevent default shortcuts from being reloaded"
-msgstr "запобігти перезавантаженню прискорювачів за замовчуванням"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "Disable [preferences > miscellaneous > interface > load default shortcuts at startup](./miscellaneous.md) to prevent default shortcuts from being reloaded. While this option is disabled, darktable will only load user-defined shortcuts and any defaults that you have not subsequently deleted or overridden.\n"
-msgid "Disable [preferences > miscellaneous > interface > load default shortcuts at startup](./miscellaneous.md) to prevent default shortcuts from being reloaded. While this option is disabled, Ansel will only load user-defined shortcuts and any defaults that you have not subsequently deleted or overridden.\n"
-msgstr "Вимкніть [налаштування > різне > інтерфейс > завантажувати стандартні прискорювачі під час запуску](./miscellaneous.md), щоб запобігти перезавантаженню стандартних прискорювачів. Доки цей параметр вимкнено, darktable завантажуватиме лише визначені користувачем прискорювачі та будь-які стандартні, які ви згодом не видалили чи не замінили.\n"
-
-#. type: Title ####
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "override default shortcut with a no-op action"
-msgstr "заміна стандартного прискорювача на дію, яка нічого не робить"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "You can _override_ the action of a default shortcut by assigning an identical shortcut to the \"global/no-op\" action (which does nothing). You can do this either in the shortcut mapping screen (above) or by directly editing your `$HOME/.config/darktable/shortcutsrc` file. If you want to disable a lot of default shortcuts the latter option is recommended (you must exit darktable first). For example, the following default shortcuts are defined in `shortcutsrc` for switching views in darktable:\n"
-msgid "You can _override_ the action of a default shortcut by assigning an identical shortcut to the \"global/no-op\" action (which does nothing). You can do this either in the shortcut mapping screen (above) or by directly editing your `$HOME/.config/Ansel/shortcutsrc` file. If you want to disable a lot of default shortcuts the latter option is recommended (you must exit Ansel first). For example, the following default shortcuts are defined in `shortcutsrc` for switching views in Ansel:\n"
-msgstr "Ви можете _замінити_ дію прискорювача за замовчуванням, призначивши прискорювач, якого ви хочете позбутися, дії \"global/no-op\" (яка нічого не робить). Ви можете зробити це або на екрані зіставлення прискорювачів (вгорі), або безпосередньо відредагувавши файл `$HOME/.config/darktable/shortcutsrc`. Якщо ви хочете вимкнути багато прискорювачів за замовчуванням, рекомендується другий варіант (спочатку потрібно вийти з darktable). Наприклад, такі прискорювачі за замовчуванням визначені в `shortcutsrc` для перемикання режимів darktable:\n"
-
-#. type: Fenced code block
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid ""
-"d=global/switch views/darkroom\n"
-"l=global/switch views/lighttable\n"
-"m=global/switch views/map\n"
-"p=global/switch views/print\n"
-"s=global/switch views/slideshow\n"
-"t=global/switch views/tethering\n"
-msgstr ""
-"d=global/switch views/darkroom\n"
-"l=global/switch views/lighttable\n"
-"m=global/switch views/map\n"
-"p=global/switch views/print\n"
-"s=global/switch views/slideshow\n"
-"t=global/switch views/tethering\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can disable all of these shortcuts by changing `shortcutsrc` as follows:\n"
-msgstr "Ви можете вимкнути всі ці прискорювачі, змінивши `shortcutsrc` таким чином:\n"
-
-#. type: Fenced code block
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid ""
-"d=global/no-op\n"
-"l=global/no-op\n"
-"m=global/no-op\n"
-"p=global/no-op\n"
-"s=global/no-op\n"
-"t=global/no-op\n"
-msgstr ""
-"d=global/no-op\n"
-"l=global/no-op\n"
-"m=global/no-op\n"
-"p=global/no-op\n"
-"s=global/no-op\n"
-"t=global/no-op\n"
-
-#. type: Title ##
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "common actions"
+#| msgid "common actions"
+msgid "Common actions"
 msgstr "загальні дії"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "The following is a list of some of the actions to which you can assign shortcuts, organized by widget type. This is not an exhaustive list and you are encouraged to browse the shortcut mapping screen for a complete list of available actions. If you assign a shortcut to a widget, it will be given a default action, depending on the type of widget and on whether you have assigned a simple or extended shortcut.\n"
-msgstr "Нижче наведено список деяких дій, яким можна призначити прискорювачі, упорядкований за типом віджета. Це не вичерпний список, і вам пропонується переглянути екран зіставлення прискорювачів, щоб отримати повний список доступних дій. Якщо ви призначите прискорювач віджету, йому буде надано дію за замовчуванням, залежно від типу віджета та від того, чи призначили ви простий чи розширений прискорювач.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Note that it is possible to assign a number of actions that have no effect. For example, all sliders include a _button_ element, regardless of whether such a button is actually present alongside a given slider.\n"
-msgstr "Зверніть увагу, що можна призначити ряд дій, які не мають ефекту. Наприклад, усі повзунки містять елемент _кнопка_, незалежно від того, чи дійсно така кнопка є поруч із даним повзунком.\n"
+msgid "The following is a list of some of the actions to which you can assign shortcuts, organized by widget type. \n"
+msgstr ""
 
 #. type: Title ###
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "global"
+#, fuzzy, no-wrap
+#| msgid "global"
+msgid "Global"
 msgstr "глобально"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
 #| msgid "Actions in the \"global\" section of the shortcut mapping screen can be executed from any darktable view. Most of these actions do not have specific _elements_ as they are used to perform one-off operations.\n"
-msgid "Actions in the \"global\" section of the shortcut mapping screen can be executed from any Ansel view. Most of these actions do not have specific _elements_ as they are used to perform one-off operations.\n"
+msgid "Actions in the \"global\" section can be executed from any Ansel view. Most of these actions do not have specific _elements_ as they are used to perform one-off operations.\n"
 msgstr "Дії в розділі \"глобально\" екрана зіставлення прискорювачів можна виконувати з будь-якого режиму darktable. Більшість із цих дій не мають конкретних _елементів_, оскільки вони використовуються для виконання одноразових операцій.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "views"
-msgstr "режими"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9791,33 +9466,35 @@ msgstr "Дії в розділі \"режими\" можуть виконува�
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
 #| msgid "buttons "
-msgid "buttons"
+msgid "Buttons"
 msgstr "кнопки "
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
 #| msgid "A button is a clickable icon in the darktable interface. The default action, when assigning a simple shortcut to a _button_, is to activate that button as if clicked with the left mouse button. You can modify this action to activate the button as if clicked while holding a modifier key.\n"
-msgid "A button is a clickable icon in the Ansel interface. The default action, when assigning a simple shortcut to a _button_, is to activate that button as if clicked with the left mouse button. You can modify this action to activate the button as if clicked while holding a modifier key.\n"
+msgid "A button is a clickable icon in the Ansel interface. The default action, when assigning shortcut to a _button_, is to activate that button as if clicked with the left mouse button. You can modify this action to activate the button as if clicked while holding a modifier key.\n"
 msgstr "Кнопка -- це значок, який можна натиснути в інтерфейсі darktable. Дія за замовчуванням, коли призначається простий прискорювач для _кнопки_, полягає в тому, щоб активувати цю кнопку так, ніби її клікнули лівою кнопкою миші. Ви можете змінити цю дію, щоб активувати кнопку так, ніби її натиснули, утримуючи клавішу-модифікатор.\n"
 
 #. type: Title ###
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "toggles"
+#, fuzzy, no-wrap
+#| msgid "toggles"
+msgid "Toggles"
 msgstr "перемикачі"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A toggle is a button that has a persistent on/off state. It therefore has additional _effects_ to allow you to toggle it or explicitly set its state. As with a normal button the default action, when assigning a simple shortcut to a toggle, is to activate the toggle as if clicked with the left mouse button (which toggles the button on/off).\n"
+#, fuzzy, no-wrap
+#| msgid "A toggle is a button that has a persistent on/off state. It therefore has additional _effects_ to allow you to toggle it or explicitly set its state. As with a normal button the default action, when assigning a simple shortcut to a toggle, is to activate the toggle as if clicked with the left mouse button (which toggles the button on/off).\n"
+msgid "A toggle is a button that has a persistent on/off state. It therefore has additional _effects_ to allow you to toggle it or explicitly set its state. As with a normal button the default action, when assigning a shortcut to a toggle, is to activate the toggle as if clicked with the left mouse button (which toggles the button on/off).\n"
 msgstr "Перемикач -- це кнопка, яка має постійний стан увімкнення/вимкнення. Тому він має додаткові _ефекти_, які дозволяють вам перемикати його або явно встановлювати його стан. Як і у випадку зі звичайною кнопкою, дія за замовчуванням, при призначенні простого прискорювача для перемикача, полягає в тому, щоб активувати перемикач так, ніби його клікнули лівою кнопкою миші (що вмикає/вимикає кнопку).\n"
 
 #. type: Title ###
 #: content/preferences-settings/shortcuts.md
-#: content/modules/utility-modules/_index.md content/modules/_index.md
-#, no-wrap
-msgid "utility modules"
+#, fuzzy, no-wrap
+#| msgid "utility modules"
+msgid "Utility modules"
 msgstr "сервісні модулі"
 
 #. type: Plain text
@@ -9828,9 +9505,12 @@ msgstr "Усі сервісні модулі мають такі елемент�
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_show_\n"
+#| ": Acts as a _toggle_ that expands and collapses the module.\n"
 msgid ""
-"_show_\n"
+"_Show_\n"
 ": Acts as a _toggle_ that expands and collapses the module.\n"
 msgstr ""
 "_показати_\n"
@@ -9838,9 +9518,12 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_reset_\n"
+#| ": Acts as a _button_ that resets all module parameters when activated. The _ctrl-activate_ action can be used to re-apply any automatic presets for that module.\n"
 msgid ""
-"_reset_\n"
+"_Reset_\n"
 ": Acts as a _button_ that resets all module parameters when activated. The _ctrl-activate_ action can be used to re-apply any automatic presets for that module.\n"
 msgstr ""
 "_скинути_\n"
@@ -9853,16 +9536,17 @@ msgstr ""
 #| "_presets_\n"
 #| ": Allows you to select actions from the [presets](../darkroom/processing-modules/presets.md) menu (e.g. edit, update, previous, next). The default action, when assigning a simple shortcut to a _preset_ element, is to display a list of the available presets for selection. Extended shortcuts are not currently available for preset elements.\n"
 msgid ""
-"_presets_\n"
-": Allows you to select actions from the [presets](../views/darkroom/processing-modules/presets.md) menu (e.g. edit, update, previous, next). The default action, when assigning a simple shortcut to a _preset_ element, is to display a list of the available presets for selection. Extended shortcuts are not currently available for preset elements.\n"
+"_Presets_\n"
+": Allows you to select actions from the [Presets](../views/darkroom/processing-modules/presets.md) menu (e.g. edit, update, previous, next). The default action, when assigning a shortcut to a _preset_ element, is to display a list of the available presets for selection. \n"
 msgstr ""
 "_пресети_\n"
 ": Дозволяє вибрати дії з меню [пресети](../darkroom/processing-modules/presets.md) (наприклад, редагування, оновлення, попередній, наступний). Дія за замовчуванням, коли призначається простий прискорювач елементу _пресет_, полягає в тому, щоб відобразити список доступних пресетів для вибору. Розширені прискорювачі наразі недоступні для пресетів.\n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The default action, when assigning a simple shortcut to a utility module, is to _toggle_ the _show_ element (expand/collapse the module).\n"
+#, fuzzy, no-wrap
+#| msgid "The default action, when assigning a simple shortcut to a utility module, is to _toggle_ the _show_ element (expand/collapse the module).\n"
+msgid "The default action, when assigning a shortcut to a utility module, is to _toggle_ the _show_ element (expand/collapse the module).\n"
 msgstr "Дія за замовчуванням, коли призначається простий прискорювач для сервісного модуля, полягає в тому, щоб _перемкнути_ елемент _показати_ (розгорнути/згорнути модуль).\n"
 
 #. type: Plain text
@@ -9870,6 +9554,13 @@ msgstr "Дія за замовчуванням, коли призначаєть�
 #, no-wrap
 msgid "In addition, shortcuts are available for all of the controls on each module as well as any stored presets (see below).\n"
 msgstr "Крім того, доступні прискорювачі для всіх елементів керування на кожному модулі, а також для будь-яких збережених пресетів (див. нижче).\n"
+
+#. type: Title ###
+#: content/preferences-settings/shortcuts.md
+#, fuzzy, no-wrap
+#| msgid "processing modules"
+msgid "Processing modules"
+msgstr "модулі обробки"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9879,9 +9570,12 @@ msgstr "Модулі обробки мають ті самі елементи т
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_enable_\n"
+#| ": Acts as a _toggle_ that switches the module on and off.\n"
 msgid ""
-"_enable_\n"
+"_Enable_\n"
 ": Acts as a _toggle_ that switches the module on and off.\n"
 msgstr ""
 "_увімкнути_\n"
@@ -9891,14 +9585,14 @@ msgstr ""
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
 #| msgid ""
-#| "_focus_\n"
-#| ": Acts as a _toggle_ that focuses or defocuses the module. This is useful for modules such as [_crop_](../module-reference/processing-modules/crop.md) or [_tone equalizer_](../module-reference/processing-modules/tone-equalizer.md), whose on-screen controls are only activated when those modules have focus. For _crop_, changes are saved only when the module loses focus.\n"
+#| "_show_\n"
+#| ": Acts as a _toggle_ that expands and collapses the module.\n"
 msgid ""
-"_focus_\n"
-": Acts as a _toggle_ that focuses or defocuses the module. This is useful for modules such as [_crop_](../modules/processing-modules/crop.md) or [_tone equalizer_](../modules/processing-modules/tone-equalizer.md), whose on-screen controls are only activated when those modules have focus. For _crop_, changes are saved only when the module loses focus.\n"
+"_Focus_\n"
+": Acts as a _toggle_ that focuses or defocuses the module.\n"
 msgstr ""
-"_фокус_\n"
-": Діє як _перемикач_, який фокусує або розфокусує модуль. Це корисно для таких модулів, як [_кадрування_](../module-reference/processing-modules/crop.md) або [_еквалайзер тонів_](../module-reference/processing-modules/tone-equalizer.md), екранні елементи керування яких активуються лише тоді, коли ці модулі мають фокус. Для _кадрування_ зміни зберігаються лише тоді, коли модуль втрачає фокус.\n"
+"_показати_\n"
+": Діє як _перемикач_, який розгортає та згортає модуль.\n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9907,34 +9601,24 @@ msgstr ""
 #| "_instance_\n"
 #| ": Allows you to select actions from the [multiple-instance](../darkroom/processing-modules/multiple-instances.md) menu (e.g. move up/down, create new instance). The default action, when assigning a simple shortcut to the _instance_ element, is to display a list of the available options for selection; An extended shortcut will move the _preferred module instance_ (see below) up and down the pixelpipe.\n"
 msgid ""
-"_instance_\n"
-": Allows you to select actions from the [multiple-instance](../views/darkroom/processing-modules/multiple-instances.md) menu (e.g. move up/down, create new instance). The default action, when assigning a simple shortcut to the _instance_ element, is to display a list of the available options for selection; An extended shortcut will move the _preferred module instance_ (see below) up and down the pixelpipe.\n"
+"_Instance_\n"
+": Allows you to select actions from the [Multiple-instance](../views/darkroom/processing-modules/multiple-instances.md) menu (e.g. move up/down, create new instance). The default action, when assigning a shortcut to the _instance_ element, is to display a list of the available options for selection; \n"
 msgstr ""
 "_екземпляр_\n"
 ": Дозволяє вибрати дії з меню [екземплярів](../darkroom/processing-modules/multiple-instances.md) (наприклад, переміщення вгору/вниз, створення нового екземпляра). Дія за замовчуванням, коли призначається простий прискорювач елементу _екземпляр_, полягає у відображенні списку доступних опцій для вибору; Розширений прискорювач буде переміщувати _бажаний екземпляр модуля_ (див. нижче) вгору та вниз по конвеєру.\n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "If an action affects a processing module that can have multiple instances, you can choose which instance to adjust with a given shortcut. By default, all actions will affect the \"preferred\" instance, as defined using the settings in [preferences > miscellaneous > shortcuts with multiple instances](./miscellaneous.md#shortcuts-with-multiple-instances).\n"
+#, fuzzy, no-wrap
+#| msgid "If an action affects a processing module that can have multiple instances, you can choose which instance to adjust with a given shortcut. By default, all actions will affect the \"preferred\" instance, as defined using the settings in [preferences > miscellaneous > shortcuts with multiple instances](./miscellaneous.md#shortcuts-with-multiple-instances).\n"
+msgid "If an action affects a processing module that can have multiple instances, you can choose which instance to adjust with a given shortcut. By default, all actions will affect the \"preferred\" instance, as defined using the settings in [Preferences > Miscellaneous > Shortcuts with multiple instances](./miscellaneous.md#shortcuts-with-multiple-instances).\n"
 msgstr "Якщо дія впливає на модуль обробки, який може мати кілька екземплярів, ви можете вибрати, на який екземпляр впливати заданим прискорювачем. За замовчуванням усі дії впливатимуть на \"бажаний\" екземпляр, визначений за допомогою налаштувань у [налаштування > різне > клавіатурні прискорювачі з кількома екземплярами](./miscellaneous.md#клавіатурні-прискорювачі-з-кількома-екземплярами).\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Additional options are available in the shortcuts mapping screen to adjust the blend parameters (the \\<blending\\> section) and module controls (the \\<focused\\> section) for the currently-focused module. The latter section allows you to assign shortcuts to the first, second, third (etc.) button, drop-down, slider and tab on the module. The shortcuts will affect different module controls depending on which module currently has focus (as the available list of controls changes).\n"
-msgstr ""
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can also assign scroll shortcuts to the 'preset' menu, which allows you to use your mouse scroll wheel to scroll through the module's presets.\n"
-msgstr ""
 
 #. type: Title ###
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "dropdowns"
+#, fuzzy, no-wrap
+#| msgid "dropdowns"
+msgid "Dropdowns"
 msgstr "спадні меню"
 
 #. type: Plain text
@@ -9950,8 +9634,8 @@ msgstr "Спадне меню -- це вікно множинного вибор
 #| "_selection_\n"
 #| ": Allows values to be selected from the dropdown list in various ways. The default action, when assigning a simple shortcut to a dropdown, is to display a popup _edit_ box with a list of the available values for selection; An extended shortcut (including a mouse movement) will scroll through the available values. \n"
 msgid ""
-"_selection_\n"
-": Allows values to be selected from the dropdown list in various ways. The default action, when assigning a simple shortcut to a dropdown, is to display a popup _edit_ box with a list of the available values for selection; An extended shortcut (including a mouse movement) will scroll through the available values.\n"
+"_Selection_\n"
+": Allows values to be selected from the dropdown list in various ways. The default action, when assigning a shortcut to a dropdown, is to display a popup _edit_ box with a list of the available values for selection.\n"
 msgstr ""
 "_вибір_\n"
 ": Дозволяє вибирати значення зі спадного списку різними способами. Дія за замовчуванням, коли призначається простий прискорювач для спадного меню, полягає в тому, щоб відобразити спливне вікно _редагування_ зі списком доступних значень для вибору; Розширений прискорювач (включаючи рух миші) буде прокручувати доступні значення. \n"
@@ -9963,11 +9647,18 @@ msgstr ""
 #| "_button_\n"
 #| ": A standard _button_ element that allows the button to the right of the dropdown (if present) to be activated. For example, the _aspect_ dropdown in the [_crop_](../module-reference/processing-modules/crop.md) module has a button that allows the crop controls to be changed from portrait to landscape and vice versa.\n"
 msgid ""
-"_button_\n"
-": A standard _button_ element that allows the button to the right of the dropdown (if present) to be activated. For example, the _aspect_ dropdown in the [_crop_](../modules/processing-modules/crop.md) module has a button that allows the crop controls to be changed from portrait to landscape and vice versa.\n"
+"_Button_\n"
+": A standard _button_ element that allows the button to the right of the dropdown (if present) to be activated. For example, the _aspect_ dropdown in the [_Crop_](../modules/processing-modules/crop.md) module has a button that allows the crop controls to be changed from portrait to landscape and vice versa.\n"
 msgstr ""
 "_кнопка_\n"
 ": Стандартний елемент _кнопка_, який дозволяє активувати кнопку праворуч від спадного меню (якщо є). Наприклад, спадне меню _співвідношення сторін_ у модулі [_кадрування_](../module-reference/processing-modules/crop.md) має кнопку, яка дозволяє змінювати кадрування з портретного на альбомне і навпаки.\n"
+
+#. type: Title ###
+#: content/preferences-settings/shortcuts.md
+#, fuzzy, no-wrap
+#| msgid "sliders"
+msgid "Sliders"
+msgstr "повзунки"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9977,19 +9668,25 @@ msgstr "Повзунок дозволяє безперервно змінюва�
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_value_\n"
+#| ": Allows the current value of the slider to be altered. The default action, when assigning a simple shortcut to a slider, is to display a popup _edit_ box so you can enter a value; An extended shortcut (including a mouse movement) will change the value up and down.  Value elements are also used for modifying some on-screen graphs. When modifying the _value_ element with a shortcut you may not exceed the bounds set in the visual slider.\n"
 msgid ""
-"_value_\n"
-": Allows the current value of the slider to be altered. The default action, when assigning a simple shortcut to a slider, is to display a popup _edit_ box so you can enter a value; An extended shortcut (including a mouse movement) will change the value up and down.  Value elements are also used for modifying some on-screen graphs. When modifying the _value_ element with a shortcut you may not exceed the bounds set in the visual slider.\n"
+"_Value_\n"
+": Allows the current value of the slider to be altered. The default action, when assigning a shortcut to a slider, is to display a popup _edit_ box so you can enter a value. Value elements are also used for modifying some on-screen graphs. When modifying the _value_ element with a shortcut you may not exceed the bounds set in the visual slider.\n"
 msgstr ""
 "_значення_\n"
 ": Дозволяє змінювати поточне значення повзунка. Дія за замовчуванням при призначенні простого прискорювача для повзунка полягає в тому, щоб відобразити спливаюче вікно _редагування_, щоб ви могли ввести значення; Розширений прискорювач (включає рух миші) змінює значення вгору і вниз. Елементи значень також використовуються для зміни деяких екранних графіків. Змінюючи елемент _значення_ за допомогою прискорювача, ви не можете перевищувати межі, встановлені у візуальному повзунку.\n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_force_\n"
+#| ": This is the same as the _value_ element described above, but it allows you to exceed the bounds set in the visual slider.\n"
 msgid ""
-"_force_\n"
+"_Force_\n"
 ": This is the same as the _value_ element described above, but it allows you to exceed the bounds set in the visual slider.\n"
 msgstr ""
 "_необмежено_\n"
@@ -9997,9 +9694,12 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_zoom_\n"
+#| ": Allows you to change the upper and lower bounds of the visual slider without altering the current value.\n"
 msgid ""
-"_zoom_\n"
+"_Zoom_\n"
 ": Allows you to change the upper and lower bounds of the visual slider without altering the current value.\n"
 msgstr ""
 "_масштаб_\n"
@@ -10007,104 +9707,16 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_button_\n"
+#| ": A standard _button_ element that allows the button to the right of the slider (if present) to be activated. For example, a slider may include a color picker to visually set its value based on selected elements of the image.\n"
 msgid ""
-"_button_\n"
+"_Button_\n"
 ": A standard _button_ element that allows the button to the right of the slider (if present) to be activated. For example, a slider may include a color picker to visually set its value based on selected elements of the image.\n"
 msgstr ""
 "_кнопка_\n"
 ": Стандартний елемент _кнопка_, який дозволяє активувати кнопку праворуч від повзунка (якщо є). Наприклад, повзунок може містити піпетку кольору для візуального встановлення його значення на основі вибраних елементів зображення.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can alter the value of a slider more quickly or slowly than normal by defining the _speed_ of the action in the shortcut mapping screen. By default a _value_ (or _force_) effect is given a speed of 1.0, which means that it is changed at the default rate defined by the given slider. You can alter the slider more quickly by increasing the speed (a speed of 10 makes the action 10x faster) or more slowly by decreasing it (a speed of 0.1 makes the action 10x slower).\n"
-msgstr "Ви можете змінити значення повзунка швидше або повільніше, ніж зазвичай, визначивши _швидкість_ дії на екрані зіставлення прискорювачів. За замовчуванням ефекту _значення_ (або _необмежено_) надається швидкість 1,0, що означає, що значення змінюється зі швидкістю за замовчуванням, визначеною даним повзунком. Ви можете змінити значення повзунка швидше, збільшуючи швидкість (швидкість 10 робить дію в 10 разів швидше) або повільніше, зменшуючи її (швидкість 0,1 робить дію в 10 разів повільнішою).\n"
-
-#. type: Title ##
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "fallbacks"
-msgstr "резервні дії"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Where a _widget_ can have multiple different _actions_ applied to it, it can be tedious to set up individual shortcuts for each one of those actions. To make this process simpler, if you create a simple shortcut a number of effects can be made available by default as extensions to that shortcut. These are known as _fallbacks_.\n"
-msgstr "Якщо до _віджета_ може бути застосовано кілька різних _дій_, налаштовувати окремі прискорювачі для кожної з цих дій може бути стомливо. Щоб спростити цей процес, якщо ви створюєте простий прискорювач, ряд ефектів може бути доступним за замовчуванням як розширення для цього прискорювача. Вони відомі як _резервні дії_.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "While fallbacks are a powerful way to quickly set up multiple actions using predefined and consistent shortcuts, they will assign a lot of actions automatically (which might not be what you want), and can be hard to understand. Fallbacks are therefore disabled by default and you will need to click on the \"enable fallbacks\" check box in the shortcuts setup window to enable them.\n"
-msgstr "Хоча резервні дії є потужним способом швидкого налаштування кількох дій за допомогою попередньо визначених і консистентних прискорювачів, вони автоматично призначатимуть багато дій (що може бути не тим, що ви хочете), і їх може бути важко зрозуміти. Тому резервні дії вимкнено за замовчуванням, і вам потрібно буде натиснути прапорець \"дозволити резервні дії\" у вікні налаштування прискорювачів, щоб увімкнути їх.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "To take a brief example, you could create a simple shortcut (e.g. Ctrl+R) against a processing module. This will automatically set up the following _fallback_ effects using the defined shortcut, extended with mouse-clicks. In each case (except the first) you should hold the initial shortcut while clicking with your mouse. The final mouse-click will apply the action defined below:\n"
-msgstr "Для короткого прикладу ви можете створити простий прискорювач (наприклад, Ctrl+R) для модуля обробки. Це автоматично налаштує наступні _резервні_ ефекти за допомогою визначеного прискорювача, розширеного кліками миші. У кожному випадку (крім першого) слід утримувати початковий прискорювач, клікаючи мишею. Остаточний клік мишею застосує дію, визначену нижче:\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R (no mouse-click) to show/hide the module (the default fallback)\n"
-msgstr "Ctrl+R (без кліку мишкою), щоб показати/приховати модуль (резервна дія за замовчуванням)\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R+left-click to enable/disable the module\n"
-msgstr "Ctrl+R+клік лівою кнопкою миші, щоб увімкнути/вимкнути модуль\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R+left-double-click to reset the module\n"
-msgstr "Ctrl+R+подвійний клік лівою кнопкою миші, щоб скинути модуль\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R+right-click to show the module's preset menu\n"
-msgstr "Ctrl+R+клік правою кнопкою миші, щоб відобразити меню пресетів модуля\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R+right-double-click to show the module's multiple instance menu\n"
-msgstr "Ctrl+R+подвійний клік правою кнопкою миші, щоб відкрити меню екземплярів модуля\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Similar fallbacks are defined for many common UI elements and all can be manually overridden.\n"
-msgstr "Подібні резервні дії визначені для багатьох загальних елементів інтерфейсу користувача, і всі вони можуть бути змінені вручну.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Some fallback actions are defined using modifier keys (usually `Ctrl+` and `Shift+`). In this case you must define an initial shortcut without such a modifier in order to be able to use these fallbacks. For example, if you assign Ctrl+R to an action, you cannot use a `Ctrl+` fallback. Some default fallbacks of this type are provided for the _value_ element and for horizontal/vertical movements in the (zoomed) central area -- in this case, `Shift+` increases the speed to 10.0 and `Ctrl+` decreases the speed to 0.1.\n"
-msgstr "Деякі резервні дії визначаються за допомогою клавіш-модифікаторів (зазвичай `Ctrl+` і `Shift+`). У цьому випадку ви повинні визначити початковий прискорювач без такого модифікатора, щоб мати можливість використовувати ці резервні дії. Наприклад, якщо ви призначите дії Ctrl+R, ви не можете використовувати резервну дію Ctrl+. Деякі резервні дії цього типу передбачені для елемента _значення_ та для горизонтальних/вертикальних переміщень у (збільшеній) центральній області -- у цьому випадку Shift+ збільшує швидкість до 10,0, а Ctrl+ зменшує швидкість до 0,1.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "To see a list of _all_ of the default fallbacks, click the \"enable fallbacks\" checkbox in the shortcut mapping screen and select the \"fallbacks\" category in the top panel. To see the fallbacks for a given widget (e.g. a slider) just select that widget in the top panel. In both cases an additional item (also named \"fallbacks\") will then appear in the bottom panel containing full details of the available fallbacks.\n"
-msgstr "Щоб переглянути список _всіх_ резервних дій за замовчуванням, установіть прапорець \"дозволити резервні дії\" на екрані зіставлення прискорювачів і виберіть категорію \"резервні дії\" на верхній панелі. Щоб побачити резервні дії для певного віджета (наприклад, повзунка), просто виберіть цей віджет на верхній панелі. В обох випадках на нижній панелі з’явиться додатковий елемент (також званий \"резервними діями\"), що містить повну інформацію про доступні резервні дії.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Fallbacks are only applied if no other shortcut using that combination has been explicitly created. In the above example, if you were to explicitly assign Ctrl+R+left-click to another action, the \"enable/disable module\" fallback would be ignored.\n"
-msgstr "Резервні дії застосовуються лише в тому випадку, якщо явно не створено жодного іншого прискорювача, що використовує цю комбінацію. У наведеному вище прикладі, якби ви явно призначили \"Ctrl+R+клік лівою кнопкою миші\" на іншу дію, резервну дію \"увімкнути/вимкнути модуль\" буде проігноровано.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "As with any other shortcut, fallback settings are fully customizable. \n"
-msgid "As with any other shortcut, fallback settings are fully customizable.\n"
-msgstr "Як і для будь-якого іншого прискорювача, резервні дії повністю налаштовуються. \n"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/preferences-settings/security.md
@@ -15298,6 +14910,12 @@ msgstr ""
 ": - _кількість зображень_: Просто показувати кількість зображень (щоб звільнити місце на карті). Наведіть курсор на кількість зображень, щоб відобразити відповідні мініатюри. Маркер лише з лічильником поводиться так само, як звичайна мініатюра зображення, з точки зору кольорового кодування, прокрутки, перетягування тощо.\n"
 ": - _немає_: Нічого не показувати.\n"
 ": Ви також можете перебирати ці опції, натискаючи Shift+S.\n"
+
+#. type: Title ###
+#: content/modules/utility-modules/_index.md content/modules/_index.md
+#, no-wrap
+msgid "utility modules"
+msgstr "сервісні модулі"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/modules/utility-modules/shared/scopes.md
@@ -32176,6 +31794,355 @@ msgstr "Після закінчення нашого прикладу повід
 #, no-wrap
 msgid "We use `coroutine.yield` to call an external program. The normal `os.execute` would block other lua codes from happening.\n"
 msgstr "Ми використовуємо `coroutine.yield` для виклику зовнішньої програми. Звичайний `os.execute` заблокує інші коди lua.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "You can perform almost any action in darktable with a keyboard/mouse shortcut. You can also use various other input devices, including MIDI devices and game controllers -- see the [midi device support](../special-topics/midi-device-support.md) section for details. These are referred to as _external devices_ or just _devices_ in this guide.\n"
+#~ msgid "You can perform almost any action in Ansel with a keyboard/mouse shortcut. You can also use various other input devices, including MIDI devices and game controllers -- see the [midi device support](../special-topics/midi-device-support.md) section for details. These are referred to as _external devices_ or just _devices_ in this guide.\n"
+#~ msgstr "За допомогою комбінації клавіш на клавіатурі/миші ви можете виконувати майже будь-які дії в darktable. Ви також можете використовувати різні інші пристрої введення, включаючи MIDI-пристрої та ігрові контролери -- дивіться розділ [підтримка пристроїв MIDI](../special-topics/midi-device-support.md) для отримання детальної інформації. У цьому посібнику вони називаються _зовнішніми пристроями_ або просто _пристроями_.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "A _shortcut_ is a combination of key or button presses and/or mouse or device movements that performs an _action_ in darktable.\n"
+#~ msgid "A _shortcut_ is a combination of key or button presses and/or mouse or device movements that performs an _action_ in Ansel.\n"
+#~ msgstr "_Прискорювач_ -- це комбінація натискань клавіш або кнопок та/або рухів миші чи пристрою, що виконує _дію_ в darktable.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "A single action may have multiple shortcuts but a single shortcut can only be linked to one action in a given darktable view -- you can't chain actions together except by applying a preset or style. You can, however, set up a single shortcut that does one thing in the lighttable view, say, and another in the darkroom view.\n"
+#~ msgid "A single action may have multiple shortcuts but a single shortcut can only be linked to one action in a given Ansel view -- you can't chain actions together except by applying a preset or style. You can, however, set up a single shortcut that does one thing in the lighttable view, say, and another in the darkroom view.\n"
+#~ msgstr "Одна дія може мати кілька прискорювачів, але один прискорювач може бути пов’язаний лише з однією дією в заданому режимі darktable -- ви не можете з’єднати дії разом, окрім як застосувавши пресет або стиль. Однак ви можете налаштувати прискорювач, який виконує одну дію в режимі світлого столу, скажімо, і іншу в режимі темної кімнати.\n"
+
+#, no-wrap
+#~ msgid "initiating a shortcut"
+#~ msgstr "ініціювання прискорювача"
+
+#, no-wrap
+#~ msgid "A shortcut must be initiated by either\n"
+#~ msgstr "Прискорювач має бути ініційований або\n"
+
+#, no-wrap
+#~ msgid "pressing a key on the keyboard; or\n"
+#~ msgstr "натисканням клавіші на клавіатурі; або\n"
+
+#, fuzzy, no-wrap
+#~| msgid "pressing a button or moving a knob/joystick on an external device \n"
+#~ msgid "pressing a button or moving a knob/joystick on an external device\n"
+#~ msgstr "натисканням кнопки або переміщенням ручки/джойстика на зовнішньому пристрої \n"
+
+#, fuzzy, no-wrap
+#~| msgid "You cannot initiate a shortcut by moving your mouse or pressing one of its buttons, as these actions are used to interact with darktable's UI.\n"
+#~ msgid "You cannot initiate a shortcut by moving your mouse or pressing one of its buttons, as these actions are used to interact with Ansel's UI.\n"
+#~ msgstr "Ви не можете ініціювати прискорювач, переміщуючи мишу або натискаючи одну з її кнопок, оскільки ці дії використовуються для взаємодії з інтерфейсом darktable.\n"
+
+#, no-wrap
+#~ msgid "simple shortcuts"
+#~ msgstr "прості прискорювачі"
+
+#, no-wrap
+#~ msgid "A shortcut that only includes button and/or key presses (and not mouse/device movements) is referred to as a _simple_ shortcut.\n"
+#~ msgstr "Прискорювач, який включає лише натискання кнопок та/або клавіш (а не рухи миші/пристрою), називається _простим_ прискорювачем.\n"
+
+#, no-wrap
+#~ msgid "A simple shortcut must be initiated as above, but can include:\n"
+#~ msgstr "Простий прискорювач потрібно ініціювати, як описано вище, але він може включати:\n"
+
+#, no-wrap
+#~ msgid "One or more modifier keys (Shift, Ctrl, Alt), held down while executing the remainder of the shortcut\n"
+#~ msgstr "Одну або кілька клавіш-модифікаторів (Shift, Ctrl, Alt), що утримуються під час виконання решти прискорювача\n"
+
+#, no-wrap
+#~ msgid "Up to three key presses, the last one of which may be a long-press (defined as a key-press longer than your system's double-click duration)\n"
+#~ msgstr "До трьох натискань клавіш, останнє з яких може бути тривалим (визначається як натискання клавіші довше, ніж тривалість подвійного натискання вашої системи)\n"
+
+#, no-wrap
+#~ msgid "Similarly, up to three device-button presses or mouse-button clicks, the last of which may be long\n"
+#~ msgstr "Аналогічно, до трьох натискань кнопки пристрою або кнопки миші, останнє з яких може бути тривалим\n"
+
+#, no-wrap
+#~ msgid "Various combinations of keyboard, mouse, and device buttons can be used to create simple shortcuts.\n"
+#~ msgstr "Для створення простих прискорювачів можна використовувати різні комбінації кнопок клавіатури, миші та пристрою.\n"
+
+#, no-wrap
+#~ msgid "creating additional modifiers"
+#~ msgstr "створення додаткових модифікаторів"
+
+#, no-wrap
+#~ msgid "The only valid modifiers are the Shift, Ctrl and Alt keys on the keyboard. You can define additional keys (or device buttons) as modifiers by assigning keys/buttons to the \"global/modifier\" action. However, these will merely function as extra Ctrl, Alt or Shift keys -- you cannot create \"new\" modifiers.\n"
+#~ msgstr "Єдиними дійсними модифікаторами є клавіші Shift, Ctrl і Alt на клавіатурі. Ви можете визначити додаткові клавіші (або кнопки пристрою) як модифікатори, призначивши клавіші/кнопки на дію \"глобальний/модифікатор\". Однак вони функціонуватимуть лише як додаткові клавіші Ctrl, Alt або Shift -- ви не можете створювати \"нові\" модифікатори.\n"
+
+#, no-wrap
+#~ msgid "extending simple shortcuts with movement"
+#~ msgstr "розширення простих прискорювачів за допомогою руху"
+
+#, no-wrap
+#~ msgid "For certain actions you can choose to _extend_ a simple shortcut using mouse/device movement. For example you might hold Ctrl+X while scrolling with your mouse to change the value of a slider. The following can be used to extend a simple shortcut:\n"
+#~ msgstr "Для певних дій ви можете _розширити_ простий прискорювач за допомогою руху миші/пристрою. Наприклад, ви можете утримувати Ctrl+X під час прокручування мишею, щоб змінити значення повзунка. Для розширення простого прискорювача можна використовувати наступне:\n"
+
+#, no-wrap
+#~ msgid "Movement of the mouse scroll wheel\n"
+#~ msgstr "Рух коліщатка прокрутки миші\n"
+
+#, no-wrap
+#~ msgid "Horizontal, vertical or diagonal movement of the mouse cursor\n"
+#~ msgstr "Горизонтальне, вертикальне або діагональне переміщення курсору миші\n"
+
+#, no-wrap
+#~ msgid "Movement of a knob/joystick on an external device\n"
+#~ msgstr "Рух ручки/джойстика на зовнішньому пристрої\n"
+
+#, fuzzy, no-wrap
+#~| msgid "To extend a simple shortcut, you must hold the final key/button of the simple shortcut while performing the extending mouse/device movement. \n"
+#~ msgid "To extend a simple shortcut, you must hold the final key/button of the simple shortcut while performing the extending mouse/device movement.\n"
+#~ msgstr "Щоб розширити простий прискорювач, ви повинні утримувати останню клавішу/кнопку простого прискорювача під час виконання розширювального руху миші/пристрою. \n"
+
+#, no-wrap
+#~ msgid "For external devices you do not need to start with a _simple_ shortcut -- you can directly assign a control knob or joystick to an action -- though this will significantly reduce the flexibility of such devices.\n"
+#~ msgstr "Для зовнішніх пристроїв вам не потрібно починати з _простого_ прискорювача -- ви можете безпосередньо призначити ручку керування або джойстик дії -- хоча це значно зменшить гнучкість таких пристроїв.\n"
+
+#, no-wrap
+#~ msgid "Long button and key presses cannot be extended, as the length of the click/press is timed using the release of the final button/key -- such shortcuts must be terminated with the raising of the final button/key.\n"
+#~ msgstr "Тривале натискання кнопок і клавіш не може бути розширено, оскільки тривалість кліку/натискання фіксується за допомогою відпускання останньої кнопки/клавіші -- такі прискорювачі повинні бути припинені з підняттям останньої кнопки/клавіші.\n"
+
+#, no-wrap
+#~ msgid "**Note:** You may need to switch off the \"disable touchpad while typing\" setting if you want to use extended shortcuts with a laptop touchpad.\n"
+#~ msgstr "**Примітка:** Якщо ви хочете використовувати розширені прискорювачі з тачпадом ноутбука, вам може знадобитися вимкнути налаштування \"вимкнути тачпад під час введення\".\n"
+
+#, no-wrap
+#~ msgid "actions"
+#~ msgstr "дії"
+
+#, no-wrap
+#~ msgid "assigning shortcuts to actions"
+#~ msgstr "призначення прискорювачів для дій"
+
+#, no-wrap
+#~ msgid "There are two primary methods of assigning a shortcut to an action.\n"
+#~ msgstr "Існує два основних способи призначення прискорювача дії.\n"
+
+#, no-wrap
+#~ msgid "visual shortcut mapping"
+#~ msgstr "візуальне зіставлення прискорювачів"
+
+#, fuzzy, no-wrap
+#~| msgid "Click on the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon in the [top panel](../overview/user-interface/top-panel.md) of any darktable view to enter visual shortcut mapping mode. If you hold Ctrl while clicking the button, no confirmation will appear when overwriting an existing shortcut mapping.\n"
+#~ msgid "Click on the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon in the [top panel](../overview/user-interface/top-panel.md) of any Ansel view to enter visual shortcut mapping mode. If you hold Ctrl while clicking the button, no confirmation will appear when overwriting an existing shortcut mapping.\n"
+#~ msgstr "Натисніть на значок ![кнопка візуального зіставлення](./shortcuts/visual-mapping-button.png#icon) на [верхній панелі](../overview/user-interface/top-panel.md) будь-якого режиму darktable, щоб увійти в режим візуального зіставлення прискорювачів. Якщо ви утримуєте Ctrl під час натискання цієї кнопки, запиту на підтвердження не буде під час перезапису наявного зіставлення прискорювачів.\n"
+
+#, no-wrap
+#~ msgid "The mouse cursor will change as you hover over UI widgets, to indicate whether or not a mapping can be created:\n"
+#~ msgstr "Курсор миші змінюватиметься під час наведення курсора на віджети інтерфейсу користувача, щоб вказати, чи можна створити зіставлення:\n"
+
+#, no-wrap
+#~ msgid "A down arrow with a line ![expand icon](./shortcuts/expand-icon.png#icon) appears when you hover over a module header, to indicate that you can click to expand the module.\n"
+#~ msgstr "Стрілка вниз із лінією ![expand icon](./shortcuts/expand-icon.png#icon) з’являється, коли ви наводите курсор на заголовок модуля, щоб вказати, що ви можете клікнути, щоб розгорнути модуль.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "A spiral ![spiral icon](./shortcuts/spiral-icon.png#icon) indicates that a shortcut can be defined for the widget under the cursor. \n"
+#~ msgid "A spiral ![spiral icon](./shortcuts/spiral-icon.png#icon) indicates that a shortcut can be defined for the widget under the cursor.\n"
+#~ msgstr "Спіраль ![spiral icon](./shortcuts/spiral-icon.png#icon) вказує, що прискорювач можна визначити для віджета під курсором. \n"
+
+#, fuzzy, no-wrap
+#~| msgid "An up arrow ![up icon](./shortcuts/up-icon.png#icon) indicates that, in addition to assigning a shortcut, you can also add the widget to the [quick access panel](../darkroom/organization/quick-access-panel.md) in the darkroom (by Ctrl+clicking on it).\n"
+#~ msgid "An up arrow ![up icon](./shortcuts/up-icon.png#icon) indicates that, in addition to assigning a shortcut, you can also add the widget to the [quick access panel](../views/darkroom/organization/quick-access-panel.md) in the darkroom (by Ctrl+clicking on it).\n"
+#~ msgstr "Стрілка вгору ![up icon](./shortcuts/up-icon.png#icon) вказує, що, крім призначення прискорювача, ви також можете додати віджет до [панелі швидкого доступу](../darkroom/organization/quick-access-panel.md) у темній кімнаті (за допомогою кліку по ньому з утриманням Ctrl).\n"
+
+#, no-wrap
+#~ msgid "A down arrow ![down icon](./shortcuts/down-icon.png#icon) indicates that the widget is already in the quick access panel (Ctrl+click to remove it).\n"
+#~ msgstr "Стрілка вниз ![down icon](./shortcuts/down-icon.png#icon) вказує, що віджет уже знаходиться на панелі швидкого доступу (клікніть з утриманням Ctrl, щоб видалити його).\n"
+
+#, fuzzy, no-wrap
+#~| msgid "A cross ![cross icon](./shortcuts/cross-icon.png#icon) indicates that there is no mappable widget under the cursor. \n"
+#~ msgid "A cross ![cross icon](./shortcuts/cross-icon.png#icon) indicates that there is no mappable widget under the cursor.\n"
+#~ msgstr "Хрестик ![cross icon](./shortcuts/cross-icon.png#icon) вказує, що під курсором немає віджета, який можна зіставити. \n"
+
+#, fuzzy, no-wrap
+#~| msgid "Press a key combination while hovering over a mappable widget to assign a shortcut to that widget -- a default action will be assigned to that shortcut based on the type of widget and whether you have keyed a _simple_ or _extended_ shortcut.  See below for details of some of the default assigned actions. \n"
+#~ msgid "Press a key combination while hovering over a mappable widget to assign a shortcut to that widget -- a default action will be assigned to that shortcut based on the type of widget and whether you have keyed a _simple_ or _extended_ shortcut.  See below for details of some of the default assigned actions.\n"
+#~ msgstr "Натисніть комбінацію клавіш, наводячи курсор на віджет, який можна зіставити, щоб призначити прискорювач цьому віджету -- дія за замовчуванням буде призначена цьому прискорювачу на основі типу віджета та того, набрали ви _простий_ чи _розширений_ прискорювач. Нижче наведено деталі деяких дій, призначених за замовчуванням. \n"
+
+#, no-wrap
+#~ msgid "Left-click on a mappable widget to open the shortcut mapping screen for that widget (see below). Left-click anywhere else on the screen to open the shortcut mapping screen, expanded (where possible) based on the part of the screen you have clicked on. This screen can be used to alter the action assigned to a shortcut and to configure shortcuts for non-visual actions. Entering the shortcut mapping screen exits visual shortcut mapping mode.\n"
+#~ msgstr "Клікніть лівою кнопкою миші віджет, який можна зіставити, щоб відкрити екран зіставлення прискорювачів для цього віджета (див. нижче). Клікніть лівою кнопкою миші будь-де на екрані, щоб відкрити екран зіставлення прискорювачів, розгорнутий (де це можливо) відповідно до частини екрана, яку ви клікнули. Цей екран можна використовувати для зміни дії, призначеної для прискорювача, і для налаштування прискорювачів для невізуальних дій. Перехід на екран зіставлення прискорювачів приводить до виходу з режиму візуального зіставлення прискорювачів.\n"
+
+#, no-wrap
+#~ msgid "You can assign as many shortcuts as you like in a single mapping session and then exit mapping mode when you are finished by clicking the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon again or right-clicking anywhere on the screen.\n"
+#~ msgstr "Ви можете призначити скільки завгодно прискорювачів в одному сеансі зіставлення, а потім вийти з режиму зіставлення знову натиснувши значок ![кнопка візуального зіставлення](./shortcuts/visual-mapping-button.png#icon) або клікнувши правою кнопкою миші в будь-якому місці екрана.\n"
+
+#, no-wrap
+#~ msgid "You can delete a user-defined shortcut mapping by defining it a second time against the same widget. If you attempt to reallocate an existing shortcut to a new action, you will be notified of the conflict and asked whether you wish to replace the existing shortcut.\n"
+#~ msgstr "Ви можете видалити зіставлення визначеного користувачем прискорювача, визначивши його вдруге для того самого віджета. Якщо ви спробуєте перепризначити існуючий прискорювач для нової дії, ви отримаєте сповіщення про конфлікт і запит, чи бажаєте замінити наявний прискорювач.\n"
+
+#, no-wrap
+#~ msgid "Finally, if you scroll with your mouse wheel while in visual mapping mode (without pressing any other buttons/keys) when hovering over a slider, this will change the default speed for that slider -- scroll up to increase and down to decrease. When you leave mapping mode, normal mouse scrolls over that slider will change its value with the adjusted speed.\n"
+#~ msgstr "Нарешті, якщо ви прокручуєте коліщатко миші в режимі візуального зіставлення (без натискання будь-яких інших кнопок/клавіш) під час наведення курсора на повзунок, це змінить швидкість за замовчуванням для цього повзунка -- прокручуйте вгору, щоб збільшити, і вниз, щоб зменшити. Коли ви виходите з режиму зіставлення, звичайне прокручування миші над цим повзунком змінюватиме його значення з налаштованою швидкістю.\n"
+
+#, no-wrap
+#~ msgid "shortcut mapping screen"
+#~ msgstr "екран зіставлення прискорювачів"
+
+#, no-wrap
+#~ msgid "The most flexible way to create shortcuts is by using the shortcut mapping screen, which can be accessed from the global preferences dialog or by left-clicking in visual mapping mode. This screen allows access to all available actions, including some that are not directly linked to a UI widget.\n"
+#~ msgstr "Найгнучкішим способом створення прискорювачів є використання екрана зіставлення прискорювачів, доступ до якого можна отримати з діалогового вікна глобальних налаштувань або клікнувши лівою кнопкою миші в режимі візуального зіставлення. Цей екран надає доступ до всіх доступних дій, включаючи деякі, які не пов’язані безпосередньо з віджетом інтерфейсу користувача.\n"
+
+#, no-wrap
+#~ msgid "The top panel of the shortcut mapping screen shows a list of available UI widgets/actions and the bottom panel shows the shortcuts currently assigned to them. You can search the top and bottom panels using the text entry boxes at the bottom of the screen (use the up/down arrow keys to navigate between matches).\n"
+#~ msgstr "Верхня панель екрана зіставлення прискорювачів показує список доступних віджетів/дій інтерфейсу користувача, а нижня панель показує прискорювачі, призначені їм наразі. Ви можете здійснювати пошук у верхній і нижній панелях за допомогою текстових полів у нижній частині екрана (використовуйте клавіші зі стрілками вгору/вниз для переходу між знайденими збігами).\n"
+
+#, no-wrap
+#~ msgid "Double-click an item in the top panel to create a new shortcut for that item, and then enter your desired shortcut (right-click to cancel). Once you have done this, a new entry will appear in the bottom panel showing the shortcut you have created. You can then manually alter the _element_, _effect_, _speed_ or _instance_ of the assigned action against that shortcut in the bottom panel. To delete a user-defined shortcut, select it in the bottom panel and press the Delete key.\n"
+#~ msgstr "Двічі клікніть елемент на верхній панелі, щоб створити новий прискорювач для цього елемента, а потім введіть потрібний прискорювач (клікніть правою кнопкою миші, щоб скасувати). Після цього на нижній панелі з’явиться новий запис із створеним вами прискорювачем. Потім ви можете вручну змінити _елемент_, _ефект_, _швидкість_ або _примірник_ призначеної для цього прискорювача дії на нижній панелі. Щоб видалити визначений користувачем прискорювач, виберіть його на нижній панелі та натисніть клавішу Delete.\n"
+
+#, no-wrap
+#~ msgid "Selecting an existing shortcut in the bottom panel will highlight (in bold) the matching action and its parents in the top panel. You can use this to navigate the top panel and find related actions.\n"
+#~ msgstr "Якщо вибрати наявний прискорювач на нижній панелі, буде виділено (жирним шрифтом) відповідну дію та її батьків на верхній панелі. Ви можете використовувати це для навігації по верхній панелі та пошуку пов’язаних дій.\n"
+
+#, no-wrap
+#~ msgid "The following additional options are provided in the shortcut mapping screen:\n"
+#~ msgstr "На екрані зіставлення прискорювачів надаються такі додаткові параметри:\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "export...\n"
+#~ ": Export the current shortcut mappings for one or all of your devices (keyboard/mouse, midi, game controller) to an external file. The dialog will show you how many shortcuts exist for each device.\n"
+#~ msgstr ""
+#~ "експортувати...\n"
+#~ ": Експортувати поточні прискорювачі для одного або всіх ваших пристроїв (клавіатури/миші, MIDI, ігрового контролера) у зовнішній файл. У діалоговому вікні буде показано, скільки прискорювачів існує для кожного пристрою.\n"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "import...\n"
+#~| ": Import shortcut mappings from an external file for one or all of your devices. When loading a device, you can chose to assign it a different number. This can for example be used to exchange midi layouts. Before loading, you can chose to wipe the specific device first. When loading all from an empty file, this will effectively delete all your shortcuts. \n"
+#~ msgid ""
+#~ "import...\n"
+#~ ": Import shortcut mappings from an external file for one or all of your devices. When loading a device, you can chose to assign it a different number. This can for example be used to exchange midi layouts. Before loading, you can chose to wipe the specific device first. When loading all from an empty file, this will effectively delete all your shortcuts.\n"
+#~ msgstr ""
+#~ "імпортувати...\n"
+#~ ": Імпортувати зіставлення прискорювачів із зовнішнього файлу для одного або всіх ваших пристроїв. Під час завантаження пристрою ви можете призначити йому інший номер. Це можна, наприклад, використовувати для обміну розкладками MIDI. Перед завантаженням ви можете спочатку стерти певний пристрій. Завантаження всіх пристроїв з порожнього файлу видалить усі ваші прискорювачі. \n"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "restore...\n"
+#~| ": Restore your shortcut mappings to (a) The mappings shipped with darktable by default, (b) The start of your current session, or (c) The point at which the shortcut mapping screen was last opened. When restoring, you can choose to leave any additional shortcuts that were added after the relevant checkpoint as they are, so that only changed shortcuts are restored to their previous meaning. Or you can choose to first clear all shortcuts and just load the restore point.\n"
+#~ msgid ""
+#~ "restore...\n"
+#~ ": Restore your shortcut mappings to (a) The mappings shipped with Ansel by default, (b) The start of your current session, or (c) The point at which the shortcut mapping screen was last opened. When restoring, you can choose to leave any additional shortcuts that were added after the relevant checkpoint as they are, so that only changed shortcuts are restored to their previous meaning. Or you can choose to first clear all shortcuts and just load the restore point.\n"
+#~ msgstr ""
+#~ "відновити...\n"
+#~ ": Відновити зіставлення прискорювачів до (a) зіставлень, що поставляються з darktable за замовчуванням, (b) початку поточного сеансу або (c) точки, в якій востаннє відкривався екран зіставлення прискорювачів. Під час відновлення ви можете залишити як вони є будь-які додаткові прискорювачі, які були додані після відповідної контрольної точки, так що лише змінені прискорювачі відновлюються до їхнього попереднього значення. Або ви можете спочатку очистити всі прискорювачі та просто завантажити точку відновлення.\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "d=global/switch views/darkroom\n"
+#~ "l=global/switch views/lighttable\n"
+#~ "m=global/switch views/map\n"
+#~ "p=global/switch views/print\n"
+#~ "s=global/switch views/slideshow\n"
+#~ "t=global/switch views/tethering\n"
+#~ msgstr ""
+#~ "d=global/switch views/darkroom\n"
+#~ "l=global/switch views/lighttable\n"
+#~ "m=global/switch views/map\n"
+#~ "p=global/switch views/print\n"
+#~ "s=global/switch views/slideshow\n"
+#~ "t=global/switch views/tethering\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "d=global/no-op\n"
+#~ "l=global/no-op\n"
+#~ "m=global/no-op\n"
+#~ "p=global/no-op\n"
+#~ "s=global/no-op\n"
+#~ "t=global/no-op\n"
+#~ msgstr ""
+#~ "d=global/no-op\n"
+#~ "l=global/no-op\n"
+#~ "m=global/no-op\n"
+#~ "p=global/no-op\n"
+#~ "s=global/no-op\n"
+#~ "t=global/no-op\n"
+
+#, no-wrap
+#~ msgid "The following is a list of some of the actions to which you can assign shortcuts, organized by widget type. This is not an exhaustive list and you are encouraged to browse the shortcut mapping screen for a complete list of available actions. If you assign a shortcut to a widget, it will be given a default action, depending on the type of widget and on whether you have assigned a simple or extended shortcut.\n"
+#~ msgstr "Нижче наведено список деяких дій, яким можна призначити прискорювачі, упорядкований за типом віджета. Це не вичерпний список, і вам пропонується переглянути екран зіставлення прискорювачів, щоб отримати повний список доступних дій. Якщо ви призначите прискорювач віджету, йому буде надано дію за замовчуванням, залежно від типу віджета та від того, чи призначили ви простий чи розширений прискорювач.\n"
+
+#, no-wrap
+#~ msgid "Note that it is possible to assign a number of actions that have no effect. For example, all sliders include a _button_ element, regardless of whether such a button is actually present alongside a given slider.\n"
+#~ msgstr "Зверніть увагу, що можна призначити ряд дій, які не мають ефекту. Наприклад, усі повзунки містять елемент _кнопка_, незалежно від того, чи дійсно така кнопка є поруч із даним повзунком.\n"
+
+#, no-wrap
+#~ msgid "views"
+#~ msgstr "режими"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "_focus_\n"
+#~| ": Acts as a _toggle_ that focuses or defocuses the module. This is useful for modules such as [_crop_](../module-reference/processing-modules/crop.md) or [_tone equalizer_](../module-reference/processing-modules/tone-equalizer.md), whose on-screen controls are only activated when those modules have focus. For _crop_, changes are saved only when the module loses focus.\n"
+#~ msgid ""
+#~ "_focus_\n"
+#~ ": Acts as a _toggle_ that focuses or defocuses the module. This is useful for modules such as [_crop_](../modules/processing-modules/crop.md) or [_tone equalizer_](../modules/processing-modules/tone-equalizer.md), whose on-screen controls are only activated when those modules have focus. For _crop_, changes are saved only when the module loses focus.\n"
+#~ msgstr ""
+#~ "_фокус_\n"
+#~ ": Діє як _перемикач_, який фокусує або розфокусує модуль. Це корисно для таких модулів, як [_кадрування_](../module-reference/processing-modules/crop.md) або [_еквалайзер тонів_](../module-reference/processing-modules/tone-equalizer.md), екранні елементи керування яких активуються лише тоді, коли ці модулі мають фокус. Для _кадрування_ зміни зберігаються лише тоді, коли модуль втрачає фокус.\n"
+
+#, no-wrap
+#~ msgid "You can alter the value of a slider more quickly or slowly than normal by defining the _speed_ of the action in the shortcut mapping screen. By default a _value_ (or _force_) effect is given a speed of 1.0, which means that it is changed at the default rate defined by the given slider. You can alter the slider more quickly by increasing the speed (a speed of 10 makes the action 10x faster) or more slowly by decreasing it (a speed of 0.1 makes the action 10x slower).\n"
+#~ msgstr "Ви можете змінити значення повзунка швидше або повільніше, ніж зазвичай, визначивши _швидкість_ дії на екрані зіставлення прискорювачів. За замовчуванням ефекту _значення_ (або _необмежено_) надається швидкість 1,0, що означає, що значення змінюється зі швидкістю за замовчуванням, визначеною даним повзунком. Ви можете змінити значення повзунка швидше, збільшуючи швидкість (швидкість 10 робить дію в 10 разів швидше) або повільніше, зменшуючи її (швидкість 0,1 робить дію в 10 разів повільнішою).\n"
+
+#, no-wrap
+#~ msgid "fallbacks"
+#~ msgstr "резервні дії"
+
+#, no-wrap
+#~ msgid "Where a _widget_ can have multiple different _actions_ applied to it, it can be tedious to set up individual shortcuts for each one of those actions. To make this process simpler, if you create a simple shortcut a number of effects can be made available by default as extensions to that shortcut. These are known as _fallbacks_.\n"
+#~ msgstr "Якщо до _віджета_ може бути застосовано кілька різних _дій_, налаштовувати окремі прискорювачі для кожної з цих дій може бути стомливо. Щоб спростити цей процес, якщо ви створюєте простий прискорювач, ряд ефектів може бути доступним за замовчуванням як розширення для цього прискорювача. Вони відомі як _резервні дії_.\n"
+
+#, no-wrap
+#~ msgid "While fallbacks are a powerful way to quickly set up multiple actions using predefined and consistent shortcuts, they will assign a lot of actions automatically (which might not be what you want), and can be hard to understand. Fallbacks are therefore disabled by default and you will need to click on the \"enable fallbacks\" check box in the shortcuts setup window to enable them.\n"
+#~ msgstr "Хоча резервні дії є потужним способом швидкого налаштування кількох дій за допомогою попередньо визначених і консистентних прискорювачів, вони автоматично призначатимуть багато дій (що може бути не тим, що ви хочете), і їх може бути важко зрозуміти. Тому резервні дії вимкнено за замовчуванням, і вам потрібно буде натиснути прапорець \"дозволити резервні дії\" у вікні налаштування прискорювачів, щоб увімкнути їх.\n"
+
+#, no-wrap
+#~ msgid "To take a brief example, you could create a simple shortcut (e.g. Ctrl+R) against a processing module. This will automatically set up the following _fallback_ effects using the defined shortcut, extended with mouse-clicks. In each case (except the first) you should hold the initial shortcut while clicking with your mouse. The final mouse-click will apply the action defined below:\n"
+#~ msgstr "Для короткого прикладу ви можете створити простий прискорювач (наприклад, Ctrl+R) для модуля обробки. Це автоматично налаштує наступні _резервні_ ефекти за допомогою визначеного прискорювача, розширеного кліками миші. У кожному випадку (крім першого) слід утримувати початковий прискорювач, клікаючи мишею. Остаточний клік мишею застосує дію, визначену нижче:\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R (no mouse-click) to show/hide the module (the default fallback)\n"
+#~ msgstr "Ctrl+R (без кліку мишкою), щоб показати/приховати модуль (резервна дія за замовчуванням)\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R+left-click to enable/disable the module\n"
+#~ msgstr "Ctrl+R+клік лівою кнопкою миші, щоб увімкнути/вимкнути модуль\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R+left-double-click to reset the module\n"
+#~ msgstr "Ctrl+R+подвійний клік лівою кнопкою миші, щоб скинути модуль\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R+right-click to show the module's preset menu\n"
+#~ msgstr "Ctrl+R+клік правою кнопкою миші, щоб відобразити меню пресетів модуля\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R+right-double-click to show the module's multiple instance menu\n"
+#~ msgstr "Ctrl+R+подвійний клік правою кнопкою миші, щоб відкрити меню екземплярів модуля\n"
+
+#, no-wrap
+#~ msgid "Similar fallbacks are defined for many common UI elements and all can be manually overridden.\n"
+#~ msgstr "Подібні резервні дії визначені для багатьох загальних елементів інтерфейсу користувача, і всі вони можуть бути змінені вручну.\n"
+
+#, no-wrap
+#~ msgid "Some fallback actions are defined using modifier keys (usually `Ctrl+` and `Shift+`). In this case you must define an initial shortcut without such a modifier in order to be able to use these fallbacks. For example, if you assign Ctrl+R to an action, you cannot use a `Ctrl+` fallback. Some default fallbacks of this type are provided for the _value_ element and for horizontal/vertical movements in the (zoomed) central area -- in this case, `Shift+` increases the speed to 10.0 and `Ctrl+` decreases the speed to 0.1.\n"
+#~ msgstr "Деякі резервні дії визначаються за допомогою клавіш-модифікаторів (зазвичай `Ctrl+` і `Shift+`). У цьому випадку ви повинні визначити початковий прискорювач без такого модифікатора, щоб мати можливість використовувати ці резервні дії. Наприклад, якщо ви призначите дії Ctrl+R, ви не можете використовувати резервну дію Ctrl+. Деякі резервні дії цього типу передбачені для елемента _значення_ та для горизонтальних/вертикальних переміщень у (збільшеній) центральній області -- у цьому випадку Shift+ збільшує швидкість до 10,0, а Ctrl+ зменшує швидкість до 0,1.\n"
+
+#, no-wrap
+#~ msgid "To see a list of _all_ of the default fallbacks, click the \"enable fallbacks\" checkbox in the shortcut mapping screen and select the \"fallbacks\" category in the top panel. To see the fallbacks for a given widget (e.g. a slider) just select that widget in the top panel. In both cases an additional item (also named \"fallbacks\") will then appear in the bottom panel containing full details of the available fallbacks.\n"
+#~ msgstr "Щоб переглянути список _всіх_ резервних дій за замовчуванням, установіть прапорець \"дозволити резервні дії\" на екрані зіставлення прискорювачів і виберіть категорію \"резервні дії\" на верхній панелі. Щоб побачити резервні дії для певного віджета (наприклад, повзунка), просто виберіть цей віджет на верхній панелі. В обох випадках на нижній панелі з’явиться додатковий елемент (також званий \"резервними діями\"), що містить повну інформацію про доступні резервні дії.\n"
+
+#, no-wrap
+#~ msgid "Fallbacks are only applied if no other shortcut using that combination has been explicitly created. In the above example, if you were to explicitly assign Ctrl+R+left-click to another action, the \"enable/disable module\" fallback would be ignored.\n"
+#~ msgstr "Резервні дії застосовуються лише в тому випадку, якщо явно не створено жодного іншого прискорювача, що використовує цю комбінацію. У наведеному вище прикладі, якби ви явно призначили \"Ctrl+R+клік лівою кнопкою миші\" на іншу дію, резервну дію \"увімкнути/вимкнути модуль\" буде проігноровано.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "As with any other shortcut, fallback settings are fully customizable. \n"
+#~ msgid "As with any other shortcut, fallback settings are fully customizable.\n"
+#~ msgstr "Як і для будь-якого іншого прискорювача, резервні дії повністю налаштовуються. \n"
 
 #, no-wrap
 #~ msgid "overview"

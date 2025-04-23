@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-04-23 00:20+0200\n"
+"POT-Creation-Date: 2025-04-23 16:30+0200\n"
 "PO-Revision-Date: 2022-09-22 17:38+0000\n"
 "Last-Translator: Stephan Hoek <stephanhoek@gmail.com>\n"
 "Language-Team: Dutch <https://weblate.pixls.us/projects/Ansel/dtdocs/nl/>\n"
@@ -1159,7 +1159,7 @@ msgstr "Het volgende gedeelte geeft meer details over het [gebruik](usage.md) va
 
 #. type: Title ##
 #: content/views/_index.md content/special-topics/from-darktable.md
-#: content/overview/user-interface.md
+#: content/preferences-settings/shortcuts.md content/overview/user-interface.md
 #, fuzzy, no-wrap
 #| msgid "views"
 msgid "Views"
@@ -3261,9 +3261,8 @@ msgstr "Modules die in darktable 3.4 zijn verouderd, worden bijvoorbeeld verwijd
 msgid "This section describes how to interact with processing module controls.\n"
 msgstr "In dit gedeelte wordt beschreven hoe u kunt werken met de besturingselementen van de verwerkingsmodule.\n"
 
-#. type: Title ###
+#. type: Title ##
 #: content/views/darkroom/processing-modules/module-controls.md
-#: content/preferences-settings/shortcuts.md
 #, no-wrap
 msgid "sliders"
 msgstr "schuifregelaars"
@@ -3423,7 +3422,6 @@ msgstr "Module-instellingen kunnen ook worden aangepast met behulp van snelkoppe
 
 #. type: Title ###
 #: content/views/darkroom/processing-modules/_index.md
-#: content/preferences-settings/shortcuts.md
 #: content/modules/processing-modules/_index.md content/modules/_index.md
 #, no-wrap
 msgid "processing modules"
@@ -9176,172 +9174,111 @@ msgstr "snelkoppelingen"
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "You can perform almost any action in Ansel with a keyboard/mouse shortcut. You can also use various other input devices, including MIDI devices and game controllers -- see the [midi device support](../special-topics/midi-device-support.md) section for details. These are referred to as _external devices_ or just _devices_ in this guide.\n"
-msgstr "Je kan bijna elke actie in Ansel uitvoeren met een sneltoets voor toetsenbord/muis. Je kan ook verschillende andere invoerapparaten gebruiken, waaronder MIDI-apparaten en spelconsoles -- zie de sectie [ondersteuning voor midi-apparaten](../special-topics/midi-device-support.md) voor details. Deze worden in deze handleiding _externe apparaten_ of gewoon _apparaten_ genoemd.\n"
+msgid "Some actions in Ansel can be performed with a keyboard shortcut. A table of key shortcuts is available in _Help > Table of key shortcuts_. \n"
+msgstr ""
+
+#. type: Plain text
+#: content/preferences-settings/shortcuts.md
+#, no-wrap
+msgid "**Note:** The table shows different key shortcuts for different Views.\n"
+msgstr ""
 
 #. type: Title ##
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "defining shortcuts"
+#, fuzzy, no-wrap
+#| msgid "defining shortcuts"
+msgid "Assigning key shortcuts"
 msgstr "snelkoppelingen definiëren"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "A _shortcut_ is a combination of key or button presses and/or mouse or device movements that performs an _action_ in Ansel.\n"
-msgstr "Een _snelkoppeling_ is een combinatie van het indrukken van een toets of knop en/of muis- of apparaatbewegingen die een _actie_ in Ansel uitvoert.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A single action may have multiple shortcuts but a single shortcut can only be linked to one action in a given Ansel view -- you can't chain actions together except by applying a preset or style. You can, however, set up a single shortcut that does one thing in the lighttable view, say, and another in the darkroom view.\n"
-msgstr "Een enkele actie kan meerdere snelkoppelingen hebben, maar een enkele snelkoppeling kan slechts aan één actie worden gekoppeld in een bepaalde Ansel-weergave -- ja ka geen acties aan elkaar koppelen, behalve door een voorinstelling of stijl toe te passen. Je kan echter een enkele snelkoppeling instellen die één ding doet in de bibliotheekweergave, bijvoorbeeld, en een andere in de ontwikkelenweergave.\n"
+msgid "For the time being shortcuts can only be defined or changed by editing your `$HOME/.config/Ansel/shortcutsrc` file. There is no support for MIDI-devices in Ansel.\n"
+msgstr ""
 
 #. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "initiating a shortcut"
-msgstr "snelkoppeling starten"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A shortcut must be initiated by either\n"
-msgstr "Een snelkoppeling moet worden gestart door ofwel:\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "pressing a key on the keyboard; or\n"
-msgstr "een toets op het toetsenbord indrukken; of\n"
-
-#. type: Bullet: '- '
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
-#| msgid "pressing a button or moving a knob/joystick on an external device \n"
-msgid "pressing a button or moving a knob/joystick on an external device\n"
-msgstr "op een knop drukken of een knop/joystick op een extern apparaat bewegen \n"
+#| msgid "deleting default shortcuts"
+msgid "Deleting default shortcuts"
+msgstr "standaard snelkoppelingen verwijderen"
+
+#. type: Plain text
+#: content/preferences-settings/shortcuts.md
+#, fuzzy, no-wrap
+#| msgid "When launching the application, Ansel loads default shortcuts first, and then loads user-defined shortcuts on top. This allows default shortcuts to be overridden with a new action but prevents them from being deleted (since the deleted shortcut will be automatically reloaded on the next restart). \n"
+msgid "When launching the application, Ansel loads default shortcuts first, and then loads user-defined shortcuts on top. This allows default shortcuts to be overridden with a new action but prevents them from being deleted (since the deleted shortcut will be automatically reloaded on the next restart).\n"
+msgstr "Bij het starten van de applicatie zal Ansel als eerste alle standaard snelkoppelingen laden, waarna hij de gebruiker gedefinieerde snelkoppelingen hier bovenop laadt. Dit maakt het mogelijk om standaard snelkoppelingen te overschrijven zonder deze te verwijderen (de overschreven standaard snelkoppelingen worden bij herstarten toch opnieuw geladen). \n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "You cannot initiate a shortcut by moving your mouse or pressing one of its buttons, as these actions are used to interact with Ansel's UI.\n"
-msgstr "Je kan geen snelkoppeling starten door jouw muis te bewegen of op een van de knoppen te drukken, omdat deze acties worden gebruikt als interactie met de gebruikersinterface van Ansel.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "simple shortcuts"
-msgstr "eenvoudige snelkoppelingen"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A shortcut that only includes button and/or key presses (and not mouse/device movements) is referred to as a _simple_ shortcut.\n"
-msgstr "Een snelkoppeling die alleen het indrukken van knoppen en/of toetsen bevat (en geen bewegingen van de muis/apparaat) wordt een _eenvoudige_ snelkoppeling genoemd.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A simple shortcut must be initiated as above, but can include:\n"
-msgstr "Een eenvoudige snelkoppeling moet worden gestart zoals hierboven, maar kan het volgende bevatten:\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "One or more modifier keys (Shift, Ctrl, Alt), held down while executing the remainder of the shortcut\n"
-msgstr "Een of meer modificatietoetsen (Shift, Ctrl, Alt), ingedrukt tijdens het uitvoeren van de rest van de sneltoets\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Up to three key presses, the last one of which may be a long-press (defined as a key-press longer than your system's double-click duration)\n"
-msgstr "Maximaal drie toetsaanslagen, waarvan de laatste lang indrukken kan zijn (gedefinieerd als een toetsdruk die langer duurt dan de dubbelklikduur van jouw systeem)\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Similarly, up to three device-button presses or mouse-button clicks, the last of which may be long\n"
-msgstr "Evenzo kunnen maximaal drie keer op de apparaatknop of muisknop worden gedrukt, waarvan de laatste lang kan duren\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Various combinations of keyboard, mouse, and device buttons can be used to create simple shortcuts.\n"
-msgstr "Er kunnen verschillende combinaties van toetsenbord-, muis- en apparaatknoppen worden gebruikt om eenvoudige snelkoppelingen te maken.\n"
+msgid "There are two ways to delete default shortcuts:\n"
+msgstr "Er zijn twee manieren om standaard snelkoppelingen te verwijderen:\n"
 
 #. type: Title ####
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "creating additional modifiers"
-msgstr "extra modificators maken"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The only valid modifiers are the Shift, Ctrl and Alt keys on the keyboard. You can define additional keys (or device buttons) as modifiers by assigning keys/buttons to the \"global/modifier\" action. However, these will merely function as extra Ctrl, Alt or Shift keys -- you cannot create \"new\" modifiers.\n"
-msgstr "De enige geldige modificatiors zijn de Shift-, Ctrl- en Alt-toetsen op het toetsenbord. Je kan extra toetsen (of apparaatknoppen) als modificators definiëren door toetsen/knoppen toe te wijzen aan de actie \"algemeen/modificator\". Deze zullen echter alleen functioneren als extra Ctrl-, Alt- of Shift-toetsen -- je kan geen \"nieuwe\" modificators maken.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "extending simple shortcuts with movement"
-msgstr "eenvoudige snelkoppelingen uitbreiden met beweging"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "For certain actions you can choose to _extend_ a simple shortcut using mouse/device movement. For example you might hold Ctrl+X while scrolling with your mouse to change the value of a slider. The following can be used to extend a simple shortcut:\n"
-msgstr "Voor bepaalde acties kan je ervoor kiezen om een eenvoudige snelkoppeling _uit te breiden_ met muis/apparaatbeweging. Je kan bijvoorbeeld Ctrl+X ingedrukt houden terwijl je met jouw muis scrolt om de waarde van een schuifregelaar te wijzigen. Het volgende kan worden gebruikt om een eenvoudige snelkoppeling uit te breiden:\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Movement of the mouse scroll wheel\n"
-msgstr "Beweging van het muiswiel\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Horizontal, vertical or diagonal movement of the mouse cursor\n"
-msgstr "Horizontale, vertikale of diagonale beweging van de muiscursor\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Movement of a knob/joystick on an external device\n"
-msgstr "Beweging van een knop/joystick op een extern apparaat\n"
+#, fuzzy, no-wrap
+#| msgid "prevent default shortcuts from being reloaded"
+msgid "Prevent default shortcuts from being reloaded"
+msgstr "voorkomt dat standaard snelkoppelingen opnieuw geladen worden"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
-#| msgid "To extend a simple shortcut, you must hold the final key/button of the simple shortcut while performing the extending mouse/device movement. \n"
-msgid "To extend a simple shortcut, you must hold the final key/button of the simple shortcut while performing the extending mouse/device movement.\n"
-msgstr "Om een eenvoudige snelkoppeling uit te breiden, moet je de laatste toets/knop van de eenvoudige snelkoppeling ingedrukt houden terwijl je de uitbreidende muis/apparaatbeweging uitvoert. \n"
+#| msgid "Disable [preferences > miscellaneous > interface > load default shortcuts at startup](./miscellaneous.md) to prevent default shortcuts from being reloaded. While this option is disabled, Ansel will only load user-defined shortcuts and any defaults that you have not subsequently deleted or overridden.\n"
+msgid "Disable [Preferences > Miscellaneous > Interface > Load default shortcuts at startup](./miscellaneous.md) to prevent default shortcuts from being reloaded. While this option is disabled, Ansel will only load user-defined shortcuts and any defaults that you have not subsequently deleted or overridden.\n"
+msgstr "Schakel uit [voorkeuren >diversen > interface > laad standaard snelkoppelingen bij opstarten](./miscellaneous.md) om te voorkomen dat standaard snelkoppelingen opnieuw geladen worden. Zolang deze optie uitgeschakeld is, zal Ansel alleen de gebruiker gedefinieerde snelkoppelingen laden met alle niet overschreven standaard snelkoppelingen.\n"
+
+#. type: Title ####
+#: content/preferences-settings/shortcuts.md
+#, fuzzy, no-wrap
+#| msgid "override default shortcut with a no-op action"
+msgid "Override default shortcut with a no-op action"
+msgstr "overschrijven standaard sneltoets met no-op actie"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
+#, fuzzy, no-wrap
+#| msgid "You can _override_ the action of a default shortcut by assigning an identical shortcut to the \"global/no-op\" action (which does nothing). You can do this either in the shortcut mapping screen (above) or by directly editing your `$HOME/.config/Ansel/shortcutsrc` file. If you want to disable a lot of default shortcuts the latter option is recommended (you must exit Ansel first). For example, the following default shortcuts are defined in `shortcutsrc` for switching views in Ansel:\n"
+msgid "You can _override_ the action of a default shortcut by assigning an identical shortcut to the \"global/no-op\" action (which does nothing). You can do this by directly editing your `$HOME/.config/Ansel/shortcutsrc` file (you must exit Ansel first). For example, the following default shortcuts are defined in `shortcutsrc` for switching views in Ansel:\n"
+msgstr "De actie van een standaard snelkoppeling kan je _overschrijven_ door een identieke snelkoppeling toe te wijzen aan de \"global/no-op\"-actie (die niets doet). Je kan dit doen in het scherm voor het toewijzen van snelkoppelingen (hierboven) of door rechtstreeks jouw bestand `$HOME/.config/Ansel/shortcutsrc` te bewerken. Als je veel standaard snelkoppelingen wilt uitschakelen, wordt de laatste optie aanbevolen (je moet eerst Ansel afsluiten). De volgende standaardsnelkoppelingen zijn bijvoorbeeld gedefinieerd in `shortcutsrc` voor het wisselen van weergaven in Ansel:\n"
+
+#. type: Fenced code block
+#: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "For external devices you do not need to start with a _simple_ shortcut -- you can directly assign a control knob or joystick to an action -- though this will significantly reduce the flexibility of such devices.\n"
-msgstr "Voor externe apparaten hoeft je niet te beginnen met een _eenvoudige_ snelkoppeling - je kan direct een bedieningsknop of joystick toewijzen aan een actie - hoewel dit de flexibiliteit van dergelijke apparaten aanzienlijk zal verminderen.\n"
+msgid ""
+"Return=global/switch views/darkroom\n"
+"Escape=global/Ateliers/Lighttable\n"
+msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Long button and key presses cannot be extended, as the length of the click/press is timed using the release of the final button/key -- such shortcuts must be terminated with the raising of the final button/key.\n"
-msgstr "Lange toets- en toetsaanslagen kunnen niet worden verlengd, aangezien de duur van de klik/druk wordt getimed door het loslaten van de laatste knop/toets -- dergelijke snelkoppelingen moeten worden beëindigd met het omhoog brengen van de laatste knop/toets.\n"
+#, fuzzy, no-wrap
+#| msgid "You can disable all of these shortcuts by changing `shortcutsrc` as follows:\n"
+msgid "You could disable these shortcuts by changing `shortcutsrc` as follows:\n"
+msgstr "Je kan al deze snelkoppelingen uitschakelen door `shortcutsrc` als volgt te wijzigen:\n"
 
-#. type: Plain text
+#. type: Fenced code block
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "**Note:** You may need to switch off the \"disable touchpad while typing\" setting if you want to use extended shortcuts with a laptop touchpad.\n"
-msgstr "**Opmerking:** Mogelijk moet je de instelling \"touchpad uitschakelen tijdens typen\" uitschakelen als je uitgebreide snelkoppelingen wilt gebruiken met een laptop-touchpad.\n"
+msgid ""
+"Return=global/no-op\n"
+"Escape=global/no-op\n"
+msgstr ""
 
 #. type: Title ##
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "actions"
+#, fuzzy, no-wrap
+#| msgid "actions"
+msgid "Actions"
 msgstr "acties"
+
+#. type: Plain text
+#: content/preferences-settings/shortcuts.md
+#, no-wrap
+msgid "**Note:** The following two section were used to explain the deprecated shortcut mapping screen and are left here for future reference or development.\n"
+msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9394,9 +9331,12 @@ msgstr "Dergelijke wijs-en-klik-type _acties_ worden normaal gesproken gedefinie
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "widget\n"
+#| ": Each visible part of the user interface is known as a _widget_. For example the Ansel application window is a widget, containing side panel widgets, each of which contains module widgets, each of which contains button, slider and dropdown list widgets etc... When assigning a shortcut to an action, you must first decide which widget it is to be applied to.\n"
 msgid ""
-"widget\n"
+"Widget\n"
 ": Each visible part of the user interface is known as a _widget_. For example the Ansel application window is a widget, containing side panel widgets, each of which contains module widgets, each of which contains button, slider and dropdown list widgets etc... When assigning a shortcut to an action, you must first decide which widget it is to be applied to.\n"
 msgstr ""
 "widget\n"
@@ -9404,9 +9344,12 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "element\n"
+#| ": An _element_ is the part of a UI widget that is affected by your shortcut. For example, for a slider that has a color picker, you can make a shortcut activate the color picker _button_ element or change the _value_ element of the slider. For a row of tabs (the row is a single widget) you can select which tab element to activate or use your mouse scroll wheel to scroll through the tabs.\n"
 msgid ""
-"element\n"
+"Element\n"
 ": An _element_ is the part of a UI widget that is affected by your shortcut. For example, for a slider that has a color picker, you can make a shortcut activate the color picker _button_ element or change the _value_ element of the slider. For a row of tabs (the row is a single widget) you can select which tab element to activate or use your mouse scroll wheel to scroll through the tabs.\n"
 msgstr ""
 "element\n"
@@ -9414,9 +9357,12 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "effect\n"
+#| ": A shortcut can sometimes have multiple possible _effects_ on a given _element_. For example, a button can be activated as if it was pressed with a plain mouse-click or as if it was pressed with Ctrl+click. A slider's value can be edited, increased/decreased or reset.\n"
 msgid ""
-"effect\n"
+"Effect\n"
 ": A shortcut can sometimes have multiple possible _effects_ on a given _element_. For example, a button can be activated as if it was pressed with a plain mouse-click or as if it was pressed with Ctrl+click. A slider's value can be edited, increased/decreased or reset.\n"
 msgstr ""
 "effect\n"
@@ -9424,287 +9370,30 @@ msgstr ""
 
 #. type: Title ##
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "assigning shortcuts to actions"
-msgstr "snelkoppelingen toewijzen aan acties"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "There are two primary methods of assigning a shortcut to an action.\n"
-msgstr "Er zijn twee primaire methoden om een snelkoppeling aan een actie toe te wijzen.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "visual shortcut mapping"
-msgstr "visuele snelkoppelingstoewijzing"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Click on the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon in the [top panel](../overview/user-interface/top-panel.md) of any Ansel view to enter visual shortcut mapping mode. If you hold Ctrl while clicking the button, no confirmation will appear when overwriting an existing shortcut mapping.\n"
-msgstr "Klik op het ![visueel mapping knop](./shortcuts/visual-mapping-button.png#icon) icoon in het [bovenpaneel](../overview/user-interface/top-panel.md) van een willekeurige Ansel weergave om de modus voor visuele snelkoppelingen te openen. Als u Ctrl ingedrukt houdt terwijl u op de knop klikt, verschijnt er geen bevestiging bij het overschrijven van een bestaande snelkoppelingstoewijzing.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The mouse cursor will change as you hover over UI widgets, to indicate whether or not a mapping can be created:\n"
-msgstr "De muiscursor verandert wanneer je over UI-widgets beweegt, om aan te geven of er al dan niet een toewijzing kan worden gemaakt:\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A down arrow with a line ![expand icon](./shortcuts/expand-icon.png#icon) appears when you hover over a module header, to indicate that you can click to expand the module.\n"
-msgstr "Een pijl-omlaag met een lijn ![expandeer pictogram](./shortcuts/expand-icon.png#icon) verschijnt wanneer je de muisaanwijzer over een module koptekst beweegt, om aan te geven dat je kunt klikken om de module uit te vouwen.\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
-#| msgid "A spiral ![spiral icon](./shortcuts/spiral-icon.png#icon) indicates that a shortcut can be defined for the widget under the cursor. \n"
-msgid "A spiral ![spiral icon](./shortcuts/spiral-icon.png#icon) indicates that a shortcut can be defined for the widget under the cursor.\n"
-msgstr "Een spiraal ![spiraal pictogram](./shortcuts/spiral-icon.png#icon) geeft aan dat er een snelkoppeling kan worden gedefinieerd voor de widget onder de cursor. \n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "An up arrow ![up icon](./shortcuts/up-icon.png#icon) indicates that, in addition to assigning a shortcut, you can also add the widget to the [quick access panel](../darkroom/organization/quick-access-panel.md) in the darkroom (by Ctrl+clicking on it).\n"
-msgid "An up arrow ![up icon](./shortcuts/up-icon.png#icon) indicates that, in addition to assigning a shortcut, you can also add the widget to the [quick access panel](../views/darkroom/organization/quick-access-panel.md) in the darkroom (by Ctrl+clicking on it).\n"
-msgstr "Een pijl omhoog ![omhoog pictogram](./shortcuts/up-icon.png#icon) geeft aan dat je, naast het toewijzen van een snelkoppeling, ook de widget kan toevoegen aan het [snelle toegangspaneel](../darkroom/ organisatie/quick-access-panel.md) in ontwikkelen (door erop te Ctrl+ klikken).\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A down arrow ![down icon](./shortcuts/down-icon.png#icon) indicates that the widget is already in the quick access panel (Ctrl+click to remove it).\n"
-msgstr "Een pijl naar beneden ![neerwaarts pictorgram](./shortcuts/down-icon.png#icon) geeft aan dat de widget zich al in het snelle toegangspaneel bevindt (Ctrl+klik om het te verwijderen).\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "A cross ![cross icon](./shortcuts/cross-icon.png#icon) indicates that there is no mappable widget under the cursor. \n"
-msgid "A cross ![cross icon](./shortcuts/cross-icon.png#icon) indicates that there is no mappable widget under the cursor.\n"
-msgstr "Een kruis ![kruis pictorgram](./shortcuts/cross-icon.png#icon) geeft aan dat er geen toewijsbare widget onder de cursor is. \n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "Press a key combination while hovering over a mappable widget to assign a shortcut to that widget -- a default action will be assigned to that shortcut based on the type of widget and whether you have keyed a _simple_ or _extended_ shortcut.  See below for details of some of the default assigned actions. \n"
-msgid "Press a key combination while hovering over a mappable widget to assign a shortcut to that widget -- a default action will be assigned to that shortcut based on the type of widget and whether you have keyed a _simple_ or _extended_ shortcut.  See below for details of some of the default assigned actions.\n"
-msgstr "Druk op een toetsencombinatie terwijl je de muisaanwijzer op een toewijsbare widget houdt om een snelkoppeling aan die widget toe te wijzen -- er wordt een standaardactie aan die snelkoppeling toegewezen op basis van het type widget en of je een _eenvoudige_ of _uitgebreide_ sneltoets hebt ingetoetst. Zie hieronder voor details van enkele van de standaard toegewezen acties. \n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Left-click on a mappable widget to open the shortcut mapping screen for that widget (see below). Left-click anywhere else on the screen to open the shortcut mapping screen, expanded (where possible) based on the part of the screen you have clicked on. This screen can be used to alter the action assigned to a shortcut and to configure shortcuts for non-visual actions. Entering the shortcut mapping screen exits visual shortcut mapping mode.\n"
-msgstr "Klik met de linkermuisknop op een toewijsbare widget om het snelkoppelingsscherm voor die widget te openen (zie hieronder). Klik met de linkermuisknop ergens anders op het scherm om het scherm voor snelkoppelingen te openen, uitgevouwen (waar mogelijk) op basis van het deel van het scherm waarop je hebt geklikt. Dit scherm kan worden gebruikt om de actie die aan een snelkoppeling is toegewezen te wijzigen en om snelkoppelingen voor niet-visuele acties te configureren. Als je het scherm voor het toewijzen van snelkoppelingen opent, verlaat je de modus voor het toewijzen van visuele snelkoppelingen.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can assign as many shortcuts as you like in a single mapping session and then exit mapping mode when you are finished by clicking the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon again or right-clicking anywhere on the screen.\n"
-msgstr "Je kan zoveel snelkoppelingen toewijzen als je wilt in een enkele toewijssessie en vervolgens de toewijsmodus verlaten wanneer je klaar bent door nogmaals op het pictogram ![visuele toewijs knop](./shortcuts/visual-mapping-button.png#icon) te klikken of ergens op het scherm met de rechtermuisknop te klikken.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can delete a user-defined shortcut mapping by defining it a second time against the same widget. If you attempt to reallocate an existing shortcut to a new action, you will be notified of the conflict and asked whether you wish to replace the existing shortcut.\n"
-msgstr "Je kan een door de gebruiker gedefinieerde snelkoppelingstoewijzing verwijderen door deze een tweede keer te definiëren voor dezelfde widget. Als je probeert een bestaande snelkoppeling opnieuw toe te wijzen aan een nieuwe actie, wordt je op de hoogte gesteld van het conflict en wordt je gevraagd of u de bestaande snelkoppeling wilt vervangen.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Finally, if you scroll with your mouse wheel while in visual mapping mode (without pressing any other buttons/keys) when hovering over a slider, this will change the default speed for that slider -- scroll up to increase and down to decrease. When you leave mapping mode, normal mouse scrolls over that slider will change its value with the adjusted speed.\n"
-msgstr "Als u ten slotte met uw muiswiel scrolt terwijl u zich in de visuele kaartmodus bevindt (zonder op andere knoppen/toetsen te drukken) en u over een schuifregelaar beweegt, verandert dit de standaardsnelheid voor die schuifregelaar -- omhoog scrollen om te verhogen en omlaag om te verlagen. Wanneer u de kaartmodus verlaat, verandert de normale muisbeweging over die schuifregelaar de waarde met de aangepaste snelheid.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "shortcut mapping screen"
-msgstr "snelkoppeling toewijzingsscherm"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The most flexible way to create shortcuts is by using the shortcut mapping screen, which can be accessed from the global preferences dialog or by left-clicking in visual mapping mode. This screen allows access to all available actions, including some that are not directly linked to a UI widget.\n"
-msgstr "De meest flexibele manier om snelkoppelingen te maken, is door het scherm voor snelkoppelingen te gebruiken, dat toegankelijk is vanuit het dialoogvenster met algemene voorkeuren of door met de linkermuisknop te klikken in de visuele toewijsmodus. Dit scherm geeft toegang tot alle beschikbare acties, inclusief enkele die niet direct zijn gekoppeld aan een UI-widget.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The top panel of the shortcut mapping screen shows a list of available UI widgets/actions and the bottom panel shows the shortcuts currently assigned to them. You can search the top and bottom panels using the text entry boxes at the bottom of the screen (use the up/down arrow keys to navigate between matches).\n"
-msgstr "Het bovenste paneel van het snelkoppelingstoewijzingsscherm toont een lijst met beschikbare UI-widgets/acties en het onderste paneel toont de snelkoppelingen die er momenteel aan zijn toegewezen. Je kan de boven- en onderpanelen doorzoeken met behulp van de tekstinvoervakken onder aan het scherm (gebruik de pijltoetsen omhoog/omlaag om tussen overeenkomsten te navigeren).\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Double-click an item in the top panel to create a new shortcut for that item, and then enter your desired shortcut (right-click to cancel). Once you have done this, a new entry will appear in the bottom panel showing the shortcut you have created. You can then manually alter the _element_, _effect_, _speed_ or _instance_ of the assigned action against that shortcut in the bottom panel. To delete a user-defined shortcut, select it in the bottom panel and press the Delete key.\n"
-msgstr "Dubbelklik op een item in het bovenste paneel om een nieuwe snelkoppeling voor dat item te maken en voer vervolgens de gewenste snelkoppeling in (klik met de rechtermuisknop om te annuleren). Zodra je dit hebt gedaan, verschijnt er een nieuw item in het onderste paneel met de snelkoppeling die je hebt gemaakt. Je kan vervolgens handmatig de _element_, _effect_, _snelheid_ van _instantie_ van de toegewezen actie tegen die snelkoppeling in het onderste paneel wijzigen. Om een door de gebruiker gedefinieerde snelkoppeling te verwijderen, selecteer je deze in het onderste paneel en druk je op de Delete-toets.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Selecting an existing shortcut in the bottom panel will highlight (in bold) the matching action and its parents in the top panel. You can use this to navigate the top panel and find related actions.\n"
-msgstr "Selecteren van een bestaand sneltoets in het onder paneel zal de bijpassende actie en zijn ouder vet weergeven in het boven paneel. Dit kan je gebruiken om een gerelateerde acties te zoeken in het boven paneel.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The following additional options are provided in the shortcut mapping screen:\n"
-msgstr "De volgende extra opties zijn beschikbaar in het scherm voor het toewijzen van snelkoppelingen:\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid ""
-"export...\n"
-": Export the current shortcut mappings for one or all of your devices (keyboard/mouse, midi, game controller) to an external file. The dialog will show you how many shortcuts exist for each device.\n"
-msgstr ""
-"exporteren...\n"
-": Exporteer de huidige snelkoppelingstoewijzingen voor een of al jouw apparaten (toetsenbord/muis, midi, spel controller) naar een extern bestand. Het dialoogvenster laat jou zien hoeveel snelkoppelingen er zijn voor elk apparaat.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "import...\n"
-#| ": Import shortcut mappings from an external file for one or all of your devices. When loading a device, you can chose to assign it a different number. This can for example be used to exchange midi layouts. Before loading, you can chose to wipe the specific device first. When loading all from an empty file, this will effectively delete all your shortcuts. \n"
-msgid ""
-"import...\n"
-": Import shortcut mappings from an external file for one or all of your devices. When loading a device, you can chose to assign it a different number. This can for example be used to exchange midi layouts. Before loading, you can chose to wipe the specific device first. When loading all from an empty file, this will effectively delete all your shortcuts.\n"
-msgstr ""
-"importeren...\n"
-": Snelkoppelingstoewijzingen importeren uit een extern bestand voor een of al jouw apparaten. Bij het laden van een apparaat kan je ervoor kiezen om er een ander nummer aan toe te kennen. Dit kan bijvoorbeeld worden gebruikt om midi-lay-outs uit te wisselen. Voordat je begint met laden, kan je ervoor kiezen om eerst het specifieke apparaat te wissen. Wanneer je alles vanuit een leeg bestand laadt, worden al jouw snelkoppelingen effectief verwijderd. \n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid ""
-"restore...\n"
-": Restore your shortcut mappings to (a) The mappings shipped with Ansel by default, (b) The start of your current session, or (c) The point at which the shortcut mapping screen was last opened. When restoring, you can choose to leave any additional shortcuts that were added after the relevant checkpoint as they are, so that only changed shortcuts are restored to their previous meaning. Or you can choose to first clear all shortcuts and just load the restore point.\n"
-msgstr ""
-"herstellen...\n"
-": Herstel jouw snelkoppelingstoewijzingen naar (a) de toewijzingen die standaard bij Ansel worden geleverd, (b) het begin van jouw huidige sessie, of (c) het punt waarop het snelkoppelingstoewijzingsscherm voor het laatst is geopend. Bij het terugzetten kan je ervoor kiezen om eventuele extra snelkoppelingen die na het betreffende checkpoint zijn toegevoegd te laten zoals ze zijn, zodat alleen gewijzigde snelkoppelingen hun eerdere betekenis krijgen. Of je kan ervoor kiezen om eerst alle snelkoppelingen te wissen en gewoon het herstelpunt te laden.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "deleting default shortcuts"
-msgstr "standaard snelkoppelingen verwijderen"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "When launching the application, Ansel loads default shortcuts first, and then loads user-defined shortcuts on top. This allows default shortcuts to be overridden with a new action but prevents them from being deleted (since the deleted shortcut will be automatically reloaded on the next restart). \n"
-msgid "When launching the application, Ansel loads default shortcuts first, and then loads user-defined shortcuts on top. This allows default shortcuts to be overridden with a new action but prevents them from being deleted (since the deleted shortcut will be automatically reloaded on the next restart).\n"
-msgstr "Bij het starten van de applicatie zal Ansel als eerste alle standaard snelkoppelingen laden, waarna hij de gebruiker gedefinieerde snelkoppelingen hier bovenop laadt. Dit maakt het mogelijk om standaard snelkoppelingen te overschrijven zonder deze te verwijderen (de overschreven standaard snelkoppelingen worden bij herstarten toch opnieuw geladen). \n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "There are two ways to delete default shortcuts:\n"
-msgstr "Er zijn twee manieren om standaard snelkoppelingen te verwijderen:\n"
-
-#. type: Title ####
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "prevent default shortcuts from being reloaded"
-msgstr "voorkomt dat standaard snelkoppelingen opnieuw geladen worden"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Disable [preferences > miscellaneous > interface > load default shortcuts at startup](./miscellaneous.md) to prevent default shortcuts from being reloaded. While this option is disabled, Ansel will only load user-defined shortcuts and any defaults that you have not subsequently deleted or overridden.\n"
-msgstr "Schakel uit [voorkeuren >diversen > interface > laad standaard snelkoppelingen bij opstarten](./miscellaneous.md) om te voorkomen dat standaard snelkoppelingen opnieuw geladen worden. Zolang deze optie uitgeschakeld is, zal Ansel alleen de gebruiker gedefinieerde snelkoppelingen laden met alle niet overschreven standaard snelkoppelingen.\n"
-
-#. type: Title ####
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "override default shortcut with a no-op action"
-msgstr "overschrijven standaard sneltoets met no-op actie"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can _override_ the action of a default shortcut by assigning an identical shortcut to the \"global/no-op\" action (which does nothing). You can do this either in the shortcut mapping screen (above) or by directly editing your `$HOME/.config/Ansel/shortcutsrc` file. If you want to disable a lot of default shortcuts the latter option is recommended (you must exit Ansel first). For example, the following default shortcuts are defined in `shortcutsrc` for switching views in Ansel:\n"
-msgstr "De actie van een standaard snelkoppeling kan je _overschrijven_ door een identieke snelkoppeling toe te wijzen aan de \"global/no-op\"-actie (die niets doet). Je kan dit doen in het scherm voor het toewijzen van snelkoppelingen (hierboven) of door rechtstreeks jouw bestand `$HOME/.config/Ansel/shortcutsrc` te bewerken. Als je veel standaard snelkoppelingen wilt uitschakelen, wordt de laatste optie aanbevolen (je moet eerst Ansel afsluiten). De volgende standaardsnelkoppelingen zijn bijvoorbeeld gedefinieerd in `shortcutsrc` voor het wisselen van weergaven in Ansel:\n"
-
-#. type: Fenced code block
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid ""
-"d=global/switch views/darkroom\n"
-"l=global/switch views/lighttable\n"
-"m=global/switch views/map\n"
-"p=global/switch views/print\n"
-"s=global/switch views/slideshow\n"
-"t=global/switch views/tethering\n"
-msgstr ""
-"d=algemeen/van weergave wisselen/ontwikkelen\n"
-"l=algemeen/van weergave wisselen/bibliotheek\n"
-"m=globaal/wissel weergaven/kaart\n"
-"p=algemeen/van weergave wisselen/afdrukken\n"
-"s=algemeen/van weergave wisselen/diavoorstelling\n"
-"t=algemeen/van weergave wisselen/tethering\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can disable all of these shortcuts by changing `shortcutsrc` as follows:\n"
-msgstr "Je kan al deze snelkoppelingen uitschakelen door `shortcutsrc` als volgt te wijzigen:\n"
-
-#. type: Fenced code block
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid ""
-"d=global/no-op\n"
-"l=global/no-op\n"
-"m=global/no-op\n"
-"p=global/no-op\n"
-"s=global/no-op\n"
-"t=global/no-op\n"
-msgstr ""
-"d=global/no-op\n"
-"l=global/no-op\n"
-"m=global/no-op\n"
-"p=global/no-op\n"
-"s=global/no-op\n"
-"t=global/no-op\n"
-
-#. type: Title ##
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "common actions"
+#| msgid "common actions"
+msgid "Common actions"
 msgstr "veel voorkomende acties"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
 #, no-wrap
-msgid "The following is a list of some of the actions to which you can assign shortcuts, organized by widget type. This is not an exhaustive list and you are encouraged to browse the shortcut mapping screen for a complete list of available actions. If you assign a shortcut to a widget, it will be given a default action, depending on the type of widget and on whether you have assigned a simple or extended shortcut.\n"
-msgstr "Hieronder volgt een lijst met enkele van de acties waaraan je snelkoppelingen kunt toewijzen, geordend op widgettype. Dit is geen uitputtende lijst en je wordt aangemoedigd om door het scherm voor snelkoppelingen te bladeren voor een volledige lijst met beschikbare acties. Als je een snelkoppeling toewijst aan een widget, krijgt deze een standaardactie, afhankelijk van het type widget en van of je een eenvoudige of uitgebreide snelkoppeling hebt toegewezen.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Note that it is possible to assign a number of actions that have no effect. For example, all sliders include a _button_ element, regardless of whether such a button is actually present alongside a given slider.\n"
-msgstr "Merk op dat het mogelijk is om een aantal acties toe te wijzen die geen effect hebben. Alle schuifregelaars bevatten bijvoorbeeld een _knop_-element, ongeacht of een dergelijke knop daadwerkelijk aanwezig is naast een bepaalde schuifregelaar.\n"
+msgid "The following is a list of some of the actions to which you can assign shortcuts, organized by widget type. \n"
+msgstr ""
 
 #. type: Title ###
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "global"
+#, fuzzy, no-wrap
+#| msgid "global"
+msgid "Global"
 msgstr "algemeen"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Actions in the \"global\" section of the shortcut mapping screen can be executed from any Ansel view. Most of these actions do not have specific _elements_ as they are used to perform one-off operations.\n"
+#, fuzzy, no-wrap
+#| msgid "Actions in the \"global\" section of the shortcut mapping screen can be executed from any Ansel view. Most of these actions do not have specific _elements_ as they are used to perform one-off operations.\n"
+msgid "Actions in the \"global\" section can be executed from any Ansel view. Most of these actions do not have specific _elements_ as they are used to perform one-off operations.\n"
 msgstr "Acties in het \"algemene\" gedeelte van het snelkoppelingsscherm kunnen worden uitgevoerd vanuit elke Ansel-weergave. De meeste van deze acties hebben geen specifieke _elementen_ omdat ze worden gebruikt om eenmalige bewerkingen uit te voeren.\n"
-
-#. type: Title ###
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "views"
-msgstr "weergaven"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9716,32 +9405,35 @@ msgstr "Acties in de sectie \"weergaven\" kunnen alleen worden uitgevoerd vanuit
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
 #| msgid "buttons "
-msgid "buttons"
+msgid "Buttons"
 msgstr "knoppen "
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A button is a clickable icon in the Ansel interface. The default action, when assigning a simple shortcut to a _button_, is to activate that button as if clicked with the left mouse button. You can modify this action to activate the button as if clicked while holding a modifier key.\n"
+#, fuzzy, no-wrap
+#| msgid "A button is a clickable icon in the Ansel interface. The default action, when assigning a simple shortcut to a _button_, is to activate that button as if clicked with the left mouse button. You can modify this action to activate the button as if clicked while holding a modifier key.\n"
+msgid "A button is a clickable icon in the Ansel interface. The default action, when assigning shortcut to a _button_, is to activate that button as if clicked with the left mouse button. You can modify this action to activate the button as if clicked while holding a modifier key.\n"
 msgstr "Een knop is een klikbaar pictogram in de Ansel-interface. De standaardactie, bij het toewijzen van een eenvoudige snelkoppeling aan een _knop_, is om die knop te activeren alsof er met de linkermuisknop wordt geklikt. Je kan deze actie wijzigen om de knop te activeren alsof erop wordt geklikt terwijl je een wijzigingstoets ingedrukt houdt.\n"
 
 #. type: Title ###
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "toggles"
+#, fuzzy, no-wrap
+#| msgid "toggles"
+msgid "Toggles"
 msgstr "schakelaars"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "A toggle is a button that has a persistent on/off state. It therefore has additional _effects_ to allow you to toggle it or explicitly set its state. As with a normal button the default action, when assigning a simple shortcut to a toggle, is to activate the toggle as if clicked with the left mouse button (which toggles the button on/off).\n"
+#, fuzzy, no-wrap
+#| msgid "A toggle is a button that has a persistent on/off state. It therefore has additional _effects_ to allow you to toggle it or explicitly set its state. As with a normal button the default action, when assigning a simple shortcut to a toggle, is to activate the toggle as if clicked with the left mouse button (which toggles the button on/off).\n"
+msgid "A toggle is a button that has a persistent on/off state. It therefore has additional _effects_ to allow you to toggle it or explicitly set its state. As with a normal button the default action, when assigning a shortcut to a toggle, is to activate the toggle as if clicked with the left mouse button (which toggles the button on/off).\n"
 msgstr "Een schakelaar is een knop die een permanente aan/uit-status heeft. Het heeft daarom extra _effecten_ waarmee je kan schakelen of de status expliciet kan instellen. Net als bij een normale knop is de standaardactie bij het toewijzen van een eenvoudige snelkoppeling aan een schakelaar om de schakelaar te activeren alsof erop wordt geklikt met de linkermuisknop (die de knop aan/uit zet).\n"
 
 #. type: Title ###
 #: content/preferences-settings/shortcuts.md
-#: content/modules/utility-modules/_index.md content/modules/_index.md
-#, no-wrap
-msgid "utility modules"
+#, fuzzy, no-wrap
+#| msgid "utility modules"
+msgid "Utility modules"
 msgstr "toepassings modules"
 
 #. type: Plain text
@@ -9752,9 +9444,12 @@ msgstr "Alle utiliteitsmodules hebben de volgende elementen:\n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_show_\n"
+#| ": Acts as a _toggle_ that expands and collapses the module.\n"
 msgid ""
-"_show_\n"
+"_Show_\n"
 ": Acts as a _toggle_ that expands and collapses the module.\n"
 msgstr ""
 "_toon_\n"
@@ -9762,9 +9457,12 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_reset_\n"
+#| ": Acts as a _button_ that resets all module parameters when activated. The _ctrl-activate_ action can be used to re-apply any automatic presets for that module.\n"
 msgid ""
-"_reset_\n"
+"_Reset_\n"
 ": Acts as a _button_ that resets all module parameters when activated. The _ctrl-activate_ action can be used to re-apply any automatic presets for that module.\n"
 msgstr ""
 "_reset_\n"
@@ -9777,16 +9475,17 @@ msgstr ""
 #| "_presets_\n"
 #| ": Allows you to select actions from the [presets](../darkroom/processing-modules/presets.md) menu (e.g. edit, update, previous, next). The default action, when assigning a simple shortcut to a _preset_ element, is to display a list of the available presets for selection. Extended shortcuts are not currently available for preset elements.\n"
 msgid ""
-"_presets_\n"
-": Allows you to select actions from the [presets](../views/darkroom/processing-modules/presets.md) menu (e.g. edit, update, previous, next). The default action, when assigning a simple shortcut to a _preset_ element, is to display a list of the available presets for selection. Extended shortcuts are not currently available for preset elements.\n"
+"_Presets_\n"
+": Allows you to select actions from the [Presets](../views/darkroom/processing-modules/presets.md) menu (e.g. edit, update, previous, next). The default action, when assigning a shortcut to a _preset_ element, is to display a list of the available presets for selection. \n"
 msgstr ""
 "_voorinstellingen_\n"
 ": Hiermee kan je acties selecteren uit het menu [voorkeuren](../darkroom/processing-modules/presets.md) (bijv. bewerken, bijwerken, vorige, volgende). De standaardactie bij het toewijzen van een eenvoudige snelkoppeling aan een _voorkeur_-element is het weergeven van een lijst met beschikbare voorinstellingen voor selectie. Uitgebreide snelkoppelingen zijn momenteel niet beschikbaar voor vooraf ingestelde elementen.\n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "The default action, when assigning a simple shortcut to a utility module, is to _toggle_ the _show_ element (expand/collapse the module).\n"
+#, fuzzy, no-wrap
+#| msgid "The default action, when assigning a simple shortcut to a utility module, is to _toggle_ the _show_ element (expand/collapse the module).\n"
+msgid "The default action, when assigning a shortcut to a utility module, is to _toggle_ the _show_ element (expand/collapse the module).\n"
 msgstr "De standaardactie, bij het toewijzen van een eenvoudige snelkoppeling aan een hulpprogramma-module, is om het _toon_-element te _schakelen_ (de module uitvouwen/samenvouwen).\n"
 
 #. type: Plain text
@@ -9794,6 +9493,13 @@ msgstr "De standaardactie, bij het toewijzen van een eenvoudige snelkoppeling aa
 #, no-wrap
 msgid "In addition, shortcuts are available for all of the controls on each module as well as any stored presets (see below).\n"
 msgstr "Daarnaast zijn er snelkoppelingen beschikbaar voor alle bedieningselementen op elke module en voor alle opgeslagen voorkeuren (zie hieronder).\n"
+
+#. type: Title ###
+#: content/preferences-settings/shortcuts.md
+#, fuzzy, no-wrap
+#| msgid "processing modules"
+msgid "Processing modules"
+msgstr "verwerkingsmodules"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9803,9 +9509,12 @@ msgstr "Verwerkingsmodules hebben dezelfde elementen en standaardwaarden als hul
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_enable_\n"
+#| ": Acts as a _toggle_ that switches the module on and off.\n"
 msgid ""
-"_enable_\n"
+"_Enable_\n"
 ": Acts as a _toggle_ that switches the module on and off.\n"
 msgstr ""
 "_inschakelen_\n"
@@ -9815,14 +9524,14 @@ msgstr ""
 #: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
 #| msgid ""
-#| "_focus_\n"
-#| ": Acts as a _toggle_ that focuses or defocuses the module. This is useful for modules such as [_crop_](../module-reference/processing-modules/crop.md) or [_tone equalizer_](../module-reference/processing-modules/tone-equalizer.md), whose on-screen controls are only activated when those modules have focus. For _crop_, changes are saved only when the module loses focus.\n"
+#| "_show_\n"
+#| ": Acts as a _toggle_ that expands and collapses the module.\n"
 msgid ""
-"_focus_\n"
-": Acts as a _toggle_ that focuses or defocuses the module. This is useful for modules such as [_crop_](../modules/processing-modules/crop.md) or [_tone equalizer_](../modules/processing-modules/tone-equalizer.md), whose on-screen controls are only activated when those modules have focus. For _crop_, changes are saved only when the module loses focus.\n"
+"_Focus_\n"
+": Acts as a _toggle_ that focuses or defocuses the module.\n"
 msgstr ""
-"_focus_\n"
-": Werkt als een _schakelaar_ die de module scherpstelt of defocusseert. Dit is handig voor modules zoals [_uitsnijden_](../module-reference/processing-modules/crop.md) of [_toon equalizer_](../module-reference/processing-modules/tone-equalizer.md), waarvan de bedieningselementen op het scherm alleen worden geactiveerd wanneer die modules focus hebben. Voor _uitsnijden_ worden wijzigingen alleen opgeslagen als de module de focus verliest.\n"
+"_toon_\n"
+": Fungeert als een _schakelaar_ die de module uitvouwt en samenvouwt.\n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9831,34 +9540,24 @@ msgstr ""
 #| "_instance_\n"
 #| ": Allows you to select actions from the [multiple-instance](../darkroom/processing-modules/multiple-instances.md) menu (e.g. move up/down, create new instance). The default action, when assigning a simple shortcut to the _instance_ element, is to display a list of the available options for selection; An extended shortcut will move the _preferred module instance_ (see below) up and down the pixelpipe.\n"
 msgid ""
-"_instance_\n"
-": Allows you to select actions from the [multiple-instance](../views/darkroom/processing-modules/multiple-instances.md) menu (e.g. move up/down, create new instance). The default action, when assigning a simple shortcut to the _instance_ element, is to display a list of the available options for selection; An extended shortcut will move the _preferred module instance_ (see below) up and down the pixelpipe.\n"
+"_Instance_\n"
+": Allows you to select actions from the [Multiple-instance](../views/darkroom/processing-modules/multiple-instances.md) menu (e.g. move up/down, create new instance). The default action, when assigning a shortcut to the _instance_ element, is to display a list of the available options for selection; \n"
 msgstr ""
 "_exemplaar_\n"
 ": Hiermee kan je acties selecteren uit het menu [meerdere exemplaren](../darkroom/processing-modules/multiple-instances.md) (bijv. omhoog/omlaag, nieuw exemplaar maken). De standaardactie bij het toewijzen van een eenvoudige snelkoppeling aan het element _exemplaar_ is het weergeven van een lijst met beschikbare opties voor selectie; Een uitgebreide snelkoppeling verplaatst de _voorkeurmodule_exemplaar_ (zie hieronder) op en neer in de pixelpijp.\n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "If an action affects a processing module that can have multiple instances, you can choose which instance to adjust with a given shortcut. By default, all actions will affect the \"preferred\" instance, as defined using the settings in [preferences > miscellaneous > shortcuts with multiple instances](./miscellaneous.md#shortcuts-with-multiple-instances).\n"
+#, fuzzy, no-wrap
+#| msgid "If an action affects a processing module that can have multiple instances, you can choose which instance to adjust with a given shortcut. By default, all actions will affect the \"preferred\" instance, as defined using the settings in [preferences > miscellaneous > shortcuts with multiple instances](./miscellaneous.md#shortcuts-with-multiple-instances).\n"
+msgid "If an action affects a processing module that can have multiple instances, you can choose which instance to adjust with a given shortcut. By default, all actions will affect the \"preferred\" instance, as defined using the settings in [Preferences > Miscellaneous > Shortcuts with multiple instances](./miscellaneous.md#shortcuts-with-multiple-instances).\n"
 msgstr "Als een actie van invloed is op een verwerkingsmodule die meerdere instanties kan hebben, kan je met een bepaalde snelkoppeling kiezen welke instantie je wilt aanpassen. Standaard zijn alle acties van invloed op de \"voorkeursinstantie\", zoals gedefinieerd met behulp van de instellingen in [voorkeuren > diversen > snelkoppelingen met meerdere instanties](./miscellaneous.md#shortcuts-with-multiple-instances).\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Additional options are available in the shortcuts mapping screen to adjust the blend parameters (the \\<blending\\> section) and module controls (the \\<focused\\> section) for the currently-focused module. The latter section allows you to assign shortcuts to the first, second, third (etc.) button, drop-down, slider and tab on the module. The shortcuts will affect different module controls depending on which module currently has focus (as the available list of controls changes).\n"
-msgstr ""
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can also assign scroll shortcuts to the 'preset' menu, which allows you to use your mouse scroll wheel to scroll through the module's presets.\n"
-msgstr ""
 
 #. type: Title ###
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "dropdowns"
+#, fuzzy, no-wrap
+#| msgid "dropdowns"
+msgid "Dropdowns"
 msgstr "keuzemenus"
 
 #. type: Plain text
@@ -9874,8 +9573,8 @@ msgstr "Een keuzemenu is een vak met meerdere selecties en heeft de volgende ele
 #| "_selection_\n"
 #| ": Allows values to be selected from the dropdown list in various ways. The default action, when assigning a simple shortcut to a dropdown, is to display a popup _edit_ box with a list of the available values for selection; An extended shortcut (including a mouse movement) will scroll through the available values. \n"
 msgid ""
-"_selection_\n"
-": Allows values to be selected from the dropdown list in various ways. The default action, when assigning a simple shortcut to a dropdown, is to display a popup _edit_ box with a list of the available values for selection; An extended shortcut (including a mouse movement) will scroll through the available values.\n"
+"_Selection_\n"
+": Allows values to be selected from the dropdown list in various ways. The default action, when assigning a shortcut to a dropdown, is to display a popup _edit_ box with a list of the available values for selection.\n"
 msgstr ""
 "_selectie_\n"
 ": Hiermee kunnen op verschillende manieren waarden worden geselecteerd uit de keuzemenu. De standaardactie, bij het toewijzen van een eenvoudige snelkoppeling aan een keuzemenu, is om een pop-up _editeer_ box weer te geven met een lijst van de beschikbare waarden voor selectie; Een uitgebreide snelkoppeling (inclusief een muisbeweging) zal door de beschikbare waarden scrollen. \n"
@@ -9887,11 +9586,18 @@ msgstr ""
 #| "_button_\n"
 #| ": A standard _button_ element that allows the button to the right of the dropdown (if present) to be activated. For example, the _aspect_ dropdown in the [_crop_](../module-reference/processing-modules/crop.md) module has a button that allows the crop controls to be changed from portrait to landscape and vice versa.\n"
 msgid ""
-"_button_\n"
-": A standard _button_ element that allows the button to the right of the dropdown (if present) to be activated. For example, the _aspect_ dropdown in the [_crop_](../modules/processing-modules/crop.md) module has a button that allows the crop controls to be changed from portrait to landscape and vice versa.\n"
+"_Button_\n"
+": A standard _button_ element that allows the button to the right of the dropdown (if present) to be activated. For example, the _aspect_ dropdown in the [_Crop_](../modules/processing-modules/crop.md) module has a button that allows the crop controls to be changed from portrait to landscape and vice versa.\n"
 msgstr ""
 "_knop_\n"
 ": Een standaard _knop_-element waarmee de knop rechts van de vervolgkeuzelijst (indien aanwezig) kan worden geactiveerd. De vervolgkeuzelijst _aspect_ in de module [_uitsnijden_](../module-reference/processing-modules/crop.md) heeft bijvoorbeeld een knop waarmee de besturingselementen voor bijsnijden kunnen worden gewijzigd van staand naar liggend en vice versa.\n"
+
+#. type: Title ###
+#: content/preferences-settings/shortcuts.md
+#, fuzzy, no-wrap
+#| msgid "sliders"
+msgid "Sliders"
+msgstr "schuifregelaars"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
@@ -9901,19 +9607,25 @@ msgstr "Een schuifregelaar stelt je in staat om continu een geheel getal of deci
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_value_\n"
+#| ": Allows the current value of the slider to be altered. The default action, when assigning a simple shortcut to a slider, is to display a popup _edit_ box so you can enter a value; An extended shortcut (including a mouse movement) will change the value up and down.  Value elements are also used for modifying some on-screen graphs. When modifying the _value_ element with a shortcut you may not exceed the bounds set in the visual slider.\n"
 msgid ""
-"_value_\n"
-": Allows the current value of the slider to be altered. The default action, when assigning a simple shortcut to a slider, is to display a popup _edit_ box so you can enter a value; An extended shortcut (including a mouse movement) will change the value up and down.  Value elements are also used for modifying some on-screen graphs. When modifying the _value_ element with a shortcut you may not exceed the bounds set in the visual slider.\n"
+"_Value_\n"
+": Allows the current value of the slider to be altered. The default action, when assigning a shortcut to a slider, is to display a popup _edit_ box so you can enter a value. Value elements are also used for modifying some on-screen graphs. When modifying the _value_ element with a shortcut you may not exceed the bounds set in the visual slider.\n"
 msgstr ""
 "_waarde_\n"
 ": Hiermee kan de huidige waarde van de schuifregelaar worden gewijzigd. De standaardactie, bij het toewijzen van een eenvoudige snelkoppeling aan een schuifregelaar, is om een pop-upvenster _editeer_ weer te geven, zodat je een waarde kan invoeren; Een uitgebreide snelkoppeling (inclusief een muisbeweging) zal de waarde omhoog en omlaag veranderen. Waarde-elementen worden ook gebruikt voor het wijzigen van sommige grafieken op het scherm. Bij het wijzigen van het _waarde_-element met een snelkoppeling mag je de grenzen die zijn ingesteld in de visuele schuifregelaar niet overschrijden.\n"
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_force_\n"
+#| ": This is the same as the _value_ element described above, but it allows you to exceed the bounds set in the visual slider.\n"
 msgid ""
-"_force_\n"
+"_Force_\n"
 ": This is the same as the _value_ element described above, but it allows you to exceed the bounds set in the visual slider.\n"
 msgstr ""
 "_kracht_\n"
@@ -9921,9 +9633,12 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_zoom_\n"
+#| ": Allows you to change the upper and lower bounds of the visual slider without altering the current value.\n"
 msgid ""
-"_zoom_\n"
+"_Zoom_\n"
 ": Allows you to change the upper and lower bounds of the visual slider without altering the current value.\n"
 msgstr ""
 "_zoom_\n"
@@ -9931,104 +9646,16 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/shortcuts.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "_button_\n"
+#| ": A standard _button_ element that allows the button to the right of the slider (if present) to be activated. For example, a slider may include a color picker to visually set its value based on selected elements of the image.\n"
 msgid ""
-"_button_\n"
+"_Button_\n"
 ": A standard _button_ element that allows the button to the right of the slider (if present) to be activated. For example, a slider may include a color picker to visually set its value based on selected elements of the image.\n"
 msgstr ""
 "_knop_\n"
 ": Een standaard _knop_-element waarmee de knop rechts van de schuifregelaar (indien aanwezig) kan worden geactiveerd. Een schuifregelaar kan bijvoorbeeld een kleurkiezer bevatten om de waarde visueel in te stellen op basis van geselecteerde elementen van de afbeelding.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "You can alter the value of a slider more quickly or slowly than normal by defining the _speed_ of the action in the shortcut mapping screen. By default a _value_ (or _force_) effect is given a speed of 1.0, which means that it is changed at the default rate defined by the given slider. You can alter the slider more quickly by increasing the speed (a speed of 10 makes the action 10x faster) or more slowly by decreasing it (a speed of 0.1 makes the action 10x slower).\n"
-msgstr "Je kan de waarde van een schuifregelaar sneller of langzamer dan normaal wijzigen door de _snelheid_ van de actie te definiëren in het snelkoppelingstoewijzingsscherm. Standaard krijgt een _waarde_ (of _kracht_) effect een snelheid van 1,0, wat betekent dat het wordt gewijzigd met de standaardsnelheid die is gedefinieerd door de gegeven schuifregelaar. Je kan de schuifregelaar sneller wijzigen door de snelheid te verhogen (een snelheid van 10 maakt de actie 10x sneller) of langzamer door deze te verlagen (een snelheid van 0,1 maakt de actie 10x langzamer).\n"
-
-#. type: Title ##
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "fallbacks"
-msgstr "terugvalposities"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Where a _widget_ can have multiple different _actions_ applied to it, it can be tedious to set up individual shortcuts for each one of those actions. To make this process simpler, if you create a simple shortcut a number of effects can be made available by default as extensions to that shortcut. These are known as _fallbacks_.\n"
-msgstr "Waar een _widget_ meerdere verschillende _acties_ kan hebben, kan het vervelend zijn om individuele snelkoppelingen in te stellen voor elk van die acties. Om dit proces eenvoudiger te maken, kunnen als je een eenvoudige snelkoppeling maakt, standaard een aantal effecten beschikbaar worden gesteld als uitbreidingen op die snelkoppeling. Deze staan bekend als _terugvalpositiess_.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "While fallbacks are a powerful way to quickly set up multiple actions using predefined and consistent shortcuts, they will assign a lot of actions automatically (which might not be what you want), and can be hard to understand. Fallbacks are therefore disabled by default and you will need to click on the \"enable fallbacks\" check box in the shortcuts setup window to enable them.\n"
-msgstr "Hoewel terugvalposities een krachtige manier zijn om snel meerdere acties in te stellen met behulp van vooraf gedefinieerde en consistente snelkoppelingen, zullen ze veel acties automatisch toewijzen (wat misschien niet is wat je wilt), en kunnen ze moeilijk te begrijpen zijn. Terugvalposities zijn daarom standaard uitgeschakeld en je moet op het selectievakje \"fallbacks inschakelen\" in het instellingenvenster voor snelkoppelingen klikken om ze in te schakelen.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "To take a brief example, you could create a simple shortcut (e.g. Ctrl+R) against a processing module. This will automatically set up the following _fallback_ effects using the defined shortcut, extended with mouse-clicks. In each case (except the first) you should hold the initial shortcut while clicking with your mouse. The final mouse-click will apply the action defined below:\n"
-msgstr "Om een kort voorbeeld te geven, zou je een eenvoudige snelkoppeling (bijv. Ctrl+R) tegen een verwerkingsmodule kunnen maken. Hiermee worden automatisch de volgende _fallback_-effecten ingesteld met behulp van de gedefinieerde snelkoppeling, uitgebreid met muisklikken. In elk geval (behalve het eerste) moet je de eerste snelkoppeling ingedrukt houden terwijl je met uw muis klikt. De laatste muisklik zal de hieronder gedefinieerde actie toepassen:\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R (no mouse-click) to show/hide the module (the default fallback)\n"
-msgstr "Ctrl+R (geen muisklik) om de module te tonen/verbergen (de standaard fallback)\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R+left-click to enable/disable the module\n"
-msgstr "Ctrl+R+links klikken om de module in/uit te schakelen\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R+left-double-click to reset the module\n"
-msgstr "Ctrl+R+links dubbelklikken om de module te resetten\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R+right-click to show the module's preset menu\n"
-msgstr "Ctrl+R+rechtsklik om het vooraf ingestelde menu van de module weer te geven\n"
-
-#. type: Bullet: '- '
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Ctrl+R+right-double-click to show the module's multiple instance menu\n"
-msgstr "Ctrl+R+rechts dubbelklikken om het menu met meerdere instanties van de module weer te geven\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Similar fallbacks are defined for many common UI elements and all can be manually overridden.\n"
-msgstr "Soortgelijke fallbacks (terugvalposities) zijn gedefinieerd voor veel algemene UI-elementen en kunnen allemaal handmatig worden overschreven.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Some fallback actions are defined using modifier keys (usually `Ctrl+` and `Shift+`). In this case you must define an initial shortcut without such a modifier in order to be able to use these fallbacks. For example, if you assign Ctrl+R to an action, you cannot use a `Ctrl+` fallback. Some default fallbacks of this type are provided for the _value_ element and for horizontal/vertical movements in the (zoomed) central area -- in this case, `Shift+` increases the speed to 10.0 and `Ctrl+` decreases the speed to 0.1.\n"
-msgstr "Sommige fallback-acties worden gedefinieerd met behulp van modificatietoetsen (meestal `Ctrl+` en `Shift+`). In dit geval moet je een initiële snelkoppeling definiëren zonder een dergelijke modificator om deze fallbacks te kunnen gebruiken. Als je bijvoorbeeld Ctrl+R aan een actie toewijst, kan je geen 'Ctrl+'-terugval gebruiken. Sommige standaard fallbacks van dit type zijn voorzien voor het _waarde_ element en voor horizontale/vertikale bewegingen in het (ingezoomde) centrale gebied -- in dit geval verhoogt `Shift+` de snelheid tot 10.0 en `Ctrl+` verlaagt de snelheid tot 0.1.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "To see a list of _all_ of the default fallbacks, click the \"enable fallbacks\" checkbox in the shortcut mapping screen and select the \"fallbacks\" category in the top panel. To see the fallbacks for a given widget (e.g. a slider) just select that widget in the top panel. In both cases an additional item (also named \"fallbacks\") will then appear in the bottom panel containing full details of the available fallbacks.\n"
-msgstr "Om een lijst met _alle_ van de standaard fallbacks te zien, klik je op het selectievakje \"fallbacks inschakelen\" in het snelkoppelingsscherm en selecteert u de categorie \"fallbacks\" in het bovenste paneel. Om de fallbacks voor een bepaalde widget (bijvoorbeeld een schuifregelaar) te zien, selecteer je die widget in het bovenste paneel. In beide gevallen verschijnt er dan een extra item (ook wel \"fallbacks\" genoemd) in het onderste paneel met alle details van de beschikbare fallbacks.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, no-wrap
-msgid "Fallbacks are only applied if no other shortcut using that combination has been explicitly created. In the above example, if you were to explicitly assign Ctrl+R+left-click to another action, the \"enable/disable module\" fallback would be ignored.\n"
-msgstr "Fallbacks worden alleen toegepast als er geen andere snelkoppeling met die combinatie expliciet is gemaakt. Als je in het bovenstaande voorbeeld Ctrl+R+linksklik expliciet aan een andere actie zou toewijzen, zou de fallback \"module inschakelen/uitschakelen\" worden genegeerd.\n"
-
-#. type: Plain text
-#: content/preferences-settings/shortcuts.md
-#, fuzzy, no-wrap
-#| msgid "As with any other shortcut, fallback settings are fully customizable. \n"
-msgid "As with any other shortcut, fallback settings are fully customizable.\n"
-msgstr "Zoals bij elke andere snelkoppeling, kunnen fallback-instellingen volledig worden aangepast. \n"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/preferences-settings/security.md
@@ -15052,6 +14679,12 @@ msgstr ""
 ": - _tel_: Geef gewoon het aantal afbeeldingen weer (om ruimte op de kaart vrij te maken). Plaats de muisaanwijzer op het aantal afbeeldingen om de bijbehorende miniaturen weer te geven. Een markering die alleen telt, gedraagt zich op dezelfde manier als een normale afbeeldingsminiatuur, wat betreft kleurcodering, scrollen, slepen en neerzetten enz.\n"
 ": - _geen_: Laat niets zien.\n"
 ": je kan ook door deze opties bladeren door op Shift+S te drukken.\n"
+
+#. type: Title ###
+#: content/modules/utility-modules/_index.md content/modules/_index.md
+#, no-wrap
+msgid "utility modules"
+msgstr "toepassings modules"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/modules/utility-modules/shared/scopes.md
@@ -31708,6 +31341,347 @@ msgstr "Er wordt geen bericht weergegeven zodra het voorbeeld is voltooid, allee
 #, no-wrap
 msgid "We use `coroutine.yield` to call an external program. The normal `os.execute` would block other lua codes from happening.\n"
 msgstr "We gebruiken `coroutine.yield` om een extern programma aan te roepen. De normale `os.execute` zou andere lua-codes blokkeren.\n"
+
+#, no-wrap
+#~ msgid "You can perform almost any action in Ansel with a keyboard/mouse shortcut. You can also use various other input devices, including MIDI devices and game controllers -- see the [midi device support](../special-topics/midi-device-support.md) section for details. These are referred to as _external devices_ or just _devices_ in this guide.\n"
+#~ msgstr "Je kan bijna elke actie in Ansel uitvoeren met een sneltoets voor toetsenbord/muis. Je kan ook verschillende andere invoerapparaten gebruiken, waaronder MIDI-apparaten en spelconsoles -- zie de sectie [ondersteuning voor midi-apparaten](../special-topics/midi-device-support.md) voor details. Deze worden in deze handleiding _externe apparaten_ of gewoon _apparaten_ genoemd.\n"
+
+#, no-wrap
+#~ msgid "A _shortcut_ is a combination of key or button presses and/or mouse or device movements that performs an _action_ in Ansel.\n"
+#~ msgstr "Een _snelkoppeling_ is een combinatie van het indrukken van een toets of knop en/of muis- of apparaatbewegingen die een _actie_ in Ansel uitvoert.\n"
+
+#, no-wrap
+#~ msgid "A single action may have multiple shortcuts but a single shortcut can only be linked to one action in a given Ansel view -- you can't chain actions together except by applying a preset or style. You can, however, set up a single shortcut that does one thing in the lighttable view, say, and another in the darkroom view.\n"
+#~ msgstr "Een enkele actie kan meerdere snelkoppelingen hebben, maar een enkele snelkoppeling kan slechts aan één actie worden gekoppeld in een bepaalde Ansel-weergave -- ja ka geen acties aan elkaar koppelen, behalve door een voorinstelling of stijl toe te passen. Je kan echter een enkele snelkoppeling instellen die één ding doet in de bibliotheekweergave, bijvoorbeeld, en een andere in de ontwikkelenweergave.\n"
+
+#, no-wrap
+#~ msgid "initiating a shortcut"
+#~ msgstr "snelkoppeling starten"
+
+#, no-wrap
+#~ msgid "A shortcut must be initiated by either\n"
+#~ msgstr "Een snelkoppeling moet worden gestart door ofwel:\n"
+
+#, no-wrap
+#~ msgid "pressing a key on the keyboard; or\n"
+#~ msgstr "een toets op het toetsenbord indrukken; of\n"
+
+#, fuzzy, no-wrap
+#~| msgid "pressing a button or moving a knob/joystick on an external device \n"
+#~ msgid "pressing a button or moving a knob/joystick on an external device\n"
+#~ msgstr "op een knop drukken of een knop/joystick op een extern apparaat bewegen \n"
+
+#, no-wrap
+#~ msgid "You cannot initiate a shortcut by moving your mouse or pressing one of its buttons, as these actions are used to interact with Ansel's UI.\n"
+#~ msgstr "Je kan geen snelkoppeling starten door jouw muis te bewegen of op een van de knoppen te drukken, omdat deze acties worden gebruikt als interactie met de gebruikersinterface van Ansel.\n"
+
+#, no-wrap
+#~ msgid "simple shortcuts"
+#~ msgstr "eenvoudige snelkoppelingen"
+
+#, no-wrap
+#~ msgid "A shortcut that only includes button and/or key presses (and not mouse/device movements) is referred to as a _simple_ shortcut.\n"
+#~ msgstr "Een snelkoppeling die alleen het indrukken van knoppen en/of toetsen bevat (en geen bewegingen van de muis/apparaat) wordt een _eenvoudige_ snelkoppeling genoemd.\n"
+
+#, no-wrap
+#~ msgid "A simple shortcut must be initiated as above, but can include:\n"
+#~ msgstr "Een eenvoudige snelkoppeling moet worden gestart zoals hierboven, maar kan het volgende bevatten:\n"
+
+#, no-wrap
+#~ msgid "One or more modifier keys (Shift, Ctrl, Alt), held down while executing the remainder of the shortcut\n"
+#~ msgstr "Een of meer modificatietoetsen (Shift, Ctrl, Alt), ingedrukt tijdens het uitvoeren van de rest van de sneltoets\n"
+
+#, no-wrap
+#~ msgid "Up to three key presses, the last one of which may be a long-press (defined as a key-press longer than your system's double-click duration)\n"
+#~ msgstr "Maximaal drie toetsaanslagen, waarvan de laatste lang indrukken kan zijn (gedefinieerd als een toetsdruk die langer duurt dan de dubbelklikduur van jouw systeem)\n"
+
+#, no-wrap
+#~ msgid "Similarly, up to three device-button presses or mouse-button clicks, the last of which may be long\n"
+#~ msgstr "Evenzo kunnen maximaal drie keer op de apparaatknop of muisknop worden gedrukt, waarvan de laatste lang kan duren\n"
+
+#, no-wrap
+#~ msgid "Various combinations of keyboard, mouse, and device buttons can be used to create simple shortcuts.\n"
+#~ msgstr "Er kunnen verschillende combinaties van toetsenbord-, muis- en apparaatknoppen worden gebruikt om eenvoudige snelkoppelingen te maken.\n"
+
+#, no-wrap
+#~ msgid "creating additional modifiers"
+#~ msgstr "extra modificators maken"
+
+#, no-wrap
+#~ msgid "The only valid modifiers are the Shift, Ctrl and Alt keys on the keyboard. You can define additional keys (or device buttons) as modifiers by assigning keys/buttons to the \"global/modifier\" action. However, these will merely function as extra Ctrl, Alt or Shift keys -- you cannot create \"new\" modifiers.\n"
+#~ msgstr "De enige geldige modificatiors zijn de Shift-, Ctrl- en Alt-toetsen op het toetsenbord. Je kan extra toetsen (of apparaatknoppen) als modificators definiëren door toetsen/knoppen toe te wijzen aan de actie \"algemeen/modificator\". Deze zullen echter alleen functioneren als extra Ctrl-, Alt- of Shift-toetsen -- je kan geen \"nieuwe\" modificators maken.\n"
+
+#, no-wrap
+#~ msgid "extending simple shortcuts with movement"
+#~ msgstr "eenvoudige snelkoppelingen uitbreiden met beweging"
+
+#, no-wrap
+#~ msgid "For certain actions you can choose to _extend_ a simple shortcut using mouse/device movement. For example you might hold Ctrl+X while scrolling with your mouse to change the value of a slider. The following can be used to extend a simple shortcut:\n"
+#~ msgstr "Voor bepaalde acties kan je ervoor kiezen om een eenvoudige snelkoppeling _uit te breiden_ met muis/apparaatbeweging. Je kan bijvoorbeeld Ctrl+X ingedrukt houden terwijl je met jouw muis scrolt om de waarde van een schuifregelaar te wijzigen. Het volgende kan worden gebruikt om een eenvoudige snelkoppeling uit te breiden:\n"
+
+#, no-wrap
+#~ msgid "Movement of the mouse scroll wheel\n"
+#~ msgstr "Beweging van het muiswiel\n"
+
+#, no-wrap
+#~ msgid "Horizontal, vertical or diagonal movement of the mouse cursor\n"
+#~ msgstr "Horizontale, vertikale of diagonale beweging van de muiscursor\n"
+
+#, no-wrap
+#~ msgid "Movement of a knob/joystick on an external device\n"
+#~ msgstr "Beweging van een knop/joystick op een extern apparaat\n"
+
+#, fuzzy, no-wrap
+#~| msgid "To extend a simple shortcut, you must hold the final key/button of the simple shortcut while performing the extending mouse/device movement. \n"
+#~ msgid "To extend a simple shortcut, you must hold the final key/button of the simple shortcut while performing the extending mouse/device movement.\n"
+#~ msgstr "Om een eenvoudige snelkoppeling uit te breiden, moet je de laatste toets/knop van de eenvoudige snelkoppeling ingedrukt houden terwijl je de uitbreidende muis/apparaatbeweging uitvoert. \n"
+
+#, no-wrap
+#~ msgid "For external devices you do not need to start with a _simple_ shortcut -- you can directly assign a control knob or joystick to an action -- though this will significantly reduce the flexibility of such devices.\n"
+#~ msgstr "Voor externe apparaten hoeft je niet te beginnen met een _eenvoudige_ snelkoppeling - je kan direct een bedieningsknop of joystick toewijzen aan een actie - hoewel dit de flexibiliteit van dergelijke apparaten aanzienlijk zal verminderen.\n"
+
+#, no-wrap
+#~ msgid "Long button and key presses cannot be extended, as the length of the click/press is timed using the release of the final button/key -- such shortcuts must be terminated with the raising of the final button/key.\n"
+#~ msgstr "Lange toets- en toetsaanslagen kunnen niet worden verlengd, aangezien de duur van de klik/druk wordt getimed door het loslaten van de laatste knop/toets -- dergelijke snelkoppelingen moeten worden beëindigd met het omhoog brengen van de laatste knop/toets.\n"
+
+#, no-wrap
+#~ msgid "**Note:** You may need to switch off the \"disable touchpad while typing\" setting if you want to use extended shortcuts with a laptop touchpad.\n"
+#~ msgstr "**Opmerking:** Mogelijk moet je de instelling \"touchpad uitschakelen tijdens typen\" uitschakelen als je uitgebreide snelkoppelingen wilt gebruiken met een laptop-touchpad.\n"
+
+#, no-wrap
+#~ msgid "actions"
+#~ msgstr "acties"
+
+#, no-wrap
+#~ msgid "assigning shortcuts to actions"
+#~ msgstr "snelkoppelingen toewijzen aan acties"
+
+#, no-wrap
+#~ msgid "There are two primary methods of assigning a shortcut to an action.\n"
+#~ msgstr "Er zijn twee primaire methoden om een snelkoppeling aan een actie toe te wijzen.\n"
+
+#, no-wrap
+#~ msgid "visual shortcut mapping"
+#~ msgstr "visuele snelkoppelingstoewijzing"
+
+#, no-wrap
+#~ msgid "Click on the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon in the [top panel](../overview/user-interface/top-panel.md) of any Ansel view to enter visual shortcut mapping mode. If you hold Ctrl while clicking the button, no confirmation will appear when overwriting an existing shortcut mapping.\n"
+#~ msgstr "Klik op het ![visueel mapping knop](./shortcuts/visual-mapping-button.png#icon) icoon in het [bovenpaneel](../overview/user-interface/top-panel.md) van een willekeurige Ansel weergave om de modus voor visuele snelkoppelingen te openen. Als u Ctrl ingedrukt houdt terwijl u op de knop klikt, verschijnt er geen bevestiging bij het overschrijven van een bestaande snelkoppelingstoewijzing.\n"
+
+#, no-wrap
+#~ msgid "The mouse cursor will change as you hover over UI widgets, to indicate whether or not a mapping can be created:\n"
+#~ msgstr "De muiscursor verandert wanneer je over UI-widgets beweegt, om aan te geven of er al dan niet een toewijzing kan worden gemaakt:\n"
+
+#, no-wrap
+#~ msgid "A down arrow with a line ![expand icon](./shortcuts/expand-icon.png#icon) appears when you hover over a module header, to indicate that you can click to expand the module.\n"
+#~ msgstr "Een pijl-omlaag met een lijn ![expandeer pictogram](./shortcuts/expand-icon.png#icon) verschijnt wanneer je de muisaanwijzer over een module koptekst beweegt, om aan te geven dat je kunt klikken om de module uit te vouwen.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "A spiral ![spiral icon](./shortcuts/spiral-icon.png#icon) indicates that a shortcut can be defined for the widget under the cursor. \n"
+#~ msgid "A spiral ![spiral icon](./shortcuts/spiral-icon.png#icon) indicates that a shortcut can be defined for the widget under the cursor.\n"
+#~ msgstr "Een spiraal ![spiraal pictogram](./shortcuts/spiral-icon.png#icon) geeft aan dat er een snelkoppeling kan worden gedefinieerd voor de widget onder de cursor. \n"
+
+#, fuzzy, no-wrap
+#~| msgid "An up arrow ![up icon](./shortcuts/up-icon.png#icon) indicates that, in addition to assigning a shortcut, you can also add the widget to the [quick access panel](../darkroom/organization/quick-access-panel.md) in the darkroom (by Ctrl+clicking on it).\n"
+#~ msgid "An up arrow ![up icon](./shortcuts/up-icon.png#icon) indicates that, in addition to assigning a shortcut, you can also add the widget to the [quick access panel](../views/darkroom/organization/quick-access-panel.md) in the darkroom (by Ctrl+clicking on it).\n"
+#~ msgstr "Een pijl omhoog ![omhoog pictogram](./shortcuts/up-icon.png#icon) geeft aan dat je, naast het toewijzen van een snelkoppeling, ook de widget kan toevoegen aan het [snelle toegangspaneel](../darkroom/ organisatie/quick-access-panel.md) in ontwikkelen (door erop te Ctrl+ klikken).\n"
+
+#, no-wrap
+#~ msgid "A down arrow ![down icon](./shortcuts/down-icon.png#icon) indicates that the widget is already in the quick access panel (Ctrl+click to remove it).\n"
+#~ msgstr "Een pijl naar beneden ![neerwaarts pictorgram](./shortcuts/down-icon.png#icon) geeft aan dat de widget zich al in het snelle toegangspaneel bevindt (Ctrl+klik om het te verwijderen).\n"
+
+#, fuzzy, no-wrap
+#~| msgid "A cross ![cross icon](./shortcuts/cross-icon.png#icon) indicates that there is no mappable widget under the cursor. \n"
+#~ msgid "A cross ![cross icon](./shortcuts/cross-icon.png#icon) indicates that there is no mappable widget under the cursor.\n"
+#~ msgstr "Een kruis ![kruis pictorgram](./shortcuts/cross-icon.png#icon) geeft aan dat er geen toewijsbare widget onder de cursor is. \n"
+
+#, fuzzy, no-wrap
+#~| msgid "Press a key combination while hovering over a mappable widget to assign a shortcut to that widget -- a default action will be assigned to that shortcut based on the type of widget and whether you have keyed a _simple_ or _extended_ shortcut.  See below for details of some of the default assigned actions. \n"
+#~ msgid "Press a key combination while hovering over a mappable widget to assign a shortcut to that widget -- a default action will be assigned to that shortcut based on the type of widget and whether you have keyed a _simple_ or _extended_ shortcut.  See below for details of some of the default assigned actions.\n"
+#~ msgstr "Druk op een toetsencombinatie terwijl je de muisaanwijzer op een toewijsbare widget houdt om een snelkoppeling aan die widget toe te wijzen -- er wordt een standaardactie aan die snelkoppeling toegewezen op basis van het type widget en of je een _eenvoudige_ of _uitgebreide_ sneltoets hebt ingetoetst. Zie hieronder voor details van enkele van de standaard toegewezen acties. \n"
+
+#, no-wrap
+#~ msgid "Left-click on a mappable widget to open the shortcut mapping screen for that widget (see below). Left-click anywhere else on the screen to open the shortcut mapping screen, expanded (where possible) based on the part of the screen you have clicked on. This screen can be used to alter the action assigned to a shortcut and to configure shortcuts for non-visual actions. Entering the shortcut mapping screen exits visual shortcut mapping mode.\n"
+#~ msgstr "Klik met de linkermuisknop op een toewijsbare widget om het snelkoppelingsscherm voor die widget te openen (zie hieronder). Klik met de linkermuisknop ergens anders op het scherm om het scherm voor snelkoppelingen te openen, uitgevouwen (waar mogelijk) op basis van het deel van het scherm waarop je hebt geklikt. Dit scherm kan worden gebruikt om de actie die aan een snelkoppeling is toegewezen te wijzigen en om snelkoppelingen voor niet-visuele acties te configureren. Als je het scherm voor het toewijzen van snelkoppelingen opent, verlaat je de modus voor het toewijzen van visuele snelkoppelingen.\n"
+
+#, no-wrap
+#~ msgid "You can assign as many shortcuts as you like in a single mapping session and then exit mapping mode when you are finished by clicking the ![visual mapping button](./shortcuts/visual-mapping-button.png#icon) icon again or right-clicking anywhere on the screen.\n"
+#~ msgstr "Je kan zoveel snelkoppelingen toewijzen als je wilt in een enkele toewijssessie en vervolgens de toewijsmodus verlaten wanneer je klaar bent door nogmaals op het pictogram ![visuele toewijs knop](./shortcuts/visual-mapping-button.png#icon) te klikken of ergens op het scherm met de rechtermuisknop te klikken.\n"
+
+#, no-wrap
+#~ msgid "You can delete a user-defined shortcut mapping by defining it a second time against the same widget. If you attempt to reallocate an existing shortcut to a new action, you will be notified of the conflict and asked whether you wish to replace the existing shortcut.\n"
+#~ msgstr "Je kan een door de gebruiker gedefinieerde snelkoppelingstoewijzing verwijderen door deze een tweede keer te definiëren voor dezelfde widget. Als je probeert een bestaande snelkoppeling opnieuw toe te wijzen aan een nieuwe actie, wordt je op de hoogte gesteld van het conflict en wordt je gevraagd of u de bestaande snelkoppeling wilt vervangen.\n"
+
+#, no-wrap
+#~ msgid "Finally, if you scroll with your mouse wheel while in visual mapping mode (without pressing any other buttons/keys) when hovering over a slider, this will change the default speed for that slider -- scroll up to increase and down to decrease. When you leave mapping mode, normal mouse scrolls over that slider will change its value with the adjusted speed.\n"
+#~ msgstr "Als u ten slotte met uw muiswiel scrolt terwijl u zich in de visuele kaartmodus bevindt (zonder op andere knoppen/toetsen te drukken) en u over een schuifregelaar beweegt, verandert dit de standaardsnelheid voor die schuifregelaar -- omhoog scrollen om te verhogen en omlaag om te verlagen. Wanneer u de kaartmodus verlaat, verandert de normale muisbeweging over die schuifregelaar de waarde met de aangepaste snelheid.\n"
+
+#, no-wrap
+#~ msgid "shortcut mapping screen"
+#~ msgstr "snelkoppeling toewijzingsscherm"
+
+#, no-wrap
+#~ msgid "The most flexible way to create shortcuts is by using the shortcut mapping screen, which can be accessed from the global preferences dialog or by left-clicking in visual mapping mode. This screen allows access to all available actions, including some that are not directly linked to a UI widget.\n"
+#~ msgstr "De meest flexibele manier om snelkoppelingen te maken, is door het scherm voor snelkoppelingen te gebruiken, dat toegankelijk is vanuit het dialoogvenster met algemene voorkeuren of door met de linkermuisknop te klikken in de visuele toewijsmodus. Dit scherm geeft toegang tot alle beschikbare acties, inclusief enkele die niet direct zijn gekoppeld aan een UI-widget.\n"
+
+#, no-wrap
+#~ msgid "The top panel of the shortcut mapping screen shows a list of available UI widgets/actions and the bottom panel shows the shortcuts currently assigned to them. You can search the top and bottom panels using the text entry boxes at the bottom of the screen (use the up/down arrow keys to navigate between matches).\n"
+#~ msgstr "Het bovenste paneel van het snelkoppelingstoewijzingsscherm toont een lijst met beschikbare UI-widgets/acties en het onderste paneel toont de snelkoppelingen die er momenteel aan zijn toegewezen. Je kan de boven- en onderpanelen doorzoeken met behulp van de tekstinvoervakken onder aan het scherm (gebruik de pijltoetsen omhoog/omlaag om tussen overeenkomsten te navigeren).\n"
+
+#, no-wrap
+#~ msgid "Double-click an item in the top panel to create a new shortcut for that item, and then enter your desired shortcut (right-click to cancel). Once you have done this, a new entry will appear in the bottom panel showing the shortcut you have created. You can then manually alter the _element_, _effect_, _speed_ or _instance_ of the assigned action against that shortcut in the bottom panel. To delete a user-defined shortcut, select it in the bottom panel and press the Delete key.\n"
+#~ msgstr "Dubbelklik op een item in het bovenste paneel om een nieuwe snelkoppeling voor dat item te maken en voer vervolgens de gewenste snelkoppeling in (klik met de rechtermuisknop om te annuleren). Zodra je dit hebt gedaan, verschijnt er een nieuw item in het onderste paneel met de snelkoppeling die je hebt gemaakt. Je kan vervolgens handmatig de _element_, _effect_, _snelheid_ van _instantie_ van de toegewezen actie tegen die snelkoppeling in het onderste paneel wijzigen. Om een door de gebruiker gedefinieerde snelkoppeling te verwijderen, selecteer je deze in het onderste paneel en druk je op de Delete-toets.\n"
+
+#, no-wrap
+#~ msgid "Selecting an existing shortcut in the bottom panel will highlight (in bold) the matching action and its parents in the top panel. You can use this to navigate the top panel and find related actions.\n"
+#~ msgstr "Selecteren van een bestaand sneltoets in het onder paneel zal de bijpassende actie en zijn ouder vet weergeven in het boven paneel. Dit kan je gebruiken om een gerelateerde acties te zoeken in het boven paneel.\n"
+
+#, no-wrap
+#~ msgid "The following additional options are provided in the shortcut mapping screen:\n"
+#~ msgstr "De volgende extra opties zijn beschikbaar in het scherm voor het toewijzen van snelkoppelingen:\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "export...\n"
+#~ ": Export the current shortcut mappings for one or all of your devices (keyboard/mouse, midi, game controller) to an external file. The dialog will show you how many shortcuts exist for each device.\n"
+#~ msgstr ""
+#~ "exporteren...\n"
+#~ ": Exporteer de huidige snelkoppelingstoewijzingen voor een of al jouw apparaten (toetsenbord/muis, midi, spel controller) naar een extern bestand. Het dialoogvenster laat jou zien hoeveel snelkoppelingen er zijn voor elk apparaat.\n"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "import...\n"
+#~| ": Import shortcut mappings from an external file for one or all of your devices. When loading a device, you can chose to assign it a different number. This can for example be used to exchange midi layouts. Before loading, you can chose to wipe the specific device first. When loading all from an empty file, this will effectively delete all your shortcuts. \n"
+#~ msgid ""
+#~ "import...\n"
+#~ ": Import shortcut mappings from an external file for one or all of your devices. When loading a device, you can chose to assign it a different number. This can for example be used to exchange midi layouts. Before loading, you can chose to wipe the specific device first. When loading all from an empty file, this will effectively delete all your shortcuts.\n"
+#~ msgstr ""
+#~ "importeren...\n"
+#~ ": Snelkoppelingstoewijzingen importeren uit een extern bestand voor een of al jouw apparaten. Bij het laden van een apparaat kan je ervoor kiezen om er een ander nummer aan toe te kennen. Dit kan bijvoorbeeld worden gebruikt om midi-lay-outs uit te wisselen. Voordat je begint met laden, kan je ervoor kiezen om eerst het specifieke apparaat te wissen. Wanneer je alles vanuit een leeg bestand laadt, worden al jouw snelkoppelingen effectief verwijderd. \n"
+
+#, no-wrap
+#~ msgid ""
+#~ "restore...\n"
+#~ ": Restore your shortcut mappings to (a) The mappings shipped with Ansel by default, (b) The start of your current session, or (c) The point at which the shortcut mapping screen was last opened. When restoring, you can choose to leave any additional shortcuts that were added after the relevant checkpoint as they are, so that only changed shortcuts are restored to their previous meaning. Or you can choose to first clear all shortcuts and just load the restore point.\n"
+#~ msgstr ""
+#~ "herstellen...\n"
+#~ ": Herstel jouw snelkoppelingstoewijzingen naar (a) de toewijzingen die standaard bij Ansel worden geleverd, (b) het begin van jouw huidige sessie, of (c) het punt waarop het snelkoppelingstoewijzingsscherm voor het laatst is geopend. Bij het terugzetten kan je ervoor kiezen om eventuele extra snelkoppelingen die na het betreffende checkpoint zijn toegevoegd te laten zoals ze zijn, zodat alleen gewijzigde snelkoppelingen hun eerdere betekenis krijgen. Of je kan ervoor kiezen om eerst alle snelkoppelingen te wissen en gewoon het herstelpunt te laden.\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "d=global/switch views/darkroom\n"
+#~ "l=global/switch views/lighttable\n"
+#~ "m=global/switch views/map\n"
+#~ "p=global/switch views/print\n"
+#~ "s=global/switch views/slideshow\n"
+#~ "t=global/switch views/tethering\n"
+#~ msgstr ""
+#~ "d=algemeen/van weergave wisselen/ontwikkelen\n"
+#~ "l=algemeen/van weergave wisselen/bibliotheek\n"
+#~ "m=globaal/wissel weergaven/kaart\n"
+#~ "p=algemeen/van weergave wisselen/afdrukken\n"
+#~ "s=algemeen/van weergave wisselen/diavoorstelling\n"
+#~ "t=algemeen/van weergave wisselen/tethering\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "d=global/no-op\n"
+#~ "l=global/no-op\n"
+#~ "m=global/no-op\n"
+#~ "p=global/no-op\n"
+#~ "s=global/no-op\n"
+#~ "t=global/no-op\n"
+#~ msgstr ""
+#~ "d=global/no-op\n"
+#~ "l=global/no-op\n"
+#~ "m=global/no-op\n"
+#~ "p=global/no-op\n"
+#~ "s=global/no-op\n"
+#~ "t=global/no-op\n"
+
+#, no-wrap
+#~ msgid "The following is a list of some of the actions to which you can assign shortcuts, organized by widget type. This is not an exhaustive list and you are encouraged to browse the shortcut mapping screen for a complete list of available actions. If you assign a shortcut to a widget, it will be given a default action, depending on the type of widget and on whether you have assigned a simple or extended shortcut.\n"
+#~ msgstr "Hieronder volgt een lijst met enkele van de acties waaraan je snelkoppelingen kunt toewijzen, geordend op widgettype. Dit is geen uitputtende lijst en je wordt aangemoedigd om door het scherm voor snelkoppelingen te bladeren voor een volledige lijst met beschikbare acties. Als je een snelkoppeling toewijst aan een widget, krijgt deze een standaardactie, afhankelijk van het type widget en van of je een eenvoudige of uitgebreide snelkoppeling hebt toegewezen.\n"
+
+#, no-wrap
+#~ msgid "Note that it is possible to assign a number of actions that have no effect. For example, all sliders include a _button_ element, regardless of whether such a button is actually present alongside a given slider.\n"
+#~ msgstr "Merk op dat het mogelijk is om een aantal acties toe te wijzen die geen effect hebben. Alle schuifregelaars bevatten bijvoorbeeld een _knop_-element, ongeacht of een dergelijke knop daadwerkelijk aanwezig is naast een bepaalde schuifregelaar.\n"
+
+#, no-wrap
+#~ msgid "views"
+#~ msgstr "weergaven"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "_focus_\n"
+#~| ": Acts as a _toggle_ that focuses or defocuses the module. This is useful for modules such as [_crop_](../module-reference/processing-modules/crop.md) or [_tone equalizer_](../module-reference/processing-modules/tone-equalizer.md), whose on-screen controls are only activated when those modules have focus. For _crop_, changes are saved only when the module loses focus.\n"
+#~ msgid ""
+#~ "_focus_\n"
+#~ ": Acts as a _toggle_ that focuses or defocuses the module. This is useful for modules such as [_crop_](../modules/processing-modules/crop.md) or [_tone equalizer_](../modules/processing-modules/tone-equalizer.md), whose on-screen controls are only activated when those modules have focus. For _crop_, changes are saved only when the module loses focus.\n"
+#~ msgstr ""
+#~ "_focus_\n"
+#~ ": Werkt als een _schakelaar_ die de module scherpstelt of defocusseert. Dit is handig voor modules zoals [_uitsnijden_](../module-reference/processing-modules/crop.md) of [_toon equalizer_](../module-reference/processing-modules/tone-equalizer.md), waarvan de bedieningselementen op het scherm alleen worden geactiveerd wanneer die modules focus hebben. Voor _uitsnijden_ worden wijzigingen alleen opgeslagen als de module de focus verliest.\n"
+
+#, no-wrap
+#~ msgid "You can alter the value of a slider more quickly or slowly than normal by defining the _speed_ of the action in the shortcut mapping screen. By default a _value_ (or _force_) effect is given a speed of 1.0, which means that it is changed at the default rate defined by the given slider. You can alter the slider more quickly by increasing the speed (a speed of 10 makes the action 10x faster) or more slowly by decreasing it (a speed of 0.1 makes the action 10x slower).\n"
+#~ msgstr "Je kan de waarde van een schuifregelaar sneller of langzamer dan normaal wijzigen door de _snelheid_ van de actie te definiëren in het snelkoppelingstoewijzingsscherm. Standaard krijgt een _waarde_ (of _kracht_) effect een snelheid van 1,0, wat betekent dat het wordt gewijzigd met de standaardsnelheid die is gedefinieerd door de gegeven schuifregelaar. Je kan de schuifregelaar sneller wijzigen door de snelheid te verhogen (een snelheid van 10 maakt de actie 10x sneller) of langzamer door deze te verlagen (een snelheid van 0,1 maakt de actie 10x langzamer).\n"
+
+#, no-wrap
+#~ msgid "fallbacks"
+#~ msgstr "terugvalposities"
+
+#, no-wrap
+#~ msgid "Where a _widget_ can have multiple different _actions_ applied to it, it can be tedious to set up individual shortcuts for each one of those actions. To make this process simpler, if you create a simple shortcut a number of effects can be made available by default as extensions to that shortcut. These are known as _fallbacks_.\n"
+#~ msgstr "Waar een _widget_ meerdere verschillende _acties_ kan hebben, kan het vervelend zijn om individuele snelkoppelingen in te stellen voor elk van die acties. Om dit proces eenvoudiger te maken, kunnen als je een eenvoudige snelkoppeling maakt, standaard een aantal effecten beschikbaar worden gesteld als uitbreidingen op die snelkoppeling. Deze staan bekend als _terugvalpositiess_.\n"
+
+#, no-wrap
+#~ msgid "While fallbacks are a powerful way to quickly set up multiple actions using predefined and consistent shortcuts, they will assign a lot of actions automatically (which might not be what you want), and can be hard to understand. Fallbacks are therefore disabled by default and you will need to click on the \"enable fallbacks\" check box in the shortcuts setup window to enable them.\n"
+#~ msgstr "Hoewel terugvalposities een krachtige manier zijn om snel meerdere acties in te stellen met behulp van vooraf gedefinieerde en consistente snelkoppelingen, zullen ze veel acties automatisch toewijzen (wat misschien niet is wat je wilt), en kunnen ze moeilijk te begrijpen zijn. Terugvalposities zijn daarom standaard uitgeschakeld en je moet op het selectievakje \"fallbacks inschakelen\" in het instellingenvenster voor snelkoppelingen klikken om ze in te schakelen.\n"
+
+#, no-wrap
+#~ msgid "To take a brief example, you could create a simple shortcut (e.g. Ctrl+R) against a processing module. This will automatically set up the following _fallback_ effects using the defined shortcut, extended with mouse-clicks. In each case (except the first) you should hold the initial shortcut while clicking with your mouse. The final mouse-click will apply the action defined below:\n"
+#~ msgstr "Om een kort voorbeeld te geven, zou je een eenvoudige snelkoppeling (bijv. Ctrl+R) tegen een verwerkingsmodule kunnen maken. Hiermee worden automatisch de volgende _fallback_-effecten ingesteld met behulp van de gedefinieerde snelkoppeling, uitgebreid met muisklikken. In elk geval (behalve het eerste) moet je de eerste snelkoppeling ingedrukt houden terwijl je met uw muis klikt. De laatste muisklik zal de hieronder gedefinieerde actie toepassen:\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R (no mouse-click) to show/hide the module (the default fallback)\n"
+#~ msgstr "Ctrl+R (geen muisklik) om de module te tonen/verbergen (de standaard fallback)\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R+left-click to enable/disable the module\n"
+#~ msgstr "Ctrl+R+links klikken om de module in/uit te schakelen\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R+left-double-click to reset the module\n"
+#~ msgstr "Ctrl+R+links dubbelklikken om de module te resetten\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R+right-click to show the module's preset menu\n"
+#~ msgstr "Ctrl+R+rechtsklik om het vooraf ingestelde menu van de module weer te geven\n"
+
+#, no-wrap
+#~ msgid "Ctrl+R+right-double-click to show the module's multiple instance menu\n"
+#~ msgstr "Ctrl+R+rechts dubbelklikken om het menu met meerdere instanties van de module weer te geven\n"
+
+#, no-wrap
+#~ msgid "Similar fallbacks are defined for many common UI elements and all can be manually overridden.\n"
+#~ msgstr "Soortgelijke fallbacks (terugvalposities) zijn gedefinieerd voor veel algemene UI-elementen en kunnen allemaal handmatig worden overschreven.\n"
+
+#, no-wrap
+#~ msgid "Some fallback actions are defined using modifier keys (usually `Ctrl+` and `Shift+`). In this case you must define an initial shortcut without such a modifier in order to be able to use these fallbacks. For example, if you assign Ctrl+R to an action, you cannot use a `Ctrl+` fallback. Some default fallbacks of this type are provided for the _value_ element and for horizontal/vertical movements in the (zoomed) central area -- in this case, `Shift+` increases the speed to 10.0 and `Ctrl+` decreases the speed to 0.1.\n"
+#~ msgstr "Sommige fallback-acties worden gedefinieerd met behulp van modificatietoetsen (meestal `Ctrl+` en `Shift+`). In dit geval moet je een initiële snelkoppeling definiëren zonder een dergelijke modificator om deze fallbacks te kunnen gebruiken. Als je bijvoorbeeld Ctrl+R aan een actie toewijst, kan je geen 'Ctrl+'-terugval gebruiken. Sommige standaard fallbacks van dit type zijn voorzien voor het _waarde_ element en voor horizontale/vertikale bewegingen in het (ingezoomde) centrale gebied -- in dit geval verhoogt `Shift+` de snelheid tot 10.0 en `Ctrl+` verlaagt de snelheid tot 0.1.\n"
+
+#, no-wrap
+#~ msgid "To see a list of _all_ of the default fallbacks, click the \"enable fallbacks\" checkbox in the shortcut mapping screen and select the \"fallbacks\" category in the top panel. To see the fallbacks for a given widget (e.g. a slider) just select that widget in the top panel. In both cases an additional item (also named \"fallbacks\") will then appear in the bottom panel containing full details of the available fallbacks.\n"
+#~ msgstr "Om een lijst met _alle_ van de standaard fallbacks te zien, klik je op het selectievakje \"fallbacks inschakelen\" in het snelkoppelingsscherm en selecteert u de categorie \"fallbacks\" in het bovenste paneel. Om de fallbacks voor een bepaalde widget (bijvoorbeeld een schuifregelaar) te zien, selecteer je die widget in het bovenste paneel. In beide gevallen verschijnt er dan een extra item (ook wel \"fallbacks\" genoemd) in het onderste paneel met alle details van de beschikbare fallbacks.\n"
+
+#, no-wrap
+#~ msgid "Fallbacks are only applied if no other shortcut using that combination has been explicitly created. In the above example, if you were to explicitly assign Ctrl+R+left-click to another action, the \"enable/disable module\" fallback would be ignored.\n"
+#~ msgstr "Fallbacks worden alleen toegepast als er geen andere snelkoppeling met die combinatie expliciet is gemaakt. Als je in het bovenstaande voorbeeld Ctrl+R+linksklik expliciet aan een andere actie zou toewijzen, zou de fallback \"module inschakelen/uitschakelen\" worden genegeerd.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "As with any other shortcut, fallback settings are fully customizable. \n"
+#~ msgid "As with any other shortcut, fallback settings are fully customizable.\n"
+#~ msgstr "Zoals bij elke andere snelkoppeling, kunnen fallback-instellingen volledig worden aangepast. \n"
 
 #, no-wrap
 #~ msgid "overview"
