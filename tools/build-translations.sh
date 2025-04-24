@@ -33,6 +33,10 @@ else
   exit 1
 fi
 
+# Always remove all languages in case disabled languages have changed
+echo "Removing translations for all languages"
+po4a --rm-translations --no-update --no-translations --verbose "$po4a_conf"
+
 # get list of target languages minus disabled ones
 disabled_languages=$(cat "$PROJECT_ROOT/po/disable-languages")
 for lang in `find po -name '*.po' | cut -d . -f 2 | sort -u`; do
@@ -44,11 +48,8 @@ done
 # Update the languages line in config to only contain supported languages
 sed -i "/\[po4a_langs\].*/c\[po4a_langs] $languages" $po4a_conf
 
-# Generate or remove the target languages
+# Generate only the target languages
 if [ "$mode" = "add" ]; then
   echo "Generating translations for $languages"
   po4a --keep 0 --no-update --verbose $po4a_conf
-elif [ "$mode" = "remove" ]; then
-  echo "Removing translations for all languages"
-  po4a --rm-translations --no-update --no-translations --verbose "$po4a_conf"
 fi
