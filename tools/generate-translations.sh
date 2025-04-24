@@ -54,12 +54,14 @@ for section in content; do
 EOF
     # for f in $section/*.md; do
     for f in  $(find content -type f -name '*.md'); do
-        # Enqueue the translations
-	    echo "[type: markdown] $f \$lang:$(dirname $f)/$(basename $f .md).\$lang.md" >> $po4a_conf
+        # Enqueue the translations only for Git-tracked files,
+        # aka not the auto-generated translations
+        if [[ $(git ls-files $f) == $f ]]; then
+	        echo "[type: markdown] $f \$lang:$(dirname $f)/$(basename $f .md).\$lang.md" >> $po4a_conf
+        fi
     done
-    po4a $1 --verbose $po4a_conf --keep 0 &
+    po4a $1 --verbose $po4a_conf --keep 0
 done
-wait
 
 # no need to keep these around
 if test -f po/*.en.po; then
