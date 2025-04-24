@@ -39,11 +39,11 @@ When you hover the mouse pointer over the graph, a white circle indicates the ra
 
 The following image shows the default state of the contrast equalizer module before any adjustments have been made:
 
-![contrast-equalizer-luma-orig](contrast-equalizer-luma-orig.png#w66)
+![contrast-equalizer-luma-orig](contrast-equalizer-luma-orig.jpg)
 
 Raising the two control points at the right-hand end of the graph will increase the sharpness of the fine details (the eye and feathers of the bird) while leaving coarser details (the rocks in the background) largely unaffected. The example below has been exaggerated to better illustrate the effect.
 
-![contrast-equalizer-luma-high](contrast-equalizer-luma-high.png#w66)
+![contrast-equalizer-luma-high](contrast-equalizer-luma-high.jpg)
 
 Increasing the local contrast can also amplify the luma noise in the image. A second spline located at the bottom of the graph can be used to denoise the selected detail scales. Raise this spline (by clicking just above one of the triangles at the bottom of the graph and dragging the line upwards) to reduce noise at the given wavelet scale. In the example above, the dark denoising spline has been raised at the fine-detail end of the graph.
 
@@ -51,11 +51,11 @@ Increasing the local contrast can also amplify the luma noise in the image. A se
 
 The chroma tab allows the color contrast or saturation to be adjusted at the selected wavelet scales. See the following example:
 
-![contrast-equalizer-chroma-orig](contrast-equalizer-chroma-orig.png#w66)
+![contrast-equalizer-chroma-orig](contrast-equalizer-chroma-orig.jpg)
 
 Say you wanted to bring out the green color of the anthers at the end of the stamen. The pink petals of the flowers are already quite saturated, but using contrast equalizer you can selectively boost the saturation on the small scale of the anthers without impacting the saturation of the petals. By raising the third control point from the right, you can target the saturation of the anthers only:
 
-![contrast-equalizer-chroma-high](contrast-equalizer-chroma-high.png#w66)
+![contrast-equalizer-chroma-high](contrast-equalizer-chroma-high.jpg)
 
 As in the luma tab, the chroma tab also has a denoising spline at the bottom of the graph. This can be used to handle chroma noise at different scales within the image. Chroma denoising can generally be more aggressive on larger wavelet scales and has less effect on a smaller scale.
 
@@ -65,7 +65,7 @@ The basic wavelet _à trous_ transform has been enhanced in the _contrast equali
 
 To see the sorts of artifacts that the _edges_ curve tries to combat, here is an example taken from the original paper "Edge-Optimized À-Trous Wavelets for Local Contrast Enhancement with Robust Denoising" (Hanika, Damertz and Lensch 2011):
 
-![contrast-equalizer-edge](contrast-equalizer-edge.png#w75)
+![contrast-equalizer-edge](contrast-equalizer-edge.jpg)
 
 In the image on the left, the edges spline has been reduced to a minimum, effectively disabling the edge awareness and resulting in halos. In the middle image, the edges spline has been increased too much, resulting in gradient reversals. In the image on the right the edges spline has been set somewhere in between the two extremes, resulting in nice clean edges.
 

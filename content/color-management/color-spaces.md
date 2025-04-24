@@ -11,7 +11,7 @@ Input images are either RGB files (like JPEGs or TIFFs) or camera RAWs. Both sto
 
 The following image illustrates this concept.
 
-![Spectral decomposition of a light emission into 3 RGB intensities](spectral-decomposition.png#w100)
+![Spectral decomposition of a light emission into 3 RGB intensities](spectral-decomposition.jpg)
 
 The left-hand-side of the image depicts a colored light that we need to represent digitally. We can use three ideal color filters to decompose this light into three colored primary lights at different intensities. In order to recreate the original colored light from our ideal decomposition (as illustrated in the center of the image) we simply need to recombine those three primary lights by addition.
 

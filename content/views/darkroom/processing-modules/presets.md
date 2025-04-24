@@ -37,7 +37,7 @@ Click on a preset name to apply the preset to the current instance of the module
 
 When creating or editing presets, the following dialog is shown:
 
-![new preset](new_preset.png#w33)
+![new preset](new_preset.jpg)
 
 ### controls
 

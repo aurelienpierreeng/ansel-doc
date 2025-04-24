@@ -8,7 +8,7 @@ draft: false
 
 The [rgb curve](../../../modules/processing-modules/rgb-curve.md) module use curves to control the tones in the image. These modules have some common features that warrant separate discussion.
 
-![curve](curve.png#w33)
+![curve](curve.jpg)
 
 ## nodes
 

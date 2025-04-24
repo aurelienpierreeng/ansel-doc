@@ -107,7 +107,7 @@ export
 
 The “preferences…” option in the presets menu brings up a dialog where you can configure what metadata to include in exported files:
 
-![metadata config](metadata-config.png#w66)
+![metadata config](metadata-config.jpg)
 
 The parameters entered into this dialog are saved along with other export parameters to user presets and the last entered values are retained when Ansel is closed.
 

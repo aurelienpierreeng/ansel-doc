@@ -29,7 +29,7 @@ All thumbnails are fully color managed. Colors are rendered accurately on screen
 
 ## skulls
 
-If for some reason Ansel is unable to generate a thumbnail, it displays an image of a skull ![skull icon](skull.png#icon) instead. Don't panic!
+If for some reason Ansel is unable to generate a thumbnail, it displays an image of a skull ![skull icon](skull.jpg) instead. Don't panic!
 
 There are three main reasons this could happen:
 

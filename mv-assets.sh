@@ -1,5 +1,7 @@
 #!/bin/bash
-for f in `find content/ -type f -name '*.jpg'`
+for f in `find assets/ -type f -name '*.png'`
 do
-  mv $f assets/
+  filename="${f%.*}"
+  magick $f -quality 86 $filename.jpg
+  rm $f
 done

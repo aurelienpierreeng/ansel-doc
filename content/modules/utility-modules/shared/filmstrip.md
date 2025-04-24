@@ -9,7 +9,7 @@ view: darkroom, tethering, map, print
 
 The filmstrip can be used to quickly switch between images. The images shown are the same as those displayed in the lighttable view and are defined by the currently-selected collection.
 
-![filmstrip](filmstrip.png)
+![filmstrip](filmstrip.jpg)
 
 The filmstrip can be switched on and off using the shortcut Ctrl+F. The height of the filmstrip panel can be changed by clicking and dragging its top border.
 
