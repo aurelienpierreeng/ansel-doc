@@ -38,7 +38,7 @@ echo "Removing translations for all languages"
 po4a --rm-translations --no-update --no-translations --verbose "$po4a_conf"
 
 # get list of target languages minus disabled ones
-disabled_languages=$(cat "$PROJECT_ROOT/po/disable-languages")
+disabled_languages=$(cat "po/disable-languages")
 for lang in `find po -name '*.po' | cut -d . -f 2 | sort -u`; do
     if [[ ! $disabled_languages == *$lang* ]]; then
         languages="$languages $lang"
