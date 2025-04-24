@@ -2,7 +2,7 @@
 # Requires po4a version 0.58 or higher.
 
 # go to project root
-PROJECT_ROOT="$(cd `dirname $0`/..; pwd)"
+PROJECT_ROOT="$(cd `dirname $0`/..; pwd -P)"
 cd "$PROJECT_ROOT"
 
 set -e
@@ -55,4 +55,4 @@ for f in  $(find content -type f -name '*.md'); do
 done
 
 # Update .pot and .po content with fresh .md files
-po4a $1 --verbose $po4a_conf --keep 0 --no-translations --rm-translations
+po4a --verbose --previous --no-translations --rm-translations "$po4a_conf"

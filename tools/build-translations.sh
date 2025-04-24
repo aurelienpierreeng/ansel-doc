@@ -2,7 +2,7 @@
 # Requires po4a version 0.58 or higher.
 
 # go to project root
-PROJECT_ROOT="$(cd `dirname $0`/..; pwd)"
+PROJECT_ROOT="$(cd `dirname $0`/..; pwd -P)"
 cd "$PROJECT_ROOT"
 
 set -e
@@ -17,7 +17,7 @@ fi
 po4a_conf="po/po4a.conf"
 
 if ! test -f $po4a_conf || [ ! -s $po4a_conf ]; then
-    echo "The file $po4a_conf is empty or don't exist. Run `./update-translations.sh` first"
+    echo "The file $po4a_conf is empty or don't exist. Run `./tools/update-translations.sh` first"
     exit 1
 fi
 
@@ -37,15 +37,18 @@ fi
 disabled_languages=$(cat "$PROJECT_ROOT/po/disable-languages")
 for lang in `find po -name '*.po' | cut -d . -f 2 | sort -u`; do
     if [[ ! $disabled_languages == *$lang* ]]; then
-        languages="$languages --target-lang $lang"
+        languages="$languages $lang"
     fi
 done
+
+# Update the languages line in config to only contain supported languages
+sed -i "/\[po4a_langs\].*/c\[po4a_langs] $languages" $po4a_conf
 
 # Generate or remove the target languages
 if [ "$mode" = "add" ]; then
   echo "Generating translations for $languages"
-  po4a $po4a_conf --verbose --keep 0 --no-update "$languages"
+  po4a --keep 0 --no-update --verbose $po4a_conf
 elif [ "$mode" = "remove" ]; then
-  echo "Removing translations for $languages"
-  po4a $po4a_conf --verbose --keep 0 --rm-translations --no-update --no-translations "$languages"
+  echo "Removing translations for all languages"
+  po4a --rm-translations --no-update --no-translations --verbose "$po4a_conf"
 fi
