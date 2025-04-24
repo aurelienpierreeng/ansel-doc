@@ -56,7 +56,7 @@ EOF
     for f in  $(find content -type f -name '*.md'); do
         # Enqueue the translations only for Git-tracked files,
         # aka not the auto-generated translations
-        if [[ $(git ls-files $f) == $f ]]; then
+        if [ "$(git ls-files $f)" = "$f" ]; then
 	        echo "[type: markdown] $f \$lang:$(dirname $f)/$(basename $f .md).\$lang.md" >> $po4a_conf
         fi
     done
