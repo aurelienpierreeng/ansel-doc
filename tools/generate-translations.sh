@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 # Adapted from https://gitlab.com/fdroid/fdroid-website/-/raw/master/tools/i18n.sh
 # Requires po4a version 0.58 or higher.
@@ -33,8 +33,7 @@ disabled_languages=$(cat "$PROJECT_ROOT/po/disable-languages")
 #remove disabled languages from the list
 for lang in `find po -name '*.po' | cut -d . -f 2 | sort -u`
 do
-   if [[ ! "$disabled_languages" == *$lang* ]]
-   then
+   if [[ ! $disabled_languages == *$lang* ]]; then
       languages="$languages $lang"
    fi
 done
@@ -60,10 +59,6 @@ EOF
 	        echo "[type: markdown] $f \$lang:$(dirname $f)/$(basename $f .md).\$lang.md" >> $po4a_conf
         fi
     done
-    po4a $1 --verbose $po4a_conf --keep 0
 done
 
-# no need to keep these around
-if test -f po/*.en.po; then
-    rm -f po/*.en.po
-fi
+po4a $1 --verbose $po4a_conf --keep 0
