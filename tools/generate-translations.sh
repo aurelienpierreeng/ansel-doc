@@ -62,3 +62,4 @@ EOF
 done
 
 po4a $1 --verbose $po4a_conf --keep 0
+wait
