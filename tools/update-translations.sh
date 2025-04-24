@@ -24,8 +24,7 @@ touch $po4a_conf
 > $po4a_conf
 
 # Populate languages with what we found in po/ folder
-echo "[po_directory] po" > $po4a_conf
-echo "[po4a_langs] $languages" > $po4a_conf
+echo "[po4a_langs] $languages" >> $po4a_conf
 echo "[po4a_paths] po/content.pot \$lang:po/content.\$lang.po" >> $po4a_conf
 
 # Parsing options
