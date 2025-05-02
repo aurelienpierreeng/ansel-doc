@@ -19,4 +19,4 @@ This documentation is derived from [darktable 4.0 user manual](https://github.co
 
 The goal of this documentation is to explain the effect and use cases of the features and settings existing in the software. The opposite approach, explaining what features are useful to achieve a certain goal, is provided in the [workflows](../workflows/_index.md) section.
 
-Users may subscribe to the [RSS feed of the documentation](/en/doc/index.xml) to follow new pages and fresh updates of old pages.
+Users may subscribe to the [RSS feed of the documentation](./index.xml) to follow new pages and fresh updates of old pages.
