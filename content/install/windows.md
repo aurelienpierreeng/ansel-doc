@@ -10,7 +10,7 @@ weight: 20
 
 Install your OpenCL GPU drivers if you have a GPU.
 
-On Windows 11, it seems that the system OpenCL drivers for Intel embedded GPU cause issues (black images), especially with newer generation CPU. You may want to [remove Windows drivers](community.intel.com/t5/OpenCL-for-CPU/uninstall-Intel-OpenCL/m-p/1134032#M5756) and [install Intel ones](https://www.intel.com/content/www/us/en/developer/articles/tool/opencl-drivers.html#proc-graph-section).
+On Windows 11, it seems that the system OpenCL drivers for Intel embedded GPU cause issues (black images), especially with newer generation CPU. You may want to [remove Windows drivers](https://community.intel.com/t5/OpenCL-for-CPU/uninstall-Intel-OpenCL/m-p/1134032#M5756) and [install Intel ones](https://www.intel.com/content/www/us/en/developer/articles/tool/opencl-drivers.html#proc-graph-section).
 
 See the [caveats section below](#caveats) for more details.
 
