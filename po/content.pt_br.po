@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-04-24 05:03+0200\n"
+"POT-Creation-Date: 2025-05-02 03:43+0200\n"
 "PO-Revision-Date: 2022-07-27 23:43+0000\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.pixls.us/projects/Ansel/dtdocs/pt_BR/>\n"
@@ -1160,13 +1160,337 @@ msgstr "Para obter mais informações sobre como definir as regras de filtragem 
 msgid "The next section provides more details on the [usage](usage.md) of the Slideshow view.\n"
 msgstr "A seção a seguir fornece mais detalhes sobre o [uso](usage.md) da vista de apresentação de slides.\n"
 
-#. type: Title ##
+#. type: Title ###
 #: content/views/_index.md content/special-topics/from-darktable.md
-#: content/preferences-settings/shortcuts.md content/overview/user-interface.md
+#: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
 #| msgid "views"
 msgid "Views"
 msgstr "vistas"
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid "The functionality in Ansel is separated into six different views:\n"
+msgstr "As funcionalidades no Ansel são separadas em seis vistas diferentes:\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"[Lighttable](lighttable/_index.md)\n"
+": Manage images and collections. It is the main view and can be accessed from anywhere in the software by hitting the <kbd>Escape</kbd> key.\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"[Darkroom](darkroom/_index.md)\n"
+": Develop a single image. It can be accessed from the lighttable by double-click on a thumbnail or by hitting the <kbd>Enter</kbd> key when a picture is selected.\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"[Map](map/_index.md)\n"
+": Show geo-tagged images on a map and manually geo-tag new images. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md).\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"[Print](print/_index.md)\n"
+": Send images to a printer for self-made prints. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md). This view is not available on Windows since it relies on [CUPS](http://www.cups.org/).\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"[Slideshow](slideshow/_index.md)\n"
+": Display images as a slideshow, processing them on-the-fly. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md).\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "You can switch between views by clicking the view name at the top of the right-hand panel (the currently active view is highlighted) or by using one of the following keyboard shortcuts:\n"
+msgid "You can switch between views by clicking the view name at the top of the right-hand panel (the currently active view is highlighted).\n"
+msgstr "Você pode alternar entre as vistas clicando no respectivo nome localizado na porção mais à direita da faixa superior da janela (a vista atualmente ativa fica realçada) ou usando um dos seguintes atalhos de teclado:\n"
+
+#. type: Title ##
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "content"
+msgid "Main content"
+msgstr "conteúdo"
+
+#. type: Title ###
+#: content/views/_index.md
+#, no-wrap
+msgid "Panels"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "The layout of all Ansel views is similar and consists of a center area with panels at the edges: \n"
+msgid "The layout of all Ansel views is similar and consists of a center area with panels at the edges:\n"
+msgstr "A disposição de todas as vistas do Ansel é semelhante e consiste de uma área central rodeada por painéis. \n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"Left panel\n"
+": Can be shown and hidden with <kbd>Shift + Ctrl + L</kbd> :\n"
+"    * __In lighttable__ : Shows the file import, export and collections.\n"
+"    * __In darkroom__ : Shows various peripheral informations on the currently edited picture.\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"Right panel\n"
+": Can be shown and hidden with <kbd>Shift + Ctrl + R</kbd> :\n"
+"    * __In lighttable__ : Contains metadata editors and bulk processing tools.\n"
+"    * __In darkroom__ : Contains the settings to edit the picture.\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "4. top banner\n"
+#| ": Contains information about the current Ansel version and allows you to switch between views. Also used by some modules to show additional hints and messages.\n"
+msgid ""
+"Top panel (header)\n"
+": Contains information about the current Ansel version and allows you to switch between views. Also used by some modules to show additional hints and messages. Can be hidden and shown by pressing <kbd>Ctrl + H</kbd>\n"
+msgstr ""
+"4. faixa superior\n"
+": Contém informações sobre a versão atual do Ansel e lhe permite alternar entre as vistas. Também é usada por alguns módulos para mostrar dicas e mensagens adicionais.\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"Top toolbar\n"
+": Provides buttons to access the global settings and shortcuts. Can be hidden and shown by pressing <kbd>Shift + Ctrl + T</kbd>.\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "6. bottom panel\n"
+#| ": Provides access to view-specific settings and shortcuts.\n"
+msgid ""
+"Bottom panel\n"
+": Provides buttons to access to view-specific settings and shortcuts. Can be hidden and shown by pressing <kbd>Shift + Ctrl + B</kbd>\n"
+msgstr ""
+"6. painel inferior\n"
+": Proporciona acesso às configurações específicas e atalhos de teclado da vista atual.\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "7. [filmstrip](../../module-reference/utility-modules/shared/filmstrip.md)/[timeline](../../module-reference/utility-modules/lighttable/timeline.md) panel\n"
+#| ": An optional panel that can be enabled at the bottom of the screen to display a timeline (in the lighttable view) or a filmstrip (in other views) of images in the current collection.\n"
+msgid ""
+"[Filmstrip](../../modules/utility-modules/shared/filmstrip.md)\n"
+": An optional panel that can be enabled at the bottom of the screen in Darkroom, Maps and Print view to display a filmstrip of images in the current collection. Can be shown and hidden by pressing <kbd>Shift + Ctrl + F</kbd>.\n"
+msgstr ""
+"7. painel [rolo de filme](../../module-reference/utility-modules/shared/filmstrip.md)/[linha do tempo](../../module-reference/utility-modules/lighttable/timeline.md)\n"
+": Um painel opcional que pode ser habilitado na parte inferior da tela para mostrar uma linha do tempo (na vista da mesa de luz) ou um rolo de filme (em outras vistas) das imagens da coleção atual.\n"
+
+#. type: Title ###
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "module resizing"
+msgid "Resizing"
+msgstr "redimensionamento do módulo"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "The left, right and filmstrip/timeline panels can be resized by dragging their inner borders. \n"
+msgid "The left, right and filmstrip panels can be resized by clicking and dragging their inner borders. Some shortcuts allow to globally change the layout :\n"
+msgstr "Os painéis esquerdo, direito e rolo de filme/linha do tempo podem ser redimensionados arrastando suas bordas internas. \n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "`TAB` temporarily expands the centre view to fill the whole window. Press again to return to the previous view.\n"
+msgid ""
+" - <kbd>TAB</kbd> temporarily expands the centre view to fill the whole window (hide all panels). Press again to return to the previous view.\n"
+" - <kbd>F11</kbd> toggles fullscreen mode\n"
+msgstr "`TAB` expande temporariamente a área central para preencher toda a janela. Pressione novamente para retornar à visualização anterior.\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "**Note:** The size and visibility of the panels are stored independently for each view.\n"
+msgid ""
+"{{< note >}}\n"
+"The size and visibility of the panels are stored independently for each view.\n"
+"{{</ note >}}\n"
+msgstr "**Nota:** O tamanho e a visibilidade dos painéis são armazenados de forma independente para cada vista.\n"
+
+#. type: Title ###
+#: content/views/_index.md
+#, no-wrap
+msgid "Top toolbar"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid "The top panel is common to all Ansel views and provides access to a number of common functions.\n"
+msgstr "O painel superior é comum a todas as vistas do Ansel e fornece acesso a um conjunto de funções comuns.\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "filter / sort\n"
+#| ": Choose how to filter and sort the images. Criteria can be altered in the [collection filters](../../module-reference/utility-modules/shared/collection-filters.md) module.\n"
+msgid ""
+"Filter / sort\n"
+": Choose how to filter and sort the images. Criteria can be altered in the [collection filters](../../modules/utility-modules/shared/collections.md) module.\n"
+msgstr ""
+"filtro / ordenar por\n"
+": Escolha como filtrar e ordenar as imagens. Os critérios podem ser alterados no módulo [filtros de coleção](../../module-reference/utility-modules/shared/collection-filters.md).\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "![top-panel_sort-order icon](./top-panel/top-panel_sort-order.jpg) sort order\n"
+#| ": Switch the sort order (ascending / descending).\n"
+msgid ""
+"Sort order\n"
+": Switch the sort order (ascending / descending).\n"
+msgstr ""
+"![top-panel_sort-order icon](./top-panel/top-panel_sort-order.jpg) ícone de ordenação\n"
+": Alterna a ordem de exibição (ascendente/descendente).\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "![top panel_help icon](./top-panel/top-panel_help.jpg) context-sensitive help\n"
+#| ": Click this icon and then click on a control element to be directed to the appropriate online help page.\n"
+msgid ""
+"Context-sensitive help\n"
+": Click this icon and then click on a control element to be directed to the appropriate online help page.\n"
+msgstr ""
+"![top panel_help icon](./top-panel/top-panel_help.jpg) ajuda online\n"
+": Clique neste ícone e então clique em um elemento de controle para ser direcionado para a página de ajuda online apropriada.\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "![top panel shortcut mapping icon](./top-panel/top-panel_shortcut.jpg) shortcut mapping\n"
+#| ": Click this icon to enter the [visual shortcut mapping](../../preferences-settings/shortcuts.md#visual-shortcut-mapping) mode to create keyboard/mouse shortcuts.\n"
+msgid ""
+"Shortcut mapping\n"
+": Click this icon to enter the [visual shortcut mapping](../../preferences-settings/shortcuts.md#visual-shortcut-mapping) mode to create keyboard/mouse shortcuts.\n"
+msgstr ""
+"![top panel shortcut mapping icon](./top-panel/top-panel_shortcut.jpg) mapeamento de atalho\n"
+": Clique neste ícone para entrar no modo de [mapeamento de atalho visual](../../preferences-settings/shortcuts.md#mapeamento-de-atalho-visual) para criar atalhos de mouse/teclado.\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "![top panel_preferences icon](./top-panel/top-panel_preferences.jpg) preferences\n"
+#| ": View and amend Ansel's [preferences & settings](../../preferences-settings/_index.md).\n"
+msgid ""
+"Preferences\n"
+": View and amend Ansel's [preferences & settings](../../preferences-settings/_index.md).\n"
+msgstr ""
+"![top panel_preferences icon](./top-panel/top-panel_preferences.jpg) preferências\n"
+": Vê e modifica as [preferências e configurações](../../preferences-settings/) do Ansel.\n"
+
+#. type: Title ###
+#: content/views/_index.md
+#, no-wrap
+msgid "Bottom toolbar"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "![top panel_grouping icon](./top-panel/top-panel_grouping.jpg) grouping\n"
+#| ": Expand or collapse [grouped images](../../lighttable/digital-asset-management/grouping.md).\n"
+msgid ""
+"Grouping\n"
+": Expand or collapse [grouped images](../../views/lighttable/digital-asset-management/grouping.md).\n"
+msgstr ""
+"![top panel_grouping icon](./top-panel/top-panel_grouping.jpg) agrupamento\n"
+": Expande ou recolhe as [imagens agrupadas](../../lighttable/digital-asset-management/grouping.md).\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"Thumbnail overlays\n"
+": Define what information is overlaid on to thumbnails in the lighttable/filmstrip.\n"
+msgstr ""
+
+#. type: Title ###
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "filmstrip"
+msgid "Filmstrip"
+msgstr "rolo de filme"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "The filmstrip, when enabled, is shown at the bottom of the screen (except in the lighttable view, where it is replaced with the [timeline](../../module-reference/utility-modules/lighttable/timeline.md) module) and displays the images from the current [collection](../../lighttable/digital-asset-management/collections.md) (set in the lighttable view). You can navigate the filmstrip by scrolling with the mouse wheel. \n"
+msgid "The filmstrip, when enabled, is shown at the bottom of the screen and displays the images from the current [collection](../../views/lighttable/digital-asset-management/collections.md) (set in the lighttable view). You can navigate the filmstrip by scrolling with the mouse wheel or with\n"
+msgstr "O rolo de filme, quando habilitado, é exibido na parte inferior da tela (exceto na vista da mesa de luz, onde é substituído pelo módulo da [linha do tempo](../../module-reference/utility-modules/lighttable/timeline.md)) e exibe as imagens da [coleção](../../lighttable/digital-asset-management/collections.md) atual (configurada na vista da mesa de luz). Você pode navegar pelo rolo de filme usando a roda do mouse. \n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "The filmstrip allows you to interact with images while you are not in the lighttable view. For example, while developing an image in darkroom mode, you can switch to another image to by clicking its thumbnail in the filmstrip. You can also rate and color-classify the images as you do in lighttable, as well as copy & paste the history stack using keyboard shortcuts.\n"
+msgid "The filmstrip allows you to interact with images while you are not in the lighttable view. For example, while developing an image in darkroom mode, you can switch to another image to by clicking its thumbnail in the filmstrip. You can copy & paste the history stack using keyboard shortcuts (<kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>).\n"
+msgstr "O rolo de filme lhe permite interagir com as imagens enquanto você não está na vista da mesa de luz. Por exemplo, enquanto processa uma imagem na sala escura, você pode alternar para outra imagem clicando em sua miniatura no rolo de filme. Você pode também classificar as imagens com estrelas ou cores da mesma maneira que faria na mesa de luz, bem como copiar e colar a pilha do histórico usando os atalhos de teclado.\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "See the [filmstrip](../../module-reference/utility-modules/shared/filmstrip.md) module documentation for more information.\n"
+msgid "See the [filmstrip](../../modules/utility-modules/shared/filmstrip.md) module documentation for more information.\n"
+msgstr "Consulte a documentação do módulo [rolo de filme](../../module-reference/utility-modules/shared/filmstrip.md) para obter mais informações.\n"
+
+#. type: Title ##
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "keyboard shortcuts"
+msgid "Keyboard shortcuts"
+msgstr "atalhos de teclado"
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid "Much of the functionality in Ansel can be controlled via keyboard shortcuts, which can be customised in [preferences > shortcuts](../../preferences-settings/shortcuts.md).\n"
+msgstr "Grande parte das funcionalidades do Ansel pode ser controlada por meio de atalhos de teclado, que podem ser personalizados em [preferências > atalhos](../../preferences-settings/shortcuts.md).\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid "Press the H key (for help) in any Ansel view to show a list of all shortcuts that are applicable to the current view.\n"
+msgstr "Pressione a tecla H (para obter ajuda) em qualquer vista do Ansel para exibir uma lista de todos os atalhos que são aplicados à vista atual.\n"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/views/print/print-view-layout.md
@@ -6303,202 +6627,6 @@ msgid "A poorly-made display profile will be more harmful than sticking to the d
 msgstr "Um perfil de monitor mal feito será mais danoso do que usar a predefinição para sRGB, uma vez que o padrão pode ser um pouco impreciso mas pelo menos será confiável. Recomenda-se aos usuários avançados e profissionais que continuem com a produção de perfis de monitor personalizados somente se eles tiverem treinamento para avaliar a qualidade do perfil resultante e entender as opções de criação de perfis.\n"
 
 #. type: Yaml Front Matter Hash Value: title
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "midi device support"
-msgstr "suporte a dispositivo midi"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "The shortcut mapping system has been most extensively tested with the Behringer X-Touch Mini and contains custom code to deal with the specific features of this device. All other devices are treated as \"generic midi\" and may or may not work (well) or need some manual setup each time. A configuration framework (possibly in lua) to support additional device-specific features is on the to do list.\n"
-msgstr "O sistema de mapeamento de atalho foi testado mais extensivamente com o Behringer X-Touch Mini e contém código personalizado para lidar com os recursos específicos deste dispositivo. Todos os outros dispositivos são tratados como \"midi genéricos\" e podem ou não funcionar (bem) ou precisar de alguma configuração manual a cada utilização. Uma estrutura de configuração (possivelmente em lua) para suportar recursos específicos de dispositivos adicionais está na lista de tarefas.\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "If you succeed in getting a midi device up and running that hasn't been mentioned below, it would be greatly appreciated if you would provide feedback in order to assist others, if any special steps are required. You could do this either by submitting a documentation [pull request](https://github.com/Ansel-org/dtdocs/pulls) to amend this page or by [filing an issue](https://github.com/Ansel-org/dtdocs/issues) containing the necessary information. Alternatively you could read or respond to any of the (closed) midi or \"inputng\" [issues](https://github.com/Ansel-org/Ansel/issues) or [pull requests](https://github.com/Ansel-org/Ansel/pulls) in the main Ansel repository if you need additional help or guidance yourself.\n"
-msgid "If you succeed in getting a midi device up and running that hasn't been mentioned below, it would be greatly appreciated if you would provide feedback in order to assist others, if any special steps are required. You could do this either by submitting a documentation [pull request](https://github.com/darktable-org/dtdocs/pulls) to amend this page or by [filing an issue](https://github.com/darktable-org/dtdocs/issues) containing the necessary information. Alternatively you could read or respond to any of the (closed) midi or \"inputng\" [issues](https://github.com/darktable-org/darktable/issues) or [pull requests](https://github.com/darktable-org/darktable/pulls) in the main darktable repository if you need additional help or guidance yourself.\n"
-msgstr "Se você conseguir colocar um dispositivo midi em funcionamento que não tenha sido mencionado abaixo, seria muito apreciado se você fornecesse feedback para ajudar outras pessoas, se forem necessárias etapas especiais. Você pode fazer isso enviando um [pull request](https://github.com/Ansel-org/dtdocs/pulls) de documentação para alterar esta página ou [registrar um problema](https://github.com/Ansel-org/dtdocs/issues) contendo as informações necessárias. Alternativamente, você pode ler ou responder a qualquer um dos [problemas](https://github.com/Ansel-org/Ansel/issues) (fechados) relacionados ao midi ou \"inputng\" ou fazer um [pull request](https://github.com/Ansel-org/Ansel/pulls) no repositório principal da Ansel se você mesmo precisar de ajuda ou orientação adicional.\n"
-
-#. type: Title ##
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Behringer X-touch Mini"
-msgstr "Behringer X-Touch Mini"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "The device should be in Standard Mode (not MC). Layers A & B are somewhat supported, however, since the device does not send a notification when switching between layers, and since the updates to \"hidden\" rotors and lights (both under buttons and the pattern used around the rotors) are ignored, everything will only be updated completely after you press or turn something in the \"new\" layer.\n"
-msgstr "O dispositivo deve estar no modo padrão (não MC). As camadas A e B são razoavelmente suportadas. No entanto, uma vez que o dispositivo não envia uma notificação ao alternar entre as camadas, e uma vez que as atualizações para rotores e luzes \"ocultos\" (tanto sob os botões e o padrão usado ao redor dos rotores) são ignoradas, tudo só será atualizado completamente depois que você pressionar ou acionar algo na \"nova\" camada.\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "The light rings around the rotors show a different pattern depending on whether the associated slider has a symmetrical +/- range centered around 0, 0-100 (or 0-1) or anything else. If linked to a drop-down (or star rating) the rotor will step one light at the time. If the drop-down has many (more than 13) items (like the blending mode drop-down), the rotor will go around twice; the first time with one light on, and the second time with two adjacent lights.\n"
-msgstr "Os anéis de luz ao redor dos rotores mostram um padrão diferente dependendo se o controle deslizante associado tem uma faixa +/- simétrica centrada em torno de 0, 0-100 (ou 0-1) ou qualquer outra coisa. Se estiver vinculado a uma lista suspensa (ou classificação por estrelas), o rotor piscará uma luz por vez. Se a lista suspensa tiver muitos (mais de 13) itens (como a lista suspensa do modo de mesclagem), o rotor girará duas vezes; a primeira vez com uma luz acesa e a segunda vez com duas luzes adjacentes.\n"
-
-#. type: Title ##
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Arturia Beatstep"
-msgstr "Arturia Beatstep"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "Individual rotors can be configured to send absolute (0-127) values or changes (+/- 1,2,3,... in different encodings). The recommended setting is Relative #1 for all knobs with Knob Acceleration set to Slow (Off) or Medium. This can be configured with [Midi Control Center](https://www.arturia.com/support/downloads&manuals), available for Windows or MacOS. By default the Ansel midi module assumes, for unknown devices, that rotors use absolute encodings. After startup it therefore needs to be told that the device is sending relative movements. You can do this by turning one of the encoders slowly left (down) 5 times. This allows the module to determine which of the several relative encodings is used. If you don't succeed switching encodings on the first attempt, you can reinitialise the input modules by pressing Ctrl+Shift+Alt+I and try again. If you still have problems, you could try [this](https://wd40.co.uk/product/fast-drying-contact-cleaner/).\n"
-msgid "Individual rotors can be configured to send absolute (0-127) values or changes (+/- 1,2,3,... in different encodings). The recommended setting is Relative #1 for all knobs with Knob Acceleration set to Slow (Off) or Medium. This can be configured with [Midi Control Center](https://www.arturia.com/support/downloads&manuals), available for Windows or MacOS. By default the darktable midi module assumes, for unknown devices, that rotors use absolute encodings. After startup it therefore needs to be told that the device is sending relative movements. You can do this by turning one of the encoders slowly left (down) 5 times. This allows the module to determine which of the several relative encodings is used. If you don't succeed switching encodings on the first attempt, you can reinitialise the input modules by pressing Ctrl+Shift+Alt+I and try again. If you still have problems, you could try [this](https://wd40.co.uk/product/fast-drying-contact-cleaner/).\n"
-msgstr "Os rotores individuais podem ser configurados para enviar valores absolutos (0-127) ou alterações (+/- 1,2,3, ... em codificações diferentes). A configuração recomendada é Relative #1 para todos os botões com Knob Acceleration configurada para Slow (Off) ou Medium. Isso pode ser configurado com o [Centro de Controle Midi](https://www.arturia.com/support/downloads&manuals), disponível para Windows ou MacOS. Por padrão, o módulo Ansel midi assume, para dispositivos desconhecidos, que os rotores usam codificações absolutas. Após a inicialização, é necessário informar que o dispositivo está enviando movimentos relativos. Você pode fazer isso girando um dos codificadores lentamente para a esquerda (para baixo) 5 vezes. Isso permite que o módulo determine qual das várias codificações relativas é usada. Se você não conseguir alternar as codificações na primeira tentativa, poderá reinicializar os módulos de entrada pressionando Ctrl+Shift+Alt+I e tentar novamente. Se ainda tiver problemas, você pode tentar [isto](https://wd40.co.uk/product/fast-drying-contact-cleaner/).\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "If you map the Beatstep's buttons to ratings, color labels or toggle buttons, they should light up when the corresponding element is switched on.\n"
-msgstr "Se você mapear os botões do Beatstep para classificações, rótulos de cores ou botões de alternância, eles devem acender quando o elemento correspondente for ativado.\n"
-
-#. type: Title ##
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "Behringer BCR2000 "
-msgid "Behringer BCR2000"
-msgstr "Behringer BCR2000 "
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "(and possibly BCF2000)\n"
-msgstr "(e possivelmente BCF2000)\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "These machines are highly configurable so there are many settings that could complicate the interaction with Ansel's midi module. The [BC Manager tool](https://mountainutilities.eu/bcmanager) (available for Windows and MacOS) can be used to configure them. The easiest thing to do is to reset all encoders and buttons to their simplest settings, which can be done (for the BCR2000) using [this file](https://github.com/dterrahe/Ansel/files/6539400/bcr2000.all.buttons.and.encoders.zip). You can send it to the machine with BC Manager or (under Linux) with amidi. There's also a global setting called \"Deadtime\" that determines how long the BCR ignores arriving messages after sending out updates. This is to avoid feedback loops, but for Ansel it means that it blocks the adjustments sent back immediately after each rotor move. So Deadtime needs to be set to 0.\n"
-msgid "These machines are highly configurable so there are many settings that could complicate the interaction with darktable's midi module. The [BC Manager tool](https://mountainutilities.eu/bcmanager) (available for Windows and MacOS) can be used to configure them. The easiest thing to do is to reset all encoders and buttons to their simplest settings, which can be done (for the BCR2000) using [this file](https://github.com/dterrahe/darktable/files/6539400/bcr2000.all.buttons.and.encoders.zip). You can send it to the machine with BC Manager or (under Linux) with amidi. There's also a global setting called \"Deadtime\" that determines how long the BCR ignores arriving messages after sending out updates. This is to avoid feedback loops, but for darktable it means that it blocks the adjustments sent back immediately after each rotor move. So Deadtime needs to be set to 0.\n"
-msgstr "Essas máquinas são altamente configuráveis, portanto, há muitas configurações que podem complicar a interação com o módulo midi do Ansel. A [ferramenta de gerenciamento do BC](https://mountainutilities.eu/bcmanager) (disponível para Windows e MacOS) pode ser usada para configurá-los. A coisa mais fácil a fazer é redefinir todos os codificadores e botões para suas configurações mais simples, o que pode ser feito (para o BCR2000) usando [este arquivo](https://github.com/dterrahe/Ansel/files/6539400/bcr2000.all.buttons.and.encoders.zip). Você pode enviá-lo para a máquina com o Gerenciador do BC ou (no Linux) com o amidi. Há também uma configuração global chamada \"Deadtime\" que determina por quanto tempo o BCR ignora as mensagens que chegam depois de enviar atualizações. Isso evita loops de feedback, mas para o Ansel significa que bloqueia os ajustes enviados de volta imediatamente após cada movimento do rotor. Portanto, o Deadtime precisa ser definido como 0.\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Once configured in this way, button and rotor lights should all work. The top row of rotors (or the only row for the BCF2000) support different light patterns (like the X-Touch Midi, with some extra options and it has 15 instead of 13 leds). However, configuring these is more complicated, and not yet implemented. It also seems to be slower, so may not be doable in real-time for each update (like it is done for the X-touch). So at the moment only the 12-dot pattern is used. For rotors linked to drop-down lists, just like on the X-touch the rotor, the light goes round twice; for the first 15 options only one light goes on, for the second 15 options, two adjacent lights will be on.\n"
-msgstr "Uma vez configurado desta forma, as luzes do botão e do rotor devem funcionar. A linha superior de rotores (ou a única linha para o BCF2000) suporta diferentes padrões de luz (como o X-Touch Midi, com algumas opções extras e possui 15 em vez de 13 leds). No entanto, configurá-los é mais complicado e ainda não foi implementado. Também parece ser mais lento, por isso pode não ser viável em tempo real para cada atualização (como é feito para o X-Touch). Portanto, no momento, apenas o padrão de 12 pontos é usado. Para rotores vinculados a listas suspensas, assim como no rotor do X-Touch, a luz gira duas vezes; para as primeiras 15 opções apenas uma luz acende, para as segundas 15 opções, duas luzes adjacentes estarão acesas.\n"
-
-#. type: Title ##
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "Loupedeck "
-msgid "Loupedeck"
-msgstr "Loupedeck "
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "(and Loupedeck+ but not the later non-midi devices) \n"
-msgid "(and Loupedeck+ but not the later non-midi devices)\n"
-msgstr "(e Loupedeck+, mas não os dispositivos não midi posteriores) \n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "Going by the information provided [here](https://discuss.pixls.us/t/midi-controller-for-Ansel/2582/92), most of the functionality of the first two loupedeck models (both midi based) should be supported, with the following exceptions and caveats:\n"
-msgid "Going by the information provided [here](https://discuss.pixls.us/t/midi-controller-for-darktable/2582/92), most of the functionality of the first two loupedeck models (both midi based) should be supported, with the following exceptions and caveats:\n"
-msgstr "Pelas informações fornecidas [aqui](https://discuss.pixls.us/t/midi-controller-for-Ansel/2582/92), a maioria das funcionalidades dos dois primeiros modelos Loupedeck (ambos baseados em midi) devem ser suportadas, com as seguintes exceções e ressalvas:\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "the Hue/Sat/Lum buttons can be mapped to the notebook tabs in the color zones module but the little lights next to them may not respond to update messages sent when the user switches tabs using the mouse, so they might get out of sync\n"
-msgid ""
-"- the Hue/Sat/Lum buttons can be mapped to the notebook tabs in the color zones module but the little lights next to them may not respond to update messages sent when the user switches tabs using the mouse, so they might get out of sync\n"
-"- the 8 sliders/wheels can be individually mapped to the elements of the graph in color zones\n"
-msgstr "os botões Matiz/Saturação/Luminosidade podem ser mapeados para as abas no módulo de zonas de cores, mas as pequenas luzes próximas a eles podem não responder às mensagens de atualização enviadas quando o usuário alterna as abas usando o mouse, então eles podem ficar fora de sincronia\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Other than that, since the loupedeck uses Relative encoding (so is similar to the Beatstep) it will need to tell the midi module at each startup (until a configuration system has been implemented). You do this by turning any of the knobs (or wheels) slowly down/left 5 times. Re-initialise the input layer with Ctrl+Shift+Alt+I if it didn't work the first time so you can try again.\n"
-msgstr "Fora isso, uma vez que o Loupedeck usa a codificação Relative (por isso é semelhante ao Beatstep), ele precisará informar o módulo midi a cada inicialização (até que um sistema de configuração tenha sido implementado). Faça isso girando qualquer um dos botões (ou rodas) lentamente para baixo/para a esquerda 5 vezes. Reinicialize a camada de entrada com Ctrl+Shift+Alt+I se não funcionar da primeira vez para que você possa tentar novamente.\n"
-
-#. type: Title ##
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Korg nanoKONTROL2"
-msgstr "Korg nanoKONTROL2"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "The device should be configured first using the Korg Kontrol Editor application to be in the CC mode and every button should be set to the Note type and Momentary button behavior. To control the lights in the buttons the LED mode should be set to External. It is important to note that the Track and the Marker buttons do not have leds in them.\n"
-msgstr "O dispositivo deve ser configurado primeiro usando o aplicativo Korg Kontrol Editor para estar no modo CC e cada botão deve ser definido para o tipo de nota e comportamento de botão Momentâneo. Para controlar as luzes nos botões, o modo LED deve ser definido como Externo. É importante notar que os botões Track e Marker não possuem leds.\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "There is an Kontrol Editor profile available [here](https://github.com/Ansel-org/Ansel/files/7603658/note_buttons.zip) which can be loaded using the Windows application to directly configure all these settings to correctly work with Ansel.\n"
-msgid "There is an Kontrol Editor profile available [here](https://github.com/darktable-org/darktable/files/7603658/note_buttons.zip) which can be loaded using the Windows application to directly configure all these settings to correctly work with darktable.\n"
-msgstr "Há um perfil do Kontrol Editor disponível [aqui](https://github.com/Ansel-org/Ansel/files/7603658/note_buttons.zip) que pode ser carregado usando o aplicativo Windows para configurar diretamente todas essas configurações para funcionar corretamente com o Ansel.\n"
-
-#. type: Title ##
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "additional midi configuration"
-msgstr "configuração midi adicional"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "If Ansel is compiled with portmidi it will at startup try to open up to 10 midi devices in the order it finds them. On the command line you might see something like this:\n"
-msgid "If darktable is compiled with portmidi it will at startup try to open up to 10 midi devices in the order it finds them. On the command line you might see something like this:\n"
-msgstr "Se o Ansel for compilado com portmidi, na inicialização ele tentará abrir até 10 dispositivos midi na ordem em que os encontrar. Na linha de comando, você pode ver algo assim:\n"
-
-#. type: Fenced code block (bash)
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid ""
-"[midi_open_devices] opened midi device 'Arturia BeatStep' via 'MMSystem' as midi0\n"
-"[midi_open_devices] opened midi device 'BCR2000' via 'MMSystem' as midi1\n"
-"[midi_open_devices] opened midi device 'X-TOUCH MINI' via 'MMSystem' as midi2\n"
-msgstr ""
-"[midi_open_devices] opened midi device 'Arturia BeatStep' via 'MMSystem' as midi0\n"
-"[midi_open_devices] opened midi device 'BCR2000' via 'MMSystem' as midi1\n"
-"[midi_open_devices] opened midi device 'X-TOUCH MINI' via 'MMSystem' as midi2\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Two issues can arise:\n"
-msgstr "Dois problemas podem surgir:\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "a device you don't want to use might be opened anyway (and potentially cause inappropriate behavior, like starting a fireworks show prematurely (see [this document](http://webcache.googleusercontent.com/search?q=cache:6EcEOjfjiAkJ:gmbh.pyropak.com/docs/downloads/surefire-prologic-digital-controller_rev2010.pdf+&cd=1&hl=en&ct=clnk&gl=us)), or\n"
-msgid ""
-"- a device you don't want to use might be opened anyway (and potentially cause inappropriate behavior, like starting a fireworks show prematurely (see [this document](https://gmbh.pyropak.com/docs/downloads/surefire-prologic-digital-controller_rev2010.pdf), or\n"
-"- devices might appear in a different order at the next startup (for example because they are plugged into a different usb port). Since configurations are stored with the device number only, reordering would cause an incorrect layout to be picked up.\n"
-msgstr "um dispositivo que você não deseja usar pode ser aberto de qualquer maneira (e potencialmente causar um comportamento inadequado, como iniciar um show de fogos de artifício prematuramente (consulte [este documento](http://webcache.googleusercontent.com/search?q=cache:6EcEOjfjiAkJ:gmbh.pyropak.com/docs/downloads/surefire-prologic-digital-controller_rev2010.pdf+&cd=1&hl=en&ct=clnk&gl=us)), ou\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "You can specify which devices to explicitly load in a specific location and which ones to skip using the configuration parameter [preferences > miscellaneous > interface > order or exclude midi devices](../preferences-settings/miscellaneous.md#interface). To skip loading the BCR2000 in the above example and to fix the other two devices into the number 0 and 2 slots, you could set this config parameter to \"`BeatStep;dontuse;X-TOUCH;-BCR2000`\". This would leave the BeatStep as device midi0, always leave midi1 unused and would not load the BCR2000 at all, but if any other devices are connected, they would appear as midi3, midi4 and so on. Adding \"`;-`\" at the end would prevent any further devices loading. Or, if you just specify the configuration parameter as a single minus sign \"`-`\", no devices will be loaded at all.\n"
-msgstr "Você pode especificar quais dispositivos carregar explicitamente em um local específico e quais ignorar usando o parâmetro de configuração [preferências > miscelânea > interface > carregar ou excluir dispositivos midi](../preferences-settings/miscellaneous.md#interface). Para pular o carregamento do BCR2000 no exemplo acima e fixar os outros dois dispositivos nos slots de número 0 e 2, você pode definir este parâmetro de configuração como \"`BeatStep;dontuse;X-TOUCH;-BCR2000`\". Isso deixaria o BeatStep como dispositivo midi0, sempre deixaria midi1 sem uso e não carregaria o BCR2000, mas se outros dispositivos estiverem conectados, eles aparecerão como midi3, midi4 e assim por diante. Adicionar \"`;-`\" no final impediria o carregamento de outros dispositivos. Ou, se você apenas especificar o parâmetro de configuração como um único sinal de menos \"`-`\", nenhum dispositivo será carregado.\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Midi controller knobs can use several different \"encodings\". The default, absolute, sends a value from 0 (all the way left) to 127 (all the way right) -- sliders can also use absolute encoding. Relative encoders send a \"down\" value if you turn them left and an \"up\" value if you turn them right. So slowly turning one of those \"up\" would send \"1, 1, 1, 1,\" for example. But depending on how many bits are used and what encoding, a slow left turn might be 127 (8 bits -1) or 63, 31 or 15. Or even 65. If nothing is specified in this preference option, midi devices are assumed to use absolute encoding. But if the first five messages received are identical, it is assumed that the user has slowly turned a knob left/down and the encoding is deduced from that and displayed in a toast. The encoding is not remembered for each device, so this maneuver needs to be repeated at each startup. To define the deduced encoding for the next startup you can add this parameter to the \"order or exclude midi devices\" setting. For example \"`Loupedeck:127`\".\n"
-msgstr "Os botões do controlador Midi podem usar várias \"codificações\" diferentes. O padrão, absoluto, envia um valor de 0 (toda a esquerda) a 127 (toda a direita) -- os controles deslizantes também podem usar codificação absoluta. Os codificadores relativos enviam um valor \"para baixo\" se você os girar para a esquerda e um valor \"para cima\" se você os girar para a direita. Então, girar lentamente um desses \"para cima\" enviaria \"1, 1, 1, 1\", por exemplo. Mas dependendo de quantos bits são usados e qual codificação, um giro lento à esquerda pode ser 127 (8 bits -1) ou 63, 31 ou 15. Ou até 65. Se nada for especificado nesta opção de preferência, os dispositivos midi são considerados como usando codificação absoluta. Mas se as primeiras cinco mensagens recebidas forem idênticas, supõe-se que o usuário girou lentamente um botão para a esquerda/baixo e a codificação é deduzida disso e exibida em uma dica. A codificação não é lembrada para cada dispositivo, portanto, essa manobra precisa ser repetida a cada inicialização. Para definir a codificação deduzida para a próxima inicialização, você pode adicionar este parâmetro à configuração \"carregar ou excluir dispositivos midi\". Por exemplo \"`Loupedeck:127`\".\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "Some midi controllers have keys with a light beneath them. These can be used to toggle settings and show the current position by having the light on or off. In this case, Ansel checks periodically (a few times a second) whether, say, the position of an on-screen toggle button has been changed, and sends messages to any linked midi device buttons to switch their light on or off. But if an unknown device has unintentionally been connected, this could be undesirable. So by default Ansel waits until a \"note\" message is received from a midi button before sending any \"note\" light on/off messages back for that button. That way also no more buttons are addressed than exist on the device. If you immediately want all button lights to be used (rather than having to press the highest note once for each session) you can specify the number of buttons in the \"order or exclude midi devices\" preference, for example, \"`BeatStep:63:16`\".\n"
-msgid "Some midi controllers have keys with a light beneath them. These can be used to toggle settings and show the current position by having the light on or off. In this case, darktable checks periodically (a few times a second) whether, say, the position of an on-screen toggle button has been changed, and sends messages to any linked midi device buttons to switch their light on or off. But if an unknown device has unintentionally been connected, this could be undesirable. So by default darktable waits until a \"note\" message is received from a midi button before sending any \"note\" light on/off messages back for that button. That way also no more buttons are addressed than exist on the device. If you immediately want all button lights to be used (rather than having to press the highest note once for each session) you can specify the number of buttons in the \"order or exclude midi devices\" preference, for example, \"`BeatStep:63:16`\".\n"
-msgstr "Alguns controladores midi possuem teclas com uma luz abaixo delas. Elas podem ser usadas para alternar as configurações e mostrar a posição atual acendendo ou apagando a luz. Nesse caso, o Ansel verifica periodicamente (algumas vezes por segundo) se, digamos, a posição de um botão de alternância na tela foi alterada e envia mensagens para qualquer botão de dispositivo midi vinculado para ligar ou desligar a luz. Mas se um dispositivo desconhecido foi conectado involuntariamente, isso pode ser indesejável. Portanto, por padrão, o Ansel espera até que uma mensagem de \"nota\" seja recebida de um botão midi antes de enviar qualquer mensagem de ativação/desativação da luz de \"nota\" de volta para esse botão. Dessa forma, também não são endereçados mais botões do que os existentes no dispositivo. Se você quiser que todas as luzes dos botões sejam usadas imediatamente (em vez de pressionar a nota mais alta uma vez para cada sessão), você pode especificar o número de botões na preferência \"carregar ou excluir dispositivos midi\", por exemplo, \"`BeatStep:63 :16`\".\n"
-
-#. type: Yaml Front Matter Hash Value: title
 #: content/special-topics/variables.md
 #, no-wrap
 msgid "variables"
@@ -7374,342 +7502,10 @@ msgid ""
 msgstr ""
 
 #. type: Yaml Front Matter Hash Value: title
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Ansel's color pipeline"
-msgstr "pipeline de cor do Ansel"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Most image processing applications come from the 1990s and/or inherit a 1990s workflow. These applications processed images encoded with 8 bit unsigned integers because it was more memory- and computationally-efficient. However, due to the use of an integer format (which implies rounding errors) they had to apply a \"gamma\" (essentially a transfer function applying a power 1/2.2 or 1/2.4 to encode the RGB values) and increase the bit-depth in the low-lights in order to reduce rounding errors there (humans are very sensitive to low-light details). The 8 bit integer formats are also technically limited to the 0-255 range. Anything outside of this range overflows and is clipped to the nearest bound.\n"
-msgstr "A maioria dos aplicativos de processamento de imagens teve origem nos anos 1990 e/ou herdaram o fluxo de trabalho desses anos. Estes aplicativos processavam imagens codificadas com números inteiros de 8 bits sem sinal porque era mais eficiente no uso da memória e computacionalmente. No entanto, devido ao uso de um formato inteiro (o que implica em erros de arredondamento), eles tiveram que aplicar um “gama” (essencialmente uma função de transferência aplicando uma potência de 1/2,2 ou 1/2,4 para codificar os valores de RGB) e aumentar a profundidade de bits em condições de pouca luz para reduzir os erros de arredondamento (os seres humanos são muito mais sensíveis aos detalhes em pouca luz). Os formatos de números inteiros de 8 bits também estão tecnicamente limitados ao intervalo de 0-255. Qualquer coisa fora deste intervalo transborda e é recortado ao limite mais próximo.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "These workflows, using bounded RGB representations and possibly non-linear transforms to encode RGB signals, are called \"display-referred\". They rely on the assumption that the image has been prepared for display at an early stage in the processing pipeline, and embed hard-coded assumptions about the RGB values of black, middle-gray and white. Most of the image-processing algorithms used in these workflows have been tuned around these assumptions. For example, the overlay blending mode expects a middle-gray encoded at 50% (or 128 in integer encoding).\n"
-msgstr "Estes fluxos de trabalhos, que utilizam representações limitadas do RGB e possivelmente transformações não lineares para codificar sinais RGB, se denominam “relativos à exibição”. Se baseiam na suposição de que a imagem foi preparada para sua visualização em uma etapa inicial do pipeline de processamento e incorpora suposições codificadas de forma rígida sobre os valores RGB de preto, cinza médio e branco. A maioria dos algoritmos de processamento de imagens usados nestes fluxos de trabalho foram ajustados em torno destas suposições. Por exemplo, o modo de mesclagem de sobreposição espera um cinza médio codificado à 50% (ou 128 na codificação de número inteiro).\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Unfortunately the non-linear scaling, which is mandatory to make the integer encoding work, breaks the natural relationships between pixel values. Hue and saturation change in unpredictable ways, and value relationships between neighbouring pixels are dilated or compressed such that gradients are also altered unpredictably.\n"
-msgstr "Infelizmente, a escala não linear, que é mandatória para realizar o trabalho de codificação de números inteiros, quebra o relacionamento natural entre os valores dos pixels. A tonalidade e a saturação mudam de maneira imprevisível e as relações de valor entre os pixels vizinhos são dilatadas ou comprimidas de modo que os gradientes também se alterem de forma imprevisível.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Display-referred pipelines therefore break optical filters (lens blurring or deblurring), alpha compositing (which relies on optical and geometrical definitions of occlusion), colors and gradients (local relationships between chrominance and luminance of pixels). They also don't scale well to HDR images, which led to the development of many questionable local and global tonemapping methods and the infamous 2010s \"HDR look\".\n"
-msgstr "Pipelines relativas à exibição rompem filtros óticos (focagem e desfocagem de lentes), composição alfa (que se baseia em definições óticas e geométricas de oclusão) e gradientes de cores (relações locais entre crominância e luminância de pixels). Tão pouco escalam bem as imagens HDR, o que levou ao desenvolvimento de muitos métodos de mapeamento de tons locais e globais questionáveis e o infame “aspecto HDR” da década de 2010.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Modern computers are not tied to the same computational limitations as those from the 1990s, and can work on pixels whose values are completely unbounded (from 0 up to +infinity) and encoded as real numbers (using floating point formats). These possibilities enable what we call a \"scene-referred\" workflow, in which pixels can retain their original radiometric relationships along almost the entire processing pipe. In scene-referred workflow, pixels are prepared for display only at the last stage of the pipeline, in the display transform. This means that the RGB values of the pixels are kept proportional to the intensity of the light emission recorded by the camera on the scene, enabling accurate alpha compositing and optical filter emulations, while also scaling to any dynamic range through the same algorithm (SDR as well as HDR).\n"
-msgstr "Os computadores modernos não estão restritos às mesmas limitações computacionais dos anos 1990 e podem trabalhar com pixels cujos valores são completamente ilimitados (de 0 ao infinito) e codificados como números reais (usando formatos de ponto flutuante). Estas possibilidades permitem o que denominamos de fluxo de trabalho “relativo à cena”, no qual pixels podem reter seus relacionamentos radiométricos originais ao longo da maior parte do pipe de processamento. No fluxo de trabalho relativo à cena, os pixels são preparados para exibição no último estágio do pipeline, na transformação para visualização. Isto significa que os valores RGB dos pixels são mantidos proporcionais à intensidade da emissão da luz registrada pela câmera na cena, permitindo uma composição alfa precisa e emulações de filtros óticos, enquanto se escala para qualquer alcance dinâmico por meio do mesmo algoritmo (tanto SDR como HDR).\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "However, scene-referred pipelines lose the convenient fixed values of white, middle-gray and black which characterised display-referred pipelines, and setting these values, according to the scene and to the conditions of shooting, now becomes the responsibility of the user. This requires a more complex user interface.\n"
-msgstr "No entanto, pipelines relativos à cena perdem os convenientes valores fixos de branco, cinza médio e preto que caracterizam os pipelines relativos à exibição, e estabelecer estes valores, de acordo com a cena e as condições de realização da fotografia, agora é responsabilidade do usuário. Isto requer uma interface com o usuário mais complexa.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Also, because scene-referred values are supposed to be physically-meaningful, pixels cannot have zero intensity. This would mean they have no light at all, and the existence of zero light breaks many physically-accurate algorithms. In fact, white and black mean nothing with regard to the original scene, which is only a collection of luminances at varying intensities. The scene-referred workflow simply aims at remapping some arbitrary scene luminances to what will appear white or black on the output medium.\n"
-msgstr "Ademais, uma vez que os valores relativos à cena devem ser fisicamente significativos, pixels não podem possuir uma intensidade zero. Isso significaria que não possuem nenhuma luz e a existência de zero luz rompe muitos algoritmos fisicamente precisos. De fato, o branco e o preto não significam nada com respeito à cena original, que é somente uma coleção de luminâncias com diferentes intensidades. O fluxo de trabalho relativo à cena simplesmente tem como objetivo reatribuir algumas luminâncias da cena arbitrárias ao que aparecerá em branco ou preto na mídia de saída.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Versions of Ansel prior to 2.6 had a non-linear display-referred pipeline, assuming that a non-linear transform took place early in the pipe and middle-gray was thereafter encoded as 50%. However, not all modules and filters clipped pixel values above 100%, leaving open the possibility of recovering those values later in the pipe.\n"
-msgstr "As versões do Ansel anteriores à 2.6 possuíam um pipeline relativo à exibição não linear, assumindo que uma transformação não linear ocorre no início do pipe e o cinza médio foi codificado como 50%. No entanto, nem todos os módulos e filtros recortam valores de pixels acima de 100%, deixando aberta a possibilidade de recuperar esses valores mais adiante no pipe.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "The _filmic_ module's view transform, introduced in darktable 2.6, was the first step toward a scene-referred pipeline, and deferred the mandatory, non-linear, display preparation to the end of the pipe, along with the ability to set custom black, gray and white values. The _color balance_ module then introduced a way to deal with a variable definition of middle-gray.\n"
-msgstr "A transformação da visualização do módulo _fílmico_, introduzida no darktable 2.6, foi o primeiro passo na direção de um pipeline relativo à cena e atrasou a preparação para visualização obrigatória, não linear, para o final do pipe, junto com a capacidade de configurar valores personalizados de preto, cinza e branco. O módulo de _balanço de cor_ então introduziu uma maneira de lidar com uma definição variável de cinza médio.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Starting in darktable 3.2, users could choose between two workflows that defined consistent default settings, modules and pipeline order for both _display-referred_ and _scene-referred_ processing.\n"
-msgstr "A partir do darktable 3.2, os usuários puderam escolher entre os dois fluxos de trabalho que definiam configurações padrão consistentes, módulos e ordem do pipeline tanto para o processamento _relativo à exibição_ como para o _relativo à cena_.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "In darktable 3.4, a full scene-referred masking and blending option was introduced, allowing masks to be defined for pixel values above 100% and using only unbounded blending operators.\n"
-msgstr "No darktable 3.4, foram introduzidas opções de mascaramento e mesclagem completamente relativas à cena, o que permite definir máscaras para valores de pixels superiores à 100% e o uso somente de operadores de mesclagem ilimitados.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Switching to _scene-referred_ is a cognitive leap for most experienced users, who are used thinking in display-referred ways. In a display-referred workflow, it is customary to anchor the white value and let tone adjustments revolve around that point, trying to maximize brightness while avoiding clipping. In a scene-referred workflow, white and black values are fluid and adapted to the output medium. It is advised that users anchor middle-gray (which will be preserved as-is for any output medium) and let the view transform (_filmic_) dilate or contract the dynamic range around that point. Because 10 bit HDR white is 4 times as bright as 8 bit SDR white, any rigid definition of \"white\" becomes irrelevant. But anchoring for middle-gray is actually more convenient, since it keeps the average brightness of the picture unchanged through the view transform.\n"
-msgstr "Mudar para o processamento _relativo à cena_ é um salto cognitivo para a maioria dos usuários experientes, que estão acostumados a pensar em formas relativas à exibição. Em um fluxo de trabalho relativo à exibição, costuma-se ancorar o valor de branco e deixar que os ajustes de tonalidade girem ao redor deste ponto, tratando de maximizar o brilho e evitar o recorte. Em um fluxo de trabalho relativo à cena, os valores de branco e preto são fluídos e se adaptam à mídia de saída. É recomendável que usuários ancorem o cinza médio (que será preservado no estado para qualquer mídia de saída) e permitam que a transformação para visualização (_fílmico_) dilate ou contraia o alcance dinâmico ao redor deste ponto. Uma vez que o branco HDR de 10 bits é 4 vezes mais brilhante que o branco SDR de 8 bits, qualquer definição rígida de “branco” se torna irrelevante. Mas a ancoragem do cinza médio é na realidade mais conveniente, já que mantém o brilho médio da imagem inalterado durante a transformação para visualização.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Some modules (_levels_, _rgb levels_, _tone curve_, _rgb curve_) are inherently incompatible with a scene-referred workflow, because their graphical interface implicitly suggests RGB values that are bounded within the 0-100% range. While the pixel operations they perform can be used in either scene-referred or display-referred workflows because they are unbounded internally, their controlling interface does not allow pixels to be selected outside of the 0-100% range.\n"
-msgstr "Alguns módulos (_níveis_, _níveis rgb_, _curva de tons_, _curva rgb_) são intrinsecamente incompatíveis com um fluxo de trabalho relativo à cena, porque sua interface gráfica sugere implicitamente valores RGB que estão delimitados dentro do intervalo 0-100%. Apesar das operações de pixel que eles realizam poderem ser usadas em fluxos de trabalho relativos à cena ou à exibição porque não estão limitados internamente, sua interface de controle não permite que pixels sejam selecionados fora do intervalo 0-100%.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Similarly, blending modes such as overlay, linear light, soft light, hard light, darken, brighten, etc. all have hard-coded thresholds that internally expect display-referred non-linear encoding.\n"
-msgstr "De maneira semelhante, os modos de mesclagem como superposição, luz linear, luz suave, luz intensa, escurecer, clarear, etc, possuem todos limites codificados que internamente esperam codificação não linear relativa à exibição.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "In darktable 3.4 and above, hovering the cursor over a module header shows a tooltip detailing the color spaces, ranges and encodings that the module expects, uses and produces. Here are the definitions of the terms used:\n"
-msgstr "Do darktable 3.4 em diante, passar o cursor sobre o cabeçalho de um módulo exibe uma dica detalhando o espaço de cor, intervalos e codificações que o módulo espera, usa e produz. Aqui estão as definições dos termos usados:\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid ""
-"linear\n"
-": Pixel values are proportional to the scene radiometric emission, in a way that enables accurate emulation of physical filters.\n"
-msgstr ""
-"linear\n"
-": Os valores de pixels são proporcionais à emissão radiométrica da cena, de maneira que permitam uma precisa emulação dos filtros físicos.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid ""
-"non-linear\n"
-": Pixel values are re-scaled such that low-lights are given a larger encoding range, usually to remap the 18.45% reference middle-gray to a value between 46 and 50%.\n"
-msgstr ""
-"não-linear\n"
-": Os valores dos pixels são re-escalonados de modo que as luzes baixas recebem um intervalo de codificação maior, geralmente para remapear para o cinza médio de referência de 18,45% para um valor entre 46 e 50%.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid ""
-"display-referred\n"
-": Pixel values are expected to lie between 0 and 100% of the display range, where 100% is understood to be the luminance of a 20% reflective white surface (the white patch of a Color Checker) and 0% is understood to be the maximum density of the output medium (saturated black ink or minimum LED panel backlighting).\n"
-msgstr ""
-"relativo à exibição\n"
-": Os valores do pixel devem estar entre 0 e 100% do alcance dinâmico, onde 100% é entendido como a luminância de uma superfície branca refletida à 20% (a parte branca do Cartão de Cor) e 0% é entendido como a máxima densidade da mídia de saída (tinta preta saturada ou retro iluminação mínima do painel de LED).\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid ""
-"scene-referred\n"
-": Pixel values are expected to be greater than zero up to +infinity. The meaning of specific pixel values needs to be defined at runtime by the user. Scene-referred values don't automatically imply a linear, radiometrically scaled, encoding.\n"
-msgstr ""
-"relativo à cena\n"
-": Os valores de pixel devem ser superiores à zero até o infinito. O significado dos valores de pixels específicos deve ser definido pelo usuário em tempo de execução. Os valores relativos à cena não implicam automaticamente em uma codificação linear, escalada radiometricamente.\n"
-
-#. type: Yaml Front Matter Hash Value: title
 #: content/special-topics/_index.md
 #, no-wrap
 msgid "Special Topics"
 msgstr "Tópicos especiais"
-
-#. type: Yaml Front Matter Hash Value: title
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "translating dtdocs"
-msgstr "traduzir o dtdocs"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, fuzzy, no-wrap
-#| msgid "Translation of the Ansel documentation is done via our [Weblate instance](https://weblate.pixls.us/projects/Ansel/).\n"
-msgid "Translation of the darktable documentation is done via our [Weblate instance](https://weblate.pixls.us/projects/darktable/).\n"
-msgstr "A tradução da documentação do Ansel é feita pela nossa [instância do Weblate](https://weblate.pixls.us/projects/Ansel/).\n"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "You can either use Weblate's web UI to translate the documentation or download the translation from Weblate to your computer, edit it, and then upload the changes.\n"
-msgstr "Você pode usar a interface gráfica do Weblate para traduzir a documentação ou baixar a tradução do Weblate para seu computador, editá-la e depois enviar as mudanças.\n"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Please do all translation work through Weblate. We will not accept pull requests directly on github to update PO files.\n"
-msgstr "Por favor, faça todo o trabalho de tradução usando o Weblate. Nós não aceitaremos _pull requests_ diretamente no github para atualizar arquivos PO.\n"
-
-#. type: Title ##
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Making a new branch in git"
-msgstr "Criar um novo branch no git"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "Make a new branch to work on it in git.\n"
-#| "For example:\n"
-#| "`git checkout -b fr-translation-init`\n"
-msgid ""
-"1. Make a new branch to work on it in git.\n"
-"   For example:\n"
-"   `git checkout -b fr-translation-init`\n"
-msgstr ""
-"Crie um novo branch no git para trabalhar.\n"
-"Por exemplo:\n"
-"`git checkout -b traducao-pt-br-init`\n"
-
-#. type: Title ##
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Adding a new language to Hugo"
-msgstr "Adicionar um novo idioma ao Hugo"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, fuzzy, no-wrap
-#| msgid "Add the language you wish to translate. For example, the English looks like this:\n"
-msgid ""
-"1. In the files `config.yaml` and `config-pdf.yaml`, locate the `languages:` line.\n"
-"2. Add the language you wish to translate. For example, the English looks like this:\n"
-msgstr "Adicione o idioma que você quer traduzir. Por exemplo, para o Português seria assim:\n"
-
-#. type: Fenced code block
-#: content/special-topics/translating.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "     en-us:\n"
-#| "       title: darktable 3.4 user manual\n"
-#| "       weight: 1\n"
-msgid ""
-"     en-us:\n"
-"       title: darktable 3.4 user manual\n"
-"date: 2022-12-04T02:19:02+01:00\n"
-"       weight: 1\n"
-msgstr ""
-"     pt-br:\n"
-"       title: manual do usuário do darktable 3.4\n"
-"       weight: 1\n"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, fuzzy, no-wrap
-#| msgid "Save the files.\n"
-msgid "3. Save the files.\n"
-msgstr "Salve os arquivos.\n"
-
-#. type: Title ##
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Generating a PO file"
-msgstr "Gerar um arquivo PO"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Do the following steps if you want to update the POT and PO files from the markdown source.\n"
-msgstr "Execute os passos a seguir se você deseja atualizar os arquivos POT e PO a partir do código fonte.\n"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "Create an empty PO file for your language in the `po` folder with the file name `content.<language>.po`.\n"
-#| "For example:\n"
-#| "`touch po/content.fr-fr.po`\n"
-msgid ""
-"1. Create an empty PO file for your language in the `po` folder with the file name `content.<language>.po`.\n"
-"   For example:\n"
-"   `touch po/content.fr-fr.po`\n"
-"2. Run the script to populate the PO file:\n"
-"   `cd tools/ && ./generate-translations.sh --no-translations`\n"
-msgstr ""
-"Crie um arquivo PO vazio para seu idioma na pasta `po` com o nome `content.<idioma>.po`.\n"
-"Por exemplo:\n"
-"`touch po/content.pt-br.po`\n"
-
-#. type: Title ##
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Generating translated files"
-msgstr "Gerar arquivos traduzidos"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Do the following steps to generate the website files from a translation.\n"
-msgstr "Siga as próximas etapas para gerar os arquivos do site a partir de uma tradução.\n"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid ""
-"1. Generate the translated files:\n"
-"   `cd tools/ && ./generate-translations.sh --no-update`.\n"
-"2. Check the translation by starting hugo's internal server:\n"
-"   `hugo server`\n"
-"3. Open a web browser and check the changes. The URL is in the output of the `hugo server` command.\n"
-"4. Remove the translated files, as we never check them into git:\n"
-"   `cd tools/ && ./generate-translations.sh --rm-translations`.\n"
-msgstr ""
-
-#. type: Title ##
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Translating website, epub, and PDF strings"
-msgstr "Traduzir os textos da página Web, epub e PDF"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, fuzzy, no-wrap
-#| msgid "There are two themes for the Ansel documentation: one for the HTML website and one for the PDF. You'll need to translate the strings for both.\n"
-msgid "There are two themes for the darktable documentation: one for the HTML website and one for the PDF. You'll need to translate the strings for both.\n"
-msgstr "Há dois temas para a documentação do Ansel: um para o site HTML e um para o PDF. Você precisa traduzir strings para os dois.\n"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid ""
-"1. Go to `themes/hugo-darktable-docs-themes/i18n`.\n"
-"2. Copy content of the file `en.yaml` and name the new file `<your language>.yaml`.\n"
-"3. Translate the content of the new yaml file.\n"
-"4. Check the translated PO file into git, push it to github, and open a pull request to have your changes accepted.\n"
-"5. Repeat the last four steps for the other themes, `themes/hugo-darktable-docs-epub-theme` and `themes/hugo-darktable-docs-pdf-theme`.\n"
-msgstr ""
-
-#. type: Title ##
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Integrating new translations from Weblate"
-msgstr "Integrar novas traduções do Weblate"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "The following assumes that you're git working directory is clean, that you have API access to the Weblate instance, that you've configured the Weblate git repo as a remote in your local `dtdocs` git repo, and that `wlc`, the Weblate command line client, is configured.\n"
-msgstr "Os passos a seguir assumem que sua pasta de trabalho git está limpa, que você tem acesso API à instância Weblate, que configurou o repositório git do Weblate como um remoto em seu repositório git `dtdocs` local e que` wlc`, o cliente da linha de comando Weblate, está configurado.\n"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid ""
-"1. Commit any changes in Weblate: `wlc commit darktable/dtdocs`\n"
-"2. Lock the Weblate project to prevent further changes: `wlc lock darktable/dtdocs`\n"
-"3. In your local `dtdocs` git repo, create a new branch: `git checkout -b po-updates`\n"
-"4. Update the Weblate remote: `git remote update weblate`\n"
-"5. Merge the Weblate changes into your locally created branch: `git merge weblate/master`\n"
-"6. Squash all the Weblate commits, since there are so many: `git reset $(git merge-base master $(git rev-parse --abbrev-ref HEAD))`\n"
-"7. Stage the changed PO files: `git add -A`\n"
-"8. Commit the `PO` files: `git commit -m \"Updated with the PO files from weblate.\"`\n"
-"9. Update the `POT` and `PO` files: `cd tools/ && ./generate-translations.sh --no-translations && cd ..`\n"
-"10. Stage the `POT` and `PO` files: `git add -A`\n"
-"11. Commit the `POT` and`PO` files: `git commit -m \"Updated POT and PO files.\"`\n"
-"12. Create a Pull Request in Github.\n"
-"13. After the Pull Request is accepted, reset the Weblate repo to match the `dtdocs` repo: `wlc reset darktable/dtdocs`\n"
-msgstr ""
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/preferences-settings/darkroom.md
@@ -9729,403 +9525,6 @@ msgstr ""
 #, no-wrap
 msgid "sidecar files & non-destructive editing"
 msgstr "arquivos auxiliares & edição não destrutiva"
-
-#. type: Yaml Front Matter Hash Value: title
-#: content/overview/user-interface.md
-#, no-wrap
-msgid "user interface"
-msgstr "interface do usuário"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid "The functionality in Ansel is separated into six different views:\n"
-msgstr "As funcionalidades no Ansel são separadas em seis vistas diferentes:\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"[Lighttable](../../views/lighttable/_index.md)\n"
-": Manage images and collections. It is the main view and can be accessed from anywhere in the software by hitting the <kbd>Escape</kbd> key.\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"[Darkroom](../../views/darkroom/_index.md)\n"
-": Develop a single image. It can be accessed from the lighttable by double-click on a thumbnail or by hitting the <kbd>Enter</kbd> key when a picture is selected.\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"[Map](../../views/map/_index.md)\n"
-": Show geo-tagged images on a map and manually geo-tag new images. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md).\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"[Print](../../views/print/_index.md)\n"
-": Send images to a printer for self-made prints. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md). This view is not available on Windows since it relies on [CUPS](http://www.cups.org/).\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"[Slideshow](../../views/slideshow/_index.md)\n"
-": Display images as a slideshow, processing them on-the-fly. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md).\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "You can switch between views by clicking the view name at the top of the right-hand panel (the currently active view is highlighted) or by using one of the following keyboard shortcuts:\n"
-msgid "You can switch between views by clicking the view name at the top of the right-hand panel (the currently active view is highlighted).\n"
-msgstr "Você pode alternar entre as vistas clicando no respectivo nome localizado na porção mais à direita da faixa superior da janela (a vista atualmente ativa fica realçada) ou usando um dos seguintes atalhos de teclado:\n"
-
-#. type: Title ##
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "content"
-msgid "Main content"
-msgstr "conteúdo"
-
-#. type: Title ###
-#: content/overview/user-interface.md
-#, no-wrap
-msgid "Panels"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "The layout of all Ansel views is similar and consists of a center area with panels at the edges: \n"
-msgid "The layout of all Ansel views is similar and consists of a center area with panels at the edges:\n"
-msgstr "A disposição de todas as vistas do Ansel é semelhante e consiste de uma área central rodeada por painéis. \n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"Left panel\n"
-": Can be shown and hidden with <kbd>Shift + Ctrl + L</kbd> :\n"
-"    * __In lighttable__ : Shows the file import, export and collections.\n"
-"    * __In darkroom__ : Shows various peripheral informations on the currently edited picture.\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"Right panel\n"
-": Can be shown and hidden with <kbd>Shift + Ctrl + R</kbd> :\n"
-"    * __In lighttable__ : Contains metadata editors and bulk processing tools.\n"
-"    * __In darkroom__ : Contains the settings to edit the picture.\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "4. top banner\n"
-#| ": Contains information about the current Ansel version and allows you to switch between views. Also used by some modules to show additional hints and messages.\n"
-msgid ""
-"Top panel (header)\n"
-": Contains information about the current Ansel version and allows you to switch between views. Also used by some modules to show additional hints and messages. Can be hidden and shown by pressing <kbd>Ctrl + H</kbd>\n"
-msgstr ""
-"4. faixa superior\n"
-": Contém informações sobre a versão atual do Ansel e lhe permite alternar entre as vistas. Também é usada por alguns módulos para mostrar dicas e mensagens adicionais.\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"Top toolbar\n"
-": Provides buttons to access the global settings and shortcuts. Can be hidden and shown by pressing <kbd>Shift + Ctrl + T</kbd>.\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "6. bottom panel\n"
-#| ": Provides access to view-specific settings and shortcuts.\n"
-msgid ""
-"Bottom panel\n"
-": Provides buttons to access to view-specific settings and shortcuts. Can be hidden and shown by pressing <kbd>Shift + Ctrl + B</kbd>\n"
-msgstr ""
-"6. painel inferior\n"
-": Proporciona acesso às configurações específicas e atalhos de teclado da vista atual.\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "7. [filmstrip](../../module-reference/utility-modules/shared/filmstrip.md)/[timeline](../../module-reference/utility-modules/lighttable/timeline.md) panel\n"
-#| ": An optional panel that can be enabled at the bottom of the screen to display a timeline (in the lighttable view) or a filmstrip (in other views) of images in the current collection.\n"
-msgid ""
-"[Filmstrip](../../modules/utility-modules/shared/filmstrip.md)\n"
-": An optional panel that can be enabled at the bottom of the screen in Darkroom, Maps and Print view to display a filmstrip of images in the current collection. Can be shown and hidden by pressing <kbd>Shift + Ctrl + F</kbd>.\n"
-msgstr ""
-"7. painel [rolo de filme](../../module-reference/utility-modules/shared/filmstrip.md)/[linha do tempo](../../module-reference/utility-modules/lighttable/timeline.md)\n"
-": Um painel opcional que pode ser habilitado na parte inferior da tela para mostrar uma linha do tempo (na vista da mesa de luz) ou um rolo de filme (em outras vistas) das imagens da coleção atual.\n"
-
-#. type: Title ###
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "module resizing"
-msgid "Resizing"
-msgstr "redimensionamento do módulo"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "The left, right and filmstrip/timeline panels can be resized by dragging their inner borders. \n"
-msgid "The left, right and filmstrip panels can be resized by clicking and dragging their inner borders. Some shortcuts allow to globally change the layout :\n"
-msgstr "Os painéis esquerdo, direito e rolo de filme/linha do tempo podem ser redimensionados arrastando suas bordas internas. \n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "`TAB` temporarily expands the centre view to fill the whole window. Press again to return to the previous view.\n"
-msgid ""
-" - <kbd>TAB</kbd> temporarily expands the centre view to fill the whole window (hide all panels). Press again to return to the previous view.\n"
-" - <kbd>F11</kbd> toggles fullscreen mode\n"
-msgstr "`TAB` expande temporariamente a área central para preencher toda a janela. Pressione novamente para retornar à visualização anterior.\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "**Note:** The size and visibility of the panels are stored independently for each view.\n"
-msgid ""
-"{{< note >}}\n"
-"The size and visibility of the panels are stored independently for each view.\n"
-"{{</ note >}}\n"
-msgstr "**Nota:** O tamanho e a visibilidade dos painéis são armazenados de forma independente para cada vista.\n"
-
-#. type: Title ###
-#: content/overview/user-interface.md
-#, no-wrap
-msgid "Top toolbar"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid "The top panel is common to all Ansel views and provides access to a number of common functions.\n"
-msgstr "O painel superior é comum a todas as vistas do Ansel e fornece acesso a um conjunto de funções comuns.\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "filter / sort\n"
-#| ": Choose how to filter and sort the images. Criteria can be altered in the [collection filters](../../module-reference/utility-modules/shared/collection-filters.md) module.\n"
-msgid ""
-"Filter / sort\n"
-": Choose how to filter and sort the images. Criteria can be altered in the [collection filters](../../modules/utility-modules/shared/collections.md) module.\n"
-msgstr ""
-"filtro / ordenar por\n"
-": Escolha como filtrar e ordenar as imagens. Os critérios podem ser alterados no módulo [filtros de coleção](../../module-reference/utility-modules/shared/collection-filters.md).\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "![top-panel_sort-order icon](./top-panel/top-panel_sort-order.jpg) sort order\n"
-#| ": Switch the sort order (ascending / descending).\n"
-msgid ""
-"Sort order\n"
-": Switch the sort order (ascending / descending).\n"
-msgstr ""
-"![top-panel_sort-order icon](./top-panel/top-panel_sort-order.jpg) ícone de ordenação\n"
-": Alterna a ordem de exibição (ascendente/descendente).\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "![top panel_help icon](./top-panel/top-panel_help.jpg) context-sensitive help\n"
-#| ": Click this icon and then click on a control element to be directed to the appropriate online help page.\n"
-msgid ""
-"Context-sensitive help\n"
-": Click this icon and then click on a control element to be directed to the appropriate online help page.\n"
-msgstr ""
-"![top panel_help icon](./top-panel/top-panel_help.jpg) ajuda online\n"
-": Clique neste ícone e então clique em um elemento de controle para ser direcionado para a página de ajuda online apropriada.\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "![top panel shortcut mapping icon](./top-panel/top-panel_shortcut.jpg) shortcut mapping\n"
-#| ": Click this icon to enter the [visual shortcut mapping](../../preferences-settings/shortcuts.md#visual-shortcut-mapping) mode to create keyboard/mouse shortcuts.\n"
-msgid ""
-"Shortcut mapping\n"
-": Click this icon to enter the [visual shortcut mapping](../../preferences-settings/shortcuts.md#visual-shortcut-mapping) mode to create keyboard/mouse shortcuts.\n"
-msgstr ""
-"![top panel shortcut mapping icon](./top-panel/top-panel_shortcut.jpg) mapeamento de atalho\n"
-": Clique neste ícone para entrar no modo de [mapeamento de atalho visual](../../preferences-settings/shortcuts.md#mapeamento-de-atalho-visual) para criar atalhos de mouse/teclado.\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "![top panel_preferences icon](./top-panel/top-panel_preferences.jpg) preferences\n"
-#| ": View and amend Ansel's [preferences & settings](../../preferences-settings/_index.md).\n"
-msgid ""
-"Preferences\n"
-": View and amend Ansel's [preferences & settings](../../preferences-settings/_index.md).\n"
-msgstr ""
-"![top panel_preferences icon](./top-panel/top-panel_preferences.jpg) preferências\n"
-": Vê e modifica as [preferências e configurações](../../preferences-settings/) do Ansel.\n"
-
-#. type: Title ###
-#: content/overview/user-interface.md
-#, no-wrap
-msgid "Bottom toolbar"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "![top panel_grouping icon](./top-panel/top-panel_grouping.jpg) grouping\n"
-#| ": Expand or collapse [grouped images](../../lighttable/digital-asset-management/grouping.md).\n"
-msgid ""
-"Grouping\n"
-": Expand or collapse [grouped images](../../views/lighttable/digital-asset-management/grouping.md).\n"
-msgstr ""
-"![top panel_grouping icon](./top-panel/top-panel_grouping.jpg) agrupamento\n"
-": Expande ou recolhe as [imagens agrupadas](../../lighttable/digital-asset-management/grouping.md).\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"Thumbnail overlays\n"
-": Define what information is overlaid on to thumbnails in the lighttable/filmstrip.\n"
-msgstr ""
-
-#. type: Title ###
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "filmstrip"
-msgid "Filmstrip"
-msgstr "rolo de filme"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "The filmstrip, when enabled, is shown at the bottom of the screen (except in the lighttable view, where it is replaced with the [timeline](../../module-reference/utility-modules/lighttable/timeline.md) module) and displays the images from the current [collection](../../lighttable/digital-asset-management/collections.md) (set in the lighttable view). You can navigate the filmstrip by scrolling with the mouse wheel. \n"
-msgid "The filmstrip, when enabled, is shown at the bottom of the screen and displays the images from the current [collection](../../views/lighttable/digital-asset-management/collections.md) (set in the lighttable view). You can navigate the filmstrip by scrolling with the mouse wheel or with\n"
-msgstr "O rolo de filme, quando habilitado, é exibido na parte inferior da tela (exceto na vista da mesa de luz, onde é substituído pelo módulo da [linha do tempo](../../module-reference/utility-modules/lighttable/timeline.md)) e exibe as imagens da [coleção](../../lighttable/digital-asset-management/collections.md) atual (configurada na vista da mesa de luz). Você pode navegar pelo rolo de filme usando a roda do mouse. \n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "The filmstrip allows you to interact with images while you are not in the lighttable view. For example, while developing an image in darkroom mode, you can switch to another image to by clicking its thumbnail in the filmstrip. You can also rate and color-classify the images as you do in lighttable, as well as copy & paste the history stack using keyboard shortcuts.\n"
-msgid "The filmstrip allows you to interact with images while you are not in the lighttable view. For example, while developing an image in darkroom mode, you can switch to another image to by clicking its thumbnail in the filmstrip. You can copy & paste the history stack using keyboard shortcuts (<kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>).\n"
-msgstr "O rolo de filme lhe permite interagir com as imagens enquanto você não está na vista da mesa de luz. Por exemplo, enquanto processa uma imagem na sala escura, você pode alternar para outra imagem clicando em sua miniatura no rolo de filme. Você pode também classificar as imagens com estrelas ou cores da mesma maneira que faria na mesa de luz, bem como copiar e colar a pilha do histórico usando os atalhos de teclado.\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "See the [filmstrip](../../module-reference/utility-modules/shared/filmstrip.md) module documentation for more information.\n"
-msgid "See the [filmstrip](../../modules/utility-modules/shared/filmstrip.md) module documentation for more information.\n"
-msgstr "Consulte a documentação do módulo [rolo de filme](../../module-reference/utility-modules/shared/filmstrip.md) para obter mais informações.\n"
-
-#. type: Title ##
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "keyboard shortcuts"
-msgid "Keyboard shortcuts"
-msgstr "atalhos de teclado"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid "Much of the functionality in Ansel can be controlled via keyboard shortcuts, which can be customised in [preferences > shortcuts](../../preferences-settings/shortcuts.md).\n"
-msgstr "Grande parte das funcionalidades do Ansel pode ser controlada por meio de atalhos de teclado, que podem ser personalizados em [preferências > atalhos](../../preferences-settings/shortcuts.md).\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid "Press the H key (for help) in any Ansel view to show a list of all shortcuts that are applicable to the current view.\n"
-msgstr "Pressione a tecla H (para obter ajuda) em qualquer vista do Ansel para exibir uma lista de todos os atalhos que são aplicados à vista atual.\n"
-
-#. type: Yaml Front Matter Hash Value: title
-#: content/overview/supported-file-formats.md
-#, no-wrap
-msgid "supported file formats"
-msgstr "formatos de arquivo suportados"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, no-wrap
-msgid "Ansel supports a huge number of file formats from various camera manufacturers. In addition Ansel can read a wide range of low- and high-dynamic-range images -- mainly for data exchange between Ansel and other software.\n"
-msgstr "O Ansel suporta uma grande quantidade de formatos de arquivos de vários fabricantes de câmeras. Além disso, o Ansel pode ler uma ampla gama de imagens tanto de alto (HDR) como de baixo alcance dinâmico -- principalmente para intercâmbio entre o Ansel e outros aplicativos.\n"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, no-wrap
-msgid "In order for Ansel to consider a file for import, it must have one of the following extensions (case independent): `3FR, ARI, ARW, BAY, BMQ, CAP, CINE, CR2, CR3, CRW, CS1, DC2, DCR, DNG, GPR, ERF, FFF, EXR, IA, IIQ, JPEG, JPG, K25, KC2, KDC, MDC, MEF, MOS, MRW, NEF, NRW, ORF, PEF, PFM, PNG, PXN, QTK, RAF, RAW, RDC, RW1, RW2, SR2, SRF, SRW, STI, TIF, TIFF, X3F`\n"
-msgstr "Para que o Ansel considere um arquivo para importação, ele deve ter uma das seguintes extensões (independentemente da capitalização): `3FR, ARI, ARW, BAY, BMQ, CAP, CINE, CR2, CR3, CRW, CS1, DC2, DCR, DNG, GPR, ERF, FFF, EXR, IA, IIQ, JPEG, JPG, K25, KC2, KDC, MDC, MEF, MOS, MRW, NEF, NRW, ORF, PEF, PFM, PNG, PXN, QTK, RAF, RAW, RDC, RW1, RW2, SR2, SRF, SRW, STI, TIF, TIFF e X3F`.\n"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, no-wrap
-msgid "If Ansel was compiled with JPEG2000 support, the following extensions are also recognized: `J2C, J2K, JP2, JPC`.\n"
-msgstr "Se o Ansel foi compilado com suporte ao JPEG2000, serão reconhecidas as seguintes extensões: `J2C, J2K, JP2 e JPC`.\n"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, no-wrap
-msgid "If Ansel was compiled with GraphicsMagick support, the following extensions are also recognized: `BMP, DCM, GIF, JNG, JPC, JP2, MIFF, MNG, PBM, PGM, PNM, PPM`.\n"
-msgstr "Se o Ansel foi compilado com suporte ao GraphicsMagick, também serão reconhecidas as seguintes extensões: `BMP, DCM, GIF, JNG, JPC, JP2, MIFF, MNG, PBM, PGM, PNM e PPM`.\n"
-
-#. type: Title ##
-#: content/overview/supported-file-formats.md
-#, no-wrap
-msgid "camera raw files"
-msgstr "arquivos de câmera em raw"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, fuzzy, no-wrap
-#| msgid "Ansel reads raw files using the open source library [RawSpeed](https://github.com/Ansel-org/rawspeed), originally developed by Klaus Post and now maintained as part of the Ansel project. The number of supported cameras and file formats is constantly increasing. Most modern camera models are supported, and new ones tend to get added very quickly. It is beyond the scope of this manual to give an exhaustive list.\n"
-msgid "Ansel reads raw files using the open source library [RawSpeed](https://github.com/darktable-org/rawspeed), originally developed by Klaus Post and now maintained as part of the darktable project. The number of supported cameras and file formats is constantly increasing. Most modern camera models are supported, and new ones tend to get added very quickly. It is beyond the scope of this manual to give an exhaustive list.\n"
-msgstr "O Ansel lê arquivos em raw usando a biblioteca de código aberto [RawSpeed](https://github.com/Ansel-org/rawspeed), originalmente desenvolvida por Klaus Post e agora mantida como parte do projeto Ansel. A quantidade de câmeras e formatos de arquivos compatíveis aumenta constantemente. A maioria dos modelos de câmeras modernos é compatível e os novos modelos tendem a ser adicionados muito rapidamente. Está fora do escopo deste manual fornecer uma lista exaustiva.\n"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, no-wrap
-msgid "With the exception of Fujifilm X-Trans cameras, Ansel does not decode images from cameras with non-Bayer sensors (e.g. Sigma cameras with the Foveon X3 sensor).\n"
-msgstr "Com exceção das câmeras Fujifilm X-Trans, o Ansel não decodifica imagens de câmeras com sensores que não sejam da Bayer (por exemplo, câmeras Sigma com sensor Foveon X3).\n"
-
-#. type: Title ##
-#: content/overview/supported-file-formats.md
-#, no-wrap
-msgid "other image files"
-msgstr "outros arquivos de imagem"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, no-wrap
-msgid "Ansel natively reads “ordinary” images in JPEG, 8-bit/16-bit PNG and 8-bit/16-bit TIFF format, as well as 16-bit/32-bit floating point TIFF formats.\n"
-msgstr "O Ansel lê de forma nativa imagens “ordinárias” no formato JPEG, PNG de 8 bits/16 bits e TIFF de 8 bits/16 bits, bem como formatos TIFF de ponto flutuante de 16 bits/32 bits.\n"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, no-wrap
-msgid "Ansel also reads high dynamic range images in OpenEXR, RGBE and PFM formats.\n"
-msgstr "O Ansel também lê imagens de alto alcance dinâmico (HDR) nos formatos OpenEXR, RGBE e PFM.\n"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/overview/_index.md
@@ -30308,6 +29707,404 @@ msgstr "Não há nenhuma mensagem exibida uma vez que o _script_ tenha terminado
 #| msgid "We use `coroutine.yield` to call an external program. The normal `os.execute` would block other lua codes from happening.\n"
 msgid "- We use `coroutine.yield` to call an external program. The normal `os.execute` would block other lua codes from happening.\n"
 msgstr "Usamos `coroutine.yield` para chamar um programa externo. O `os.execute` normal bloquearia outros códigos lua de serem executados.\n"
+
+#, no-wrap
+#~ msgid "midi device support"
+#~ msgstr "suporte a dispositivo midi"
+
+#, no-wrap
+#~ msgid "The shortcut mapping system has been most extensively tested with the Behringer X-Touch Mini and contains custom code to deal with the specific features of this device. All other devices are treated as \"generic midi\" and may or may not work (well) or need some manual setup each time. A configuration framework (possibly in lua) to support additional device-specific features is on the to do list.\n"
+#~ msgstr "O sistema de mapeamento de atalho foi testado mais extensivamente com o Behringer X-Touch Mini e contém código personalizado para lidar com os recursos específicos deste dispositivo. Todos os outros dispositivos são tratados como \"midi genéricos\" e podem ou não funcionar (bem) ou precisar de alguma configuração manual a cada utilização. Uma estrutura de configuração (possivelmente em lua) para suportar recursos específicos de dispositivos adicionais está na lista de tarefas.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "If you succeed in getting a midi device up and running that hasn't been mentioned below, it would be greatly appreciated if you would provide feedback in order to assist others, if any special steps are required. You could do this either by submitting a documentation [pull request](https://github.com/Ansel-org/dtdocs/pulls) to amend this page or by [filing an issue](https://github.com/Ansel-org/dtdocs/issues) containing the necessary information. Alternatively you could read or respond to any of the (closed) midi or \"inputng\" [issues](https://github.com/Ansel-org/Ansel/issues) or [pull requests](https://github.com/Ansel-org/Ansel/pulls) in the main Ansel repository if you need additional help or guidance yourself.\n"
+#~ msgid "If you succeed in getting a midi device up and running that hasn't been mentioned below, it would be greatly appreciated if you would provide feedback in order to assist others, if any special steps are required. You could do this either by submitting a documentation [pull request](https://github.com/darktable-org/dtdocs/pulls) to amend this page or by [filing an issue](https://github.com/darktable-org/dtdocs/issues) containing the necessary information. Alternatively you could read or respond to any of the (closed) midi or \"inputng\" [issues](https://github.com/darktable-org/darktable/issues) or [pull requests](https://github.com/darktable-org/darktable/pulls) in the main darktable repository if you need additional help or guidance yourself.\n"
+#~ msgstr "Se você conseguir colocar um dispositivo midi em funcionamento que não tenha sido mencionado abaixo, seria muito apreciado se você fornecesse feedback para ajudar outras pessoas, se forem necessárias etapas especiais. Você pode fazer isso enviando um [pull request](https://github.com/Ansel-org/dtdocs/pulls) de documentação para alterar esta página ou [registrar um problema](https://github.com/Ansel-org/dtdocs/issues) contendo as informações necessárias. Alternativamente, você pode ler ou responder a qualquer um dos [problemas](https://github.com/Ansel-org/Ansel/issues) (fechados) relacionados ao midi ou \"inputng\" ou fazer um [pull request](https://github.com/Ansel-org/Ansel/pulls) no repositório principal da Ansel se você mesmo precisar de ajuda ou orientação adicional.\n"
+
+#, no-wrap
+#~ msgid "Behringer X-touch Mini"
+#~ msgstr "Behringer X-Touch Mini"
+
+#, no-wrap
+#~ msgid "The device should be in Standard Mode (not MC). Layers A & B are somewhat supported, however, since the device does not send a notification when switching between layers, and since the updates to \"hidden\" rotors and lights (both under buttons and the pattern used around the rotors) are ignored, everything will only be updated completely after you press or turn something in the \"new\" layer.\n"
+#~ msgstr "O dispositivo deve estar no modo padrão (não MC). As camadas A e B são razoavelmente suportadas. No entanto, uma vez que o dispositivo não envia uma notificação ao alternar entre as camadas, e uma vez que as atualizações para rotores e luzes \"ocultos\" (tanto sob os botões e o padrão usado ao redor dos rotores) são ignoradas, tudo só será atualizado completamente depois que você pressionar ou acionar algo na \"nova\" camada.\n"
+
+#, no-wrap
+#~ msgid "The light rings around the rotors show a different pattern depending on whether the associated slider has a symmetrical +/- range centered around 0, 0-100 (or 0-1) or anything else. If linked to a drop-down (or star rating) the rotor will step one light at the time. If the drop-down has many (more than 13) items (like the blending mode drop-down), the rotor will go around twice; the first time with one light on, and the second time with two adjacent lights.\n"
+#~ msgstr "Os anéis de luz ao redor dos rotores mostram um padrão diferente dependendo se o controle deslizante associado tem uma faixa +/- simétrica centrada em torno de 0, 0-100 (ou 0-1) ou qualquer outra coisa. Se estiver vinculado a uma lista suspensa (ou classificação por estrelas), o rotor piscará uma luz por vez. Se a lista suspensa tiver muitos (mais de 13) itens (como a lista suspensa do modo de mesclagem), o rotor girará duas vezes; a primeira vez com uma luz acesa e a segunda vez com duas luzes adjacentes.\n"
+
+#, no-wrap
+#~ msgid "Arturia Beatstep"
+#~ msgstr "Arturia Beatstep"
+
+#, fuzzy, no-wrap
+#~| msgid "Individual rotors can be configured to send absolute (0-127) values or changes (+/- 1,2,3,... in different encodings). The recommended setting is Relative #1 for all knobs with Knob Acceleration set to Slow (Off) or Medium. This can be configured with [Midi Control Center](https://www.arturia.com/support/downloads&manuals), available for Windows or MacOS. By default the Ansel midi module assumes, for unknown devices, that rotors use absolute encodings. After startup it therefore needs to be told that the device is sending relative movements. You can do this by turning one of the encoders slowly left (down) 5 times. This allows the module to determine which of the several relative encodings is used. If you don't succeed switching encodings on the first attempt, you can reinitialise the input modules by pressing Ctrl+Shift+Alt+I and try again. If you still have problems, you could try [this](https://wd40.co.uk/product/fast-drying-contact-cleaner/).\n"
+#~ msgid "Individual rotors can be configured to send absolute (0-127) values or changes (+/- 1,2,3,... in different encodings). The recommended setting is Relative #1 for all knobs with Knob Acceleration set to Slow (Off) or Medium. This can be configured with [Midi Control Center](https://www.arturia.com/support/downloads&manuals), available for Windows or MacOS. By default the darktable midi module assumes, for unknown devices, that rotors use absolute encodings. After startup it therefore needs to be told that the device is sending relative movements. You can do this by turning one of the encoders slowly left (down) 5 times. This allows the module to determine which of the several relative encodings is used. If you don't succeed switching encodings on the first attempt, you can reinitialise the input modules by pressing Ctrl+Shift+Alt+I and try again. If you still have problems, you could try [this](https://wd40.co.uk/product/fast-drying-contact-cleaner/).\n"
+#~ msgstr "Os rotores individuais podem ser configurados para enviar valores absolutos (0-127) ou alterações (+/- 1,2,3, ... em codificações diferentes). A configuração recomendada é Relative #1 para todos os botões com Knob Acceleration configurada para Slow (Off) ou Medium. Isso pode ser configurado com o [Centro de Controle Midi](https://www.arturia.com/support/downloads&manuals), disponível para Windows ou MacOS. Por padrão, o módulo Ansel midi assume, para dispositivos desconhecidos, que os rotores usam codificações absolutas. Após a inicialização, é necessário informar que o dispositivo está enviando movimentos relativos. Você pode fazer isso girando um dos codificadores lentamente para a esquerda (para baixo) 5 vezes. Isso permite que o módulo determine qual das várias codificações relativas é usada. Se você não conseguir alternar as codificações na primeira tentativa, poderá reinicializar os módulos de entrada pressionando Ctrl+Shift+Alt+I e tentar novamente. Se ainda tiver problemas, você pode tentar [isto](https://wd40.co.uk/product/fast-drying-contact-cleaner/).\n"
+
+#, no-wrap
+#~ msgid "If you map the Beatstep's buttons to ratings, color labels or toggle buttons, they should light up when the corresponding element is switched on.\n"
+#~ msgstr "Se você mapear os botões do Beatstep para classificações, rótulos de cores ou botões de alternância, eles devem acender quando o elemento correspondente for ativado.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "Behringer BCR2000 "
+#~ msgid "Behringer BCR2000"
+#~ msgstr "Behringer BCR2000 "
+
+#, no-wrap
+#~ msgid "(and possibly BCF2000)\n"
+#~ msgstr "(e possivelmente BCF2000)\n"
+
+#, fuzzy, no-wrap
+#~| msgid "These machines are highly configurable so there are many settings that could complicate the interaction with Ansel's midi module. The [BC Manager tool](https://mountainutilities.eu/bcmanager) (available for Windows and MacOS) can be used to configure them. The easiest thing to do is to reset all encoders and buttons to their simplest settings, which can be done (for the BCR2000) using [this file](https://github.com/dterrahe/Ansel/files/6539400/bcr2000.all.buttons.and.encoders.zip). You can send it to the machine with BC Manager or (under Linux) with amidi. There's also a global setting called \"Deadtime\" that determines how long the BCR ignores arriving messages after sending out updates. This is to avoid feedback loops, but for Ansel it means that it blocks the adjustments sent back immediately after each rotor move. So Deadtime needs to be set to 0.\n"
+#~ msgid "These machines are highly configurable so there are many settings that could complicate the interaction with darktable's midi module. The [BC Manager tool](https://mountainutilities.eu/bcmanager) (available for Windows and MacOS) can be used to configure them. The easiest thing to do is to reset all encoders and buttons to their simplest settings, which can be done (for the BCR2000) using [this file](https://github.com/dterrahe/darktable/files/6539400/bcr2000.all.buttons.and.encoders.zip). You can send it to the machine with BC Manager or (under Linux) with amidi. There's also a global setting called \"Deadtime\" that determines how long the BCR ignores arriving messages after sending out updates. This is to avoid feedback loops, but for darktable it means that it blocks the adjustments sent back immediately after each rotor move. So Deadtime needs to be set to 0.\n"
+#~ msgstr "Essas máquinas são altamente configuráveis, portanto, há muitas configurações que podem complicar a interação com o módulo midi do Ansel. A [ferramenta de gerenciamento do BC](https://mountainutilities.eu/bcmanager) (disponível para Windows e MacOS) pode ser usada para configurá-los. A coisa mais fácil a fazer é redefinir todos os codificadores e botões para suas configurações mais simples, o que pode ser feito (para o BCR2000) usando [este arquivo](https://github.com/dterrahe/Ansel/files/6539400/bcr2000.all.buttons.and.encoders.zip). Você pode enviá-lo para a máquina com o Gerenciador do BC ou (no Linux) com o amidi. Há também uma configuração global chamada \"Deadtime\" que determina por quanto tempo o BCR ignora as mensagens que chegam depois de enviar atualizações. Isso evita loops de feedback, mas para o Ansel significa que bloqueia os ajustes enviados de volta imediatamente após cada movimento do rotor. Portanto, o Deadtime precisa ser definido como 0.\n"
+
+#, no-wrap
+#~ msgid "Once configured in this way, button and rotor lights should all work. The top row of rotors (or the only row for the BCF2000) support different light patterns (like the X-Touch Midi, with some extra options and it has 15 instead of 13 leds). However, configuring these is more complicated, and not yet implemented. It also seems to be slower, so may not be doable in real-time for each update (like it is done for the X-touch). So at the moment only the 12-dot pattern is used. For rotors linked to drop-down lists, just like on the X-touch the rotor, the light goes round twice; for the first 15 options only one light goes on, for the second 15 options, two adjacent lights will be on.\n"
+#~ msgstr "Uma vez configurado desta forma, as luzes do botão e do rotor devem funcionar. A linha superior de rotores (ou a única linha para o BCF2000) suporta diferentes padrões de luz (como o X-Touch Midi, com algumas opções extras e possui 15 em vez de 13 leds). No entanto, configurá-los é mais complicado e ainda não foi implementado. Também parece ser mais lento, por isso pode não ser viável em tempo real para cada atualização (como é feito para o X-Touch). Portanto, no momento, apenas o padrão de 12 pontos é usado. Para rotores vinculados a listas suspensas, assim como no rotor do X-Touch, a luz gira duas vezes; para as primeiras 15 opções apenas uma luz acende, para as segundas 15 opções, duas luzes adjacentes estarão acesas.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "Loupedeck "
+#~ msgid "Loupedeck"
+#~ msgstr "Loupedeck "
+
+#, fuzzy, no-wrap
+#~| msgid "(and Loupedeck+ but not the later non-midi devices) \n"
+#~ msgid "(and Loupedeck+ but not the later non-midi devices)\n"
+#~ msgstr "(e Loupedeck+, mas não os dispositivos não midi posteriores) \n"
+
+#, fuzzy, no-wrap
+#~| msgid "Going by the information provided [here](https://discuss.pixls.us/t/midi-controller-for-Ansel/2582/92), most of the functionality of the first two loupedeck models (both midi based) should be supported, with the following exceptions and caveats:\n"
+#~ msgid "Going by the information provided [here](https://discuss.pixls.us/t/midi-controller-for-darktable/2582/92), most of the functionality of the first two loupedeck models (both midi based) should be supported, with the following exceptions and caveats:\n"
+#~ msgstr "Pelas informações fornecidas [aqui](https://discuss.pixls.us/t/midi-controller-for-Ansel/2582/92), a maioria das funcionalidades dos dois primeiros modelos Loupedeck (ambos baseados em midi) devem ser suportadas, com as seguintes exceções e ressalvas:\n"
+
+#, fuzzy, no-wrap
+#~| msgid "the Hue/Sat/Lum buttons can be mapped to the notebook tabs in the color zones module but the little lights next to them may not respond to update messages sent when the user switches tabs using the mouse, so they might get out of sync\n"
+#~ msgid ""
+#~ "- the Hue/Sat/Lum buttons can be mapped to the notebook tabs in the color zones module but the little lights next to them may not respond to update messages sent when the user switches tabs using the mouse, so they might get out of sync\n"
+#~ "- the 8 sliders/wheels can be individually mapped to the elements of the graph in color zones\n"
+#~ msgstr "os botões Matiz/Saturação/Luminosidade podem ser mapeados para as abas no módulo de zonas de cores, mas as pequenas luzes próximas a eles podem não responder às mensagens de atualização enviadas quando o usuário alterna as abas usando o mouse, então eles podem ficar fora de sincronia\n"
+
+#, no-wrap
+#~ msgid "Other than that, since the loupedeck uses Relative encoding (so is similar to the Beatstep) it will need to tell the midi module at each startup (until a configuration system has been implemented). You do this by turning any of the knobs (or wheels) slowly down/left 5 times. Re-initialise the input layer with Ctrl+Shift+Alt+I if it didn't work the first time so you can try again.\n"
+#~ msgstr "Fora isso, uma vez que o Loupedeck usa a codificação Relative (por isso é semelhante ao Beatstep), ele precisará informar o módulo midi a cada inicialização (até que um sistema de configuração tenha sido implementado). Faça isso girando qualquer um dos botões (ou rodas) lentamente para baixo/para a esquerda 5 vezes. Reinicialize a camada de entrada com Ctrl+Shift+Alt+I se não funcionar da primeira vez para que você possa tentar novamente.\n"
+
+#, no-wrap
+#~ msgid "Korg nanoKONTROL2"
+#~ msgstr "Korg nanoKONTROL2"
+
+#, no-wrap
+#~ msgid "The device should be configured first using the Korg Kontrol Editor application to be in the CC mode and every button should be set to the Note type and Momentary button behavior. To control the lights in the buttons the LED mode should be set to External. It is important to note that the Track and the Marker buttons do not have leds in them.\n"
+#~ msgstr "O dispositivo deve ser configurado primeiro usando o aplicativo Korg Kontrol Editor para estar no modo CC e cada botão deve ser definido para o tipo de nota e comportamento de botão Momentâneo. Para controlar as luzes nos botões, o modo LED deve ser definido como Externo. É importante notar que os botões Track e Marker não possuem leds.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "There is an Kontrol Editor profile available [here](https://github.com/Ansel-org/Ansel/files/7603658/note_buttons.zip) which can be loaded using the Windows application to directly configure all these settings to correctly work with Ansel.\n"
+#~ msgid "There is an Kontrol Editor profile available [here](https://github.com/darktable-org/darktable/files/7603658/note_buttons.zip) which can be loaded using the Windows application to directly configure all these settings to correctly work with darktable.\n"
+#~ msgstr "Há um perfil do Kontrol Editor disponível [aqui](https://github.com/Ansel-org/Ansel/files/7603658/note_buttons.zip) que pode ser carregado usando o aplicativo Windows para configurar diretamente todas essas configurações para funcionar corretamente com o Ansel.\n"
+
+#, no-wrap
+#~ msgid "additional midi configuration"
+#~ msgstr "configuração midi adicional"
+
+#, fuzzy, no-wrap
+#~| msgid "If Ansel is compiled with portmidi it will at startup try to open up to 10 midi devices in the order it finds them. On the command line you might see something like this:\n"
+#~ msgid "If darktable is compiled with portmidi it will at startup try to open up to 10 midi devices in the order it finds them. On the command line you might see something like this:\n"
+#~ msgstr "Se o Ansel for compilado com portmidi, na inicialização ele tentará abrir até 10 dispositivos midi na ordem em que os encontrar. Na linha de comando, você pode ver algo assim:\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "[midi_open_devices] opened midi device 'Arturia BeatStep' via 'MMSystem' as midi0\n"
+#~ "[midi_open_devices] opened midi device 'BCR2000' via 'MMSystem' as midi1\n"
+#~ "[midi_open_devices] opened midi device 'X-TOUCH MINI' via 'MMSystem' as midi2\n"
+#~ msgstr ""
+#~ "[midi_open_devices] opened midi device 'Arturia BeatStep' via 'MMSystem' as midi0\n"
+#~ "[midi_open_devices] opened midi device 'BCR2000' via 'MMSystem' as midi1\n"
+#~ "[midi_open_devices] opened midi device 'X-TOUCH MINI' via 'MMSystem' as midi2\n"
+
+#, no-wrap
+#~ msgid "Two issues can arise:\n"
+#~ msgstr "Dois problemas podem surgir:\n"
+
+#, fuzzy, no-wrap
+#~| msgid "a device you don't want to use might be opened anyway (and potentially cause inappropriate behavior, like starting a fireworks show prematurely (see [this document](http://webcache.googleusercontent.com/search?q=cache:6EcEOjfjiAkJ:gmbh.pyropak.com/docs/downloads/surefire-prologic-digital-controller_rev2010.pdf+&cd=1&hl=en&ct=clnk&gl=us)), or\n"
+#~ msgid ""
+#~ "- a device you don't want to use might be opened anyway (and potentially cause inappropriate behavior, like starting a fireworks show prematurely (see [this document](https://gmbh.pyropak.com/docs/downloads/surefire-prologic-digital-controller_rev2010.pdf), or\n"
+#~ "- devices might appear in a different order at the next startup (for example because they are plugged into a different usb port). Since configurations are stored with the device number only, reordering would cause an incorrect layout to be picked up.\n"
+#~ msgstr "um dispositivo que você não deseja usar pode ser aberto de qualquer maneira (e potencialmente causar um comportamento inadequado, como iniciar um show de fogos de artifício prematuramente (consulte [este documento](http://webcache.googleusercontent.com/search?q=cache:6EcEOjfjiAkJ:gmbh.pyropak.com/docs/downloads/surefire-prologic-digital-controller_rev2010.pdf+&cd=1&hl=en&ct=clnk&gl=us)), ou\n"
+
+#, no-wrap
+#~ msgid "You can specify which devices to explicitly load in a specific location and which ones to skip using the configuration parameter [preferences > miscellaneous > interface > order or exclude midi devices](../preferences-settings/miscellaneous.md#interface). To skip loading the BCR2000 in the above example and to fix the other two devices into the number 0 and 2 slots, you could set this config parameter to \"`BeatStep;dontuse;X-TOUCH;-BCR2000`\". This would leave the BeatStep as device midi0, always leave midi1 unused and would not load the BCR2000 at all, but if any other devices are connected, they would appear as midi3, midi4 and so on. Adding \"`;-`\" at the end would prevent any further devices loading. Or, if you just specify the configuration parameter as a single minus sign \"`-`\", no devices will be loaded at all.\n"
+#~ msgstr "Você pode especificar quais dispositivos carregar explicitamente em um local específico e quais ignorar usando o parâmetro de configuração [preferências > miscelânea > interface > carregar ou excluir dispositivos midi](../preferences-settings/miscellaneous.md#interface). Para pular o carregamento do BCR2000 no exemplo acima e fixar os outros dois dispositivos nos slots de número 0 e 2, você pode definir este parâmetro de configuração como \"`BeatStep;dontuse;X-TOUCH;-BCR2000`\". Isso deixaria o BeatStep como dispositivo midi0, sempre deixaria midi1 sem uso e não carregaria o BCR2000, mas se outros dispositivos estiverem conectados, eles aparecerão como midi3, midi4 e assim por diante. Adicionar \"`;-`\" no final impediria o carregamento de outros dispositivos. Ou, se você apenas especificar o parâmetro de configuração como um único sinal de menos \"`-`\", nenhum dispositivo será carregado.\n"
+
+#, no-wrap
+#~ msgid "Midi controller knobs can use several different \"encodings\". The default, absolute, sends a value from 0 (all the way left) to 127 (all the way right) -- sliders can also use absolute encoding. Relative encoders send a \"down\" value if you turn them left and an \"up\" value if you turn them right. So slowly turning one of those \"up\" would send \"1, 1, 1, 1,\" for example. But depending on how many bits are used and what encoding, a slow left turn might be 127 (8 bits -1) or 63, 31 or 15. Or even 65. If nothing is specified in this preference option, midi devices are assumed to use absolute encoding. But if the first five messages received are identical, it is assumed that the user has slowly turned a knob left/down and the encoding is deduced from that and displayed in a toast. The encoding is not remembered for each device, so this maneuver needs to be repeated at each startup. To define the deduced encoding for the next startup you can add this parameter to the \"order or exclude midi devices\" setting. For example \"`Loupedeck:127`\".\n"
+#~ msgstr "Os botões do controlador Midi podem usar várias \"codificações\" diferentes. O padrão, absoluto, envia um valor de 0 (toda a esquerda) a 127 (toda a direita) -- os controles deslizantes também podem usar codificação absoluta. Os codificadores relativos enviam um valor \"para baixo\" se você os girar para a esquerda e um valor \"para cima\" se você os girar para a direita. Então, girar lentamente um desses \"para cima\" enviaria \"1, 1, 1, 1\", por exemplo. Mas dependendo de quantos bits são usados e qual codificação, um giro lento à esquerda pode ser 127 (8 bits -1) ou 63, 31 ou 15. Ou até 65. Se nada for especificado nesta opção de preferência, os dispositivos midi são considerados como usando codificação absoluta. Mas se as primeiras cinco mensagens recebidas forem idênticas, supõe-se que o usuário girou lentamente um botão para a esquerda/baixo e a codificação é deduzida disso e exibida em uma dica. A codificação não é lembrada para cada dispositivo, portanto, essa manobra precisa ser repetida a cada inicialização. Para definir a codificação deduzida para a próxima inicialização, você pode adicionar este parâmetro à configuração \"carregar ou excluir dispositivos midi\". Por exemplo \"`Loupedeck:127`\".\n"
+
+#, fuzzy, no-wrap
+#~| msgid "Some midi controllers have keys with a light beneath them. These can be used to toggle settings and show the current position by having the light on or off. In this case, Ansel checks periodically (a few times a second) whether, say, the position of an on-screen toggle button has been changed, and sends messages to any linked midi device buttons to switch their light on or off. But if an unknown device has unintentionally been connected, this could be undesirable. So by default Ansel waits until a \"note\" message is received from a midi button before sending any \"note\" light on/off messages back for that button. That way also no more buttons are addressed than exist on the device. If you immediately want all button lights to be used (rather than having to press the highest note once for each session) you can specify the number of buttons in the \"order or exclude midi devices\" preference, for example, \"`BeatStep:63:16`\".\n"
+#~ msgid "Some midi controllers have keys with a light beneath them. These can be used to toggle settings and show the current position by having the light on or off. In this case, darktable checks periodically (a few times a second) whether, say, the position of an on-screen toggle button has been changed, and sends messages to any linked midi device buttons to switch their light on or off. But if an unknown device has unintentionally been connected, this could be undesirable. So by default darktable waits until a \"note\" message is received from a midi button before sending any \"note\" light on/off messages back for that button. That way also no more buttons are addressed than exist on the device. If you immediately want all button lights to be used (rather than having to press the highest note once for each session) you can specify the number of buttons in the \"order or exclude midi devices\" preference, for example, \"`BeatStep:63:16`\".\n"
+#~ msgstr "Alguns controladores midi possuem teclas com uma luz abaixo delas. Elas podem ser usadas para alternar as configurações e mostrar a posição atual acendendo ou apagando a luz. Nesse caso, o Ansel verifica periodicamente (algumas vezes por segundo) se, digamos, a posição de um botão de alternância na tela foi alterada e envia mensagens para qualquer botão de dispositivo midi vinculado para ligar ou desligar a luz. Mas se um dispositivo desconhecido foi conectado involuntariamente, isso pode ser indesejável. Portanto, por padrão, o Ansel espera até que uma mensagem de \"nota\" seja recebida de um botão midi antes de enviar qualquer mensagem de ativação/desativação da luz de \"nota\" de volta para esse botão. Dessa forma, também não são endereçados mais botões do que os existentes no dispositivo. Se você quiser que todas as luzes dos botões sejam usadas imediatamente (em vez de pressionar a nota mais alta uma vez para cada sessão), você pode especificar o número de botões na preferência \"carregar ou excluir dispositivos midi\", por exemplo, \"`BeatStep:63 :16`\".\n"
+
+#, no-wrap
+#~ msgid "Ansel's color pipeline"
+#~ msgstr "pipeline de cor do Ansel"
+
+#, no-wrap
+#~ msgid "Most image processing applications come from the 1990s and/or inherit a 1990s workflow. These applications processed images encoded with 8 bit unsigned integers because it was more memory- and computationally-efficient. However, due to the use of an integer format (which implies rounding errors) they had to apply a \"gamma\" (essentially a transfer function applying a power 1/2.2 or 1/2.4 to encode the RGB values) and increase the bit-depth in the low-lights in order to reduce rounding errors there (humans are very sensitive to low-light details). The 8 bit integer formats are also technically limited to the 0-255 range. Anything outside of this range overflows and is clipped to the nearest bound.\n"
+#~ msgstr "A maioria dos aplicativos de processamento de imagens teve origem nos anos 1990 e/ou herdaram o fluxo de trabalho desses anos. Estes aplicativos processavam imagens codificadas com números inteiros de 8 bits sem sinal porque era mais eficiente no uso da memória e computacionalmente. No entanto, devido ao uso de um formato inteiro (o que implica em erros de arredondamento), eles tiveram que aplicar um “gama” (essencialmente uma função de transferência aplicando uma potência de 1/2,2 ou 1/2,4 para codificar os valores de RGB) e aumentar a profundidade de bits em condições de pouca luz para reduzir os erros de arredondamento (os seres humanos são muito mais sensíveis aos detalhes em pouca luz). Os formatos de números inteiros de 8 bits também estão tecnicamente limitados ao intervalo de 0-255. Qualquer coisa fora deste intervalo transborda e é recortado ao limite mais próximo.\n"
+
+#, no-wrap
+#~ msgid "These workflows, using bounded RGB representations and possibly non-linear transforms to encode RGB signals, are called \"display-referred\". They rely on the assumption that the image has been prepared for display at an early stage in the processing pipeline, and embed hard-coded assumptions about the RGB values of black, middle-gray and white. Most of the image-processing algorithms used in these workflows have been tuned around these assumptions. For example, the overlay blending mode expects a middle-gray encoded at 50% (or 128 in integer encoding).\n"
+#~ msgstr "Estes fluxos de trabalhos, que utilizam representações limitadas do RGB e possivelmente transformações não lineares para codificar sinais RGB, se denominam “relativos à exibição”. Se baseiam na suposição de que a imagem foi preparada para sua visualização em uma etapa inicial do pipeline de processamento e incorpora suposições codificadas de forma rígida sobre os valores RGB de preto, cinza médio e branco. A maioria dos algoritmos de processamento de imagens usados nestes fluxos de trabalho foram ajustados em torno destas suposições. Por exemplo, o modo de mesclagem de sobreposição espera um cinza médio codificado à 50% (ou 128 na codificação de número inteiro).\n"
+
+#, no-wrap
+#~ msgid "Unfortunately the non-linear scaling, which is mandatory to make the integer encoding work, breaks the natural relationships between pixel values. Hue and saturation change in unpredictable ways, and value relationships between neighbouring pixels are dilated or compressed such that gradients are also altered unpredictably.\n"
+#~ msgstr "Infelizmente, a escala não linear, que é mandatória para realizar o trabalho de codificação de números inteiros, quebra o relacionamento natural entre os valores dos pixels. A tonalidade e a saturação mudam de maneira imprevisível e as relações de valor entre os pixels vizinhos são dilatadas ou comprimidas de modo que os gradientes também se alterem de forma imprevisível.\n"
+
+#, no-wrap
+#~ msgid "Display-referred pipelines therefore break optical filters (lens blurring or deblurring), alpha compositing (which relies on optical and geometrical definitions of occlusion), colors and gradients (local relationships between chrominance and luminance of pixels). They also don't scale well to HDR images, which led to the development of many questionable local and global tonemapping methods and the infamous 2010s \"HDR look\".\n"
+#~ msgstr "Pipelines relativas à exibição rompem filtros óticos (focagem e desfocagem de lentes), composição alfa (que se baseia em definições óticas e geométricas de oclusão) e gradientes de cores (relações locais entre crominância e luminância de pixels). Tão pouco escalam bem as imagens HDR, o que levou ao desenvolvimento de muitos métodos de mapeamento de tons locais e globais questionáveis e o infame “aspecto HDR” da década de 2010.\n"
+
+#, no-wrap
+#~ msgid "Modern computers are not tied to the same computational limitations as those from the 1990s, and can work on pixels whose values are completely unbounded (from 0 up to +infinity) and encoded as real numbers (using floating point formats). These possibilities enable what we call a \"scene-referred\" workflow, in which pixels can retain their original radiometric relationships along almost the entire processing pipe. In scene-referred workflow, pixels are prepared for display only at the last stage of the pipeline, in the display transform. This means that the RGB values of the pixels are kept proportional to the intensity of the light emission recorded by the camera on the scene, enabling accurate alpha compositing and optical filter emulations, while also scaling to any dynamic range through the same algorithm (SDR as well as HDR).\n"
+#~ msgstr "Os computadores modernos não estão restritos às mesmas limitações computacionais dos anos 1990 e podem trabalhar com pixels cujos valores são completamente ilimitados (de 0 ao infinito) e codificados como números reais (usando formatos de ponto flutuante). Estas possibilidades permitem o que denominamos de fluxo de trabalho “relativo à cena”, no qual pixels podem reter seus relacionamentos radiométricos originais ao longo da maior parte do pipe de processamento. No fluxo de trabalho relativo à cena, os pixels são preparados para exibição no último estágio do pipeline, na transformação para visualização. Isto significa que os valores RGB dos pixels são mantidos proporcionais à intensidade da emissão da luz registrada pela câmera na cena, permitindo uma composição alfa precisa e emulações de filtros óticos, enquanto se escala para qualquer alcance dinâmico por meio do mesmo algoritmo (tanto SDR como HDR).\n"
+
+#, no-wrap
+#~ msgid "However, scene-referred pipelines lose the convenient fixed values of white, middle-gray and black which characterised display-referred pipelines, and setting these values, according to the scene and to the conditions of shooting, now becomes the responsibility of the user. This requires a more complex user interface.\n"
+#~ msgstr "No entanto, pipelines relativos à cena perdem os convenientes valores fixos de branco, cinza médio e preto que caracterizam os pipelines relativos à exibição, e estabelecer estes valores, de acordo com a cena e as condições de realização da fotografia, agora é responsabilidade do usuário. Isto requer uma interface com o usuário mais complexa.\n"
+
+#, no-wrap
+#~ msgid "Also, because scene-referred values are supposed to be physically-meaningful, pixels cannot have zero intensity. This would mean they have no light at all, and the existence of zero light breaks many physically-accurate algorithms. In fact, white and black mean nothing with regard to the original scene, which is only a collection of luminances at varying intensities. The scene-referred workflow simply aims at remapping some arbitrary scene luminances to what will appear white or black on the output medium.\n"
+#~ msgstr "Ademais, uma vez que os valores relativos à cena devem ser fisicamente significativos, pixels não podem possuir uma intensidade zero. Isso significaria que não possuem nenhuma luz e a existência de zero luz rompe muitos algoritmos fisicamente precisos. De fato, o branco e o preto não significam nada com respeito à cena original, que é somente uma coleção de luminâncias com diferentes intensidades. O fluxo de trabalho relativo à cena simplesmente tem como objetivo reatribuir algumas luminâncias da cena arbitrárias ao que aparecerá em branco ou preto na mídia de saída.\n"
+
+#, no-wrap
+#~ msgid "Versions of Ansel prior to 2.6 had a non-linear display-referred pipeline, assuming that a non-linear transform took place early in the pipe and middle-gray was thereafter encoded as 50%. However, not all modules and filters clipped pixel values above 100%, leaving open the possibility of recovering those values later in the pipe.\n"
+#~ msgstr "As versões do Ansel anteriores à 2.6 possuíam um pipeline relativo à exibição não linear, assumindo que uma transformação não linear ocorre no início do pipe e o cinza médio foi codificado como 50%. No entanto, nem todos os módulos e filtros recortam valores de pixels acima de 100%, deixando aberta a possibilidade de recuperar esses valores mais adiante no pipe.\n"
+
+#, no-wrap
+#~ msgid "The _filmic_ module's view transform, introduced in darktable 2.6, was the first step toward a scene-referred pipeline, and deferred the mandatory, non-linear, display preparation to the end of the pipe, along with the ability to set custom black, gray and white values. The _color balance_ module then introduced a way to deal with a variable definition of middle-gray.\n"
+#~ msgstr "A transformação da visualização do módulo _fílmico_, introduzida no darktable 2.6, foi o primeiro passo na direção de um pipeline relativo à cena e atrasou a preparação para visualização obrigatória, não linear, para o final do pipe, junto com a capacidade de configurar valores personalizados de preto, cinza e branco. O módulo de _balanço de cor_ então introduziu uma maneira de lidar com uma definição variável de cinza médio.\n"
+
+#, no-wrap
+#~ msgid "Starting in darktable 3.2, users could choose between two workflows that defined consistent default settings, modules and pipeline order for both _display-referred_ and _scene-referred_ processing.\n"
+#~ msgstr "A partir do darktable 3.2, os usuários puderam escolher entre os dois fluxos de trabalho que definiam configurações padrão consistentes, módulos e ordem do pipeline tanto para o processamento _relativo à exibição_ como para o _relativo à cena_.\n"
+
+#, no-wrap
+#~ msgid "In darktable 3.4, a full scene-referred masking and blending option was introduced, allowing masks to be defined for pixel values above 100% and using only unbounded blending operators.\n"
+#~ msgstr "No darktable 3.4, foram introduzidas opções de mascaramento e mesclagem completamente relativas à cena, o que permite definir máscaras para valores de pixels superiores à 100% e o uso somente de operadores de mesclagem ilimitados.\n"
+
+#, no-wrap
+#~ msgid "Switching to _scene-referred_ is a cognitive leap for most experienced users, who are used thinking in display-referred ways. In a display-referred workflow, it is customary to anchor the white value and let tone adjustments revolve around that point, trying to maximize brightness while avoiding clipping. In a scene-referred workflow, white and black values are fluid and adapted to the output medium. It is advised that users anchor middle-gray (which will be preserved as-is for any output medium) and let the view transform (_filmic_) dilate or contract the dynamic range around that point. Because 10 bit HDR white is 4 times as bright as 8 bit SDR white, any rigid definition of \"white\" becomes irrelevant. But anchoring for middle-gray is actually more convenient, since it keeps the average brightness of the picture unchanged through the view transform.\n"
+#~ msgstr "Mudar para o processamento _relativo à cena_ é um salto cognitivo para a maioria dos usuários experientes, que estão acostumados a pensar em formas relativas à exibição. Em um fluxo de trabalho relativo à exibição, costuma-se ancorar o valor de branco e deixar que os ajustes de tonalidade girem ao redor deste ponto, tratando de maximizar o brilho e evitar o recorte. Em um fluxo de trabalho relativo à cena, os valores de branco e preto são fluídos e se adaptam à mídia de saída. É recomendável que usuários ancorem o cinza médio (que será preservado no estado para qualquer mídia de saída) e permitam que a transformação para visualização (_fílmico_) dilate ou contraia o alcance dinâmico ao redor deste ponto. Uma vez que o branco HDR de 10 bits é 4 vezes mais brilhante que o branco SDR de 8 bits, qualquer definição rígida de “branco” se torna irrelevante. Mas a ancoragem do cinza médio é na realidade mais conveniente, já que mantém o brilho médio da imagem inalterado durante a transformação para visualização.\n"
+
+#, no-wrap
+#~ msgid "Some modules (_levels_, _rgb levels_, _tone curve_, _rgb curve_) are inherently incompatible with a scene-referred workflow, because their graphical interface implicitly suggests RGB values that are bounded within the 0-100% range. While the pixel operations they perform can be used in either scene-referred or display-referred workflows because they are unbounded internally, their controlling interface does not allow pixels to be selected outside of the 0-100% range.\n"
+#~ msgstr "Alguns módulos (_níveis_, _níveis rgb_, _curva de tons_, _curva rgb_) são intrinsecamente incompatíveis com um fluxo de trabalho relativo à cena, porque sua interface gráfica sugere implicitamente valores RGB que estão delimitados dentro do intervalo 0-100%. Apesar das operações de pixel que eles realizam poderem ser usadas em fluxos de trabalho relativos à cena ou à exibição porque não estão limitados internamente, sua interface de controle não permite que pixels sejam selecionados fora do intervalo 0-100%.\n"
+
+#, no-wrap
+#~ msgid "Similarly, blending modes such as overlay, linear light, soft light, hard light, darken, brighten, etc. all have hard-coded thresholds that internally expect display-referred non-linear encoding.\n"
+#~ msgstr "De maneira semelhante, os modos de mesclagem como superposição, luz linear, luz suave, luz intensa, escurecer, clarear, etc, possuem todos limites codificados que internamente esperam codificação não linear relativa à exibição.\n"
+
+#, no-wrap
+#~ msgid "In darktable 3.4 and above, hovering the cursor over a module header shows a tooltip detailing the color spaces, ranges and encodings that the module expects, uses and produces. Here are the definitions of the terms used:\n"
+#~ msgstr "Do darktable 3.4 em diante, passar o cursor sobre o cabeçalho de um módulo exibe uma dica detalhando o espaço de cor, intervalos e codificações que o módulo espera, usa e produz. Aqui estão as definições dos termos usados:\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "linear\n"
+#~ ": Pixel values are proportional to the scene radiometric emission, in a way that enables accurate emulation of physical filters.\n"
+#~ msgstr ""
+#~ "linear\n"
+#~ ": Os valores de pixels são proporcionais à emissão radiométrica da cena, de maneira que permitam uma precisa emulação dos filtros físicos.\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "non-linear\n"
+#~ ": Pixel values are re-scaled such that low-lights are given a larger encoding range, usually to remap the 18.45% reference middle-gray to a value between 46 and 50%.\n"
+#~ msgstr ""
+#~ "não-linear\n"
+#~ ": Os valores dos pixels são re-escalonados de modo que as luzes baixas recebem um intervalo de codificação maior, geralmente para remapear para o cinza médio de referência de 18,45% para um valor entre 46 e 50%.\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "display-referred\n"
+#~ ": Pixel values are expected to lie between 0 and 100% of the display range, where 100% is understood to be the luminance of a 20% reflective white surface (the white patch of a Color Checker) and 0% is understood to be the maximum density of the output medium (saturated black ink or minimum LED panel backlighting).\n"
+#~ msgstr ""
+#~ "relativo à exibição\n"
+#~ ": Os valores do pixel devem estar entre 0 e 100% do alcance dinâmico, onde 100% é entendido como a luminância de uma superfície branca refletida à 20% (a parte branca do Cartão de Cor) e 0% é entendido como a máxima densidade da mídia de saída (tinta preta saturada ou retro iluminação mínima do painel de LED).\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "scene-referred\n"
+#~ ": Pixel values are expected to be greater than zero up to +infinity. The meaning of specific pixel values needs to be defined at runtime by the user. Scene-referred values don't automatically imply a linear, radiometrically scaled, encoding.\n"
+#~ msgstr ""
+#~ "relativo à cena\n"
+#~ ": Os valores de pixel devem ser superiores à zero até o infinito. O significado dos valores de pixels específicos deve ser definido pelo usuário em tempo de execução. Os valores relativos à cena não implicam automaticamente em uma codificação linear, escalada radiometricamente.\n"
+
+#, no-wrap
+#~ msgid "translating dtdocs"
+#~ msgstr "traduzir o dtdocs"
+
+#, fuzzy, no-wrap
+#~| msgid "Translation of the Ansel documentation is done via our [Weblate instance](https://weblate.pixls.us/projects/Ansel/).\n"
+#~ msgid "Translation of the darktable documentation is done via our [Weblate instance](https://weblate.pixls.us/projects/darktable/).\n"
+#~ msgstr "A tradução da documentação do Ansel é feita pela nossa [instância do Weblate](https://weblate.pixls.us/projects/Ansel/).\n"
+
+#, no-wrap
+#~ msgid "You can either use Weblate's web UI to translate the documentation or download the translation from Weblate to your computer, edit it, and then upload the changes.\n"
+#~ msgstr "Você pode usar a interface gráfica do Weblate para traduzir a documentação ou baixar a tradução do Weblate para seu computador, editá-la e depois enviar as mudanças.\n"
+
+#, no-wrap
+#~ msgid "Please do all translation work through Weblate. We will not accept pull requests directly on github to update PO files.\n"
+#~ msgstr "Por favor, faça todo o trabalho de tradução usando o Weblate. Nós não aceitaremos _pull requests_ diretamente no github para atualizar arquivos PO.\n"
+
+#, no-wrap
+#~ msgid "Making a new branch in git"
+#~ msgstr "Criar um novo branch no git"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "Make a new branch to work on it in git.\n"
+#~| "For example:\n"
+#~| "`git checkout -b fr-translation-init`\n"
+#~ msgid ""
+#~ "1. Make a new branch to work on it in git.\n"
+#~ "   For example:\n"
+#~ "   `git checkout -b fr-translation-init`\n"
+#~ msgstr ""
+#~ "Crie um novo branch no git para trabalhar.\n"
+#~ "Por exemplo:\n"
+#~ "`git checkout -b traducao-pt-br-init`\n"
+
+#, no-wrap
+#~ msgid "Adding a new language to Hugo"
+#~ msgstr "Adicionar um novo idioma ao Hugo"
+
+#, fuzzy, no-wrap
+#~| msgid "Add the language you wish to translate. For example, the English looks like this:\n"
+#~ msgid ""
+#~ "1. In the files `config.yaml` and `config-pdf.yaml`, locate the `languages:` line.\n"
+#~ "2. Add the language you wish to translate. For example, the English looks like this:\n"
+#~ msgstr "Adicione o idioma que você quer traduzir. Por exemplo, para o Português seria assim:\n"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "     en-us:\n"
+#~| "       title: darktable 3.4 user manual\n"
+#~| "       weight: 1\n"
+#~ msgid ""
+#~ "     en-us:\n"
+#~ "       title: darktable 3.4 user manual\n"
+#~ "date: 2022-12-04T02:19:02+01:00\n"
+#~ "       weight: 1\n"
+#~ msgstr ""
+#~ "     pt-br:\n"
+#~ "       title: manual do usuário do darktable 3.4\n"
+#~ "       weight: 1\n"
+
+#, fuzzy, no-wrap
+#~| msgid "Save the files.\n"
+#~ msgid "3. Save the files.\n"
+#~ msgstr "Salve os arquivos.\n"
+
+#, no-wrap
+#~ msgid "Generating a PO file"
+#~ msgstr "Gerar um arquivo PO"
+
+#, no-wrap
+#~ msgid "Do the following steps if you want to update the POT and PO files from the markdown source.\n"
+#~ msgstr "Execute os passos a seguir se você deseja atualizar os arquivos POT e PO a partir do código fonte.\n"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "Create an empty PO file for your language in the `po` folder with the file name `content.<language>.po`.\n"
+#~| "For example:\n"
+#~| "`touch po/content.fr-fr.po`\n"
+#~ msgid ""
+#~ "1. Create an empty PO file for your language in the `po` folder with the file name `content.<language>.po`.\n"
+#~ "   For example:\n"
+#~ "   `touch po/content.fr-fr.po`\n"
+#~ "2. Run the script to populate the PO file:\n"
+#~ "   `cd tools/ && ./generate-translations.sh --no-translations`\n"
+#~ msgstr ""
+#~ "Crie um arquivo PO vazio para seu idioma na pasta `po` com o nome `content.<idioma>.po`.\n"
+#~ "Por exemplo:\n"
+#~ "`touch po/content.pt-br.po`\n"
+
+#, no-wrap
+#~ msgid "Generating translated files"
+#~ msgstr "Gerar arquivos traduzidos"
+
+#, no-wrap
+#~ msgid "Do the following steps to generate the website files from a translation.\n"
+#~ msgstr "Siga as próximas etapas para gerar os arquivos do site a partir de uma tradução.\n"
+
+#, no-wrap
+#~ msgid "Translating website, epub, and PDF strings"
+#~ msgstr "Traduzir os textos da página Web, epub e PDF"
+
+#, fuzzy, no-wrap
+#~| msgid "There are two themes for the Ansel documentation: one for the HTML website and one for the PDF. You'll need to translate the strings for both.\n"
+#~ msgid "There are two themes for the darktable documentation: one for the HTML website and one for the PDF. You'll need to translate the strings for both.\n"
+#~ msgstr "Há dois temas para a documentação do Ansel: um para o site HTML e um para o PDF. Você precisa traduzir strings para os dois.\n"
+
+#, no-wrap
+#~ msgid "Integrating new translations from Weblate"
+#~ msgstr "Integrar novas traduções do Weblate"
+
+#, no-wrap
+#~ msgid "The following assumes that you're git working directory is clean, that you have API access to the Weblate instance, that you've configured the Weblate git repo as a remote in your local `dtdocs` git repo, and that `wlc`, the Weblate command line client, is configured.\n"
+#~ msgstr "Os passos a seguir assumem que sua pasta de trabalho git está limpa, que você tem acesso API à instância Weblate, que configurou o repositório git do Weblate como um remoto em seu repositório git `dtdocs` local e que` wlc`, o cliente da linha de comando Weblate, está configurado.\n"
+
+#, no-wrap
+#~ msgid "user interface"
+#~ msgstr "interface do usuário"
+
+#, no-wrap
+#~ msgid "supported file formats"
+#~ msgstr "formatos de arquivo suportados"
+
+#, no-wrap
+#~ msgid "Ansel supports a huge number of file formats from various camera manufacturers. In addition Ansel can read a wide range of low- and high-dynamic-range images -- mainly for data exchange between Ansel and other software.\n"
+#~ msgstr "O Ansel suporta uma grande quantidade de formatos de arquivos de vários fabricantes de câmeras. Além disso, o Ansel pode ler uma ampla gama de imagens tanto de alto (HDR) como de baixo alcance dinâmico -- principalmente para intercâmbio entre o Ansel e outros aplicativos.\n"
+
+#, no-wrap
+#~ msgid "In order for Ansel to consider a file for import, it must have one of the following extensions (case independent): `3FR, ARI, ARW, BAY, BMQ, CAP, CINE, CR2, CR3, CRW, CS1, DC2, DCR, DNG, GPR, ERF, FFF, EXR, IA, IIQ, JPEG, JPG, K25, KC2, KDC, MDC, MEF, MOS, MRW, NEF, NRW, ORF, PEF, PFM, PNG, PXN, QTK, RAF, RAW, RDC, RW1, RW2, SR2, SRF, SRW, STI, TIF, TIFF, X3F`\n"
+#~ msgstr "Para que o Ansel considere um arquivo para importação, ele deve ter uma das seguintes extensões (independentemente da capitalização): `3FR, ARI, ARW, BAY, BMQ, CAP, CINE, CR2, CR3, CRW, CS1, DC2, DCR, DNG, GPR, ERF, FFF, EXR, IA, IIQ, JPEG, JPG, K25, KC2, KDC, MDC, MEF, MOS, MRW, NEF, NRW, ORF, PEF, PFM, PNG, PXN, QTK, RAF, RAW, RDC, RW1, RW2, SR2, SRF, SRW, STI, TIF, TIFF e X3F`.\n"
+
+#, no-wrap
+#~ msgid "If Ansel was compiled with JPEG2000 support, the following extensions are also recognized: `J2C, J2K, JP2, JPC`.\n"
+#~ msgstr "Se o Ansel foi compilado com suporte ao JPEG2000, serão reconhecidas as seguintes extensões: `J2C, J2K, JP2 e JPC`.\n"
+
+#, no-wrap
+#~ msgid "If Ansel was compiled with GraphicsMagick support, the following extensions are also recognized: `BMP, DCM, GIF, JNG, JPC, JP2, MIFF, MNG, PBM, PGM, PNM, PPM`.\n"
+#~ msgstr "Se o Ansel foi compilado com suporte ao GraphicsMagick, também serão reconhecidas as seguintes extensões: `BMP, DCM, GIF, JNG, JPC, JP2, MIFF, MNG, PBM, PGM, PNM e PPM`.\n"
+
+#, no-wrap
+#~ msgid "camera raw files"
+#~ msgstr "arquivos de câmera em raw"
+
+#, fuzzy, no-wrap
+#~| msgid "Ansel reads raw files using the open source library [RawSpeed](https://github.com/Ansel-org/rawspeed), originally developed by Klaus Post and now maintained as part of the Ansel project. The number of supported cameras and file formats is constantly increasing. Most modern camera models are supported, and new ones tend to get added very quickly. It is beyond the scope of this manual to give an exhaustive list.\n"
+#~ msgid "Ansel reads raw files using the open source library [RawSpeed](https://github.com/darktable-org/rawspeed), originally developed by Klaus Post and now maintained as part of the darktable project. The number of supported cameras and file formats is constantly increasing. Most modern camera models are supported, and new ones tend to get added very quickly. It is beyond the scope of this manual to give an exhaustive list.\n"
+#~ msgstr "O Ansel lê arquivos em raw usando a biblioteca de código aberto [RawSpeed](https://github.com/Ansel-org/rawspeed), originalmente desenvolvida por Klaus Post e agora mantida como parte do projeto Ansel. A quantidade de câmeras e formatos de arquivos compatíveis aumenta constantemente. A maioria dos modelos de câmeras modernos é compatível e os novos modelos tendem a ser adicionados muito rapidamente. Está fora do escopo deste manual fornecer uma lista exaustiva.\n"
+
+#, no-wrap
+#~ msgid "With the exception of Fujifilm X-Trans cameras, Ansel does not decode images from cameras with non-Bayer sensors (e.g. Sigma cameras with the Foveon X3 sensor).\n"
+#~ msgstr "Com exceção das câmeras Fujifilm X-Trans, o Ansel não decodifica imagens de câmeras com sensores que não sejam da Bayer (por exemplo, câmeras Sigma com sensor Foveon X3).\n"
+
+#, no-wrap
+#~ msgid "other image files"
+#~ msgstr "outros arquivos de imagem"
+
+#, no-wrap
+#~ msgid "Ansel natively reads “ordinary” images in JPEG, 8-bit/16-bit PNG and 8-bit/16-bit TIFF format, as well as 16-bit/32-bit floating point TIFF formats.\n"
+#~ msgstr "O Ansel lê de forma nativa imagens “ordinárias” no formato JPEG, PNG de 8 bits/16 bits e TIFF de 8 bits/16 bits, bem como formatos TIFF de ponto flutuante de 16 bits/32 bits.\n"
+
+#, no-wrap
+#~ msgid "Ansel also reads high dynamic range images in OpenEXR, RGBE and PFM formats.\n"
+#~ msgstr "O Ansel também lê imagens de alto alcance dinâmico (HDR) nos formatos OpenEXR, RGBE e PFM.\n"
 
 #, no-wrap
 #~ msgid "right-clicking on the \"hamburger\" icon at the top-left of the panel\n"

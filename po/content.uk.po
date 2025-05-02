@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-04-24 05:03+0200\n"
+"POT-Creation-Date: 2025-05-02 03:43+0200\n"
 "PO-Revision-Date: 2022-09-16 23:00+0000\n"
 "Last-Translator: Victor Forsiuk <vvforce@gmail.com>\n"
 "Language-Team: Ukrainian <https://weblate.pixls.us/projects/darktable/dtdocs/uk/>\n"
@@ -1170,13 +1170,341 @@ msgstr "Щоб дізнатись більше про те, як визначи�
 msgid "The next section provides more details on the [usage](usage.md) of the Slideshow view.\n"
 msgstr "У наступному розділі наведено докладнішу інформацію про [використання](usage.md) режиму слайд-шоу.\n"
 
-#. type: Title ##
+#. type: Title ###
 #: content/views/_index.md content/special-topics/from-darktable.md
-#: content/preferences-settings/shortcuts.md content/overview/user-interface.md
+#: content/preferences-settings/shortcuts.md
 #, fuzzy, no-wrap
 #| msgid "views"
 msgid "Views"
 msgstr "режими"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "The functionality in darktable is separated into six different views:\n"
+msgid "The functionality in Ansel is separated into six different views:\n"
+msgstr "Функціонал darktable розділений на шість окремих режимів:\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"[Lighttable](lighttable/_index.md)\n"
+": Manage images and collections. It is the main view and can be accessed from anywhere in the software by hitting the <kbd>Escape</kbd> key.\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"[Darkroom](darkroom/_index.md)\n"
+": Develop a single image. It can be accessed from the lighttable by double-click on a thumbnail or by hitting the <kbd>Enter</kbd> key when a picture is selected.\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"[Map](map/_index.md)\n"
+": Show geo-tagged images on a map and manually geo-tag new images. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md).\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"[Print](print/_index.md)\n"
+": Send images to a printer for self-made prints. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md). This view is not available on Windows since it relies on [CUPS](http://www.cups.org/).\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"[Slideshow](slideshow/_index.md)\n"
+": Display images as a slideshow, processing them on-the-fly. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md).\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "You can switch between views by clicking the view name at the top of the right-hand panel (the currently active view is highlighted) or by using one of the following keyboard shortcuts:\n"
+msgid "You can switch between views by clicking the view name at the top of the right-hand panel (the currently active view is highlighted).\n"
+msgstr "Ви можете переключатися між режимами, клікнувши на назві режиму у верхній частині правої панелі (поточний режим виділено) або за допомогою одного з наступних клавіатурних прискорювачів:\n"
+
+#. type: Title ##
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "content"
+msgid "Main content"
+msgstr "вміст"
+
+#. type: Title ###
+#: content/views/_index.md
+#, no-wrap
+msgid "Panels"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "The layout of all darktable views is similar and consists of a center area with panels at the edges: \n"
+msgid "The layout of all Ansel views is similar and consists of a center area with panels at the edges:\n"
+msgstr "Розкладка екрана всіх режимів darktable схожа і складається з центральної області з панелями по краях: \n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"Left panel\n"
+": Can be shown and hidden with <kbd>Shift + Ctrl + L</kbd> :\n"
+"    * __In lighttable__ : Shows the file import, export and collections.\n"
+"    * __In darkroom__ : Shows various peripheral informations on the currently edited picture.\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"Right panel\n"
+": Can be shown and hidden with <kbd>Shift + Ctrl + R</kbd> :\n"
+"    * __In lighttable__ : Contains metadata editors and bulk processing tools.\n"
+"    * __In darkroom__ : Contains the settings to edit the picture.\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "4. top banner\n"
+#| ": Contains information about the current darktable version and allows you to switch between views. Also used by some modules to show additional hints and messages.\n"
+msgid ""
+"Top panel (header)\n"
+": Contains information about the current Ansel version and allows you to switch between views. Also used by some modules to show additional hints and messages. Can be hidden and shown by pressing <kbd>Ctrl + H</kbd>\n"
+msgstr ""
+"4. верхній банер\n"
+": Містить інформацію про поточну версію darktable та дозволяє перемикатися між режимами. Також використовується деякими модулями для показу додаткових підказок та повідомлень.\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"Top toolbar\n"
+": Provides buttons to access the global settings and shortcuts. Can be hidden and shown by pressing <kbd>Shift + Ctrl + T</kbd>.\n"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "6. bottom panel\n"
+#| ": Provides access to view-specific settings and shortcuts.\n"
+msgid ""
+"Bottom panel\n"
+": Provides buttons to access to view-specific settings and shortcuts. Can be hidden and shown by pressing <kbd>Shift + Ctrl + B</kbd>\n"
+msgstr ""
+"6. нижня панель\n"
+": Надає доступ до залежних від режиму darktable параметрів та прискорювачів.\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "7. [filmstrip](../../module-reference/utility-modules/shared/filmstrip.md)/[timeline](../../module-reference/utility-modules/lighttable/timeline.md) panel\n"
+#| ": An optional panel that can be enabled at the bottom of the screen to display a timeline (in the lighttable view) or a filmstrip (in other views) of images in the current collection.\n"
+msgid ""
+"[Filmstrip](../../modules/utility-modules/shared/filmstrip.md)\n"
+": An optional panel that can be enabled at the bottom of the screen in Darkroom, Maps and Print view to display a filmstrip of images in the current collection. Can be shown and hidden by pressing <kbd>Shift + Ctrl + F</kbd>.\n"
+msgstr ""
+"7. панель [стрічки знімків](../../module-reference/utility-modules/shared/filmstrip.md)/[шкали часу](../../module-reference/utility-modules/lighttable/timeline.md)\n"
+": Додаткова панель, яку можна ввімкнути в нижній частині екрана для відображення шкали часу (у режимі світлого стола) або стрічки знімків (в інших режимах) для зображень у поточній колекції.\n"
+
+#. type: Title ###
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "module resizing"
+msgid "Resizing"
+msgstr "зміна розміру модуля"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "The left, right and filmstrip/timeline panels can be resized by dragging their inner borders. \n"
+msgid "The left, right and filmstrip panels can be resized by clicking and dragging their inner borders. Some shortcuts allow to globally change the layout :\n"
+msgstr "Розмір лівої, правої панелі та панелі стрічки знімків / шкали часу можна змінити, перетягуючи їх внутрішні межі. \n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "`TAB` temporarily expands the centre view to fill the whole window. Press again to return to the previous view.\n"
+msgid ""
+" - <kbd>TAB</kbd> temporarily expands the centre view to fill the whole window (hide all panels). Press again to return to the previous view.\n"
+" - <kbd>F11</kbd> toggles fullscreen mode\n"
+msgstr "`TAB` тимчасово розширює центральну панель, щоб заповнити все вікно. Натисніть ще раз, щоб повернутися до попереднього вигляду.\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "**Note:** The size and visibility of the panels are stored independently for each view.\n"
+msgid ""
+"{{< note >}}\n"
+"The size and visibility of the panels are stored independently for each view.\n"
+"{{</ note >}}\n"
+msgstr "**Примітка:** Розміри та видимість панелей зберігаються незалежно для кожного режиму.\n"
+
+#. type: Title ###
+#: content/views/_index.md
+#, no-wrap
+msgid "Top toolbar"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "The top panel is common to all darktable views and provides access to a number of common functions.\n"
+msgid "The top panel is common to all Ansel views and provides access to a number of common functions.\n"
+msgstr "Верхня панель є загальною для всіх режимів darktable та забезпечує доступ до ряду загальних функцій.\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "filter / sort\n"
+#| ": Choose how to filter and sort the images. Criteria can be altered in the [collection filters](../../module-reference/utility-modules/shared/collection-filters.md) module.\n"
+msgid ""
+"Filter / sort\n"
+": Choose how to filter and sort the images. Criteria can be altered in the [collection filters](../../modules/utility-modules/shared/collections.md) module.\n"
+msgstr ""
+"фільтр / сортування\n"
+": Виберіть спосіб фільтрації та сортування зображень. Критерії можна змінити в модулі [фільтри для колекцій](../../module-reference/utility-modules/shared/collection-filters.md).\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "![top-panel_sort-order icon](./top-panel/top-panel_sort-order.jpg) sort order\n"
+#| ": Switch the sort order (ascending / descending).\n"
+msgid ""
+"Sort order\n"
+": Switch the sort order (ascending / descending).\n"
+msgstr ""
+"![top-panel_sort-order icon](./top-panel/top-panel_sort-order.jpg) порядок сортування\n"
+": Переключити порядок сортування (за зростанням / за спаданням).\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "![top panel_help icon](./top-panel/top-panel_help.jpg) context-sensitive help\n"
+#| ": Click this icon and then click on a control element to be directed to the appropriate online help page.\n"
+msgid ""
+"Context-sensitive help\n"
+": Click this icon and then click on a control element to be directed to the appropriate online help page.\n"
+msgstr ""
+"![top panel_help icon](./top-panel/top-panel_help.jpg) контекстна довідка\n"
+": Натисніть на цей значок, а потім натисніть на елемент керування, щоб перейти на відповідну сторінку довідки в Інтернеті.\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "![top panel shortcut mapping icon](./top-panel/top-panel_shortcut.jpg) shortcut mapping\n"
+#| ": Click this icon to enter the [visual shortcut mapping](../../preferences-settings/shortcuts.md#visual-shortcut-mapping) mode to create keyboard/mouse shortcuts.\n"
+msgid ""
+"Shortcut mapping\n"
+": Click this icon to enter the [visual shortcut mapping](../../preferences-settings/shortcuts.md#visual-shortcut-mapping) mode to create keyboard/mouse shortcuts.\n"
+msgstr ""
+"![top panel shortcut mapping icon](./top-panel/top-panel_shortcut.jpg) зіставлення прискорювачів\n"
+": Натисніть цей значок, щоб увійти в режим [візуального зіставлення прискорювачів](../../preferences-settings/shortcuts.md#візуальне-зіставлення-прискорювачів) для створення прискорювачів для клавіатури/миші.\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "![top panel_preferences icon](./top-panel/top-panel_preferences.jpg) preferences\n"
+#| ": View and amend darktable's [preferences & settings](../../preferences-settings/_index.md).\n"
+msgid ""
+"Preferences\n"
+": View and amend Ansel's [preferences & settings](../../preferences-settings/_index.md).\n"
+msgstr ""
+"![top panel_preferences icon](./top-panel/top-panel_preferences.jpg) налаштування\n"
+": Перегляд та внесення змін до [налаштувань](../../preferences-settings/_index.md) darktable.\n"
+
+#. type: Title ###
+#: content/views/_index.md
+#, no-wrap
+msgid "Bottom toolbar"
+msgstr ""
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid ""
+#| "![top panel_grouping icon](./top-panel/top-panel_grouping.jpg) grouping\n"
+#| ": Expand or collapse [grouped images](../../lighttable/digital-asset-management/grouping.md).\n"
+msgid ""
+"Grouping\n"
+": Expand or collapse [grouped images](../../views/lighttable/digital-asset-management/grouping.md).\n"
+msgstr ""
+"![top panel_grouping icon](./top-panel/top-panel_grouping.jpg) групування\n"
+": Розгорнути або згорнути [згруповані зображення](../../lighttable/digital-asset-management/grouping.md).\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, no-wrap
+msgid ""
+"Thumbnail overlays\n"
+": Define what information is overlaid on to thumbnails in the lighttable/filmstrip.\n"
+msgstr ""
+
+#. type: Title ###
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "filmstrip"
+msgid "Filmstrip"
+msgstr "стрічка знімків"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "The filmstrip, when enabled, is shown at the bottom of the screen (except in the lighttable view, where it is replaced with the [timeline](../../module-reference/utility-modules/lighttable/timeline.md) module) and displays the images from the current [collection](../../lighttable/digital-asset-management/collections.md) (set in the lighttable view). You can navigate the filmstrip by scrolling with the mouse wheel. \n"
+msgid "The filmstrip, when enabled, is shown at the bottom of the screen and displays the images from the current [collection](../../views/lighttable/digital-asset-management/collections.md) (set in the lighttable view). You can navigate the filmstrip by scrolling with the mouse wheel or with\n"
+msgstr "Стрічка знімків, коли її увімкнено, відображається внизу екрана (за винятком режиму світлого стола, де вона замінюється на [шкалу часу](../../module-reference/utility-modules/lighttable/timeline.md)) та показує зображення з поточної [колекції](../../lighttable/digital-activ-management/collection.md). Ви можете переміщатися по стрічці знімків, прокручуючи колесо миші. \n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "The filmstrip allows you to interact with images while you are not in the lighttable view. For example, while developing an image in darkroom mode, you can switch to another image to by clicking its thumbnail in the filmstrip. You can also rate and color-classify the images as you do in lighttable, as well as copy & paste the history stack using keyboard shortcuts.\n"
+msgid "The filmstrip allows you to interact with images while you are not in the lighttable view. For example, while developing an image in darkroom mode, you can switch to another image to by clicking its thumbnail in the filmstrip. You can copy & paste the history stack using keyboard shortcuts (<kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>).\n"
+msgstr "Стрічка знімків дозволяє взаємодіяти із зображеннями, коли ви не перебуваєте в режимі світлого стола. Наприклад, під час обробки зображення в режимі темної кімнати ви можете перейти до іншого зображення, клікнувши на його мініатюрі в стрічці знімків. Ви також можете оцінювати зображення та класифікувати їх за кольором, як ви це робите в режимі світлого стола, а також копіювати та вставляти стек історії за допомогою клавіатурних прискорювачів.\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "See the [filmstrip](../../module-reference/utility-modules/shared/filmstrip.md) module documentation for more information.\n"
+msgid "See the [filmstrip](../../modules/utility-modules/shared/filmstrip.md) module documentation for more information.\n"
+msgstr "Для отримання додаткової інформації див. документацію до модуля [стрічка знімків](../../module-reference/utility-modules/shared/filmstrip.md).\n"
+
+#. type: Title ##
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "keyboard shortcuts"
+msgid "Keyboard shortcuts"
+msgstr "клавіатурні прискорювачі"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "Much of the functionality in darktable can be controlled via keyboard shortcuts, which can be customised in [preferences > shortcuts](../../preferences-settings/shortcuts.md).\n"
+msgid "Much of the functionality in Ansel can be controlled via keyboard shortcuts, which can be customised in [preferences > shortcuts](../../preferences-settings/shortcuts.md).\n"
+msgstr "Значною частиною функціональних можливостей darktable можна керувати за допомогою клавіатурних прискорювачів, які можна налаштувати за допомогою [налаштування > клавіатурні прискорювачі](../../preferences-settings/shortcuts.md).\n"
+
+#. type: Plain text
+#: content/views/_index.md
+#, fuzzy, no-wrap
+#| msgid "Press the H key (for help) in any darktable view to show a list of all shortcuts that are applicable to the current view.\n"
+msgid "Press the H key (for help) in any Ansel view to show a list of all shortcuts that are applicable to the current view.\n"
+msgstr "Натисніть клавішу H (H -- від Help) у будь-якому режимі darktable, щоб відобразити список усіх прискорювачів, які застосовуються до поточного режиму.\n"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/views/print/print-view-layout.md
@@ -6337,195 +6665,6 @@ msgid "A poorly-made display profile will be more harmful than sticking to the d
 msgstr "Погано зроблений профіль відображення буде більш шкідливим, ніж дотримування профілю sRGB за замовчуванням, оскільки профіль за замовчуванням може бути дещо неточним, але принаймні надійним. Досвідченим та професійним користувачам рекомендується продовжувати виготовлення власних профілів дисплея, лише якщо вони пройшли навчання для оцінки якості отриманого профілю та розуміння варіантів профілювання.\n"
 
 #. type: Yaml Front Matter Hash Value: title
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "midi device support"
-msgstr "підтримка пристроїв MIDI"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "The shortcut mapping system has been most extensively tested with the Behringer X-Touch Mini and contains custom code to deal with the specific features of this device. All other devices are treated as \"generic midi\" and may or may not work (well) or need some manual setup each time. A configuration framework (possibly in lua) to support additional device-specific features is on the to do list.\n"
-msgstr "Система зіставлення прискорювачів була найбільш ретельно протестована за допомогою Behringer X-Touch Mini й містить користувальницький код для роботи з особливими функціями цього пристрою. Усі інші пристрої розглядаються як \"загальні midi\" і можуть працювати або не працювати (добре) або щоразу потребувати ручного налаштування. Конфігураційний фреймворк (можливо, в lua) для підтримки додаткових функцій пристрою є у списку справ.\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "If you succeed in getting a midi device up and running that hasn't been mentioned below, it would be greatly appreciated if you would provide feedback in order to assist others, if any special steps are required. You could do this either by submitting a documentation [pull request](https://github.com/darktable-org/dtdocs/pulls) to amend this page or by [filing an issue](https://github.com/darktable-org/dtdocs/issues) containing the necessary information. Alternatively you could read or respond to any of the (closed) midi or \"inputng\" [issues](https://github.com/darktable-org/darktable/issues) or [pull requests](https://github.com/darktable-org/darktable/pulls) in the main darktable repository if you need additional help or guidance yourself.\n"
-msgstr "Якщо вам вдасться запустити пристрій MIDI, який не був згаданий нижче, будемо дуже вдячні, якщо ви надасте зворотній зв’язок, щоб допомогти іншим, якщо знадобляться якісь спеціальні дії. Ви можете зробити це, надіславши [запит на прийняття змін](https://github.com/darktable-org/dtdocs/pulls) до документації, щоб змінити цю сторінку, або [підняти проблему](https://github.com/darktable-org/dtdocs/issues), що містить необхідну інформацію. Крім того, ви можете прочитати або відповісти на будь-яку із (можливо, закритих) MIDI або \"inputng\" [проблем](https://github.com/darktable-org/darktable/issues) або [запитів на прийняття змін](https://github.com/darktable-org/darktable/pull) у головному репозиторії darktable, якщо вам самому потрібна додаткова допомога чи вказівки.\n"
-
-#. type: Title ##
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Behringer X-touch Mini"
-msgstr "Behringer X-touch Mini"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "The device should be in Standard Mode (not MC). Layers A & B are somewhat supported, however, since the device does not send a notification when switching between layers, and since the updates to \"hidden\" rotors and lights (both under buttons and the pattern used around the rotors) are ignored, everything will only be updated completely after you press or turn something in the \"new\" layer.\n"
-msgstr "Пристрій має бути в стандартному режимі (не MC). Шари A і B певною мірою підтримуються, проте, оскільки пристрій не надсилає сповіщення при перемиканні між шарами, а також оскільки оновлення \"прихованих\" роторів та індикаторів (як під кнопками, так і візерунком, що використовується навколо роторів) ігноруються, все буде повністю оновлено лише після того, як ви натиснете або повернете щось у \"новому\" шарі.\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "The light rings around the rotors show a different pattern depending on whether the associated slider has a symmetrical +/- range centered around 0, 0-100 (or 0-1) or anything else. If linked to a drop-down (or star rating) the rotor will step one light at the time. If the drop-down has many (more than 13) items (like the blending mode drop-down), the rotor will go around twice; the first time with one light on, and the second time with two adjacent lights.\n"
-msgstr "Світлові кільця навколо роторів показують різний малюнок залежно від того, чи має пов’язаний повзунок симетричний діапазон +/- з центром навколо 0, 0-100 (або 0-1) або будь-що інше. Якщо він пов’язаний зі спадним списком (або рейтингом зірок), ротор буде перемикатися по одному світлу за раз. Якщо спадне меню містить багато (більше 13) елементів (наприклад, спадне меню режиму змішування), ротор буде обертатися двічі; перший раз з одним увімкненим світлом, а другий раз з двома сусідніми.\n"
-
-#. type: Title ##
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Arturia Beatstep"
-msgstr "Arturia Beatstep"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Individual rotors can be configured to send absolute (0-127) values or changes (+/- 1,2,3,... in different encodings). The recommended setting is Relative #1 for all knobs with Knob Acceleration set to Slow (Off) or Medium. This can be configured with [Midi Control Center](https://www.arturia.com/support/downloads&manuals), available for Windows or MacOS. By default the darktable midi module assumes, for unknown devices, that rotors use absolute encodings. After startup it therefore needs to be told that the device is sending relative movements. You can do this by turning one of the encoders slowly left (down) 5 times. This allows the module to determine which of the several relative encodings is used. If you don't succeed switching encodings on the first attempt, you can reinitialise the input modules by pressing Ctrl+Shift+Alt+I and try again. If you still have problems, you could try [this](https://wd40.co.uk/product/fast-drying-contact-cleaner/).\n"
-msgstr "Окремі ротори можна налаштувати на передачу абсолютних (0-127) значень або змін (+/- 1,2,3,... у різних кодуваннях). Рекомендовано значення Relative #1 для всіх регуляторів, у яких для параметра Knob Acceleration (прискорення регулятора) встановлено значення Slow (Off) або Medium. Це можна налаштувати за допомогою [Midi Control Center](https://www.arturia.com/support/downloads&manuals), доступного для Windows або MacOS. За замовчуванням модуль darktable midi передбачає, для невідомих пристроїв, що ротори використовують абсолютне кодування. Тому після запуску йому потрібно повідомити, що пристрій надсилає відносні рухи. Ви можете зробити це, повільно повернувши один із кодерів ліворуч (вниз) 5 разів. Це дозволяє модулю визначити, яке з кількох відносних кодувань використовується. Якщо вам не вдасться змінити кодування з першої спроби, ви можете повторно ініціалізувати вхідні модулі, натиснувши Ctrl+Shift+Alt+I і повторити спробу. Якщо у вас все ще виникають проблеми, спробуйте [це](https://wd40.co.uk/product/fast-drying-contact-cleaner/).\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "If you map the Beatstep's buttons to ratings, color labels or toggle buttons, they should light up when the corresponding element is switched on.\n"
-msgstr "Якщо ви зіставите кнопки Beatstep з рейтингами, кольоровими позначками або кнопками перемикання, вони повинні засвітитися, коли відповідний елемент увімкнено.\n"
-
-#. type: Title ##
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "Behringer BCR2000 "
-msgid "Behringer BCR2000"
-msgstr "Behringer BCR2000 "
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "(and possibly BCF2000)\n"
-msgstr "(і, можливо, BCF2000)\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "These machines are highly configurable so there are many settings that could complicate the interaction with darktable's midi module. The [BC Manager tool](https://mountainutilities.eu/bcmanager) (available for Windows and MacOS) can be used to configure them. The easiest thing to do is to reset all encoders and buttons to their simplest settings, which can be done (for the BCR2000) using [this file](https://github.com/dterrahe/darktable/files/6539400/bcr2000.all.buttons.and.encoders.zip). You can send it to the machine with BC Manager or (under Linux) with amidi. There's also a global setting called \"Deadtime\" that determines how long the BCR ignores arriving messages after sending out updates. This is to avoid feedback loops, but for darktable it means that it blocks the adjustments sent back immediately after each rotor move. So Deadtime needs to be set to 0.\n"
-msgstr "Ці машини гнучко конфігуруються, тому є багато налаштувань, які можуть ускладнити взаємодію з MIDI-модулем darktable. Для їх конфігурування можна використовувати [BC Manager](https://mountainutilities.eu/bcmanager) (доступний для Windows і MacOS). Найпростіше скинути всі кодери та кнопки до найпростіших налаштувань, що можна зробити (для BCR2000) за допомогою [цього файлу](https://github.com/dterrahe/darktable/files/6539400/bcr2000.all.buttons.and.encoders.zip). Ви можете надіслати його на машину за допомогою BC Manager або (під Linux) за допомогою amidi. Існує також глобальне налаштування під назвою \"Deadtime\", яке визначає, як довго BCR ігнорує повідомлення, що надходять після надсилання оновлень. Це робиться для того, щоб уникнути циклів зворотного зв’язку, але для darktable це означає, що воно блокує коригування, надіслані назад одразу після кожного руху ротора. Тому Deadtime потрібно встановити на 0.\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Once configured in this way, button and rotor lights should all work. The top row of rotors (or the only row for the BCF2000) support different light patterns (like the X-Touch Midi, with some extra options and it has 15 instead of 13 leds). However, configuring these is more complicated, and not yet implemented. It also seems to be slower, so may not be doable in real-time for each update (like it is done for the X-touch). So at the moment only the 12-dot pattern is used. For rotors linked to drop-down lists, just like on the X-touch the rotor, the light goes round twice; for the first 15 options only one light goes on, for the second 15 options, two adjacent lights will be on.\n"
-msgstr "Після налаштування таким чином всі індикатори кнопок і ротора повинні працювати. Верхній ряд роторів (або єдиний ряд для BCF2000) підтримує різні схеми індикації (як X-Touch Midi, з деякими додатковими опціями і має 15 замість 13 світлодіодів). Однак їх налаштування є складнішим і ще не реалізовано. Він також здається повільнішим, тому може бути неможливим у реальному часі для кожного оновлення (як це робиться для X-touch). Тому на даний момент використовується лише 12-точковий візерунок. Для роторів, пов’язаних зі спадними списками, так само, як і на роторі X-touch, світло обходить двічі; для перших 15 варіантів горить тільки одна лампочка, для других 15 варіантів світяться два сусідніх індикатора.\n"
-
-#. type: Title ##
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "Loupedeck "
-msgid "Loupedeck"
-msgstr "Loupedeck "
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "(and Loupedeck+ but not the later non-midi devices) \n"
-msgid "(and Loupedeck+ but not the later non-midi devices)\n"
-msgstr "(і Loupedeck+, але не пізніші пристрої, які не мають MIDI) \n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Going by the information provided [here](https://discuss.pixls.us/t/midi-controller-for-darktable/2582/92), most of the functionality of the first two loupedeck models (both midi based) should be supported, with the following exceptions and caveats:\n"
-msgstr "Виходячи з інформації, наданої [тут](https://discuss.pixls.us/t/midi-controller-for-darktable/2582/92), більшість функціональних можливостей перших двох моделей Loupedeck (обидві на базі MIDI) повинні підтримуватися, з такими винятками та застереженнями:\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "the Hue/Sat/Lum buttons can be mapped to the notebook tabs in the color zones module but the little lights next to them may not respond to update messages sent when the user switches tabs using the mouse, so they might get out of sync\n"
-msgid ""
-"- the Hue/Sat/Lum buttons can be mapped to the notebook tabs in the color zones module but the little lights next to them may not respond to update messages sent when the user switches tabs using the mouse, so they might get out of sync\n"
-"- the 8 sliders/wheels can be individually mapped to the elements of the graph in color zones\n"
-msgstr "Кнопки Hue/Sat/Lum можна зіставити з вкладками блокнота в модулі колірних зон, але маленькі індикатори поруч з ними можуть не реагувати на повідомлення про оновлення, надіслані, коли користувач перемикає вкладки за допомогою миші, тому вони можуть вийти з синхронізації\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Other than that, since the loupedeck uses Relative encoding (so is similar to the Beatstep) it will need to tell the midi module at each startup (until a configuration system has been implemented). You do this by turning any of the knobs (or wheels) slowly down/left 5 times. Re-initialise the input layer with Ctrl+Shift+Alt+I if it didn't work the first time so you can try again.\n"
-msgstr "Крім цього, оскільки Loupedeck використовує відносне кодування (тому схоже на Beatstep), йому потрібно буде повідомляти midi-модулю під час кожного запуску (доки не буде впроваджено систему конфігурації). Ви робите це, повертаючи будь-яку ручку (або колеса) повільно вниз/вліво 5 разів. Повторно ініціалізуйте вхідний шар за допомогою Ctrl+Shift+Alt+I, якщо це не спрацювало з першого разу, щоб ви могли спробувати ще раз.\n"
-
-#. type: Title ##
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Korg nanoKONTROL2"
-msgstr "Korg nanoKONTROL2"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "The device should be configured first using the Korg Kontrol Editor application to be in the CC mode and every button should be set to the Note type and Momentary button behavior. To control the lights in the buttons the LED mode should be set to External. It is important to note that the Track and the Marker buttons do not have leds in them.\n"
-msgstr "Пристрій слід спочатку налаштувати за допомогою програми Korg Kontrol Editor, щоб він перебував у режимі CC, і кожна кнопка повинна бути налаштована на тип Note та поведінку кнопки Momentary. Щоб керувати підсвічуванням кнопок, режим LED має бути встановлений на External. Важливо відзначити, що кнопки Track і Marker не мають світлодіодів.\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "There is an Kontrol Editor profile available [here](https://github.com/darktable-org/darktable/files/7603658/note_buttons.zip) which can be loaded using the Windows application to directly configure all these settings to correctly work with darktable.\n"
-msgstr "[Тут](https://github.com/darktable-org/darktable/files/7603658/note_buttons.zip) доступний профіль Kontrol Editor, який можна завантажити за допомогою програми Windows, щоб безпосередньо налаштувати всі ці параметри для правильної роботи з darktable.\n"
-
-#. type: Title ##
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "additional midi configuration"
-msgstr "додаткові налаштування MIDI"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "If darktable is compiled with portmidi it will at startup try to open up to 10 midi devices in the order it finds them. On the command line you might see something like this:\n"
-msgstr "Якщо darktable скомпільовано з portmidi, він під час запуску намагатиметься відкрити до 10 MIDI-пристроїв у порядку їх знаходження. У командному рядку ви можете побачити щось на зразок цього:\n"
-
-#. type: Fenced code block (bash)
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid ""
-"[midi_open_devices] opened midi device 'Arturia BeatStep' via 'MMSystem' as midi0\n"
-"[midi_open_devices] opened midi device 'BCR2000' via 'MMSystem' as midi1\n"
-"[midi_open_devices] opened midi device 'X-TOUCH MINI' via 'MMSystem' as midi2\n"
-msgstr ""
-"[midi_open_devices] opened midi device 'Arturia BeatStep' via 'MMSystem' as midi0\n"
-"[midi_open_devices] opened midi device 'BCR2000' via 'MMSystem' as midi1\n"
-"[midi_open_devices] opened midi device 'X-TOUCH MINI' via 'MMSystem' as midi2\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Two issues can arise:\n"
-msgstr "Можуть виникнути дві проблеми:\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, fuzzy, no-wrap
-#| msgid "a device you don't want to use might be opened anyway (and potentially cause inappropriate behavior, like starting a fireworks show prematurely (see [this document](http://webcache.googleusercontent.com/search?q=cache:6EcEOjfjiAkJ:gmbh.pyropak.com/docs/downloads/surefire-prologic-digital-controller_rev2010.pdf+&cd=1&hl=en&ct=clnk&gl=us)), or\n"
-msgid ""
-"- a device you don't want to use might be opened anyway (and potentially cause inappropriate behavior, like starting a fireworks show prematurely (see [this document](https://gmbh.pyropak.com/docs/downloads/surefire-prologic-digital-controller_rev2010.pdf), or\n"
-"- devices might appear in a different order at the next startup (for example because they are plugged into a different usb port). Since configurations are stored with the device number only, reordering would cause an incorrect layout to be picked up.\n"
-msgstr "пристрій, який ви не хочете використовувати, все одно може бути відкрито (і потенційно це може спричинити неадекватну поведінку, як-от передчасний запуск феєрверку (див. [цей документ](http://webcache.googleusercontent.com/search?q=cache:6EcEOjfjiAkJ:gmbh.pyropak.com/docs/downloads/surefire-prologic-digital-controller_rev2010.pdf+&cd=1&hl=uk&ct=clnk&gl=us)), або\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "You can specify which devices to explicitly load in a specific location and which ones to skip using the configuration parameter [preferences > miscellaneous > interface > order or exclude midi devices](../preferences-settings/miscellaneous.md#interface). To skip loading the BCR2000 in the above example and to fix the other two devices into the number 0 and 2 slots, you could set this config parameter to \"`BeatStep;dontuse;X-TOUCH;-BCR2000`\". This would leave the BeatStep as device midi0, always leave midi1 unused and would not load the BCR2000 at all, but if any other devices are connected, they would appear as midi3, midi4 and so on. Adding \"`;-`\" at the end would prevent any further devices loading. Or, if you just specify the configuration parameter as a single minus sign \"`-`\", no devices will be loaded at all.\n"
-msgstr "Ви можете вказати, які пристрої явно завантажувати в певному місці, а які пропускати, використовуючи параметр конфігурації [налаштування > різне > інтерфейс > впорядкувати або виключити MIDI-пристрої](../preferences-settings/miscellaneous.md#інтерфейс). Щоб пропустити завантаження BCR2000 у наведеному вище прикладі та закріпити два інші пристрої в слотах 0 і 2, ви можете встановити цей параметр конфігурації на \"`BeatStep;dontuse;X-TOUCH;-BCR2000`\". Це залишить BeatStep як пристрій midi0, midi1 завжди залишиться невикористаним, взагалі не завантажить BCR2000, але якщо підключені будь-які інші пристрої, вони відображатимуться як midi3, midi4 тощо. Додавання \"`;-`\" в кінці запобігатиме завантаженню подальших пристроїв. Або, якщо ви просто вкажете параметр конфігурації як один знак мінус \"`-`\", то жодні пристрої не завантажуватимуться взагалі.\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Midi controller knobs can use several different \"encodings\". The default, absolute, sends a value from 0 (all the way left) to 127 (all the way right) -- sliders can also use absolute encoding. Relative encoders send a \"down\" value if you turn them left and an \"up\" value if you turn them right. So slowly turning one of those \"up\" would send \"1, 1, 1, 1,\" for example. But depending on how many bits are used and what encoding, a slow left turn might be 127 (8 bits -1) or 63, 31 or 15. Or even 65. If nothing is specified in this preference option, midi devices are assumed to use absolute encoding. But if the first five messages received are identical, it is assumed that the user has slowly turned a knob left/down and the encoding is deduced from that and displayed in a toast. The encoding is not remembered for each device, so this maneuver needs to be repeated at each startup. To define the deduced encoding for the next startup you can add this parameter to the \"order or exclude midi devices\" setting. For example \"`Loupedeck:127`\".\n"
-msgstr "Ручки міді-контролера можуть використовувати кілька різних \"кодувань\". Кодування за замовчуванням, абсолютне, надсилає значення від 0 (повністю ліворуч) до 127 (повністю праворуч) -- повзунки також можуть використовувати абсолютне кодування. Відносні кодування надсилають значення \"вниз\", якщо ви повертаєте їх ліворуч, і значення \"вгору\", якщо повертаєте їх праворуч. Тому повільне повертання такої ручки \"вгору\" призведе, наприклад, до надсилання \"1, 1, 1, 1\". Але залежно від того, скільки бітів використовується і яке кодування, повільний поворот ліворуч може бути 127 (8 біт -1) або 63, 31 або 15. Або навіть 65. Якщо нічого не вказано в цьому параметрі, передбачається, що MIDI-пристрої використовують абсолютне кодування. Але якщо перші п’ять отриманих повідомлень ідентичні, передбачається, що користувач повільно повернув ручку вліво/вниз, і кодування виводиться з цього та відображається у вигляді тимчасового повідомлення. Кодування не запам’ятовується для кожного пристрою, тому цей маневр потрібно повторювати при кожному запуску. Щоб визначити виведене кодування для наступного запуску, ви можете додати цей параметр до налаштування \"впорядкувати або виключити MIDI-пристрої\". Наприклад \"`Loupedeck:127`\".\n"
-
-#. type: Plain text
-#: content/special-topics/midi-device-support.md
-#, no-wrap
-msgid "Some midi controllers have keys with a light beneath them. These can be used to toggle settings and show the current position by having the light on or off. In this case, darktable checks periodically (a few times a second) whether, say, the position of an on-screen toggle button has been changed, and sends messages to any linked midi device buttons to switch their light on or off. But if an unknown device has unintentionally been connected, this could be undesirable. So by default darktable waits until a \"note\" message is received from a midi button before sending any \"note\" light on/off messages back for that button. That way also no more buttons are addressed than exist on the device. If you immediately want all button lights to be used (rather than having to press the highest note once for each session) you can specify the number of buttons in the \"order or exclude midi devices\" preference, for example, \"`BeatStep:63:16`\".\n"
-msgstr "Деякі MIDI-контролери мають клавіші з підсвічуванням під ними. Їх можна використовувати для перемикання налаштувань і показу поточного положення, увімкнувши або вимкнувши світло. У цьому випадку darktable періодично (кілька разів на секунду) перевіряє, чи не було змінено, скажімо, положення екранної кнопки перемикання, і надсилає повідомлення будь-яким пов’язаним кнопкам MIDI-пристроїв, щоб увімкнути або вимкнути їх світло. Але якщо ненавмисно було підключено невідомий пристрій, це може бути небажаним. Таким чином, за замовчуванням darktable чекає, доки не буде отримано повідомлення \"note\" від MIDI-кнопки, перш ніж надсилати будь-які \"note\"-повідомлення про увімкнення/вимкнення підсвічування для цієї кнопки. Таким чином також не адресується більше кнопок, ніж є на пристрої. Якщо ви хочете негайно використовувати всі підсвічування кнопок (замість того, щоб натискати найвищу ноту один раз для кожного сеансу), ви можете вказати кількість кнопок у параметрі \"впорядкувати або виключити MIDI-пристрої\", наприклад, \"`BeatStep:63:16`\".\n"
-
-#. type: Yaml Front Matter Hash Value: title
 #: content/special-topics/variables.md
 #, no-wrap
 msgid "variables"
@@ -7394,342 +7533,10 @@ msgid ""
 msgstr ""
 
 #. type: Yaml Front Matter Hash Value: title
-#: content/special-topics/color-pipeline.md
-#, fuzzy, no-wrap
-#| msgid "darktable's color pipeline"
-msgid "Ansel's color pipeline"
-msgstr "колірний конвеєр darktable"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Most image processing applications come from the 1990s and/or inherit a 1990s workflow. These applications processed images encoded with 8 bit unsigned integers because it was more memory- and computationally-efficient. However, due to the use of an integer format (which implies rounding errors) they had to apply a \"gamma\" (essentially a transfer function applying a power 1/2.2 or 1/2.4 to encode the RGB values) and increase the bit-depth in the low-lights in order to reduce rounding errors there (humans are very sensitive to low-light details). The 8 bit integer formats are also technically limited to the 0-255 range. Anything outside of this range overflows and is clipped to the nearest bound.\n"
-msgstr "Більшість програм обробки зображень походять з 1990-х років та/або успадковують робочий процес 1990-х. Ці програми обробляли зображення, закодовані 8-бітовими беззнаковими цілими числами, оскільки це було більш ефективно в обсязі пам’яті та обчислень. Однак через використання цілочисельного формату (що означає появу помилок округлення) їм довелося застосувати \"гамму\" (по суті, передавальну функцію із застосуванням степеню 1/2.2 або 1/2.4 для кодування значень RGB) та збільшувати бітову глибину в затемнених ділянках, щоб зменшити там помилки округлення (люди дуже чутливі до деталей в затемнених ділянках). 8-бітові цілочисельні формати також технічно обмежені діапазоном 0-255. Все, що виходить за межі цього діапазону, переповнюється і відсікається до найближчої межі.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "These workflows, using bounded RGB representations and possibly non-linear transforms to encode RGB signals, are called \"display-referred\". They rely on the assumption that the image has been prepared for display at an early stage in the processing pipeline, and embed hard-coded assumptions about the RGB values of black, middle-gray and white. Most of the image-processing algorithms used in these workflows have been tuned around these assumptions. For example, the overlay blending mode expects a middle-gray encoded at 50% (or 128 in integer encoding).\n"
-msgstr "Ці робочі процеси, що використовують обмежені простори RGB і, можливо, нелінійні перетворення для кодування RGB-сигналів, називаються \"на основі відображення\". Вони покладаються на припущення, що зображення було підготовлено для показу на ранній стадії в конвеєрі обробки, і вкладають жорстко закодовані припущення про значення RGB чорного, середньо-сірого та білого кольорів. Більшість алгоритмів обробки зображень, що використовуються в цих робочих процесах, були налаштовані навколо цих припущень. Наприклад, режим змішування \"перекриття\" очікує кодування середньо-сірого на 50% (або значення 128 у цілочисельному кодуванні).\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Unfortunately the non-linear scaling, which is mandatory to make the integer encoding work, breaks the natural relationships between pixel values. Hue and saturation change in unpredictable ways, and value relationships between neighbouring pixels are dilated or compressed such that gradients are also altered unpredictably.\n"
-msgstr "На жаль, нелінійне масштабування, яке є обов’язковим для роботи цілочисельного кодування, порушує природні взаємозв’язки між значеннями пікселів. Відтінок і насиченість змінюються непередбачувано, а співвідношення значень між сусідніми пікселями розширюються або стискаються таким чином, що градієнти також змінюються непередбачувано.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Display-referred pipelines therefore break optical filters (lens blurring or deblurring), alpha compositing (which relies on optical and geometrical definitions of occlusion), colors and gradients (local relationships between chrominance and luminance of pixels). They also don't scale well to HDR images, which led to the development of many questionable local and global tonemapping methods and the infamous 2010s \"HDR look\".\n"
-msgstr "Тому конвеєри на основі відображення порушують оптичні фільтри (розмиття або відновлення різкості оптики), альфа-композитинг (який покладається на оптичні та геометричні визначення оклюзії), кольори та градієнти (локальні залежності між кольоровістю та яскравістю пікселів). Вони також погано масштабуються до HDR-зображень, що призвело до розробки багатьох сумнівних методів локального та глобального тонального відображення та сумнозвісного \"вигляду HDR\" 2010-х років.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Modern computers are not tied to the same computational limitations as those from the 1990s, and can work on pixels whose values are completely unbounded (from 0 up to +infinity) and encoded as real numbers (using floating point formats). These possibilities enable what we call a \"scene-referred\" workflow, in which pixels can retain their original radiometric relationships along almost the entire processing pipe. In scene-referred workflow, pixels are prepared for display only at the last stage of the pipeline, in the display transform. This means that the RGB values of the pixels are kept proportional to the intensity of the light emission recorded by the camera on the scene, enabling accurate alpha compositing and optical filter emulations, while also scaling to any dynamic range through the same algorithm (SDR as well as HDR).\n"
-msgstr "Сучасні комп’ютери не прив’язані до тих самих обчислювальних обмежень, що й комп'ютери 1990-х років, і можуть працювати з пікселями, значення яких абсолютно необмежені (від 0 до +нескінченності) і кодуються як дійсні числа (із використанням форматів з рухомою комою). Ці можливості забезпечують те, що ми називаємо робочим процесом \"на основі сцен\", в якому пікселі можуть зберігати свої початкові радіометричні зв'язки майже по всьому конвеєру обробки. У робочому процесі на основі сцен пікселі готуються до відображення лише на останньому етапі конвеєра. Це означає, що значення RGB пікселів зберігаються пропорційними інтенсивності випромінювання світла, зафіксованого камерою на сцені, забезпечуючи точний альфа-композитинг та емуляції оптичних фільтрів, одночасно масштабуючи до будь-якого динамічного діапазону за тим самим алгоритмом (як SDR, так і HDR).\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "However, scene-referred pipelines lose the convenient fixed values of white, middle-gray and black which characterised display-referred pipelines, and setting these values, according to the scene and to the conditions of shooting, now becomes the responsibility of the user. This requires a more complex user interface.\n"
-msgstr "Однак конвеєри на основі сцен втрачають зручні фіксовані значення білого, середньо-сірого та чорного, що характеризують конвеєри на основі відображення, і встановлення цих значень відповідно до сцени та умов зйомки стає відповідальністю користувача. Для цього потрібен більш складний інтерфейс користувача.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Also, because scene-referred values are supposed to be physically-meaningful, pixels cannot have zero intensity. This would mean they have no light at all, and the existence of zero light breaks many physically-accurate algorithms. In fact, white and black mean nothing with regard to the original scene, which is only a collection of luminances at varying intensities. The scene-referred workflow simply aims at remapping some arbitrary scene luminances to what will appear white or black on the output medium.\n"
-msgstr "Крім того, оскільки значення \"на основі сцен\" мають бути фізично значущими, пікселі не можуть мати нульову інтенсивність. Це означало б, що у них взагалі немає світла, а існування нульового світла порушує багато фізично точних алгоритмів. Насправді білий та чорний нічого не означають щодо оригінальної сцени, яка є лише сукупністю яскравостей з різною інтенсивністю. Робочий процес на основі сцен просто спрямований на перепризначення деяких довільних яскравостей сцени до того, що буде виглядати білим або чорним на вихідному носії.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, fuzzy, no-wrap
-#| msgid "Versions of darktable prior to 2.6 had a non-linear display-referred pipeline, assuming that a non-linear transform took place early in the pipe and middle-gray was thereafter encoded as 50%. However, not all modules and filters clipped pixel values above 100%, leaving open the possibility of recovering those values later in the pipe.\n"
-msgid "Versions of Ansel prior to 2.6 had a non-linear display-referred pipeline, assuming that a non-linear transform took place early in the pipe and middle-gray was thereafter encoded as 50%. However, not all modules and filters clipped pixel values above 100%, leaving open the possibility of recovering those values later in the pipe.\n"
-msgstr "Версії darktable до 2.6 мали нелінійний конвеєр на основі відображення припускаючи, що нелінійне перетворення відбулося на початку конвеєра, а середньо-сірий колір був кодований як 50%. Однак не всі модулі та фільтри відсікали значення пікселів вище 100%, залишаючи відкритою можливість відновлення цих значень пізніше в конвеєрі.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "The _filmic_ module's view transform, introduced in darktable 2.6, was the first step toward a scene-referred pipeline, and deferred the mandatory, non-linear, display preparation to the end of the pipe, along with the ability to set custom black, gray and white values. The _color balance_ module then introduced a way to deal with a variable definition of middle-gray.\n"
-msgstr "Перетворення до відображення в модулі _filmic_, представлене в darktable 2.6, було першим кроком до конвеєра на основі сцен, і відклало обов’язкову нелінійну підготовку до відображення до кінця конвеєра, а також додало можливість встановити власні значення чорного, сірого і білого. Потім модуль _колірний баланс_ представив спосіб мати справу зі змінним визначенням середньо-сірого.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Starting in darktable 3.2, users could choose between two workflows that defined consistent default settings, modules and pipeline order for both _display-referred_ and _scene-referred_ processing.\n"
-msgstr "Починаючи з darktable 3.2, користувачі могли вибирати між двома робочими процесами, які визначали узгоджені налаштування за замовчуванням, модулі та порядок конвеєра і для обробки _на основі відображення_ і для _на основі сцен_.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "In darktable 3.4, a full scene-referred masking and blending option was introduced, allowing masks to be defined for pixel values above 100% and using only unbounded blending operators.\n"
-msgstr "У darktable 3.4 була введена опція маскування та змішування повністю \"на основі сцен\", що дозволяє визначати маски для значень пікселів понад 100% та використовувати лише необмежені оператори змішування.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Switching to _scene-referred_ is a cognitive leap for most experienced users, who are used thinking in display-referred ways. In a display-referred workflow, it is customary to anchor the white value and let tone adjustments revolve around that point, trying to maximize brightness while avoiding clipping. In a scene-referred workflow, white and black values are fluid and adapted to the output medium. It is advised that users anchor middle-gray (which will be preserved as-is for any output medium) and let the view transform (_filmic_) dilate or contract the dynamic range around that point. Because 10 bit HDR white is 4 times as bright as 8 bit SDR white, any rigid definition of \"white\" becomes irrelevant. But anchoring for middle-gray is actually more convenient, since it keeps the average brightness of the picture unchanged through the view transform.\n"
-msgstr "Перехід на обробку _на основі сцен_ є когнітивним стрибком для найбільш досвідчених користувачів, які звикли мислити в термінах відображення. У робочому процесі на основі відображення прийнято закріплювати значення білого і дозволяти регулюванню тону обертатися навколо цієї точки, намагаючись максимізувати яскравість, але уникаючи відсікання. У робочому процесі на основі сцен значення білого та чорного кольорів є змінюваними та адаптованими до вихідного середовища. Користувачам рекомендується закріпити середньо-сірий (який буде збережений як є для будь-якого вихідного середовища) і дозволити перетворенню до відображення (_filmic_) розширити або скоротити динамічний діапазон навколо цієї точки. Оскільки білий 10-бітного HDR у 4 рази яскравіший, ніж білий 8-бітного SDR, будь-яке жорстке визначення \"білого\" стає неактуальним. Але закріплювати середньо-сірий насправді зручніше, оскільки це зберігає середню яскравість зображення незмінною в процесі перетворення до відображення.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Some modules (_levels_, _rgb levels_, _tone curve_, _rgb curve_) are inherently incompatible with a scene-referred workflow, because their graphical interface implicitly suggests RGB values that are bounded within the 0-100% range. While the pixel operations they perform can be used in either scene-referred or display-referred workflows because they are unbounded internally, their controlling interface does not allow pixels to be selected outside of the 0-100% range.\n"
-msgstr "Деякі модулі (_рівні_, _рівні rgb_, _тонова крива_, _крива rgb_) за своєю суттю несумісні з робочим процесом на основі сцен, оскільки їх графічний інтерфейс неявно пропонує значення RGB, які обмежені в діапазоні 0-100%. Незважаючи на те, що піксельні операції, які вони виконують, можуть бути використані як у робочих процесах на основі сцен, так і на основі відображення, оскільки вони необмежені всередині, але їх інтерфейс управління не дозволяє вибирати пікселі за межами діапазону 0-100%.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "Similarly, blending modes such as overlay, linear light, soft light, hard light, darken, brighten, etc. all have hard-coded thresholds that internally expect display-referred non-linear encoding.\n"
-msgstr "Подібним чином, режими змішування, такі як перекриття, лінійне світло, розсіяне світло, направлене світло, затемнення, заміна світлим тощо, мають жорстко закодовані пороги, які внутрішньо очікують нелінійного кодування на основі відображення.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid "In darktable 3.4 and above, hovering the cursor over a module header shows a tooltip detailing the color spaces, ranges and encodings that the module expects, uses and produces. Here are the definitions of the terms used:\n"
-msgstr "У darktable 3.4 і вище, наведення курсора на заголовок модуля показує підказку, що деталізує колірні простори, діапазони та кодування, які модуль очікує, використовує та виробляє. Ось визначення використаних термінів:\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid ""
-"linear\n"
-": Pixel values are proportional to the scene radiometric emission, in a way that enables accurate emulation of physical filters.\n"
-msgstr ""
-"лінійний\n"
-": Значення пікселів пропорційні радіометричному випромінюванню сцени, що забезпечує точну емуляцію фізичних фільтрів.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid ""
-"non-linear\n"
-": Pixel values are re-scaled such that low-lights are given a larger encoding range, usually to remap the 18.45% reference middle-gray to a value between 46 and 50%.\n"
-msgstr ""
-"нелінійний\n"
-": Значення пікселів перемасштабуються таким чином, що для темних ділянок надається більший діапазон кодування, як правило, перепризначенням середньо-сірого 18.45% до значення між 46 і 50%.\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid ""
-"display-referred\n"
-": Pixel values are expected to lie between 0 and 100% of the display range, where 100% is understood to be the luminance of a 20% reflective white surface (the white patch of a Color Checker) and 0% is understood to be the maximum density of the output medium (saturated black ink or minimum LED panel backlighting).\n"
-msgstr ""
-"на основі відображення\n"
-": Очікується, що значення пікселів становитимуть від 0 до 100% від діапазону дисплея (або іншого носія зображення), де під 100% розуміється яскравість рефлективної на 20% білої поверхні (білий зразок калібраційної мішені), а 0% -- максимальна щільність вихідного середовища (насичена чорна фарба або мінімальне підсвічування світлодіодної панелі).\n"
-
-#. type: Plain text
-#: content/special-topics/color-pipeline.md
-#, no-wrap
-msgid ""
-"scene-referred\n"
-": Pixel values are expected to be greater than zero up to +infinity. The meaning of specific pixel values needs to be defined at runtime by the user. Scene-referred values don't automatically imply a linear, radiometrically scaled, encoding.\n"
-msgstr ""
-"на основі сцен\n"
-": Очікується, що значення пікселів будуть більше нуля і до +нескінченності. Сенс конкретних значень пікселів має визначатися користувачем під час виконання. Значення пікселів \"на основі сцен\" не означають автоматично лінійне, радіометрично масштабоване кодування.\n"
-
-#. type: Yaml Front Matter Hash Value: title
 #: content/special-topics/_index.md
 #, no-wrap
 msgid "Special Topics"
 msgstr "Спеціальні теми"
-
-#. type: Yaml Front Matter Hash Value: title
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "translating dtdocs"
-msgstr "переклад dtdocs"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Translation of the darktable documentation is done via our [Weblate instance](https://weblate.pixls.us/projects/darktable/).\n"
-msgstr "Переклад документації darktable здійснюється через наш [екземпляр Weblate](https://weblate.pixls.us/projects/darktable/).\n"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "You can either use Weblate's web UI to translate the documentation or download the translation from Weblate to your computer, edit it, and then upload the changes.\n"
-msgstr "Ви можете використовувати веб-інтерфейс Weblate для перекладу документації або завантажити переклад з Weblate на свій комп’ютер, відредагувати його, а потім вивантажити зміни.\n"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Please do all translation work through Weblate. We will not accept pull requests directly on github to update PO files.\n"
-msgstr "Будь ласка, виконуйте всі роботи з перекладу через Weblate. Ми не будемо приймати запити на прийняття змін (pull request) безпосередньо на github для оновлення PO-файлів.\n"
-
-#. type: Title ##
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Making a new branch in git"
-msgstr "Створення нової гілки в git"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "Make a new branch to work on it in git.\n"
-#| "For example:\n"
-#| "`git checkout -b fr-translation-init`\n"
-msgid ""
-"1. Make a new branch to work on it in git.\n"
-"   For example:\n"
-"   `git checkout -b fr-translation-init`\n"
-msgstr ""
-"Створіть нову гілку, щоб працювати над нею в git.\n"
-"Наприклад:\n"
-"`git checkout -b fr-translation-init`\n"
-
-#. type: Title ##
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Adding a new language to Hugo"
-msgstr "Додавання нової мови в Hugo"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, fuzzy, no-wrap
-#| msgid "Add the language you wish to translate. For example, the English looks like this:\n"
-msgid ""
-"1. In the files `config.yaml` and `config-pdf.yaml`, locate the `languages:` line.\n"
-"2. Add the language you wish to translate. For example, the English looks like this:\n"
-msgstr "Додайте мову, на яку хочете перекласти. Наприклад, англійська виглядає так:\n"
-
-#. type: Fenced code block
-#: content/special-topics/translating.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "     en-us:\n"
-#| "       title: darktable 3.4 user manual\n"
-#| "       weight: 1\n"
-msgid ""
-"     en-us:\n"
-"       title: darktable 3.4 user manual\n"
-"date: 2022-12-04T02:19:02+01:00\n"
-"       weight: 1\n"
-msgstr ""
-"     en-us:\n"
-"       title: darktable 3.4 user manual\n"
-"       weight: 1\n"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, fuzzy, no-wrap
-#| msgid "Save the files.\n"
-msgid "3. Save the files.\n"
-msgstr "Збережіть файли.\n"
-
-#. type: Title ##
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Generating a PO file"
-msgstr "Створення файлу PO"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Do the following steps if you want to update the POT and PO files from the markdown source.\n"
-msgstr "Виконайте наступні кроки, якщо ви хочете оновити файли POT та PO з джерела markdown.\n"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "Create an empty PO file for your language in the `po` folder with the file name `content.<language>.po`.\n"
-#| "For example:\n"
-#| "`touch po/content.fr-fr.po`\n"
-msgid ""
-"1. Create an empty PO file for your language in the `po` folder with the file name `content.<language>.po`.\n"
-"   For example:\n"
-"   `touch po/content.fr-fr.po`\n"
-"2. Run the script to populate the PO file:\n"
-"   `cd tools/ && ./generate-translations.sh --no-translations`\n"
-msgstr ""
-"Створіть порожній файл PO для вашої мови в папці `po` з назвою файлу `content.<мова>.po`.\n"
-"Наприклад:\n"
-"`touch po/content.fr-fr.po`\n"
-
-#. type: Title ##
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Generating translated files"
-msgstr "Створення перекладених файлів"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Do the following steps to generate the website files from a translation.\n"
-msgstr "Виконайте наступні кроки для створення файлів веб-сайту із перекладу.\n"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid ""
-"1. Generate the translated files:\n"
-"   `cd tools/ && ./generate-translations.sh --no-update`.\n"
-"2. Check the translation by starting hugo's internal server:\n"
-"   `hugo server`\n"
-"3. Open a web browser and check the changes. The URL is in the output of the `hugo server` command.\n"
-"4. Remove the translated files, as we never check them into git:\n"
-"   `cd tools/ && ./generate-translations.sh --rm-translations`.\n"
-msgstr ""
-
-#. type: Title ##
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Translating website, epub, and PDF strings"
-msgstr "Переклад рядків веб-сайту, epub та PDF"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "There are two themes for the darktable documentation: one for the HTML website and one for the PDF. You'll need to translate the strings for both.\n"
-msgstr "Існує дві теми для документації darktable: одна для веб-сайту HTML та одна для PDF. Вам потрібно буде перекласти рядки для обох.\n"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid ""
-"1. Go to `themes/hugo-darktable-docs-themes/i18n`.\n"
-"2. Copy content of the file `en.yaml` and name the new file `<your language>.yaml`.\n"
-"3. Translate the content of the new yaml file.\n"
-"4. Check the translated PO file into git, push it to github, and open a pull request to have your changes accepted.\n"
-"5. Repeat the last four steps for the other themes, `themes/hugo-darktable-docs-epub-theme` and `themes/hugo-darktable-docs-pdf-theme`.\n"
-msgstr ""
-
-#. type: Title ##
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "Integrating new translations from Weblate"
-msgstr "Інтеграція нових перекладів із Weblate"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid "The following assumes that you're git working directory is clean, that you have API access to the Weblate instance, that you've configured the Weblate git repo as a remote in your local `dtdocs` git repo, and that `wlc`, the Weblate command line client, is configured.\n"
-msgstr "Наступне припускає, що ваш робочий каталог git чистий, що у вас є доступ через API до екземпляра Weblate, що ви налаштували git-репозиторій Weblate як віддалений у своєму локальному git-репозиторії `dtdocs` і що `wlc`, клієнт командного рядка Weblate, налаштовано.\n"
-
-#. type: Plain text
-#: content/special-topics/translating.md
-#, no-wrap
-msgid ""
-"1. Commit any changes in Weblate: `wlc commit darktable/dtdocs`\n"
-"2. Lock the Weblate project to prevent further changes: `wlc lock darktable/dtdocs`\n"
-"3. In your local `dtdocs` git repo, create a new branch: `git checkout -b po-updates`\n"
-"4. Update the Weblate remote: `git remote update weblate`\n"
-"5. Merge the Weblate changes into your locally created branch: `git merge weblate/master`\n"
-"6. Squash all the Weblate commits, since there are so many: `git reset $(git merge-base master $(git rev-parse --abbrev-ref HEAD))`\n"
-"7. Stage the changed PO files: `git add -A`\n"
-"8. Commit the `PO` files: `git commit -m \"Updated with the PO files from weblate.\"`\n"
-"9. Update the `POT` and `PO` files: `cd tools/ && ./generate-translations.sh --no-translations && cd ..`\n"
-"10. Stage the `POT` and `PO` files: `git add -A`\n"
-"11. Commit the `POT` and`PO` files: `git commit -m \"Updated POT and PO files.\"`\n"
-"12. Create a Pull Request in Github.\n"
-"13. After the Pull Request is accepted, reset the Weblate repo to match the `dtdocs` repo: `wlc reset darktable/dtdocs`\n"
-msgstr ""
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/preferences-settings/darkroom.md
@@ -9797,414 +9604,6 @@ msgstr ""
 #, no-wrap
 msgid "sidecar files & non-destructive editing"
 msgstr "файли xmp та неруйнівне редагування"
-
-#. type: Yaml Front Matter Hash Value: title
-#: content/overview/user-interface.md
-#, no-wrap
-msgid "user interface"
-msgstr "інтерфейс користувача"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "The functionality in darktable is separated into six different views:\n"
-msgid "The functionality in Ansel is separated into six different views:\n"
-msgstr "Функціонал darktable розділений на шість окремих режимів:\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"[Lighttable](../../views/lighttable/_index.md)\n"
-": Manage images and collections. It is the main view and can be accessed from anywhere in the software by hitting the <kbd>Escape</kbd> key.\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"[Darkroom](../../views/darkroom/_index.md)\n"
-": Develop a single image. It can be accessed from the lighttable by double-click on a thumbnail or by hitting the <kbd>Enter</kbd> key when a picture is selected.\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"[Map](../../views/map/_index.md)\n"
-": Show geo-tagged images on a map and manually geo-tag new images. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md).\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"[Print](../../views/print/_index.md)\n"
-": Send images to a printer for self-made prints. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md). This view is not available on Windows since it relies on [CUPS](http://www.cups.org/).\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"[Slideshow](../../views/slideshow/_index.md)\n"
-": Display images as a slideshow, processing them on-the-fly. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md).\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "You can switch between views by clicking the view name at the top of the right-hand panel (the currently active view is highlighted) or by using one of the following keyboard shortcuts:\n"
-msgid "You can switch between views by clicking the view name at the top of the right-hand panel (the currently active view is highlighted).\n"
-msgstr "Ви можете переключатися між режимами, клікнувши на назві режиму у верхній частині правої панелі (поточний режим виділено) або за допомогою одного з наступних клавіатурних прискорювачів:\n"
-
-#. type: Title ##
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "content"
-msgid "Main content"
-msgstr "вміст"
-
-#. type: Title ###
-#: content/overview/user-interface.md
-#, no-wrap
-msgid "Panels"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "The layout of all darktable views is similar and consists of a center area with panels at the edges: \n"
-msgid "The layout of all Ansel views is similar and consists of a center area with panels at the edges:\n"
-msgstr "Розкладка екрана всіх режимів darktable схожа і складається з центральної області з панелями по краях: \n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"Left panel\n"
-": Can be shown and hidden with <kbd>Shift + Ctrl + L</kbd> :\n"
-"    * __In lighttable__ : Shows the file import, export and collections.\n"
-"    * __In darkroom__ : Shows various peripheral informations on the currently edited picture.\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"Right panel\n"
-": Can be shown and hidden with <kbd>Shift + Ctrl + R</kbd> :\n"
-"    * __In lighttable__ : Contains metadata editors and bulk processing tools.\n"
-"    * __In darkroom__ : Contains the settings to edit the picture.\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "4. top banner\n"
-#| ": Contains information about the current darktable version and allows you to switch between views. Also used by some modules to show additional hints and messages.\n"
-msgid ""
-"Top panel (header)\n"
-": Contains information about the current Ansel version and allows you to switch between views. Also used by some modules to show additional hints and messages. Can be hidden and shown by pressing <kbd>Ctrl + H</kbd>\n"
-msgstr ""
-"4. верхній банер\n"
-": Містить інформацію про поточну версію darktable та дозволяє перемикатися між режимами. Також використовується деякими модулями для показу додаткових підказок та повідомлень.\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"Top toolbar\n"
-": Provides buttons to access the global settings and shortcuts. Can be hidden and shown by pressing <kbd>Shift + Ctrl + T</kbd>.\n"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "6. bottom panel\n"
-#| ": Provides access to view-specific settings and shortcuts.\n"
-msgid ""
-"Bottom panel\n"
-": Provides buttons to access to view-specific settings and shortcuts. Can be hidden and shown by pressing <kbd>Shift + Ctrl + B</kbd>\n"
-msgstr ""
-"6. нижня панель\n"
-": Надає доступ до залежних від режиму darktable параметрів та прискорювачів.\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "7. [filmstrip](../../module-reference/utility-modules/shared/filmstrip.md)/[timeline](../../module-reference/utility-modules/lighttable/timeline.md) panel\n"
-#| ": An optional panel that can be enabled at the bottom of the screen to display a timeline (in the lighttable view) or a filmstrip (in other views) of images in the current collection.\n"
-msgid ""
-"[Filmstrip](../../modules/utility-modules/shared/filmstrip.md)\n"
-": An optional panel that can be enabled at the bottom of the screen in Darkroom, Maps and Print view to display a filmstrip of images in the current collection. Can be shown and hidden by pressing <kbd>Shift + Ctrl + F</kbd>.\n"
-msgstr ""
-"7. панель [стрічки знімків](../../module-reference/utility-modules/shared/filmstrip.md)/[шкали часу](../../module-reference/utility-modules/lighttable/timeline.md)\n"
-": Додаткова панель, яку можна ввімкнути в нижній частині екрана для відображення шкали часу (у режимі світлого стола) або стрічки знімків (в інших режимах) для зображень у поточній колекції.\n"
-
-#. type: Title ###
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "module resizing"
-msgid "Resizing"
-msgstr "зміна розміру модуля"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "The left, right and filmstrip/timeline panels can be resized by dragging their inner borders. \n"
-msgid "The left, right and filmstrip panels can be resized by clicking and dragging their inner borders. Some shortcuts allow to globally change the layout :\n"
-msgstr "Розмір лівої, правої панелі та панелі стрічки знімків / шкали часу можна змінити, перетягуючи їх внутрішні межі. \n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "`TAB` temporarily expands the centre view to fill the whole window. Press again to return to the previous view.\n"
-msgid ""
-" - <kbd>TAB</kbd> temporarily expands the centre view to fill the whole window (hide all panels). Press again to return to the previous view.\n"
-" - <kbd>F11</kbd> toggles fullscreen mode\n"
-msgstr "`TAB` тимчасово розширює центральну панель, щоб заповнити все вікно. Натисніть ще раз, щоб повернутися до попереднього вигляду.\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "**Note:** The size and visibility of the panels are stored independently for each view.\n"
-msgid ""
-"{{< note >}}\n"
-"The size and visibility of the panels are stored independently for each view.\n"
-"{{</ note >}}\n"
-msgstr "**Примітка:** Розміри та видимість панелей зберігаються незалежно для кожного режиму.\n"
-
-#. type: Title ###
-#: content/overview/user-interface.md
-#, no-wrap
-msgid "Top toolbar"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "The top panel is common to all darktable views and provides access to a number of common functions.\n"
-msgid "The top panel is common to all Ansel views and provides access to a number of common functions.\n"
-msgstr "Верхня панель є загальною для всіх режимів darktable та забезпечує доступ до ряду загальних функцій.\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "filter / sort\n"
-#| ": Choose how to filter and sort the images. Criteria can be altered in the [collection filters](../../module-reference/utility-modules/shared/collection-filters.md) module.\n"
-msgid ""
-"Filter / sort\n"
-": Choose how to filter and sort the images. Criteria can be altered in the [collection filters](../../modules/utility-modules/shared/collections.md) module.\n"
-msgstr ""
-"фільтр / сортування\n"
-": Виберіть спосіб фільтрації та сортування зображень. Критерії можна змінити в модулі [фільтри для колекцій](../../module-reference/utility-modules/shared/collection-filters.md).\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "![top-panel_sort-order icon](./top-panel/top-panel_sort-order.jpg) sort order\n"
-#| ": Switch the sort order (ascending / descending).\n"
-msgid ""
-"Sort order\n"
-": Switch the sort order (ascending / descending).\n"
-msgstr ""
-"![top-panel_sort-order icon](./top-panel/top-panel_sort-order.jpg) порядок сортування\n"
-": Переключити порядок сортування (за зростанням / за спаданням).\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "![top panel_help icon](./top-panel/top-panel_help.jpg) context-sensitive help\n"
-#| ": Click this icon and then click on a control element to be directed to the appropriate online help page.\n"
-msgid ""
-"Context-sensitive help\n"
-": Click this icon and then click on a control element to be directed to the appropriate online help page.\n"
-msgstr ""
-"![top panel_help icon](./top-panel/top-panel_help.jpg) контекстна довідка\n"
-": Натисніть на цей значок, а потім натисніть на елемент керування, щоб перейти на відповідну сторінку довідки в Інтернеті.\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "![top panel shortcut mapping icon](./top-panel/top-panel_shortcut.jpg) shortcut mapping\n"
-#| ": Click this icon to enter the [visual shortcut mapping](../../preferences-settings/shortcuts.md#visual-shortcut-mapping) mode to create keyboard/mouse shortcuts.\n"
-msgid ""
-"Shortcut mapping\n"
-": Click this icon to enter the [visual shortcut mapping](../../preferences-settings/shortcuts.md#visual-shortcut-mapping) mode to create keyboard/mouse shortcuts.\n"
-msgstr ""
-"![top panel shortcut mapping icon](./top-panel/top-panel_shortcut.jpg) зіставлення прискорювачів\n"
-": Натисніть цей значок, щоб увійти в режим [візуального зіставлення прискорювачів](../../preferences-settings/shortcuts.md#візуальне-зіставлення-прискорювачів) для створення прискорювачів для клавіатури/миші.\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "![top panel_preferences icon](./top-panel/top-panel_preferences.jpg) preferences\n"
-#| ": View and amend darktable's [preferences & settings](../../preferences-settings/_index.md).\n"
-msgid ""
-"Preferences\n"
-": View and amend Ansel's [preferences & settings](../../preferences-settings/_index.md).\n"
-msgstr ""
-"![top panel_preferences icon](./top-panel/top-panel_preferences.jpg) налаштування\n"
-": Перегляд та внесення змін до [налаштувань](../../preferences-settings/_index.md) darktable.\n"
-
-#. type: Title ###
-#: content/overview/user-interface.md
-#, no-wrap
-msgid "Bottom toolbar"
-msgstr ""
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "![top panel_grouping icon](./top-panel/top-panel_grouping.jpg) grouping\n"
-#| ": Expand or collapse [grouped images](../../lighttable/digital-asset-management/grouping.md).\n"
-msgid ""
-"Grouping\n"
-": Expand or collapse [grouped images](../../views/lighttable/digital-asset-management/grouping.md).\n"
-msgstr ""
-"![top panel_grouping icon](./top-panel/top-panel_grouping.jpg) групування\n"
-": Розгорнути або згорнути [згруповані зображення](../../lighttable/digital-asset-management/grouping.md).\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, no-wrap
-msgid ""
-"Thumbnail overlays\n"
-": Define what information is overlaid on to thumbnails in the lighttable/filmstrip.\n"
-msgstr ""
-
-#. type: Title ###
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "filmstrip"
-msgid "Filmstrip"
-msgstr "стрічка знімків"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "The filmstrip, when enabled, is shown at the bottom of the screen (except in the lighttable view, where it is replaced with the [timeline](../../module-reference/utility-modules/lighttable/timeline.md) module) and displays the images from the current [collection](../../lighttable/digital-asset-management/collections.md) (set in the lighttable view). You can navigate the filmstrip by scrolling with the mouse wheel. \n"
-msgid "The filmstrip, when enabled, is shown at the bottom of the screen and displays the images from the current [collection](../../views/lighttable/digital-asset-management/collections.md) (set in the lighttable view). You can navigate the filmstrip by scrolling with the mouse wheel or with\n"
-msgstr "Стрічка знімків, коли її увімкнено, відображається внизу екрана (за винятком режиму світлого стола, де вона замінюється на [шкалу часу](../../module-reference/utility-modules/lighttable/timeline.md)) та показує зображення з поточної [колекції](../../lighttable/digital-activ-management/collection.md). Ви можете переміщатися по стрічці знімків, прокручуючи колесо миші. \n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "The filmstrip allows you to interact with images while you are not in the lighttable view. For example, while developing an image in darkroom mode, you can switch to another image to by clicking its thumbnail in the filmstrip. You can also rate and color-classify the images as you do in lighttable, as well as copy & paste the history stack using keyboard shortcuts.\n"
-msgid "The filmstrip allows you to interact with images while you are not in the lighttable view. For example, while developing an image in darkroom mode, you can switch to another image to by clicking its thumbnail in the filmstrip. You can copy & paste the history stack using keyboard shortcuts (<kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>).\n"
-msgstr "Стрічка знімків дозволяє взаємодіяти із зображеннями, коли ви не перебуваєте в режимі світлого стола. Наприклад, під час обробки зображення в режимі темної кімнати ви можете перейти до іншого зображення, клікнувши на його мініатюрі в стрічці знімків. Ви також можете оцінювати зображення та класифікувати їх за кольором, як ви це робите в режимі світлого стола, а також копіювати та вставляти стек історії за допомогою клавіатурних прискорювачів.\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "See the [filmstrip](../../module-reference/utility-modules/shared/filmstrip.md) module documentation for more information.\n"
-msgid "See the [filmstrip](../../modules/utility-modules/shared/filmstrip.md) module documentation for more information.\n"
-msgstr "Для отримання додаткової інформації див. документацію до модуля [стрічка знімків](../../module-reference/utility-modules/shared/filmstrip.md).\n"
-
-#. type: Title ##
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "keyboard shortcuts"
-msgid "Keyboard shortcuts"
-msgstr "клавіатурні прискорювачі"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "Much of the functionality in darktable can be controlled via keyboard shortcuts, which can be customised in [preferences > shortcuts](../../preferences-settings/shortcuts.md).\n"
-msgid "Much of the functionality in Ansel can be controlled via keyboard shortcuts, which can be customised in [preferences > shortcuts](../../preferences-settings/shortcuts.md).\n"
-msgstr "Значною частиною функціональних можливостей darktable можна керувати за допомогою клавіатурних прискорювачів, які можна налаштувати за допомогою [налаштування > клавіатурні прискорювачі](../../preferences-settings/shortcuts.md).\n"
-
-#. type: Plain text
-#: content/overview/user-interface.md
-#, fuzzy, no-wrap
-#| msgid "Press the H key (for help) in any darktable view to show a list of all shortcuts that are applicable to the current view.\n"
-msgid "Press the H key (for help) in any Ansel view to show a list of all shortcuts that are applicable to the current view.\n"
-msgstr "Натисніть клавішу H (H -- від Help) у будь-якому режимі darktable, щоб відобразити список усіх прискорювачів, які застосовуються до поточного режиму.\n"
-
-#. type: Yaml Front Matter Hash Value: title
-#: content/overview/supported-file-formats.md
-#, no-wrap
-msgid "supported file formats"
-msgstr "підтримувані формати файлів"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, fuzzy, no-wrap
-#| msgid "darktable supports a huge number of file formats from various camera manufacturers. In addition darktable can read a wide range of low- and high-dynamic-range images -- mainly for data exchange between darktable and other software.\n"
-msgid "Ansel supports a huge number of file formats from various camera manufacturers. In addition Ansel can read a wide range of low- and high-dynamic-range images -- mainly for data exchange between Ansel and other software.\n"
-msgstr "darktable підтримує величезну кількість форматів файлів різних виробників камер. Крім того, darktable може читати широкий спектр зображень із низьким та високим динамічним діапазоном -- головним чином для обміну даними між darktable та іншим програмним забезпеченням.\n"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, fuzzy, no-wrap
-#| msgid "In order for darktable to consider a file for import, it must have one of the following extensions (case independent): `3FR, ARI, ARW, BAY, BMQ, CAP, CINE, CR2, CR3, CRW, CS1, DC2, DCR, DNG, GPR, ERF, FFF, EXR, IA, IIQ, JPEG, JPG, K25, KC2, KDC, MDC, MEF, MOS, MRW, NEF, NRW, ORF, PEF, PFM, PNG, PXN, QTK, RAF, RAW, RDC, RW1, RW2, SR2, SRF, SRW, STI, TIF, TIFF, X3F`\n"
-msgid "In order for Ansel to consider a file for import, it must have one of the following extensions (case independent): `3FR, ARI, ARW, BAY, BMQ, CAP, CINE, CR2, CR3, CRW, CS1, DC2, DCR, DNG, GPR, ERF, FFF, EXR, IA, IIQ, JPEG, JPG, K25, KC2, KDC, MDC, MEF, MOS, MRW, NEF, NRW, ORF, PEF, PFM, PNG, PXN, QTK, RAF, RAW, RDC, RW1, RW2, SR2, SRF, SRW, STI, TIF, TIFF, X3F`\n"
-msgstr "Для того, щоб darktable розглядав файл для імпорту, він повинен мати одне з наступних розширень (незалежно від регістру): `3FR, ARI, ARW, BAY, BMQ, CAP, CINE, CR2, CR3, CRW, CS1, DC2, DCR, DNG, GPR, ERF, FFF, EXR, IA, IIQ, JPEG, JPG, K25, KC2, KDC, MDC, MEF, MOS, MRW, NEF, NRW, ORF, PEF, PFM, PNG, PXN, QTK, RAF, RAW, RDC, RW1, RW2, SR2, SRF, SRW, STI, TIF, TIFF, X3F`\n"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, fuzzy, no-wrap
-#| msgid "If darktable was compiled with JPEG2000 support, the following extensions are also recognized: `J2C, J2K, JP2, JPC`.\n"
-msgid "If Ansel was compiled with JPEG2000 support, the following extensions are also recognized: `J2C, J2K, JP2, JPC`.\n"
-msgstr "Якщо darktable був скомпільований з підтримкою JPEG2000, також розпізнаються такі розширення: `J2C, J2K, JP2, JPC`\n"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, fuzzy, no-wrap
-#| msgid "If darktable was compiled with GraphicsMagick support, the following extensions are also recognized: `BMP, DCM, GIF, JNG, JPC, JP2, MIFF, MNG, PBM, PGM, PNM, PPM`.\n"
-msgid "If Ansel was compiled with GraphicsMagick support, the following extensions are also recognized: `BMP, DCM, GIF, JNG, JPC, JP2, MIFF, MNG, PBM, PGM, PNM, PPM`.\n"
-msgstr "Якщо darktable був скомпільований з підтримкою GraphicsMagick, також розпізнаються такі розширення: `BMP, DCM, GIF, JNG, JPC, JP2, MIFF, MNG, PBM, PGM, PNM, PPM`.\n"
-
-#. type: Title ##
-#: content/overview/supported-file-formats.md
-#, no-wrap
-msgid "camera raw files"
-msgstr "raw файли камер"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, fuzzy, no-wrap
-#| msgid "darktable reads raw files using the open source library [RawSpeed](https://github.com/darktable-org/rawspeed), originally developed by Klaus Post and now maintained as part of the darktable project. The number of supported cameras and file formats is constantly increasing. Most modern camera models are supported, and new ones tend to get added very quickly. It is beyond the scope of this manual to give an exhaustive list.\n"
-msgid "Ansel reads raw files using the open source library [RawSpeed](https://github.com/darktable-org/rawspeed), originally developed by Klaus Post and now maintained as part of the darktable project. The number of supported cameras and file formats is constantly increasing. Most modern camera models are supported, and new ones tend to get added very quickly. It is beyond the scope of this manual to give an exhaustive list.\n"
-msgstr "darktable читає raw файли, використовуючи бібліотеку з відкритим кодом [RawSpeed](https://github.com/darktable-org/rawspeed), спочатку розроблену Клаусом Постом і тепер підтримувану в рамках проекту darktable. Кількість підтримуваних камер та форматів файлів постійно збільшується. Більшість сучасних моделей камер підтримуються і нові, як правило, додаються дуже швидко. Надання вичерпного переліку виходить за рамки цього посібника.\n"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, fuzzy, no-wrap
-#| msgid "With the exception of Fujifilm X-Trans cameras, darktable does not decode images from cameras with non-Bayer sensors (e.g. Sigma cameras with the Foveon X3 sensor).\n"
-msgid "With the exception of Fujifilm X-Trans cameras, Ansel does not decode images from cameras with non-Bayer sensors (e.g. Sigma cameras with the Foveon X3 sensor).\n"
-msgstr "За винятком камер Fujifilm з сенсорами X-Trans, darktable не декодує зображення з камер з сенсорами, які не мають фільтра Баєра (наприклад, камери Sigma з сенсором Foveon X3).\n"
-
-#. type: Title ##
-#: content/overview/supported-file-formats.md
-#, no-wrap
-msgid "other image files"
-msgstr "інші файли зображень"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, fuzzy, no-wrap
-#| msgid "darktable natively reads “ordinary” images in JPEG, 8-bit/16-bit PNG and 8-bit/16-bit TIFF format, as well as 16-bit/32-bit floating point TIFF formats.\n"
-msgid "Ansel natively reads “ordinary” images in JPEG, 8-bit/16-bit PNG and 8-bit/16-bit TIFF format, as well as 16-bit/32-bit floating point TIFF formats.\n"
-msgstr "darktable читає \"звичайні\" зображення у форматі JPEG, 8-/16-бітний PNG та 8-/16-бітний TIFF, а також 16-/32-бітні формати TIFF з рухомою комою.\n"
-
-#. type: Plain text
-#: content/overview/supported-file-formats.md
-#, fuzzy, no-wrap
-#| msgid "darktable also reads high dynamic range images in OpenEXR, RGBE and PFM formats.\n"
-msgid "Ansel also reads high dynamic range images in OpenEXR, RGBE and PFM formats.\n"
-msgstr "darktable також читає зображення з високим динамічним діапазоном у форматах OpenEXR, RGBE та PFM.\n"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/overview/_index.md
@@ -30738,6 +30137,404 @@ msgstr "Після закінчення нашого прикладу повід
 #| msgid "We use `coroutine.yield` to call an external program. The normal `os.execute` would block other lua codes from happening.\n"
 msgid "- We use `coroutine.yield` to call an external program. The normal `os.execute` would block other lua codes from happening.\n"
 msgstr "Ми використовуємо `coroutine.yield` для виклику зовнішньої програми. Звичайний `os.execute` заблокує інші коди lua.\n"
+
+#, no-wrap
+#~ msgid "midi device support"
+#~ msgstr "підтримка пристроїв MIDI"
+
+#, no-wrap
+#~ msgid "The shortcut mapping system has been most extensively tested with the Behringer X-Touch Mini and contains custom code to deal with the specific features of this device. All other devices are treated as \"generic midi\" and may or may not work (well) or need some manual setup each time. A configuration framework (possibly in lua) to support additional device-specific features is on the to do list.\n"
+#~ msgstr "Система зіставлення прискорювачів була найбільш ретельно протестована за допомогою Behringer X-Touch Mini й містить користувальницький код для роботи з особливими функціями цього пристрою. Усі інші пристрої розглядаються як \"загальні midi\" і можуть працювати або не працювати (добре) або щоразу потребувати ручного налаштування. Конфігураційний фреймворк (можливо, в lua) для підтримки додаткових функцій пристрою є у списку справ.\n"
+
+#, no-wrap
+#~ msgid "If you succeed in getting a midi device up and running that hasn't been mentioned below, it would be greatly appreciated if you would provide feedback in order to assist others, if any special steps are required. You could do this either by submitting a documentation [pull request](https://github.com/darktable-org/dtdocs/pulls) to amend this page or by [filing an issue](https://github.com/darktable-org/dtdocs/issues) containing the necessary information. Alternatively you could read or respond to any of the (closed) midi or \"inputng\" [issues](https://github.com/darktable-org/darktable/issues) or [pull requests](https://github.com/darktable-org/darktable/pulls) in the main darktable repository if you need additional help or guidance yourself.\n"
+#~ msgstr "Якщо вам вдасться запустити пристрій MIDI, який не був згаданий нижче, будемо дуже вдячні, якщо ви надасте зворотній зв’язок, щоб допомогти іншим, якщо знадобляться якісь спеціальні дії. Ви можете зробити це, надіславши [запит на прийняття змін](https://github.com/darktable-org/dtdocs/pulls) до документації, щоб змінити цю сторінку, або [підняти проблему](https://github.com/darktable-org/dtdocs/issues), що містить необхідну інформацію. Крім того, ви можете прочитати або відповісти на будь-яку із (можливо, закритих) MIDI або \"inputng\" [проблем](https://github.com/darktable-org/darktable/issues) або [запитів на прийняття змін](https://github.com/darktable-org/darktable/pull) у головному репозиторії darktable, якщо вам самому потрібна додаткова допомога чи вказівки.\n"
+
+#, no-wrap
+#~ msgid "Behringer X-touch Mini"
+#~ msgstr "Behringer X-touch Mini"
+
+#, no-wrap
+#~ msgid "The device should be in Standard Mode (not MC). Layers A & B are somewhat supported, however, since the device does not send a notification when switching between layers, and since the updates to \"hidden\" rotors and lights (both under buttons and the pattern used around the rotors) are ignored, everything will only be updated completely after you press or turn something in the \"new\" layer.\n"
+#~ msgstr "Пристрій має бути в стандартному режимі (не MC). Шари A і B певною мірою підтримуються, проте, оскільки пристрій не надсилає сповіщення при перемиканні між шарами, а також оскільки оновлення \"прихованих\" роторів та індикаторів (як під кнопками, так і візерунком, що використовується навколо роторів) ігноруються, все буде повністю оновлено лише після того, як ви натиснете або повернете щось у \"новому\" шарі.\n"
+
+#, no-wrap
+#~ msgid "The light rings around the rotors show a different pattern depending on whether the associated slider has a symmetrical +/- range centered around 0, 0-100 (or 0-1) or anything else. If linked to a drop-down (or star rating) the rotor will step one light at the time. If the drop-down has many (more than 13) items (like the blending mode drop-down), the rotor will go around twice; the first time with one light on, and the second time with two adjacent lights.\n"
+#~ msgstr "Світлові кільця навколо роторів показують різний малюнок залежно від того, чи має пов’язаний повзунок симетричний діапазон +/- з центром навколо 0, 0-100 (або 0-1) або будь-що інше. Якщо він пов’язаний зі спадним списком (або рейтингом зірок), ротор буде перемикатися по одному світлу за раз. Якщо спадне меню містить багато (більше 13) елементів (наприклад, спадне меню режиму змішування), ротор буде обертатися двічі; перший раз з одним увімкненим світлом, а другий раз з двома сусідніми.\n"
+
+#, no-wrap
+#~ msgid "Arturia Beatstep"
+#~ msgstr "Arturia Beatstep"
+
+#, no-wrap
+#~ msgid "Individual rotors can be configured to send absolute (0-127) values or changes (+/- 1,2,3,... in different encodings). The recommended setting is Relative #1 for all knobs with Knob Acceleration set to Slow (Off) or Medium. This can be configured with [Midi Control Center](https://www.arturia.com/support/downloads&manuals), available for Windows or MacOS. By default the darktable midi module assumes, for unknown devices, that rotors use absolute encodings. After startup it therefore needs to be told that the device is sending relative movements. You can do this by turning one of the encoders slowly left (down) 5 times. This allows the module to determine which of the several relative encodings is used. If you don't succeed switching encodings on the first attempt, you can reinitialise the input modules by pressing Ctrl+Shift+Alt+I and try again. If you still have problems, you could try [this](https://wd40.co.uk/product/fast-drying-contact-cleaner/).\n"
+#~ msgstr "Окремі ротори можна налаштувати на передачу абсолютних (0-127) значень або змін (+/- 1,2,3,... у різних кодуваннях). Рекомендовано значення Relative #1 для всіх регуляторів, у яких для параметра Knob Acceleration (прискорення регулятора) встановлено значення Slow (Off) або Medium. Це можна налаштувати за допомогою [Midi Control Center](https://www.arturia.com/support/downloads&manuals), доступного для Windows або MacOS. За замовчуванням модуль darktable midi передбачає, для невідомих пристроїв, що ротори використовують абсолютне кодування. Тому після запуску йому потрібно повідомити, що пристрій надсилає відносні рухи. Ви можете зробити це, повільно повернувши один із кодерів ліворуч (вниз) 5 разів. Це дозволяє модулю визначити, яке з кількох відносних кодувань використовується. Якщо вам не вдасться змінити кодування з першої спроби, ви можете повторно ініціалізувати вхідні модулі, натиснувши Ctrl+Shift+Alt+I і повторити спробу. Якщо у вас все ще виникають проблеми, спробуйте [це](https://wd40.co.uk/product/fast-drying-contact-cleaner/).\n"
+
+#, no-wrap
+#~ msgid "If you map the Beatstep's buttons to ratings, color labels or toggle buttons, they should light up when the corresponding element is switched on.\n"
+#~ msgstr "Якщо ви зіставите кнопки Beatstep з рейтингами, кольоровими позначками або кнопками перемикання, вони повинні засвітитися, коли відповідний елемент увімкнено.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "Behringer BCR2000 "
+#~ msgid "Behringer BCR2000"
+#~ msgstr "Behringer BCR2000 "
+
+#, no-wrap
+#~ msgid "(and possibly BCF2000)\n"
+#~ msgstr "(і, можливо, BCF2000)\n"
+
+#, no-wrap
+#~ msgid "These machines are highly configurable so there are many settings that could complicate the interaction with darktable's midi module. The [BC Manager tool](https://mountainutilities.eu/bcmanager) (available for Windows and MacOS) can be used to configure them. The easiest thing to do is to reset all encoders and buttons to their simplest settings, which can be done (for the BCR2000) using [this file](https://github.com/dterrahe/darktable/files/6539400/bcr2000.all.buttons.and.encoders.zip). You can send it to the machine with BC Manager or (under Linux) with amidi. There's also a global setting called \"Deadtime\" that determines how long the BCR ignores arriving messages after sending out updates. This is to avoid feedback loops, but for darktable it means that it blocks the adjustments sent back immediately after each rotor move. So Deadtime needs to be set to 0.\n"
+#~ msgstr "Ці машини гнучко конфігуруються, тому є багато налаштувань, які можуть ускладнити взаємодію з MIDI-модулем darktable. Для їх конфігурування можна використовувати [BC Manager](https://mountainutilities.eu/bcmanager) (доступний для Windows і MacOS). Найпростіше скинути всі кодери та кнопки до найпростіших налаштувань, що можна зробити (для BCR2000) за допомогою [цього файлу](https://github.com/dterrahe/darktable/files/6539400/bcr2000.all.buttons.and.encoders.zip). Ви можете надіслати його на машину за допомогою BC Manager або (під Linux) за допомогою amidi. Існує також глобальне налаштування під назвою \"Deadtime\", яке визначає, як довго BCR ігнорує повідомлення, що надходять після надсилання оновлень. Це робиться для того, щоб уникнути циклів зворотного зв’язку, але для darktable це означає, що воно блокує коригування, надіслані назад одразу після кожного руху ротора. Тому Deadtime потрібно встановити на 0.\n"
+
+#, no-wrap
+#~ msgid "Once configured in this way, button and rotor lights should all work. The top row of rotors (or the only row for the BCF2000) support different light patterns (like the X-Touch Midi, with some extra options and it has 15 instead of 13 leds). However, configuring these is more complicated, and not yet implemented. It also seems to be slower, so may not be doable in real-time for each update (like it is done for the X-touch). So at the moment only the 12-dot pattern is used. For rotors linked to drop-down lists, just like on the X-touch the rotor, the light goes round twice; for the first 15 options only one light goes on, for the second 15 options, two adjacent lights will be on.\n"
+#~ msgstr "Після налаштування таким чином всі індикатори кнопок і ротора повинні працювати. Верхній ряд роторів (або єдиний ряд для BCF2000) підтримує різні схеми індикації (як X-Touch Midi, з деякими додатковими опціями і має 15 замість 13 світлодіодів). Однак їх налаштування є складнішим і ще не реалізовано. Він також здається повільнішим, тому може бути неможливим у реальному часі для кожного оновлення (як це робиться для X-touch). Тому на даний момент використовується лише 12-точковий візерунок. Для роторів, пов’язаних зі спадними списками, так само, як і на роторі X-touch, світло обходить двічі; для перших 15 варіантів горить тільки одна лампочка, для других 15 варіантів світяться два сусідніх індикатора.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "Loupedeck "
+#~ msgid "Loupedeck"
+#~ msgstr "Loupedeck "
+
+#, fuzzy, no-wrap
+#~| msgid "(and Loupedeck+ but not the later non-midi devices) \n"
+#~ msgid "(and Loupedeck+ but not the later non-midi devices)\n"
+#~ msgstr "(і Loupedeck+, але не пізніші пристрої, які не мають MIDI) \n"
+
+#, no-wrap
+#~ msgid "Going by the information provided [here](https://discuss.pixls.us/t/midi-controller-for-darktable/2582/92), most of the functionality of the first two loupedeck models (both midi based) should be supported, with the following exceptions and caveats:\n"
+#~ msgstr "Виходячи з інформації, наданої [тут](https://discuss.pixls.us/t/midi-controller-for-darktable/2582/92), більшість функціональних можливостей перших двох моделей Loupedeck (обидві на базі MIDI) повинні підтримуватися, з такими винятками та застереженнями:\n"
+
+#, fuzzy, no-wrap
+#~| msgid "the Hue/Sat/Lum buttons can be mapped to the notebook tabs in the color zones module but the little lights next to them may not respond to update messages sent when the user switches tabs using the mouse, so they might get out of sync\n"
+#~ msgid ""
+#~ "- the Hue/Sat/Lum buttons can be mapped to the notebook tabs in the color zones module but the little lights next to them may not respond to update messages sent when the user switches tabs using the mouse, so they might get out of sync\n"
+#~ "- the 8 sliders/wheels can be individually mapped to the elements of the graph in color zones\n"
+#~ msgstr "Кнопки Hue/Sat/Lum можна зіставити з вкладками блокнота в модулі колірних зон, але маленькі індикатори поруч з ними можуть не реагувати на повідомлення про оновлення, надіслані, коли користувач перемикає вкладки за допомогою миші, тому вони можуть вийти з синхронізації\n"
+
+#, no-wrap
+#~ msgid "Other than that, since the loupedeck uses Relative encoding (so is similar to the Beatstep) it will need to tell the midi module at each startup (until a configuration system has been implemented). You do this by turning any of the knobs (or wheels) slowly down/left 5 times. Re-initialise the input layer with Ctrl+Shift+Alt+I if it didn't work the first time so you can try again.\n"
+#~ msgstr "Крім цього, оскільки Loupedeck використовує відносне кодування (тому схоже на Beatstep), йому потрібно буде повідомляти midi-модулю під час кожного запуску (доки не буде впроваджено систему конфігурації). Ви робите це, повертаючи будь-яку ручку (або колеса) повільно вниз/вліво 5 разів. Повторно ініціалізуйте вхідний шар за допомогою Ctrl+Shift+Alt+I, якщо це не спрацювало з першого разу, щоб ви могли спробувати ще раз.\n"
+
+#, no-wrap
+#~ msgid "Korg nanoKONTROL2"
+#~ msgstr "Korg nanoKONTROL2"
+
+#, no-wrap
+#~ msgid "The device should be configured first using the Korg Kontrol Editor application to be in the CC mode and every button should be set to the Note type and Momentary button behavior. To control the lights in the buttons the LED mode should be set to External. It is important to note that the Track and the Marker buttons do not have leds in them.\n"
+#~ msgstr "Пристрій слід спочатку налаштувати за допомогою програми Korg Kontrol Editor, щоб він перебував у режимі CC, і кожна кнопка повинна бути налаштована на тип Note та поведінку кнопки Momentary. Щоб керувати підсвічуванням кнопок, режим LED має бути встановлений на External. Важливо відзначити, що кнопки Track і Marker не мають світлодіодів.\n"
+
+#, no-wrap
+#~ msgid "There is an Kontrol Editor profile available [here](https://github.com/darktable-org/darktable/files/7603658/note_buttons.zip) which can be loaded using the Windows application to directly configure all these settings to correctly work with darktable.\n"
+#~ msgstr "[Тут](https://github.com/darktable-org/darktable/files/7603658/note_buttons.zip) доступний профіль Kontrol Editor, який можна завантажити за допомогою програми Windows, щоб безпосередньо налаштувати всі ці параметри для правильної роботи з darktable.\n"
+
+#, no-wrap
+#~ msgid "additional midi configuration"
+#~ msgstr "додаткові налаштування MIDI"
+
+#, no-wrap
+#~ msgid "If darktable is compiled with portmidi it will at startup try to open up to 10 midi devices in the order it finds them. On the command line you might see something like this:\n"
+#~ msgstr "Якщо darktable скомпільовано з portmidi, він під час запуску намагатиметься відкрити до 10 MIDI-пристроїв у порядку їх знаходження. У командному рядку ви можете побачити щось на зразок цього:\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "[midi_open_devices] opened midi device 'Arturia BeatStep' via 'MMSystem' as midi0\n"
+#~ "[midi_open_devices] opened midi device 'BCR2000' via 'MMSystem' as midi1\n"
+#~ "[midi_open_devices] opened midi device 'X-TOUCH MINI' via 'MMSystem' as midi2\n"
+#~ msgstr ""
+#~ "[midi_open_devices] opened midi device 'Arturia BeatStep' via 'MMSystem' as midi0\n"
+#~ "[midi_open_devices] opened midi device 'BCR2000' via 'MMSystem' as midi1\n"
+#~ "[midi_open_devices] opened midi device 'X-TOUCH MINI' via 'MMSystem' as midi2\n"
+
+#, no-wrap
+#~ msgid "Two issues can arise:\n"
+#~ msgstr "Можуть виникнути дві проблеми:\n"
+
+#, fuzzy, no-wrap
+#~| msgid "a device you don't want to use might be opened anyway (and potentially cause inappropriate behavior, like starting a fireworks show prematurely (see [this document](http://webcache.googleusercontent.com/search?q=cache:6EcEOjfjiAkJ:gmbh.pyropak.com/docs/downloads/surefire-prologic-digital-controller_rev2010.pdf+&cd=1&hl=en&ct=clnk&gl=us)), or\n"
+#~ msgid ""
+#~ "- a device you don't want to use might be opened anyway (and potentially cause inappropriate behavior, like starting a fireworks show prematurely (see [this document](https://gmbh.pyropak.com/docs/downloads/surefire-prologic-digital-controller_rev2010.pdf), or\n"
+#~ "- devices might appear in a different order at the next startup (for example because they are plugged into a different usb port). Since configurations are stored with the device number only, reordering would cause an incorrect layout to be picked up.\n"
+#~ msgstr "пристрій, який ви не хочете використовувати, все одно може бути відкрито (і потенційно це може спричинити неадекватну поведінку, як-от передчасний запуск феєрверку (див. [цей документ](http://webcache.googleusercontent.com/search?q=cache:6EcEOjfjiAkJ:gmbh.pyropak.com/docs/downloads/surefire-prologic-digital-controller_rev2010.pdf+&cd=1&hl=uk&ct=clnk&gl=us)), або\n"
+
+#, no-wrap
+#~ msgid "You can specify which devices to explicitly load in a specific location and which ones to skip using the configuration parameter [preferences > miscellaneous > interface > order or exclude midi devices](../preferences-settings/miscellaneous.md#interface). To skip loading the BCR2000 in the above example and to fix the other two devices into the number 0 and 2 slots, you could set this config parameter to \"`BeatStep;dontuse;X-TOUCH;-BCR2000`\". This would leave the BeatStep as device midi0, always leave midi1 unused and would not load the BCR2000 at all, but if any other devices are connected, they would appear as midi3, midi4 and so on. Adding \"`;-`\" at the end would prevent any further devices loading. Or, if you just specify the configuration parameter as a single minus sign \"`-`\", no devices will be loaded at all.\n"
+#~ msgstr "Ви можете вказати, які пристрої явно завантажувати в певному місці, а які пропускати, використовуючи параметр конфігурації [налаштування > різне > інтерфейс > впорядкувати або виключити MIDI-пристрої](../preferences-settings/miscellaneous.md#інтерфейс). Щоб пропустити завантаження BCR2000 у наведеному вище прикладі та закріпити два інші пристрої в слотах 0 і 2, ви можете встановити цей параметр конфігурації на \"`BeatStep;dontuse;X-TOUCH;-BCR2000`\". Це залишить BeatStep як пристрій midi0, midi1 завжди залишиться невикористаним, взагалі не завантажить BCR2000, але якщо підключені будь-які інші пристрої, вони відображатимуться як midi3, midi4 тощо. Додавання \"`;-`\" в кінці запобігатиме завантаженню подальших пристроїв. Або, якщо ви просто вкажете параметр конфігурації як один знак мінус \"`-`\", то жодні пристрої не завантажуватимуться взагалі.\n"
+
+#, no-wrap
+#~ msgid "Midi controller knobs can use several different \"encodings\". The default, absolute, sends a value from 0 (all the way left) to 127 (all the way right) -- sliders can also use absolute encoding. Relative encoders send a \"down\" value if you turn them left and an \"up\" value if you turn them right. So slowly turning one of those \"up\" would send \"1, 1, 1, 1,\" for example. But depending on how many bits are used and what encoding, a slow left turn might be 127 (8 bits -1) or 63, 31 or 15. Or even 65. If nothing is specified in this preference option, midi devices are assumed to use absolute encoding. But if the first five messages received are identical, it is assumed that the user has slowly turned a knob left/down and the encoding is deduced from that and displayed in a toast. The encoding is not remembered for each device, so this maneuver needs to be repeated at each startup. To define the deduced encoding for the next startup you can add this parameter to the \"order or exclude midi devices\" setting. For example \"`Loupedeck:127`\".\n"
+#~ msgstr "Ручки міді-контролера можуть використовувати кілька різних \"кодувань\". Кодування за замовчуванням, абсолютне, надсилає значення від 0 (повністю ліворуч) до 127 (повністю праворуч) -- повзунки також можуть використовувати абсолютне кодування. Відносні кодування надсилають значення \"вниз\", якщо ви повертаєте їх ліворуч, і значення \"вгору\", якщо повертаєте їх праворуч. Тому повільне повертання такої ручки \"вгору\" призведе, наприклад, до надсилання \"1, 1, 1, 1\". Але залежно від того, скільки бітів використовується і яке кодування, повільний поворот ліворуч може бути 127 (8 біт -1) або 63, 31 або 15. Або навіть 65. Якщо нічого не вказано в цьому параметрі, передбачається, що MIDI-пристрої використовують абсолютне кодування. Але якщо перші п’ять отриманих повідомлень ідентичні, передбачається, що користувач повільно повернув ручку вліво/вниз, і кодування виводиться з цього та відображається у вигляді тимчасового повідомлення. Кодування не запам’ятовується для кожного пристрою, тому цей маневр потрібно повторювати при кожному запуску. Щоб визначити виведене кодування для наступного запуску, ви можете додати цей параметр до налаштування \"впорядкувати або виключити MIDI-пристрої\". Наприклад \"`Loupedeck:127`\".\n"
+
+#, no-wrap
+#~ msgid "Some midi controllers have keys with a light beneath them. These can be used to toggle settings and show the current position by having the light on or off. In this case, darktable checks periodically (a few times a second) whether, say, the position of an on-screen toggle button has been changed, and sends messages to any linked midi device buttons to switch their light on or off. But if an unknown device has unintentionally been connected, this could be undesirable. So by default darktable waits until a \"note\" message is received from a midi button before sending any \"note\" light on/off messages back for that button. That way also no more buttons are addressed than exist on the device. If you immediately want all button lights to be used (rather than having to press the highest note once for each session) you can specify the number of buttons in the \"order or exclude midi devices\" preference, for example, \"`BeatStep:63:16`\".\n"
+#~ msgstr "Деякі MIDI-контролери мають клавіші з підсвічуванням під ними. Їх можна використовувати для перемикання налаштувань і показу поточного положення, увімкнувши або вимкнувши світло. У цьому випадку darktable періодично (кілька разів на секунду) перевіряє, чи не було змінено, скажімо, положення екранної кнопки перемикання, і надсилає повідомлення будь-яким пов’язаним кнопкам MIDI-пристроїв, щоб увімкнути або вимкнути їх світло. Але якщо ненавмисно було підключено невідомий пристрій, це може бути небажаним. Таким чином, за замовчуванням darktable чекає, доки не буде отримано повідомлення \"note\" від MIDI-кнопки, перш ніж надсилати будь-які \"note\"-повідомлення про увімкнення/вимкнення підсвічування для цієї кнопки. Таким чином також не адресується більше кнопок, ніж є на пристрої. Якщо ви хочете негайно використовувати всі підсвічування кнопок (замість того, щоб натискати найвищу ноту один раз для кожного сеансу), ви можете вказати кількість кнопок у параметрі \"впорядкувати або виключити MIDI-пристрої\", наприклад, \"`BeatStep:63:16`\".\n"
+
+#, fuzzy, no-wrap
+#~| msgid "darktable's color pipeline"
+#~ msgid "Ansel's color pipeline"
+#~ msgstr "колірний конвеєр darktable"
+
+#, no-wrap
+#~ msgid "Most image processing applications come from the 1990s and/or inherit a 1990s workflow. These applications processed images encoded with 8 bit unsigned integers because it was more memory- and computationally-efficient. However, due to the use of an integer format (which implies rounding errors) they had to apply a \"gamma\" (essentially a transfer function applying a power 1/2.2 or 1/2.4 to encode the RGB values) and increase the bit-depth in the low-lights in order to reduce rounding errors there (humans are very sensitive to low-light details). The 8 bit integer formats are also technically limited to the 0-255 range. Anything outside of this range overflows and is clipped to the nearest bound.\n"
+#~ msgstr "Більшість програм обробки зображень походять з 1990-х років та/або успадковують робочий процес 1990-х. Ці програми обробляли зображення, закодовані 8-бітовими беззнаковими цілими числами, оскільки це було більш ефективно в обсязі пам’яті та обчислень. Однак через використання цілочисельного формату (що означає появу помилок округлення) їм довелося застосувати \"гамму\" (по суті, передавальну функцію із застосуванням степеню 1/2.2 або 1/2.4 для кодування значень RGB) та збільшувати бітову глибину в затемнених ділянках, щоб зменшити там помилки округлення (люди дуже чутливі до деталей в затемнених ділянках). 8-бітові цілочисельні формати також технічно обмежені діапазоном 0-255. Все, що виходить за межі цього діапазону, переповнюється і відсікається до найближчої межі.\n"
+
+#, no-wrap
+#~ msgid "These workflows, using bounded RGB representations and possibly non-linear transforms to encode RGB signals, are called \"display-referred\". They rely on the assumption that the image has been prepared for display at an early stage in the processing pipeline, and embed hard-coded assumptions about the RGB values of black, middle-gray and white. Most of the image-processing algorithms used in these workflows have been tuned around these assumptions. For example, the overlay blending mode expects a middle-gray encoded at 50% (or 128 in integer encoding).\n"
+#~ msgstr "Ці робочі процеси, що використовують обмежені простори RGB і, можливо, нелінійні перетворення для кодування RGB-сигналів, називаються \"на основі відображення\". Вони покладаються на припущення, що зображення було підготовлено для показу на ранній стадії в конвеєрі обробки, і вкладають жорстко закодовані припущення про значення RGB чорного, середньо-сірого та білого кольорів. Більшість алгоритмів обробки зображень, що використовуються в цих робочих процесах, були налаштовані навколо цих припущень. Наприклад, режим змішування \"перекриття\" очікує кодування середньо-сірого на 50% (або значення 128 у цілочисельному кодуванні).\n"
+
+#, no-wrap
+#~ msgid "Unfortunately the non-linear scaling, which is mandatory to make the integer encoding work, breaks the natural relationships between pixel values. Hue and saturation change in unpredictable ways, and value relationships between neighbouring pixels are dilated or compressed such that gradients are also altered unpredictably.\n"
+#~ msgstr "На жаль, нелінійне масштабування, яке є обов’язковим для роботи цілочисельного кодування, порушує природні взаємозв’язки між значеннями пікселів. Відтінок і насиченість змінюються непередбачувано, а співвідношення значень між сусідніми пікселями розширюються або стискаються таким чином, що градієнти також змінюються непередбачувано.\n"
+
+#, no-wrap
+#~ msgid "Display-referred pipelines therefore break optical filters (lens blurring or deblurring), alpha compositing (which relies on optical and geometrical definitions of occlusion), colors and gradients (local relationships between chrominance and luminance of pixels). They also don't scale well to HDR images, which led to the development of many questionable local and global tonemapping methods and the infamous 2010s \"HDR look\".\n"
+#~ msgstr "Тому конвеєри на основі відображення порушують оптичні фільтри (розмиття або відновлення різкості оптики), альфа-композитинг (який покладається на оптичні та геометричні визначення оклюзії), кольори та градієнти (локальні залежності між кольоровістю та яскравістю пікселів). Вони також погано масштабуються до HDR-зображень, що призвело до розробки багатьох сумнівних методів локального та глобального тонального відображення та сумнозвісного \"вигляду HDR\" 2010-х років.\n"
+
+#, no-wrap
+#~ msgid "Modern computers are not tied to the same computational limitations as those from the 1990s, and can work on pixels whose values are completely unbounded (from 0 up to +infinity) and encoded as real numbers (using floating point formats). These possibilities enable what we call a \"scene-referred\" workflow, in which pixels can retain their original radiometric relationships along almost the entire processing pipe. In scene-referred workflow, pixels are prepared for display only at the last stage of the pipeline, in the display transform. This means that the RGB values of the pixels are kept proportional to the intensity of the light emission recorded by the camera on the scene, enabling accurate alpha compositing and optical filter emulations, while also scaling to any dynamic range through the same algorithm (SDR as well as HDR).\n"
+#~ msgstr "Сучасні комп’ютери не прив’язані до тих самих обчислювальних обмежень, що й комп'ютери 1990-х років, і можуть працювати з пікселями, значення яких абсолютно необмежені (від 0 до +нескінченності) і кодуються як дійсні числа (із використанням форматів з рухомою комою). Ці можливості забезпечують те, що ми називаємо робочим процесом \"на основі сцен\", в якому пікселі можуть зберігати свої початкові радіометричні зв'язки майже по всьому конвеєру обробки. У робочому процесі на основі сцен пікселі готуються до відображення лише на останньому етапі конвеєра. Це означає, що значення RGB пікселів зберігаються пропорційними інтенсивності випромінювання світла, зафіксованого камерою на сцені, забезпечуючи точний альфа-композитинг та емуляції оптичних фільтрів, одночасно масштабуючи до будь-якого динамічного діапазону за тим самим алгоритмом (як SDR, так і HDR).\n"
+
+#, no-wrap
+#~ msgid "However, scene-referred pipelines lose the convenient fixed values of white, middle-gray and black which characterised display-referred pipelines, and setting these values, according to the scene and to the conditions of shooting, now becomes the responsibility of the user. This requires a more complex user interface.\n"
+#~ msgstr "Однак конвеєри на основі сцен втрачають зручні фіксовані значення білого, середньо-сірого та чорного, що характеризують конвеєри на основі відображення, і встановлення цих значень відповідно до сцени та умов зйомки стає відповідальністю користувача. Для цього потрібен більш складний інтерфейс користувача.\n"
+
+#, no-wrap
+#~ msgid "Also, because scene-referred values are supposed to be physically-meaningful, pixels cannot have zero intensity. This would mean they have no light at all, and the existence of zero light breaks many physically-accurate algorithms. In fact, white and black mean nothing with regard to the original scene, which is only a collection of luminances at varying intensities. The scene-referred workflow simply aims at remapping some arbitrary scene luminances to what will appear white or black on the output medium.\n"
+#~ msgstr "Крім того, оскільки значення \"на основі сцен\" мають бути фізично значущими, пікселі не можуть мати нульову інтенсивність. Це означало б, що у них взагалі немає світла, а існування нульового світла порушує багато фізично точних алгоритмів. Насправді білий та чорний нічого не означають щодо оригінальної сцени, яка є лише сукупністю яскравостей з різною інтенсивністю. Робочий процес на основі сцен просто спрямований на перепризначення деяких довільних яскравостей сцени до того, що буде виглядати білим або чорним на вихідному носії.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "Versions of darktable prior to 2.6 had a non-linear display-referred pipeline, assuming that a non-linear transform took place early in the pipe and middle-gray was thereafter encoded as 50%. However, not all modules and filters clipped pixel values above 100%, leaving open the possibility of recovering those values later in the pipe.\n"
+#~ msgid "Versions of Ansel prior to 2.6 had a non-linear display-referred pipeline, assuming that a non-linear transform took place early in the pipe and middle-gray was thereafter encoded as 50%. However, not all modules and filters clipped pixel values above 100%, leaving open the possibility of recovering those values later in the pipe.\n"
+#~ msgstr "Версії darktable до 2.6 мали нелінійний конвеєр на основі відображення припускаючи, що нелінійне перетворення відбулося на початку конвеєра, а середньо-сірий колір був кодований як 50%. Однак не всі модулі та фільтри відсікали значення пікселів вище 100%, залишаючи відкритою можливість відновлення цих значень пізніше в конвеєрі.\n"
+
+#, no-wrap
+#~ msgid "The _filmic_ module's view transform, introduced in darktable 2.6, was the first step toward a scene-referred pipeline, and deferred the mandatory, non-linear, display preparation to the end of the pipe, along with the ability to set custom black, gray and white values. The _color balance_ module then introduced a way to deal with a variable definition of middle-gray.\n"
+#~ msgstr "Перетворення до відображення в модулі _filmic_, представлене в darktable 2.6, було першим кроком до конвеєра на основі сцен, і відклало обов’язкову нелінійну підготовку до відображення до кінця конвеєра, а також додало можливість встановити власні значення чорного, сірого і білого. Потім модуль _колірний баланс_ представив спосіб мати справу зі змінним визначенням середньо-сірого.\n"
+
+#, no-wrap
+#~ msgid "Starting in darktable 3.2, users could choose between two workflows that defined consistent default settings, modules and pipeline order for both _display-referred_ and _scene-referred_ processing.\n"
+#~ msgstr "Починаючи з darktable 3.2, користувачі могли вибирати між двома робочими процесами, які визначали узгоджені налаштування за замовчуванням, модулі та порядок конвеєра і для обробки _на основі відображення_ і для _на основі сцен_.\n"
+
+#, no-wrap
+#~ msgid "In darktable 3.4, a full scene-referred masking and blending option was introduced, allowing masks to be defined for pixel values above 100% and using only unbounded blending operators.\n"
+#~ msgstr "У darktable 3.4 була введена опція маскування та змішування повністю \"на основі сцен\", що дозволяє визначати маски для значень пікселів понад 100% та використовувати лише необмежені оператори змішування.\n"
+
+#, no-wrap
+#~ msgid "Switching to _scene-referred_ is a cognitive leap for most experienced users, who are used thinking in display-referred ways. In a display-referred workflow, it is customary to anchor the white value and let tone adjustments revolve around that point, trying to maximize brightness while avoiding clipping. In a scene-referred workflow, white and black values are fluid and adapted to the output medium. It is advised that users anchor middle-gray (which will be preserved as-is for any output medium) and let the view transform (_filmic_) dilate or contract the dynamic range around that point. Because 10 bit HDR white is 4 times as bright as 8 bit SDR white, any rigid definition of \"white\" becomes irrelevant. But anchoring for middle-gray is actually more convenient, since it keeps the average brightness of the picture unchanged through the view transform.\n"
+#~ msgstr "Перехід на обробку _на основі сцен_ є когнітивним стрибком для найбільш досвідчених користувачів, які звикли мислити в термінах відображення. У робочому процесі на основі відображення прийнято закріплювати значення білого і дозволяти регулюванню тону обертатися навколо цієї точки, намагаючись максимізувати яскравість, але уникаючи відсікання. У робочому процесі на основі сцен значення білого та чорного кольорів є змінюваними та адаптованими до вихідного середовища. Користувачам рекомендується закріпити середньо-сірий (який буде збережений як є для будь-якого вихідного середовища) і дозволити перетворенню до відображення (_filmic_) розширити або скоротити динамічний діапазон навколо цієї точки. Оскільки білий 10-бітного HDR у 4 рази яскравіший, ніж білий 8-бітного SDR, будь-яке жорстке визначення \"білого\" стає неактуальним. Але закріплювати середньо-сірий насправді зручніше, оскільки це зберігає середню яскравість зображення незмінною в процесі перетворення до відображення.\n"
+
+#, no-wrap
+#~ msgid "Some modules (_levels_, _rgb levels_, _tone curve_, _rgb curve_) are inherently incompatible with a scene-referred workflow, because their graphical interface implicitly suggests RGB values that are bounded within the 0-100% range. While the pixel operations they perform can be used in either scene-referred or display-referred workflows because they are unbounded internally, their controlling interface does not allow pixels to be selected outside of the 0-100% range.\n"
+#~ msgstr "Деякі модулі (_рівні_, _рівні rgb_, _тонова крива_, _крива rgb_) за своєю суттю несумісні з робочим процесом на основі сцен, оскільки їх графічний інтерфейс неявно пропонує значення RGB, які обмежені в діапазоні 0-100%. Незважаючи на те, що піксельні операції, які вони виконують, можуть бути використані як у робочих процесах на основі сцен, так і на основі відображення, оскільки вони необмежені всередині, але їх інтерфейс управління не дозволяє вибирати пікселі за межами діапазону 0-100%.\n"
+
+#, no-wrap
+#~ msgid "Similarly, blending modes such as overlay, linear light, soft light, hard light, darken, brighten, etc. all have hard-coded thresholds that internally expect display-referred non-linear encoding.\n"
+#~ msgstr "Подібним чином, режими змішування, такі як перекриття, лінійне світло, розсіяне світло, направлене світло, затемнення, заміна світлим тощо, мають жорстко закодовані пороги, які внутрішньо очікують нелінійного кодування на основі відображення.\n"
+
+#, no-wrap
+#~ msgid "In darktable 3.4 and above, hovering the cursor over a module header shows a tooltip detailing the color spaces, ranges and encodings that the module expects, uses and produces. Here are the definitions of the terms used:\n"
+#~ msgstr "У darktable 3.4 і вище, наведення курсора на заголовок модуля показує підказку, що деталізує колірні простори, діапазони та кодування, які модуль очікує, використовує та виробляє. Ось визначення використаних термінів:\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "linear\n"
+#~ ": Pixel values are proportional to the scene radiometric emission, in a way that enables accurate emulation of physical filters.\n"
+#~ msgstr ""
+#~ "лінійний\n"
+#~ ": Значення пікселів пропорційні радіометричному випромінюванню сцени, що забезпечує точну емуляцію фізичних фільтрів.\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "non-linear\n"
+#~ ": Pixel values are re-scaled such that low-lights are given a larger encoding range, usually to remap the 18.45% reference middle-gray to a value between 46 and 50%.\n"
+#~ msgstr ""
+#~ "нелінійний\n"
+#~ ": Значення пікселів перемасштабуються таким чином, що для темних ділянок надається більший діапазон кодування, як правило, перепризначенням середньо-сірого 18.45% до значення між 46 і 50%.\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "display-referred\n"
+#~ ": Pixel values are expected to lie between 0 and 100% of the display range, where 100% is understood to be the luminance of a 20% reflective white surface (the white patch of a Color Checker) and 0% is understood to be the maximum density of the output medium (saturated black ink or minimum LED panel backlighting).\n"
+#~ msgstr ""
+#~ "на основі відображення\n"
+#~ ": Очікується, що значення пікселів становитимуть від 0 до 100% від діапазону дисплея (або іншого носія зображення), де під 100% розуміється яскравість рефлективної на 20% білої поверхні (білий зразок калібраційної мішені), а 0% -- максимальна щільність вихідного середовища (насичена чорна фарба або мінімальне підсвічування світлодіодної панелі).\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "scene-referred\n"
+#~ ": Pixel values are expected to be greater than zero up to +infinity. The meaning of specific pixel values needs to be defined at runtime by the user. Scene-referred values don't automatically imply a linear, radiometrically scaled, encoding.\n"
+#~ msgstr ""
+#~ "на основі сцен\n"
+#~ ": Очікується, що значення пікселів будуть більше нуля і до +нескінченності. Сенс конкретних значень пікселів має визначатися користувачем під час виконання. Значення пікселів \"на основі сцен\" не означають автоматично лінійне, радіометрично масштабоване кодування.\n"
+
+#, no-wrap
+#~ msgid "translating dtdocs"
+#~ msgstr "переклад dtdocs"
+
+#, no-wrap
+#~ msgid "Translation of the darktable documentation is done via our [Weblate instance](https://weblate.pixls.us/projects/darktable/).\n"
+#~ msgstr "Переклад документації darktable здійснюється через наш [екземпляр Weblate](https://weblate.pixls.us/projects/darktable/).\n"
+
+#, no-wrap
+#~ msgid "You can either use Weblate's web UI to translate the documentation or download the translation from Weblate to your computer, edit it, and then upload the changes.\n"
+#~ msgstr "Ви можете використовувати веб-інтерфейс Weblate для перекладу документації або завантажити переклад з Weblate на свій комп’ютер, відредагувати його, а потім вивантажити зміни.\n"
+
+#, no-wrap
+#~ msgid "Please do all translation work through Weblate. We will not accept pull requests directly on github to update PO files.\n"
+#~ msgstr "Будь ласка, виконуйте всі роботи з перекладу через Weblate. Ми не будемо приймати запити на прийняття змін (pull request) безпосередньо на github для оновлення PO-файлів.\n"
+
+#, no-wrap
+#~ msgid "Making a new branch in git"
+#~ msgstr "Створення нової гілки в git"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "Make a new branch to work on it in git.\n"
+#~| "For example:\n"
+#~| "`git checkout -b fr-translation-init`\n"
+#~ msgid ""
+#~ "1. Make a new branch to work on it in git.\n"
+#~ "   For example:\n"
+#~ "   `git checkout -b fr-translation-init`\n"
+#~ msgstr ""
+#~ "Створіть нову гілку, щоб працювати над нею в git.\n"
+#~ "Наприклад:\n"
+#~ "`git checkout -b fr-translation-init`\n"
+
+#, no-wrap
+#~ msgid "Adding a new language to Hugo"
+#~ msgstr "Додавання нової мови в Hugo"
+
+#, fuzzy, no-wrap
+#~| msgid "Add the language you wish to translate. For example, the English looks like this:\n"
+#~ msgid ""
+#~ "1. In the files `config.yaml` and `config-pdf.yaml`, locate the `languages:` line.\n"
+#~ "2. Add the language you wish to translate. For example, the English looks like this:\n"
+#~ msgstr "Додайте мову, на яку хочете перекласти. Наприклад, англійська виглядає так:\n"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "     en-us:\n"
+#~| "       title: darktable 3.4 user manual\n"
+#~| "       weight: 1\n"
+#~ msgid ""
+#~ "     en-us:\n"
+#~ "       title: darktable 3.4 user manual\n"
+#~ "date: 2022-12-04T02:19:02+01:00\n"
+#~ "       weight: 1\n"
+#~ msgstr ""
+#~ "     en-us:\n"
+#~ "       title: darktable 3.4 user manual\n"
+#~ "       weight: 1\n"
+
+#, fuzzy, no-wrap
+#~| msgid "Save the files.\n"
+#~ msgid "3. Save the files.\n"
+#~ msgstr "Збережіть файли.\n"
+
+#, no-wrap
+#~ msgid "Generating a PO file"
+#~ msgstr "Створення файлу PO"
+
+#, no-wrap
+#~ msgid "Do the following steps if you want to update the POT and PO files from the markdown source.\n"
+#~ msgstr "Виконайте наступні кроки, якщо ви хочете оновити файли POT та PO з джерела markdown.\n"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "Create an empty PO file for your language in the `po` folder with the file name `content.<language>.po`.\n"
+#~| "For example:\n"
+#~| "`touch po/content.fr-fr.po`\n"
+#~ msgid ""
+#~ "1. Create an empty PO file for your language in the `po` folder with the file name `content.<language>.po`.\n"
+#~ "   For example:\n"
+#~ "   `touch po/content.fr-fr.po`\n"
+#~ "2. Run the script to populate the PO file:\n"
+#~ "   `cd tools/ && ./generate-translations.sh --no-translations`\n"
+#~ msgstr ""
+#~ "Створіть порожній файл PO для вашої мови в папці `po` з назвою файлу `content.<мова>.po`.\n"
+#~ "Наприклад:\n"
+#~ "`touch po/content.fr-fr.po`\n"
+
+#, no-wrap
+#~ msgid "Generating translated files"
+#~ msgstr "Створення перекладених файлів"
+
+#, no-wrap
+#~ msgid "Do the following steps to generate the website files from a translation.\n"
+#~ msgstr "Виконайте наступні кроки для створення файлів веб-сайту із перекладу.\n"
+
+#, no-wrap
+#~ msgid "Translating website, epub, and PDF strings"
+#~ msgstr "Переклад рядків веб-сайту, epub та PDF"
+
+#, no-wrap
+#~ msgid "There are two themes for the darktable documentation: one for the HTML website and one for the PDF. You'll need to translate the strings for both.\n"
+#~ msgstr "Існує дві теми для документації darktable: одна для веб-сайту HTML та одна для PDF. Вам потрібно буде перекласти рядки для обох.\n"
+
+#, no-wrap
+#~ msgid "Integrating new translations from Weblate"
+#~ msgstr "Інтеграція нових перекладів із Weblate"
+
+#, no-wrap
+#~ msgid "The following assumes that you're git working directory is clean, that you have API access to the Weblate instance, that you've configured the Weblate git repo as a remote in your local `dtdocs` git repo, and that `wlc`, the Weblate command line client, is configured.\n"
+#~ msgstr "Наступне припускає, що ваш робочий каталог git чистий, що у вас є доступ через API до екземпляра Weblate, що ви налаштували git-репозиторій Weblate як віддалений у своєму локальному git-репозиторії `dtdocs` і що `wlc`, клієнт командного рядка Weblate, налаштовано.\n"
+
+#, no-wrap
+#~ msgid "user interface"
+#~ msgstr "інтерфейс користувача"
+
+#, no-wrap
+#~ msgid "supported file formats"
+#~ msgstr "підтримувані формати файлів"
+
+#, fuzzy, no-wrap
+#~| msgid "darktable supports a huge number of file formats from various camera manufacturers. In addition darktable can read a wide range of low- and high-dynamic-range images -- mainly for data exchange between darktable and other software.\n"
+#~ msgid "Ansel supports a huge number of file formats from various camera manufacturers. In addition Ansel can read a wide range of low- and high-dynamic-range images -- mainly for data exchange between Ansel and other software.\n"
+#~ msgstr "darktable підтримує величезну кількість форматів файлів різних виробників камер. Крім того, darktable може читати широкий спектр зображень із низьким та високим динамічним діапазоном -- головним чином для обміну даними між darktable та іншим програмним забезпеченням.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "In order for darktable to consider a file for import, it must have one of the following extensions (case independent): `3FR, ARI, ARW, BAY, BMQ, CAP, CINE, CR2, CR3, CRW, CS1, DC2, DCR, DNG, GPR, ERF, FFF, EXR, IA, IIQ, JPEG, JPG, K25, KC2, KDC, MDC, MEF, MOS, MRW, NEF, NRW, ORF, PEF, PFM, PNG, PXN, QTK, RAF, RAW, RDC, RW1, RW2, SR2, SRF, SRW, STI, TIF, TIFF, X3F`\n"
+#~ msgid "In order for Ansel to consider a file for import, it must have one of the following extensions (case independent): `3FR, ARI, ARW, BAY, BMQ, CAP, CINE, CR2, CR3, CRW, CS1, DC2, DCR, DNG, GPR, ERF, FFF, EXR, IA, IIQ, JPEG, JPG, K25, KC2, KDC, MDC, MEF, MOS, MRW, NEF, NRW, ORF, PEF, PFM, PNG, PXN, QTK, RAF, RAW, RDC, RW1, RW2, SR2, SRF, SRW, STI, TIF, TIFF, X3F`\n"
+#~ msgstr "Для того, щоб darktable розглядав файл для імпорту, він повинен мати одне з наступних розширень (незалежно від регістру): `3FR, ARI, ARW, BAY, BMQ, CAP, CINE, CR2, CR3, CRW, CS1, DC2, DCR, DNG, GPR, ERF, FFF, EXR, IA, IIQ, JPEG, JPG, K25, KC2, KDC, MDC, MEF, MOS, MRW, NEF, NRW, ORF, PEF, PFM, PNG, PXN, QTK, RAF, RAW, RDC, RW1, RW2, SR2, SRF, SRW, STI, TIF, TIFF, X3F`\n"
+
+#, fuzzy, no-wrap
+#~| msgid "If darktable was compiled with JPEG2000 support, the following extensions are also recognized: `J2C, J2K, JP2, JPC`.\n"
+#~ msgid "If Ansel was compiled with JPEG2000 support, the following extensions are also recognized: `J2C, J2K, JP2, JPC`.\n"
+#~ msgstr "Якщо darktable був скомпільований з підтримкою JPEG2000, також розпізнаються такі розширення: `J2C, J2K, JP2, JPC`\n"
+
+#, fuzzy, no-wrap
+#~| msgid "If darktable was compiled with GraphicsMagick support, the following extensions are also recognized: `BMP, DCM, GIF, JNG, JPC, JP2, MIFF, MNG, PBM, PGM, PNM, PPM`.\n"
+#~ msgid "If Ansel was compiled with GraphicsMagick support, the following extensions are also recognized: `BMP, DCM, GIF, JNG, JPC, JP2, MIFF, MNG, PBM, PGM, PNM, PPM`.\n"
+#~ msgstr "Якщо darktable був скомпільований з підтримкою GraphicsMagick, також розпізнаються такі розширення: `BMP, DCM, GIF, JNG, JPC, JP2, MIFF, MNG, PBM, PGM, PNM, PPM`.\n"
+
+#, no-wrap
+#~ msgid "camera raw files"
+#~ msgstr "raw файли камер"
+
+#, fuzzy, no-wrap
+#~| msgid "darktable reads raw files using the open source library [RawSpeed](https://github.com/darktable-org/rawspeed), originally developed by Klaus Post and now maintained as part of the darktable project. The number of supported cameras and file formats is constantly increasing. Most modern camera models are supported, and new ones tend to get added very quickly. It is beyond the scope of this manual to give an exhaustive list.\n"
+#~ msgid "Ansel reads raw files using the open source library [RawSpeed](https://github.com/darktable-org/rawspeed), originally developed by Klaus Post and now maintained as part of the darktable project. The number of supported cameras and file formats is constantly increasing. Most modern camera models are supported, and new ones tend to get added very quickly. It is beyond the scope of this manual to give an exhaustive list.\n"
+#~ msgstr "darktable читає raw файли, використовуючи бібліотеку з відкритим кодом [RawSpeed](https://github.com/darktable-org/rawspeed), спочатку розроблену Клаусом Постом і тепер підтримувану в рамках проекту darktable. Кількість підтримуваних камер та форматів файлів постійно збільшується. Більшість сучасних моделей камер підтримуються і нові, як правило, додаються дуже швидко. Надання вичерпного переліку виходить за рамки цього посібника.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "With the exception of Fujifilm X-Trans cameras, darktable does not decode images from cameras with non-Bayer sensors (e.g. Sigma cameras with the Foveon X3 sensor).\n"
+#~ msgid "With the exception of Fujifilm X-Trans cameras, Ansel does not decode images from cameras with non-Bayer sensors (e.g. Sigma cameras with the Foveon X3 sensor).\n"
+#~ msgstr "За винятком камер Fujifilm з сенсорами X-Trans, darktable не декодує зображення з камер з сенсорами, які не мають фільтра Баєра (наприклад, камери Sigma з сенсором Foveon X3).\n"
+
+#, no-wrap
+#~ msgid "other image files"
+#~ msgstr "інші файли зображень"
+
+#, fuzzy, no-wrap
+#~| msgid "darktable natively reads “ordinary” images in JPEG, 8-bit/16-bit PNG and 8-bit/16-bit TIFF format, as well as 16-bit/32-bit floating point TIFF formats.\n"
+#~ msgid "Ansel natively reads “ordinary” images in JPEG, 8-bit/16-bit PNG and 8-bit/16-bit TIFF format, as well as 16-bit/32-bit floating point TIFF formats.\n"
+#~ msgstr "darktable читає \"звичайні\" зображення у форматі JPEG, 8-/16-бітний PNG та 8-/16-бітний TIFF, а також 16-/32-бітні формати TIFF з рухомою комою.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "darktable also reads high dynamic range images in OpenEXR, RGBE and PFM formats.\n"
+#~ msgid "Ansel also reads high dynamic range images in OpenEXR, RGBE and PFM formats.\n"
+#~ msgstr "darktable також читає зображення з високим динамічним діапазоном у форматах OpenEXR, RGBE та PFM.\n"
 
 #, no-wrap
 #~ msgid "right-clicking on the \"hamburger\" icon at the top-left of the panel\n"
