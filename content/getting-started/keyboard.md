@@ -118,7 +118,6 @@ To expand+focus the previous/next module in the current module tab, use <kbd>Pag
 
 To switch to the next/previous module tab, use <kbd>Ctrl</kbd>+<kbd>Tab</kbd> and <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>Tab</kbd>. Once you reached one end of the modules tabs, it will cycle back to the other end.
 
-
 #### Modules controls
 
 To go directly to a control (slider or combobox), use the action search or define a shortcut to its focusing action. This will automatically:
@@ -144,6 +143,8 @@ Once the control is focused:
 Once a control is focused, you can focus to the previous/next with <kbd>Up</kbd>/<kbd>Down</kbd> keys, or <kbd>Tab</kbd>. To focus the previous/next control outside a notebook tab, when you reached the end of the current notebook page, use <kbd>Ctrl</kbd>+<kbd>Up</kbd>/<kbd>Down</kbd>.
 
 Once a shortcut is attached to a control (slider or combobox) focusing action, as long as the shortcut keys are kept pressed, all mouse scrolling events are sent to this control even when the mouse is not over the widget (as it would normally require to record scrolling events). This allows a 2-hands mixed workflow where one hand, on the keyboard, selects the target control, while the other scrolls on the mouse to adjust the value. It replaces MIDI support that achieves the same through mapping exactly one potentiometer to exactly one control, which will quickly run out of knobs to control Ansel.
+
+When modules use several instances, shortcuts are always attached to the last-added instance.
 
 ## System integration
 
