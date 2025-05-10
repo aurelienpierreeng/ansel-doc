@@ -1,5 +1,6 @@
 ---
 title: Import images
+date: 2024-06-24
 weight: 01
 ---
 

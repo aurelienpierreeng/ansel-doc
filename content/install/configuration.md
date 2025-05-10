@@ -15,8 +15,8 @@ The configuration files of Ansel are located in :
 `anselrc`
 : contains all user preferences except presets and styles. This may be opened in any text editor for manual edit if any preference makes the software crash at startup.
 
-`shortcutsrc`
-: contains all user-defined keyboard, mouse and MIDI shortcuts.
+`keyboardrc`
+: contains all user-defined keyboard shortcuts.
 
 `data.db`
 : contains user presets for modules, styles, tags and locations. This is an SQLite database. It is backed-up before updating to a new release and automatic snapshots can be configured (see below).
