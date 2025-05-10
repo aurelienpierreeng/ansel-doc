@@ -17,11 +17,15 @@ Ansel has two kinds of objects that users can map to keyboard binding through th
 
 The focus is a GUI state in which a widget will capture all keyboard events sent to the application. For text entries, that obviously means recording keystrokes to type text. For other widgets, like sliders, that may be arrow keys events to increase/decrease the value. Only one widget in the whole application can grab the focus at any given time. Ansel shortcuts attached to widgets will therefore switch the focus to them. From there, interacting with widgets (to change their value or their state) is done through generic (non-user-configurable) key bindings. Widgets shortcuts are therefore only meant select a target widget (visible or not) to which further keyboard interactions will be dispatched.
 
+Focused controls widgets will appear in a bolder font that the others. Focused modules will be highlighted.
+
 ### Finding default shortcuts, setting new ones
 
 {{< note >}}
 __A popup window__ showing all available actions and their defined keys is available from the __global menu__, under _Edit_ → _Keyboard shortcuts…_. This window is meant to be at the same time a cheatsheet and a controller to edit shortcuts.
 {{< /note >}}
+
+{{< figure src="/shortcuts-popup.jpg" caption="The shortcuts window" />}}
 
 The shortcut pathes are broken into a hierarchical tree in this window. The first level of the hierarchy defines the shortcuts groups:
 
@@ -57,6 +61,8 @@ The shortcuts popup window has __a double search-engine__:
 ### Vimkey-like, global action search
 
 All the available actions can be searched and triggered from anywhere in the software, using a vimkey-like command with auto-completion. The feature is available from the global menu, under _Help_ → _Search actions_ (default shortcut : <kbd>Ctrl</kbd>+<kbd>P</kbd>).
+
+{{< figure src="/actions-search.jpg" caption="The action search" />}}
 
 This opens a modal popup with a search entry. Type in there a path (partial or complete) or simply the name of the action you are looking for. The auto-completion will return the list of all available actions matching your search from the currently-active shortcut groups, along with a description and their defined shortcut (if any). From there, by selecting one of the results (with mouse click, or navigating with arrow keys then hitting <kbd>Enter</kbd>), you will trigger the action. To cancel, hit <kbd>Escape</kbd>.
 
@@ -135,10 +141,11 @@ Once the control is focused:
     - arrow keys <kbd>Left</kbd>/<kbd>Right</kbd> will increase/decrease the value by a normal step,
     - <kbd>Ctrl</kbd>+ arrows change the value using a fine step,
     - <kbd>Shift</kbd>+ arrows change the value using a coarse step,
+    - <kbd>Insert</kbd> triggers the attached color-picker if any.
 - on comboboxes:
     - arrow keys <kbd>Up</kbd>/<kbd>Down</kbd> will cycle through the options,
     - <kbd>Enter</kbd> validates the selected option and closes the popup,
-    - <kbd>Escape</kbd> exists the popup without validating the selected option.
+    - <kbd>Escape</kbd> exits the popup without validating the selected option.
 
 Once a control is focused, you can focus to the previous/next with <kbd>Up</kbd>/<kbd>Down</kbd> keys, or <kbd>Tab</kbd>. To focus the previous/next control outside a notebook tab, when you reached the end of the current notebook page, use <kbd>Ctrl</kbd>+<kbd>Up</kbd>/<kbd>Down</kbd>.
 
