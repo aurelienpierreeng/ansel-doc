@@ -15,9 +15,19 @@ Ansel has two kinds of objects that users can map to keyboard binding through th
 - __GUI controls/widgets__ : buttons, sliders, comboboxes, etc. Shortcuts attached to those will give them the focus,
 - __Actions__ : most of them are attached to the global menu, but some are contextual, depending on which widget has the focus. Shortcuts attached to those will trigger the actions.
 
-The focus is a GUI state in which a widget will capture all keyboard events sent to the application. For text entries, that obviously means recording keystrokes to type text. For other widgets, like sliders, that may be arrow keys events to increase/decrease the value. Only one widget in the whole application can grab the focus at any given time. Ansel shortcuts attached to widgets will therefore switch the focus to them. From there, interacting with widgets (to change their value or their state) is done through generic (non-user-configurable) key bindings. Widgets shortcuts are therefore only meant select a target widget (visible or not) to which further keyboard interactions will be dispatched.
+The focus is a GUI state in which a widget will capture all keyboard events sent to the application. For text entries, that obviously means recording keystrokes to type text. For other widgets, like sliders, that may be capturing arrow keys events to increase/decrease the value. Only one widget in the whole application can grab the focus at any given time.
 
-Focused controls widgets will appear in a bolder font that the others. Focused modules will be highlighted.
+Clicking on a widget will automatically give it the focus, but that makes for a terrible workflow where you may have to constantly switch between mouse and keyboard. To allow a full-keyboard workflow, Ansel provides shortcuts to switch the focus to any desired target widget. From there, interacting with widgets (to change their value or their state) is done through generic (non-user-configurable) key bindings.
+
+This means that :
+
+1. Widgets shortcuts are only meant to __select a target widget__ (visible or not) to which further keyboard interactions will be dispatched,
+2. There is __only one shortcut__ to configure (and remember) per widget,
+3. All widgets of the same type (button, slider, combobox) will use the __same keyboard interactions__ once focused (easier to remember).
+
+Focused control widgets will appear in a bolder font that the others. Focused modules will be highlighted.
+
+Actions (other than widget focusing ones) don't target widgets at all, and calling their shortcut directly triggers them, possibly outside the GUI.
 
 ### Finding default shortcuts, setting new ones
 
