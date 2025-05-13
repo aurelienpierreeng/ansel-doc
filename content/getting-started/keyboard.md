@@ -161,7 +161,15 @@ Once a control is focused, you can focus to the previous/next with <kbd>Up</kbd>
 
 Once a shortcut is attached to a control (slider or combobox) focusing action, as long as the shortcut keys are kept pressed, all mouse scrolling events are sent to this control even when the mouse is not over the widget (as it would normally require to record scrolling events). This allows a 2-hands mixed workflow where one hand, on the keyboard, selects the target control, while the other scrolls on the mouse to adjust the value. It replaces MIDI support that achieves the same through mapping exactly one potentiometer to exactly one control, which will quickly run out of knobs to control Ansel.
 
-When modules use several instances, shortcuts are always attached to the last-added instance.
+#### Module instances
+
+When several instances of modules are in use, shortcuts are always attached to the first-added instance, which may not necessarily be the first in the pixel pipeline: the first instance is always the unnamed, base instance, until it gets deleted (then the next replaces it).[^1]
+
+[^1]: The recommended workflow always uses the first instance as an average global setting, most likely to be accessed from keyboard for quick adjustments. Later instances are supposed to be local, often using masks, for which keyboard setting will not be enough if possible at all.
+
+All module instances that have an instance name set will get a private focusing action attached to the module (but none attached to its controls), using a path prefixed with `Modules/Instances/` and followed by `Module name/Instance name`. Since instance names are a property of each editing history, and not constant during the lifecycle of the whole application, this focusing action cannot be assigned a key shortcut and is accessible only from the global action search.
+
+When renaming the base instance of a module, it gets its own `Modules/Instances/` focusing action, but this is only a duplicate of the default one from `Modules/`, and it doesn't change the behaviour of the default actions (focusing the module and its controls).
 
 ## System integration
 
