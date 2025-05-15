@@ -19,7 +19,7 @@ User-designed watermarks should be placed into the directory `$HOME/.config/Anse
 
 The following is a list of variable strings that are supported for substitution within an SVG document.
 
-In addition to this list you can also use the variable strings defined in the [variables](../../../special-topics/variables.md) section.
+In addition to this list you can also use the variable strings defined in the [variables](../../..//variables.md) section.
 
 ```
 $(WATERMARK_TEXT)             A short free text (max. 63 characters)

@@ -32,7 +32,7 @@ Actions (other than widget focusing ones) don't target widgets at all, and calli
 ### Finding default shortcuts, setting new ones
 
 {{< note >}}
-__A popup window__ showing all available actions and their defined keys is available from the __global menu__, under _Edit_ → _Keyboard shortcuts…_. This window is meant to be at the same time a cheatsheet and a controller to edit shortcuts.
+__A popup window__ showing all available actions and their defined keys is available from the __global menu__, under _Edit_ 🡒 _Keyboard shortcuts…_. This window is meant to be at the same time a cheatsheet and a controller to edit shortcuts.
 {{< /note >}}
 
 {{< figure src="/shortcuts-popup.jpg" caption="The shortcuts window" />}}
@@ -70,7 +70,7 @@ The shortcuts popup window has __a double search-engine__:
 
 ### Vimkey-like, global action search
 
-All the available actions can be searched and triggered from anywhere in the software, using a vimkey-like command with auto-completion. The feature is available from the global menu, under _Help_ → _Search actions_ (default shortcut : <kbd>Ctrl</kbd>+<kbd>P</kbd>).
+All the available actions can be searched and triggered from anywhere in the software, using a vimkey-like command with auto-completion. The feature is available from the global menu, under _Help_ 🡒 _Search actions_ (default shortcut : <kbd>Ctrl</kbd>+<kbd>P</kbd>).
 
 {{< figure src="/actions-search.jpg" caption="The action search" />}}
 

@@ -4,7 +4,7 @@ date: 2025-05-15
 weight: 04
 ---
 
-Ansel keeps a database of all images it knows, that is all images that were [imported](import.md), until you actively remove them from the library (global menu : _File_ → _Remove from library_). The library stores the filesystem path of the images, their metadata and their editing history.
+Ansel keeps a database of all images it knows, that is all images that were [imported](import.md), until you actively remove them from the library (global menu : _File_ 🡒 _Remove from library_). The library stores the filesystem path of the images, their metadata and their editing history.
 
 {{< warning >}}
 Ansel does not listen to the content of filesystem folders, meaning it will not be notified if imported images are (re)moved on the filesystem. You will need to manually update the pathes if that is the case, or you can move those files directly with Ansel (under the global menu _File_).

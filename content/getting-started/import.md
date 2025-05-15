@@ -12,7 +12,7 @@ The library is also used to keep track of image collections (by tags, folders, E
 
 [^1]: or as binary blobs, but still : we store the recipes, not the results.
 
-The import modal window can be accessed from the global menu _File_ → _Import..._.
+The import modal window can be accessed from the global menu _File_ 🡒 _Import..._.
 
 ## Two kinds of imports
 
@@ -32,7 +32,7 @@ You will need to ensure that those images stay available on the same storage in 
 
 ### Importing with copy
 
-When emptying your memory card to a permanent storage, that is when you copy the files before importing to the library, you can rename files in batch and split them automatically into subfolders. This is done through the _project directory naming pattern_ and _file naming pattern_ fields, using [variables](../special-topics/variables.md). The final path of each image imported with copy will be `Base directory / Project directory / Filename`, where `Base directory` will be selected directly from the filesystem (usually the user's `Pictures` default folder), without variables.
+When emptying your memory card to a permanent storage, that is when you copy the files before importing to the library, you can rename files in batch and split them automatically into subfolders. This is done through the _project directory naming pattern_ and _file naming pattern_ fields, using [variables](..//variables.md). The final path of each image imported with copy will be `Base directory / Project directory / Filename`, where `Base directory` will be selected directly from the filesystem (usually the user's `Pictures` default folder), without variables.
 
 Some particular variable's values can be set from the import window :
 
