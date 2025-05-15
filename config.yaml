@@ -11,6 +11,20 @@ markup:
     ordered: false
     startLevel: 2
 
+module:
+  imports:
+  - disable: false
+    ignoreConfig: false
+    ignoreImports: false
+    path: github.com/aurelienpierreeng/ansel-website/themes/ansel
+  mounts:
+  - disableWatch: false
+    excludeFiles: null
+    includeFiles: null
+    lang: ""
+    source: content
+    target: content/doc
+
 languages:
   en:
     title: Ansel user manual
@@ -66,3 +80,6 @@ ignoreFiles:
 - \.svg$
 - \.odg$
 - \.xcf$
+
+ignoreLogs:
+- warning-goldmark-raw-html
