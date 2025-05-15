@@ -50,7 +50,7 @@ Top toolbar
 Bottom panel
 : Provides buttons to access to view-specific settings and shortcuts. Can be hidden and shown by pressing <kbd>Shift + Ctrl + B</kbd>
 
-[Filmstrip](../../modules/utility-modules/shared/filmstrip.md)
+[Filmstrip](./toolboxes/filmstrip.md)
 : An optional panel that can be enabled at the bottom of the screen in Darkroom, Maps and Print view to display a filmstrip of images in the current collection. Can be shown and hidden by pressing <kbd>Shift + Ctrl + F</kbd>.
 
 ### Resizing
@@ -70,7 +70,7 @@ The size and visibility of the panels are stored independently for each view.
 The top panel is common to all Ansel views and provides access to a number of common functions.
 
 Filter / sort
-: Choose how to filter and sort the images. Criteria can be altered in the [collection filters](../../modules/utility-modules/shared/collections.md) module.
+: Choose how to filter and sort the images. Criteria can be altered in the [collection filters](./toolboxes/collections.md) module.
 
 Sort order
 : Switch the sort order (ascending / descending).
@@ -87,7 +87,7 @@ Preferences
 ### Bottom toolbar
 
 Grouping
-: Expand or collapse [grouped images](../../views/lighttable/digital-asset-management/grouping.md).
+: Expand or collapse [grouped images](./lighttable/digital-asset-management/grouping.md).
 
 Thumbnail overlays
 : Define what information is overlaid on to thumbnails in the lighttable/filmstrip.
@@ -95,11 +95,11 @@ Thumbnail overlays
 
 ### Filmstrip
 
-The filmstrip, when enabled, is shown at the bottom of the screen and displays the images from the current [collection](../../views/lighttable/digital-asset-management/collections.md) (set in the lighttable view). You can navigate the filmstrip by scrolling with the mouse wheel or with
+The filmstrip, when enabled, is shown at the bottom of the screen and displays the images from the current [collection](../getting-started/library.md) (set in the lighttable view). You can navigate the filmstrip by scrolling with the mouse wheel or with
 
 The filmstrip allows you to interact with images while you are not in the lighttable view. For example, while developing an image in darkroom mode, you can switch to another image to by clicking its thumbnail in the filmstrip. You can copy & paste the history stack using keyboard shortcuts (<kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>).
 
-See the [filmstrip](../../modules/utility-modules/shared/filmstrip.md) module documentation for more information.
+See the [filmstrip](./toolboxes/filmstrip.md) module documentation for more information.
 
 
 ## Keyboard shortcuts

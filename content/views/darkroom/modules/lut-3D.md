@@ -32,7 +32,7 @@ Camera log LUTs (as F-log or S-Log3) are different to color-grading and film-loo
 ## module controls
 
 file selection
-: Choose the 3D LUT file to use. File selection is inactive if the 3D LUT root folder has not been defined in [preferences > processing](../../preferences-settings/processing.md).
+: Choose the 3D LUT file to use. File selection is inactive if the 3D LUT root folder has not been defined in [preferences > processing](../../../preferences-settings/processing.md).
 
 application color space
 : A 3D LUT is defined relative to a specific color space. Choose the color space for which the selected 3D LUT file has been built. Cube files are usually related to REC.709 while most others are related to sRGB.

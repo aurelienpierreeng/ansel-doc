@@ -52,7 +52,7 @@ The user must supply an input filename and an output filename. All other paramet
 : Limit the height of the exported image to the given number of pixels.
 
 `--hq <0|1|true|false>`
-: Define whether to use high quality resampling during export (see the [export](../../modules/utility-modules/shared/export.md) module reference for more details). Defaults to true.
+: Define whether to use high quality resampling during export (see the [export](../views/toolboxes/export.md) module reference for more details). Defaults to true.
 
 `--upscale <0|1|true|false>`
 : Define whether allow upscaling during export. Defaults to false.
@@ -73,13 +73,13 @@ The user must supply an input filename and an output filename. All other paramet
 : Specify input file or folder, can be used multiple times. This option cannot be combined with `<input file or folder>`.
 
 `--icc-type <type>`
-: Specify the ICC profile type, which is the same as specifying the "output profile" in the [_output color profile_](../../modules/processing-modules/output-color-profile.md) module. Defaults to "image specified". Use `--help icc-type` to obtain a list of the supported types. See the _output color profile_ module reference for a more detailed description of the available options.
+: Specify the ICC profile type, which is the same as specifying the "output profile" in the [_output color profile_](../views/darkroom/modules/output-color-profile.md) module. Defaults to "image specified". Use `--help icc-type` to obtain a list of the supported types. See the _output color profile_ module reference for a more detailed description of the available options.
 
 `--icc-file <file>`
 : Specify the ICC profile filename. Defaults to an empty filename.
 
 `--icc-intent <intent>`
-: Specify the rendering intent. Defaults to "image specified". Use `--help icc-intent` to obtain a list of the supported intents. See [rendering intent](../../color-management/rendering-intent) for a more detailed description of the available options.
+: Specify the rendering intent. Defaults to "image specified". Use `--help icc-intent` to obtain a list of the supported intents. See [rendering intent](../    color-management/rendering-intent) for a more detailed description of the available options.
 
 `--verbose`
 : Enables verbose output.
@@ -92,7 +92,7 @@ The user must supply an input filename and an output filename. All other paramet
 
 ## export options
 
-Export options for Ansel are defined as configuration items, set from within the [export module](../../modules/utility-modules/shared/export.md). There are two ways to alter this configuration when using `Ansel-cli`, as described below.
+Export options for Ansel are defined as configuration items, set from within the [export module](../views/toolboxes/export.md). There are two ways to alter this configuration when using `Ansel-cli`, as described below.
 
 ### use the export module
 

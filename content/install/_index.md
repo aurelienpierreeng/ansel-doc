@@ -110,5 +110,5 @@ In this configuration folder, the image editing histories are stored in the file
 If you upgrade, for example, from version 2.6 to 3.0, both files are backed up under the respective names `library.db-pre-3.0`  and `data.db-pre-3.0`. If, for some reason, you want to go back to the previous 2.6 version after having upgraded to 3.0, you just need to remove the `pre-3.0` suffixes from the file names to restore your back-ups. Any editing you may have done with the 3.0 version will be lost without a chance of being recovered in that case, unless you manually back up `library.db` and `data.db` for a future where you will use the 3.0 version.
 
 {{< warning >}}
-There is no backup mechanism in place for the [XMP sidecar files](./overview/sidecar-files/sidecar.md), but they can be restored from the `library` database, which means you need to keep it clean and up-to-date.
+There is no backup mechanism in place for the [XMP sidecar files](../views/lighttable/digital-asset-management/sidecar.md), but they can be restored from the `library` database, which means you need to keep it clean and up-to-date.
 {{</ warning >}}

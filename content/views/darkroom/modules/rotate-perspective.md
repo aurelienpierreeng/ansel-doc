@@ -73,7 +73,7 @@ Once you are happy with the applied perspective corrections, you may wish to per
 ## module controls
 
 rotation
-: Control the rotation of the image around its center to correct for a skewed horizon. To rotate by more than the default soft limit of ten degrees, right click and enter the desired value up to 180 degrees (see [module controls](../../views/darkroom/processing-modules/module-controls.md)).
+: Control the rotation of the image around its center to correct for a skewed horizon. To rotate by more than the default soft limit of ten degrees, right click and enter the desired value up to 180 degrees.
 
 automatic cropping
 : When activated, this feature crops the image to remove any black areas at the edges caused by the distortion correction. You can either crop to the "largest area", or to the largest rectangle that maintains the original aspect ratio ("original format"). In the latter case you can manually adjust the automatic cropping result by clicking in the clip region and moving it around. The size of the region is modified automatically to exclude any black areas.
@@ -109,7 +109,7 @@ fit
 : Set the distortion correction sliders automatically based on the identified structure (see workflow section for details).
 
 show guides
-: Tick the box to show guide overlays whenever the module is activated. Click the icon on the right to control the properties of the guides. See [guides & overlays](../utility-modules/darkroom/guides-overlays.md) for details.
+: Tick the box to show guide overlays whenever the module is activated. Click the icon on the right to control the properties of the guides. See [guides & overlays](../../toolboxes/guides-overlays.md) for details.
 
 ## examples
 

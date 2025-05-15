@@ -9,10 +9,10 @@ author: "people"
 
 Ansel supports variable substitution in a number of modules and preference settings. For example:
 
-- Defining file names in the [export](../modules/utility-modules/shared/export.md) module and [import tool](../getting-started/import.md),
-- Displaying image information in the darkroom's [image information line](../modules/utility-modules/darkroom/image-info-line.md),
+- Defining file names in the [export](../views/toolboxes/export.md) module and [import tool](../getting-started/import.md),
+- Displaying image information in the darkroom's image information line,
 - Displaying image information in the lighttable's overlays and tooltips (see [preferences > lighttable](../preferences-settings/lighttable.md))
-- Placing text on an image in the [_watermark_](../modules/processing-modules/watermark.md) processing module.
+- Placing text on an image in the [_watermark_](../views/darkroom/modules/watermark.md) processing module.
 
 Most, if not all text entries that use variables implement auto-completion as soon as you start typing `$(`.
 

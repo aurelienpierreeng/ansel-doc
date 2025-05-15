@@ -27,7 +27,7 @@ pixel interpolator (scaling)
 : lanczos3 can cause pixel overshoots leading to artefacts but sometimes gives a more crisp visual appearance. This option is therefore only provided for transforming (scaling) algorithms and is the default value.
 
 3D lut root folder
-: Define the root folder (and sub-folders) containing Lut files used by the [_lut 3D_](../modules/processing-modules/lut-3D.md) module
+: Define the root folder (and sub-folders) containing Lut files used by the [_lut 3D_](../views/darkroom/modules/lut-3D.md) module
 
 detect monochrome previews
 : Enable this option to analyse images during import and tag them with the `darkroom|mode|monochrome` tag if they are found to be monochrome. The analysis is based on the preview image embedded within the imported file. This makes for a more convenient workflow when working with monochrome images, but it slows down the import, so this setting is disabled by default.
@@ -44,7 +44,7 @@ Ansel resources
 : See the [memory & performance tuning](../performance/mem-performance.md#ansel-resources) section for more information.
 
 enable disk backend for thumbnail cache
-: If activated, Ansel stores all thumbnails on disk as a secondary cache, and thereby keeps thumbnails accessible if they are dropped from the primary cache. This needs more disk space but speeds up the [lighttable](../lighttable/_index.md) view as it avoids the reprocessing of thumbnails (default on).
+: If activated, Ansel stores all thumbnails on disk as a secondary cache, and thereby keeps thumbnails accessible if they are dropped from the primary cache. This needs more disk space but speeds up the [lighttable](../views/lighttable/_index.md) view as it avoids the reprocessing of thumbnails (default on).
 
 enable disk backend for full preview cache
 : If enabled, Ansel writes full preview images to disk (`.cache/Ansel/`) when evicted from the memory cache. Note that this can take a lot of storage (several gigabytes for 20k images) and Ansel will never delete cached images. It's safe to delete these manually if you want. Enabling this option will greatly improve lighttable performance when zooming an image in full preview mode (default off).
@@ -95,10 +95,10 @@ Raw file extensions to load through Libraw
 : case-insensitive, coma-separated list of the file extensions. Default : `cr3`.
 
 Camera models to load through Libraw
-: case-insensitive, coma-separated list of the camera models as they appear in the [_Display metadata_](../modules/utility-modules/shared/image-information.md) module, under the _model_ field. You may have to enable this field using the preferences of the module if it does not appear in the widget.
+: case-insensitive, coma-separated list of the camera models as they appear in the [_Display metadata_](../views/toolboxes/image-information.md) module, under the _model_ field. You may have to enable this field using the preferences of the module if it does not appear in the widget.
 
 Camera makers to load through Libraw
-: case-insensitive, coma-separated list of the camera manufacturers as they appear in the [_Display metadata_](../modules/utility-modules/shared/image-information.md) module, under the _maker_ field. You may have to enable this field using the preferences of the module if it does not appear in the widget.
+: case-insensitive, coma-separated list of the camera manufacturers as they appear in the [_Display metadata_](../views/toolboxes/image-information.md) module, under the _maker_ field. You may have to enable this field using the preferences of the module if it does not appear in the widget.
 
 {{< note >}}
 For Canon files using the `.CR3` format, the _model_ and _maker_ metadata are not decoded properly and left blank. You have to filter them mandatorily by file extension.

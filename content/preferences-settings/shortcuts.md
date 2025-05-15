@@ -5,7 +5,7 @@ id: shortcuts
 weight: 120
 draft: false
 ---
-Some actions in Ansel can be performed with a keyboard shortcut. A table of key shortcuts is available in _Help > Table of key shortcuts_. 
+Some actions in Ansel can be performed with a keyboard shortcut. A table of key shortcuts is available in _Help > Table of key shortcuts_.
 
 **Note:** The table shows different key shortcuts for different Views.
 
@@ -66,7 +66,7 @@ Effect
 
 ## Common actions
 
-The following is a list of some of the actions to which you can assign shortcuts, organized by widget type. 
+The following is a list of some of the actions to which you can assign shortcuts, organized by widget type.
 
 ### Global
 
@@ -95,7 +95,7 @@ _Reset_
 : Acts as a _button_ that resets all module parameters when activated. The _ctrl-activate_ action can be used to re-apply any automatic presets for that module.
 
 _Presets_
-: Allows you to select actions from the [Presets](../views/darkroom/processing-modules/presets.md) menu (e.g. edit, update, previous, next). The default action, when assigning a shortcut to a _preset_ element, is to display a list of the available presets for selection. 
+: Allows you to select actions from the presets menu (e.g. edit, update, previous, next). The default action, when assigning a shortcut to a _preset_ element, is to display a list of the available presets for selection.
 
 The default action, when assigning a shortcut to a utility module, is to _toggle_ the _show_ element (expand/collapse the module).
 
@@ -112,7 +112,7 @@ _Focus_
 : Acts as a _toggle_ that focuses or defocuses the module.
 
 _Instance_
-: Allows you to select actions from the [Multiple-instance](../views/darkroom/processing-modules/multiple-instances.md) menu (e.g. move up/down, create new instance). The default action, when assigning a shortcut to the _instance_ element, is to display a list of the available options for selection; 
+: Allows you to select actions from the multiple-instance menu (e.g. move up/down, create new instance). The default action, when assigning a shortcut to the _instance_ element, is to display a list of the available options for selection;
 
 If an action affects a processing module that can have multiple instances, you can choose which instance to adjust with a given shortcut. By default, all actions will affect the "preferred" instance, as defined using the settings in [Preferences > Miscellaneous > Shortcuts with multiple instances](./miscellaneous.md#shortcuts-with-multiple-instances).
 
@@ -125,7 +125,7 @@ _Selection_
 : Allows values to be selected from the dropdown list in various ways. The default action, when assigning a shortcut to a dropdown, is to display a popup _edit_ box with a list of the available values for selection.
 
 _Button_
-: A standard _button_ element that allows the button to the right of the dropdown (if present) to be activated. For example, the _aspect_ dropdown in the [_Crop_](../modules/processing-modules/crop.md) module has a button that allows the crop controls to be changed from portrait to landscape and vice versa.
+: A standard _button_ element that allows the button to the right of the dropdown (if present) to be activated. For example, the _aspect_ dropdown in the [_Crop_](../views/darkroom/modules/crop.md) module has a button that allows the crop controls to be changed from portrait to landscape and vice versa.
 
 ### Sliders
 

@@ -20,10 +20,7 @@ scroll down to increase mask parameters
 : By default, scrolling your mouse up increases the value of the relevant shape parameters in [drawn masks](../views/darkroom/masking-and-blending/masks/drawn.md). Set this preference to reverse the behavior (default off).
 
 pattern for the image information line
-: Set the information to be displayed in the [image information line](../modules/utility-modules/darkroom/image-info-line.md). You can use any variables in the [variables](../special-topics/variables.md) section as well as `$(NL)` for a new line. You can also include [formatting](../special-topics/variables.md#formatting) (bold, italic, colors etc).
-
-position of the image information line
-: Choose the darkroom panel in which the [image information line](../modules/utility-modules/darkroom/image-info-line.md) is displayed. Choose between “top left” “top right” “top center” “bottom” and “hidden” (default "bottom").
+: Set the information to be displayed in the image information line, at the right of the top-most toolbar. You can use any variables in the [variables](../special-topics/variables.md) section as well as `$(NL)` for a new line. You can also include [formatting](../special-topics/variables.md#formatting) (bold, italic, colors etc).
 
 border around image in darkroom mode
 : Display the center image in darkroom mode with an outside border of the given number of pixels (default 20).
@@ -40,10 +37,10 @@ hide built-in presets for processing modules
 : If enabled, only user-defined presets will be shown in the presets menu for processing modules -- built-in presets will be hidden (default off).
 
 show the guides widget in modules UI
-: Enable this to show the local [guides & overlays](../modules/utility-modules/darkroom/guides-overlays.md#local-guides) interface directly within the UI of the modules that support it (default on).
+: Enable this to show the local [guides & overlays](../views/toolboxes/guides-overlays.md#local-guides) interface directly within the UI of the modules that support it (default on).
 
 show right-side buttons in processing module headers
-: Choose whether to show the four buttons (mask indicator, multi-instance menu, reset, presets menu) on the right-hand-side of the [module header](../views/darkroom/processing-modules/module-header.md) for processing modules. These buttons will always appear when the mouse is over the module. At other times they will be shown or hidden according to this preference selection:
+: Choose whether to show the four buttons (mask indicator, multi-instance menu, reset, presets menu) on the right-hand-side of the module header for processing modules. These buttons will always appear when the mouse is over the module. At other times they will be shown or hidden according to this preference selection:
 : - _always_: always show all buttons
 : - _active_: only show the buttons when the mouse is over the module
 : - _dim_: buttons are dimmed when mouse is not over the module

@@ -33,7 +33,7 @@ It is recommanded to place the _final resampling_ before the _output color profi
 
 ## Controls
 
-The type of interpolation used for this final rescaling is defined globally in the software, in the [_preferences_](../../preferences-settings/processing.md), under the _pixel interpolator (scaling)_ parameter. _Bilinear_ is safe, fast and robust but will typically be slightly blurrier. _Bicubic_ offers the best all-around quality/cost ratio. _Lanczos_ interpolator are the sharpest but are known to [overshoot](https://mazzo.li/posts/lanczos.html#sinc-problems) at very contrasty edges and may create ringing.
+The type of interpolation used for this final rescaling is defined globally in the software, in the [_preferences_](../../../preferences-settings/processing.md), under the _pixel interpolator (scaling)_ parameter. _Bilinear_ is safe, fast and robust but will typically be slightly blurrier. _Bicubic_ offers the best all-around quality/cost ratio. _Lanczos_ interpolator are the sharpest but are known to [overshoot](https://mazzo.li/posts/lanczos.html#sinc-problems) at very contrasty edges and may create ringing.
 
 ## Enhancements
 

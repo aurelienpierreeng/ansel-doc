@@ -13,7 +13,7 @@ A location is shown as a shape on the map when selected. Initially each location
 
 A location can also be created from an OpenStreetMap region (city/country) polygon. To achieve this, first make sure the _max polygon points_ parameter is large enough (some country polygons use more than 150,000 points). Then select the desired location in the [find location](./find-location.md) module. When the corresponding region shape is displayed, a polygon symbol becomes available in the "shape" control (see below). Select it to create the new location.
 
-Each location is stored as tag entry under the geotagging collection in the [collections](../shared/collections.md) module. The pipe “|” character can be used to insert a new level (a group of locations).
+Each location is stored as tag entry under the geotagging collection in the [collections](./collections.md) module. The pipe “|” character can be used to insert a new level (a group of locations).
 
 ## module controls
 

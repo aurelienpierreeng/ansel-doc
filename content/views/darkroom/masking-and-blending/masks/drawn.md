@@ -8,9 +8,9 @@ draft: false
 
 With the drawn mask feature you can construct a mask by drawing shapes directly onto the image canvas. Shapes can be used alone or in combination. Once a shape has been drawn on an image it can be adjusted, removed, or reused in other modules.
 
-Shapes are stored internally as vectors and are rendered with the required resolution during pixelpipe processing. Shapes are expressed in the coordinate system of the original image and are transformed along with the rest of the image by any active distorting modules in the pipe ([_lens correction_](../../../../modules/processing-modules/lens-correction.md), [_rotate and perspective_](../../../../modules/processing-modules/rotate-perspective.md) for example). This means that a shape will always work on the same image area regardless of any modifications that may be subsequently applied.
+Shapes are stored internally as vectors and are rendered with the required resolution during pixelpipe processing. Shapes are expressed in the coordinate system of the original image and are transformed along with the rest of the image by any active distorting modules in the pipe ([_lens correction_](../../modules/lens-correction.md), [_rotate and perspective_](../../modules/rotate-perspective.md) for example). This means that a shape will always work on the same image area regardless of any modifications that may be subsequently applied.
 
-The controls required to create and alter drawn masks may be enabled by selecting either the "drawn mask" or "drawn & parametric mask" icon at the bottom of a module. You can also create and edit shapes using the [mask manager](../../../../modules/utility-modules/darkroom/mask-manager.md) module.
+The controls required to create and alter drawn masks may be enabled by selecting either the "drawn mask" or "drawn & parametric mask" icon at the bottom of a module. You can also create and edit shapes using the [mask manager](../../../toolboxes/mask-manager.md) module.
 
 ## creating shapes
 
@@ -47,14 +47,14 @@ While in edit mode right-click on a shape to remove it.
 You can reuse shapes that you have drawn in other modules. Click on the shapes drop-down (next to the 'show and edit mask elements' button) to choose previously-drawn shapes individually or to use the same group of shapes as used by another module. The following options are available for selection:
 
 add existing shape
-: Choose either an individual shape or a group of shapes that you've drawn previously (either within the [mask manager](../../../../modules/utility-modules/darkroom/mask-manager.md) or from within the drawn mask of another module). If that shape or group is used elsewhere, any changes you make will be reflected everywhere the shape or group is used.
+: Choose either an individual shape or a group of shapes that you've drawn previously (either within the [mask manager](../../../toolboxes/mask-manager.md) or from within the drawn mask of another module). If that shape or group is used elsewhere, any changes you make will be reflected everywhere the shape or group is used.
 
 use same shapes as
 : Add a list of shapes used in another module to the current module's mask. This differs from the previous option in that it creates a new group of shapes, allowing shapes to be added to or removed from the group independently of the module from which they were copied. All shapes that are common to both groups remain linked.
 
 ## combining and managing shapes
 
-The [mask manager](../../../../modules/utility-modules/darkroom/mask-manager.md) module can be used to manage your drawn shapes. This module also allows you to group and combine drawn masks using set operators (union, intersection, difference, exclusion).
+The [mask manager](../../../toolboxes/mask-manager.md) module can be used to manage your drawn shapes. This module also allows you to group and combine drawn masks using set operators (union, intersection, difference, exclusion).
 
 ## shape distortions
 
@@ -99,9 +99,9 @@ gradient
 
 : The line has two anchor nodes which you can drag to change the rotation of the gradient. You can also set the rotation angle when placing the gradient shape by clicking and dragging to place the shape.
 
-: Gradient lines can also be curved by scrolling with your mouse while hovering close to the center line. This can be useful to counteract the distortion caused by the [_lens correction_](../../../../modules/processing-modules/lens-correction.md) module.
+: Gradient lines can also be curved by scrolling with your mouse while hovering close to the center line. This can be useful to counteract the distortion caused by the [_lens correction_](../../modules/lens-correction.md) module.
 
-: Depending on the module and the underlying image, using a gradient shape might provoke banding artifacts. You should consider activating the [_dithering_](../../../../modules/processing-modules/dithering.md) module to alleviate this.
+: Depending on the module and the underlying image, using a gradient shape might provoke banding artifacts. You should consider activating the [_dithering_](../../modules/dithering.md) module to alleviate this.
 
 ## reversing the polarity of a drawn mask
 

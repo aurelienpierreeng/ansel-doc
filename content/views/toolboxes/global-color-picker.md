@@ -11,7 +11,7 @@ Take color samples from the current darkroom image, display their values in mult
 
 The color picker is activated by pressing the color picker icon. The module's parameters will remain in effect until you leave the darkroom mode.
 
-Besides the global color picker described here, many Ansel modules (e.g. [_RGB curve_](../../processing-modules/rgb-curve.md)) also contain local color pickers which are used to set individual module parameters. You should be aware that these two forms of color picker do not always work in the same color space. The global color picker works in the histogram color space and takes its samples after the complete pixelpipe has been processed. Local color pickers run in the color space of the module in which they are activated and reflect the input or output data of that module within the pixelpipe.
+Besides the global color picker described here, many Ansel modules (e.g. [_RGB curve_](../darkroom/modules/rgb-curve.md)) also contain local color pickers which are used to set individual module parameters. You should be aware that these two forms of color picker do not always work in the same color space. The global color picker works in the histogram color space and takes its samples after the complete pixelpipe has been processed. Local color pickers run in the color space of the module in which they are activated and reflect the input or output data of that module within the pixelpipe.
 
 You can right-click on the sampled color values to copy them to the clipboard.
 
@@ -40,7 +40,7 @@ live samples
 : If you hover the mouse over the "delete" button of one of the live sample entries, the selected region for that sample will be highlighted in the image preview.
 
 display samples on image/vectorscope
-: When this checkbox is ticked, live sample locations are visually indicated on the image and the vectorscope view of the [scopes](../shared/scopes.md#vectorscope) module.
+: When this checkbox is ticked, live sample locations are visually indicated on the image and the vectorscope view of the [scopes](./scopes.md#vectorscope) module.
 
 restrict scope to selection
-: When this checkbox is ticked, only the values of the selected area or point are taken into account by the regular and waveform views of the [scopes](../shared/scopes.md) module. This allows you to see what tonal values are present in the selected area. When using a color picker in a processing module, this option restricts the scope to the picked area from the processing module instead of the global color picker.
+: When this checkbox is ticked, only the values of the selected area or point are taken into account by the regular and waveform views of the [scopes](./scopes.md) module. This allows you to see what tonal values are present in the selected area. When using a color picker in a processing module, this option restricts the scope to the picked area from the processing module instead of the global color picker.

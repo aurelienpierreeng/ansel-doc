@@ -9,7 +9,7 @@ view: darkroom
 
 Highlight areas of the image where color channels of the raw input file are clipped.
 
-Clipped color channels imply an overexposed image with loss of information in the affected areas. Some of this information may be recoverable using the [_highlight reconstruction_](../../processing-modules/highlight-reconstruction.md), [_color reconstruction_](../../processing-modules/color-reconstruction.md) or [_filmic rgb_](../../processing-modules/filmic-rgb.md) modules.
+Clipped color channels imply an overexposed image with loss of information in the affected areas. Some of this information may be recoverable using the [_highlight reconstruction_](../darkroom/modules/highlight-reconstruction.md), [_color reconstruction_](../darkroom/modules/color-reconstruction.md) or [_filmic rgb_](../darkroom/modules/filmic-rgb.md) modules.
 
 Click on the ![raw overexposed](raw-overexposed-icon.jpg) icon to show/hide the warning overlay. Right-click on the icon to open a dialog containing the following configuration parameters.
 

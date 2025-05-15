@@ -41,7 +41,7 @@ method
 clipping threshold
 : Manually adjust the clipping threshold against magenta highlights. You shouldn't need to adjust this.
 
-: Click the icon beside the slider to visualise what areas of the image are considered clipped (the clipping mask). If the clipping mask does not match the [RAW over-exposed warning](../utility-modules/darkroom/raw-overexposed.md), you may need to correct this value.
+: Click the icon beside the slider to visualise what areas of the image are considered clipped (the clipping mask). If the clipping mask does not match the [RAW over-exposed warning](../../toolboxes/raw-overexposed.md), you may need to correct this value.
 
 noise level (_guided laplacians_ mode only)
 : Add Poisson noise (natural photon noise such as you would find in sensor readings) to the clipped regions. For high-ISO images, the valid regions of the image will be noisy, but the reconstructed clipped areas will be smooth, which may look odd. Adding some noise in the reconstruction helps to visually blend the result with the rest of the image.

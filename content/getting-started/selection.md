@@ -1,7 +1,7 @@
 ---
 title: Image selection
 date: 2025-05-15
-weight: 03
+weight: 05
 ---
 
 Ansel allows batch-applying editing histories (through copy-pasting, or through styles) or metadata. The target images for those batch-operations are _selected_ images. But even single-image operations (like opening in [darkroom](../views/darkroom/_index.md) to edit, or editing metadata, copy/pasting, etc.) use selections.

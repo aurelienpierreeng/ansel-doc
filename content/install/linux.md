@@ -69,9 +69,9 @@ Automatic updates are not available at this point, you may use [AppImageUpdate](
 
 ### Caveats
 
-Though the Lensfun database of lens profiles is stored and up-to-date in the AppImage package, if you [installed a custom Lensfun database](lensfun‑update-data) at some point in your home directory (usually, by running the command `lensfun‑update-data`), this database can take precedence over the one shipped in the AppImage.
+Though the Lensfun database of lens profiles is stored and up-to-date in the AppImage package, if you installed a custom Lensfun database at some point in your home directory (usually, by running the command `lensfun‑update-data`), this database can take precedence over the one shipped in the AppImage.
 
-If you note that a relatively-new lens supposed to be supported by Lensfun doesn't appear to be supported in the [lens correction module](../modules/processing-modules/lens-correction.md), either run the `lensfun-update-data` command again, or simply delete the local database, usually located in `~/.local/share/lensfun/updates`.
+If you note that a relatively-new lens supposed to be supported by Lensfun doesn't appear to be supported in the [lens correction module](../views/darkroom/modules/lens-correction.md), either run the `lensfun-update-data` command again, or simply delete the local database, usually located in `~/.local/share/lensfun/updates`.
 
 ## Packages from Linux distributions repositories
 

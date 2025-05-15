@@ -32,7 +32,7 @@ Chromatic adaptation aims to predict how all surfaces in the scene would look if
 
 Chromatic adaptation is controlled within the Chromatic Adaptation Transformation (CAT) tab of the _color calibration_ module. When used in this way the _white balance_ module is still required as it needs to perform a basic white balance operation (connected to the input color profile values). This technical white balancing ("camera reference" mode) is a flat setting that makes grays lit by a standard D65 illuminant look achromatic, and makes the demosaicing process more accurate, but does not perform any perceptual adaptation according to the scene. The actual chromatic adaptation is then performed by the _color calibration_ module, on top of those corrections performed by the _white balance_ and _input color profile_ modules. The use of custom matrices in the _input color profile_ module is therefore discouraged. Additionally, the RGB coefficients in the _white balance_ module need to be accurate in order for this module to work in a predictable way.
 
-The _color calibration_ and _white balance_ modules can be automatically applied to perform chromatic adaptation for new edits by setting the chromatic adaptation workflow option ([preferences > processing > auto-apply chromatic adaptation defaults](../../preferences-settings/processing.md)) to "modern". If you prefer to perform all white balancing within the _white balance_ module, a "legacy" option is also provided. Neither option precludes the use of other modules (such as [_color balance RGB_](./color-balance-rgb.md)) for creative color grading further along the pixel pipeline.
+The _color calibration_ and _white balance_ modules can be automatically applied to perform chromatic adaptation for new edits by setting the chromatic adaptation workflow option ([preferences > processing > auto-apply chromatic adaptation defaults](../../../preferences-settings/processing.md)) to "modern". If you prefer to perform all white balancing within the _white balance_ module, a "legacy" option is also provided. Neither option precludes the use of other modules (such as [_color balance RGB_](./color-balance-rgb.md)) for creative color grading further along the pixel pipeline.
 
 By default, _color calibration_ performs chromatic adaptation by:
 
@@ -42,9 +42,9 @@ By default, _color calibration_ performs chromatic adaptation by:
 
 For consistency, the _color calibration_ module's default settings always assume that the standard matrix is used in the _input color profile_ module -- any non-standard settings in this module are ignored. However, _color calibration_'s defaults can read any auto-applied preset in the _white balance_ module.
 
-It is also worth noting that, unlike the _white balance_ module, _color calibration_ can be used with [masks](../../views/darkroom/masking-and-blending/masks/_index.md). This means that you can selectively correct different parts of the image to account for differing light sources.
+It is also worth noting that, unlike the _white balance_ module, _color calibration_ can be used with [masks](../masking-and-blending/masks/_index.md). This means that you can selectively correct different parts of the image to account for differing light sources.
 
-To achieve this, create an instance of the _color calibration_ module to perform global adjustments using a mask to exclude those parts of the image that you wish to handle differently. Then create a second instance of the module reusing the mask from the first instance (inverted) using a [raster mask](../../views/darkroom/masking-and-blending/masks/raster.md).
+To achieve this, create an instance of the _color calibration_ module to perform global adjustments using a mask to exclude those parts of the image that you wish to handle differently. Then create a second instance of the module reusing the mask from the first instance (inverted) using a [raster mask](../masking-and-blending/masks/raster.md).
 
 ### CAT tab workflow
 
@@ -418,4 +418,4 @@ It is possible to alleviate this issue, if you have a computer screen calibrated
 1. Display a white surface on your screen, for example by opening a blank canvas in any photo editing software you like
 2. Take a blurry (out of focus) picture of that surface with your camera, ensuring that you don't have any "parasite" light in the frame, you have no clipping, and are using an aperture between f/5.6 and f/8,
 3. Open the picture in Ansel and extract the white balance by using the spot tool in the _white balance_ module on the center area of the image (non-central regions might be subject to chromatic aberrations). This will generate a set of 3 RGB coefficients.
-4. [Save a preset](../../views/darkroom/processing-modules/presets.md#creating-and-editing-presets) for the _white balance_ module with these coefficients and auto-apply it to any color RAW image created by the same camera.
+4. Save a preset for the _white balance_ module with these coefficients and auto-apply it to any color RAW image created by the same camera.

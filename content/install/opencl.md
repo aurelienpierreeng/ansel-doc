@@ -17,7 +17,7 @@ Nevertheless, OpenCL will bring a substantial speed-up to your image processing 
 
 ## Scope of OpenCL
 
-OpenCL is used only by the [image processing modules](../modules/processing-modules/_index.md) that have an OpenCL kernel available as an alternative to the CPU (plain C) code. This is optional, and not all modules have an OpenCL kernel, depending on the skills, willingness and available hardware of the developer who programmed them. [^1]
+OpenCL is used only by the [image processing modules](../views/darkroom/modules/_index.md) that have an OpenCL kernel available as an alternative to the CPU (plain C) code. This is optional, and not all modules have an OpenCL kernel, depending on the skills, willingness and available hardware of the developer who programmed them. [^1]
 
 [^1]: Plain C code can rarely be translated directly to OpenCL kernels and needs extra effort to adapt it to the different memory layout.
 

@@ -11,7 +11,7 @@ Manage tags attached to images.
 
 Tags provide a means of adding information to images using a keyword dictionary. You can also manage tags as a hierarchical tree, which can be useful when their number becomes large.
 
-Tags are physically stored in [XMP sidecar files](../../../overview/sidecar-files/_index.md) as well as in Ansel's library database and can be included in [exported](./export.md) images.
+Tags are physically stored in [XMP sidecar files](../lighttable/digital-asset-management/sidecar.md) as well as in Ansel's library database and can be included in [exported](./export.md) images.
 
 ## definitions
 

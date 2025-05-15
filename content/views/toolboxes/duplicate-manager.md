@@ -13,4 +13,4 @@ The duplicate manager lists each version of the current darkroom image along wit
 
 The buttons at the bottom of the module allow you to create new duplicates of the current image. You can either create a 'virgin' version (with an empty history stack) using the "original" button or an exact duplicate of the current edit using the "duplicate" button.
 
-A version number is displayed to the right of each thumbnail. Click in the area below the version number to enter a description against that version of the image. This description is stored in the _version name_ metadata tag, which can also be edited within the [metadata editor](../shared/metadata-editor.md) module in the lighttable view.
+A version number is displayed to the right of each thumbnail. Click in the area below the version number to enter a description against that version of the image. This description is stored in the _version name_ metadata tag, which can also be edited within the [metadata editor](./metadata-editor.md) module in the lighttable view.

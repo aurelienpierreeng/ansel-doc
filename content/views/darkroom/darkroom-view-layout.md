@@ -11,22 +11,22 @@ draft: false
 
 From top to bottom:
 
-[navigation](../../modules/utility-modules/darkroom/navigation.md)
+[navigation](../../views/toolboxes/navigation.md)
 : Navigate and zoom the center view.
 
-[snapshots](../../modules/utility-modules/darkroom/snapshots.md)
+[snapshots](../../views/toolboxes/snapshots.md)
 : Take and view snapshots for comparison with the current edit.
 
-[duplicate manager](../../modules/utility-modules/darkroom/duplicate-manager.md)
+[duplicate manager](../../views/toolboxes/duplicate-manager.md)
 : View and manage duplicates.
 
-[global color picker](../../modules/utility-modules/darkroom/global-color-picker.md)
+[global color picker](../../views/toolboxes/global-color-picker.md)
 : Select and display color information taken from parts of the image.
 
-[image information](../../modules/utility-modules/shared/image-information.md)
+[image information](../../views/toolboxes/image-information.md)
 : Display information about the current image.
 
-[mask manager](../../modules/utility-modules/darkroom/mask-manager.md)
+[mask manager](../../views/toolboxes/mask-manager.md)
 : View and edit drawn shapes.
 
 
@@ -34,19 +34,13 @@ From top to bottom:
 
 From top to bottom:
 
-[scopes](../../modules/utility-modules/shared/scopes.md)
+[scopes](../../views/toolboxes/scopes.md)
 : A graphical depiction of the image's light levels and colors. This module can be moved to the left-hand panel if desired (see [preferences > miscellaneous > position of the scopes module](../../preferences-settings/miscellaneous.md)).
 
-[module groups](./organization/module-groups.md)
-: Select module groups (if enabled).
-
-search module
-: Search for a module (if enabled).
-
-[processing modules](../../modules/processing-modules/_index.md)
+[processing modules](../../views/darkroom/modules/_index.md)
 : The modules used to process an image.
 
-[module order](../../modules/utility-modules/darkroom/module-order.md)
+[module order](../../views/toolboxes/module-order.md)
 : Choose the order in which processing modules are executed in the pixelpipe.
 
 ## bottom panel
@@ -77,4 +71,4 @@ From left to right:
 ![guides-overlays-icon](guides-overlays-icon.jpg)
 : Left-click to switch global guide overlays on/off and right-click to change the guide settings, including the color of all on-image drawing (masks, crop guides etc.)
 
-You can also enable the [filmstrip](../../modules/utility-modules/shared/filmstrip.md) module at the bottom of the screen to allow you select and interact with the currently selected collection in the [lighttable](../lighttable/_index.md) view.
+You can also enable the [filmstrip](../../views/toolboxes/filmstrip.md) module at the bottom of the screen to allow you select and interact with the currently selected collection in the [lighttable](../lighttable/_index.md) view.

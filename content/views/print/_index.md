@@ -10,7 +10,7 @@ author: "people"
 
 The Print view is optional and needs to be activated in [Preferences > Other views](../../preferences-settings/other-views.md). This view allows you to print your images. Because printing is not easy, there are many technical aspects to be taken into account.
 
-After selecting an image in the [Lighttable view](../lighttable/_index.md) you can enter the [Print settings](../../modules/utility-modules/print/print-settings.md) module to adjust printer settings and initiate printing.
+After selecting an image in the [Lighttable view](../lighttable/_index.md) you can enter the [Print settings](../toolboxes/print-settings.md) module to adjust printer settings and initiate printing.
 
 This module supports the printer's ICC profile, which is somewhat mandatory if you want to obtain a high quality print close to the image displayed on the screen.
 

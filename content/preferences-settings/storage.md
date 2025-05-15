@@ -6,7 +6,6 @@ weight: 100
 draft: false
 ---
 
-The following options are related to Ansel's library database and [XMP sidecar files](../overview/sidecar-files/_index.md).
 
 ## database
 

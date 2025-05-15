@@ -30,7 +30,7 @@ on conflict
 
 : - _create unique filename_: Automatically choose a unique new file name by appending an integer to name of the conflicting file.
 
-: - _overwrite_: Automatically overwrite existing files. This option will present you with a confirmation dialog in order to protect you from accidental data loss -- you can disable this in [preferences > security > ask before exporting in overwrite mode](../../../preferences-settings/security.md). _**Note:** This dialog is not presented per-file but as a one-off confirmation before the export job starts._
+: - _overwrite_: Automatically overwrite existing files. This option will present you with a confirmation dialog in order to protect you from accidental data loss -- you can disable this in [preferences > security > ask before exporting in overwrite mode](../../preferences-settings/security.md). _**Note:** This dialog is not presented per-file but as a one-off confirmation before the export job starts._
 
 : - _skip_: Do not export images where the destination filename already exists.
 
@@ -83,16 +83,16 @@ store masks
 : Store masks as layers in exported image. Only works for some image formats (currently TIFF and XCF).
 
 profile
-: The output color profile. Select “image settings” if you want the settings in the [_output color profile_](../../processing-modules/output-color-profile.md) module of the individual images to be respected.
+: The output color profile. Select “image settings” if you want the settings in the [_output color profile_](../darkroom/modules/output-color-profile.md) module of the individual images to be respected.
 
 intent
-: This option lets you define the intent -- the way in which Ansel will handle out-of-gamut colors. See [rendering intent](../../../color-management/rendering-intent) for a more detailed description of the available options.
+: This option lets you define the intent -- the way in which Ansel will handle out-of-gamut colors. See [rendering intent](../../color-management/rendering-intent) for a more detailed description of the available options.
 
 style
-: Choose a [style](../lighttable/styles.md) which Ansel will combine with the existing history stack to generate the output image. These history items are only added temporarily -- the original history stack is not overwritten. You can use this feature to add processing steps and parameters that you want to be applied specifically to images before export. For example you may define a style that adds a stronger level of sharpening when you produce scaled-down JPEG files for the internet or add a certain level of exposure compensation to all of your output images.
+: Choose a [style](./styles.md) which Ansel will combine with the existing history stack to generate the output image. These history items are only added temporarily -- the original history stack is not overwritten. You can use this feature to add processing steps and parameters that you want to be applied specifically to images before export. For example you may define a style that adds a stronger level of sharpening when you produce scaled-down JPEG files for the internet or add a certain level of exposure compensation to all of your output images.
 
 mode
-: When applying a style during export this option defines whether the history stack items of that style replace the original history stack of the image or are appended to it. Technically speaking, in append mode history stack items of the style will constitute separate instances of the respective modules on top of any existing ones (see also [multiple instances](../../../views/darkroom/processing-modules/multiple-instances.md)). As a consequence the original history stack will remain in effect with the new items being applied in addition. This way you can apply an overall adjustment (e.g. exposure) to a number of exported images while respecting the settings of each individual image.
+: When applying a style during export this option defines whether the history stack items of that style replace the original history stack of the image or are appended to it. Technically speaking, in append mode history stack items of the style will constitute separate instances of the respective modules on top of any existing ones. As a consequence the original history stack will remain in effect with the new items being applied in addition. This way you can apply an overall adjustment (e.g. exposure) to a number of exported images while respecting the settings of each individual image.
 
 export
 : Press this button to start a background job to export all selected images. A bar at the bottom of the left hand panel displays the progress of the export job. Furthermore a notification message pops up reporting the completion of each individual export. You may click on the pop-up to make it disappear. You may abort the export job by clicking on the "x" icon located close to the progress bar.
@@ -119,13 +119,13 @@ exif data
 : Export the source image's Exif data.
 
 metadata
-: Export metadata defined in the [metadata editor](../shared/metadata-editor.md) module. Only metadata fields that are tagged as _visible_ and are not tagged as _private_ will be exported.
+: Export metadata defined in the [metadata editor](./metadata-editor.md) module. Only metadata fields that are tagged as _visible_ and are not tagged as _private_ will be exported.
 
 geo tags
 : Export geo tags.
 
 tags
-: Export tags  created in the [tagging](../shared/tagging.md) module (to `Xmp.dc.Subject`). Three additional options can also be selected:
+: Export tags  created in the [tagging](./tagging.md) module (to `Xmp.dc.Subject`). Three additional options can also be selected:
 : - _private tags_: Export private tags
 : - _synonyms_: Export tag synonyms
 : - _omit hierarchy_: Only export the last part of hierarchical tags
@@ -164,13 +164,13 @@ _Remember that a tag set up as a category is never exported._
 ### examples
 
 example 1
-: A first level tag called places is set as a category, and is followed by four levels of information (or keywords): country, region, city and location (e.g. `places|France|Nord|Lille|rue Nationale`). Each level can be retrieved (when it is defined) by one of the variables `$(CATEGORY0(places))`, `$(CATEGORY1(places))`, `$(CATEGORY2(places))` and `$(CATEGORY3(places))`. In this example, the returned values are "France", "Nord", "Lille" and "rue Nationale", respectively. These keywords can also be retrieved as simple tags using the variable `$(TAGS)`. The last keyword level defined (the leaf) is displayed in [image information](../shared/image-information.md), here "rue Nationale".
+: A first level tag called places is set as a category, and is followed by four levels of information (or keywords): country, region, city and location (e.g. `places|France|Nord|Lille|rue Nationale`). Each level can be retrieved (when it is defined) by one of the variables `$(CATEGORY0(places))`, `$(CATEGORY1(places))`, `$(CATEGORY2(places))` and `$(CATEGORY3(places))`. In this example, the returned values are "France", "Nord", "Lille" and "rue Nationale", respectively. These keywords can also be retrieved as simple tags using the variable `$(TAGS)`. The last keyword level defined (the leaf) is displayed in [image information](./image-information.md), here "rue Nationale".
 
 example 2
-: A first level tag called creator is followed by the name of the photographer, both set as categories: `creator|firstname lastname`. The formula copyrights (`$(YEAR) $(CATEGORY0(creator))`) builds the text associated with image rights. Here, [image information](../shared/image-information.md) displays "creator: firstname lastname" as categories. Neither creator nor "firstname lastname" appear in the tags list and they are not exported as simple tags.
+: A first level tag called creator is followed by the name of the photographer, both set as categories: `creator|firstname lastname`. The formula copyrights (`$(YEAR) $(CATEGORY0(creator))`) builds the text associated with image rights. Here, [image information](./image-information.md) displays "creator: firstname lastname" as categories. Neither creator nor "firstname lastname" appear in the tags list and they are not exported as simple tags.
 
 ---
 
-**Note:** tagging is not appropriate to define free text metadata, like a title or a description, which may be specific to each image. Use the [metadata editor](../shared/metadata-editor.md) for this type of information.
+**Note:** tagging is not appropriate to define free text metadata, like a title or a description, which may be specific to each image. Use the [metadata editor](./metadata-editor.md) for this type of information.
 
 ---

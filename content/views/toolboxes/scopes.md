@@ -8,7 +8,7 @@ tags:
 view: lighttable, tethering
 ---
 
-This module provides various graphical depictions of the developed image's light levels or [chromaticity](../../../color-management/color-dimensions#definitions).
+This module provides various graphical depictions of the developed image's light levels or [chromaticity](../../color-management/color-dimensions#definitions).
 
 ![scopes module](scopes.jpg)
 
@@ -16,9 +16,9 @@ Move the mouse over the panel to show buttons that allow you to adjust the displ
 
 When the mouse is over the scopes panel, scroll with the mouse while holding down the Ctrl key to change the height of the panel. You can show/hide the scopes module entirely with a keyboard shortcut (default Ctrl+Shift+H).
 
-You can move the scopes module to the left-hand panel in [preferences > miscellaneous > position of the scopes module](../../../preferences-settings/miscellaneous.md).
+You can move the scopes module to the left-hand panel in [preferences > miscellaneous > position of the scopes module](../../preferences-settings/miscellaneous.md).
 
-For performance reasons, scopes are calculated from the image preview (the image displayed in the [navigation](../darkroom/navigation.md) module) rather than the higher quality image displayed in the center view. The preview is calculated at a lower resolution and may use shortcuts to bypass more time-consuming image processing steps. Hence the display may not accurately represent fine detail in the image, and may deviate in other ways from the final developed image.
+For performance reasons, scopes are calculated from the image preview (the image displayed in the [navigation](./navigation.md) module) rather than the higher quality image displayed in the center view. The preview is calculated at a lower resolution and may use shortcuts to bypass more time-consuming image processing steps. Hence the display may not accurately represent fine detail in the image, and may deviate in other ways from the final developed image.
 
 ## histogram
 
@@ -80,13 +80,13 @@ The graph includes a "hue ring" representing the maximum chroma of each hue (in 
 
 ### caveats
 
-- The hue ring is not a [gamut check](../darkroom/gamut.md), as a color can be within the hue ring, yet out of gamut due to its darkness/lightness.
-- When adjusting an image based upon a color checker, faster and more accurate results will come from using [calibrate with a color checker](../../processing-modules/color-calibration#extracting-settings-using-a-color-checker) in the _color calibration_ module.
+- The hue ring is not a [gamut check](../toolboxes/gamut.md), as a color can be within the hue ring, yet out of gamut due to its darkness/lightness.
+- When adjusting an image based upon a color checker, faster and more accurate results will come from using [calibrate with a color checker](../darkroom/modules/color-calibration#extracting-settings-using-a-color-checker) in the _color calibration_ module.
 - The vectorscope does not have a "skin tone line", which is a flawed generalization rather than a universal standard.
 - The vectorscope represents a colorimetric encoding of an image, which inevitably diverges from a viewer's perception of the image.
 
 ## histogram profile
 
-Image data is converted to the _histogram profile_ before the scope data is calculated. You can choose this profile by right-clicking on the [soft-proof](../darkroom/soft-proof.md) or [gamut check](../darkroom/gamut.md) icons in the bottom panel and then selecting the profile of interest. When soft-proof or gamut check is enabled, the scope is shown in the soft proof profile.
+Image data is converted to the _histogram profile_ before the scope data is calculated. You can choose this profile by right-clicking on the [soft-proof](../toolboxes/soft-proof.md) or [gamut check](../toolboxes/gamut.md) icons in the bottom panel and then selecting the profile of interest. When soft-proof or gamut check is enabled, the scope is shown in the soft proof profile.
 
 As the scopes module runs at the end of the preview pixelpipe, it receives data in display color space. If you are using a display color space that is not "well behaved" (this is common for a device profile), then colors that are outside of the gamut of the display profile may be clipped or distorted.

@@ -1,16 +1,18 @@
 ---
-title: Non-destructive editing
+title: Editing images
 date: 2025-05-15
 weight: 02
 ---
 
+## Understanding non-destructive editing
+
 Before diving deeper into how to use the software, we should stop here to explain its general paradigm : non-destructive editing.
 
-Once you [imported](./import.md) images to Ansel, what you really did is only to create an entry for them into the [library](../install/configuration.md) database. The modifications you make on these images are never written to the original images, which are actually never changed. This is a strong design requirement aiming at protecting your input RAW images from any kind of corruption.[^1] Ansel will not even let user change the EXIF date and time in the original files.
+Once you [imported](./import.md) images to Ansel, what you really did is only to create an entry for them into the [library](../install/configuration.md) database. The modifications you make on these images are never written to the original images, which are actually never changed. This is a strong design requirement aiming at protecting your input RAW images from any kind of corruption.[^1] Ansel will not even let users change the EXIF date and time in the original files.
 
 [^1]: Except the natural aging of your storage media that may lead to randomly-corrupted bits in the future.
 
-Instead, Ansel writes your image-processing and metadata changes to its library database, and possibly duplicates them to [sidecar XMP files](../views/lighttable/digital-asset-management/sidecar.md). These changes are stored as a list of the [modules](../views/darkroom/processing-modules/_index.md) used and the parameters defined for each module. __Said otherwise, a non-destructive editing is stored only as an history stack of changes, which represents the recipe for building the final image.__
+Instead, Ansel writes your image-processing and metadata changes to its library database, and possibly duplicates them to [sidecar XMP files](../views/lighttable/digital-asset-management/sidecar.md). These changes are stored as a list of the [modules](../views/darkroom/modules/_index.md) used and the parameters defined for each module. __Said otherwise, a non-destructive editing is stored only as an history stack of changes, which represents the recipe for building the final image.__
 
 To actually build the final image, you will need to [export](../views/toolboxes/export.md) it to a target file on a target filesystem : this will apply the history stack to the original, input RAW, to create a final file that can be opened in any image viewer.
 
@@ -34,3 +36,7 @@ Because we keep all those history steps, they are automatically saved once appli
 | 3. Export images | Build a final JPG/TIFF/etc. image       | Run a pixel pipeline applying the history onto the input image |
 
 {{< /table >}}
+
+## Editing, retouching, correcting your image
+
+After [import](./import.md), the series of images you imported will be opened in the [lighttable](../views/lighttable/_index.md) view, as a grid of thumbnails. You only have to double-click on any image you want to edit, which will then open the [darkroom](../views/darkroom/_index.md). This view will provide you with image processing [modules](../views/darkroom/modules/_index.md) allowing to apply changes and correction to the appearance of your image.

@@ -115,4 +115,4 @@ Photos are imported into _filmrolls_, which are the primary collection type in A
 
 In other words, filmrolls are _views_ of filesystem folders that exist only in Ansel's database, and containing only images that Ansel is aware of (because they were imported).
 
-When the import completes, the import window will close and the lighttable view will be updated to the last filmroll created during import.
+When the import completes, the import window will close and the [lighttable](../views/lighttable/_index.md) view will be updated to the last filmroll created during import.
