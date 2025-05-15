@@ -15,7 +15,7 @@ hide built-in presets for utility modules
 : If enabled, only user-defined presets will be shown in presets menu for utility modules -- built-in presets will be hidden (default off).
 
 show image time with milliseconds
-: Choose whether to include milliseconds when displaying time values (default off). If set, milliseconds are shown in the [image information](../../views/toolboxes/image-information.md) module and can also be used in the [geotagging](../../views/toolboxes/geotagging.md) module.
+: Choose whether to include milliseconds when displaying time values (default off). If set, milliseconds are shown in the [image information](../views/toolboxes/image-information.md) module and can also be used in the [geotagging](../views/toolboxes/geotagging.md) module.
 
 ## thumbnails
 

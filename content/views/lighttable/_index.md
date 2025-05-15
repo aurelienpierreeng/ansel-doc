@@ -67,3 +67,4 @@ Those are, of course, examples that you can adapt to your needs and workflow. No
 
 ## Lighttable display
 
+Display options

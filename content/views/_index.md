@@ -15,13 +15,13 @@ The functionality in Ansel is separated into six different views:
 : Develop a single image. It can be accessed from the lighttable by double-click on a thumbnail or by hitting the <kbd>Enter</kbd> key when a picture is selected.
 
 [Map](map/_index.md)
-: Show geo-tagged images on a map and manually geo-tag new images. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md).
+: Show geo-tagged images on a map and manually geo-tag new images. It is an optional view hidden by default, it can be enabled in the [preferences](../preferences-settings/other-views.md).
 
 [Print](print/_index.md)
-: Send images to a printer for self-made prints. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md). This view is not available on Windows since it relies on [CUPS](http://www.cups.org/).
+: Send images to a printer for self-made prints. It is an optional view hidden by default, it can be enabled in the [preferences](../preferences-settings/other-views.md). This view is not available on Windows since it relies on [CUPS](http://www.cups.org/).
 
 [Slideshow](slideshow/_index.md)
-: Display images as a slideshow, processing them on-the-fly. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md).
+: Display images as a slideshow, processing them on-the-fly. It is an optional view hidden by default, it can be enabled in the [preferences](../preferences-settings/other-views.md).
 
 You can switch between views by clicking the view name at the top of the right-hand panel (the currently active view is highlighted).
 
@@ -79,10 +79,10 @@ Context-sensitive help
 : Click this icon and then click on a control element to be directed to the appropriate online help page.
 
 Shortcut mapping
-: Click this icon to enter the [visual shortcut mapping](../../preferences-settings/shortcuts.md#visual-shortcut-mapping) mode to create keyboard/mouse shortcuts.
+: Click this icon to enter the [visual shortcut mapping](../preferences-settings/shortcuts.md#visual-shortcut-mapping) mode to create keyboard/mouse shortcuts.
 
 Preferences
-: View and amend Ansel's [preferences & settings](../../preferences-settings/_index.md).
+: View and amend Ansel's [preferences & settings](../preferences-settings/_index.md).
 
 ### Bottom toolbar
 
@@ -100,10 +100,3 @@ The filmstrip, when enabled, is shown at the bottom of the screen and displays t
 The filmstrip allows you to interact with images while you are not in the lighttable view. For example, while developing an image in darkroom mode, you can switch to another image to by clicking its thumbnail in the filmstrip. You can copy & paste the history stack using keyboard shortcuts (<kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>).
 
 See the [filmstrip](./toolboxes/filmstrip.md) module documentation for more information.
-
-
-## Keyboard shortcuts
-
-Much of the functionality in Ansel can be controlled via keyboard shortcuts, which can be customised in [preferences > shortcuts](../../preferences-settings/shortcuts.md).
-
-Press the H key (for help) in any Ansel view to show a list of all shortcuts that are applicable to the current view.

@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-05-15 21:23+0200\n"
+"POT-Creation-Date: 2025-05-15 21:58+0200\n"
 "PO-Revision-Date: 2022-08-21 18:39+0000\n"
 "Last-Translator: Victor Forsiuk <vvforce@gmail.com>\n"
 "Language-Team: German <https://weblate.pixls.us/projects/Ansel/dtdocs/de/>\n"
@@ -609,6 +609,13 @@ msgstr ""
 #| msgid "Lighttable"
 msgid "Lighttable display"
 msgstr "Leuchttisch"
+
+#. type: Plain text
+#: content/views/lighttable/_index.md
+#, fuzzy, no-wrap
+#| msgid "lua options"
+msgid "Display options\n"
+msgstr "Lua-Optionen"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/views/toolboxes/guides-overlays.md
@@ -1246,7 +1253,7 @@ msgstr "Lua Skript Installation"
 #: content/views/toolboxes/lua-scripts-installer.md
 #, fuzzy, no-wrap
 #| msgid "This module provides an interface for installing Ansel [lua scripts](../../../lua/_index.md). The first time it is run, instructions are displayed in the module.\n"
-msgid "This module provides an interface for installing darktable [lua scripts](../../../lua/_index.md). The first time it is run, instructions are displayed in the module.\n"
+msgid "This module provides an interface for installing darktable [lua scripts](../../lua/_index.md). The first time it is run, instructions are displayed in the module.\n"
 msgstr "Dieses Modul gibt eine Schnittstelle für die Installation von Ansel [Lua Skripte](../../../lua/_index.md). Beim ersten Aufruf werden im Modul Instruktionen angezeigt.\n"
 
 #. type: Plain text
@@ -3228,10 +3235,13 @@ msgstr ""
 
 #. type: Plain text
 #: content/views/toolboxes/export.md
-#, no-wrap
+#, fuzzy, no-wrap
+#| msgid ""
+#| "filename template\n"
+#| ": Define the folder and file to which the image will be exported. This can be automatically generated using several pre-defined variables. See the [variables](../../../special-topics/variables.md) section for details.\n"
 msgid ""
 "filename template\n"
-": Define the folder and file to which the image will be exported. This can be automatically generated using several pre-defined variables. See the [variables](../../../special-topics/variables.md) section for details.\n"
+": Define the folder and file to which the image will be exported. This can be automatically generated using several pre-defined variables. See the [variables](../../special-topics/variables.md) section for details.\n"
 msgstr ""
 "Dateiname Vorgabe\n"
 ": Definiere den Ordner und die Datei, an welche das Bild exportiert wird. Das kann automatisiert werden mit vielen vordefinierten Variablen. Für zusätzliche Details siehe dazu [Variablen](../../../special-topics/variables.md).\n"
@@ -3639,7 +3649,7 @@ msgstr "Auf der rechten Seite des Dialoges kannst du Formeln definieren, um Meta
 #: content/views/toolboxes/export.md
 #, fuzzy, no-wrap
 #| msgid "See the [variables](../../../special-topics/variables.md) section for details of the variables you can use in your metadata formula. Press Enter to validate the formula. Leave the formula empty to prevent a given metadata entry from being exported (`Exif.GPSInfo.GPSVersionID` in the above example). \n"
-msgid "See the [variables](../../../special-topics/variables.md) section for details of the variables you can use in your metadata formula. Press Enter to validate the formula. Leave the formula empty to prevent a given metadata entry from being exported (`Exif.GPSInfo.GPSVersionID` in the above example).\n"
+msgid "See the [variables](../../special-topics/variables.md) section for details of the variables you can use in your metadata formula. Press Enter to validate the formula. Leave the formula empty to prevent a given metadata entry from being exported (`Exif.GPSInfo.GPSVersionID` in the above example).\n"
 msgstr "Für mehr Details, die du in den Metadaten-Formeln brauchen kannst, siehe den Abschnitt [Variable](../../../special-topics/variables.md). Drücke Enter, um die Formel zu bestätigen. Lasse die Formel leer, um zu verhindern, dass ein Metadaten-Eintrag exportiert wird (`Exif.GPSInfo.GPSVersionID` im obigen Beispiel). \n"
 
 #. type: Plain text
@@ -5553,7 +5563,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "[Map](map/_index.md)\n"
-": Show geo-tagged images on a map and manually geo-tag new images. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md).\n"
+": Show geo-tagged images on a map and manually geo-tag new images. It is an optional view hidden by default, it can be enabled in the [preferences](../preferences-settings/other-views.md).\n"
 msgstr ""
 
 #. type: Plain text
@@ -5561,7 +5571,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "[Print](print/_index.md)\n"
-": Send images to a printer for self-made prints. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md). This view is not available on Windows since it relies on [CUPS](http://www.cups.org/).\n"
+": Send images to a printer for self-made prints. It is an optional view hidden by default, it can be enabled in the [preferences](../preferences-settings/other-views.md). This view is not available on Windows since it relies on [CUPS](http://www.cups.org/).\n"
 msgstr ""
 
 #. type: Plain text
@@ -5569,7 +5579,7 @@ msgstr ""
 #, no-wrap
 msgid ""
 "[Slideshow](slideshow/_index.md)\n"
-": Display images as a slideshow, processing them on-the-fly. It is an optional view hidden by default, it can be enabled in the [preferences](../../preferences-settings/other-views.md).\n"
+": Display images as a slideshow, processing them on-the-fly. It is an optional view hidden by default, it can be enabled in the [preferences](../preferences-settings/other-views.md).\n"
 msgstr ""
 
 #. type: Plain text
@@ -5758,7 +5768,7 @@ msgstr ""
 #| ": Click this icon to enter the [visual shortcut mapping](../../preferences-settings/shortcuts.md#visual-shortcut-mapping) mode to create keyboard/mouse shortcuts.\n"
 msgid ""
 "Shortcut mapping\n"
-": Click this icon to enter the [visual shortcut mapping](../../preferences-settings/shortcuts.md#visual-shortcut-mapping) mode to create keyboard/mouse shortcuts.\n"
+": Click this icon to enter the [visual shortcut mapping](../preferences-settings/shortcuts.md#visual-shortcut-mapping) mode to create keyboard/mouse shortcuts.\n"
 msgstr ""
 "![top panel shortcut mapping icon](./top-panel/top-panel_shortcut.jpg) Kurzbefehl definieren\n"
 ": Anklicken des Symbol startet die [visuelle Definition eines Kurzbefehls](../../preferences-settings/shortcuts.md#visual-shortcut-mapping), um einen Kurzbefehl mit der Tastatur bzw. der Maus zu erzeugen.\n"
@@ -5771,7 +5781,7 @@ msgstr ""
 #| ": View and amend Ansel's [preferences & settings](../../preferences-settings/_index.md).\n"
 msgid ""
 "Preferences\n"
-": View and amend Ansel's [preferences & settings](../../preferences-settings/_index.md).\n"
+": View and amend Ansel's [preferences & settings](../preferences-settings/_index.md).\n"
 msgstr ""
 "![top panel_preferences icon](./top-panel/top-panel_preferences.jpg) Ansel-Voreinstellungen\n"
 ": siehe und ändere Ansels [Ansel-Voreinstellungen](../../preferences-settings/_index.md)\n"
@@ -5830,25 +5840,6 @@ msgstr "Der Filmstreifen erlaubt eine Interaktion mit Bildern außerhalb der Ans
 #| msgid "See the [filmstrip](../../module-reference/utility-modules/shared/filmstrip.md) module documentation for more information.\n"
 msgid "See the [filmstrip](./toolboxes/filmstrip.md) module documentation for more information.\n"
 msgstr "Siehe das Modul [Filmstreifen](../../module-reference/utility-modules/shared/filmstrip.md) und die Dokumentation für zusätzliche Informationen.\n"
-
-#. type: Title ##
-#: content/views/_index.md
-#, fuzzy, no-wrap
-#| msgid "keyboard shortcuts"
-msgid "Keyboard shortcuts"
-msgstr "Kurzbefehle"
-
-#. type: Plain text
-#: content/views/_index.md
-#, no-wrap
-msgid "Much of the functionality in Ansel can be controlled via keyboard shortcuts, which can be customised in [preferences > shortcuts](../../preferences-settings/shortcuts.md).\n"
-msgstr "Ein Großteil der Funktionen von Ansel kann mit Kurzbefehlen gesteuert werden, die unter [Ansel-Voreinstellungen > Kurzbefehle](../../preferences-settings/shortcuts.md) anpassbar sind.\n"
-
-#. type: Plain text
-#: content/views/_index.md
-#, no-wrap
-msgid "Press the H key (for help) in any Ansel view to show a list of all shortcuts that are applicable to the current view.\n"
-msgstr "In jeder Ansicht von Ansel zeigt die Taste H (für Hilfe) eine Liste mit den dort verfügbaren Kurzbefehlen an.\n"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/views/print/print-view-layout.md
@@ -17557,6 +17548,15 @@ msgstr ""
 #. type: Plain text
 #: content/getting-started/editing.md
 #, no-wrap
+msgid ""
+"{{< note >}}\n"
+"For some non-destructive RAW editors, an editing is only a snapshot of the parameters set in all the image-processing filters ([modules](../views/darkroom/modules/_index.md)) used, so you have one entry per filter/module. Ansel keeps the whole history as long as you don't compress it (using global menu → _Edit_ → _Compress history_), so you can have many entries per filter/module, one entry per user change.\n"
+"{{< /note >}}\n"
+msgstr ""
+
+#. type: Plain text
+#: content/getting-started/editing.md
+#, no-wrap
 msgid "To actually build the final image, you will need to [export](../views/toolboxes/export.md) it to a target file on a target filesystem : this will apply the history stack to the original, input RAW, to create a final file that can be opened in any image viewer.\n"
 msgstr ""
 
@@ -18552,7 +18552,7 @@ msgstr "Rendering Vorsatz"
 #: content/color-management/rendering-intent.md
 #, fuzzy, no-wrap
 #| msgid "If rendering with LittleCMS2 is activated (see [rendering method](./rendering-method.md)) you can define how to handle out-of-gamut colors when converting between color spaces. A selection box in the [export](../../module-reference/utility-modules/shared/export.md), [_output color profile_](../../module-reference/processing-modules/output-color-profile.md), and [soft proof](../../module-reference/utility-modules/darkroom/soft-proof.md) modules gives you a choice of the following rendering intents:\n"
-msgid "If rendering with LittleCMS2 is activated (see [rendering method](./rendering-method.md)) you can define how to handle out-of-gamut colors when converting between color spaces. A selection box in the [export](../../views/toolboxes/export.md), [_output color profile_](../../views/darkroom/modules/output-color-profile.md), and [soft proof](../../views/toolboxes/soft-proof.md) modules gives you a choice of the following rendering intents:\n"
+msgid "If rendering with LittleCMS2 is activated (see [rendering method](./rendering-method.md)) you can define how to handle out-of-gamut colors when converting between color spaces. A selection box in the [export](../views/toolboxes/export.md), [_output color profile_](../views/darkroom/modules/output-color-profile.md), and [soft proof](../views/toolboxes/soft-proof.md) modules gives you a choice of the following rendering intents:\n"
 msgstr "Falls Rendering mit LittleCMS2 aktiviert ist (siehe [Rendering Methode](./rendering-method.md)), kannst du definieren, wie außerhalb des Gamut Farben behandelt werden sollen, wenn sie zwischen Farbräumen konvertiert werden. Eine Auswahl-Box in den Modulen [Export](../../module-reference/utility-modules/shared/export.md), [_Ausgabefarbprofil_](../../module-reference/processing-modules/output-color-profile.md), und [Softproof](../../module-reference/utility-modules/darkroom/soft-proof.md) gibt dir eine Wahl aus den folgenden Rendering Vorsätzen:\n"
 
 #. type: Plain text
@@ -18630,7 +18630,7 @@ msgstr "Es ist bekannt, dass hochgesättigte blaue Lichtquellen im Bildausschnit
 #: content/color-management/color-artifacts.md
 #, fuzzy, no-wrap
 #| msgid "In order to mitigate this issue the [_input color profile_](../../module-reference/processing-modules/input-color-profile.md) module has a gamut clipping option. This option is switched off by default but can be activated if artifacts are observed. Depending on the settings, colors will be confined to one of the available RGB gamuts. In effect black pixel artifacts are prevented at the costs of losing some color dynamics.\n"
-msgid "In order to mitigate this issue the [_input color profile_](../../views/darkroom/modules/input-color-profile.md) module has a gamut clipping option. This option is switched off by default but can be activated if artifacts are observed. Depending on the settings, colors will be confined to one of the available RGB gamuts. In effect black pixel artifacts are prevented at the costs of losing some color dynamics.\n"
+msgid "In order to mitigate this issue the [_input color profile_](../views/darkroom/modules/input-color-profile.md) module has a gamut clipping option. This option is switched off by default but can be activated if artifacts are observed. Depending on the settings, colors will be confined to one of the available RGB gamuts. In effect black pixel artifacts are prevented at the costs of losing some color dynamics.\n"
 msgstr "Um diese Tatsache abzumildern, hat das Modul [_Eingabe-Farbprofil_](../../module-reference/processing-modules/input-color-profile.md) eine Gamut-Beschneide-Option. Diese Einstellung ist als Standard ausgeschaltet, sie kann aber aktiviert werden, wenn Artefakte beobachtet werden. Abhängig von den Einstellungen werden die Farben innerhalb der zur Verfügung stehenden RGB-Gamuts begrenzt. Als Tatsache werden schwarze Pixel-Artefakte vermieden auf Kosten gewisser Dynamikumfänge der Farben.\n"
 
 #. type: Yaml Front Matter Hash Value: title
@@ -18673,14 +18673,14 @@ msgstr "Pixel, die Werte annehmen, die außerhalb des Bereiches der Anzeigen sin
 #: content/color-management/unbounded-colors.md
 #, fuzzy, no-wrap
 #| msgid "At the end of the pipeline, modules like [_filmic rgb_](../../module-reference/processing-modules/filmic-rgb.md) can help you to remap RGB values to the display-referred range while maximizing the data preservation and avoiding hard clipping, which is usually not visually pleasing.\n"
-msgid "At the end of the pipeline, modules like [_filmic rgb_](../../views/darkroom/modules/filmic-rgb.md) can help you to remap RGB values to the display-referred range while maximizing the data preservation and avoiding hard clipping, which is usually not visually pleasing.\n"
+msgid "At the end of the pipeline, modules like [_filmic rgb_](../views/darkroom/modules/filmic-rgb.md) can help you to remap RGB values to the display-referred range while maximizing the data preservation and avoiding hard clipping, which is usually not visually pleasing.\n"
 msgstr "Am Ende der Pipeline können Module wie [_Filmic RGB_](../../module-reference/processing-modules/filmic-rgb.md) helfen, die RGB-Werte in den auf Anzeige bezogenen Bereich abzubilden, gleichzeitiger Maximierung der Datenerhaltung und Vermeidung von hartem Beschneiden, das normalerweise unangenehm für das Auge ist.\n"
 
 #. type: Plain text
 #: content/color-management/unbounded-colors.md
 #, fuzzy, no-wrap
 #| msgid "However, at all times in the pipeline, you must ensure that you do not create negative RGB values. RGB intensities encode light emissions and negative light does not exist. Those modules that rely on a physical understanding of light to process pixels will fail if they encounter a non-physical light emission. For safety, negative RGB values are still clipped whenever they might make the algorithms fail, but the visual result might look degraded. Negative values can be produced when abusing the _black level_ in [_exposure_](../../module-reference/processing-modules/exposure.md) or the _offset_ in [_color balance_](../../module-reference/processing-modules/color-balance.md) and care should be taken when using these modules.\n"
-msgid "However, at all times in the pipeline, you must ensure that you do not create negative RGB values. RGB intensities encode light emissions and negative light does not exist. Those modules that rely on a physical understanding of light to process pixels will fail if they encounter a non-physical light emission. For safety, negative RGB values are still clipped whenever they might make the algorithms fail, but the visual result might look degraded. Negative values can be produced when abusing the _black level_ in [_exposure_](../../views/darkroom/modules/exposure.md) or the _offset_ in [_color balance RGB_](../../views/darkroom/modules/color-balance-rgb.md) and care should be taken when using these modules.\n"
+msgid "However, at all times in the pipeline, you must ensure that you do not create negative RGB values. RGB intensities encode light emissions and negative light does not exist. Those modules that rely on a physical understanding of light to process pixels will fail if they encounter a non-physical light emission. For safety, negative RGB values are still clipped whenever they might make the algorithms fail, but the visual result might look degraded. Negative values can be produced when abusing the _black level_ in [_exposure_](../views/darkroom/modules/exposure.md) or the _offset_ in [_color balance RGB_](../views/darkroom/modules/color-balance-rgb.md) and care should be taken when using these modules.\n"
 msgstr "Du musst jedoch zu jeder Zeit sicherstellen, dass du keine negativen RGB-Werte kreierst. RGB-Intensitäten kodieren Licht-Emissionen und negatives Licht existiert nicht. Jene Module, die auf dem physikalischen Verständnis des Lichtes für den Prozess von Pixeln beruhen, werden nicht funktionieren, wenn sie auf nicht-physikalische Licht-Emissionen treffen. Zur Sicherheit werden negative RGB-Werte immer noch beschnitten, wann immer sie dazu führen, dass der Algorithmus versagt, aber das sichtbare Resultat könnte fade aussehen. Negative Werte können produziert werden, wenn der _Schwarz-Wert_ im Modul [_Belichtung_](../../module-reference/processing-modules/exposure.md) oder der _Offset_ in [_Farbbalance_](../../module-reference/processing-modules/color-balance.md) missbraucht werden, deshalb sollte beim Anwenden dieser Module mit Vorsicht vorgegangen werden.\n"
 
 #. type: Yaml Front Matter Hash Value: title
@@ -19021,8 +19021,9 @@ msgstr "Ansel kann entweder mit seinen eigenen internen Algorithmen oder mit der
 
 #. type: Plain text
 #: content/color-management/rendering-method.md
-#, no-wrap
-msgid "You can change the default method in [preferences > processing > always use LittleCMS 2 to apply output color profile](../../preferences-settings/processing.md)\n"
+#, fuzzy, no-wrap
+#| msgid "You can change the default method in [preferences > processing > always use LittleCMS 2 to apply output color profile](../../preferences-settings/processing.md)\n"
+msgid "You can change the default method in [preferences > processing > always use LittleCMS 2 to apply output color profile](../preferences-settings/processing.md)\n"
 msgstr "Du kannst die Standard-Methode ändern in Ansel-Voreinstellungen > Bearbeitung > nutze immer LittleCMS 2, um das Ausgabefarbprofil anzuwenden](../../preferences-settings/processing.md)\n"
 
 #. type: Plain text
@@ -19116,7 +19117,7 @@ msgstr "Das meiste der aktuellen Bildbearbeitung von Ansel findet in einem groß
 #: content/color-management/color-spaces.md
 #, fuzzy, no-wrap
 #| msgid "This process implies that the pixelpipe has two fixed color conversion steps: [_input color profile_](../../module-reference/processing-modules/input-color-profile.md) and [_output color profile_](../../module-reference/processing-modules/output-color-profile.md). In addition there is the [_demosaic_](../../module-reference/processing-modules/demosaic.md) step for raw images, where the colors of each pixel are reconstructed by interpolation.\n"
-msgid "This process implies that the pixelpipe has two fixed color conversion steps: [_input color profile_](../../views/darkroom/modules/input-color-profile.md) and [_output color profile_](../../views/darkroom/modules/output-color-profile.md). In addition there is the [_demosaic_](../../views/darkroom/modules/demosaic.md) step for raw images, where the colors of each pixel are reconstructed by interpolation.\n"
+msgid "This process implies that the pixelpipe has two fixed color conversion steps: [_input color profile_](../views/darkroom/modules/input-color-profile.md) and [_output color profile_](../views/darkroom/modules/output-color-profile.md). In addition there is the [_demosaic_](../views/darkroom/modules/demosaic.md) step for raw images, where the colors of each pixel are reconstructed by interpolation.\n"
 msgstr "Dieser Prozess bedingt, dass die Pixelpipe zwei fixierte Umwandlungs-Schritte beinhaltet: [_Eingabe Farbprofil_](../../module-reference/processing-modules/input-color-profile.md) und [_Ausgabe Farbprofi_](../../module-reference/processing-modules/output-color-profile.md). Und zusätzlich gibt es für RAW-Bilder den Schritt des [_Entrastern_](../../module-reference/processing-modules/demosaic.md), in dem die Farben jedes Pixels mit Interpolation rekonstruiert werden müssen.\n"
 
 #. type: Plain text
@@ -19132,7 +19133,7 @@ msgstr "Jedes Modul hat eine Position in der Pixelpipe, die dir sagt, in welchem
 #| "- up to [_demosaic_](../../module-reference/processing-modules/demosaic.md)\n"
 #| ": The raw image information does not yet constitute an \"image\" but merely \"data\" about the light captured by the camera. Each pixel carries a single intensity for one primary color, and camera primaries are very different from primaries used in models of human vision. Bear in mind that some of the modules in this part of the pipe can also act on non-raw input images in RGB format (with full information on all three color channels).\n"
 msgid ""
-"- up to [_demosaic_](../../views/darkroom/modules/demosaic.md)\n"
+"- up to [_demosaic_](../views/darkroom/modules/demosaic.md)\n"
 ": The raw image information does not yet constitute an \"image\" but merely \"data\" about the light captured by the camera. Each pixel carries a single intensity for one primary color, and camera primaries are very different from primaries used in models of human vision. Bear in mind that some of the modules in this part of the pipe can also act on non-raw input images in RGB format (with full information on all three color channels).\n"
 msgstr ""
 "- bis zum [_Entrastern_](../../module-reference/processing-modules/demosaic.md)\n"
@@ -19145,7 +19146,7 @@ msgstr ""
 #| "- between [_demosaic_](../../module-reference/processing-modules/demosaic.md) and [_input color profile_](../../module-reference/processing-modules/input-color-profile.md)\n"
 #| ": Image is in RGB format within the color space of the specific camera or input file.\n"
 msgid ""
-"- between [_demosaic_](../../views/darkroom/modules/demosaic.md) and [_input color profile_](../../views/darkroom/modules/input-color-profile.md)\n"
+"- between [_demosaic_](../views/darkroom/modules/demosaic.md) and [_input color profile_](../views/darkroom/modules/input-color-profile.md)\n"
 ": Image is in RGB format within the color space of the specific camera or input file.\n"
 msgstr ""
 "- Zwischen [_Entrastern_](../../module-reference/processing-modules/demosaic.md) und [_Eingabefarbprofil_](../../module-reference/processing-modules/input-color-profile.md)\n"
@@ -19158,7 +19159,7 @@ msgstr ""
 #| "- between [_input color profile_](../../module-reference/processing-modules/input-color-profile.md) and [_output color profile_](../../module-reference/processing-modules/output-color-profile.md)\n"
 #| ": Image is in the color space defined by the selected working profile (linear Rec2020 RGB by default). As Ansel processes images in 4x32-bit floating point buffers, we can handle large working color spaces without risking banding or tonal breaks.\n"
 msgid ""
-"- between [_input color profile_](../../views/darkroom/modules/input-color-profile.md) and [_output color profile_](../../views/darkroom/modules/output-color-profile.md)\n"
+"- between [_input color profile_](../views/darkroom/modules/input-color-profile.md) and [_output color profile_](../views/darkroom/modules/output-color-profile.md)\n"
 ": Image is in the color space defined by the selected working profile (linear Rec2020 RGB by default). As Ansel processes images in 4x32-bit floating point buffers, we can handle large working color spaces without risking banding or tonal breaks.\n"
 msgstr ""
 "- Zwischen [_Eingabefarbprofil_](../../module-reference/processing-modules/input-color-profile.md) und [_Ausgabefarbprofil_](../../module-reference/processing-modules/output-color-profile.md)\n"
@@ -19171,7 +19172,7 @@ msgstr ""
 #| "- after [_output color profile_](../../module-reference/processing-modules/output-color-profile.md)\n"
 #| ": Image is in RGB format as defined by the selected display or output ICC profile.\n"
 msgid ""
-"- after [_output color profile_](../../views/darkroom/modules/output-color-profile.md)\n"
+"- after [_output color profile_](../views/darkroom/modules/output-color-profile.md)\n"
 ": Image is in RGB format as defined by the selected display or output ICC profile.\n"
 msgstr ""
 "- Nach [_Ausgabefarbprofil_](../../module-reference/processing-modules/output-color-profile.md)\n"
@@ -21906,7 +21907,7 @@ msgstr ""
 #| ": Choose whether to include milliseconds when displaying time values (default off). If set, milliseconds are shown in the [image information](../../module-reference/utility-modules/shared/image-information.md) module and can also be used in the [geotagging](../../module-reference/utility-modules/shared/geotagging.md) module.\n"
 msgid ""
 "show image time with milliseconds\n"
-": Choose whether to include milliseconds when displaying time values (default off). If set, milliseconds are shown in the [image information](../../views/toolboxes/image-information.md) module and can also be used in the [geotagging](../../views/toolboxes/geotagging.md) module.\n"
+": Choose whether to include milliseconds when displaying time values (default off). If set, milliseconds are shown in the [image information](../views/toolboxes/image-information.md) module and can also be used in the [geotagging](../views/toolboxes/geotagging.md) module.\n"
 msgstr ""
 "Zeige die Zeit des Bildes in Millisekunden\n"
 ": Wähle, ob du bei der anzeigender Zeitwerte auch Millisekunden anzeigen möchtest (Standard aus). Falls es gesetzt ist, dann werden in den Modulen [Bild Informationen](../../module-reference/utility-modules/shared/image-information.md) und [Geotagging](../../module-reference/utility-modules/shared/geotagging.md).\n"
@@ -22236,7 +22237,7 @@ msgstr "Ein Eintrag wird in Anselrc für jedes neu gefundene Gerät beim Start v
 msgid ""
 "a. avoid atomics\n"
 ": _1 = avoid atomics; 0 = use atomics_\n"
-": Atomic operations in OpenCL are a special method of data synchronization and are only used in a few modules. Unfortunately, some old AMD/ATI devices are extremely slow in processing atomics and, on these cards, it is better to process the affected modules on the CPU rather than accepting an ultra-slow GPU codepath. Set this parameter to 1 if you experience slow processing within modules like [_local contrast_](../../views/darkroom/modules/local-contrast) or if you get intermittent system freezes. Please note that this should not affect any card manufactured since 2015.\n"
+": Atomic operations in OpenCL are a special method of data synchronization and are only used in a few modules. Unfortunately, some old AMD/ATI devices are extremely slow in processing atomics and, on these cards, it is better to process the affected modules on the CPU rather than accepting an ultra-slow GPU codepath. Set this parameter to 1 if you experience slow processing within modules like [_local contrast_](../views/darkroom/modules/local-contrast) or if you get intermittent system freezes. Please note that this should not affect any card manufactured since 2015.\n"
 msgstr ""
 "a. avoid atomics\n"
 ": _1 = vermeide atomics; 0 = nutze atomics_\n"
@@ -23205,7 +23206,7 @@ msgstr "Das Skript muss in einer UNIX-Shel laufen, und der `sqlite3` client muss
 #: content/cli/purge_non_existing_images_sh.md
 #, fuzzy, no-wrap
 #| msgid "For Windows systems, you will normally need the MSYS2 environment to be installed, as described in the [instructions for building Ansel in a Windows environment](https://github.com/Ansel-org/Ansel/blob/master/packaging/windows/BUILD.md). If you installed Ansel using the standard Windows installer package, the location of the script would normally be something like: `C:\\Program Files\\Ansel\\share\\Ansel\\tools\\purge_non_existing_images.sh`.\n"
-msgid "2. For Windows systems, you will normally need the MSYS2 environment to be installed, as described in the [instructions for building Ansel in a Windows environment](../../install/windows.md). If you installed Ansel using the standard Windows installer package, the location of the script would normally be something like: `C:\\Program Files\\Ansel\\share\\Ansel\\tools\\purge_non_existing_images.sh`.\n"
+msgid "2. For Windows systems, you will normally need the MSYS2 environment to be installed, as described in the [instructions for building Ansel in a Windows environment](../install/windows.md). If you installed Ansel using the standard Windows installer package, the location of the script would normally be something like: `C:\\Program Files\\Ansel\\share\\Ansel\\tools\\purge_non_existing_images.sh`.\n"
 msgstr "Für Windows-Systeme musst du normalerweise eine MSYS2-Umgebung installieren, wie beschrieben in den [Anleitungen um Ansel in einer Windows Umgebung zu bauen](https://github.com/Ansel-org/Ansel/blob/master/packaging/windows/BUILD.md). Wenn du Ansel mit dem normalen Windows Installations-Paket installiert hast, wird der Ort für das Skript normalerweise etwas sein wie: `C:\\Program Files\\Ansel\\share\\Ansel\\tools\\purge_non_existing_images.sh`.\n"
 
 #. type: Plain text
@@ -27004,6 +27005,19 @@ msgstr "Es wird keine Meldung gezeigt, wenn das Beispiel einmal durchgeführt is
 #| msgid "We use `coroutine.yield` to call an external program. The normal `os.execute` would block other lua codes from happening.\n"
 msgid "- We use `coroutine.yield` to call an external program. The normal `os.execute` would block other lua codes from happening.\n"
 msgstr "Wir nutzen `coroutine.yield`, um ein externes Programm aufzurufen. Das normale `os.execute` würde andere Lua Codes an der Ausführung blockieren.\n"
+
+#, fuzzy, no-wrap
+#~| msgid "keyboard shortcuts"
+#~ msgid "Keyboard shortcuts"
+#~ msgstr "Kurzbefehle"
+
+#, no-wrap
+#~ msgid "Much of the functionality in Ansel can be controlled via keyboard shortcuts, which can be customised in [preferences > shortcuts](../../preferences-settings/shortcuts.md).\n"
+#~ msgstr "Ein Großteil der Funktionen von Ansel kann mit Kurzbefehlen gesteuert werden, die unter [Ansel-Voreinstellungen > Kurzbefehle](../../preferences-settings/shortcuts.md) anpassbar sind.\n"
+
+#, no-wrap
+#~ msgid "Press the H key (for help) in any Ansel view to show a list of all shortcuts that are applicable to the current view.\n"
+#~ msgstr "In jeder Ansicht von Ansel zeigt die Taste H (für Hilfe) eine Liste mit den dort verfügbaren Kurzbefehlen an.\n"
 
 #, no-wrap
 #~ msgid "filemanager"

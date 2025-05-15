@@ -14,6 +14,10 @@ Once you [imported](./import.md) images to Ansel, what you really did is only to
 
 Instead, Ansel writes your image-processing and metadata changes to its library database, and possibly duplicates them to [sidecar XMP files](../views/lighttable/digital-asset-management/sidecar.md). These changes are stored as a list of the [modules](../views/darkroom/modules/_index.md) used and the parameters defined for each module. __Said otherwise, a non-destructive editing is stored only as an history stack of changes, which represents the recipe for building the final image.__
 
+{{< note >}}
+For some non-destructive RAW editors, an editing is only a snapshot of the parameters set in all the image-processing filters ([modules](../views/darkroom/modules/_index.md)) used, so you have one entry per filter/module. Ansel keeps the whole history as long as you don't compress it (using global menu → _Edit_ → _Compress history_), so you can have many entries per filter/module, one entry per user change.
+{{< /note >}}
+
 To actually build the final image, you will need to [export](../views/toolboxes/export.md) it to a target file on a target filesystem : this will apply the history stack to the original, input RAW, to create a final file that can be opened in any image viewer.
 
 There are many benefits to working in a non-destructive fashion :
