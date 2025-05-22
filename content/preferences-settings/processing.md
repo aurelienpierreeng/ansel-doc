@@ -32,6 +32,8 @@ pixel interpolator (scaling)
 
 ## CPU, GPU, Memory
 
+### Settings
+
 CPU cores
 : Number of CPU cores (physical and virtual) in use. `-1` will use all detected cores (physical and virtual). Depending on your hardware, you may want to try setting this value equal to the number of physical cores of your CPU, which may speed-up memory I/O, since memory transfer usually is our bottleneck in image processing. This will be irrelevant for most users, aside from debugging issues. This value does not affect modules using OpenCL when OpenCL is enabled.
 
@@ -75,6 +77,11 @@ GPU vRAM headroom (MiB)
 System library with OpenCL runtime
 : Ansel will typically detect automatically the OpenCL drivers on your system, so you can leave this option empty. But if you have several conflicting OpenCL libraries, or your runtime is installed in an unusual place, you can define here the path to the OpenCL runtime to load.
 
+### Testing your configuration
+
+- To diagnose OpenCL issues, start `ansel -d opencl`
+- To benchmark performance and test different memory configurations, start `ansel -d perf`,
+- To diagnose memory and cache size issues, start `ansel -d memory -d cache -d pipe`
 
 ## Libraw
 

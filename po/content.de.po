@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-05-22 16:52+0200\n"
+"POT-Creation-Date: 2025-05-22 17:06+0200\n"
 "PO-Revision-Date: 2022-08-21 18:39+0000\n"
 "Last-Translator: Victor Forsiuk <vvforce@gmail.com>\n"
 "Language-Team: German <https://weblate.pixls.us/projects/Ansel/dtdocs/de/>\n"
@@ -19935,6 +19935,13 @@ msgstr ""
 msgid "CPU, GPU, Memory"
 msgstr ""
 
+#. type: Title ###
+#: content/preferences-settings/processing.md
+#, fuzzy, no-wrap
+#| msgid "map settings"
+msgid "Settings"
+msgstr "Karteneinstellungen"
+
 #. type: Plain text
 #: content/preferences-settings/processing.md
 #, no-wrap
@@ -20036,6 +20043,22 @@ msgstr ""
 msgid ""
 "System library with OpenCL runtime\n"
 ": Ansel will typically detect automatically the OpenCL drivers on your system, so you can leave this option empty. But if you have several conflicting OpenCL libraries, or your runtime is installed in an unusual place, you can define here the path to the OpenCL runtime to load.\n"
+msgstr ""
+
+#. type: Title ###
+#: content/preferences-settings/processing.md
+#, fuzzy, no-wrap
+#| msgid "additional midi configuration"
+msgid "Testing your configuration"
+msgstr "Zusätzliche MIDI Konfiguration"
+
+#. type: Plain text
+#: content/preferences-settings/processing.md
+#, no-wrap
+msgid ""
+"- To diagnose OpenCL issues, start `ansel -d opencl`\n"
+"- To benchmark performance and test different memory configurations, start `ansel -d perf`,\n"
+"- To diagnose memory and cache size issues, start `ansel -d memory -d cache -d pipe`\n"
 msgstr ""
 
 #. type: Title ##
@@ -29888,10 +29911,6 @@ msgstr "Wir nutzen `coroutine.yield`, um ein externes Programm aufzurufen. Das n
 #~| msgid "There is an Kontrol Editor profile available [here](https://github.com/Ansel-org/Ansel/files/7603658/note_buttons.zip) which can be loaded using the Windows application to directly configure all these settings to correctly work with Ansel.\n"
 #~ msgid "There is an Kontrol Editor profile available [here](https://github.com/darktable-org/darktable/files/7603658/note_buttons.zip) which can be loaded using the Windows application to directly configure all these settings to correctly work with darktable.\n"
 #~ msgstr "Es gibt [hier](https://github.com/Ansel-org/Ansel/files/7603658/note_buttons.zip) ein Kontrol-Editor-Profil, das mit der Windows-Anwendung geladen werden kann, um alle diese Einstellungen direkt zu konfigurieren, damit sie mit Ansel richtig funktionieren.\n"
-
-#, no-wrap
-#~ msgid "additional midi configuration"
-#~ msgstr "Zusätzliche MIDI Konfiguration"
 
 #, fuzzy, no-wrap
 #~| msgid "If Ansel is compiled with portmidi it will at startup try to open up to 10 midi devices in the order it finds them. On the command line you might see something like this:\n"

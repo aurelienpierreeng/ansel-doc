@@ -5,7 +5,7 @@
 #
 #, fuzzy
 msgid ""
-msgstr "Project-Id-Version: PACKAGE VERSION\nPOT-Creation-Date: 2025-05-22 16:52+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: en_US\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
+msgstr "Project-Id-Version: PACKAGE VERSION\nPOT-Creation-Date: 2025-05-22 17:06+0200\nPO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\nLast-Translator: FULL NAME <EMAIL@ADDRESS>\nLanguage-Team: LANGUAGE <LL@li.org>\nLanguage: en_US\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit\n"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/views/lighttable/undo-redo.md
@@ -15350,6 +15350,12 @@ msgstr ""
 msgid "CPU, GPU, Memory"
 msgstr ""
 
+#. type: Title ###
+#: content/preferences-settings/processing.md
+#, markdown-text, no-wrap
+msgid "Settings"
+msgstr ""
+
 #. type: Plain text
 #: content/preferences-settings/processing.md
 #, markdown-text, no-wrap
@@ -15420,6 +15426,18 @@ msgstr ""
 #: content/preferences-settings/processing.md
 #, markdown-text, no-wrap
 msgid "System library with OpenCL runtime\n: Ansel will typically detect automatically the OpenCL drivers on your system, so you can leave this option empty. But if you have several conflicting OpenCL libraries, or your runtime is installed in an unusual place, you can define here the path to the OpenCL runtime to load.\n"
+msgstr ""
+
+#. type: Title ###
+#: content/preferences-settings/processing.md
+#, markdown-text, no-wrap
+msgid "Testing your configuration"
+msgstr ""
+
+#. type: Plain text
+#: content/preferences-settings/processing.md
+#, markdown-text, no-wrap
+msgid "- To diagnose OpenCL issues, start `ansel -d opencl`\n- To benchmark performance and test different memory configurations, start `ansel -d perf`,\n- To diagnose memory and cache size issues, start `ansel -d memory -d cache -d pipe`\n"
 msgstr ""
 
 #. type: Title ##

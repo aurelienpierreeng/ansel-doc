@@ -6,7 +6,7 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
-"POT-Creation-Date: 2025-05-22 16:52+0200\n"
+"POT-Creation-Date: 2025-05-22 17:06+0200\n"
 "PO-Revision-Date: 2022-03-13 17:52+0000\n"
 "Last-Translator: Łukasz Karcz <pan.karcz@gmail.com>\n"
 "Language-Team: Polish <https://weblate.pixls.us/projects/Ansel/dtdocs/pl/>\n"
@@ -19996,6 +19996,13 @@ msgstr ""
 msgid "CPU, GPU, Memory"
 msgstr ""
 
+#. type: Title ###
+#: content/preferences-settings/processing.md
+#, fuzzy, no-wrap
+#| msgid "map settings"
+msgid "Settings"
+msgstr "ustawienia mapy"
+
 #. type: Plain text
 #: content/preferences-settings/processing.md
 #, no-wrap
@@ -20097,6 +20104,22 @@ msgstr ""
 msgid ""
 "System library with OpenCL runtime\n"
 ": Ansel will typically detect automatically the OpenCL drivers on your system, so you can leave this option empty. But if you have several conflicting OpenCL libraries, or your runtime is installed in an unusual place, you can define here the path to the OpenCL runtime to load.\n"
+msgstr ""
+
+#. type: Title ###
+#: content/preferences-settings/processing.md
+#, fuzzy, no-wrap
+#| msgid "additional functionality"
+msgid "Testing your configuration"
+msgstr "dodatkowe funkcje"
+
+#. type: Plain text
+#: content/preferences-settings/processing.md
+#, no-wrap
+msgid ""
+"- To diagnose OpenCL issues, start `ansel -d opencl`\n"
+"- To benchmark performance and test different memory configurations, start `ansel -d perf`,\n"
+"- To diagnose memory and cache size issues, start `ansel -d memory -d cache -d pipe`\n"
 msgstr ""
 
 #. type: Title ##
@@ -29769,11 +29792,6 @@ msgstr "Dla wywołania zewnętrznego programu korzystamy z `coroutine.yield`. U�
 #~| msgid "There is an Kontrol Editor profile available [here](https://github.com/Ansel-org/Ansel/files/7603658/note_buttons.zip) which can be loaded using the Windows application to directly configure all these settings to correctly work with Ansel.\n"
 #~ msgid "There is an Kontrol Editor profile available [here](https://github.com/darktable-org/darktable/files/7603658/note_buttons.zip) which can be loaded using the Windows application to directly configure all these settings to correctly work with darktable.\n"
 #~ msgstr "[Tutaj](https://github.com/Ansel-org/Ansel/files/7603658/note_buttons.zip) dostępny jest profil Kontrol Editor, który można załadować za pomocą aplikacji Windows, aby bezpośrednio skonfigurować wszystkie te ustawienia, aby działały poprawnie z Ansel.\n"
-
-#, fuzzy, no-wrap
-#~| msgid "additional functionality"
-#~ msgid "additional midi configuration"
-#~ msgstr "dodatkowe funkcje"
 
 #, no-wrap
 #~ msgid "Ansel's color pipeline"
