@@ -12,11 +12,6 @@ markup:
     startLevel: 2
 
 module:
-  imports:
-  - disable: false
-    ignoreConfig: false
-    ignoreImports: false
-    path: github.com/aurelienpierreeng/ansel-website/themes/ansel
   mounts:
   - disableWatch: false
     excludeFiles: null
