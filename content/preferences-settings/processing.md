@@ -29,42 +29,51 @@ pixel interpolator (scaling)
 3D lut root folder
 : Define the root folder (and sub-folders) containing Lut files used by the [_lut 3D_](../views/darkroom/modules/lut-3D.md) module
 
-detect monochrome previews
-: Enable this option to analyse images during import and tag them with the `darkroom|mode|monochrome` tag if they are found to be monochrome. The analysis is based on the preview image embedded within the imported file. This makes for a more convenient workflow when working with monochrome images, but it slows down the import, so this setting is disabled by default.
-
 
 ## CPU, GPU, Memory
 
-Ansel resources
-: Choose how much of your system and graphics card (GPU) memory will be used by Ansel. Four options are provided by default:
-: - _small_ takes roughly 20% of your system memory and 40% of your GPU memory. This might be acceptable on very large systems, especially if you're not exporting images. Mostly, though, this can only be recommended if you are using a lot of other demanding applications at the same time as Ansel.
-: - _default_ takes roughly 60% of your system memory and 70% of your GPU memory. This mode is recommended if you're not exporting a lot of images, have at least 16Gb of system memory and 4Gb of GPU memory, and also are running a lot of other application at the same time as Ansel.
-: - _large_ takes roughly 75% of your system memory and 90% of your GPU memory. This is the best option if you are only using Ansel on your system and/or are exporting a lot of images.
-: - _unrestricted_ is not generally recommended. In this mode Ansel may attempt to use more memory than your system has available. This might be _possible_ if your system uses swapping when all of its system memory is taken, but it could lead to system instability. Use this mode with care, only when exporting very large images that Ansel cannot otherwise handle.
-: See the [memory & performance tuning](../preferences-settings/performance/mem-performance.md#ansel-resources) section for more information.
+CPU cores
+: Number of CPU cores (physical and virtual) in use. `-1` will use all detected cores (physical and virtual). Depending on your hardware, you may want to try setting this value equal to the number of physical cores of your CPU, which may speed-up memory I/O, since memory transfer usually is our bottleneck in image processing. This will be irrelevant for most users, aside from debugging issues. This value does not affect modules using OpenCL when OpenCL is enabled.
 
-enable disk backend for thumbnail cache
-: If activated, Ansel stores all thumbnails on disk as a secondary cache, and thereby keeps thumbnails accessible if they are dropped from the primary cache. This needs more disk space but speeds up the [lighttable](../views/lighttable/_index.md) view as it avoids the reprocessing of thumbnails (default on).
+Background workers
+: Number of background threads used to process thumbnail rendering pipelines, import, export, etc. Increasing this value will not increase memory usage proportionnaly, because only one pipeline at a time is allowed to run, but it may help hiding filesystem I/O latencies when loading image files. The maximum value here is defined by your operating system, and is typically 1024 or 2048.
 
-enable disk backend for full preview cache
-: If enabled, Ansel writes full preview images to disk (`.cache/Ansel/`) when evicted from the memory cache. Note that this can take a lot of storage (several gigabytes for 20k images) and Ansel will never delete cached images. It's safe to delete these manually if you want. Enabling this option will greatly improve lighttable performance when zooming an image in full preview mode (default off).
+Memory headroom for OS/applications (MiB)
+: This is the amount of RAM space that Ansel will __never use__, and leave to the operating system and other applications. To set it, you can reboot your computer and open a system monitoring application, then measure how much RAM space the idle OS is using. If you like to play videos or music in background, while retouching in Ansel, you will need to plan for this too and include the RAM usage of your player into this headroom. __Setting this value too low will result in crashes of the application__ because the OS will kill the Ansel process when it reaches RAM saturation.
 
-activate [OpenCL](../preferences-settings/performance/opencl_index.md) support
-: Your GPU can be used by Ansel to significantly speed up processing. The OpenCL interface requires suitable hardware and matching OpenCL drivers on your system. If one of those is not found the option is grayed out. Can be switched on and off at any time and takes immediate effect (default on).
+Memory reserved for lighttable thumbnail cache (MiB)
+: This is the amount of RAM space that Ansel will allocate to rendered thumbnails displayed in the [lighttable](../views/lighttable/_index.md) and [filmstrip](../views/toolboxes/filmstrip.md). You should set this value according to the typical number of images you have in a folder and how large they appear in the lighttable :
+    - a 360×225 px image uses 0.35 MiB,
+    - a 720×450 px image uses 1.24 MiB,
+    - a 1440×900 px image uses 5 MiB,
+    - a 6000×4000 px image uses 92 MiB
+: The default value of 1000 MiB can hold 2800 small thumbnails, or 805 medium thumbnails, or 200 large thumbnails, or 10 images at 24 Mpx full resolution (for full-resolution preview in lighttable).
 
-OpenCL scheduling profile
-: Defines how preview and full pixelpipe tasks are scheduled on OpenCL enabled systems:
-: - _default_: the GPU processes the center view pixelpipe; the CPU processes the preview pipe,
-: - _very fast GPU_: both pixelpipes are processed sequentially on the GPU.
-: - _multiple GPUs_: both pixelpipes are processed in parallel on different GPUs -- see the [multiple devices](../preferences-settings/performance/opencl/multiple-devices.md) section for more information,
+Maximum RAW resolution to edit
+: Set this value to the resolution of your best camera. Ansel will then reserve at all time a sufficient RAM space to hold 4 internal full-resolution buffers, which will be enough to avoid tiling in most modules using intermediate copies (when not using OpenCL).
 
-tune OpenCL performance
-: Defines how Ansel will attempt to tune OpenCL performance for your system. The following options are provided (default _nothing_):
-: - _nothing_: do not attempt to tune OpenCL performance.
-: - _memory size_: this parameter currently (by default) applies a fixed 400MB headroom to all devices and assumes the remainder (total device memory less 400MB) is available for OpenCL module processing. You can also choose to amend this value or have Ansel attempt to auto-detect available memory by changing a parameter in your `Anselrc` file. Please see the [memory & performance tuning](../preferences-settings/performance/mem-performance.md#id-specific-opencl-configuration) section for more details. If you choose to enable auto-detection, switching this parameter off and on again will force a re-detection at the next pipe run.
-: - _memory transfer_: when Ansel needs more memory than it has available, it breaks your images into tiles, which are processed separately. When tiling, Ansel frequently needs to transfer data between system and GPU memory. This option tells Ansel to use a special copy mode (pinned memory transfer), which can be faster, but can also require more memory on some devices. On other devices it might degrade performance. There is no safe general way to predict how this option will function on a given device so you will have to test it for yourself. If you have multiple devices, you can switch pinned memory transfer on or off on a "per device" basis by directly editing your Anselrc file.
-: - _memory size and transfer_: use both tuning mechanisms.
-: See the [memory & performance tuning](../preferences-settings/performance/mem-performance.md) section for more information.
+{{< warning >}}
+Ansel uses the total memory available on the system, subtracts the headroom size, the thumbnail cache size, the size of the 4 full-resolution RAW buffers and uses what remains for its pixelpipe cache. This cache is used to store the intermediate output of modules, as to prevent recomputing when not necessary. It will make Ansel RAM consumption increase a lot, which is no issue. The cache will be automatically shrunk if the application has trouble allocating new buffers. However, the operating system will not shrink it itself, so the _memory headroom_ needs to be properly set.
+{{< /warning >}}
+
+{{< note >}}
+The pixel pipeline cache can be manually emptied using the global menu _Run_ → _Clear pipeline caches_.
+{{< /note >}}
+
+Pipe recompute timeout
+: When doing value changes on sliders and comboxes, in darkroom [modules](../views/darkroom/modules/_index.md), the changes are sent to the pixel pipeline to re-render the output once every _N_ milliseconds. _N_ is the _pipe recompute timeout_. It will ensure that intermediate value changes (when dragging a cursor) don't trigger a new (computationnaly-expensive) recomputation, at the expense of making the GUI feel more or less _laggy_ or _responsive_. Powerful hardware can tolerate values as low as 50 ms, but weak hardware (or battery mode) may benefit from values as high as 200 ms to spare useless intermediate recomputations.
+
+Enable disk backend for thumbnail cache
+: Saves rendered [lighttable](../views/lighttable/_index.md) thumbnails to the disk cache, in the current user's home folder. This will prevent recomputing them on the next startup, but may create privacy issues if you are editing private pictures on a publicly shared computer.
+
+Activate OpenCL support
+: Process darkroom [modules](../views/darkroom/modules/_index.md) that support it on the GPU using OpenCL. This option will be available only if an OpenCL driver and device were found on your system.
+
+GPU vRAM headroom (MiB)
+: Amount of video RAM that Ansel will __never use__ on the GPU, and leave to other applications using hardware graphics acceleration (OpenGL, Vulkan, VDPAU, CUDA, etc.).
+
+System library with OpenCL runtime
+: Ansel will typically detect automatically the OpenCL drivers on your system, so you can leave this option empty. But if you have several conflicting OpenCL libraries, or your runtime is installed in an unusual place, you can define here the path to the OpenCL runtime to load.
 
 
 ## Libraw

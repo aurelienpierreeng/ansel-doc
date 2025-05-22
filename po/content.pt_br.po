@@ -2,7 +2,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-05-22 13:27+0200\n"
+"POT-Creation-Date: 2025-05-22 16:52+0200\n"
 "PO-Revision-Date: 2022-07-27 23:43+0000\n"
 "Last-Translator: Marcus Gama <marcus.gama@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <https://weblate.pixls.us/projects/Ansel/dtdocs/pt_BR/>\n"
@@ -19934,16 +19934,6 @@ msgstr ""
 "pasta raiz do LUT 3D\n"
 ": Define a pasta raiz (e subpastas) que contém os arquivos Lut usados pelo módulo [_lut 3D_](../module-reference/processing-modules/lut-3D.md).\n"
 
-#. type: Plain text
-#: content/preferences-settings/processing.md
-#, no-wrap
-msgid ""
-"detect monochrome previews\n"
-": Enable this option to analyse images during import and tag them with the `darkroom|mode|monochrome` tag if they are found to be monochrome. The analysis is based on the preview image embedded within the imported file. This makes for a more convenient workflow when working with monochrome images, but it slows down the import, so this setting is disabled by default.\n"
-msgstr ""
-"detectar imagens monocromáticas\n"
-": Ative esta opção para analisar as imagens durante a importação e etiquetá-las com `darkroom|modo|monochrome` se forem encontradas imagens monocromáticas. A análise se baseia na pré-visualização das imagens embutidas no arquivo importado (miniaturas). Isto torna mais conveniente o fluxo de trabalho com imagens monocromáticas, mas diminui a velocidade de importação, sendo por isso desligado por padrão.\n"
-
 #. type: Title ##
 #: content/preferences-settings/processing.md
 #, no-wrap
@@ -19952,117 +19942,106 @@ msgstr ""
 
 #. type: Plain text
 #: content/preferences-settings/processing.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "Ansel resources\n"
-#| ": Choose how much of your system and graphics card (GPU) memory will be used by Ansel. Four options are provided by default:\n"
-#| ": - _small_ takes roughly 20% of your system memory and 40% of your GPU memory. This might be acceptable on very large systems, especially if you're not exporting images. Mostly, though, this can only be recommended if you are using a lot of other demanding applications at the same time as Ansel.\n"
-#| ": - _default_ takes roughly 60% of your system memory and 70% of your GPU memory. This mode is recommended if you're not exporting a lot of images, have at least 16Gb of system memory and 4Gb of GPU memory, and also are running a lot of other application at the same time as Ansel.\n"
-#| ": - _large_ takes roughly 75% of your system memory and 90% of your GPU memory. This is the best option if you are only using Ansel on your system and/or are exporting a lot of images.\n"
-#| ": - _unrestricted_ is not generally recommended. In this mode Ansel may attempt to use more memory than your system has available. This might be _possible_ if your system uses swapping when all of its system memory is taken, but it could lead to system instability. Use this mode with care, only when exporting very large images that Ansel cannot otherwise handle.\n"
-#| ": See the [memory & performance tuning](../special-topics/mem-performance.md#Ansel-resources) section for more information. \n"
+#, no-wrap
 msgid ""
-"Ansel resources\n"
-": Choose how much of your system and graphics card (GPU) memory will be used by Ansel. Four options are provided by default:\n"
-": - _small_ takes roughly 20% of your system memory and 40% of your GPU memory. This might be acceptable on very large systems, especially if you're not exporting images. Mostly, though, this can only be recommended if you are using a lot of other demanding applications at the same time as Ansel.\n"
-": - _default_ takes roughly 60% of your system memory and 70% of your GPU memory. This mode is recommended if you're not exporting a lot of images, have at least 16Gb of system memory and 4Gb of GPU memory, and also are running a lot of other application at the same time as Ansel.\n"
-": - _large_ takes roughly 75% of your system memory and 90% of your GPU memory. This is the best option if you are only using Ansel on your system and/or are exporting a lot of images.\n"
-": - _unrestricted_ is not generally recommended. In this mode Ansel may attempt to use more memory than your system has available. This might be _possible_ if your system uses swapping when all of its system memory is taken, but it could lead to system instability. Use this mode with care, only when exporting very large images that Ansel cannot otherwise handle.\n"
-": See the [memory & performance tuning](../preferences-settings/performance/mem-performance.md#ansel-resources) section for more information.\n"
+"CPU cores\n"
+": Number of CPU cores (physical and virtual) in use. `-1` will use all detected cores (physical and virtual). Depending on your hardware, you may want to try setting this value equal to the number of physical cores of your CPU, which may speed-up memory I/O, since memory transfer usually is our bottleneck in image processing. This will be irrelevant for most users, aside from debugging issues. This value does not affect modules using OpenCL when OpenCL is enabled.\n"
 msgstr ""
-"recursos do Ansel\n"
-": Escolha a quantidade de memória do seu sistema e da placa de vídeo (GPU) que será usada pelo Ansel. Quatro opções são fornecidas por padrão:\n"
-": - _pequeno_ ocupa aproximadamente 20% da memória do sistema e 40% da memória da GPU. Isso pode ser aceitável em sistemas com muito memŕoia, especialmente se você não estiver exportando imagens. Porém, isso só pode ser recomendado se você estiver usando muitos outros aplicativos exigentes ao mesmo tempo que o Ansel.\n"
-": - _padrão_ ocupa aproximadamente 60% da memória do sistema e 70% da memória da GPU. Esse modo é recomendado se você não estiver exportando muitas imagens, tiver pelo menos 16 Gb de memória de sistema, 4 Gb de memória na GPU e também estiver executando muitos outros aplicativos ao mesmo tempo que o Ansel.\n"
-": - _grande_ ocupa aproximadamente 75% da memória do sistema e 90% da memória da GPU. Esta é a melhor opção se você estiver usando apenas o Ansel em seu sistema e/ou estiver exportando muitas imagens.\n"
-": - _irrestrito_ geralmente não é recomendado. Neste modo, o Ansel pode tentar usar mais memória do que o seu sistema tem disponível. Isso pode ser _possível_ se o seu sistema usar memória de troca em disco (swap) quando toda a memória do sistema for usada, mas pode levar à instabilidade do sistema. Use este modo com cuidado, apenas ao exportar imagens muito grandes que o Ansel não pode manipular de outra forma.\n"
-": consulte a seção [ajuste de memória e desempenho](../special-topics/mem-performance.md#recursos-do-Ansel) para obter mais informações. \n"
-
-#. type: Plain text
-#: content/preferences-settings/processing.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "enable disk backend for thumbnail cache\n"
-#| ": If activated, Ansel stores all thumbnails on disk as a secondary cache, and thereby keeps thumbnails accessible if they are dropped from the primary cache. This needs more disk space but speeds up the [lighttable](../lighttable/_index.md) view as it avoids the reprocessing of thumbnails (default on).\n"
-msgid ""
-"enable disk backend for thumbnail cache\n"
-": If activated, Ansel stores all thumbnails on disk as a secondary cache, and thereby keeps thumbnails accessible if they are dropped from the primary cache. This needs more disk space but speeds up the [lighttable](../views/lighttable/_index.md) view as it avoids the reprocessing of thumbnails (default on).\n"
-msgstr ""
-"armazenar em disco cache de miniaturas\n"
-": Se ativado, o Ansel armazena todas as miniaturas em uma cache secundária, aonde são mantidas as miniaturas se elas forem descartadas da cache primária. Isto necessita de mais espaço em disco mas acelera a vista da [mesa de luz](../lighttable/), já que evita o reprocessamento de miniaturas (ativado por padrão).\n"
 
 #. type: Plain text
 #: content/preferences-settings/processing.md
 #, no-wrap
 msgid ""
-"enable disk backend for full preview cache\n"
-": If enabled, Ansel writes full preview images to disk (`.cache/Ansel/`) when evicted from the memory cache. Note that this can take a lot of storage (several gigabytes for 20k images) and Ansel will never delete cached images. It's safe to delete these manually if you want. Enabling this option will greatly improve lighttable performance when zooming an image in full preview mode (default off).\n"
+"Background workers\n"
+": Number of background threads used to process thumbnail rendering pipelines, import, export, etc. Increasing this value will not increase memory usage proportionnaly, because only one pipeline at a time is allowed to run, but it may help hiding filesystem I/O latencies when loading image files. The maximum value here is defined by your operating system, and is typically 1024 or 2048.\n"
 msgstr ""
-"armazenar em disco cache de visualização completa\n"
-": Se ativado, o Ansel salva imagens para visualização completa em disco (`.cache/Ansel/`) quando esgotada a cache em memória. Note que isto pode requerer uma grande quantidade de armazenamento (vários gigabytes para imagens em 20k) e o Ansel nunca eliminará as imagens armazenadas em cache. É seguro eliminá-las manualmente se desejar. Ativar esta opção aumentará significativamente o desempenho da mesa de luz ao ampliar uma imagem no modo de visualização completa (desligado por padrão).\n"
 
 #. type: Plain text
 #: content/preferences-settings/processing.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "activate [OpenCL](../special-topics/opencl/_index.md) support\n"
-#| ": Your GPU can be used by Ansel to significantly speed up processing. The OpenCL interface requires suitable hardware and matching OpenCL drivers on your system. If one of those is not found the option is grayed out. Can be switched on and off at any time and takes immediate effect (default on).\n"
+#, no-wrap
 msgid ""
-"activate [OpenCL](../preferences-settings/performance/opencl_index.md) support\n"
-": Your GPU can be used by Ansel to significantly speed up processing. The OpenCL interface requires suitable hardware and matching OpenCL drivers on your system. If one of those is not found the option is grayed out. Can be switched on and off at any time and takes immediate effect (default on).\n"
+"Memory headroom for OS/applications (MiB)\n"
+": This is the amount of RAM space that Ansel will __never use__, and leave to the operating system and other applications. To set it, you can reboot your computer and open a system monitoring application, then measure how much RAM space the idle OS is using. If you like to play videos or music in background, while retouching in Ansel, you will need to plan for this too and include the RAM usage of your player into this headroom. __Setting this value too low will result in crashes of the application__ because the OS will kill the Ansel process when it reaches RAM saturation.\n"
 msgstr ""
-"ativar suporte ao [OpenCL](../special-topics/opencl/)\n"
-": Sua GPU pode ser usada pelo _Ansel_ para acelerar significativamente o processamento. A interface do OpenCL precisa de hardware adequado e controladores OpenCL em seu sistema. Se um destes requisitos não for encontrado a opção é esmaecida e não pode ser selecionada. Isto pode ser ligado e desligado a qualquer momento e seus efeitos são imediatos (ligado por padrão).\n"
 
 #. type: Plain text
 #: content/preferences-settings/processing.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "OpenCL scheduling profile\n"
-#| ": Defines how preview and full pixelpipe tasks are scheduled on OpenCL enabled systems: \n"
-#| ": - _default_: the GPU processes the center view pixelpipe; the CPU processes the preview pipe, \n"
-#| ": - _very fast GPU_: both pixelpipes are processed sequentially on the GPU. \n"
-#| ": - _multiple GPUs_: both pixelpipes are processed in parallel on different GPUs -- see the [multiple devices](../special-topics/opencl/multiple-devices.md) section for more information, \n"
+#, no-wrap
 msgid ""
-"OpenCL scheduling profile\n"
-": Defines how preview and full pixelpipe tasks are scheduled on OpenCL enabled systems:\n"
-": - _default_: the GPU processes the center view pixelpipe; the CPU processes the preview pipe,\n"
-": - _very fast GPU_: both pixelpipes are processed sequentially on the GPU.\n"
-": - _multiple GPUs_: both pixelpipes are processed in parallel on different GPUs -- see the [multiple devices](../preferences-settings/performance/opencl/multiple-devices.md) section for more information,\n"
+"Memory reserved for lighttable thumbnail cache (MiB)\n"
+": This is the amount of RAM space that Ansel will allocate to rendered thumbnails displayed in the [lighttable](../views/lighttable/_index.md) and [filmstrip](../views/toolboxes/filmstrip.md). You should set this value according to the typical number of images you have in a folder and how large they appear in the lighttable :\n"
+"    - a 360×225 px image uses 0.35 MiB,\n"
+"    - a 720×450 px image uses 1.24 MiB,\n"
+"    - a 1440×900 px image uses 5 MiB,\n"
+"    - a 6000×4000 px image uses 92 MiB\n"
+": The default value of 1000 MiB can hold 2800 small thumbnails, or 805 medium thumbnails, or 200 large thumbnails, or 10 images at 24 Mpx full resolution (for full-resolution preview in lighttable).\n"
 msgstr ""
-"perfil de agendamento do OpenCL\n"
-": Define como as tarefas de pré-visualização e vista completa do pixelpipe são agendadas em sistemas com o OpenCL ativado: \n"
-": - _padrão_: a GPU processa o pixelpipe da vista central; a CPU processa o pixelpipe das pré-visualizações; \n"
-": - _GPU muito rápida_: ambos os pixelpipes são processados sequencialmente na GPU;\n"
-": - _múltiplas GPUs_: ambos os pixelpipes são processados em paralelo nas diferentes GPUs -- veja a seção [múltiplos dispositivos](../special-topics/opencl/multiple-devices.md) para mais informações. \n"
 
 #. type: Plain text
 #: content/preferences-settings/processing.md
-#, fuzzy, no-wrap
-#| msgid ""
-#| "tune OpenCL performance\n"
-#| ": Defines how Ansel will attempt to tune OpenCL performance for your system. The following options are provided (default _nothing_):\n"
-#| ": - _nothing_: do not attempt to tune OpenCL performance.\n"
-#| ": - _memory size_: this parameter currently (by default) applies a fixed 400MB headroom to all devices and assumes the remainder (total device memory less 400MB) is available for OpenCL module processing. You can also choose to amend this value or have Ansel attempt to auto-detect available memory by changing a parameter in your `Anselrc` file. Please see the [memory & performance tuning](../special-topics/mem-performance.md#id-specific-opencl-configuration) section for more details. If you choose to enable auto-detection, switching this parameter off and on again will force a re-detection at the next pipe run.\n"
-#| ": - _memory transfer_: when Ansel needs more memory than it has available, it breaks your images into tiles, which are processed separately. When tiling, Ansel frequently needs to transfer data between system and GPU memory. This option tells Ansel to use a special copy mode (pinned memory transfer), which can be faster, but can also require more memory on some devices. On other devices it might degrade performance. There is no safe general way to predict how this option will function on a given device so you will have to test it for yourself. If you have multiple devices, you can switch pinned memory transfer on or off on a \"per device\" basis by directly editing your Anselrc file.\n"
-#| ": - _memory size and transfer_: use both tuning mechanisms.\n"
-#| ": See the [memory & performance tuning](../special-topics/mem-performance.md) section for more information.\n"
+#, no-wrap
 msgid ""
-"tune OpenCL performance\n"
-": Defines how Ansel will attempt to tune OpenCL performance for your system. The following options are provided (default _nothing_):\n"
-": - _nothing_: do not attempt to tune OpenCL performance.\n"
-": - _memory size_: this parameter currently (by default) applies a fixed 400MB headroom to all devices and assumes the remainder (total device memory less 400MB) is available for OpenCL module processing. You can also choose to amend this value or have Ansel attempt to auto-detect available memory by changing a parameter in your `Anselrc` file. Please see the [memory & performance tuning](../preferences-settings/performance/mem-performance.md#id-specific-opencl-configuration) section for more details. If you choose to enable auto-detection, switching this parameter off and on again will force a re-detection at the next pipe run.\n"
-": - _memory transfer_: when Ansel needs more memory than it has available, it breaks your images into tiles, which are processed separately. When tiling, Ansel frequently needs to transfer data between system and GPU memory. This option tells Ansel to use a special copy mode (pinned memory transfer), which can be faster, but can also require more memory on some devices. On other devices it might degrade performance. There is no safe general way to predict how this option will function on a given device so you will have to test it for yourself. If you have multiple devices, you can switch pinned memory transfer on or off on a \"per device\" basis by directly editing your Anselrc file.\n"
-": - _memory size and transfer_: use both tuning mechanisms.\n"
-": See the [memory & performance tuning](../preferences-settings/performance/mem-performance.md) section for more information.\n"
+"Maximum RAW resolution to edit\n"
+": Set this value to the resolution of your best camera. Ansel will then reserve at all time a sufficient RAM space to hold 4 internal full-resolution buffers, which will be enough to avoid tiling in most modules using intermediate copies (when not using OpenCL).\n"
 msgstr ""
-"ajustar o desempenho do OpenCL\n"
-": Define como o Ansel tentará ajustar o desempenho do OpenCL para seu sistema. As seguintes opções são fornecidas (padrão _nenhum_):\n"
-": - _nada_: não tenta ajustar o desempenho do OpenCL.\n"
-": - _tamanho da memória_: esse parâmetro atualmente aplica (por padrão) um espaço fixo de 400 MB a todos os dispositivos e assume que o restante (memória total do dispositivo menos 400 MB) está disponível para processamento do módulo OpenCL. Você também pode optar por alterar esse valor ou fazer com que o Ansel tente detectar automaticamente a memória disponível alterando um parâmetro em seu arquivo `Anselrc`. Consulte a seção [ajuste de memória e desempenho](../special-topics/mem-performance.md#configuração-opencl-específica-de-id) para obter mais detalhes. Se você optar por ativar a detecção automática, desligar e ligar este parâmetro novamente forçará uma nova detecção na próxima execução do pipeline.\n"
-": - _transferência de memória_: quando o Ansel precisa de mais memória do que tem disponível, ele divide suas imagens em mosaicos, que são processados separadamente. Ao usar o mosaico, o Ansel frequentemente precisa transferir dados entre o sistema e a memória da GPU. Esta opção diz ao Ansel para usar um modo de cópia especial (transferência de memória fixa), que pode ser mais rápido, mas também pode exigir mais memória em alguns dispositivos. Em outros dispositivos, pode prejudicar o desempenho. Não há uma maneira geral segura de prever como essa opção funcionará em um determinado dispositivo, portanto, você terá que testá-la por conta própria. Se você tiver vários dispositivos, poderá ativar ou desativar a transferência de memória \"por dispositivo\" editando diretamente seu arquivo Anselrc.\n"
-": - _tamanho e transferência de memória_: usa ambos os mecanismos de ajuste.\n"
-": Consulte a seção [ajuste de memória e desempenho](../special-topics/mem-performance.md) para obter mais informações.\n"
+
+#. type: Plain text
+#: content/preferences-settings/processing.md
+#, no-wrap
+msgid ""
+"{{< warning >}}\n"
+"Ansel uses the total memory available on the system, subtracts the headroom size, the thumbnail cache size, the size of the 4 full-resolution RAW buffers and uses what remains for its pixelpipe cache. This cache is used to store the intermediate output of modules, as to prevent recomputing when not necessary. It will make Ansel RAM consumption increase a lot, which is no issue. The cache will be automatically shrunk if the application has trouble allocating new buffers. However, the operating system will not shrink it itself, so the _memory headroom_ needs to be properly set.\n"
+"{{< /warning >}}\n"
+msgstr ""
+
+#. type: Plain text
+#: content/preferences-settings/processing.md
+#, no-wrap
+msgid ""
+"{{< note >}}\n"
+"The pixel pipeline cache can be manually emptied using the global menu _Run_ → _Clear pipeline caches_.\n"
+"{{< /note >}}\n"
+msgstr ""
+
+#. type: Plain text
+#: content/preferences-settings/processing.md
+#, no-wrap
+msgid ""
+"Pipe recompute timeout\n"
+": When doing value changes on sliders and comboxes, in darkroom [modules](../views/darkroom/modules/_index.md), the changes are sent to the pixel pipeline to re-render the output once every _N_ milliseconds. _N_ is the _pipe recompute timeout_. It will ensure that intermediate value changes (when dragging a cursor) don't trigger a new (computationnaly-expensive) recomputation, at the expense of making the GUI feel more or less _laggy_ or _responsive_. Powerful hardware can tolerate values as low as 50 ms, but weak hardware (or battery mode) may benefit from values as high as 200 ms to spare useless intermediate recomputations.\n"
+msgstr ""
+
+#. type: Plain text
+#: content/preferences-settings/processing.md
+#, no-wrap
+msgid ""
+"Enable disk backend for thumbnail cache\n"
+": Saves rendered [lighttable](../views/lighttable/_index.md) thumbnails to the disk cache, in the current user's home folder. This will prevent recomputing them on the next startup, but may create privacy issues if you are editing private pictures on a publicly shared computer.\n"
+msgstr ""
+
+#. type: Plain text
+#: content/preferences-settings/processing.md
+#, no-wrap
+msgid ""
+"Activate OpenCL support\n"
+": Process darkroom [modules](../views/darkroom/modules/_index.md) that support it on the GPU using OpenCL. This option will be available only if an OpenCL driver and device were found on your system.\n"
+msgstr ""
+
+#. type: Plain text
+#: content/preferences-settings/processing.md
+#, no-wrap
+msgid ""
+"GPU vRAM headroom (MiB)\n"
+": Amount of video RAM that Ansel will __never use__ on the GPU, and leave to other applications using hardware graphics acceleration (OpenGL, Vulkan, VDPAU, CUDA, etc.).\n"
+msgstr ""
+
+#. type: Plain text
+#: content/preferences-settings/processing.md
+#, no-wrap
+msgid ""
+"System library with OpenCL runtime\n"
+": Ansel will typically detect automatically the OpenCL drivers on your system, so you can leave this option empty. But if you have several conflicting OpenCL libraries, or your runtime is installed in an unusual place, you can define here the path to the OpenCL runtime to load.\n"
+msgstr ""
 
 #. type: Title ##
 #: content/preferences-settings/processing.md
@@ -26985,6 +26964,116 @@ msgstr "Não há nenhuma mensagem exibida uma vez que o _script_ tenha terminado
 #| msgid "We use `coroutine.yield` to call an external program. The normal `os.execute` would block other lua codes from happening.\n"
 msgid "- We use `coroutine.yield` to call an external program. The normal `os.execute` would block other lua codes from happening.\n"
 msgstr "Usamos `coroutine.yield` para chamar um programa externo. O `os.execute` normal bloquearia outros códigos lua de serem executados.\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "detect monochrome previews\n"
+#~ ": Enable this option to analyse images during import and tag them with the `darkroom|mode|monochrome` tag if they are found to be monochrome. The analysis is based on the preview image embedded within the imported file. This makes for a more convenient workflow when working with monochrome images, but it slows down the import, so this setting is disabled by default.\n"
+#~ msgstr ""
+#~ "detectar imagens monocromáticas\n"
+#~ ": Ative esta opção para analisar as imagens durante a importação e etiquetá-las com `darkroom|modo|monochrome` se forem encontradas imagens monocromáticas. A análise se baseia na pré-visualização das imagens embutidas no arquivo importado (miniaturas). Isto torna mais conveniente o fluxo de trabalho com imagens monocromáticas, mas diminui a velocidade de importação, sendo por isso desligado por padrão.\n"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "Ansel resources\n"
+#~| ": Choose how much of your system and graphics card (GPU) memory will be used by Ansel. Four options are provided by default:\n"
+#~| ": - _small_ takes roughly 20% of your system memory and 40% of your GPU memory. This might be acceptable on very large systems, especially if you're not exporting images. Mostly, though, this can only be recommended if you are using a lot of other demanding applications at the same time as Ansel.\n"
+#~| ": - _default_ takes roughly 60% of your system memory and 70% of your GPU memory. This mode is recommended if you're not exporting a lot of images, have at least 16Gb of system memory and 4Gb of GPU memory, and also are running a lot of other application at the same time as Ansel.\n"
+#~| ": - _large_ takes roughly 75% of your system memory and 90% of your GPU memory. This is the best option if you are only using Ansel on your system and/or are exporting a lot of images.\n"
+#~| ": - _unrestricted_ is not generally recommended. In this mode Ansel may attempt to use more memory than your system has available. This might be _possible_ if your system uses swapping when all of its system memory is taken, but it could lead to system instability. Use this mode with care, only when exporting very large images that Ansel cannot otherwise handle.\n"
+#~| ": See the [memory & performance tuning](../special-topics/mem-performance.md#Ansel-resources) section for more information. \n"
+#~ msgid ""
+#~ "Ansel resources\n"
+#~ ": Choose how much of your system and graphics card (GPU) memory will be used by Ansel. Four options are provided by default:\n"
+#~ ": - _small_ takes roughly 20% of your system memory and 40% of your GPU memory. This might be acceptable on very large systems, especially if you're not exporting images. Mostly, though, this can only be recommended if you are using a lot of other demanding applications at the same time as Ansel.\n"
+#~ ": - _default_ takes roughly 60% of your system memory and 70% of your GPU memory. This mode is recommended if you're not exporting a lot of images, have at least 16Gb of system memory and 4Gb of GPU memory, and also are running a lot of other application at the same time as Ansel.\n"
+#~ ": - _large_ takes roughly 75% of your system memory and 90% of your GPU memory. This is the best option if you are only using Ansel on your system and/or are exporting a lot of images.\n"
+#~ ": - _unrestricted_ is not generally recommended. In this mode Ansel may attempt to use more memory than your system has available. This might be _possible_ if your system uses swapping when all of its system memory is taken, but it could lead to system instability. Use this mode with care, only when exporting very large images that Ansel cannot otherwise handle.\n"
+#~ ": See the [memory & performance tuning](../preferences-settings/performance/mem-performance.md#ansel-resources) section for more information.\n"
+#~ msgstr ""
+#~ "recursos do Ansel\n"
+#~ ": Escolha a quantidade de memória do seu sistema e da placa de vídeo (GPU) que será usada pelo Ansel. Quatro opções são fornecidas por padrão:\n"
+#~ ": - _pequeno_ ocupa aproximadamente 20% da memória do sistema e 40% da memória da GPU. Isso pode ser aceitável em sistemas com muito memŕoia, especialmente se você não estiver exportando imagens. Porém, isso só pode ser recomendado se você estiver usando muitos outros aplicativos exigentes ao mesmo tempo que o Ansel.\n"
+#~ ": - _padrão_ ocupa aproximadamente 60% da memória do sistema e 70% da memória da GPU. Esse modo é recomendado se você não estiver exportando muitas imagens, tiver pelo menos 16 Gb de memória de sistema, 4 Gb de memória na GPU e também estiver executando muitos outros aplicativos ao mesmo tempo que o Ansel.\n"
+#~ ": - _grande_ ocupa aproximadamente 75% da memória do sistema e 90% da memória da GPU. Esta é a melhor opção se você estiver usando apenas o Ansel em seu sistema e/ou estiver exportando muitas imagens.\n"
+#~ ": - _irrestrito_ geralmente não é recomendado. Neste modo, o Ansel pode tentar usar mais memória do que o seu sistema tem disponível. Isso pode ser _possível_ se o seu sistema usar memória de troca em disco (swap) quando toda a memória do sistema for usada, mas pode levar à instabilidade do sistema. Use este modo com cuidado, apenas ao exportar imagens muito grandes que o Ansel não pode manipular de outra forma.\n"
+#~ ": consulte a seção [ajuste de memória e desempenho](../special-topics/mem-performance.md#recursos-do-Ansel) para obter mais informações. \n"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "enable disk backend for thumbnail cache\n"
+#~| ": If activated, Ansel stores all thumbnails on disk as a secondary cache, and thereby keeps thumbnails accessible if they are dropped from the primary cache. This needs more disk space but speeds up the [lighttable](../lighttable/_index.md) view as it avoids the reprocessing of thumbnails (default on).\n"
+#~ msgid ""
+#~ "enable disk backend for thumbnail cache\n"
+#~ ": If activated, Ansel stores all thumbnails on disk as a secondary cache, and thereby keeps thumbnails accessible if they are dropped from the primary cache. This needs more disk space but speeds up the [lighttable](../views/lighttable/_index.md) view as it avoids the reprocessing of thumbnails (default on).\n"
+#~ msgstr ""
+#~ "armazenar em disco cache de miniaturas\n"
+#~ ": Se ativado, o Ansel armazena todas as miniaturas em uma cache secundária, aonde são mantidas as miniaturas se elas forem descartadas da cache primária. Isto necessita de mais espaço em disco mas acelera a vista da [mesa de luz](../lighttable/), já que evita o reprocessamento de miniaturas (ativado por padrão).\n"
+
+#, no-wrap
+#~ msgid ""
+#~ "enable disk backend for full preview cache\n"
+#~ ": If enabled, Ansel writes full preview images to disk (`.cache/Ansel/`) when evicted from the memory cache. Note that this can take a lot of storage (several gigabytes for 20k images) and Ansel will never delete cached images. It's safe to delete these manually if you want. Enabling this option will greatly improve lighttable performance when zooming an image in full preview mode (default off).\n"
+#~ msgstr ""
+#~ "armazenar em disco cache de visualização completa\n"
+#~ ": Se ativado, o Ansel salva imagens para visualização completa em disco (`.cache/Ansel/`) quando esgotada a cache em memória. Note que isto pode requerer uma grande quantidade de armazenamento (vários gigabytes para imagens em 20k) e o Ansel nunca eliminará as imagens armazenadas em cache. É seguro eliminá-las manualmente se desejar. Ativar esta opção aumentará significativamente o desempenho da mesa de luz ao ampliar uma imagem no modo de visualização completa (desligado por padrão).\n"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "activate [OpenCL](../special-topics/opencl/_index.md) support\n"
+#~| ": Your GPU can be used by Ansel to significantly speed up processing. The OpenCL interface requires suitable hardware and matching OpenCL drivers on your system. If one of those is not found the option is grayed out. Can be switched on and off at any time and takes immediate effect (default on).\n"
+#~ msgid ""
+#~ "activate [OpenCL](../preferences-settings/performance/opencl_index.md) support\n"
+#~ ": Your GPU can be used by Ansel to significantly speed up processing. The OpenCL interface requires suitable hardware and matching OpenCL drivers on your system. If one of those is not found the option is grayed out. Can be switched on and off at any time and takes immediate effect (default on).\n"
+#~ msgstr ""
+#~ "ativar suporte ao [OpenCL](../special-topics/opencl/)\n"
+#~ ": Sua GPU pode ser usada pelo _Ansel_ para acelerar significativamente o processamento. A interface do OpenCL precisa de hardware adequado e controladores OpenCL em seu sistema. Se um destes requisitos não for encontrado a opção é esmaecida e não pode ser selecionada. Isto pode ser ligado e desligado a qualquer momento e seus efeitos são imediatos (ligado por padrão).\n"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "OpenCL scheduling profile\n"
+#~| ": Defines how preview and full pixelpipe tasks are scheduled on OpenCL enabled systems: \n"
+#~| ": - _default_: the GPU processes the center view pixelpipe; the CPU processes the preview pipe, \n"
+#~| ": - _very fast GPU_: both pixelpipes are processed sequentially on the GPU. \n"
+#~| ": - _multiple GPUs_: both pixelpipes are processed in parallel on different GPUs -- see the [multiple devices](../special-topics/opencl/multiple-devices.md) section for more information, \n"
+#~ msgid ""
+#~ "OpenCL scheduling profile\n"
+#~ ": Defines how preview and full pixelpipe tasks are scheduled on OpenCL enabled systems:\n"
+#~ ": - _default_: the GPU processes the center view pixelpipe; the CPU processes the preview pipe,\n"
+#~ ": - _very fast GPU_: both pixelpipes are processed sequentially on the GPU.\n"
+#~ ": - _multiple GPUs_: both pixelpipes are processed in parallel on different GPUs -- see the [multiple devices](../preferences-settings/performance/opencl/multiple-devices.md) section for more information,\n"
+#~ msgstr ""
+#~ "perfil de agendamento do OpenCL\n"
+#~ ": Define como as tarefas de pré-visualização e vista completa do pixelpipe são agendadas em sistemas com o OpenCL ativado: \n"
+#~ ": - _padrão_: a GPU processa o pixelpipe da vista central; a CPU processa o pixelpipe das pré-visualizações; \n"
+#~ ": - _GPU muito rápida_: ambos os pixelpipes são processados sequencialmente na GPU;\n"
+#~ ": - _múltiplas GPUs_: ambos os pixelpipes são processados em paralelo nas diferentes GPUs -- veja a seção [múltiplos dispositivos](../special-topics/opencl/multiple-devices.md) para mais informações. \n"
+
+#, fuzzy, no-wrap
+#~| msgid ""
+#~| "tune OpenCL performance\n"
+#~| ": Defines how Ansel will attempt to tune OpenCL performance for your system. The following options are provided (default _nothing_):\n"
+#~| ": - _nothing_: do not attempt to tune OpenCL performance.\n"
+#~| ": - _memory size_: this parameter currently (by default) applies a fixed 400MB headroom to all devices and assumes the remainder (total device memory less 400MB) is available for OpenCL module processing. You can also choose to amend this value or have Ansel attempt to auto-detect available memory by changing a parameter in your `Anselrc` file. Please see the [memory & performance tuning](../special-topics/mem-performance.md#id-specific-opencl-configuration) section for more details. If you choose to enable auto-detection, switching this parameter off and on again will force a re-detection at the next pipe run.\n"
+#~| ": - _memory transfer_: when Ansel needs more memory than it has available, it breaks your images into tiles, which are processed separately. When tiling, Ansel frequently needs to transfer data between system and GPU memory. This option tells Ansel to use a special copy mode (pinned memory transfer), which can be faster, but can also require more memory on some devices. On other devices it might degrade performance. There is no safe general way to predict how this option will function on a given device so you will have to test it for yourself. If you have multiple devices, you can switch pinned memory transfer on or off on a \"per device\" basis by directly editing your Anselrc file.\n"
+#~| ": - _memory size and transfer_: use both tuning mechanisms.\n"
+#~| ": See the [memory & performance tuning](../special-topics/mem-performance.md) section for more information.\n"
+#~ msgid ""
+#~ "tune OpenCL performance\n"
+#~ ": Defines how Ansel will attempt to tune OpenCL performance for your system. The following options are provided (default _nothing_):\n"
+#~ ": - _nothing_: do not attempt to tune OpenCL performance.\n"
+#~ ": - _memory size_: this parameter currently (by default) applies a fixed 400MB headroom to all devices and assumes the remainder (total device memory less 400MB) is available for OpenCL module processing. You can also choose to amend this value or have Ansel attempt to auto-detect available memory by changing a parameter in your `Anselrc` file. Please see the [memory & performance tuning](../preferences-settings/performance/mem-performance.md#id-specific-opencl-configuration) section for more details. If you choose to enable auto-detection, switching this parameter off and on again will force a re-detection at the next pipe run.\n"
+#~ ": - _memory transfer_: when Ansel needs more memory than it has available, it breaks your images into tiles, which are processed separately. When tiling, Ansel frequently needs to transfer data between system and GPU memory. This option tells Ansel to use a special copy mode (pinned memory transfer), which can be faster, but can also require more memory on some devices. On other devices it might degrade performance. There is no safe general way to predict how this option will function on a given device so you will have to test it for yourself. If you have multiple devices, you can switch pinned memory transfer on or off on a \"per device\" basis by directly editing your Anselrc file.\n"
+#~ ": - _memory size and transfer_: use both tuning mechanisms.\n"
+#~ ": See the [memory & performance tuning](../preferences-settings/performance/mem-performance.md) section for more information.\n"
+#~ msgstr ""
+#~ "ajustar o desempenho do OpenCL\n"
+#~ ": Define como o Ansel tentará ajustar o desempenho do OpenCL para seu sistema. As seguintes opções são fornecidas (padrão _nenhum_):\n"
+#~ ": - _nada_: não tenta ajustar o desempenho do OpenCL.\n"
+#~ ": - _tamanho da memória_: esse parâmetro atualmente aplica (por padrão) um espaço fixo de 400 MB a todos os dispositivos e assume que o restante (memória total do dispositivo menos 400 MB) está disponível para processamento do módulo OpenCL. Você também pode optar por alterar esse valor ou fazer com que o Ansel tente detectar automaticamente a memória disponível alterando um parâmetro em seu arquivo `Anselrc`. Consulte a seção [ajuste de memória e desempenho](../special-topics/mem-performance.md#configuração-opencl-específica-de-id) para obter mais detalhes. Se você optar por ativar a detecção automática, desligar e ligar este parâmetro novamente forçará uma nova detecção na próxima execução do pipeline.\n"
+#~ ": - _transferência de memória_: quando o Ansel precisa de mais memória do que tem disponível, ele divide suas imagens em mosaicos, que são processados separadamente. Ao usar o mosaico, o Ansel frequentemente precisa transferir dados entre o sistema e a memória da GPU. Esta opção diz ao Ansel para usar um modo de cópia especial (transferência de memória fixa), que pode ser mais rápido, mas também pode exigir mais memória em alguns dispositivos. Em outros dispositivos, pode prejudicar o desempenho. Não há uma maneira geral segura de prever como essa opção funcionará em um determinado dispositivo, portanto, você terá que testá-la por conta própria. Se você tiver vários dispositivos, poderá ativar ou desativar a transferência de memória \"por dispositivo\" editando diretamente seu arquivo Anselrc.\n"
+#~ ": - _tamanho e transferência de memória_: usa ambos os mecanismos de ajuste.\n"
+#~ ": Consulte a seção [ajuste de memória e desempenho](../special-topics/mem-performance.md) para obter mais informações.\n"
 
 #, no-wrap
 #~ msgid "Special Topics"
