@@ -64,11 +64,12 @@ MSYS will initialize a personal Unix-like `/home` folder, by default located in 
   export LD_LIBRARY_PATH="$PREFIX/lib:$LD_LIBRARY_PATH"
   export PATH="$PREFIX/bin:$PATH"
   ```
-- Step 8:  By default CMake will only use one core during the build process. To speed thingsup, using a text editor, eg. MS Notepad, you might wish to add a line like:
+- Step 8:  By default CMake will only use one core during the build process. To speed things up, using a text editor, eg. MS Notepad, you might wish to add a line like:
   ```bash
   export CMAKE_BUILD_PARALLEL_LEVEL="8"
   ```
   to your `~/.bash_profile` file. This would use 8 cores.
+  
 - Step 9:  Using the UCRT64 terminal - Execute the following command to activate profile changes:
   ```bash
   $ . .bash_profile
