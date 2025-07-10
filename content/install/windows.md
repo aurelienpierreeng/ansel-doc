@@ -102,6 +102,36 @@ MSYS will initialize a personal Unix-like `/home` folder, by default located in 
     ```
     After this, you will need to double-click and install the `ansel.exe` found in the `build/bin` folder. This package will be portable and be installable on other platforms.
 
+## VS Code setup
+
+To make debugging easier with VS Code, you can use the UCRT64 terminal within the program, which is better suited than the standard Windows terminal. For example, you can use GDB and simply `Ctrl + click` on relevant lines in the debugger output to jump directly to the corresponding line in the code editor.
+
+To add UCRT64 terminal:
+- open settings.json
+- add this code :
+
+{{< warning >}} The preceding item must end with a `,` {{</ warning >}}
+
+```json 
+"terminal.integrated.profiles.windows": {
+  "UCRT64": {
+    "path": "D:\\Guigui\\MSYS2\\usr\\bin\\bash.exe",
+    "env": {
+        "MSYSTEM": "UCRT64",
+        "CHERE_INVOKING": "1"},
+    "args": [ "--login", "-i"],
+  }
+}
+```
+To make it the default terminal in VS Code:
+- add this code :
+
+{{< warning >}} The preceding item must end with a `,` {{</ warning >}}
+
+```json
+"terminal.integrated.defaultProfile.windows": "UCRT64"
+```
+
 ## Caveats
 
 ### Starting in command line (with arguments)
@@ -135,3 +165,4 @@ If you find yourself in this situation, you have several mitigation options:
 3. If you don't have a discrete GPU and the Intel one is your only one:
     1. start the application with OpenCL disabled at all with `COMMAND --disable-opencl` (see the previous section for the actual system command to run, depending on your installation)
     2. disable the Intel GPU in Ansel config (see point 1.2. above)
+
