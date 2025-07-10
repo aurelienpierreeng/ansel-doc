@@ -106,31 +106,32 @@ MSYS will initialize a personal Unix-like `/home` folder, by default located in 
 
 To make debugging easier with VS Code, you can use the UCRT64 terminal within the program, which is better suited than the standard Windows terminal. For example, you can use GDB and simply `Ctrl + click` on relevant lines in the debugger output to jump directly to the corresponding line in the code editor.
 
-To add UCRT64 terminal:
-- open settings.json
-- add this code :
+- To add UCRT64 terminal:
+  - open settings.json
+  - Insert this code in the line before the last `}` :
 
-{{< warning >}} The preceding item must end with a `,` {{</ warning >}}
+    {{< warning >}} The preceding item must end with a `,` {{</ warning >}}
 
-```json 
-"terminal.integrated.profiles.windows": {
-  "UCRT64": {
-    "path": "D:\\Guigui\\MSYS2\\usr\\bin\\bash.exe",
-    "env": {
-        "MSYSTEM": "UCRT64",
-        "CHERE_INVOKING": "1"},
-    "args": [ "--login", "-i"],
-  }
-}
-```
-To make it the default terminal in VS Code:
-- add this code :
+    ```json 
+    "terminal.integrated.profiles.windows": {
+      "UCRT64": {
+        "path": "D:\\Guigui\\MSYS2\\usr\\bin\\bash.exe",
+        "env": {
+            "MSYSTEM": "UCRT64",
+            "CHERE_INVOKING": "1"},
+        "args": [ "--login", "-i"],
+      }
+    }
+    ```
 
-{{< warning >}} The preceding item must end with a `,` {{</ warning >}}
+- To make it the default terminal in VS Code:
+  - Insert this code in the line before the last `}` :
 
-```json
-"terminal.integrated.defaultProfile.windows": "UCRT64"
-```
+  {{< warning >}} The preceding item must end with a `,` {{</ warning >}}
+
+  ```json
+  "terminal.integrated.defaultProfile.windows": "UCRT64"
+  ```
 
 ## Caveats
 
