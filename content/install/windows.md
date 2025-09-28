@@ -115,7 +115,7 @@ To make debugging easier with VS Code, you can use the UCRT64 terminal within th
     ```json 
     "terminal.integrated.profiles.windows": {
       "UCRT64": {
-        "path": "D:\\Guigui\\MSYS2\\usr\\bin\\bash.exe",
+        "path": "C:\\MSYS2\\usr\\bin\\bash.exe",
         "env": {
             "MSYSTEM": "UCRT64",
             "CHERE_INVOKING": "1"},
