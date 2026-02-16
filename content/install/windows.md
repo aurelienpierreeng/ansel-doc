@@ -1,7 +1,7 @@
 ---
 title: Install on Windows
 date: 2022-12-11
-lastmod: 2023-06-22
+lastmod: 2026-02-16
 draft: false
 weight: 20
 ---
@@ -30,25 +30,19 @@ The Ansel project provides an official `.exe` package, built for the stable, pre
   ```bash
   $ pacman -Syu
   ```
-- Step 3:  Using the MSYS terminal - Install x64 developer tools, x86_64 toolchain and git:
+- Step 3:  Using the UCRT64 terminal - Clone the Ansel git repository (in this example into `~/ansel`):
   ```bash
-  $ pacman -S --needed base-devel intltool git
-  $ pacman -S --needed mingw-w64-ucrt-x86_64-{toolchain,cmake,ninja,nsis,autotools}
-- Step 4:  Using the MSYS terminal - Install required libraries and dependencies for Ansel:
-  ```bash
-  $ pacman -S --needed mingw-w64-ucrt-x86_64-{exiv2,lcms2,lensfun,dbus-glib,openexr,sqlite3,libxslt,libsoup,libavif,libheif,libwebp,libsecret,lua,graphicsmagick,openjpeg2,gtk3,pugixml,libexif,osm-gps-map,drmingw,gettext,python3,iso-codes,python-jsonschema,python-setuptools}
+  $ cd ~
+  $ git clone --depth 1 https://github.com/aurelienpierreeng/ansel.git
+  $ cd ansel
+  $ git submodule init
+  $ git submodule update
   ```
-- Step 5:  (Optional)  Using the MSYS terminal - Install optional libraries and dependencies:
-
-  - for cLUT
-    ```bash
-    $ pacman -S --needed mingw-w64-ucrt-x86_64-gmic
-    ```
-  - if you plan and developing, install the unit-tests library
-    ```bash
-    $ pacman -S --needed mingw-w64-ucrt-x86_64-cmocka
-    ```
-- Step 6:  Using the UCRT64 terminal - Update your lensfun database:
+- Step 4:  Using the UCRT64 terminal - Install all build dependencies using the script from the repository:
+  ```bash
+  $ ./packaging/install-deps-windows-msys2.sh
+  ```
+- Step 5:  Using the UCRT64 terminal - Update your lensfun database:
   ```bash
   $ lensfun-update-data
   ```
@@ -57,32 +51,24 @@ The Ansel project provides an official `.exe` package, built for the stable, pre
 MSYS will initialize a personal Unix-like `/home` folder, by default located in `C:\\msys64\home\USERNAME` where `USERNAME` is your current Windows username. If your username contains non-latin characters, like accentuated letters, the clashes between Windows encoding and Linux encoding will make the compilation fail on directory pathes issues. In that case, create a new directory in `C:\\msys64\home\USERNAME_WITHOUT_ACCENTS`, and in the MSYS terminal, do `cd /home/USERNAME_WITHOUT_ACCENT`.
 {{</ note >}}
 
-- Step 7:  Using a text editor, eg. MS Notepad - Modify the `.bash_profile` file in your `$HOME` directory and add the following lines:
+- Step 6:  Using a text editor, eg. MS Notepad - Modify the `.bash_profile` file in your `$HOME` directory and add the following lines:
   ```bash
   # Added as per http://wiki.gimp.org/wiki/Hacking:Building/Windows
   export PREFIX="/ucrt64"
   export LD_LIBRARY_PATH="$PREFIX/lib:$LD_LIBRARY_PATH"
   export PATH="$PREFIX/bin:$PATH"
   ```
-- Step 8:  By default CMake will only use one core during the build process. To speed things up, using a text editor, eg. MS Notepad, you might wish to add a line like:
+- Step 7:  By default CMake will only use one core during the build process. To speed things up, using a text editor, eg. MS Notepad, you might wish to add a line like:
   ```bash
   export CMAKE_BUILD_PARALLEL_LEVEL="8"
   ```
   to your `~/.bash_profile` file. This would use 8 cores.
   
-- Step 9:  Using the UCRT64 terminal - Execute the following command to activate profile changes:
+- Step 8:  Using the UCRT64 terminal - Execute the following command to activate profile changes:
   ```bash
   $ . .bash_profile
   ```
-- Step 10:  Using the UCRT64 terminal - Clone the Ansel git repository (in this example into `~/ansel`):
-  ```bash
-  $ cd ~
-  $ git clone --depth 1 https://github.com/aurelienpierreeng/ansel.git
-  $ cd ansel
-  $ git submodule init
-  $ git submodule update
-  ```
-- Step 11:  Using the UCRT64 terminal - Build and install Ansel:
+- Step 9:  Using the UCRT64 terminal - Build and install Ansel:
   - Variant 1: __with all contextual optimizations enabled for your hardware__:
     ```bash
     $ mkdir build

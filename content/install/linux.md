@@ -1,7 +1,7 @@
 ---
 title: Install on Linux
 date: 2022-12-11
-lastmod: 2023-06-16
+lastmod: 2026-02-16
 draft: false
 weight: 10
 ---
@@ -99,74 +99,18 @@ $ git submodule update
 
 ### Dependencies
 
-The most daunting part of the process is to chase all the dependencies required by the software to build, through the package manager of your distribution. For Ubuntu 18.04, you can launch:
+The repository includes per-distro dependency installers in `packaging/`. From the repo root, run one of:
 
 ```bash
-$ sudo apt-get -y install \
-	build-essential \
-	appstream-util \
-	desktop-file-utils \
-	gettext \
-	gdb \
-	intltool \
-	libatk1.0-dev \
-	libavifile-0.7-dev \
-	libcairo2-dev \
-	libcolord-dev \
-	libcolord-gtk-dev \
-	libcmocka-dev \
-	libcups2-dev \
-	libcurl4-gnutls-dev \
-	libexiv2-dev \
-	libimage-exiftool-perl \
-	libgdk-pixbuf2.0-dev \
-	libglib2.0-dev \
-	libgraphicsmagick1-dev \
-	libgtk-3-dev \
-	libheif-dev \
-	libjpeg-dev \
-	libjson-glib-dev \
-	liblcms2-dev \
-	liblensfun-dev \
-	liblensfun-bin \
-	liblensfun-data-v1 \
-	liblensfun1 \
-	liblua5.3-dev \
-	libgmic-dev \
-	libopenexr-dev \
-	libopenjp2-7-dev \
-	libosmgpsmap-1.0-dev \
-	libpango1.0-dev \
-	libpng-dev \
-	libportmidi-dev \
-	libpugixml-dev \
-	librsvg2-dev \
-	libsaxon-java \
-	libsecret-1-dev \
-	libsoup2.4-dev \
-	libsqlite3-dev \
-	libtiff5-dev \
-	libwebp-dev \
-	libx11-dev \
-	libxml2-dev \
-	libxml2-utils \
-	ninja-build \
-	perl \
-	po4a \
-	python3-jsonschema \
-	xsltproc \
-	zlib1g-dev
+./packaging/install-deps-ubuntu.sh
+./packaging/install-deps-debian.sh
+./packaging/install-deps-fedora.sh
+./packaging/install-deps-arch.sh
+./packaging/install-deps-suse.sh
+./packaging/install-deps-nix.sh
 ```
 
-For other operating systems, unfortunately the names of packages may change slightly. When you run the build script (see below), if a dependency is not found, the configuration will abort with a message stating which dependency is missing, for example:
-
-```bash
--- Could NOT find WEBP (missing: WEBP_LIBRARY WEBP_INCLUDE_DIR) (Required is at least version "0.3.0")
-CMake Error at /usr/share/cmake-3.10/Modules/FindPackageHandleStandardArgs.cmake:137 (message):
-Could NOT find LENSFUN (missing: LENSFUN_LIBRARY LENSFUN_INCLUDE_DIR)
-```
-
-The first error tells us the WEBP library was found but its version is too old (older than 0.3.0), the second tells us the LENSFUN library is not found at all. You need to use your package manager to find out what package provides the development libraries of these software, which typically have names ending in `-dev` on Ubuntu/Debian and `-devel` on Fedora/RedHat. So we would need to install `lensfun-devel` on Fedora or `liblensfun-dev` on Ubuntu, then retry a compilation.
+These scripts install the build/runtime dependencies used by CI and packaging.
 
 Note that optional dependencies don't make the script abort when they are not found, but will disable the corresponding features. You need to read the build script output to find out if everything works as you expect it.
 

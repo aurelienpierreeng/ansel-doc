@@ -7,6 +7,10 @@ draft: false
 author: "people"
 ---
 
+## Dependencies for Source Builds
+
+If you plan to build from source, the Ansel repository ships per-platform dependency installer scripts in `packaging/`. Use the script matching your OS (for example `./packaging/install-deps-ubuntu.sh`, `./packaging/install-deps-macos.sh`, or `./packaging/install-deps-windows-msys2.sh`).
+
 ## Understanding Ansel's releases
 
 ### Ansel channels
