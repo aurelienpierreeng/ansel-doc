@@ -11,6 +11,8 @@ The module opens in **preview** by default; switch to **edit** to change the sou
 
 Notes are stored as a sidecar text file named `<image basename>.txt` in the same folder as the image. When a local copy exists, the note follows the local copy. When images are imported, copied, moved or renamed with Ansel, the `.txt` sidecars are moved along if present. The text files can be opened with any Markdown or plain-text editor.
 
+All duplicates (variants) of an image will share the same sidecar `<image basename>.txt` file, where you can document the differences between them.
+
 Changes are saved automatically after a short delay and when focus leaves the editor. The content of the sidecar `.txt` can be used through the [variable](../../variables.md) `$(SIDECAR_TXT)` in various places in the software.
 
 {{< note >}}
