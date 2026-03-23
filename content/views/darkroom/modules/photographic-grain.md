@@ -15,7 +15,11 @@ This module implements a production version of the model presented in [Stochasti
 
 Unlike simple additive noise, the module works with crystal-shaped grains, a per-layer filling ratio, and a remaining-light model. Each crystal captures a flat tone averaged over its own footprint, so image detail finer than the grain size is not preserved inside the grain.
 
-This way of simulating photographic grain is inspired by physics but is not a 1:1 simulation. The sensitometry aspect was deliberately left since that part is covered by other modules already, and chemical effects of developers over the grain size has not been simulated.kk                   
+This way of simulating photographic grain is inspired by physics but is not a 1:1 simulation. The sensitometry aspect was deliberately left since that part is covered by other modules already, and chemical effects of developers over the grain size has not been simulated.
+
+{{< warning >}}
+As with any pixel-level modification, the previews are accurate only for a 100% zoom (1:1), and provided in a best-effort manner for any other zoom level.
+{{< /warning >}}
 
 ## scene-referred placement
 
