@@ -40,8 +40,7 @@ From top to bottom:
 [processing modules](../../views/darkroom/modules/_index.md)
 : The modules used to process an image.
 
-[module order](../../views/toolboxes/module-order.md)
-: Choose the order in which processing modules are executed in the pixelpipe.
+The module-order graph is no longer shown as a side-panel module. Use the node-graph button from the darkroom toolbar to open the [module order](../../views/toolboxes/module-order.md) popup and inspect or rearrange the pixelpipe.
 
 ## bottom panel
 

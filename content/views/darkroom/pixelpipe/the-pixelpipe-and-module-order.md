@@ -40,6 +40,16 @@ It remains highly recommended that users not change the order within the pixelpi
 - Some processing modules simply don't make sense if they are shifted in the pixelpipe. For example, [_highlight reconstruction_](../modules/highlight-reconstruction.md) needs to be performed on raw data before [_demosaic_](../modules/demosaic.md), which itself needs to be performed before any [_input color profile_](../modules/input-color-profile.md) can be applied. For this reason it is still not possible to move some of the modules that are placed early in the pixelpipe.
 - Most processing modules are designed to work within a specific color space (see the [color management](../../../color-management/_index.md) section for more details). Full flexibility would require modules to support different parallel algorithms depending on the color space they are working in, which would drastically increase complexity.
 
-Despite the general recommendation to leave the pixelpipe order alone, it is possible to move modules within the pixelpipe by holding Ctrl+Shift and dragging and dropping the desired module to a new location. This should only be done by experienced users who understand the impact this will have on the image.
+Despite the general recommendation to leave the pixelpipe order alone, it is possible to move modules within the pixelpipe from the darkroom module-order graph. Open it from the node-graph button in the darkroom toolbar, then drag and drop modules directly in the graph to a new location. This should only be done by experienced users who understand the impact this will have on the image.
 
-The module order can be manually changed back to either the _v3.0_ or _legacy_ versions using the [module order](../../toolboxes/module-order.md) module, which can also be used to define your own custom module order presets.
+The graph popup provides a scrollable left-to-right view of the pipeline, from the base image to the screen output. It shows:
+
+- the current execution order of visible modules,
+- the active color-space lifecycle across the pipeline,
+- the input/output runtime descriptors for each module,
+- raster-mask dependencies between producer and consumer modules,
+- the module-order presets toolbar, used to add presets, reset the order, or apply an existing preset.
+
+Modules that cannot cross ordering fences are constrained by the same rules as the processing pipeline itself, so impossible moves are prevented in the graph.
+
+The module order can be manually changed back to either the _v3.0_ or _legacy_ versions using the module order popup, which can also be used to define your own custom module order presets.
