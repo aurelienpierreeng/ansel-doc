@@ -93,8 +93,11 @@ All the remaining Lab modules that I have warned against for years are deprecate
 * colorize, *(replaced by color balance)*
 * color contrast, *(replaced by color balance)*
 * color correction, *(replaced by color balance)*
+* color checker, 
 * color mapping, *(replaced by color mapping features in exposure and color calibration)*
 * color reconstruction, *(replaced by filmic color reconstruction, "high quality reconstruction" method)*
+* color zones, *(replaced by Color equalizer)*
+* grain, *(replaced by Photographic grain)*
 * high-pass, *(replaced by diffuse or sharpen, various deblurring presets)*
 * levels, *(replaced by filmic, white and black relative exposures settings)*
 * low light, *(replaced by color balance)*
