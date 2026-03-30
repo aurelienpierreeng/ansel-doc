@@ -1,5 +1,5 @@
 ---
-title: drawing
+title: Drawing
 date: 2026-03-08T00:00:00+01:00
 id: drawing
 applicable-version: 4.0
@@ -15,31 +15,31 @@ This module is a true painting layer system. It is not a local-adjustment mask e
 
 The intended use cases are:
 
-- hand painting,
-- dodging and burning with a brush,
-- color glazing,
-- painterly overlays,
-- matte painting on top of a photograph,
-- texture painting,
-- soft masking or erasing with a pressure-sensitive tablet.
+- Hand painting,
+- Dodging and burning with a brush,
+- Color glazing,
+- Painterly overlays,
+- Matte painting on top of a photograph,
+- Texture painting,
+- Soft masking or erasing with a pressure-sensitive tablet.
 
 The TIFF sidecar is saved as 16 bits floating point, compressed losslessly, in scene-linear working RGB space (the colorspace ICC profile is included in the file), with premultiplied alpha. It can be modified in any software that supports this. 
 
 Each instance of the module is saved as a different layer in this file. This sidecar can also be used to import any arbitrary image and compose it over the photograph, under the display view transform. Typical masking features are available too.
 
-## what the module does
+## What the module does
 
 The module stores one or more drawing layers in a TIFF sidecar linked to the current image. Each layer is a premultiplied RGBA image in the module working space. The layer is loaded into memory, edited live in darkroom, composited over the image preview, and written back to the sidecar when needed.
 
 The module works in three distinct spaces at the same time:
 
-- a full-resolution authoritative layer cache, used for persistence,
-- a view-dependent cropped and scaled process tile, used for realtime display while painting,
-- the darkroom display buffer, where the layer is blended over the current image.
+- A full-resolution authoritative layer cache, used for persistence,
+- A view-dependent cropped and scaled process tile, used for realtime display while painting,
+- The darkroom display buffer, where the layer is blended over the current image.
 
 In practice, this means the brush can stay responsive while painting, even on large images, because the module paints live only into the visible process tile. The finished stroke is then replayed asynchronously at full resolution into the authoritative cache.
 
-## general workflow
+## General workflow
 
 A typical workflow is:
 
@@ -51,7 +51,7 @@ A typical workflow is:
 
 The module can manage several layers inside the same sidecar TIFF. Each module instance is linked to one layer name and one layer order. You can therefore stack several drawing module instances if you want several independent painted layers in the history.
 
-## how realtime painting works
+## How realtime painting works
 
 The painting engine is split in two stages.
 
@@ -59,27 +59,27 @@ The painting engine is split in two stages.
 
 The first worker receives raw input events from the GUI:
 
-- button press starts a stroke,
-- pointer motion adds raw samples,
-- button release ends the stroke.
+- Button press starts a stroke,
+- Pointer motion adds raw samples,
+- Button release ends the stroke.
 
 Those raw events include:
 
-- position,
-- pressure,
-- tilt,
-- acceleration,
-- current brush settings,
-- stroke id and event id.
+- Position,
+- Pressure,
+- Tilt,
+- Acceleration,
+- Current brush settings,
+- Stroke id and event id.
 
 This worker converts raw input into evenly spaced dabs. It is responsible for:
 
-- distance-based resampling,
-- smoothing,
-- interpolation of dab properties,
-- pressure/tilt/acceleration mapping,
-- stroke-local opacity and flow behavior,
-- smudge carry state.
+- Distance-based resampling,
+- Smoothing,
+- Interpolation of dab properties,
+- Pressure/tilt/acceleration mapping,
+- Stroke-local opacity and flow behavior,
+- Smudge carry state.
 
 The emitted dabs are immutable records. Once a dab has been emitted into the stroke history, later stages are expected to consume it as-is.
 
@@ -89,7 +89,7 @@ While you paint, the module updates only the current process tile for display. W
 
 This design avoids paying the cost of full-resolution rasterization at every live dab. It is the main reason the module can remain interactive on large images.
 
-## compositing model
+## Compositing model
 
 The drawing layer is stored as premultiplied RGBA and composited over the incoming image buffer.
 
@@ -99,11 +99,11 @@ That matters for three reasons:
 2. Erasing reduces alpha and therefore removes previously-painted contribution cleanly.
 3. Layer blending remains stable through the pixelpipe and through OpenCL processing.
 
-## brush tab
+## Brush tab
 
 The _Brush_ tab contains the painting controls.
 
-### paint mode
+### Paint mode
 
 paint
 : Paint the selected color over the current layer.
@@ -117,7 +117,7 @@ blur
 smudge
 : Pick up already-painted pixels and drag them along the stroke.
 
-### color
+### Color
 
 color
 : Sets the brush color in display RGB.
@@ -128,7 +128,7 @@ pick from
 HDR exposure
 : Raises the brush color intensity above display white. This is useful if the layer is meant to live in a scene-referred HDR pipeline rather than as a simple display-referred overlay.
 
-### geometry
+### Geometry
 
 fall-off
 : Chooses the brush alpha profile. The module currently provides four profiles:
@@ -158,7 +158,7 @@ hardness
 : - high values produce a hard center and steeper edge,
 : - low values produce a soft brush with a larger transition zone.
 
-### thickness
+### Thickness
 
 opacity
 : The target opacity of the stroke.
@@ -171,7 +171,7 @@ flow
 
 : This is one of the most important controls to understand. _Opacity_ defines the intended strength of the stroke. _Flow_ defines how that strength is distributed across overlapping dabs.
 
-### texture
+### Texture
 
 sprinkles
 : Adds multiplicative grain/noise to the brush alpha.
@@ -187,11 +187,11 @@ coarseness
 : - 50% balances the octaves evenly,
 : - 100% favors the finest octave.
 
-## layer tab
+## Layer tab
 
 The _Layer_ tab manages sidecar layers and preview background.
 
-### background
+### Background
 
 image
 : Shows the normal image under the drawing layer.
@@ -199,7 +199,7 @@ image
 white, grey, black
 : Replaces the image background in the preview with a flat color. This is useful to inspect painted alpha and edge quality independently of the photograph.
 
-### layer management
+### Layer management
 
 layer name
 : Name of the current drawing layer in the sidecar TIFF.
@@ -216,7 +216,7 @@ delete layer
 create background from input
 : Creates a background layer initialized from the module input. This is useful if you want to paint destructively on a rasterized snapshot rather than on transparency, or if you want to open the sidecar TIFF in another drawing application while still having the reference image in background. Both layers are positionned as they appear.
 
-### fill
+### Fill
 
 white
 : Fills the current layer with opaque white.
@@ -227,7 +227,7 @@ black
 transparency
 : Clears the current layer to full transparency.
 
-## history buttons
+## History buttons
 
 At the top of the module, outside the notebook tabs, there are three important buttons:
 
@@ -242,35 +242,35 @@ save sidecar
 
 This is explicit persistence, not just a history item. It is useful if you want to secure long painting sessions before leaving darkroom.
 
-## input tab
+## Input tab
 
 The _Input_ tab maps tablet or pointer data to brush parameters.
 
 It supports three input sources:
 
-- pressure,
-- tilt,
-- acceleration.
+- Pressure,
+- Tilt,
+- Acceleration.
 
 Each source can modulate four targets:
 
-- size,
-- opacity,
-- flow,
-- hardness.
+- Size,
+- Opacity,
+- Flow,
+- Hardness.
 
 For each source, you can also choose a mapping profile:
 
-- linear,
-- quadratic,
-- square root,
-- inverse linear,
-- inverse square root,
-- inverse quadratic.
+- Linear,
+- Quadratic,
+- Square root,
+- Inverse linear,
+- Inverse square root,
+- Inverse quadratic.
 
 These mappings are evaluated per raw input event, before the event is turned into a resolved dab. The cursor preview uses the mapped values too, so the visible cursor should reflect what will actually be emitted into the stroke.
 
-## stroke sampling details
+## Stroke sampling details
 
 The stroke engine does not simply stamp one dab per mouse event. Instead, it tries to build a stable sampled path.
 
@@ -278,59 +278,59 @@ The raw pointer path is converted into evenly spaced dabs according to the selec
 
 The important consequence is that the visible stroke should depend much more on the chosen brush spacing than on the operating system event rate.
 
-## why this module can be slow
+## Why this module can be slow
 
 This module is more expensive than an ordinary color adjustment module, because it maintains and updates raster images interactively.
 
 The main cost sources are:
 
-### large brush footprints
+### Large brush footprints
 
 Brush cost grows with the damaged area. A very large soft brush can touch hundreds of thousands of pixels per dab.
 
-### blur and smudge
+### Blur and smudge
 
 These modes are slower than ordinary paint and erase because they need extra neighborhood sampling and, for smudge, a carried runtime state.
 
-### sprinkles
+### Sprinkles
 
 Sprinkles add procedural grain evaluation to the alpha path. Large sprinkle size and high-strength grain can become expensive, especially with large brushes.
 
-### full-resolution replay
+### Full-resolution replay
 
 Live painting updates only the view-dependent process tile. The finished stroke is then replayed asynchronously at full resolution into the authoritative cache. This moves cost away from the live stroke, but it does not remove it.
 
 On very long or very large strokes, the replay worker can remain busy for a while after the stroke ends.
 
-### saving and leaving darkroom
+### Saving and leaving darkroom
 
 The sidecar TIFF must reflect the authoritative full-resolution layer. If there are still deferred replay jobs pending when you:
 
-- save the sidecar,
-- leave darkroom,
-- close the application,
+- Save the sidecar,
+- Leave darkroom,
+- Close the application,
 
 then Ansel must wait for those jobs to finish before the sidecar can be written safely.
 
 The module therefore shows a blocking modal wait dialog when leaving or closing while a layer still needs to be finalized and saved.
 
-## performance architecture and limitations
+## Performance architecture and limitations
 
 The module uses several caches and workers to remain interactive. The first one being that layers are saved at the resolution of the RAW input, so this is a considerably larger painting matte than in most drawing applications.
 
-### process tile
+### Process tile
 
 While painting, the module rasterizes into a process tile representing the current visible area plus a safety margin. This is what makes realtime interaction possible.
 
 The consequence is that the immediate preview is view-dependent. If you pan or zoom, the tile must be rebuilt from the authoritative cache.
 
-### authoritative full-resolution cache
+### Authoritative full-resolution cache
 
 The real saved layer lives in a full-resolution in-memory cache. The sidecar TIFF is only the persistence format.
 
 This is necessary because rebuilding a full-resolution layer from a previously-scaled preview tile would destroy fine texture and blur procedural details such as sprinkles.
 
-### deferred replay worker
+### Deferred replay worker
 
 Finished strokes are replayed into the full-resolution cache in a second worker thread. This reduces live latency, but it introduces a second source of work that must eventually complete.
 
@@ -340,33 +340,33 @@ The module supports OpenCL in the compositing path. That accelerates the darkroo
 
 Practical consequences:
 
-- the pixelpipe can blend the layer on GPU,
-- stroke generation and dab rasterization are still CPU tasks,
-- if OpenCL is disabled for the module, the compositing path will run on CPU,
-- if OpenCL is enabled but later modules need the GPU at the same time, total responsiveness can still depend on system load and GPU contention.
+- The pixelpipe can blend the layer on GPU,
+- Stroke generation and dab rasterization are still CPU tasks,
+- If OpenCL is disabled for the module, the compositing path will run on CPU,
+- If OpenCL is enabled but later modules need the GPU at the same time, total responsiveness can still depend on system load and GPU contention.
 
-### first-use costs
+### First-use costs
 
 The first stroke in a session can still be slightly slower than later ones because some caches, threads and buffers are warmed lazily. Several first-use penalties have been reduced, but a completely cost-free first stroke is unrealistic in a raster painting system that initializes preview and replay resources on demand.
 
-## practical advice
+## Practical advice
 
 For best performance:
 
-- keep brush size reasonable, paint with short strokes,
-- avoid excessive smoothing unless needed,
-- use lower sprinkle values for large brushes,
-- reserve blur and smudge for smaller localized work,
-- let the background replay worker catch up before saving or leaving darkroom if you painted a very long stroke.
+- Keep brush size reasonable, paint with short strokes,
+- Avoid excessive smoothing unless needed,
+- Use lower sprinkle values for large brushes,
+- Reserve blur and smudge for smaller localized work,
+- Let the background replay worker catch up before saving or leaving darkroom if you painted a very long stroke.
 
 For best visual consistency:
 
-- think of opacity as stroke strength,
-- think of flow as overlap behavior,
-- use the preview background colors to inspect edges and alpha,
-- save the sidecar after important milestones if you are building complex painted layers.
+- Think of opacity as stroke strength,
+- Think of flow as overlap behavior,
+- Use the preview background colors to inspect edges and alpha,
+- Save the sidecar after important milestones if you are building complex painted layers.
 
-## caveats
+## Caveats
 
 This module is not designed for geometric retouching, source-target healing, or patch-based object removal. Use [retouch](./retouch.md) for that.
 
@@ -374,21 +374,21 @@ This module also does not replace masking-and-blending logic. It paints real pix
 
 Because the layer is stored in a TIFF sidecar and replayed at full resolution, complex sessions can generate a non-trivial amount of CPU work and memory traffic compared with classic adjustment modules.
 
-## summary
+## Summary
 
 The _drawing_ module is a raster painting layer system for darkroom. It converts stylus or mouse input into sampled dabs, paints them live into a process tile for immediate display, then replays finished strokes asynchronously into a full-resolution authoritative layer cache that is saved in a TIFF sidecar.
 
 Its strengths are:
 
-- direct painting,
-- tablet-aware input mapping,
-- persistent paint layers,
-- scene-referred HDR-aware color painting,
-- responsive live preview.
+- Direct painting,
+- Tablet-aware input mapping,
+- Persistent paint layers,
+- Scene-referred HDR-aware color painting,
+- Responsive live preview.
 
 Its main limits are:
 
-- large-brush cost,
-- slower blur and smudge modes,
-- deferred full-resolution replay after strokes,
-- blocking waits when pending work must be saved before leaving darkroom.
+- Large-brush cost,
+- Slower blur and smudge modes,
+- Deferred full-resolution replay after strokes,
+- Blocking waits when pending work must be saved before leaving darkroom.

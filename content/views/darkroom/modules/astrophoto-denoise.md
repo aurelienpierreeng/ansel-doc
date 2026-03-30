@@ -1,5 +1,5 @@
 ---
-title: astrophoto denoise
+title: Astrophoto denoise
 date: 2022-12-04T02:19:02+01:00
 id: astrophoto-denoise
 applicable-version: 3.4
@@ -15,7 +15,7 @@ This is accomplished by averaging each pixel with some surrounding pixels in the
 
 As denoising is a resource-intensive process, it slows down pixelpipe processing significantly. Consider activating this module late in your workflow.
 
-## module controls
+## Module controls
 
 patch size
 : The radius of the patch used for similarity evaluation.

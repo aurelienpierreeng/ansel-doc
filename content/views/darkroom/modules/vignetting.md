@@ -1,5 +1,5 @@
 ---
-title: vignetting
+title: Vignetting
 date: 2022-12-04T02:19:02+01:00
 id: vignetting
 applicable-version: 3.2.1
@@ -23,7 +23,7 @@ _**Also note:** This module can produce unnatural-looking results and should be 
 
 ---
 
-## module controls
+## Module controls
 
 scale
 : The radius of the vignetting area.

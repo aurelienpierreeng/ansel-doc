@@ -1,5 +1,5 @@
 ---
-title: lua scripts installer
+title: Lua scripts installer
 date: 2022-12-04T02:19:02+01:00
 id: lua-scripts-installer
 applicable-version: 3.2.1

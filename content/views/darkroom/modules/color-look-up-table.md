@@ -1,5 +1,5 @@
 ---
-title: color look up table
+title: Color look up table
 date: 2022-12-04T02:19:02+01:00
 id: color-look-up-table
 applicable-version: 3.2.1
@@ -13,7 +13,7 @@ A generic color look up table implemented in Lab space.
 
 The input to this module is a list of source and target points and the complete mapping is interpolated using splines. The resulting look up tables (LUTs) are editable by hand and can be created using the darktable-chart utility to match given input (such as hald-cluts and RAW/JPEG with in-camera processing pairs).
 
-## module controls
+## Module controls
 
 color board
 : The color board grid shows a list of colored patches. The colors of the patches are the source points. The target color of the selected patch is shown as offsets which are controlled by sliders beneath the color board. An outline is drawn around patches that have been altered (where the source and target colors differ).

@@ -1,5 +1,5 @@
 ---
-title: parametric masks
+title: Parametric masks
 date: 2022-12-04T02:19:02+01:00
 id: parametric
 weight: 30
@@ -14,7 +14,7 @@ Each pixel of an image thus has different blending factors for each of its data 
 
 If the blend mask has a value of 0 for a given pixel, the input of the module is left unchanged. If the blend mask has a value of 1 (100%) for a pixel, the module has its full effect.
 
-## channel tabs
+## Channel tabs
 
 Click on one of the channel tabs to select a data channel to use to build your mask.
 
@@ -32,7 +32,7 @@ The _boost factor_ slider allows the range of values targeted by the parametric 
 
 ![input and output sliders](input-output-sliders.jpg)
 
-### inspecting data channels & masks
+### Inspecting data channels & masks
 
 Press the letter C while hovering over a channel's input/output slider to view the input/output image data for that color channel. The center image changes to display that color channel either in gray-scale values or in false colors depending on the setting in [preferences > darkroom > display of individual color channels](../../../../preferences-settings/darkroom.md).
 
@@ -40,11 +40,11 @@ Press the letter M to see the resulting mask for that slider overlaid on the ima
 
 When the mouse pointer leaves the slider the image returns to normal after a short delay.
 
-### linear / log mode
+### Linear / log mode
 
 Press the letter A while hovering over the a slider to change its display to 'log' mode. This provides more fine control in the shadows. Press A again to toggle back to 'linear' mode.
 
-## channel input/output sliders
+## Channel input/output sliders
 
 With each color channel slider you can construct a trapezoidal opacity function. For this purpose there are four markers per slider. Two filled triangles above the slider mark the range of values where opacity is 1. Two open triangles below the slider mark the range values where opacity is 0. Intermediate points between full and zero are given a proportional opacity.
 
@@ -70,16 +70,16 @@ In this state a range select function selects the whole range of values giving a
 
 Conversely a range de-select function (enabled by toggling the polarity) by default deselects the whole range of values, giving an “all-zero” mask as a starting point. Moving the sliders inwards gradually includes more and more parts of the image except for the remaining narrow range.
 
-## color pickers
+## Color pickers
 
 With the left-hand color picker button you can select a point or area probe from your image. The corresponding values for the real and virtual data channels are then displayed within each color channel slider.
 
 With the right-hand color picker button you can automatically set the slider's values based on the selected range. Click and drag to set the parameters for the input slider from the drawn rectangle; Ctrl+click and drag to set the parameters for the output slider.
 
-## invert
+## Invert
 
 Click the invert button above the sliders to invert the polarity of the entire parametric mask. This differs from the polarity buttons beside the individual sliders which just invert the parameters for the current slider/channel.
 
-## reset
+## Reset
 
 Click the reset button above the sliders to revert all parametric mask parameters to their default state.

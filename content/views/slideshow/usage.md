@@ -1,5 +1,5 @@
 ---
-title: usage
+title: Usage
 date: 2022-12-04T02:19:02+01:00
 lastmod: 2023-10-12
 id: usage
@@ -22,7 +22,7 @@ ESC                  leave slideshow mode and return to lighttable view.
 + or                 increase delay between each image.
 up arrow
 
-- or                 decrease delay between each image.
+- Or                 decrease delay between each image.
 down arrow
 
 left-click or

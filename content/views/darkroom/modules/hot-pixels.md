@@ -1,5 +1,5 @@
 ---
-title: hot pixels
+title: Hot pixels
 date: 2022-12-04T02:19:02+01:00
 id: hot-pixels
 applicable-version: 3.2.1
@@ -13,7 +13,7 @@ Automatically detect and eliminate hot pixels.
 
 Hot pixels are pixels which have failed to record a light level correctly. Detected hot pixels are replaced by an average of their neighbors.
 
-## module controls
+## Module controls
 
 threshold
 : How strong a pixel's value needs to deviate from that of its neighbors to be regarded as a hot pixel.

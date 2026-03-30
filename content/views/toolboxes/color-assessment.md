@@ -1,5 +1,5 @@
 ---
-title: color assessment
+title: Color assessment
 date: 2022-12-04T02:19:02+01:00
 id: color assessment
 applicable-version: 4.0

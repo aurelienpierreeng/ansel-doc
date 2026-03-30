@@ -1,5 +1,5 @@
 ---
-title: a simple lua example
+title: A simple Lua example
 date: 2022-12-04T02:19:02+01:00
 id: a-simple-lua-example
 weight: 30

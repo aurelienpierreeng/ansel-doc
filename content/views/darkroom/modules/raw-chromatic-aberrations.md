@@ -1,5 +1,5 @@
 ---
-title: raw chromatic aberrations
+title: Raw chromatic aberrations
 date: 2022-12-04T02:19:02+01:00
 id: raw-chromatic-aberrations
 applicable-version: 3.6
@@ -17,7 +17,7 @@ This module currently only works for raw images recorded with a Bayer sensor (th
 
 The module will also not apply any corrections to any photos that have been identified as monochrome by their metadata, like the files produced by the Leica M10 Monochrom.
 
-## module controls
+## Module controls
 
 iterations
 : The number of iterations. For most images, "twice" is sufficient, and is the default value. Occasionally, increasing this control can give better results.

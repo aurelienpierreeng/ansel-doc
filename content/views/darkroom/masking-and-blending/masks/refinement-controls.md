@@ -1,5 +1,5 @@
 ---
-title: mask refinement & additional controls
+title: Mask refinement & additional controls
 date: 2022-12-04T02:19:02+01:00
 id: masks
 weight: 50
@@ -42,7 +42,7 @@ mask contrast
 ![mask icon](icon-mask.jpg) display mask
 : Click on this icon to display the current mask as a yellow overlay over a black-and-white version of the image. Solid yellow indicates an opacity of 100%; a fully visible gray background image (without yellow overlay) indicates an opacity of 0%.
 
-## example: feathering a drawn mask
+## Example: feathering a drawn mask
 
 ![feathering](feathering.jpg)
 

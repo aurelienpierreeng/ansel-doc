@@ -1,5 +1,5 @@
 ---
-title: rendering method
+title: Rendering method
 date: 2022-12-04T02:19:02+01:00
 id: rendering-method
 weight: 30

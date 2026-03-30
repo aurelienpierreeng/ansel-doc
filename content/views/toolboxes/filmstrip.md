@@ -1,5 +1,5 @@
 ---
-title: filmstrip
+title: Filmstrip
 date: 2022-12-04T02:19:02+01:00
 id: filmstrip
 applicable-version: 4.0

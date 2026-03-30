@@ -1,9 +1,9 @@
 ---
-title: final resampling
+title: Final resampling
 date: 2023-01-21
 id: final-resampling
 tags:
-  - sampling
+  - Sampling
 applicable-version: 4.0
 working-color-space: RGB
 view: darkroom

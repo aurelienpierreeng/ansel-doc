@@ -1,5 +1,5 @@
 ---
-title: framing
+title: Framing
 date: 2022-12-04T02:19:02+01:00
 id: framing
 applicable-version: 3.8
@@ -13,7 +13,7 @@ Generate a frame around the image.
 
 The frame consists of a border (with a user-defined color) and a frame line within that border (with a second user-defined color). Various options are available to control the geometry and color of the frame.
 
-## module controls
+## Module controls
 
 border size
 : The size of the frame as a percentage of the underlying full image.

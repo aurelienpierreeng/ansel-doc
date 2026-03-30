@@ -1,5 +1,5 @@
 ---
-title: print view layout
+title: Print view layout
 date: 2022-12-04T02:19:02+01:00
 id: overview
 weight: 20
@@ -11,13 +11,13 @@ The central area displays the image layout on the paper (the white area). Some g
 
 The [filmstrip](../toolboxes/filmstrip.md) below the image allows you to select more images.
 
-### overlays
+### Overlays
 
 When the mouse is over the bounding box of an image, its width and height are shown along its top and left, respectively. Margins between the bounding box and the page edge are notated next to the dotted lines extending out from each side of the bounding box. All measurements are shown in the units as chosen in the print settings module.
 
 Images are inset along one dimension of their bounding box when they do not match the aspect ratio of the box. The overlaid margin measurements should therefore only be used to understand the layout bounds, not the actual printed size of the image.
 
-## left panel
+## Left panel
 
 [collections](../toolboxes/collections.md)
 : Filter the list of images displayed in the lighttable.
@@ -25,7 +25,7 @@ Images are inset along one dimension of their bounding box when they do not matc
 [image information](../toolboxes/image-information.md)
 : Display image information
 
-## right panel
+## Right panel
 
 [print settings](../toolboxes/print-settings.md)
 : Adjust print settings and initiate printing.

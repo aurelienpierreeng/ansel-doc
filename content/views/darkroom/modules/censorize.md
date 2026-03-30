@@ -1,5 +1,5 @@
 ---
-title: censorize
+title: Censorize
 date: 2022-12-04T02:19:02+01:00
 id: censorize
 applicable-version: 3.6
@@ -29,11 +29,11 @@ If forensically safe anonymization is required, the only way to achieve this is 
 
 ---
 
-## workflow
+## Workflow
 
 You are advised to leave the module's controls at their default values while you [mask](../masking-and-blending/masks/drawn.md) the areas of the image that you wish to censorize, in order that the details of the image remain visible.
 
-## module controls
+## Module controls
 
 input blur radius
 : The strength of the first pass of the gaussian blur.

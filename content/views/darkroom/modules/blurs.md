@@ -1,5 +1,5 @@
 ---
-title: blurs
+title: Blurs
 date: 2022-12-04T02:19:02+01:00
 id: blurs
 applicable-version: 3.8
@@ -11,7 +11,7 @@ masking: true
 
 Simulate physically-accurate blurs in scene-referred RGB space.
 
-## blur types
+## Blur types
 
 Three types of blur are provided:
 
@@ -21,9 +21,9 @@ Three types of blur are provided:
 
 A diagram at the top of the module shows the shape of the blurring operator (known as the [_point spread function_](https://en.wikipedia.org/wiki/Point_spread_function)). The module will turn each luminous point from the scene into a blot shaped like the displayed blurring operator, with the size of the blot defined by the _blur radius_.
 
-## module controls
+## Module controls
 
-### general
+### General
 
 blur radius
 : The spreading size of the blur.
@@ -31,7 +31,7 @@ blur radius
 blur type
 : Choose between the different blur variants (above).
 
-### controls specific to lens blur
+### Controls specific to lens blur
 
 diaphragm blades
 : The number of blades that the diaphragm is composed of. Older lenses used typically 5 or 7 blades, newer lenses typically use 9 or 11 blades. In any case, real lenses have an odd number of blades and any number greater than 11 blades comes very close to producing a perfect disc. If you degenerate the diaphragm settings with the _concavity_ to create a star or an asterisk, this control defines how many branches it has.
@@ -50,7 +50,7 @@ linearity
 rotation
 : Allows the shape to be rotated with respect to its center -- mostly useful with a small number of blades, when a particular orientation is needed.
 
-### controls specific to motion blur
+### Controls specific to motion blur
 
 direction
 : The orientation of the motion's path in angular degrees. 0° is horizontal motion.
@@ -61,12 +61,12 @@ curvature
 offset
 : Shifts along the motion path following its curve. This is useful to select a portion of the curved path that is symmetrical, which produces a coma shape (example 1: direction = -45°, curvature = +2, offset = +0.5 ; example 2 : direction = -45°, curvature = +1, offset = +1).
 
-## caveats
+## Caveats
 
 This module is implemented using a "naive" convolution, which is a slow algorithm. Faster approaches are available (using FFT) but not yet implemented. The GPU implementation, through OpenCL, should hide this issue somewhat. In any case, the runtime of the module will increase with the square of the blur radius.
 
 The blurring process does not take scene depth and depth-of-field into account, but blurs the whole image as a flat object. It is therefore not suitable for creating fake depth-of-field. Using Ansel's general masking will only partially work to isolate the foreground of an image, since it will still be blurred into the background.
 
-## tips and tricks
+## Tips and tricks
 
 All images are usually (even a tiny bit) noisy. If you blur only a part of the image, the blurred region will look suspiciously clean compared to the rest of the image. It is therefore a good idea to add a bit of noise on top of the blurred part to blend it with the rest, using either the [grain](./grain.md) or the [censorize](./censorize.md) modules.

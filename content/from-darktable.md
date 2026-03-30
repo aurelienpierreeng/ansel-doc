@@ -87,30 +87,30 @@ Overall, 5 to 6 SQL requests per thumbnail per "mouse over" event are now spared
 
 All the remaining Lab modules that I have warned against for years are deprecated, namely:
 
-* bloom, *(replaced by diffuse or sharpen, preset blooming)*
-* raw chromatic aberrations, *(replaced by RGB chromatic aberrations)*
-* contrast, lightness, saturation, *(replaced by filmic and color balance)*
-* colorize, *(replaced by color balance)*
-* color contrast, *(replaced by color balance)*
-* color correction, *(replaced by color balance)*
-* color mapping, *(replaced by color mapping features in exposure and color calibration)*
-* color reconstruction, *(replaced by filmic color reconstruction, "high quality reconstruction" method)*
-* high-pass, *(replaced by diffuse or sharpen, various deblurring presets)*
-* levels, *(replaced by filmic, white and black relative exposures settings)*
-* low light, *(replaced by color balance)*
-* low-pass, *(replaced by blurs)*
-* monochrome, *(replaced by color calibration, "grey" tab, and various film-emulation presets)*
-* raw denoise, *(replaced by denoise profiled)*
-* shadows and highlights, *(replaced by tone equalizer and local contrast)*
-* sharpen, *(replaced by diffuse or sharpen, various deblurring presets)*
-* soften, *(replaced by diffuse or sharpen, blooming preset)*
-* split-toning, *(replaced by color balance)*
-* tone curve, *(replaced by tone equalizer, filmic and color balance)*
-* velvia. *(replaced by color balance)*
+* Bloom, *(replaced by diffuse or sharpen, preset blooming)*
+* Raw chromatic aberrations, *(replaced by RGB chromatic aberrations)*
+* Contrast, lightness, saturation, *(replaced by filmic and color balance)*
+* Colorize, *(replaced by color balance)*
+* Color contrast, *(replaced by color balance)*
+* Color correction, *(replaced by color balance)*
+* Color mapping, *(replaced by color mapping features in exposure and color calibration)*
+* Color reconstruction, *(replaced by filmic color reconstruction, "high quality reconstruction" method)*
+* High-pass, *(replaced by diffuse or sharpen, various deblurring presets)*
+* Levels, *(replaced by filmic, white and black relative exposures settings)*
+* Low light, *(replaced by color balance)*
+* Low-pass, *(replaced by blurs)*
+* Monochrome, *(replaced by color calibration, "grey" tab, and various film-emulation presets)*
+* Raw denoise, *(replaced by denoise profiled)*
+* Shadows and highlights, *(replaced by tone equalizer and local contrast)*
+* Sharpen, *(replaced by diffuse or sharpen, various deblurring presets)*
+* Soften, *(replaced by diffuse or sharpen, blooming preset)*
+* Split-toning, *(replaced by color balance)*
+* Tone curve, *(replaced by tone equalizer, filmic and color balance)*
+* Velvia. *(replaced by color balance)*
 
 The display-referred RGB modules have been deprecated too:
 
-* base curve, *(replaced by filmic)*
+* Base curve, *(replaced by filmic)*
 * RGB levels, *(replaced by filmic, white and black relative exposures settings)*
 
 The scene-referred and display-referred processing workflows have been removed too, the scene-referred workflow is the only one and default. The chromatic adaptation workflows are removed too, the modern workflow will always be used.
@@ -141,7 +141,7 @@ CSS animations
 Filmstrip thumbnails
 : The thumbnails interaction have been synchronized with the lighttable :
     * Opening a new image will need double-click
-    * copy/pasting editing histories in filmstrip view over arbitrary selections will need a interaction with a knobby interface (mouse over event will be disregarded),
+    * Copy/pasting editing histories in filmstrip view over arbitrary selections will need a interaction with a knobby interface (mouse over event will be disregarded),
     * The weird selection modes relying on key modifiers are removed. Selection is done with regular single click, as in lighttable.
     * Rating/rejecting on overlays in filmstrip is prevented because the controls are too small to prevent misclicking accidents.
 

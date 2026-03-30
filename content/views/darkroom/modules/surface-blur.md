@@ -1,5 +1,5 @@
 ---
-title: surface blur
+title: Surface blur
 date: 2022-12-04T02:19:02+01:00
 id: surface-blur
 applicable-version: 3.4
@@ -18,7 +18,7 @@ The module can also be used as a creative filter to provide interesting effects,
 
 This module is resource-intensive and slows down pixelpipe processing significantly. You should consider activating it late in your workflow.
 
-## module controls
+## Module controls
 
 radius
 : The spatial extent of the gaussian blur.

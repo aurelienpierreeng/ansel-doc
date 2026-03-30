@@ -1,5 +1,5 @@
 ---
-title: output color profile
+title: Output color profile
 date: 2022-12-04T02:19:02+01:00
 id: output-color-profile
 applicable-version: 3.6
@@ -15,7 +15,7 @@ Ansel comes with pre-defined profiles _sRGB_, _Adobe RGB_, _XYZ_ and _linear RGB
 
 The output color profile may also be defined within the [export](../../toolboxes/export.md) module.
 
-## module controls
+## Module controls
 
 output intent
 : The rendering intent for output/export. Rendering intent can only be selected when using LittleCMS2 to apply the output color profile (this can be changed in [preferences > processing](../../../preferences-settings/processing.md)). If Ansel's internal rendering routines are used, this option is hidden. For more details see [rendering intent](../../../color-management/rendering-intent.md).

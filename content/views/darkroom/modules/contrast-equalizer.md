@@ -1,5 +1,5 @@
 ---
-title: contrast equalizer
+title: Contrast equalizer
 date: 2022-12-04T02:19:02+01:00
 id: contrast-equalizer
 applicable-version: 3.6
@@ -17,7 +17,7 @@ It works in the wavelets domain and its parameters can be tuned independently fo
 
 A number of presets are provided, which should help you to understand the capabilities of the module.
 
-## module controls
+## Module controls
 
 The _contrast equalizer_ module decomposes the image into various detail scales. On each detail scale, you can independently adjust the contrast and denoise splines for lightness ("luma") and chromaticity (“chroma”, or color saturation), as well as adjusting the edge-awareness (“edges”) of the wavelet transform. The luma, chroma and edges splines are provided on separate tabs, and some examples of their usage are given in the following sections.
 
@@ -31,7 +31,7 @@ In the background of the curve you can see a number of alternating light and dar
 
 ---
 
-### luma tab
+### Luma tab
 
 The luma tab allows you to adjust the local contrast in the image's luminance (brightness). Adjustments are represented by a white spline that begins as a horizontal line running across the centre of the graph (indicating that no change will be made). Raise or lower this spline at the left end of the graph to increase or decrease the local contrast of coarse detail in the image. Perform similar adjustments towards the right side of the graph to adjust the local contrast of the fine details in the image.
 
@@ -47,7 +47,7 @@ Raising the two control points at the right-hand end of the graph will increase 
 
 Increasing the local contrast can also amplify the luma noise in the image. A second spline located at the bottom of the graph can be used to denoise the selected detail scales. Raise this spline (by clicking just above one of the triangles at the bottom of the graph and dragging the line upwards) to reduce noise at the given wavelet scale. In the example above, the dark denoising spline has been raised at the fine-detail end of the graph.
 
-### chroma tab
+### Chroma tab
 
 The chroma tab allows the color contrast or saturation to be adjusted at the selected wavelet scales. See the following example:
 
@@ -59,7 +59,7 @@ Say you wanted to bring out the green color of the anthers at the end of the sta
 
 As in the luma tab, the chroma tab also has a denoising spline at the bottom of the graph. This can be used to handle chroma noise at different scales within the image. Chroma denoising can generally be more aggressive on larger wavelet scales and has less effect on a smaller scale.
 
-### edge tab
+### Edge tab
 
 The basic wavelet _à trous_ transform has been enhanced in the _contrast equalizer_ to be "edge-aware", which can help to reduce the gradient reversals and halo artifacts that the basic algorithm can produce. The _edges_ tab does not directly act on the edges in an image; rather it adjusts the edge awareness feature of the wavelet transform. If you have not adjusted the luma or chroma splines, adjusting the edge awareness spline will have no effect.
 

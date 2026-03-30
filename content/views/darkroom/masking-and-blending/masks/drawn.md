@@ -1,5 +1,5 @@
 ---
-title: drawn masks
+title: Drawn masks
 date: 2022-12-04T02:19:02+01:00
 id: drawn
 weight: 20
@@ -12,7 +12,7 @@ Shapes are stored internally as vectors and are rendered with the required resol
 
 The controls required to create and alter drawn masks may be enabled by selecting either the "drawn mask" or "drawn & parametric mask" icon at the bottom of a module. You can also create and edit shapes using the [mask manager](../../../toolboxes/mask-manager.md) module.
 
-## creating shapes
+## Creating shapes
 
 Choose a shape by clicking on the appropriate shape icon (from left to right: circle, ellipse, path, brush, gradient).
 
@@ -32,17 +32,17 @@ By default, scrolling your mouse up increases the value of the relevant shape pa
 
 ---
 
-## editing shapes
+## Editing shapes
 
 Click on the 'show and edit mask elements' icon ![show-and-edit-masks-icon](shape-edit.jpg) are blocked. This is particularly useful to avoid costly mistakes when editing path and brush shapes.
 
 Click and drag a shape to move it around the image canvas. Clicking on a shape will also select that shape in the mask manager.
 
-## removing shapes
+## Removing shapes
 
 While in edit mode right-click on a shape to remove it.
 
-## reusing shapes
+## Reusing shapes
 
 You can reuse shapes that you have drawn in other modules. Click on the shapes drop-down (next to the 'show and edit mask elements' button) to choose previously-drawn shapes individually or to use the same group of shapes as used by another module. The following options are available for selection:
 
@@ -52,15 +52,15 @@ add existing shape
 use same shapes as
 : Add a list of shapes used in another module to the current module's mask. This differs from the previous option in that it creates a new group of shapes, allowing shapes to be added to or removed from the group independently of the module from which they were copied. All shapes that are common to both groups remain linked.
 
-## combining and managing shapes
+## Combining and managing shapes
 
 The [mask manager](../../../toolboxes/mask-manager.md) module can be used to manage your drawn shapes. This module also allows you to group and combine drawn masks using set operators (union, intersection, difference, exclusion).
 
-## shape distortions
+## Shape distortions
 
 In order to ensure a consistent co-ordinate system, when you place a shape on the image, it is actually drawn on the original RAW file. This shape then passes up through the pixelpipe before finally being used by the module and drawn on the screen. This means that, if you have any enabled any distorting modules (such as lens correction), drawn shapes may appear distorted on the screen and in the final image. This can lead, for example, to circles being rendered as ellipses and gradient lines becoming curved. If you need to create a more accurate shape (to overcome these distortions) it is recommended that you avoid using the simple shapes (circles / ellipses) in favor of the path shape (which can be drawn using more points, reducing distortions). You can adjust the curve on gradient lines to overcome the simple distortions introduced by lens correction.
 
-## available shapes
+## Available shapes
 
 circle
 : Click on the image canvas to place the circle. Scroll while hovering over the circle to change its diameter. Scroll while hovering over the circle's border to change the width of the feathering (the same effect as holding Shift while scrolling with the mouse wheel within the main shape).
@@ -103,10 +103,10 @@ gradient
 
 : Depending on the module and the underlying image, using a gradient shape might provoke banding artifacts. You should consider activating the [_dithering_](../../modules/dithering.md) module to alleviate this.
 
-## reversing the polarity of a drawn mask
+## Reversing the polarity of a drawn mask
 
 Click on the "`+/-`" button to reverse the polarity of the entire drawn mask. For example, a circular mask will, by default, cause the module to be applied only to the area inside the drawn circle. Reversing its polarity will cause the module to apply to the whole image, _except for_ that circle.
 
-## panning and zooming the image
+## Panning and zooming the image
 
 While creating or editing a shape, mouse actions are applied to the current shape.  If you need to move or zoom the portion of the image shown in the center view, hold down the 'a' key while dragging the mouse or using the scroll wheel.  While the key is held down, the mouse actions will apply to the entire image rather than the current shape.

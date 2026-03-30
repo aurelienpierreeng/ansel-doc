@@ -1,5 +1,5 @@
 ---
-title: retouch
+title: Retouch
 date: 2022-12-04T02:19:02+01:00
 id: retouch
 applicable-version: 3.8
@@ -13,7 +13,7 @@ Remove unwanted elements from your image by cloning, healing, blurring and filli
 
 This module includes a "heal" tool (based on the heal tool from GIMP), as well as "fill" and "blur" modes. It can also take advantage of wavelet decomposition, allowing the image to be separated into layers of varying detail (from coarse to fine) which can be selectively retouched before being recombined to produce the output image.
 
-## clone and heal
+## Clone and heal
 
 Cloning allows a part of the image (the _target_) to be hidden by replacing it with an area copied from elsewhere in the image (the _source_). For example, you may wish to remove a small cloud from a blue sky:
 
@@ -31,7 +31,7 @@ In such cases, the _heal_ tool ![retouch-heal-icon](rt-heal-icon.jpg) is more ap
 
 ![retouch-heal-nocontrol](rt-heal-nocontrol.jpg)
 
-### source and target shapes
+### Source and target shapes
 
 Once you have chosen _heal_ or _clone_ mode, you must choose the shape you wish to use (_circle_, _ellipse_, _path_ or _brush_ -- see the [drawn masks](../masking-and-blending/masks/drawn.md) section for details). The source and target patches will both use the same shape.
 
@@ -53,7 +53,7 @@ Once you have placed your source and target shapes on the image, they can be adj
 
 ---
 
-## fill and blur
+## Fill and blur
 
 The _clone_ and _heal_ tools both require the use of another part of the image to "fill in" the region being hidden. Sometimes there is no suitable sample in the image to use for this purpose. In such cases, the _retouch_ module offers two further options:
 
@@ -65,7 +65,7 @@ The _clone_ and _heal_ tools both require the use of another part of the image t
 
 These two options are most useful when used together with wavelet decomposition, where they can be used to smooth over features within a selected detail layer.
 
-## wavelet decomposition
+## Wavelet decomposition
 
 Wavelets allow an image to be decomposed into a number of layers each containing varying levels of detail, so that you can work on each detail layer independently and then recombine them at the end. This is particularly useful in portrait photography, where you can deal with skin blotches and blemishes on a coarse layer of detail, leaving the finer skin texture untouched.
 
@@ -75,11 +75,11 @@ This method can be used with the healing tool, for example, to paint over a spot
 
 It can also be used with the blur tool to even out coarse blotches in the skin, again without impacting the finer details.
 
-## module controls
+## Module controls
 
 ![retouch-overview](rt-overview.jpg)
 
-### retouch tools
+### Retouch tools
 
 The _retouch tools_ section consists of two items:
 
@@ -95,7 +95,7 @@ shapes
 algorithms
 : Choose a retouching algorithm (clone, heal, fill or blur). Ctrl+click to change the algorithm used for the currently-selected shape. Shift+click to set the default algorithm (used for new images or when you reset module parameters).
 
-### wavelet decompose
+### Wavelet decompose
 
 The _wavelet decompose_ section centres around a bar graph that shows how the image has been decomposed into detail (scale) layers. The key features of the bar graph are:
 
@@ -148,7 +148,7 @@ preview single scale
 ![retouch-mask-icon](rt-mask-icon.jpg) display masks
 : Show the target shapes associated with the currently-selected layer with a yellow overlay.
 
-### shapes
+### Shapes
 
 This section allows you to modify settings related to the currently-selected shape:
 
@@ -173,10 +173,10 @@ blur radius
 mask opacity
 : Alter the opacity of the mask associated with the currently-selected shape. An opacity of 1.0 indicates that the shape is completely opaque and the module's effect is fully applied, whereas a value less than 1.0 indicates that the effect applied by the shape is blended with the underlying image to the degree indicated by the slider.
 
-### show guides
+### Show guides
 
 Tick the box to show guide overlays whenever the module is activated. Click the icon on the right to control the properties of the guides. See [guides & overlays](../../toolboxes/guides-overlays.md) for details.
 
-### panning and zooming the image
+### Panning and zooming the image
 
 While creating or editing a shape, mouse actions are applied to the current shape.  If you need to move or zoom the portion of the image shown in the center view, hold down the 'a' key while dragging the mouse or using the scroll wheel.  While the key is held down, the mouse actions will apply to the entire image rather than the current shape. Holding down the key will also temporarily suppress generating new shapes in continuous-creation mode.

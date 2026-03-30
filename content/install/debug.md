@@ -14,10 +14,10 @@ That is to say that bugs are almost impossible to anticipate when programming, a
 
 4 things :
 
-* the sequence of user operations that lead to the bug (doing this, clicking that, etc.),
-* the nature of the bug (segmentation fault at line xxx, crash with no warning),
-* the hardware and operating system used, OpenCL driver if any, Linux kernel version, etc.
-* the exact version of the software used, that is the full name of the `.exe` Windows package or `.AppImage` Linux package, or the full version string that can be found in the popup by clicking the Ansel logo, in the top panel of the software.
+* The sequence of user operations that lead to the bug (doing this, clicking that, etc.),
+* The nature of the bug (segmentation fault at line xxx, crash with no warning),
+* The hardware and operating system used, OpenCL driver if any, Linux kernel version, etc.
+* The exact version of the software used, that is the full name of the `.exe` Windows package or `.AppImage` Linux package, or the full version string that can be found in the popup by clicking the Ansel logo, in the top panel of the software.
 
 ## Unexpected crashes
 
@@ -30,8 +30,8 @@ If the file is empty, please move on to the next section.
 When you note a reproduceable crash and are lucky enough to be on Linux, you can force it to crash with better feedback by running the program within `gdb` (_it is typically already installed on most distributions, otherwise find the package providing it on yours and install it_). `gdb` will usually provide more information than the backtrace file, and may also record backtraces in situations where the above method produces an empty file.
 
 1. Start a `gdb` session, in terminal :
-   * if using a self-built version, run `gdb /opt/ansel/bin/ansel`
-   * if using an AppImage, run `gdb /path-to-appimage/Ansel-xxxxx-gxxxx-x86_64.AppImage`
+   * If using a self-built version, run `gdb /opt/ansel/bin/ansel`
+   * If using an AppImage, run `gdb /path-to-appimage/Ansel-xxxxx-gxxxx-x86_64.AppImage`
 2. Start the software with the `run` command, from the same terminal, and reproduce your faulty sequence of operations,
 3. When it crashes, run `bt full > ansel_bt.log` (`bt` is for backtrace), and send the `ansel_bt.log` file just created in your home folder to the developer.
 

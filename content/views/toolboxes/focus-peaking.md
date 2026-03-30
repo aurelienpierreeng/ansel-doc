@@ -1,5 +1,5 @@
 ---
-title: focus peaking
+title: Focus peaking
 date: 2022-12-04T02:19:02+01:00
 id: focus-peaking
 applicable-version: 3.2.1

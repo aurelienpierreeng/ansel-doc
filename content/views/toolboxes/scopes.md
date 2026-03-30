@@ -1,5 +1,5 @@
 ---
-title: scopes
+title: Scopes
 date: 2022-12-04T02:19:02+01:00
 lastmod: 2023-10-12
 id: scopes
@@ -20,7 +20,7 @@ You can move the scopes module to the left-hand panel in [preferences > miscella
 
 For performance reasons, scopes are calculated from the image preview (the image displayed in the [navigation](./navigation.md) module) rather than the higher quality image displayed in the center view. The preview is calculated at a lower resolution and may use shortcuts to bypass more time-consuming image processing steps. Hence the display may not accurately represent fine detail in the image, and may deviate in other ways from the final developed image.
 
-## histogram
+## Histogram
 
 ![histogram](histogram.jpg)
 
@@ -32,7 +32,7 @@ Click the second-to-leftmost button on the panel to toggle between a logarithmic
 
 The three rightmost colored buttons toggle the display of the red, green and blue color channels.
 
-## waveform
+## Waveform
 
 ![waveform scope (horizontal)](waveform.jpg)
 
@@ -52,7 +52,7 @@ As with the histogram, you can selectively display each of the red, green, and b
 
 See [Of Histograms and Waveforms](https://www.darktable.org/2013/12/of-histograms-and-waveforms/) for more on Ansel's waveform scope.
 
-## rgb parade
+## Rgb parade
 
 ![rgb parade (horizontal)](parade.jpg)
 
@@ -64,7 +64,7 @@ As with the waveform, clicking the second-to-leftmost button on the panel toggle
 
 The RGB parade can be useful for matching the intensities of the red, green, and blue channels. It can also help with understanding the differences between and individual qualities of each channel.
 
-## vectorscope
+## Vectorscope
 
 ![vectorscope](vectorscope.jpg)
 
@@ -78,14 +78,14 @@ The vectorscope can describe the image in the [CIELUV](https://en.wikipedia.org/
 
 The graph includes a "hue ring" representing the maximum chroma of each hue (in bounded RGB) of the current histogram profile. The RGB primaries/secondaries are marked by circles.
 
-### caveats
+### Caveats
 
 - The hue ring is not a [gamut check](../toolboxes/gamut.md), as a color can be within the hue ring, yet out of gamut due to its darkness/lightness.
 - When adjusting an image based upon a color checker, faster and more accurate results will come from using [calibrate with a color checker](../darkroom/modules/color-calibration#extracting-settings-using-a-color-checker) in the _color calibration_ module.
 - The vectorscope does not have a "skin tone line", which is a flawed generalization rather than a universal standard.
 - The vectorscope represents a colorimetric encoding of an image, which inevitably diverges from a viewer's perception of the image.
 
-## histogram profile
+## Histogram profile
 
 Image data is converted to the _histogram profile_ before the scope data is calculated. You can choose this profile by right-clicking on the [soft-proof](../toolboxes/soft-proof.md) or [gamut check](../toolboxes/gamut.md) icons in the bottom panel and then selecting the profile of interest. When soft-proof or gamut check is enabled, the scope is shown in the soft proof profile.
 

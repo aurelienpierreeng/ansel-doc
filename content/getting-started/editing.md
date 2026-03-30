@@ -22,11 +22,11 @@ To actually build the final image, you will need to [export](../views/toolboxes/
 
 There are many benefits to working in a non-destructive fashion :
 
-1. the input image stays as safe as possible,
-2. you can apply the same history stack to many images (through copy-pasting or creating [styles](../views/toolboxes/styles.md)), therefore editing in batch,
-3. you can go back at any point in your history and revert selective changes (same as <kbd>Ctrl</kbd>+<kbd>Z</kbd>, but persisting between reboots), even in some years,
-4. you can start from an existing history, duplicate it, and work on a variant while keeping the original untouched,
-5. you can share your histories (as XMP files or as styles) with other users.
+1. The input image stays as safe as possible,
+2. You can apply the same history stack to many images (through copy-pasting or creating [styles](../views/toolboxes/styles.md)), therefore editing in batch,
+3. You can go back at any point in your history and revert selective changes (same as <kbd>Ctrl</kbd>+<kbd>Z</kbd>, but persisting between reboots), even in some years,
+4. You can start from an existing history, duplicate it, and work on a variant while keeping the original untouched,
+5. You can share your histories (as XMP files or as styles) with other users.
 
 
 Because we keep all those history steps, they are automatically saved once applied. You will find no "save" button in Ansel. Here is the summary of the workflow in Ansel:

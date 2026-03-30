@@ -1,5 +1,5 @@
 ---
-title: photographic grain
+title: Photographic grain
 date: 2026-03-23T00:00:00+01:00
 id: crystallographic-grain
 applicable-version: 4.0
@@ -21,44 +21,44 @@ This way of simulating photographic grain is inspired by physics but is not a 1:
 As with any pixel-level modification, the previews are accurate only for a 100% zoom (1:1), and provided in a best-effort manner for any other zoom level.
 {{< /warning >}}
 
-## scene-referred placement
+## Scene-referred placement
 
 _Photographic grain_ is a scene-referred module and is meant to run before _filmic rgb_ in the pixelpipe.
 
 That matters because the module simulates light being captured by crystals in the emulsion. It therefore belongs before display rendering and before output-referred tone mapping. Grain statistics are built from the scene-referred signal, then later modules shape the final display contrast as usual.
 
-## reference model
+## Reference model
 
 The emulsion is modeled as a stack of elementary crystal layers. For each layer:
 
-- crystal seeds are placed stochastically from a target filling ratio,
-- each accepted seed randomly picks one crystal footprint from a small precomputed bank,
-- the current light field is averaged over that grain footprint,
-- the captured amount is limited by the layer sensitivity,
-- that flat crystal tone is written to the output over the whole grain surface,
-- the same energy is subtracted from the remaining light field before deeper layers are processed.
+- Crystal seeds are placed stochastically from a target filling ratio,
+- Each accepted seed randomly picks one crystal footprint from a small precomputed bank,
+- The current light field is averaged over that grain footprint,
+- The captured amount is limited by the layer sensitivity,
+- That flat crystal tone is written to the output over the whole grain surface,
+- The same energy is subtracted from the remaining light field before deeper layers are processed.
 
 The implementation keeps the physically important part of the article:
 
-- light is split in depth through layers,
-- grain is built from finite crystal footprints,
-- capture is limited by the remaining available light,
-- the final stack is normalized for average exposure.
+- Light is split in depth through layers,
+- Grain is built from finite crystal footprints,
+- Capture is limited by the remaining available light,
+- The final stack is normalized for average exposure.
 
-## crystal model
+## Crystal model
 
 Crystal footprints are regular polygons rasterized on the pixel grid with sub-pixel boundary coverage:
 
-- average size is controlled by the _crystal average size_ slider,
-- crystal size follows a log-normal distribution,
-- polygon vertex count follows a gaussian distribution centered around six,
-- orientation is randomized,
-- grains with more than five sides are approximated as circles for speed,
-- non-integer radii keep a partial-occlusion boundary instead of collapsing to a hard binary edge.
+- Average size is controlled by the _crystal average size_ slider,
+- Crystal size follows a log-normal distribution,
+- Polygon vertex count follows a gaussian distribution centered around six,
+- Orientation is randomized,
+- Grains with more than five sides are approximated as circles for speed,
+- Non-integer radii keep a partial-occlusion boundary instead of collapsing to a hard binary edge.
 
 Each layer precomputes a bank of random crystal footprints, then accepted seeds randomly pick one bank entry. This avoids recomputing crystal geometry inside the hot pixel loop while keeping enough variation inside each layer.
 
-## modes
+## Modes
 
 ### B&W
 
@@ -66,13 +66,13 @@ The image is reduced to one luminance-like scalar light field, one grain stack i
 
 This is the closest mode to the scalar reference model and the most neutral starting point.
 
-### color
+### Color
 
 Color mode models film as sequential blue-, green-, then red-sensitive sub-stacks. The remaining-light field is updated in depth order, so deeper color-sensitive layers only see the light not already captured above them.
 
 This is not a full chemical simulation of color negative film, but it is more physical than three independent parallel RGB noise syntheses. The geometry can also be partly shared across channels to control how correlated the grain structure is between color-sensitive layers.
 
-## controls
+## Controls
 
 mode
 : Choose between one monochrome grain stack and one sequential color grain stack.
@@ -121,7 +121,7 @@ grain colorfulness
 
 : Scales only the chromatic amplitude of the RGB grain residual while keeping its achromatic grain strength unchanged. Lower values mute fluorescent color speckle without desaturating the underlying image.
 
-## presets
+## Presets
 
 The module ships with two built-in presets:
 
@@ -130,7 +130,7 @@ The module ships with two built-in presets:
 
 These are meant as practical starting points rather than measured film stocks.
 
-## practical workflow
+## Practical workflow
 
 Start in this order:
 
@@ -143,45 +143,45 @@ Start in this order:
 
 In practice:
 
-- if the grain is too strong, reduce _filling_ or _layer sensitivity_, or increase _layers_,
-- if the grain is too fine, increase _crystal average size_,
-- if the pattern is too regular, increase _crystal size variability_,
-- if color grain looks synthetic, lower _grain colorfulness_ first, then increase _inter-channel grain correlation_ if needed.
+- If the grain is too strong, reduce _filling_ or _layer sensitivity_, or increase _layers_,
+- If the grain is too fine, increase _crystal average size_,
+- If the pattern is too regular, increase _crystal size variability_,
+- If color grain looks synthetic, lower _grain colorfulness_ first, then increase _inter-channel grain correlation_ if needed.
 
-## preview, zoom and thumbnails
+## Preview, zoom and thumbnails
 
 The user-facing grain size is defined relative to the 100% image view, but the implementation compensates for the actual processing grid:
 
-- zooming in above 100% does not enlarge grains beyond their 100% reference size,
-- zooming out adapts the grain to the current raster scale,
-- reduced mipmap inputs, such as the thumbnail pipeline, are compensated so grain size stays closer to the darkroom reference instead of becoming artificially coarse.
+- Zooming in above 100% does not enlarge grains beyond their 100% reference size,
+- Zooming out adapts the grain to the current raster scale,
+- Reduced mipmap inputs, such as the thumbnail pipeline, are compensated so grain size stays closer to the darkroom reference instead of becoming artificially coarse.
 
 Critical tuning should still be judged near the final viewing scale.
 
-## masking and blending
+## Masking and blending
 
 This module supports Ansel masks and blending operators.
 
 That lets you:
 
-- apply different grain sizes or fillings to different regions,
-- keep faces and skin cleaner than backgrounds,
-- stack several instances for more complex emulsions,
-- reduce the visible contribution of one instance with opacity while preserving its internal grain statistics.
+- Apply different grain sizes or fillings to different regions,
+- Keep faces and skin cleaner than backgrounds,
+- Stack several instances for more complex emulsions,
+- Reduce the visible contribution of one instance with opacity while preserving its internal grain statistics.
 
-## performance
+## Performance
 
 This module is significantly more expensive than synthetic additive noise because it simulates many layers of crystal capture.
 
 Processing cost mainly increases with:
 
-- larger crystal average size,
-- more layers,
-- larger output images.
+- Larger crystal average size,
+- More layers,
+- Larger output images.
 
 The module supports OpenCL. CPU and OpenCL both use the same light-depletion model, but performance still depends strongly on image size and grain settings.
 
-## notes
+## Notes
 
 - The result is intentionally stochastic. Two parameter sets with similar average strength may still produce different local clustering.
 - The module simulates grain structure, not full film sensitometry or print chemistry.

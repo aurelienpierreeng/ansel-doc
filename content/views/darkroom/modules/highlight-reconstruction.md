@@ -1,5 +1,5 @@
 ---
-title: highlight reconstruction
+title: Highlight reconstruction
 date: 2022-12-04T02:19:02+01:00
 id: highlight-reconstruction
 applicable-version: 4.0
@@ -33,7 +33,7 @@ guided laplacians
 
 ---
 
-## module controls
+## Module controls
 
 method
 : The method used to reconstruct highlights (see above).
@@ -55,7 +55,7 @@ inpaint a flat color (_guided laplacians_ mode only)
 diameter of the reconstruction (_guided laplacians_ mode only)
 : The _guided laplacians_ mode uses a multi-scale algorithm that tries to recover details from each scale independently. The _diameter of the reconstruction_ is the largest scale used by the algorithm. Large scales will increase memory consumption as well as runtimes, and may also cause unrelated colors or details to be inpainted in clipped regions. You are advised to use a diameter roughly twice as large as the largest clipped area to be reconstructed. It is also possible that a given diameter may not suit all clipped areas, in which case you should use several instances at different scales and mask the clipped areas accordingly.
 
-## comparison with filmic's highlight reconstruction
+## Comparison with filmic's highlight reconstruction
 
 It is important to note that the _highlight reconstruction_ module is quite early in the pixel pipeline -- before [_input color profile_](./input-color-profile.md) and the full chromatic adaptation in [_color calibration_](./color-calibration.md) (if you use the _modern chromatic adaptation_ workflow). A common trick to solve clipped highlights is to simply desaturate them to white but, because white is not defined before the full chromatic adaptation and the input color profiling, it is not possible to use this trick here. Technically, there is no color yet at this point in the pipeline, only an arbitrary 3D signal.
 
@@ -67,8 +67,8 @@ The filmic reconstruction is good enough for very large clipped patches and offe
 
 All in all, you are advised to use the _guided laplacians_ highlight reconstruction mode to:
 
-1. smooth the boundaries of clipped areas,
-2. recover spotlights and clipped areas of diameter below approximately 256px (on the full-resolution RAW),
-3. remove chromatic aberrations, which can occur during [demosaicing](./demosaic.md) (the next module in the pipeline) at the boundary between clipped and valid regions.
+1. Smooth the boundaries of clipped areas,
+2. Recover spotlights and clipped areas of diameter below approximately 256px (on the full-resolution RAW),
+3. Remove chromatic aberrations, which can occur during [demosaicing](./demosaic.md) (the next module in the pipeline) at the boundary between clipped and valid regions.
 
 If you find yourself having to increase the _diameter of reconstruction_ past 512px to get a full recovery from magenta, the best approach is usually to cap the diameter to 512px, do the most you can with this setting, and then enable filmic's highlight reconstruction to finish the work. This will give more bearable run-times with a very similar result.

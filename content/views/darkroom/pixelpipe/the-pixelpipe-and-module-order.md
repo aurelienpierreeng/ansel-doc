@@ -1,5 +1,5 @@
 ---
-title: the pixelpipe & module order
+title: The pixelpipe & module order
 date: 2022-12-04T02:19:02+01:00
 id: the-pixelpipe-and-module-order
 weight: 20
@@ -16,7 +16,7 @@ The order of the pixelpipe is represented graphically by the order in which modu
 
 ---
 
-## module order and workflows
+## Module order and workflows
 
 The order in which modules are executed within the pixelpipe has been carefully chosen to give the best output quality. In previous versions of Ansel it was not possible to change the module order. However, there are a number of very specific use cases where the movement of some modules within the pixelpipe is advised.
 
@@ -32,7 +32,7 @@ The following diagram should help you to understand the difference between these
 
 3. The remaining modules operate in the non-linear _display-referred_ section of the pixelpipe to produce the final output image.
 
-## changing module order
+## Changing module order
 
 It remains highly recommended that users not change the order within the pixelpipe for a number of reasons:
 
@@ -44,11 +44,11 @@ Despite the general recommendation to leave the pixelpipe order alone, it is pos
 
 The graph popup provides a scrollable left-to-right view of the pipeline, from the base image to the screen output. It shows:
 
-- the current execution order of visible modules,
-- the active color-space lifecycle across the pipeline,
-- the input/output runtime descriptors for each module,
-- raster-mask dependencies between producer and consumer modules,
-- the module-order presets toolbar, used to add presets, reset the order, or apply an existing preset.
+- The current execution order of visible modules,
+- The active color-space lifecycle across the pipeline,
+- The input/output runtime descriptors for each module,
+- Raster-mask dependencies between producer and consumer modules,
+- The module-order presets toolbar, used to add presets, reset the order, or apply an existing preset.
 
 Modules that cannot cross ordering fences are constrained by the same rules as the processing pipeline itself, so impossible moves are prevented in the graph.
 

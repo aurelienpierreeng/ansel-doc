@@ -1,5 +1,5 @@
 ---
-title: graduated density
+title: Graduated density
 date: 2022-12-04T02:19:02+01:00
 id: graduated-density
 applicable-version: 3.2.1
@@ -15,7 +15,7 @@ A line is shown on screen allowing the position and rotation of the gradient to 
 
 This module is known to provoke banding artifacts under certain conditions. You should consider activating the [_dithering_](./dithering.md) module to alleviate these issues.
 
-## module controls
+## Module controls
 
 density
 : Set the density of the filter (EV). A low value underexposes slightly whereas a high value creates a strong filter.

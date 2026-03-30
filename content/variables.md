@@ -1,5 +1,5 @@
 ---
-title: variables
+title: Variables
 date: 2022-12-04T02:19:02+01:00
 id: variables
 weight: 60
@@ -95,7 +95,7 @@ $(NL)                      newline character
 $(JOBCODE)                 internal jobcode of current job
 ```
 
-## string substitution
+## String substitution
 
 All of the variables support basic string substitution inspired by bash though some of the details differ.
 
@@ -141,7 +141,7 @@ $(var,)                          Make the first character of var lowercase
 $(var,,)                         Make all characters of var lowercase
 ```
 
-## formatting
+## Formatting
 
 The image information patterns support [markup](https://docs.gtk.org/Pango/pango_markup.html). For example, adding the following will provide a clear warning (large, red, bold text) when OpenCL has failed to initialise:
 

@@ -61,11 +61,11 @@ With this in mind, you should try to keep a tidy file structure, organizing phot
 
 __It is highly recommended to import from memory cards using a card reader__. Mounting the memory card through the camera, using an USB link and PTP/MTP drivers, is possible in most cases but discouraged :
 
-- read/write performance is bad (in any case, worse),
-- there are many possible camera MTP/PTP drivers issues on Linux, possibly involving the `udev` stack,
-- recent cameras may not be supported at all for a while,
-- several applications (and the OS file browser) may compete for access to PTP/MTP cameras and have auto-mount enabled (only one can lock it at a time),
-- the camera will need to be powered on during the whole process, draining batteries for no reason.
+- Read/write performance is bad (in any case, worse),
+- There are many possible camera MTP/PTP drivers issues on Linux, possibly involving the `udev` stack,
+- Recent cameras may not be supported at all for a while,
+- Several applications (and the OS file browser) may compete for access to PTP/MTP cameras and have auto-mount enabled (only one can lock it at a time),
+- The camera will need to be powered on during the whole process, draining batteries for no reason.
 
 If you still want to proceed, here is some important information to do so.
 
@@ -87,9 +87,9 @@ Mass Storage devices should work out-of-the-box, however PTP and possibly MTP de
 
 Gio relies on [GVFs](https://en.wikipedia.org/wiki/GVfs) and [FUSE](https://en.wikipedia.org/wiki/Filesystem_in_Userspace) to mount external (and possibly remote) filesystems using various protocols (FTP, sFTP, Samba, DAV, PTP, MTP, etc.). You will need the following packages installed on your system (_actual package names may vary depending on your distribution_) :
 
-- for all cameras and card readers : `gvfs`, `gvfs-fuse`,
-- for PTP cameras : `gvfs-gphoto2`
-- for MTP cameras : `gvfs-mtp`.
+- For all cameras and card readers : `gvfs`, `gvfs-fuse`,
+- For PTP cameras : `gvfs-gphoto2`
+- For MTP cameras : `gvfs-mtp`.
 
 Note that only one application can lock a PTP camera at a time. If your file browser or any part of your OS is automatically mounting the PTP device when hotplugging, it might not be available to Ansel.
 
@@ -107,11 +107,11 @@ No idea.
 
 Photos are imported into _filmrolls_, which are the primary collection type in Ansel. Filmrolls are related to filesystem folders, but they are not equivalent :
 
-- a filmroll contains images from a single folder ; the folder's name is the identifier (unique name) of the filmroll,
-- a filmroll does not necessarily contain __all__ images from its sibling folder, for example JPEG files from the folder may have been discarded from the filmroll,
-- filmrolls are not recursive or hierarchical, but it is possible to list all filmrolls attached to the sub-folders of an high-level folder,
-- if 2 sets of images are imported, at different times, from the same folder, they will be added to the same filmroll,
-- filmrolls will not be automatically updated when new images are added to the filesystem folders.
+- A filmroll contains images from a single folder ; the folder's name is the identifier (unique name) of the filmroll,
+- A filmroll does not necessarily contain __all__ images from its sibling folder, for example JPEG files from the folder may have been discarded from the filmroll,
+- Filmrolls are not recursive or hierarchical, but it is possible to list all filmrolls attached to the sub-folders of an high-level folder,
+- If 2 sets of images are imported, at different times, from the same folder, they will be added to the same filmroll,
+- Filmrolls will not be automatically updated when new images are added to the filesystem folders.
 
 In other words, filmrolls are _views_ of filesystem folders that exist only in Ansel's database, and containing only images that Ansel is aware of (because they were imported).
 

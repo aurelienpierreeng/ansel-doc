@@ -5,5 +5,5 @@ id: utility-modules
 draft: false
 author: "people"
 alias:
-  - modules/utility-modules/
+  - Modules/utility-modules/
 ---

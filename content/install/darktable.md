@@ -41,7 +41,7 @@ If you are not comfortable with command lines or use Windows, use your file brow
 - `data.db`,
 - `shortcutsrc`,
 - `darktablerc`, which will need to be renamed `anselrc` after copying.
-- the `color` folder, if any, especially if some of your edits use custom-made ICC color profiles.
+- The `color` folder, if any, especially if some of your edits use custom-made ICC color profiles.
 
 From there, you can continue to work just as before. Ansel can be installed alongside darktable.
 

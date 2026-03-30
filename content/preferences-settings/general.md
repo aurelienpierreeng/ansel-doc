@@ -1,5 +1,5 @@
 ---
-title: general
+title: General
 date: 2022-12-04T02:19:02+01:00
 lastmod: 2023-10-12
 id: general
@@ -48,7 +48,7 @@ create theme tweaks
 
 ---
 
-### understanding Ansel's themes
+### Understanding Ansel's themes
 
 All of Ansel's pre-built themes are provided as CSS files in `$Ansel/share/Ansel/themes/` (where `$Ansel` is Ansel's installation directory). The default theme is `Ansel.css` and this contains the bulk of the code used to control the look-and-feel of Ansel.
 

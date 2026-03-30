@@ -1,5 +1,5 @@
 ---
-title: processing
+title: Processing
 date: 2022-12-04T02:19:02+01:00
 lastmod: 2023-10-12
 id: processing
@@ -9,7 +9,7 @@ draft: false
 
 Control how images are processed.
 
-## image processing
+## Image processing
 
 always use LittleCMS 2 to apply output color profile
 : If this option is activated, Ansel will use the LittleCMS 2 system library to apply the output color profile instead of its own internal routines. This is significantly slower than the default but might give more accurate results in some cases.
@@ -45,10 +45,10 @@ Memory headroom for OS/applications (MiB)
 
 Memory reserved for lighttable thumbnail cache (MiB)
 : This is the amount of RAM space that Ansel will allocate to rendered thumbnails displayed in the [lighttable](../views/lighttable/_index.md) and [filmstrip](../views/toolboxes/filmstrip.md). You should set this value according to the typical number of images you have in a folder and how large they appear in the lighttable :
-    - a 360×225 px image uses 0.35 MiB,
-    - a 720×450 px image uses 1.24 MiB,
-    - a 1440×900 px image uses 5 MiB,
-    - a 6000×4000 px image uses 92 MiB
+    - A 360×225 px image uses 0.35 MiB,
+    - A 720×450 px image uses 1.24 MiB,
+    - A 1440×900 px image uses 5 MiB,
+    - A 6000×4000 px image uses 92 MiB
 : The default value of 1000 MiB can hold 2800 small thumbnails, or 805 medium thumbnails, or 200 large thumbnails, or 10 images at 24 Mpx full resolution (for full-resolution preview in lighttable).
 
 Maximum RAW resolution to edit

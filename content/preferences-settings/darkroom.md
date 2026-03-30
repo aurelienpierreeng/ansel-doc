@@ -1,5 +1,5 @@
 ---
-title: darkroom
+title: Darkroom
 date: 2022-12-04T02:19:02+01:00
 id: darkroom
 weight: 50
@@ -8,7 +8,7 @@ draft: false
 
 Control functionality in the [darkroom](../views/darkroom/_index.md) view and associated modules.
 
-## general
+## General
 
 pen pressure control for brush masks
 : Controls how the pressure reading of a graphics tablet impacts newly generated [drawn mask](../views/darkroom/masking-and-blending/masks/drawn.md) brush strokes. You can control the brush width, hardness and opacity. “Absolute” control means that the pressure reading directly defines the attribute with a value between 0% and 100%. “Relative” means that the pressure reading adjusts the attribute between zero and the pre-defined default value (default off).
@@ -28,7 +28,7 @@ border around image in darkroom mode
 show loading screen between images
 : Show gray loading screen when navigating between images in the darkroom. Switch this option off to just show a simple toast message and leave the previous image in place until the next image is loaded. Note that switching this option off can be very useful to quickly compare duplicate images, however, there might be issues with long loading times (leading you to think the next image has already loaded) and you may observe visual artifacts while the next image is loading (default on).
 
-## modules
+## Modules
 
 display of individual color channels
 : Control how individual color channels are displayed when activated in the [parametric masks](../views/darkroom/masking-and-blending/masks/parametric.md) feature. You can choose between “false color” and “gray scale” (default "false color").

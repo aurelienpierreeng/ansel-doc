@@ -1,5 +1,5 @@
 ---
-title: color calibration
+title: Color calibration
 date: 2022-12-04T02:19:02+01:00
 lastmod: 2023-10-12
 id: color-calibration
@@ -9,7 +9,7 @@ view: darkroom
 masking: true
 include_toc: true
 tags:
-  - batch editing
+  - Batch editing
 ---
 
 A fully-featured color-space correction, white balance adjustment and channel mixer module.
@@ -36,9 +36,9 @@ The _color calibration_ and _white balance_ modules can be automatically applied
 
 By default, _color calibration_ performs chromatic adaptation by:
 
-- reading the RAW file's Exif data to fetch the scene white balance set by the camera,
-- adjusting this setting using the camera reference white balance from the _white balance_ module,
-- further adjusting this setting with the input color profile in use (standard matrix only).
+- Reading the RAW file's Exif data to fetch the scene white balance set by the camera,
+- Adjusting this setting using the camera reference white balance from the _white balance_ module,
+- Further adjusting this setting with the input color profile in use (standard matrix only).
 
 For consistency, the _color calibration_ module's default settings always assume that the standard matrix is used in the _input color profile_ module -- any non-standard settings in this module are ignored. However, _color calibration_'s defaults can read any auto-applied preset in the _white balance_ module.
 
@@ -130,7 +130,7 @@ In all these cases, you **must** enable the "clip negative RGB from gamut" optio
 
 ---
 
-## channel mixing
+## Channel mixing
 
 The remainder of this module is a standard channel mixer, allowing you to adjust the output R, G, B, colorfulness, brightness and gray of the module based on the relative strengths of the R, G and B input channels.
 
@@ -166,9 +166,9 @@ At its most basic level, you can think of the R, G and B tabs of the _color cali
 
 If, for example, you've been provided with a matrix to transform from one color space to another, you can enter the matrix coefficients into the _channel mixer_ as follows:
 
-- select the _R_ tab and then set the Rr, Rg & Rb values using the R, G and B input sliders
-- select the _G_ tab and then set the Gr, Gg & Gb values using the R, G and B input sliders
-- select the _B_ tab and then set the Br, Bg & Bb values using the R, G and B input sliders
+- Select the _R_ tab and then set the Rr, Rg & Rb values using the R, G and B input sliders
+- Select the _G_ tab and then set the Gr, Gg & Gb values using the R, G and B input sliders
+- Select the _B_ tab and then set the Br, Bg & Bb values using the R, G and B input sliders
 
 By default, the mixing function in _color calibration_ just copies the input [R G B] channels straight over to the matching output channels. This is equivalent to multiplying by the identity matrix:
 
@@ -180,9 +180,9 @@ By default, the mixing function in _color calibration_ just copies the input [R 
 
 For a more intuitive understanding of how the mixing sliders on the R, G and B tabs behave, consider the following:
 
-- for the _R_ destination channel, adjusting sliders to the right will make the R, G or B areas of the image more "red". Moving the slider to the left will make those areas more "cyan".
-- for the _G_ destination channel, adjusting sliders to the right will make the R, G or B areas of the image more "green". Moving the slider to the left will make those areas more "magenta".
-- for the _B_ destination channel, adjusting sliders to the right will make the R, G or B areas of the image more "blue". Moving the slider to the left will make those areas more "yellow".
+- For the _R_ destination channel, adjusting sliders to the right will make the R, G or B areas of the image more "red". Moving the slider to the left will make those areas more "cyan".
+- For the _G_ destination channel, adjusting sliders to the right will make the R, G or B areas of the image more "green". Moving the slider to the left will make those areas more "magenta".
+- For the _B_ destination channel, adjusting sliders to the right will make the R, G or B areas of the image more "blue". Moving the slider to the left will make those areas more "yellow".
 
 ### R, G and B tab controls
 
@@ -194,14 +194,14 @@ input R/G/B
 normalize channels
 : Select this checkbox to normalize the coefficients to try to preserve the overall brightness of this channel in the final image as compared to the input image.
 
-## brightness and colorfulness tabs
+## Brightness and colorfulness tabs
 
 The brightness and colorfulness (color saturation) of pixels in an image can also be adjusted based on the R, G and B input channels. This uses the same basic algorithm that the [_filmic rgb_](filmic-rgb.md) module uses for tone mapping (which preserves RGB ratios) and for mid-tones saturation (which massages them).
 
 saturation algorithm
 : This control allows you to upgrade the saturation algorithm to the new 2021 version, for edits produced prior to darktable 3.6 -- it will not appear for edits that already use the latest version.
 
-### colorfulness tab controls
+### Colorfulness tab controls
 
 input R/G/B
 : Adjust the color saturation of pixels, based on the R, G and B channels of those pixels. For example, adjusting the _input R_ slider will affect the color saturation of pixels containing a lot of "R" more than pixels containing only a small amount of "R".
@@ -209,7 +209,7 @@ input R/G/B
 normalize channels
 : Select this checkbox to try to keep the overall saturation constant between the input and output images.
 
-### brightness tab controls
+### Brightness tab controls
 
 input R/G/B
 : Adjust the brightness of certain colors in the image, based on the R, G and B channels of those colors. For example, adjusting the _input R_ slider will affect the brightness of colors containing a lot of R channel much more than colors containing only a small amount of R channel. When darkening/brightening a pixel, the ratio of the R, G and B channels for that pixel is maintained, in order to preserve the hue.
@@ -217,7 +217,7 @@ input R/G/B
 normalize channels
 : Select this checkbox to try to keep the overall brightness constant between the input and output images.
 
-## gray tab
+## Gray tab
 
 Another very useful application of _color calibration_ is the ability to mix the channels together to produce a grayscale output -- a monochrome image. Select the _gray_ tab, and set the R, G and B sliders to control how much each channel contributes to the brightness of the output. This is equivalent to the following matrix multiplication:
 ```
@@ -228,7 +228,7 @@ GRAY_out  =   [ r  g  b ]  X  ┌ R_in ┐
 
 When dealing with skin tones, the relative weights of the three channels will affect the level of detail in the image. Placing more weight on R (e.g. [0.9, 0.3, -0.3]) will make for smooth skin tones, whereas emphasising G (e.g. [0.4, 0.75, -0.15]) will bring out more detail. In both cases the B channel is reduced to avoid emphasising unwanted skin texture.
 
-### gray tab controls
+### Gray tab controls
 
 input R/G/B
 : Choose how much each of the R, G and B channels contribute to the gray level of the output. The image will only be converted to monochrome if the three sliders add up to some non-zero value. Adding more B will tend to bring out more details, adding more R will tend to smooth skin tones.
@@ -236,7 +236,7 @@ input R/G/B
 normalize channels
 : Select this checkbox to try to keep the overall brightness constant as the sliders are adjusted.
 
-## spot color mapping
+## Spot color mapping
 
 The spot mapping feature is designed to help with batch-editing a series of images in an efficient way. In this scenario, you typically develop a single reference image for the whole batch and then copy&paste the development stack to all of the other images in the batch.
 
@@ -246,12 +246,12 @@ Spot color mapping allows you to define a target chromaticity (hue and chroma) f
 
 The mapping process consists of two steps.
 
-### step 1: set the target
+### Step 1: set the target
 
 There are two ways of setting the target chromaticity for your control sample:
 
-1. if you know or expect an arbitrary color for the control sample (for example, a gray card, a color chart, a product or a logo of a specified color), you can set its L, h and c values directly, in Lch derived from CIE Lab 1976 space,
-2. if you simply want to match the development of your reference image, set the _spot mode_ to _measure_, then enable the color picker (to the right of the color patch) and draw a rectangle over your control sample. The _input_ column will then be updated with the L, h, c values of the control sample before the color correction, and the _target_ column will show the resulting L, h, c values of the control sample after the current calibration setting is applied.
+1. If you know or expect an arbitrary color for the control sample (for example, a gray card, a color chart, a product or a logo of a specified color), you can set its L, h and c values directly, in Lch derived from CIE Lab 1976 space,
+2. If you simply want to match the development of your reference image, set the _spot mode_ to _measure_, then enable the color picker (to the right of the color patch) and draw a rectangle over your control sample. The _input_ column will then be updated with the L, h, c values of the control sample before the color correction, and the _target_ column will show the resulting L, h, c values of the control sample after the current calibration setting is applied.
 
 If you reset the L, h, c values, the default value is a neutral color at 50% lightness (middle-gray) -- this can be useful to quickly set the average white balance of any image. If you want to match the control sample against neutral gray, you only need to reset the chroma slider because the lightness and hue settings have no effect on chromaticity for neutral grays.
 
@@ -265,7 +265,7 @@ The _take channel mixing into account_ option lets you choose where the target i
 
 ---
 
-### step 2 : match the target
+### Step 2 : match the target
 
 When you open a new image, the _spot mode_ is automatically reset to _correction_. Using the color picker attached to the color patch, you can then directly reselect your control sample in the new image. The proper illuminant settings required for the control sample to match the memorized target chromaticity will be automatically computed, and the setting will be updated in the same operation.
 
@@ -279,7 +279,7 @@ This operation can be repeated as many times as you have images in your series w
 
 ---
 
-## extracting settings using a color checker
+## Extracting settings using a color checker
 
 Since the channel mixer is essentially an RGB matrix (similar to the [_input color profile_](./input-color-profile.md) used for RAW images) it can be used to improve the color accuracy of the input color profile by computing ad-hoc color calibration settings.
 
@@ -287,12 +287,12 @@ These computed settings aim to minimize the color difference between the scene r
 
 This feature can assist with:
 
-* handling difficult illuminants, such as low [CRI](https://en.wikipedia.org/wiki/Color_rendering_index) light bulbs, for which a mere white balancing will never suffice,
-* digitizing artworks or commercial products where an accurate rendition of the original colors is required,
-* neutralizing a number of different cameras to the same ground-truth, in multi-camera photo sessions, in order to obtain a consistent base look and share the color editing settings with a consistent final look,
-* obtaining a sane color pipeline from the start, nailing white balance and removing any bounced-light color cast at once, with minimal effort and time.
+* Handling difficult illuminants, such as low [CRI](https://en.wikipedia.org/wiki/Color_rendering_index) light bulbs, for which a mere white balancing will never suffice,
+* Digitizing artworks or commercial products where an accurate rendition of the original colors is required,
+* Neutralizing a number of different cameras to the same ground-truth, in multi-camera photo sessions, in order to obtain a consistent base look and share the color editing settings with a consistent final look,
+* Obtaining a sane color pipeline from the start, nailing white balance and removing any bounced-light color cast at once, with minimal effort and time.
 
-### supported color checker targets
+### Supported color checker targets
 
 Users are not currently permitted to use custom targets, but a limited number of verified color checkers (from reputable manufacturers) are supported:
 
@@ -310,21 +310,21 @@ IT7 and IT8 charts are not supported since they are hardly portable and not prac
 
 ---
 
-### prerequisites
+### Prerequisites
 
 In order to use this feature you will need to take a test shot of a supported color checker chart, on-location, under appropriate lighting conditions:
 
-* frame the chart in the center 50% of the camera's field, to ensure that the image is free of vignetting,
-* ensure that the main light source is far enough from the chart to give an even lighting field over the surface of the chart,
-* adjust the angle between the light, chart and lens to prevent reflections and gloss on the color patches,
-* for the best quality profile you should capture an image with the appropriate brightness. To achieve this, take a few bracketed images (between -1 and +1 EV) of your color checker and load them into Ansel, ensuring that all modules between _color calibration_ and _output color profile_ are disabled. Choose the image where the white patch has a brightness L of 94-96% in CIE Lab space or a luminance Y of 83-88% in CIE XYZ space (use the global color picker). This step is not strictly necessary -- alternatively you can take a single image and apply the exposure compensation as recommended in the profile report.
+* Frame the chart in the center 50% of the camera's field, to ensure that the image is free of vignetting,
+* Ensure that the main light source is far enough from the chart to give an even lighting field over the surface of the chart,
+* Adjust the angle between the light, chart and lens to prevent reflections and gloss on the color patches,
+* For the best quality profile you should capture an image with the appropriate brightness. To achieve this, take a few bracketed images (between -1 and +1 EV) of your color checker and load them into Ansel, ensuring that all modules between _color calibration_ and _output color profile_ are disabled. Choose the image where the white patch has a brightness L of 94-96% in CIE Lab space or a luminance Y of 83-88% in CIE XYZ space (use the global color picker). This step is not strictly necessary -- alternatively you can take a single image and apply the exposure compensation as recommended in the profile report.
 
 If the lighting conditions are close to a standard D50 to D65 illuminant (direct natural light, no colored bounced light), the color checker shot can be used to produce a generic profile that will be suitable for any daylight illuminant with only a slight adjustment of the white balance.
 
 If the lighting conditions are peculiar and far from standard illuminants, the color checker shot will be only usable as an ad-hoc profile for pictures taken in the same lighting conditions.
 
 
-### usage
+### Usage
 
 The settings used in color calibration depend on the chosen CAT space and on any color settings defined earlier in the pipe within the _white balance_ and _input color profile_ modules. As such, the results of the profiling (e.g. the RGB channel mixing coefficients) are valid only for a rigid set of _CAT space_, _white balance_ and _input color profile_ settings. If you wish to create a generic style with your profile, don't forget that you will need to include the settings from these modules as well.
 
@@ -344,13 +344,13 @@ Use the following process to create your profile preset/style:
 
 ---
 
-### reading the profile report
+### Reading the profile report
 
 The profile report helps you to assess the quality of the calibration. The settings in color calibration are only a "best fit" optimization and will never be 100% accurate for the whole color spectrum. We therefore need to track "how inaccurate" it is in order to know whether we can trust this profile or not.
 
 Bad profiles can happen and will do more harm than good if used.
 
-#### delta E and the quality report
+#### Delta E and the quality report
 
 The [CIE delta E 2000](https://en.wikipedia.org/wiki/Color_difference#CIEDE2000) (ΔE) is used as a perceptual metric of the error between the reference color of the patches and the color obtained after each step of calibration:
 
@@ -361,15 +361,15 @@ The [CIE delta E 2000](https://en.wikipedia.org/wiki/Color_difference#CIEDE2000)
 
 The quality report tracks the average and maximum ΔE at the input of the module (before anything is done), after the chromatic adaptation step (white balance only), and at the output of the module (white balance and channel mixing). At each step, the ΔE should be lower than at the previous step, if everything goes as planned.
 
-#### profile data
+#### Profile data
 
 The data generated by the profiling process comprises the RGB 3×3 matrix and the detected illuminant. These are expressed in the CAT _adaptation_ space defined in the _CAT_ tab and are provided in case you want to export these coefficients to other software. If the detected illuminant is _daylight_ or _black body_, the matrix should be fairly generic and reusable for other _daylight_ and _black body_ illuminants with the addition of a small white balance adjustment.
 
-#### normalization values
+#### Normalization values
 
 These are the settings that you should define, as-is, for the _exposure_ and _black level correction_ parameters in the [_exposure_](./exposure.md) module, in order to obtain the lowest possible error in your profile. This step is optional and is useful only when the utmost precision is required, but beware that it can produce negative RGB values that will be clipped at various points in the pipeline.
 
-#### overlay
+#### Overlay
 
 ![color checker](color-checker.jpg)
 
@@ -377,13 +377,13 @@ The chart overlay displays a disc in the center of each color patch, which repre
 
 Once the profile has been calibrated, some of the square patches will be crossed in the background by one or two diagonals:
 
-* patches that are not crossed have ΔE < 2.3 (JND), meaning they are accurate enough that the average observer will be unable to notice the deviation,
-* patches crossed with one diagonal have 2.3 < ΔE < 4.6, meaning that they are mildly inaccurate,
-* patches crossed with two diagonals have ΔE > 4.6 (2 × JND), meaning that they are highly inaccurate.
+* Patches that are not crossed have ΔE < 2.3 (JND), meaning they are accurate enough that the average observer will be unable to notice the deviation,
+* Patches crossed with one diagonal have 2.3 < ΔE < 4.6, meaning that they are mildly inaccurate,
+* Patches crossed with two diagonals have ΔE > 4.6 (2 × JND), meaning that they are highly inaccurate.
 
 This visual feedback will help you to set up the optimization trade-off to check which colors are more or less accurate.
 
-### enhancing the profile
+### Enhancing the profile
 
 Because any calibration is merely a "best fit" optimization (using a weighted least-squares method) it is impossible to have all patches within our ΔE < 2.3 tolerance. Some compromise will therefore be required.
 
@@ -400,14 +400,14 @@ No matter what you do, strategies that favor a low average ΔE will usually have
 
 The ease of obtaining a proper calibration depends on the quality of the scene illuminant (daylight and high CRI illuminants should always be preferred), the quality of the primary _input color profile_, the _black point compensation_ set in the _exposure_ module, but first and foremost on the mathematical properties of the camera sensor's filter array.
 
-### profile checking
+### Profile checking
 
 It is possible to use the _color space check_ button (first on the left, at the bottom of the module) to perform a single ΔE computation of the color checker reference against the output of the _color calibration_ module. This can be used in the following ways:
 
 1. To check the accuracy of a profile calculated in particular conditions against a color checker shot in different conditions.
 2. To evaluate the performance of any color correction performed earlier in the pipe, by setting the _color calibration_ parameters to values that effectively disable it (CAT _adaptation_ to _none_, everything else set to default), and just use the average ΔE as a performance metric.
 
-## caveats
+## Caveats
 
 The ability to use standard CIE illuminants and CCT-based interfaces to define the illuminant color depends on sound default values for the standard matrix in the _input color profile_ module as well as reasonable RGB coefficients in the _white balance_ module.
 

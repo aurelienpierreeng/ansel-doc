@@ -1,5 +1,5 @@
 ---
-title: liquify
+title: Liquify
 date: 2022-12-04T02:19:02+01:00
 id: liquify
 applicable-version: 3.8
@@ -11,7 +11,7 @@ masking:
 
 Move pixels around by applying freestyle distortions to parts of the image using points, lines and curves.
 
-## nodes
+## Nodes
 
 Each of liquify's tools is based on nodes. A point consists of a single node and a line or curve consists of a sequence of linked nodes defining a path.
 
@@ -19,13 +19,13 @@ Each instance of the liquify module is limited to a maximum of 100 nodes -- for 
 
 Drag the central point of a node to move the node around. The radius describes the area of the effect (distortion occurs only within this radius). To change the radius drag the handle at the circumference. A strength vector starting from the center describes the direction of the distortion, and its strength is depicted by the length of the vector. Change the vector by dragging its arrow head.
 
-## points
+## Points
 
 A point consists of a single node and strength vector.
 
 Click the point icon to activate the point tool and then click on the image to place it. Hold Ctrl while clicking on the point icon to add multiple points without having to click the icon again each time. Right-click to exit creation mode.
 
-### point modes
+### Point modes
 
 The strength vector of a point has three different modes. These can be toggled by holding Ctrl and clicking on the arrowhead of the strength vector.
 
@@ -44,7 +44,7 @@ radial shrinking
 
 : ![radial shrinking](liquify_ex3.jpg)
 
-### feathering
+### Feathering
 
 default mode
 : By default the strength varies linearly from 0% to 100% between the center and the radius of the control point. It is possible to modify the feathering effect by clicking on the center of the circle.
@@ -56,11 +56,11 @@ feathered mode
 
 : ![feathered](liquify_ex2.jpg)
 
-### removing points
+### Removing points
 
 A point can be removed by right-clicking on the center of the node.
 
-## lines and curves
+## Lines and curves
 
 Lines and curves are sequences of points linked together by straight or curved lines. The effect is interpolated by a set of associated strength vectors.
 
@@ -78,7 +78,7 @@ Ctrl+click on a line or curve segment to add a new control point. Ctrl+right-cli
 
 Right-click on a segment to remove the shape completely. Ctrl+Alt+click on a segment to change that segment from a line to a curve and vice versa.
 
-## link modes
+## Link modes
 
 Ctrl+click on the center of a node to change the way the points of a curve are linked together. There are four modes, which correspond to different ways of handling the steepness of the bezier curve using control handles:
 
@@ -94,14 +94,14 @@ smooth
 symmetrical
 : Control handles are always moved together. This mode is depicted by a square symbol in the node's center.
 
-## view and edit nodes
+## View and edit nodes
 
 Click the node tool icon to activate or deactivate the node edit tool. This displays all currently-defined distortion objects and their controls. Alternatively you can right-click on the image at any time for the same effect.
 
-## warps and nodes count
+## Warps and nodes count
 
 This information field displays the number of warps (individual distortion objects) and nodes currently in use.
 
-## show guides
+## Show guides
 
 Tick the box to show guide overlays whenever the module is activated. Click the icon on the right to control the properties of the guides. See [guides & overlays](../../toolboxes/guides-overlays.md) for details.

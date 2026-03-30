@@ -1,5 +1,5 @@
 ---
-title: display profile
+title: Display profile
 date: 2022-12-04T02:19:02+01:00
 id: display-profile
 weight: 20

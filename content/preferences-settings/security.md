@@ -1,5 +1,5 @@
 ---
-title: security
+title: Security
 date: 2022-12-04T02:19:02+01:00
 id: security
 weight: 80
@@ -8,7 +8,7 @@ draft: false
 
 Control whether warning messages are shown before undertaking certain activities.
 
-## general
+## General
 
 ask before removing images from the library
 : Always ask before removing image information from Ansel's library database, where the xmp file is retained (default on).
@@ -43,7 +43,7 @@ ask before deleting a preset
 ask before exporting in overwrite mode
 : Always ask before [exporting](../views/toolboxes/export.md) images in overwrite mode.
 
-## other
+## Other
 
 password storage backend to use
 : The backend to use for password storage. Options: “auto” (default), “none”, “libsecret”, “kwallet”.

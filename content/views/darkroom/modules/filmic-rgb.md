@@ -1,5 +1,5 @@
 ---
-title: filmic rgb
+title: Filmic rgb
 date: 2022-12-04T02:19:02+01:00
 id: filmic-rgb
 applicable-version: 4.0
@@ -23,7 +23,7 @@ _filmic rgb_ is the successor to the _filmic_ module from darktable 2.6. While t
 
 ---
 
-## prerequisites
+## Prerequisites
 
 In order to get the best from this module, your images need some preparation:
 
@@ -40,7 +40,7 @@ adjust for the mid-tones
 white balance, denoise, demosaic
 : If you plan on using _filmic rgb_'s auto-tuners, use the [_white balance_](./white-balance.md) module to first correct any color casts and obtain neutral colors. In RGB color spaces, luminance and chrominance are linked, and _filmic rgb_'s luminance detection relies on accurate measurements of both. If your image is very noisy, add an initial step of denoising to improve the black exposure readings, and use a high quality [_demosaic_](./demosaic.md) algorithm. You don't need to worry about noise if you are planning to set up filmic manually, without using the auto-tuners.
 
-## usage
+## Usage
 
 The _filmic rgb_ module is designed to map the dynamic range of the photographed scene (RAW image) to the dynamic range of the display.
 
@@ -64,14 +64,14 @@ The ranges of _filmic rgb_'s sliders are limited to typical and safe values, but
 
 **Note**: _filmic rgb_ cannot be set with entirely neutral parameters (resulting in a "no-operation") -- as soon as the module is enabled, the image is always at least slightly affected. You can, however, come close to neutral with the following settings:
 
-- in the [_look_](#look) tab, set contrast to 1.0, latitude to 99 % and mid-tones saturation to 0 %,
-- in the [_options_](#options) tab, set contrast in shadows and in highlights to _soft_.
+- In the [_look_](#look) tab, set contrast to 1.0, latitude to 99 % and mid-tones saturation to 0 %,
+- In the [_options_](#options) tab, set contrast in shadows and in highlights to _soft_.
 
 In this configuration, filmic will only perform a logarithmic tone mapping between the bounds set in the [_scene_](#scene) tab.
 
 ---
 
-## graphic display
+## Graphic display
 
 The graphic display at the top of the _filmic rgb_ module offers multiple views to help you to understand its functionality. You can cycle through these views using the ![view-icon](view-icon.jpg) icon.
 
@@ -106,9 +106,9 @@ dynamic range mapping
 
 ---
 
-## module controls
+## Module controls
 
-### scene
+### Scene
 
 The controls in the _scene_ tab are similar in principle to those of the typical _levels_ tools, as found in other software. The difference is that _levels_ assumes display-referred pixels values (between 0 and 100%), whereas _filmic_ allows you to work on scene-referred pixels (between --infinity EV and +infinity EV), which forces the use of a different interface.
 
@@ -146,7 +146,7 @@ The _scene-referred_ workflow forces a black level correction of --0.0002, in th
 
 ---
 
-### reconstruct
+### Reconstruct
 
 This tab provides controls that blend transitions between unclipped and clipped areas within an image and can also help to reconstruct colors from adjacent pixels. It is designed to handle spotlights that could not possibly be unclipped when taking the shot (such as naked light bulbs or the sun disc in the frame) and aims at diffusing their edges as film would do. It is not designed to recover large areas of clipped pixels or in-paint missing parts of the image.
 
@@ -180,19 +180,19 @@ bloom ↔ reconstruct
 gray ↔ colorful details
 : Use this to control whether the algorithm favors the recovery of monochromatic highlights (gray) or colorful details. Move the slider to the right if you want more color in the highlights. Move the slider to the left if you want to reduce the saturation of the highlights. It can be helpful to reduce the saturation in the highlights if you start seeing magenta or out-of-gamut colors.
 
-### look
+### Look
 
 When working on the _look_ tab, it is recommended that you monitor the S-curve spline on the _look only_ graph. This curve starts from the scene/display black levels at the bottom left of the graph, and should smoothly increase up to the scene/display white levels at the top right. Sometimes, if the constraints on the S-curve are too tight, the splines in the shadows and/or highlights regions can "overshoot" the limits of the display, and an orange warning is shown on those parts of the spline.
 
 If you see the orange warning indicator at either end of the S-curve, corrective actions should be performed to bring the S-curve back to a smooth monotonically increasing curve. This may involve:
 
-- reducing the latitude and/or contrast,
+- Reducing the latitude and/or contrast,
 
-- adjusting the shadows/highlights slider to shift the latitude and allow more room for the spline,
+- Adjusting the shadows/highlights slider to shift the latitude and allow more room for the spline,
 
-- ensuring that the scene-referred black and white relative exposure sliders on the _scene_ tab have been properly set for the characteristics of the scene,
+- Ensuring that the scene-referred black and white relative exposure sliders on the _scene_ tab have been properly set for the characteristics of the scene,
 
-- setting one or both of the contrast settings on the [_options_](#options) tab to _safe_ or _hard_.
+- Setting one or both of the contrast settings on the [_options_](#options) tab to _safe_ or _hard_.
 
 If the _target black luminance_ setting on the [_display_](#display) tab is non-zero, this can also make it difficult for _filmic rgb_ to find a smooth monotonic spline, and reducing this can also help to relax the constraints. See the [_display_](#display) section to understand the implications of this.
 
@@ -223,7 +223,7 @@ mid-tones saturation / extreme luminance saturation
 
 : This control is set to 0 by default and it is now recommended that saturation is handled earlier in the pipeline. A preset "add basic colorfulness" has been added to the [_color balance rgb_](./color-balance-rgb.md) module for this purpose.
 
-### display
+### Display
 
 The parameters in this tab should rarely require adjustment.
 
@@ -240,7 +240,7 @@ target white luminance
 
 : To avoid double-ups and washed-out images, _filmic rgb_ applies a “gamma” compression reverting the output ICC gamma correction, so the middle-gray is correctly remapped at the end. To remove this compression, set the destination power factor to 1.0 and the middle-gray destination to 45%.
 
-### options
+### Options
 
 color science
 : This setting defaults to _v6 (2022)_ for new images, and defines the algorithms used by the _filmic rgb_ module (e.g. the extreme luminance desaturation strategy). To revert to the behavior of previous versions of _filmic rgb_, set this parameter to _v3 (2019)_, _v4 (2020)_ or _v5 (2021)_. The difference between these methods lies in the way in which they handle desaturation close to pure black and pure white (see the [background](#background) section for details). If you have previously edited an image using older versions of _filmic rgb_, the color science setting will be kept at the earlier version number in order to provide backward compatibility for those edits. The _v7 (2023)_ method removes the _preserve chrominance_ option (see the [background](#background) section for details).
@@ -289,7 +289,7 @@ add noise in highlights
 type of noise
 : This specifies the statistical distribution of the added noise. It can be helpful to match the look of the artificially generated noise with the naturally occurring noise in the surrounding areas from the camera's sensor. The _poissonian_ noise is the closest to natural sensor noise but is less visually pleasing than _gaussian_, which is probably closer to film grain. Also note that most denoising modules will turn the sensor noise from poissonian to slightly gaussian, so you should pick the variant that blends better into the actual noise in your image.
 
-### background
+### Background
 
 The _color science_ parameter (in the _options_ tab) defines the strategy that is used to desaturate colors near pure white (maximum display emission) and pure black (minimum display emission). The problem can be explained with the graph below, which represents the gamut of the sRGB color space at the constant hue of its green primary, with varying lightness (vertical axis) and chroma (horizontal axis):
 
@@ -314,8 +314,8 @@ The _v7_ approach is to offer a mix between the _max RGB_ norm and the no-preser
 - 0% is an average of both,
 - -50% is strictly equivalent to the _v6_ no-preservation option,
 - +50% is strictly equivalent to the _v6_ _max RGB_ option,
-- intermediate values are weighted averages between both,
-- values beyond ±50% (up to ±200%) are linear extrapolations.
+- Intermediate values are weighted averages between both,
+- Values beyond ±50% (up to ±200%) are linear extrapolations.
 
 Positive values will favour saturated highlights and will be suitable for skies but need to be handled with care for portraits (producing accurate skin tones… which is not what people actually find too saturated and "beefy"[^1]), negative values will favour highlights bleaching, which is the preconceived idea many people have of "film look" (which is disproved by positive film slides and Technicolor movies, in addition of being highly questionnable to render black and tanned skin, as it removes ethnical features and whitens them).
 
@@ -323,14 +323,14 @@ Positive values will favour saturated highlights and will be suitable for skies 
 
 The saturation control gives a fine control over the amount of saturation vs. bleaching expected in highlights. In any case, the saturation algo will not allow the output saturation to be higher than the input one, and it should be made very clear that this setting is not designed for creative purposes, but only to drive the complicated trade-off coming from remapping RGB values from one color space to another, having different gamut and dynamic range.
 
-### caveats
+### Caveats
 
-#### color artifacts
+#### Color artifacts
 
 As filmic v6 (then v7) is so far the best version to retain saturated colors at constant hue, it gets also much less forgiving to __invalid__ colors like chromatic aberrations and clipped magenta highlights, that are much better hidden (albeit __not solved__) by simple curves applied on individual channels (no chrominance preservation) with no care given to their ratios.
 
 It is not the purpose of a tone mapping and gamut mapping operators to reconstruct damaged signals, and these flaws need to be corrected earlier in the pipeline with the specialized modules provided. However, there is a mechanism in filmic v6 that ensures that any color brighter than the _white relative exposure_ degrades to pure white, so a quick workaround is to simply set the _white relative exposure_ to a value slightly lower than the exposure of the clipped parts. In other words: if it is clipped at the input, let it be clipped at the output. Chrominance preservation options that work the best for this purpose are the _luminance_ and _euclidean_ norms, or simply _none_.
 
-#### inconsistent output
+#### Inconsistent output
 
 With filmic v6, if you export the same image to sRGB and Adobe RGB color spaces, and then compare both images side by side on a large-gamut screen (that can cover Adobe RGB), the sRGB export _should_ have more desaturated highlights than the Adobe RGB version. Since the sRGB color space is shorter than Adobe RGB, its gamut boundary is closer to the neutral grey axis, and therefore the maximum allowed chroma is lower for any given luminance. This is by no means a bug but rather is proof that the gamut mapping is actually doing its job.

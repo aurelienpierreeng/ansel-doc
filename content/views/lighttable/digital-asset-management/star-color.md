@@ -1,5 +1,5 @@
 ---
-title: star ratings & color labels
+title: Star ratings & color labels
 date: 2022-12-04T02:19:02+01:00
 lastmod: 2023-10-12
 id: star-color
@@ -10,7 +10,7 @@ author: "people"
 
 Star ratings and color labels help you to sort and rank images according to your own criteria. An image's star rating and color labels can be displayed over thumbnails in the lighttable view and filmstrip module.
 
-## star ratings
+## Star ratings
 
 You can give an image a rating from zero to five stars. Whenever you import images, each image receives a default rating which you can define in the [import](../../../getting-started/import.md) module.  You can also mark an image as “rejected”.
 
@@ -23,7 +23,7 @@ As rejecting an image removes the currently-applied star rating, you can undo th
 
 To rate multiple images at once, select those images in the lighttable or filmstrip and then press the appropriate shortcut key.
 
-## color labels
+## Color labels
 
 Color labels are another way to classify images, and can be used as an alternative to star ratings or to work alongside them. Each image can carry any combination of one or more color labels (red, yellow, green, blue, or purple).
 

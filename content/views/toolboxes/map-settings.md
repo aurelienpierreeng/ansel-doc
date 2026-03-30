@@ -1,5 +1,5 @@
 ---
-title: map settings
+title: Map settings
 date: 2022-12-04T02:19:02+01:00
 id: map-settings
 applicable-version: 3.6
@@ -9,7 +9,7 @@ view: map
 
 Select preferred map data from various providers. Some will provide additional layers (satellite view etc.) which you can toggle.
 
-## module controls
+## Module controls
 
 map source
 : Choose the provider to source map information from.

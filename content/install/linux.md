@@ -9,21 +9,21 @@ weight: 10
 ## Prerequisites
 
 Install your GPU OpenCL drivers if you have a GPU :
-- for __Nvidia__ GPUs, OpenCL support is part of the CUDA proprietary driver and is not available with the open-source _Nouveau_ driver:
+- For __Nvidia__ GPUs, OpenCL support is part of the CUDA proprietary driver and is not available with the open-source _Nouveau_ driver:
 	- [add Nvidia's repository to your package manager](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#package-manager-installation),
 	- [install the CUDA packages](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#driver-installation),
-	- reboot.
+	- Reboot.
 	- __It is highly discouraged to manually install drivers through [runfiles (.run)](https://docs.nvidia.com/cuda/cuda-installation-guide-linux/index.html#runfile-installation) as it is riddled with problems you will need to manually fix everytime the Linux kernel is updated__.
-- for __AMD__ GPUs, the [AMDGPU-Pro](https://www.amd.com/en/support/kb/faq/amdgpu-installation) driver is recommended:
+- For __AMD__ GPUs, the [AMDGPU-Pro](https://www.amd.com/en/support/kb/faq/amdgpu-installation) driver is recommended:
 	- [download the relevant driver](https://www.amd.com/en/support),
 	- [extract the archive](https://www.amd.com/en/support/kb/faq/amdgpu-installation#faq-Prerequisites),
-	- run the installation script:
-		- if you want only the OpenCL driver, without video drivers and OpenGL (assuming your system already has some of those working): `./amdgpu-pro-install -y --opencl=pal,legacy --headless`,
-		- if you want the complete GPU stack (OpenCL/OpenGL, Vulkan, video drivers): `./amdgpu-pro-install -y --opencl=pal,legacy`è
-	- reboot.
-- for __Intel__ embedded GPUs, the _Neo_ driver provides support for OpenCL 3.0 on relatevly recent
+	- Run the installation script:
+		- If you want only the OpenCL driver, without video drivers and OpenGL (assuming your system already has some of those working): `./amdgpu-pro-install -y --opencl=pal,legacy --headless`,
+		- If you want the complete GPU stack (OpenCL/OpenGL, Vulkan, video drivers): `./amdgpu-pro-install -y --opencl=pal,legacy`è
+	- Reboot.
+- For __Intel__ embedded GPUs, the _Neo_ driver provides support for OpenCL 3.0 on relatevly recent
 	- [official driver releases](https://github.com/intel/compute-runtime/releases/latest) contain the Ubuntu `.deb` packages, you need to install `intel-opencl-icd_xxxx.deb`,
-	- the safest way is to locate the `intel-opencl-icd` package in your distribution's repository, and install it. It can be part of optional or third-party repositories for distributions leaning a bit too hard toward open-sourcery (Debian/Fedora).
+	- The safest way is to locate the `intel-opencl-icd` package in your distribution's repository, and install it. It can be part of optional or third-party repositories for distributions leaning a bit too hard toward open-sourcery (Debian/Fedora).
 
 
 If you don't have a GPU, a manual build is recommended to get the best performance possible (see below).
@@ -130,12 +130,12 @@ $ sh build.sh --install --sudo --clean-all
 
 This will:
 
-- cleanup any remnant of a previous Ansel build and installation (avoiding weird corner-cases),
-- build the software with the most aggressive level of optimizations for your particular hardware (the produced binary will not be portable to another hardware),
-- install the software in `/opt/ansel`
-- install a system-wide command `ansel` that can be invoked in a terminal,
-- install a system-wide desktop launcher,
-- update Lensfun database of lenses profiles.
+- Cleanup any remnant of a previous Ansel build and installation (avoiding weird corner-cases),
+- Build the software with the most aggressive level of optimizations for your particular hardware (the produced binary will not be portable to another hardware),
+- Install the software in `/opt/ansel`
+- Install a system-wide command `ansel` that can be invoked in a terminal,
+- Install a system-wide desktop launcher,
+- Update Lensfun database of lenses profiles.
 
 To enable less-aggressive optimizations (if you discover picture artifacts) and install the software somewhere else, use:
 

@@ -1,5 +1,5 @@
 ---
-title: calling lua from dbus
+title: Calling Lua from D-Bus
 date: 2022-12-04T02:19:02+01:00
 id: calling-lua-from-dbus
 weight: 90

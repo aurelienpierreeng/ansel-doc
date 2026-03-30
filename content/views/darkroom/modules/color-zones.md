@@ -1,5 +1,5 @@
 ---
-title: color zones
+title: Color zones
 date: 2022-12-04T02:19:02+01:00
 id: color-zones
 applicable-version: 3.8
@@ -21,7 +21,7 @@ _**Note:** This module should be used with care, as transitions between colors m
 
 ---
 
-## pixel selection method
+## Pixel selection method
 
 The _color zones_ module offers three different methods for selecting which pixels you want to adjust. They are:
 
@@ -40,7 +40,7 @@ select by saturation
 
 : ![color zones choose saturation](color-zones-choose-saturation.jpg)
 
-## pixel manipulation curves
+## Pixel manipulation curves
 
 Once you have chosen a pixel selection method, the selected range of lightness, saturation or hue levels will appear along the horizontal axis of the three pixel manipulation curves, which can be viewed and adjusted by choosing the appropriate tab (lightness, saturation, hue).
 
@@ -65,7 +65,7 @@ The curves work similarly in the lightness- and saturation-based selection modes
 
 Note that these examples are somewhat contrived in order to illustrate the module's usage. In practical use, they would likely need to be combined with [drawn](..//masking-and-blending/masks/drawn.md) and/or [parametric](../masking-and-blending/masks/parametric.md) masks to further isolate their effect.
 
-## range selection
+## Range selection
 
 When adjusting the pixel manipulation curves, it can sometimes be difficult to judge exactly where on the horizontal axis pixels will fall. To the right of the tab controls are a pair of color pickers that can be used to assist with this.
 
@@ -75,7 +75,7 @@ If you click on the right-hand color picker, you can similarly choose a rectangu
 
 ![color zones overview](color-zones-overview.jpg)
 
-## module controls
+## Module controls
 
 The following controls are available in the _color zones_ module:
 

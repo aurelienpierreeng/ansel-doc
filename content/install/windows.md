@@ -93,7 +93,7 @@ MSYS will initialize a personal Unix-like `/home` folder, by default located in 
 To make debugging easier with VS Code, you can use the UCRT64 terminal within the program, which is better suited than the standard Windows terminal. For example, you can use GDB and simply `Ctrl + click` on relevant lines in the debugger output to jump directly to the corresponding line in the code editor.
 
 - To add UCRT64 terminal:
-  - open settings.json
+  - Open settings.json
   - Insert this code in the line before the last `}` :
 
     {{< warning >}} The preceding item must end with a `,` {{</ warning >}}
@@ -125,8 +125,8 @@ To make debugging easier with VS Code, you can use the UCRT64 terminal within th
 
 In some situations, you will need to start Ansel in command line, with arguments modifying its default behaviour, to test or debug issues:
 
-1. if you built yourself, start the MSYS2 MINGW64 terminal (from the applications menu), and execute `/opt/ansel/bin/ansel.exe`,
-2. if you installed from the EXE package, open the Windows terminal (`cmd.exe`) and execute `"C:\Programs Files\ansel\bin\ansel"` (assuming you installed Ansel in the default directory, suggested by the installer).
+1. If you built yourself, start the MSYS2 MINGW64 terminal (from the applications menu), and execute `/opt/ansel/bin/ansel.exe`,
+2. If you installed from the EXE package, open the Windows terminal (`cmd.exe`) and execute `"C:\Programs Files\ansel\bin\ansel"` (assuming you installed Ansel in the default directory, suggested by the installer).
 
 For example, if you note issues with OpenCL, you could start Ansel with OpenCL entirely disabled using `"C:\Programs Files\ansel\bin\ansel" --disable-opencl`.
 
@@ -140,18 +140,18 @@ If you find yourself in this situation, you have several mitigation options:
 
 0. Try to install a newer or an older version of your GPU driver.
 1. If you have a discrete GPU (Nvidia or AMD), you can disable the Intel embedded GPU:
-    1. by entirely removing the Intel OpenCL driver (use your software manager to locate it), so Ansel uses only your discrete driver,
-    2. by entirely disabling the Intel GPU in Ansel config:
-        - locate the `anselrc` text file on your system (typically in `C:\Users\USERNAME\AppData\Local\ansel`),
-        - open it and locate the line `cldevice_v4_YOUR_DEVICE=0 250 0 16 16 128 0 0 0.053989` where `YOUR_DEVICE` is the name of your GPU (possibly associated with a driver version),
-        - on that line, change the 8th (penultimate) digit from `0` to `1`, so you get `cldevice_v4_YOUR_DEVICE=0 250 0 16 16 128 0 1 0.053989`,
+    1. By entirely removing the Intel OpenCL driver (use your software manager to locate it), so Ansel uses only your discrete driver,
+    2. By entirely disabling the Intel GPU in Ansel config:
+        - Locate the `anselrc` text file on your system (typically in `C:\Users\USERNAME\AppData\Local\ansel`),
+        - Open it and locate the line `cldevice_v4_YOUR_DEVICE=0 250 0 16 16 128 0 0 0.053989` where `YOUR_DEVICE` is the name of your GPU (possibly associated with a driver version),
+        - On that line, change the 8th (penultimate) digit from `0` to `1`, so you get `cldevice_v4_YOUR_DEVICE=0 250 0 16 16 128 0 1 0.053989`,
 2. Try to change the build options for OpenCL kernels:
-    - locate the `anselrc` text file on your system (typically in `C:\Users\USERNAME\AppData\Local\ansel`),
-    - open it and locate the line `cldevice_v4_YOUR_DEVICE_building=-cl-fast-relaxed-math` where `YOUR_DEVICE` is the name of your GPU (possibly associated with a driver version), and the options after `=` may be different from this example,
-    - clear the building options, so you get `cldevice_v4_YOUR_DEVICE_building=` (nothing after `=`)
+    - Locate the `anselrc` text file on your system (typically in `C:\Users\USERNAME\AppData\Local\ansel`),
+    - Open it and locate the line `cldevice_v4_YOUR_DEVICE_building=-cl-fast-relaxed-math` where `YOUR_DEVICE` is the name of your GPU (possibly associated with a driver version), and the options after `=` may be different from this example,
+    - Clear the building options, so you get `cldevice_v4_YOUR_DEVICE_building=` (nothing after `=`)
 3. If you don't have a discrete GPU and the Intel one is your only one:
-    1. start the application with OpenCL disabled at all with `COMMAND --disable-opencl` (see the previous section for the actual system command to run, depending on your installation)
-    2. disable the Intel GPU in Ansel config (see point 1.2. above)
+    1. Start the application with OpenCL disabled at all with `COMMAND --disable-opencl` (see the previous section for the actual system command to run, depending on your installation)
+    2. Disable the Intel GPU in Ansel config (see point 1.2. above)
 
 
 ### Memory allocation

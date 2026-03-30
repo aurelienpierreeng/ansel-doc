@@ -1,5 +1,5 @@
 ---
-title: raw denoise
+title: Raw denoise
 date: 2022-12-04T02:19:02+01:00
 id: raw-denoise
 applicable-version: 3.2.1
@@ -13,7 +13,7 @@ Perform denoising on raw image data before it is [demosaiced](./demosaic.md).
 
 This module has been ported from [dcraw](https://www.dechifro.org/dcraw/).
 
-## module controls
+## Module controls
 
 noise threshold
 : The threshold for noise detection. Higher values lead to stronger noise removal and greater loss of image detail.

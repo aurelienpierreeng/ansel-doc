@@ -1,5 +1,5 @@
 ---
-title: raw black/white point
+title: Raw black/white point
 date: 2022-12-04T02:19:02+01:00
 id: raw-black-white-point
 applicable-version: 4.0
@@ -13,7 +13,7 @@ Define camera-specific black and white points.
 
 This module is activated automatically for all raw images. Default settings are applied for all supported cameras. Changes to the defaults are not normally required.
 
-## module controls
+## Module controls
 
 black level 0-3
 : The camera-specific black level of the four pixels in the RGGB Bayer pattern. Pixels with values lower than this level are not considered to contain valid data.

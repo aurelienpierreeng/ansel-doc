@@ -39,8 +39,8 @@ __A popup window__ showing all available actions and their defined keys is avail
 
 The shortcut pathes are broken into a hierarchical tree in this window. The first level of the hierarchy defines the shortcuts groups:
 
-- there is one _global group_ (tied to the global menu),
-- there are several _local groups_ (tied to each view : darkroom, lighttable, etc.).
+- There is one _global group_ (tied to the global menu),
+- There are several _local groups_ (tied to each view : darkroom, lighttable, etc.).
 
 Inside each group, a combination of keys can be used at most once. If you try to re-use a key combination already in use somewhere else in the same group, you will get an error message saying what path is already using it.
 
@@ -60,13 +60,13 @@ User-parametrable shortcuts
 
 The shortcuts popup window has __a double search-engine__:
 
-- one __for features__, that performs a case-insensitive search into action pathes,
-- one __for keys__, allowing to search for key modifiers, or keys, or combinations of both:
-    - if only a key modifier or key is given, results will be returned for partial matches,
-    - if both a key and a modifier are given, results will be returned for full matches,
-    - the syntax for key combinations is `<Mod1><Mod2>Key`, where all elements are optional. Auto-completion is provided for modifiers when you start typing `<`.
+- One __for features__, that performs a case-insensitive search into action pathes,
+- One __for keys__, allowing to search for key modifiers, or keys, or combinations of both:
+    - If only a key modifier or key is given, results will be returned for partial matches,
+    - If both a key and a modifier are given, results will be returned for full matches,
+    - The syntax for key combinations is `<Mod1><Mod2>Key`, where all elements are optional. Auto-completion is provided for modifiers when you start typing `<`.
 - __features and key searches can be combined__ to efficiently narrow results,
-- as long as any search entry is not empty, the shortcut treeview is expanded. To automatically expand all items while not searching anything in particular, you can input `/` into the feature search entry.
+- As long as any search entry is not empty, the shortcut treeview is expanded. To automatically expand all items while not searching anything in particular, you can input `/` into the feature search entry.
 
 ### Vimkey-like, global action search
 
@@ -118,15 +118,15 @@ You can filter the current collection by text using the search entry, which will
 
 To collapse/expand and focus a module, you can:
 
-- hit <kbd>Alt</kbd> and see the mnemonic keys that some module have in their name, then type the mnemonic. This works only for visible modules.
-- use the action search or define a shortcut on the module focusing action. This works also for hidden modules.
+- Hit <kbd>Alt</kbd> and see the mnemonic keys that some module have in their name, then type the mnemonic. This works only for visible modules.
+- Use the action search or define a shortcut on the module focusing action. This works also for hidden modules.
 
 The module focusing action will automatically :
 
-1. open the native module tab of this module,
-2. expand and focus the module,
-3. scroll the right sidebar such that at least the header of the module (if not the whole module) is visible,
-4. collapse and fade out all other modules,
+1. Open the native module tab of this module,
+2. Expand and focus the module,
+3. Scroll the right sidebar such that at least the header of the module (if not the whole module) is visible,
+4. Collapse and fade out all other modules,
 
 The user-defined set of favourite modules, that used to be displayed in a separate tab, is replaced by the ability to target a specific module through its focusing action.
 
@@ -138,22 +138,22 @@ To switch to the next/previous module tab, use <kbd>Ctrl</kbd>+<kbd>Tab</kbd> an
 
 To go directly to a control (slider or combobox), use the action search or define a shortcut to its focusing action. This will automatically:
 
-1. open the native module tab of this module,
-2. expand and focus the module,
-3. scroll the right sidebar such that at least the header of the module (if not the whole module) is visible,
-4. collapse and fade out all other modules,
-4. open the right notebook (tab) page if the control is insterted into a notebook,
-5. focus the control.
+1. Open the native module tab of this module,
+2. Expand and focus the module,
+3. Scroll the right sidebar such that at least the header of the module (if not the whole module) is visible,
+4. Collapse and fade out all other modules,
+4. Open the right notebook (tab) page if the control is insterted into a notebook,
+5. Focus the control.
 
 Once the control is focused:
 
-- on sliders:
-    - arrow keys <kbd>Left</kbd>/<kbd>Right</kbd> will increase/decrease the value by a normal step,
+- On sliders:
+    - Arrow keys <kbd>Left</kbd>/<kbd>Right</kbd> will increase/decrease the value by a normal step,
     - <kbd>Ctrl</kbd>+ arrows change the value using a fine step,
     - <kbd>Shift</kbd>+ arrows change the value using a coarse step,
     - <kbd>Insert</kbd> triggers the attached color-picker if any.
-- on comboboxes:
-    - arrow keys <kbd>Up</kbd>/<kbd>Down</kbd> will cycle through the options,
+- On comboboxes:
+    - Arrow keys <kbd>Up</kbd>/<kbd>Down</kbd> will cycle through the options,
     - <kbd>Enter</kbd> validates the selected option and closes the popup,
     - <kbd>Escape</kbd> exits the popup without validating the selected option.
 

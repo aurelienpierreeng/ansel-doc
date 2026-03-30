@@ -1,5 +1,5 @@
 ---
-title: crop
+title: Crop
 date: 2022-12-04T02:19:02+01:00
 id: crop
 applicable-version: 3.8
@@ -21,11 +21,11 @@ Resize the crop by dragging the border and corner handles.
 
 Move the crop rectangle by clicking and dragging inside the crop area. Constrain movement to the horizontal/vertical axis by holding Ctrl/Shift, respectively while dragging. Commit changes by giving focus to another module.
 
-## module controls
+## Module controls
 
 The _crop_ module controls are split into two sections as follows:
 
-### crop settings
+### Crop settings
 
 aspect
 : Set the aspect ratio of the crop, constraining the width:height ratio of the crop rectangle to the chosen aspect. Many common numerical ratios are pre-defined. A few special aspect ratios deserve explanation:
@@ -46,7 +46,7 @@ aspect
 
 ---
 
-### margins
+### Margins
 
 These sliders allow you to directly set how much of the image to crop from each side. They are automatically updated if you move or resize the crop area on the image using the mouse.
 
@@ -64,6 +64,6 @@ top
 bottom
 : The percentage of the image that should be cropped from the bottom.
 
-### guides
+### Guides
 
 Tick the box to show guide overlays whenever the module is activated. Click the icon on the right to control the properties of the guides. See [guides & overlays](../../toolboxes/guides-overlays.md) for details.

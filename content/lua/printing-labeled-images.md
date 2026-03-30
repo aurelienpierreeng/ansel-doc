@@ -1,5 +1,5 @@
 ---
-title: printing labeled images
+title: Printing labeled images
 date: 2022-12-04T02:19:02+01:00
 id: printing-labeled-images
 weight: 40

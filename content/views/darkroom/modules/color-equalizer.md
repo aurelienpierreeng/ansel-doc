@@ -1,5 +1,5 @@
 ---
-title: color equalizer
+title: Color equalizer
 date: 2026-03-25T00:00:00+01:00
 id: color-equalizer
 applicable-version: 4.0
@@ -15,19 +15,19 @@ The _color equalizer_ module is a secondary color-grading tool. It lets you defi
 
 The user interface is meant to stay perceptually even:
 
-- the editable graphs work in _hue_, _saturation_ and _brightness_ dimensions of _dt UCS HSB_,
-- the underlying LUT is built in RGB code values and applied as a 3D cube transform,
-- the interpolation between user nodes is smooth and periodic over hue.
+- The editable graphs work in _hue_, _saturation_ and _brightness_ dimensions of _dt UCS HSB_,
+- The underlying LUT is built in RGB code values and applied as a 3D cube transform,
+- The interpolation between user nodes is smooth and periodic over hue.
 
 Because the final effect is applied through a 3D LUT, hue, saturation and brightness edits can interact in a more global way than in curve-only modules. This makes the module well suited to creative color remapping and palette design, but more robust across dramatic changes.
 
-## scene-referred placement
+## Scene-referred placement
 
 The module is designed to run after [_color balance rgb_](./color-balance-rgb.md) in the pixelpipe.
 
 Its internal LUT is built and applied in Rec.2020 HLG code values, while the input and output of the module stay in the pipeline working RGB space. Scene-referred RGB is normalized by the module _white level_ before entering the LUT domain and denormalized afterwards.
 
-## general principles
+## General principles
 
 The _color equalizer_ is built around three brightness ranges:
 
@@ -49,9 +49,9 @@ Each graph is defined by editable nodes connected with a periodic monotone Hermi
 
 From these user-defined ring deformations, the module builds a 64×64×64 RGB 3D LUT. The LUT is constrained to remain inside the RGB gamut cube.
 
-## module controls
+## Module controls
 
-### primary tabs
+### Primary tabs
 
 shadows, midtones, highlights
 : These tabs choose which brightness ring you are editing.
@@ -61,7 +61,7 @@ shadows, midtones, highlights
 options
 : This tab contains the global parameters controlling LUT generation and application.
 
-### graph tabs
+### Graph tabs
 
 For each primary brightness tab, the following three inner tabs are available:
 
@@ -74,7 +74,7 @@ brightness
 hue
 : Rotate hues around the ring.
 
-### graph interaction
+### Graph interaction
 
 left-click + drag
 : Move an existing node.
@@ -90,7 +90,7 @@ double-click
 
 The graphs also display a vertical marker when the module color picker is active, showing the hue of the sampled color.
 
-### options tab
+### Options tab
 
 The smoothing parameters are important when doing dramatic local changes : they will help blending color shifts to avoid hash transitions and halos between objects, as well as chroma noise. Increasing all smoothing parameters will make the actual color results drift away from user-set parameters at the benefit of better preserving gradients into the image and limiting edge artifacts.
 
@@ -118,7 +118,7 @@ interpolation
 
 : The same methods are available as in [_lut 3D_](./lut-3D.md): _tetrahedral_, _trilinear_ and _pyramid_. The difference is usually subtle with a dense LUT, but tetrahedral is the default and safest option.
 
-### module color picker
+### Module color picker
 
 A module-wide color picker is available below the graph notebooks.
 
@@ -126,8 +126,8 @@ It samples the module input in RGB, averages the selected area, normalizes the r
 
 The picker is used to:
 
-- draw a vertical hue marker on all graphs,
-- display whether the sampled color lies mostly in _shadows_, _midtones_ or _highlights_.
+- Draw a vertical hue marker on all graphs,
+- Display whether the sampled color lies mostly in _shadows_, _midtones_ or _highlights_.
 
 When the sampled brightness lies between two rings, the label displays the relative distance between them, for example `35% shadows, 65% midtones`.
 
@@ -135,13 +135,13 @@ When the sampled brightness lies between two rings, the label displays the relat
 
 The bottom part of the module contains a 3D LUT viewer. It displays the LUT geometry as a projected RGB cube:
 
-- one colored node for the input RGB sample,
-- one colored node for the output RGB sample,
-- an arrow from input to output.
+- One colored node for the input RGB sample,
+- One colored node for the output RGB sample,
+- An arrow from input to output.
 
 The viewer uses the LUT internal RGB coordinates for geometry, but converts node colors to the display color profile for drawing.
 
-### viewer controls
+### Viewer controls
 
 azimuth
 : Rotate the cube around the achromatic axis.
@@ -164,7 +164,7 @@ target gamut
 save to cLUT
 : Export the currently displayed LUT to a reusable `.cube` file with metadata describing the LUT color space. This file will need to be applied in HLG Rec2020 colorspace.
 
-### viewer mouse interaction
+### Viewer mouse interaction
 
 mouse wheel
 : Zoom in and out, centered on the mouse cursor position.
@@ -183,7 +183,7 @@ double-click
 
 These interactions affect only the visualization. They do not modify the LUT itself.
 
-## typical use
+## Typical use
 
 A common workflow is:
 
@@ -196,7 +196,7 @@ A common workflow is:
 
 The module is most effective for creative palette remapping, hue replacement, and selective saturation/brightness shaping of already-balanced images.
 
-## limitations
+## Limitations
 
 ### Changing greys
 

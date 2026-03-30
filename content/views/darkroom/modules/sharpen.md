@@ -1,5 +1,5 @@
 ---
-title: sharpen
+title: Sharpen
 date: 2022-12-04T02:19:02+01:00
 id: sharpen
 applicable-version: 3.2.1
@@ -19,7 +19,7 @@ _**Note:** The USM algorithm used in this module performs blurs in Lab color spa
 
 ---
 
-## module controls
+## Module controls
 
 radius
 : The unsharp mask applies a gaussian blur to the image as part of its algorithm. This parameter controls the radius of that blur which, in turn, defines the spatial extent of the edge enhancement. Very high values will lead to ugly over-sharpening.

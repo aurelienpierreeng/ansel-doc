@@ -36,13 +36,13 @@ It is impossible to say how much faster a particular GPU will make image renderi
 It has been found that crazy-expensive CPUs still perform better than cheap GPUs. However, at similar performance, GPUs will typically drain less electric power and produce less heat than CPUs, which will also prevent [thermal throttling](https://pcguide101.com/cpu/what-is-cpu-throttling/) to some extent.
 
 The overall performance of OpenCL depends on :
-- the GPU raw performance,
-- how well the driver uses the GPU (beware the power-saving modes),
-- how well the OS integrates the driver (noticeably, support in the Linux Kernel),
-- how many applications use the GPU simultaneously,
-- how cleverly the LLVM compiler was able to optimize the OpenCL kernels for your hardware and driver,
-- how well your computer cooling system is able to maintain the casing at a low-enough temperature,
-- how fast your motherboard bus is able to copy pixels from the RAM to the GPU memory, and the other way around.
+- The GPU raw performance,
+- How well the driver uses the GPU (beware the power-saving modes),
+- How well the OS integrates the driver (noticeably, support in the Linux Kernel),
+- How many applications use the GPU simultaneously,
+- How cleverly the LLVM compiler was able to optimize the OpenCL kernels for your hardware and driver,
+- How well your computer cooling system is able to maintain the casing at a low-enough temperature,
+- How fast your motherboard bus is able to copy pixels from the RAM to the GPU memory, and the other way around.
 
 Anyone pretending to guess the overall performance by just looking at a GPU specifications sheet is a fraud.
 

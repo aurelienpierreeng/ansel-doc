@@ -1,5 +1,5 @@
 ---
-title: rgb levels
+title: Rgb levels
 date: 2022-12-04T02:19:02+01:00
 id: rgb-levels
 applicable-version: 3.2.1
@@ -25,7 +25,7 @@ Three color pickers are available for sampling the black, white and gray points 
 
 ---
 
-## module controls
+## Module controls
 
 mode
 : The mode of operation. "RGB, linked channels" (default) provides a single levels tool which updates all channels, taking into account the selected color preservation method (see "preserve colors" below). "RGB, independent channels" provides separate levels controls for each of the R, G and B channels.

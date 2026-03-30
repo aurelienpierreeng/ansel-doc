@@ -1,5 +1,5 @@
 ---
-title: adding a simple shortcut
+title: Adding a simple shortcut
 date: 2022-12-04T02:19:02+01:00
 id: adding-a-simple-shortcut
 weight: 50

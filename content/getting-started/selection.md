@@ -8,12 +8,12 @@ Ansel allows batch-applying editing histories (through copy-pasting, or through 
 
 Selections are particular objects in Ansel, because :
 
-1. they are remembered between reboots and across ateliers (views) changes,
-1. they are global in the sofware and used to pass on lists of images __between__ lighttable and other ateliers,
-1. they are disabled and inactive __within__ an atelier (except for the lighttable), which use active images instead (contextual selection),
-2. they are necessarily a subset of the current filtered collection (as displayed in the [lighttable](../views/lighttable/)),
-3. they can be set only from the [lighttable](../views/lighttable/) view (no selection can be performed or used from the [filmstrip](../views/toolboxes/filmstrip.md)),
-4. they can be turned into a temporary collection themselves, by using the _Restrict to selection_ button in the include/filter toolbar of the [lighttable](../views/lighttable/).
+1. They are remembered between reboots and across ateliers (views) changes,
+1. They are global in the sofware and used to pass on lists of images __between__ lighttable and other ateliers,
+1. They are disabled and inactive __within__ an atelier (except for the lighttable), which use active images instead (contextual selection),
+2. They are necessarily a subset of the current filtered collection (as displayed in the [lighttable](../views/lighttable/)),
+3. They can be set only from the [lighttable](../views/lighttable/) view (no selection can be performed or used from the [filmstrip](../views/toolboxes/filmstrip.md)),
+4. They can be turned into a temporary collection themselves, by using the _Restrict to selection_ button in the include/filter toolbar of the [lighttable](../views/lighttable/).
 
 Selected images will appear highlighted in the lighttable. Because selections are used to perform (possibly harmful) _write_ operations, Ansel forces "hard" interactions (pressing on an hardware button) on thumbnails to define them. These allowed interactions are :
 
@@ -25,13 +25,13 @@ Selected images will appear highlighted in the lighttable. Because selections ar
 
 A selection will be needed to perform any property editing, even on a single image, among the following :
 
-- applying star ratings, or rejecting,
-- applying color labels,
-- applying tags, title, copyright or any metadata,
-- changing GPS coordinates or time zone,
-- copying/pasting image histories, deleting them,
-- removing images from library, or from the disk,
-- etc.
+- Applying star ratings, or rejecting,
+- Applying color labels,
+- Applying tags, title, copyright or any metadata,
+- Changing GPS coordinates or time zone,
+- Copying/pasting image histories, deleting them,
+- Removing images from library, or from the disk,
+- Etc.
 
 Unlike Darktable, Ansel doesn't implicitely treats the hovered image as a part of any selection, which prevents unpredictable and often unwanted changes on random images when the mouse cursor is left dangling on the thumbnail grid.
 

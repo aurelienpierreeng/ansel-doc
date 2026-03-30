@@ -1,5 +1,5 @@
 ---
-title: soft proof
+title: Soft proof
 date: 2022-12-04T02:19:02+01:00
 lastmod: 2023-10-12
 id: soft-proof

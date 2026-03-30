@@ -1,5 +1,5 @@
 ---
-title: snapshots
+title: Snapshots
 date: 2022-12-04T02:19:02+01:00
 id: snapshots
 applicable-version: 3.6

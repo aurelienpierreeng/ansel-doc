@@ -39,14 +39,14 @@ This process implies that the pixelpipe has two fixed color conversion steps: [_
 
 Each module has a position in the pixelpipe that tells you which color space the module lives in:
 
-- up to [_demosaic_](../views/darkroom/modules/demosaic.md)
+- Up to [_demosaic_](../views/darkroom/modules/demosaic.md)
 : The raw image information does not yet constitute an "image" but merely "data" about the light captured by the camera. Each pixel carries a single intensity for one primary color, and camera primaries are very different from primaries used in models of human vision. Bear in mind that some of the modules in this part of the pipe can also act on non-raw input images in RGB format (with full information on all three color channels).
 
-- between [_demosaic_](../views/darkroom/modules/demosaic.md) and [_input color profile_](../views/darkroom/modules/input-color-profile.md)
+- Between [_demosaic_](../views/darkroom/modules/demosaic.md) and [_input color profile_](../views/darkroom/modules/input-color-profile.md)
 : Image is in RGB format within the color space of the specific camera or input file.
 
-- between [_input color profile_](../views/darkroom/modules/input-color-profile.md) and [_output color profile_](../views/darkroom/modules/output-color-profile.md)
+- Between [_input color profile_](../views/darkroom/modules/input-color-profile.md) and [_output color profile_](../views/darkroom/modules/output-color-profile.md)
 : Image is in the color space defined by the selected working profile (linear Rec2020 RGB by default). As Ansel processes images in 4x32-bit floating point buffers, we can handle large working color spaces without risking banding or tonal breaks.
 
-- after [_output color profile_](../views/darkroom/modules/output-color-profile.md)
+- After [_output color profile_](../views/darkroom/modules/output-color-profile.md)
 : Image is in RGB format as defined by the selected display or output ICC profile.

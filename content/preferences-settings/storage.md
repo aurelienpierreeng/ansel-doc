@@ -1,5 +1,5 @@
 ---
-title: storage
+title: Storage
 date: 2022-12-04T02:19:02+01:00
 id: storage
 weight: 100
@@ -7,7 +7,7 @@ draft: false
 ---
 
 
-## database
+## Database
 
 check for database maintenance
 : Indicates when darktable should check for database fragmentation and perform maintenance. Options are "never", "on startup", "on close" and "on both". Each of these is also available with an additional "(don't ask)" option to perform the checks automatically without prompting (default "on close").
@@ -21,7 +21,7 @@ create database snapshot
 how many snapshots to keep
 : Number of snapshots to keep after creating a new snapshot, not counting database backups taken when moving between Ansel versions. Enter "-1" to store an unlimited number of snapshots. (default 10)
 
-## xmp
+## Xmp
 
 write sidecar file for each image
 : XMP files provide a redundant method of saving the changes that you have made to an image, in addition to the changes saved to Ansel's database. This option allows you to choose when to write these files. Choose from:

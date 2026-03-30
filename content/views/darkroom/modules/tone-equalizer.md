@@ -1,5 +1,5 @@
 ---
-title: tone equalizer
+title: Tone equalizer
 date: 2022-12-04T02:19:02+01:00
 id: tone-equalizer
 applicable-version: 3.8
@@ -27,21 +27,21 @@ The following diagram describes how the tone equalizer works:
 
 It is important that the mask separates the image into regions of similar brightness, and that a suitable amount of blur is applied within those regions. This means that all of the pixels in each region will have their exposure adjusted similarly, without adversely affecting local contrast. Examine your image beforehand to identify which regions you wish to dodge and burn, and use the controls on the [_masking_](#masking-tab) tab to ensure that those areas are reasonably separated in tone within the final mask. This will allow those regions to be adjusted independently.
 
-## module controls
+## Module controls
 
 The controls of the _tone equalizer_ module are divided between three tabs.
 
 display exposure mask
 : Click on the icon to the right of this label to show/hide the module's guided mask over the top of the image. This control is available in all three tabs.
 
-### simple tab
+### Simple tab
 
 This tab splits the brightness of the guided mask into nine zones (from --8 to 0 EV) and allows you to alter each zone independently. This is a simplified interface and is used to generate the same tone adjustment curve as shown in the [_advanced_](#advanced-tab) tab.
 
 --8 EV ... 0 EV
 : Each slider adjusts the exposure of all pixels where the _guided mask_ has the given brightness. If the mask's histogram is evenly spread over the entire tonal range, sliders towards the top generally affect the shadows, whereas sliders towards the bottom generally affect the highlights. You can check the spread of the histogram within the [_advanced_](#advanced-tab) tab.
 
-### advanced tab
+### Advanced tab
 
 This tab allows you to control the same intensity levels as in the simple tab, though here they are represented as control points on a curve. Behind the curve is a histogram representing the intensity levels of the _guided mask_ (not the underlying image). If the histogram is too bunched up, this means your mask doesn't have a good spread of intensity levels, which makes it harder to independently control the brightness of the different parts of your image. It is therefore recommended that the histogram be adjusted so that it extends the entire range, covering as many control points as possible for maximum flexibility. You can adjust the mask using the controls in the [_masking_](#masking-tab) tab.
 
@@ -50,7 +50,7 @@ Click+drag the control points on the curve to adjust the brightness of all pixel
 curve smoothing
 : Control how the curve is interpolated between control points. Move the slider to the right to make the transitions between the control points more gradual, but beware that going past about 0.6 can introduce some instability (oscillations) in the curve due to mathematical constraints. Move the slider to the left for a more well-behaved curve, but beware that this can result in harsher tonal transitions that may damage local contrast.
 
-### masking tab
+### Masking tab
 
 This tab contains controls for adjusting the guided mask.
 
@@ -98,20 +98,20 @@ mask exposure compensation
 mask contrast compensation
 : Dilate (spread out) or compress the mask's histogram. The wand icon to the right of the slider will propose a reasonable starting point, which can then be fine-tuned to optimize the spread of the histogram under the tone equalizer control points.
 
-### cursor indicator/control
+### Cursor indicator/control
 
 When the _tone equalizer_ module is enabled and expanded, you can move the mouse pointer over the preview image to show a cursor that displays information about the pixel under the pointer. When this cursor is shown, the mouse wheel can be used to brighten or darken the areas of your image that match the mask intensity level at that point. This provides a convenient way to quickly brighten or darken specific parts of the image.
 
 ![tone-equalizer-simple](tone-equalizer-cursor.jpg)
 
-- the cross-hairs indicate the position of the pixel under the cursor
-- the text label shows the intensity of the guided mask at that point, in EV
-- the shade of the outer circle indicates the intensity of the mask at that point
-- if the tone equalizer has brightened or darkened pixels matching this mask intensity, the magnitude of the adjustment is indicated by an arc on the left-hand-side. The longer the arc, the greater the brightness adjustment,
-- if there has been an exposure adjustment, the shade of the inner circle indicates the amount of brightening or darkening, relative to the mask's intensity at that point (as indicated by the outer gray circle). That is to say, if the pixel under the crosshairs has been brightened, the inner circle will be a lighter shade of gray than the outer circle; if the pixel has been darkened, the inner circle will be a darker shade of gray than the outer circle.
+- The cross-hairs indicate the position of the pixel under the cursor
+- The text label shows the intensity of the guided mask at that point, in EV
+- The shade of the outer circle indicates the intensity of the mask at that point
+- If the tone equalizer has brightened or darkened pixels matching this mask intensity, the magnitude of the adjustment is indicated by an arc on the left-hand-side. The longer the arc, the greater the brightness adjustment,
+- If there has been an exposure adjustment, the shade of the inner circle indicates the amount of brightening or darkening, relative to the mask's intensity at that point (as indicated by the outer gray circle). That is to say, if the pixel under the crosshairs has been brightened, the inner circle will be a lighter shade of gray than the outer circle; if the pixel has been darkened, the inner circle will be a darker shade of gray than the outer circle.
 
 If you need to move or zoom the portion of the image shown in the center view while the module is expanded, hold down the 'a' key while dragging the mouse or using the scroll wheel.  As long as the key is held down, mouse actions adjust the viewport rather than adjusting the tone curve.
 
-### presets
+### Presets
 
 The _tone equalizer_ comes with several presets that can use used to compress shadows and highlights. Each comes in two variants, using either the guided filter (gf) or the exposure-independent guided filter (eigf). The variants using the guided filter tend to preserve local contrast in the shadows better those that use the exposure-independent guided filter, but at the price of reducing the local contrast in the highlights. Either of these variants may lead to better results, depending on the image. In both cases, the presets preserve middle-gray, so you shouldn't need to adjust the global exposure after activating the tone equalizer.

@@ -1,5 +1,5 @@
 ---
-title: orientation
+title: Orientation
 date: 2022-12-04T02:19:02+01:00
 id: orientation
 applicable-version: 3.8
@@ -12,7 +12,7 @@ Rotate the image 90 degrees at a time or flip the image horizontally and/or vert
 
 The module is enabled by default and the orientation (rotation) is automatically set based on the image's Exif data.
 
-## module controls
+## Module controls
 
 transform
 : Double click the label to reset to the default transformations

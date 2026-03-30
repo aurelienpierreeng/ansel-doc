@@ -1,12 +1,12 @@
 ---
-title: miscellaneous
+title: Miscellaneous
 date: 2022-12-04T02:19:02+01:00
 id: miscellaneous
 weight: 110
 draft: false
 ---
 
-## interface
+## Interface
 
 load default shortcuts at startup
 : When launching the application, Ansel loads default shortcuts first, and then loads user-defined shortcuts on top. This allows default shortcuts to be overridden with a new action but prevents them from being deleted (since the deleted shortcut will be automatically reloaded on the next restart). Deactivate this preference to stop loading default shortcuts on startup -- only load the user-defined ones (including any defaults that you have not subsequently deleted or overridden). This makes deletion easier but also means that you will not benefit from new shortcuts added in future versions without first re-enabling this preference (default on).
@@ -26,12 +26,12 @@ position of the scopes module
 method to use for getting the display profile
 : This option allows the user to force Ansel to use a specific method to obtain the current display profile for [color management](../color-management/_index.md). In the default setting “all”, Ansel will choose to query the X display server's xatom or the colord system service. You can set this option to “xatom” or “colord” to enforce a specific method if the two methods give different results. You can run the [Ansel-cmstest](../cli/Ansel-cmstest.md) binary to examine your color management subsystem.
 
-## tags
+## Tags
 
 omit hierarchy in simple tag lists
 : When exporting images any hierarchical tags are also added as a simple list of non-hierarchical tags to make them visible to some other programs. When this option is checked Ansel will only include the last part of the hierarchy and ignore the rest. So `foo|bar|baz` will only add `baz`.
 
-## shortcuts with multiple instances
+## Shortcuts with multiple instances
 
 It is possible to create multiple instances of many processing modules. In this scenario it is not always obvious which instance should be controlled by keyboard shortcut operations. The following options control rules that are applied (in order) to decide which module instance keyboard shortcuts should be applied to.
 
@@ -52,12 +52,12 @@ prefer unmasked instances
 selection order
 : After applying the above rules, apply the shortcut to the first or last instance remaining (default "last instance").
 
-## map / geolocalisation view
+## Map / geolocalisation view
 
 pretty print the image location
 : Show a more readable representation of the geo-location in the [image information](../views/toolboxes/image-information.md) module (default on).
 
-## slideshow view
+## Slideshow view
 
 waiting time before each picture in slideshow
 : The number of seconds before displaying the next image (default 5) in the [slideshow view](../views/slideshow/_index.md).

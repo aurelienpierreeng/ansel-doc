@@ -11,11 +11,11 @@ author: "people"
 
 The lighttable view is the default view loaded when Ansel is started, and allows you to view and manage your image collection. It will noticeably allow you to:
 
-- cull your images, assign then ratings and ultimately decide which images are worth keeping and editing,
-- filter your images based on ratings, base folder, or any metadata supported by the software (EXIF/IPTC/XMP),
-- apply metadata, like title, description, tags, GPS coordinates, or correct EXIF date/time,
-- copy-paste editing histories between images or apply styles, individually or in batches,
-- export images editing histories to final files.
+- Cull your images, assign then ratings and ultimately decide which images are worth keeping and editing,
+- Filter your images based on ratings, base folder, or any metadata supported by the software (EXIF/IPTC/XMP),
+- Apply metadata, like title, description, tags, GPS coordinates, or correct EXIF date/time,
+- Copy-paste editing histories between images or apply styles, individually or in batches,
+- Export images editing histories to final files.
 
 ## Lighttable content
 
@@ -35,17 +35,17 @@ Library
 Include
 : The _include_ toolbar, in the second top row, allows to quickly filter in and out images based on their (_in order of appearance_):
     - __rating__ :
-        - unrated (0 star) : the barred star icon,
+        - Unrated (0 star) : the barred star icon,
         - _rejected_ state : the circled cross icon (same as on the thumbnails),
         - 1 to 5 stars : the next 5 star icons. Those are positional, meaning :
-            - selecting the third starred-button will filter in all images having 3 stars,
-            - to select images rated at least 3 stars, you will need to select the third, fourth and fifth stars, which can be quickly achieved with <kbd>Ctrl</kbd>+<kbd>left click</kbd> on the third star.
+            - Selecting the third starred-button will filter in all images having 3 stars,
+            - To select images rated at least 3 stars, you will need to select the third, fourth and fifth stars, which can be quickly achieved with <kbd>Ctrl</kbd>+<kbd>left click</kbd> on the third star.
     - __color labels__ :
-        - unlabled images : the white disk,
-        - color-labeled images : colored disks,
+        - Unlabled images : the white disk,
+        - Color-labeled images : colored disks,
     - __edited state__ :
-        - images having no editing history : the horizontally-barred circle,
-        - images having an editing history : the yin-yang +/- circle (same as on the thumbnails),
+        - Images having no editing history : the horizontally-barred circle,
+        - Images having an editing history : the yin-yang +/- circle (same as on the thumbnails),
     - __selection__ : restricting the collection to any arbitrary user-defined selection. This replaces Darktable's _culling_ view.
     - __text search__ : restricting the collection to all images having at least one textual property matching the search query (filename, folder, title, etc.).
 : The controls from the _include_ toolbar are toggle buttons, meaning when they are selected, images matching those criteria will be shown (filtered in/included), and when they are unselected, images matching those criteria will be hidden (filtered out/excluded). To show everything (_include everything_ or _exclude nothing_), you will therefore need to have all buttons checked, which can be quickly achieved by doing a right click on any of the buttons, then selecting _Select all filters_ in the context menu. If no button is toggled, no image is included and the lighttable grid stays empty.
@@ -57,11 +57,11 @@ To summarize, the _library_ toolbox helps filtering images based on their intrin
     - 4 stars means "to edit if time permits",
     - 3 stars means "backup plan",
 - Color labels help tracking where you are in your workflow. For example :
-    - red label means "basic/batch editing applied",
-    - yellow label means "fine-tuned/individual editing applied",
-    - green label means "exported",
-    - blue label means "printed"
-    - purple label means "sent to client".
+    - Red label means "basic/batch editing applied",
+    - Yellow label means "fine-tuned/individual editing applied",
+    - Green label means "exported",
+    - Blue label means "printed"
+    - Purple label means "sent to client".
 
 Those are, of course, examples that you can adapt to your needs and workflow. Note that you can also use text tags to keep track of all that, but they will not show over thumbnails in the lighttable.
 

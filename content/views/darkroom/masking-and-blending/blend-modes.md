@@ -1,5 +1,5 @@
 ---
-title: blend modes
+title: Blend modes
 date: 2022-12-04T02:19:02+01:00
 id: blend-modes
 weight: 20
@@ -26,7 +26,7 @@ final_output = (1.0 - opacity) * module_output + opacity * blended_input
 
 where the `blended_input` is a combination of the output and input images, depending on the blend mode below where _output_ and _input_ image references are reversed. In "reversed" blend modes, an opacity of 0% outputs an image that is identical to the _output_ image of the module.
 
-## normal modes
+## Normal modes
 
 normal
 : The most commonly used blend mode, "normal" simply mixes input and output to an extent determined by the opacity parameter. This mode is commonly used to reduce the strength of a module's effect by reducing the opacity. This is also usually the blend mode of choice when applying a module's effect selectively with masks. This mode is also known as the "over" Porter-Duff alpha blending operator (see [alpha compositing](https://en.wikipedia.org/wiki/Alpha_compositing) for more details).
@@ -35,7 +35,7 @@ normal bounded
 : _not available in the "RGB (scene)" color space_
 : This blend mode is the same as “normal”, except that the input and output data are clamped to a particular min/max value range. Out-of-range values are effectively blocked and are not passed to subsequent modules. Sometimes this helps to prevent artifacts. However, in most cases (e.g. highly color-saturated extreme highlights) it is better to let unbound values travel through the pixelpipe to be properly handled later. The “normal” blend mode is therefore usually preferred.
 
-## arithmetic modes
+## Arithmetic modes
 
 addition
 : Add together the pixel values of the input and output images, lightening the output. When blending in the "RGB (scene)" color space, the pixel values of the output image are multiplied by a value proportional to the "blend fulcrum".
@@ -69,7 +69,7 @@ geometric mean
 harmonic mean
 : Return the product of the input and output pixel values, multiplied by 2 and divided by their sum.
 
-## contrast enhancing modes
+## Contrast enhancing modes
 
 The following modes are not available in the "RGB (scene)" blending color space as they rely on an assumption of "50% mid gray" which only applies to display-referred and non-linear color spaces.
 
@@ -91,7 +91,7 @@ linearlight
 pinlight
 : This mode performs a darken and lighten blending simultaneously, removing mid-tones. It can result in artifacts such as patches and blotches.
 
-## color channel modes
+## Color channel modes
 
 ### Lab channels
 
@@ -132,7 +132,7 @@ HSV value
 HSV color
 : Mix the color from the input and output images, while taking lightness unaltered from the input image. In contrast to “color” this blend mode does not involve clamping.
 
-## others
+## Others
 
 lightness
 : Mix lightness from the input and output images, while taking color (chromaticity and hue) unaltered from the input image.

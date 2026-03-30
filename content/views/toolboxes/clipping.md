@@ -1,5 +1,5 @@
 ---
-title: clipping warning
+title: Clipping warning
 date: 2022-12-04T02:19:02+01:00
 id: clipping
 applicable-version: 3.4
@@ -29,7 +29,7 @@ The clipping warning module, described here, warns you about clipping caused by 
 
 - The [gamut check](./gamut.md) module also provides information about clipping arising from image processing. It is based on the external littleCMS library, and is more or less equivalent to the _full gamut_ mode in the clipping warning module. The downsides of the gamut check module are that it doesn't allow you to distinguish between clipping caused by luminance and gamut mapping, and it is much slower than the clipping warning indicator.
 
-## module controls
+## Module controls
 
 Right-click on the clipping icon to show the following options:
 

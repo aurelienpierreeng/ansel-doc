@@ -1,5 +1,5 @@
 ---
-title: sharing scripts
+title: Sharing scripts
 date: 2022-12-04T02:19:02+01:00
 id: sharing-scripts
 weight: 80
@@ -18,15 +18,15 @@ AUTHOR
 Jérémy Rosen (jeremy.rosen@enst-bretagne.fr)
 
 INSTALLATION
-* copy this file in $CONFIGDIR/lua/ where CONFIGDIR
+* Copy this file in $CONFIGDIR/lua/ where CONFIGDIR
 is your Ansel configuration directory
-* add the following line in the file $CONFIGDIR/luarc
+* Add the following line in the file $CONFIGDIR/luarc
   require "scp-storage"
 
 USAGE
-* select "Export via SCP" in the storage selection menu
-* set the target directory
-* export your images
+* Select "Export via SCP" in the storage selection menu
+* Set the target directory
+* Export your images
 
 LICENSE
 GPLv2

@@ -1,5 +1,5 @@
 ---
-title: exposure
+title: Exposure
 date: 2022-12-04T02:19:02+01:00
 id: exposure
 applicable-version: 4.0
@@ -8,7 +8,7 @@ working-color-space: RGB
 view: darkroom
 masking: true
 tags:
-  - batch editing
+  - Batch editing
 ---
 
 Increase or decrease the overall brightness of an image.
@@ -21,7 +21,7 @@ manual
 automatic (RAW images only)
 : Use an analysis of the image's histogram to automatically set the exposure. Ansel automatically selects the exposure compensation that is required to shift the selected _percentile_ to the selected _target level_ (see definitions below). This mode is particularly useful for automatically altering a large number of images to have the same exposure. A typical use case of automatic mode is deflickering of time-lapse photographs.
 
-## module controls
+## Module controls
 
 mode
 : Choose the mode of operation (automatic/manual).
@@ -51,7 +51,7 @@ black level correction (manual and automatic modes)
 
 ---
 
-## spot exposure mapping
+## Spot exposure mapping
 
 The spot mapping feature is designed to help with batch-editing a series of images in an efficient way. In this scenario, you typically develop a single reference image for the whole batch and then copy&paste the development stack to all of the other images in the batch.
 
@@ -61,18 +61,18 @@ Spot exposure mapping allows you to define a target brightness, in terms of expo
 
 The mapping process consists of two steps.
 
-### step 1: set the target
+### Step 1: set the target
 
 There are two ways of setting the target brightness for your control sample:
 
-1. if you know or expect an arbitrary lightness for the control sample (for example, a gray card, a color chart, a product or a logo of a specified brightness), you can set its L value directly, in CIE Lab 1976 space,
-2. if you simply want to match the development of your reference image, set the _spot mode_ to _measure_, then enable the color picker (to the right of the _exposure_ slider) and draw a rectangle over your control sample. The _input_ column will then be updated with the lightness value of the control sample before the exposure correction, and the _target_ column will show the resulting lightness of the control sample after the current exposure setting is applied.
+1. If you know or expect an arbitrary lightness for the control sample (for example, a gray card, a color chart, a product or a logo of a specified brightness), you can set its L value directly, in CIE Lab 1976 space,
+2. If you simply want to match the development of your reference image, set the _spot mode_ to _measure_, then enable the color picker (to the right of the _exposure_ slider) and draw a rectangle over your control sample. The _input_ column will then be updated with the lightness value of the control sample before the exposure correction, and the _target_ column will show the resulting lightness of the control sample after the current exposure setting is applied.
 
 If you reset the lightness value, the default value is 50% (middle-gray) -- this can be useful to quickly set the average exposure of any image.
 
 Note that the target value is not reset when you reset the module itself, but is stored indefinitely in Ansel's configuration and will be available on next launch as well as for the next image you develop.
 
-### step 2 : match the target
+### Step 2 : match the target
 
 When you open a new image, the _spot mode_ is automatically reset to _correction_. Using the color picker attached to the exposure slider, you can then directly reselect your control sample in the new image. The proper exposure setting required for the control sample to match the memorized target lightness will be automatically computed, and the setting will be updated in the same operation.
 

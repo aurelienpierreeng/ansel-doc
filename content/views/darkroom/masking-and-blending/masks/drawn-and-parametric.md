@@ -1,5 +1,5 @@
 ---
-title: combining drawn & parametric masks
+title: Combining drawn & parametric masks
 date: 2022-12-04T02:19:02+01:00
 id: drawn-and-parametric
 weight: 40
@@ -33,7 +33,7 @@ exclusive and inclusive inverted modes
 
 : Finally within the “combine masks” combobox you may select the _exclusive & inverted_ or _inclusive & inverted_ options. Each of these options is equivalent to the _exclusive_ and _inclusive_ modes, respectively, but with a final step that inverts the resulting mask.
 
-## typical use cases
+## Typical use cases
 
 inclusive mode
 : For this mode you set the “combine masks” combobox to inclusive mode and make sure that all polarity buttons of all the individual channels and of the drawn mask are set to negative (-). Your starting point is a mask where all pixels have a value of zero (no pixel is selected). You now adjust the parametric mask sliders to bring more and more pixels into the selection or you draw shapes on the canvas to select specific areas of your image.

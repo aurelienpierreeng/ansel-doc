@@ -1,5 +1,5 @@
 ---
-title: raw overexposed warning
+title: Raw overexposed warning
 date: 2022-12-04T02:19:02+01:00
 id: raw-overexposed
 applicable-version: 3.2.1

@@ -1,5 +1,5 @@
 ---
-title: how opencl works
+title: How opencl works
 date: 2022-12-04T02:19:02+01:00
 id: how-opencl-works
 weight: 20

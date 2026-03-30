@@ -1,5 +1,5 @@
 ---
-title: darkroom view layout
+title: Darkroom view layout
 date: 2022-12-04T02:19:02+01:00
 lastmod: 2023-10-12
 id: the-darkroom-view
@@ -7,7 +7,7 @@ weight: 20
 draft: false
 ---
 
-## left panel
+## Left panel
 
 From top to bottom:
 
@@ -30,7 +30,7 @@ From top to bottom:
 : View and edit drawn shapes.
 
 
-## right panel
+## Right panel
 
 From top to bottom:
 
@@ -42,7 +42,7 @@ From top to bottom:
 
 The module-order graph is no longer shown as a side-panel module. Use the node-graph button from the darkroom toolbar to open the [module order](../../views/toolboxes/module-order.md) popup and inspect or rearrange the pixelpipe.
 
-## bottom panel
+## Bottom panel
 
 ![darkroom-view-layout](darkroom-bottom-panel.jpg)
 

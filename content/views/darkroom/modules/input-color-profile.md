@@ -1,5 +1,5 @@
 ---
-title: input color profile
+title: Input color profile
 date: 2022-12-04T02:19:02+01:00
 id: input-color-profile
 applicable-version: 3.2.1
@@ -19,7 +19,7 @@ As part of the mapping from the input color space to the working profile space, 
 
 Note that the final color profile that will be used when exporting the image is controlled by the [_output color profile_](output-color-profile.md) module.
 
-## module controls
+## Module controls
 
 input profile
 : The profile or color matrix to apply. A number of matrices are provided along with an enhanced color matrix for some camera models. The enhanced matrices are designed to provide a look that is closer to that of the camera manufacturer.

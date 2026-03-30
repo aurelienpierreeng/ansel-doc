@@ -1,5 +1,5 @@
 ---
-title: lens correction
+title: Lens correction
 date: 2022-12-04T02:19:02+01:00
 id: lens-correction
 applicable-version: 3.8
@@ -21,7 +21,7 @@ By default, only the lenses that are directly compatible with your camera's moun
 
 If you can't find your lens, check if it is in the list of [currently supported lenses](https://lensfun.github.io/lenslist/), and try running the [`lensfun-update-data`](https://lensfun.github.io/manual/v0.3.2/lensfun-update-data.html) tool. If there is still no matching profile for your lens, a [lens calibration service](https://www.darktable.org/2013/07/have-your-lens-calibrated/) is offered by Torsten Bronger, one of darktable's users. Alternatively you may visit the [lensfun project](https://lensfun.github.io/lenslist/) to learn how to generate your own set of correction parameters. Don't forget to share your profile with the lensfun team!
 
-## module controls
+## Module controls
 
 camera
 : The camera make and model as determined by the image's Exif data. You can override this manually and select your camera from a hierarchical menu. Only lenses with correction profiles matching the selected camera will be shown.

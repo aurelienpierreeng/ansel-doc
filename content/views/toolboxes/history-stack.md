@@ -1,5 +1,5 @@
 ---
-title: history stack
+title: History stack
 date: 2022-12-04T02:19:02+01:00
 id: history-staack
 applicable-version: 3.8

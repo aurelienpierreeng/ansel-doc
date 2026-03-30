@@ -1,5 +1,5 @@
 ---
-title: gamut check
+title: Gamut check
 date: 2022-12-04T02:19:02+01:00
 id: gamut
 applicable-version: 3.2.1
