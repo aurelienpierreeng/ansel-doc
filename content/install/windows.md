@@ -153,3 +153,32 @@ If you find yourself in this situation, you have several mitigation options:
     1. start the application with OpenCL disabled at all with `COMMAND --disable-opencl` (see the previous section for the actual system command to run, depending on your installation)
     2. disable the Intel GPU in Ansel config (see point 1.2. above)
 
+
+### Memory allocation
+
+Ansel uses virtual memory pre-allocation for fast memory access. Virtual memory needs to be enabled on your system and the pagefile size required by Ansel should be available on your system. If, at startup, you see errors like :
+
+```bash
+couldn't alloc map (VirtualAlloc error 1455)
+ERROR: can't init pixelpipe cache, aborting.
+```
+
+it means the system refused to allocate the requested memory. This can happen on gamers PC where performance optimizations have been made.
+
+#### Diagnose 
+
+Open Task Manager → Performance → Memory and check `Committed: X / Limit`. `X` is the currently-used virtual memory. If it is close to `Limit` you will have to close applications using it.
+
+#### Fix 
+
+The first approach is to enable or increase the virtual memory on your system. Go to System Properties → Advanced → Performance → Virtual Memory and set pagefile to system managed or several GB.
+
+If this is not enough, the second approach is to reduce Ansel memory consumption. Open `C:\%LOCALAPPDATA%\ansel\anselrc` with a text editor and locate the lines :
+
+```
+host_memory_limit=-1
+...
+memory_os_headroom=25000
+```
+
+When set to `-1`, `host_memory_limit` detects all the RAM available on your system and will allocate to Ansel `host_memory_limit - memory_os_headroom`. Values are in MiB. To manually control this, you can set `host_memory_limit=4000` (4 GiB) and `memory_os_headroom=0` as a starting point. If that works, you can try allocating more.
