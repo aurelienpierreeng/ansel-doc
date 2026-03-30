@@ -1,6 +1,6 @@
 ---
 title: Color equalizer
-date: 2026-03-25T00:00:00+01:00
+date: 2026-03-30T00:00:00+02:00
 id: color-equalizer
 applicable-version: 4.0
 working-color-space: RGB
@@ -90,6 +90,44 @@ double-click
 
 The graphs also display a vertical marker when the module color picker is active, showing the hue of the sampled color.
 
+### Live preview interaction
+
+When the module has focus in darkroom, the mouse cursor over the image preview becomes a direct editing control for the currently visible graph:
+
+move the mouse over the image
+: Sample the module input through the preview pixelpipe cache at the cursor position.
+
+: The sampled color is projected back to the bounded dt UCS hue-ring control space, then the currently visible graph shows:
+
+- A vertical hue marker at the sampled hue,
+- A circular swatch on the curve,
+- The original sampled display color in the inner disk,
+- The corrected display color in the outer ring,
+- An outer intensity arc showing the interpolated correction amount for the active setting.
+
+mouse wheel over the image
+: Adjust the currently visible graph around the sampled hue.
+
+: The change is distributed to neighboring nodes with a gaussian window, so edits stay smooth and local on the hue ring.
+
+: On the _saturation_ and _brightness_ graphs, the wheel changes the gain of nearby nodes.
+
+: On the _hue_ graph, the wheel rotates nearby nodes around the hue ring.
+
+Shift+mouse wheel
+: Use a larger step.
+
+Ctrl+mouse wheel
+: Use a finer step.
+
+right-click over the image
+: Add a new node on the currently visible graph at the hue sampled under the cursor.
+
+This preview interaction always targets the active combination of:
+
+- brightness tab: _shadows_, _midtones_ or _highlights_,
+- graph tab: _saturation_, _brightness_ or _hue_.
+
 ### Options tab
 
 The smoothing parameters are important when doing dramatic local changes : they will help blending color shifts to avoid hash transitions and halos between objects, as well as chroma noise. Increasing all smoothing parameters will make the actual color results drift away from user-set parameters at the benefit of better preserving gradients into the image and limiting edge artifacts.
@@ -130,6 +168,11 @@ The picker is used to:
 - Display whether the sampled color lies mostly in _shadows_, _midtones_ or _highlights_.
 
 When the sampled brightness lies between two rings, the label displays the relative distance between them, for example `35% shadows, 65% midtones`.
+
+The module color picker is separate from the live preview cursor editing described above:
+
+- the picker is used to inspect one area and report its hue/brightness position in the controls,
+- the live preview cursor is used to edit the currently visible graph directly from the image.
 
 ## LUT viewer
 
@@ -190,9 +233,11 @@ A common workflow is:
 1. Use _color balance rgb_ first to establish the global color mood.
 2. In _color equalizer_, choose one of the three brightness tabs.
 3. Use the module color picker to locate the hue and brightness range you want to target.
-4. Adjust _hue_, _saturation_ and _brightness_ graphs for that range.
-5. Inspect the resulting RGB deformation in the LUT viewer.
-6. Fine-tune the smoothing parameters in the _options_ tab if the remapping spreads too much or not enough.
+4. Use the live preview cursor over the image to inspect how the active graph affects a real sampled color.
+5. Adjust _hue_, _saturation_ and _brightness_ graphs for that range, either by dragging nodes in the graph or by scrolling over the image preview.
+6. Add nodes from the image preview with right-click when you need a control point exactly at the sampled hue.
+7. Inspect the resulting RGB deformation in the LUT viewer.
+8. Fine-tune the smoothing parameters in the _options_ tab if the remapping spreads too much or not enough.
 
 The module is most effective for creative palette remapping, hue replacement, and selective saturation/brightness shaping of already-balanced images.
 
