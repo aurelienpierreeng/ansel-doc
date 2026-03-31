@@ -1,7 +1,7 @@
 ---
 title: Color calibration
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2023-10-12
+lastmod: 2026-03-31
 id: color-calibration
 applicable-version: 4.0
 working-color-space: RGB
@@ -10,6 +10,7 @@ masking: true
 include_toc: true
 tags:
   - Batch editing
+latex: true
 ---
 
 A fully-featured color-space correction, white balance adjustment and channel mixer module.
@@ -20,9 +21,9 @@ This simple yet powerful module can be used in the following ways:
 
 - As a simple RGB [channel mixer](#channel-mixing), adjusting the R, G and B output channels based on the R, G and B input channels, to perform cross-talk color-grading.
 
-- To adjust the [color saturation and brightness](#brightness-and-colorfulness-tabs) of the image, based on the relative strength of the R, G and B channels of each pixel.
+- To adjust the [color saturation, brightness and B&W output](#outputs-tab), based on the relative strength of the R, G and B channels of each pixel.
 
-- To produce a [grayscale output](#gray-tab) based on the relative strengths of the R, G and B channels, in a way similar to the response of black and white film to a light spectrum.
+- To produce a [grayscale output](#outputs-tab) based on the relative strengths of the R, G and B channels, in a way similar to the response of black and white film to a light spectrum.
 
 - To improve the color accuracy of the input color profile using a [color checker](#extracting-settings-using-a-color-checker) chart.
 
@@ -134,6 +135,8 @@ In all these cases, you **must** enable the "clip negative RGB from gamut" optio
 
 The remainder of this module is a standard channel mixer, allowing you to adjust the output R, G, B, colorfulness, brightness and gray of the module based on the relative strengths of the R, G and B input channels.
 
+The _Mixer_ tab now offers several modes, but these are only different GUI representations of the same backend reality. Internally, the processing still uses the same mixer coefficients in the selected _adaptation_ space. Switching between _Complete_, _Simple_ and _Primaries_ does not select a different algorithm and does not change the backend by itself. It only changes how the same underlying matrix is exposed in the GUI.
+
 Channel mixing is performed in the color space defined by the _adaptation_ control on the [CAT tab](#cat-tab-controls). For all practical purposes, these CAT spaces are particular RGB spaces tied to human physiology and proportional to the light emissions in the scene, but they still behave in the same way as any other RGB space. The use of any of the CAT spaces can make the channel mixer tuning process easier, due to their connection with human physiology, but it is also possible to mix channels in the RGB working space of the pipeline by setting the _adaptation_ to "none (bypass)". To perform channel mixing in one of the _adaptation_ color spaces without chromatic adaptation, set the _illuminant_ to "same as pipeline (D50)".
 
 ---
@@ -142,7 +145,7 @@ Channel mixing is performed in the color space defined by the _adaptation_ contr
 
 ---
 
-Channel mixing is a process that defines a boosting/muting factor for each channel as a ratio of all the original channels. Instead of entering a single flat correction that ties the output value of a channel to its input value (for example, `R_output = R_input × correction`), the correction to each channel is dependent on the input of _all_ of the channels for each pixel (for example, `R_output = R_input × R_correction + G_input × G_correction + B_input × B_correction`). Thus a pixel's channels contribute to each other (a process known as "cross-talk") which is equivalent to rotating the primary colors of the color space in 3D. This is, in effect, digital simulation of physical color filters.
+Channel mixing is a process that defines a boosting/muting factor for each channel as a ratio of all the original channels. Instead of entering a single flat correction that ties the output value of a channel to its input value (for example, \(R_{\mathrm{out}} = R_{\mathrm{in}} \times \mathrm{correction}\)), the correction to each channel is dependent on the input of _all_ of the channels for each pixel (for example, \(R_{\mathrm{out}} = R_{\mathrm{in}} \times R_{\mathrm{correction}} + G_{\mathrm{in}} \times G_{\mathrm{correction}} + B_{\mathrm{in}} \times B_{\mathrm{correction}}\)). Thus a pixel's channels contribute to each other (a process known as "cross-talk") which is equivalent to rotating the primary colors of the color space in 3D. This is, in effect, digital simulation of physical color filters.
 
 Although rotating primary colors in 3D is ultimately equivalent to applying a general hue rotation, the connection between the RGB corrections and the resulting perceptual hue rotation is not directly predictable, which makes the process non-intuitive. "R", "G" and "B" should be taken as a mixture of 3 lights that we dial up and down, not as a set of colors or hues. Also, since RGB tristimulus does not decouple luminance and chrominance, but is an additive lighting setup, the "G" channel is more strongly tied to human luminance perception than the "R" and "B" ones. All pixels have a non-zero G channel, which implies that any correction to the G channel is likely to affect all pixels.
 
@@ -154,39 +157,106 @@ The channel mixing process is therefore tied to a physical interpretation of the
 
 ---
 
-## R, G and B tabs
+### Mixer modes
 
-At its most basic level, you can think of the R, G and B tabs of the _color calibration_ module as a type of matrix multiplication between a 3x3 matrix and the input [R G B] values. This is in fact very similar to what a matrix-based ICC color profile does, except that the user can input the matrix coefficients via the Ansel GUI rather than reading the coefficients from an ICC profile file.
+All mixer modes describe the same backend 3×3 transform for the RGB output channels. They differ only by the parameterization used in the GUI and by the mathematical constraints required for that parameterization to exist.
 
-```
-┌ R_out ┐     ┌ Rr Rg Rb ┐     ┌ R_in ┐
-│ G_out │  =  │ Gr Gg Gb │  X  │ G_in │
-└ B_out ┘     └ Br Bg Bb ┘     └ B_in ┘
-```
+#### Simple mode
+
+_Simple_ is an exact geometric representation of a restricted subset of mixer matrices. It has 6 degrees of freedom:
+
+global hue rotation
+: A rigid rotation of the normalized chroma plane. This is a robust and global hue change.
+
+chroma (u,v) axes orientation
+: The orientation of the principal axes used to express the chroma transform. This parameter lets you align your UV space on the color primaries you want. It has no effect on the image by itself, it only builds the UV space for the next settings.
+
+u stretch and v stretch
+: The two signed gains along those principal chroma axes. The neutral value is 1. At 0, it will turn the image achromatic, no matter the axes orientation. Above 1, it will increase the color contrast in the selected axis. Below 0, it will invert colors along the selected axis. Below 1.5, it will increase the color contrast on inverted colors.
+
+achromatic coupling amount and achromatic coupling hue
+: The magnitude and direction of the chroma vector that is coupled into the achromatic axis, expressed in a fixed chroma basis. When increasing _amount_, the selected hue will be bleached to achromatic (both desaturated and brightened), while its opponent color is saturated and darkened, but in a way that preserves the achromatic axis. All other colors will be more or less saturated/desaturated, depending on their hue angular distance with the _coupling hue_.
+
+This representation is only valid when the 3 output rows are normalized and their sums are non-zero. In practice, _Simple_ is available only if the 3 _normalize channels_ checkboxes of the RGB mixer rows are enabled and the row sums are not zero. If these requirements are not met, Ansel cannot express the current matrix in this coordinate system and the GUI falls back to _Complete_.
+
+_(U,V) stretches_ can be understood as color contrast along the axis.
+
+A typical use for this would be correcting blue stage lights when the escape gamut and turn magenta : the right angle should be around 0° to put the damaging blue shade on the V axis. Then reduce the _v stretch_ until that blue is not so overwhelming, and adjust _u stretch_ to taste to get a proper color balance.
+
+The _achromatic coupling_ allows to gracefully remap a selected hue to achromatic, while reinforcing the colorfulness of its complementary color. In the case of the stage blue stage lights, after the previous _(u, v) stretch_, you would choose the right blue tint and increase the _coupling amount_ until blue becomes acceptably desaturated.
+
+#### Primaries mode
+
+_Primaries_ is another exact GUI representation, this time expressed as a generalized primaries model in the current mixer basis. It has 9 degrees of freedom:
+
+- 2 for the achromatic axis: _white hue_ and _white purity_,
+- 2 for each basis vector: _red_, _green_ and _blue hue/purity_ pairs, for a total of 6,
+- 1 _gain_ correction, that accounts for global normalization. 
+
+This mode is exact only for matrices that can be interpreted as a non-degenerate affine basis change in the current adaptation space. In practice, the current 3×3 matrix must be non-singular and the 3 basis vectors plus the white vector must all have non-zero sums. If these requirements are not met, Ansel cannot rebuild the current matrix as primaries parameters and the GUI falls back to _Complete_.
+
+### Complete mode
+
+At its most basic level, you can think of the _Complete_ mode of the _color calibration_ module as a type of matrix multiplication between a 3x3 matrix and the input RGB vector. This is in fact very similar to what a matrix-based ICC color profile does, except that the user can input the matrix coefficients via the Ansel GUI rather than reading the coefficients from an ICC profile file.
+
+$$
+\begin{pmatrix}
+R_{\mathrm{out}} \\\
+G_{\mathrm{out}} \\\
+B_{\mathrm{out}}
+\end{pmatrix}
+=
+\begin{pmatrix}
+R_r & R_g & R_b \\\
+G_r & G_g & G_b \\\
+B_r & B_g & B_b
+\end{pmatrix}
+\begin{pmatrix}
+R_{\mathrm{in}} \\\
+G_{\mathrm{in}} \\\
+B_{\mathrm{in}}
+\end{pmatrix}
+$$
+
+This mode therefore has 9 degrees of freedom: every output row has 3 coefficients mixing the 3 input channels. It is the most general representation and is always available. Whenever another mode cannot represent the current matrix exactly, the GUI falls back to _Complete_.
 
 If, for example, you've been provided with a matrix to transform from one color space to another, you can enter the matrix coefficients into the _channel mixer_ as follows:
 
-- Select the _R_ tab and then set the Rr, Rg & Rb values using the R, G and B input sliders
-- Select the _G_ tab and then set the Gr, Gg & Gb values using the R, G and B input sliders
-- Select the _B_ tab and then set the Br, Bg & Bb values using the R, G and B input sliders
+- In the _Mixer_ tab, select _Complete_ mode
+- In the _output red_ section, set the Rr, Rg and Rb values using the R, G and B input sliders
+- In the _output green_ section, set the Gr, Gg and Gb values using the R, G and B input sliders
+- In the _output blue_ section, set the Br, Bg and Bb values using the R, G and B input sliders
 
-By default, the mixing function in _color calibration_ just copies the input [R G B] channels straight over to the matching output channels. This is equivalent to multiplying by the identity matrix:
+By default, the mixing function in _color calibration_ just copies the input RGB channels straight over to the matching output channels. This is equivalent to multiplying by the identity matrix:
 
-```
-┌ R_out ┐     ┌ 1  0  0 ┐      ┌ R_in ┐
-│ G_out │  =  │ 0  1  0 │   X  │ G_in │
-└ B_out ┘     └ 0  0  1 ┘      └ B_in ┘
-```
+$$
+\begin{pmatrix}
+R_{\mathrm{out}} \\\
+G_{\mathrm{out}} \\\
+B_{\mathrm{out}}
+\end{pmatrix}
+=
+\begin{pmatrix}
+1 & 0 & 0 \\\
+0 & 1 & 0 \\\
+0 & 0 & 1
+\end{pmatrix}
+\begin{pmatrix}
+R_{\mathrm{in}} \\\
+G_{\mathrm{in}} \\\
+B_{\mathrm{in}}
+\end{pmatrix}
+$$
 
-For a more intuitive understanding of how the mixing sliders on the R, G and B tabs behave, consider the following:
+For a more intuitive understanding of how the mixing sliders in the _output red_, _output green_ and _output blue_ sections behave, consider the following:
 
 - For the _R_ destination channel, adjusting sliders to the right will make the R, G or B areas of the image more "red". Moving the slider to the left will make those areas more "cyan".
 - For the _G_ destination channel, adjusting sliders to the right will make the R, G or B areas of the image more "green". Moving the slider to the left will make those areas more "magenta".
 - For the _B_ destination channel, adjusting sliders to the right will make the R, G or B areas of the image more "blue". Moving the slider to the left will make those areas more "yellow".
 
-### R, G and B tab controls
+### Complete mode controls
 
-The following controls are shown for each of the R, G and B tabs:
+The following controls are shown for each of the _output red_, _output green_ and _output blue_ sections:
 
 input R/G/B
 : Choose how much the input R, G and B channels influence the output channel relating to the tab concerned.
@@ -194,14 +264,16 @@ input R/G/B
 normalize channels
 : Select this checkbox to normalize the coefficients to try to preserve the overall brightness of this channel in the final image as compared to the input image.
 
-## Brightness and colorfulness tabs
+## Outputs tab
+
+The _Outputs_ tab groups the previous _colorfulness_, _brightness_ and _B&W_ controls into a single page with section labels. These controls are independent from the _Mixer_ tab modes above, but they follow the same overall idea: they use the relative strengths of the R, G and B input channels to build output quantities.
 
 The brightness and colorfulness (color saturation) of pixels in an image can also be adjusted based on the R, G and B input channels. This uses the same basic algorithm that the [_filmic rgb_](filmic-rgb.md) module uses for tone mapping (which preserves RGB ratios) and for mid-tones saturation (which massages them).
 
 saturation algorithm
 : This control allows you to upgrade the saturation algorithm to the new 2021 version, for edits produced prior to darktable 3.6 -- it will not appear for edits that already use the latest version.
 
-### Colorfulness tab controls
+### Colorfulness section controls
 
 input R/G/B
 : Adjust the color saturation of pixels, based on the R, G and B channels of those pixels. For example, adjusting the _input R_ slider will affect the color saturation of pixels containing a lot of "R" more than pixels containing only a small amount of "R".
@@ -209,7 +281,7 @@ input R/G/B
 normalize channels
 : Select this checkbox to try to keep the overall saturation constant between the input and output images.
 
-### Brightness tab controls
+### Brightness section controls
 
 input R/G/B
 : Adjust the brightness of certain colors in the image, based on the R, G and B channels of those colors. For example, adjusting the _input R_ slider will affect the brightness of colors containing a lot of R channel much more than colors containing only a small amount of R channel. When darkening/brightening a pixel, the ratio of the R, G and B channels for that pixel is maintained, in order to preserve the hue.
@@ -217,18 +289,26 @@ input R/G/B
 normalize channels
 : Select this checkbox to try to keep the overall brightness constant between the input and output images.
 
-## Gray tab
+### B&W section
 
-Another very useful application of _color calibration_ is the ability to mix the channels together to produce a grayscale output -- a monochrome image. Select the _gray_ tab, and set the R, G and B sliders to control how much each channel contributes to the brightness of the output. This is equivalent to the following matrix multiplication:
-```
-GRAY_out  =   [ r  g  b ]  X  ┌ R_in ┐
-                              │ G_in │
-                              └ B_in ┘
-```
+Another very useful application of _color calibration_ is the ability to mix the channels together to produce a grayscale output -- a monochrome image. In the _Outputs_ tab, use the _B&W_ section and set the R, G and B sliders to control how much each channel contributes to the brightness of the output. This is equivalent to the following matrix multiplication:
+
+$$
+\mathrm{GRAY}_{\mathrm{out}}
+=
+\begin{pmatrix}
+r & g & b
+\end{pmatrix}
+\begin{pmatrix}
+R_{\mathrm{in}} \\\
+G_{\mathrm{in}} \\\
+B_{\mathrm{in}}
+\end{pmatrix}
+$$
 
 When dealing with skin tones, the relative weights of the three channels will affect the level of detail in the image. Placing more weight on R (e.g. [0.9, 0.3, -0.3]) will make for smooth skin tones, whereas emphasising G (e.g. [0.4, 0.75, -0.15]) will bring out more detail. In both cases the B channel is reduced to avoid emphasising unwanted skin texture.
 
-### Gray tab controls
+### B&W section controls
 
 input R/G/B
 : Choose how much each of the R, G and B channels contribute to the gray level of the output. The image will only be converted to monochrome if the three sliders add up to some non-zero value. Adding more B will tend to bring out more details, adding more R will tend to smooth skin tones.
