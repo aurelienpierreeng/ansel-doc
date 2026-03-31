@@ -292,7 +292,7 @@ normalize channels
 Another very useful application of _color calibration_ is the ability to mix the channels together to produce a grayscale output -- a monochrome image. In the _Outputs_ tab, use the _B&W_ section and set the R, G and B sliders to control how much each channel contributes to the brightness of the output. This is equivalent to the following matrix multiplication:
 
 $$
-\mathrm{GRAY}_{\mathrm{out}} =
+\mathrm{GRAY}\_{\mathrm{out}} =
 \begin{pmatrix}
 r & g & b
 \end{pmatrix}
