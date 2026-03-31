@@ -145,7 +145,7 @@ Channel mixing is performed in the color space defined by the _adaptation_ contr
 
 ---
 
-Channel mixing is a process that defines a boosting/muting factor for each channel as a ratio of all the original channels. Instead of entering a single flat correction that ties the output value of a channel to its input value (for example, \(R_{\mathrm{out}} = R_{\mathrm{in}} \times \mathrm{correction}\)), the correction to each channel is dependent on the input of _all_ of the channels for each pixel (for example, \(R_{\mathrm{out}} = R_{\mathrm{in}} \times R_{\mathrm{correction}} + G_{\mathrm{in}} \times G_{\mathrm{correction}} + B_{\mathrm{in}} \times B_{\mathrm{correction}}\)). Thus a pixel's channels contribute to each other (a process known as "cross-talk") which is equivalent to rotating the primary colors of the color space in 3D. This is, in effect, digital simulation of physical color filters.
+Channel mixing is a process that defines a boosting/muting factor for each channel as a ratio of all the original channels. Instead of entering a single flat correction that ties the output value of a channel to its input value (for example, \(R\_{\mathrm{out}} = R\_{\mathrm{in}} \times \mathrm{correction}\)), the correction to each channel is dependent on the input of _all_ of the channels for each pixel (for example, \(R\_{\mathrm{out}} = R\_{\mathrm{in}} \times R\_{\mathrm{correction}} + G\_{\mathrm{in}} \times G\_{\mathrm{correction}} + B\_{\mathrm{in}} \times B\_{\mathrm{correction}}\)). Thus a pixel's channels contribute to each other (a process known as "cross-talk") which is equivalent to rotating the primary colors of the color space in 3D. This is, in effect, digital simulation of physical color filters.
 
 Although rotating primary colors in 3D is ultimately equivalent to applying a general hue rotation, the connection between the RGB corrections and the resulting perceptual hue rotation is not directly predictable, which makes the process non-intuitive. "R", "G" and "B" should be taken as a mixture of 3 lights that we dial up and down, not as a set of colors or hues. Also, since RGB tristimulus does not decouple luminance and chrominance, but is an additive lighting setup, the "G" channel is more strongly tied to human luminance perception than the "R" and "B" ones. All pixels have a non-zero G channel, which implies that any correction to the G channel is likely to affect all pixels.
 
@@ -297,9 +297,9 @@ $$
 r & g & b
 \end{pmatrix}
 \begin{pmatrix}
-R_{\mathrm{in}} \\\
-G_{\mathrm{in}} \\\
-B_{\mathrm{in}}
+R\_{\mathrm{in}} \\\
+G\_{\mathrm{in}} \\\
+B\_{\mathrm{in}}
 \end{pmatrix}
 $$
 
