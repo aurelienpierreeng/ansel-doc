@@ -31,6 +31,10 @@ The following demosaic algorithms are available for sensors with Bayer filters:
 
 - _VNG4_ is better suited for use on images with low-frequency content (e.g. low contrast regions such as sky) but, compared to _AMaZE_ and _RCD_, it often causes loss of some high-frequency details and can sometimes add local color shifts. VNG is no longer really recommended -- for most images, other available algorithms usually provide better results.
 
+- _downscale_ is a last-resort alternative that will actually not demosaic, but interpolate by nearest-neighbour and reduce the resolution by 4 (2 on each side). The rationale behind is that many sensors now have 36, 45, 52… Mpx while we still consume images mostly in Full HD (1920×1080 px = 2 Mpx).[^1] For very noisy pictures, the demosaicing step will actually worsen the noise, by creating patterns, blotches and shifting colors toward green or magenta. Downscaling those very-high-resolution images, when noisy, prevents aggravating the problem and also makes denoising less computationally-intensive, while still producing at least 9 usable Mpx at the end. The _downscale_ option has an iterative color filtering step that uses the guided Laplacian (same as [_highlights reconstruction_](./highlight-reconstruction.md)) to limit moiré, fringes and noise altogether in a multi-scale setup. As a side effect, downscaling without post-filtering is the only method that fully preserves the sensor noise statistics, which is useful when using [noise profiles](./denoise-profiled.md).
+
+[^1]: Even a 8.5×11 inch print at 300 DPI is still only 8.7 Mpx…
+
 ---
 
 **Note:** The performance of the demosaic algorithms differs significantly, _AMaZE_ being by far the slowest.
