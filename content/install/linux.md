@@ -1,7 +1,7 @@
 ---
 title: Install on Linux
 date: 2022-12-11
-lastmod: 2026-02-16
+lastmod: 2026-04-09
 draft: false
 weight: 10
 ---
@@ -60,6 +60,16 @@ This will most likely put the AppImage package into your `~/Downloads` folder, y
 
 - [Give it execution permission](https://discourse.appimage.org/t/how-to-run-an-appimage/80/4).
 - Either double-click on the AppImage file from your file browser or launch `./Ansel-xxxx-x86_64.AppImage` in terminal.
+- Command-line arguments are forwarded to the packaged binaries, so `./Ansel-xxxx-x86_64.AppImage --version`, `./Ansel-xxxx-x86_64.AppImage -d dev -d perf -d opencl -d verbose` and `./Ansel-xxxx-x86_64.AppImage /path/to/image.raw` work as expected.
+- Auxiliary command-line tools can be called through the AppImage too, by passing the tool name as the first argument, for example:
+```bash
+./Ansel-xxxx-x86_64.AppImage ansel-cli input.raw output.tif
+./Ansel-xxxx-x86_64.AppImage ansel-cltest
+./Ansel-xxxx-x86_64.AppImage ansel-cmstest
+./Ansel-xxxx-x86_64.AppImage ansel-generate-cache
+./Ansel-xxxx-x86_64.AppImage ansel-noiseprofile
+./Ansel-xxxx-x86_64.AppImage ansel-gen-noiseprofile
+```
 
 To create a system shortcut and have Ansel accessible from your dash/app menu, you can use [AppImageLauncher](https://assassinate-you.net/posts/2020/09/appimagelauncher-2.2.0-released/), available as `.deb`, `.rpm` and `.AppImage` packages ([download](https://github.com/TheAssassin/AppImageLauncher/releases/tag/v2.2.0)). It will integrate the AppImage with your desktop environment with or without running extra services in background, upon request, and can update the Ansel AppImage.
 
@@ -72,6 +82,8 @@ Automatic updates are not available at this point, you may use [AppImageUpdate](
 Though the Lensfun database of lens profiles is stored and up-to-date in the AppImage package, if you installed a custom Lensfun database at some point in your home directory (usually, by running the command `lensfun‑update-data`), this database can take precedence over the one shipped in the AppImage.
 
 If you note that a relatively-new lens supposed to be supported by Lensfun doesn't appear to be supported in the [lens correction module](../views/darkroom/modules/lens-correction.md), either run the `lensfun-update-data` command again, or simply delete the local database, usually located in `~/.local/share/lensfun/updates`.
+
+The AppImage intentionally uses the host OpenMP runtime (`libgomp`) instead of bundling its own copy. This avoids mixing a packaged OpenMP runtime with the host OpenCL and GPU drivers, which has been observed to trigger stability issues on some systems.
 
 ## Packages from Linux distributions repositories
 
