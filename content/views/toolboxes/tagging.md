@@ -1,17 +1,20 @@
 ---
 title: Tagging
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-13
 id: tagging
 applicable-version: 4.0
 tags:
 view: lighttable, [darkroom], tethering, map
 ---
 
-Manage tags attached to images.
+Attach tags to images, and manage the tag dictionary.
 
 Tags provide a means of adding information to images using a keyword dictionary. You can also manage tags as a hierarchical tree, which can be useful when their number becomes large.
 
 Tags are physically stored in [XMP sidecar files](../lighttable/digital-asset-management/sidecar.md) as well as in Ansel's library database and can be included in [exported](./export.md) images.
+
+In Ansel, attaching tags is also _the_ way to build [collections](./collections.md): a collection is the dynamically-queried set of all images sharing a given tag, always kept up to date. So the everyday job of this module — attaching a tag to images — is the same act as “putting images into a collection”. The tag _dictionary_ itself (creating, renaming, deleting, importing and exporting tags) is a separate, occasional, housekeeping task and lives in its own window.
 
 ## Definitions
 
@@ -59,188 +62,171 @@ You can attach any of these tags to any image. Any tags attached to an image, ex
 
 If you attach the "`places|France|Nord|Lille`" tag to an image, the "`places|France|Nord`" and "`places|France`" tags are also implicitly attached to that image (you don’t need to attach them manually). Note that this is only true here because those additional tags have been separately defined -- the "`places`" node is not included because it is a "free node" (not a tag).
 
-## Module sections
+## Module layout
 
-![tagging-overview](tagging-overview.jpg)
+The tagging experience is split across two surfaces, matching the two distinct jobs of culling (fast, frequent) and dictionary maintenance (occasional):
 
-The tagging module consists of two sections
+```mermaid
+flowchart TB
+    subgraph Sidebar["Tags sidebar — lighttable / map (top to bottom)"]
+        C["view (list/tree) · sort (name/count)"]
+        B["Tag entry + ✓ validate button —<br/>type or pick a tag, then Enter or ✓ to attach"]
+        A["Attached tags list — tags on the hovered / selected<br/>images, shown as a list or a tree, trash icon on each row"]
+        D["☑ show system tags"]
+    end
+    M["module gear menu → “manage tags…”"]
+    subgraph Popup["“manage tags…” window"]
+        E["Tag dictionary — list / tree, multiple selection,<br/>no per-image checkboxes"]
+        F["search box · new · import… · export… · tree/list · suggestions"]
+        G["suggestion settings: confidence · recent-tags count"]
+    end
+    M -->|opens| Popup
+```
 
-1. The upper _attached tags_ section (with the _attach/detach_ buttons under it)
+The **sidebar toolbox** (the _Tags_ module in the left panel) is for the “one image → many tags” workflow: it shows the tags already on the current image and lets you attach more. The **manage tags window** is for the dictionary itself (create / rename / delete / import / export) and its suggestion settings. It never attaches anything to your images — it only edits the tags. Open it from the module's gear (preset) menu → **manage tags…**.
 
-2. The lower _tag dictionary_ section (with the _new/import.../export..._ buttons under it)
+### Sidebar toolbox
 
-### Attached tags section
+From top to bottom, the sidebar contains:
 
-The _attached tags_ section displays tag(s) attached to image(s), where those images are
+- **Display controls** — a row with two combo boxes:
 
-- Under your mouse cursor (if hovering over an image in the lighttable view); or
+  view
+  : Chooses how the attached list below is rendered: **list** shows each tag as its whole `a|b|c` path on one line; **tree** breaks the paths on the pipe `|` and shows them hierarchically, so common parents are grouped.
 
-- Currently selected (if not hovering over an image)
+  sort
+  : Chooses whether to order the attached tags by **name** (alphabetically) or by **count** (how many of the targeted images carry each tag).
 
-Automatically generated Ansel tags (with names starting “`Ansel|`”) cannot be selected.
+- **Tag entry** — a text box where you type or pick a tag to attach. As you type, an autocompletion list of matching existing tags appears below it; pick one with the arrow keys/mouse, or keep typing a brand-new name. A small clear (✕) icon inside the box empties it.
 
-At the bottom of the _attached tags_ section are the following buttons, from left to right:
+  ![check-icon](check-icon.jpg) **validate** — the check-mark button to the right of the entry attaches the typed (or picked) tag to the target images, exactly like pressing Enter. It is there so that, after choosing a tag from the autocompletion list with the mouse, you do not have to reach for the keyboard.
 
-attach
-: If a tag is selected in the _tag dictionary_ section, attach this tag to the selected images.
+- **Attached tags list** — the tags attached to the image(s) currently under your mouse cursor (if hovering over an image in the lighttable), or to the currently selected image(s) (if not hovering). Each user tag row carries a trash icon on its right that detaches that single tag in one click. Automatically generated Ansel system tags (with names starting “`Ansel|`”) are shown for information only — only when _show system tags_ is enabled — and have no trash icon. The number in brackets next to a tag indicates how many of the targeted images carry it. You can adjust the height of this list by holding Ctrl and scrolling with your mouse wheel. The list is rendered as a flat list or a hierarchical tree according to the _view_ control above (see [Detach tag](#detach-a-tag) for the right-click actions).
 
-detach
-: If a tag is selected in the _attached tags_ list, detach that tag from the selected images. A tag can also be detached if you right click on the tag name and select _detach_ from the pop-up menu.
+- **show system tags** — a checkbox at the bottom that reveals the system tags Ansel manages automatically (the `Ansel|…` family). They are hidden by default.
 
-![check-icon](check-icon.jpg) hidden tags
-: Choose whether to view any hidden tags that Ansel has automatically attached to the selected images.
+The [manage tags window](#manage-tags-window) is opened from the module's gear (preset) menu, not from the sidebar.
 
-![sort-icon](sort-icon.jpg) sort
-: Choose whether to sort the _attached tags_ list alphabetically or by the count shown in brackets next to the tag (this count indicates how many of the selected images have that tag attached to them).
+### Manage tags window
 
-![minus-icon](minus-icon.jpg) parents
-: Choose whether or not to show the parent categories of the tag.
+Open this window from the module's gear (preset) menu → **manage tags…**. It is a separate window dedicated to maintaining the dictionary, and contains:
 
-You can adjust the height of the _attached tags_ window by holding Ctrl and scrolling with your mouse wheel.
+- a **search box** at the top that filters the tag list as you type (its ✕ icon clears it);
+- the **tag dictionary**, listing every tag known to Ansel, either as a flat _list_ or as a hierarchical _tree_. Multiple tags can be selected at once (Ctrl-click / Shift-click) for bulk operations;
+- a row of buttons:
 
-### Tag dictionary section
+  new
+  : Create a new tag using the name typed in the search box.
 
-The _tag dictionary_ section displays all of the tags that are available in Ansel's database. At the top of the _tag dictionary_ section is a text box where tag names can be entered. Below this is a list of available tags, which may also include indicator symbols to the left of the tag names. The meanings of these symbols are as follows:
+  import...
+  : Import tags from a Lightroom keyword file.
 
-- A check mark [✓] indicates that the tag is attached to all of the selected images
+  export...
+  : Export the whole dictionary to a Lightroom keyword file.
 
-- A minus sign [--] indicates that the tag is attached to at least one of the selected images. If the symbol is next to a node name in the hierarchical _tree_ view, it means that one of the child tags under that node is attached to at least one of the selected images.
+  ![plus-icon](plus-icon.jpg) suggestions
+  : Show a list of suggested keywords based on the keywords already associated with the selected images (see the _suggestion settings_ below). CAUTION: this view queries the database so it might be slow.
 
-- If no indicator symbol is present, this means that the tag is not attached to any of the selected images, or that the node has no child tags attached to any of the selected images.
+  ![list-tree-icon](list-tree-icon.jpg) list/tree
+  : Toggle the dictionary between the flat _list_ view and the hierarchical _tree_ view.
 
-In the hierarchical _tree_ view, a name in italics represents either a free node or a category.
+- the **suggestion settings** (formerly a separate _preferences_ dialog), applied immediately:
 
-Below the _tag dictionary_ list are the following buttons, from left to right:
+  suggested tags level of confidence
+  : Level of confidence used to include a tag in the suggestions list (default 50):
+  : - 0: display all associated tags,
+  : - 99: match tags with a 99% confidence level,
+  : - 100: an essentially unreachable level of confidence, so no matching tags are returned. Use 100% to disable the best-matched suggestions list (faster).
 
-new
-: Create a new tag, using the name that has been entered into the text entry box at the top of the _tag dictionary_ section.
+  number of recently attached tags
+  : Number of recently attached tags to include in the suggestions list (default 20). A value of "-1" disables the most-recently-attached suggestions list.
 
-import...
-: Import tags from a Lightroom keyword file.
+In the hierarchical _tree_ view, a name in italics represents either a free node or a category. You can adjust the height of the dictionary by holding Ctrl while scrolling with your mouse wheel.
 
-export...
-: Export all tags to a Lightroom keyword file.
+All other dictionary operations (rename, change path, delete, “set as a tag”, navigation to a tag collection, …) are reached by right-clicking a tag — see [Usage](#usage) below.
 
-![plus-icon](plus-icon.jpg) suggestions
-: Show a list of suggested keywords based on the keywords already associated with the selected images (see the [preferences](#preferences) section). CAUTION: This view queries the database so might be slow.
-
-![list-tree-icon](list-tree-icon.jpg) list/tree
-: Toggle the display of tags between the straight _list_ view and hierarchical _tree_ view.
-
-You can adjust the height of the _tag dictionary_ window by holding Ctrl while scrolling with your mouse wheel.
+{{< note >}}
+The management window only edits the tag dictionary; it cannot attach tags to images. To attach a tag, use the sidebar entry, the quick-tag box (Ctrl+T), or drag images onto a tag row in the [collections](./collections.md) tab of the _Library_ module.
+{{< /note >}}
 
 ## Usage
 
-The following sections describe the operations that can be performed with tags.
+### Attach a tag
 
-### Text entry
+To attach an existing or new tag to the image(s) under the cursor (or, failing that, the selected images):
 
-The text entry box (shown under the _attach_/_detach_ buttons) has multiple purposes.
+- Type its name in the sidebar **tag entry** — picking from the autocompletion list if it already exists — then press Enter or click the **✓ validate** button. Hierarchical tags are created using the pipe symbol “`|`” to separate nodes. If the tag does not yet exist it is created, then attached.
+- Press **Ctrl+T** to open a small text box at the bottom of the central lighttable view, type a tag name and press Enter. The tag is created if needed and attached to all the selected images.
+- **Drag** an image or group of images from the lighttable/filmstrip and **drop them onto a tag row** in the [collections](./collections.md) tab of the _Library_ module. This attaches that tag to the dragged images (no file is moved).
 
-- If the _tag dictionary_ list is in _list_ view mode (rather than _tree_ view mode), then typing the first few characters of a tag will bring up a list of suggestions. You can then scroll down with the arrow keys and press Enter to select one of the suggestions. Pressing Enter a second time will attach it to the selected images. You can also edit the name of the tag before pressing Enter -- in this case the tag will be created if it doesn't already exist in the database.
+For a tag that is attached to only _some_ of the targeted images (shown with a count lower than the number of images), right-click it in the attached list and choose **attach tag to all** to extend it to every targeted image.
 
-- Typing some partial text into the text entry box allows you filters the set of tags shown in the _tag dictionary_ window to those whose name or synonym matches the entered text. Press Enter to attach a tag with the entered name to the selected images. If that tag name does not yet exist in the database, it will be created before being attached.
+When hovering over images in the lighttable you can check which tags are attached either in the attached list here, or in the _tags_ attribute of the [image information](./image-information.md) module.
 
-- The pop-up menu entry “copy to entry” can be used to copy a selected tag to the text entry box. You can then edit this name and press Enter to create a new tag with that name, making it easy to create multiple tags with similar names.
+### Detach a tag
 
-### Create tag
+From the **attached tags** list in the sidebar:
+
+- click the **trash icon** on the tag's row to detach that one tag;
+- **double-click** a tag to detach it;
+- select one or several tags and press the **Delete** / Backspace key;
+- select one or several tags, **right-click**, and choose **detach tag(s)** to detach them all in one go;
+- **right-click anywhere** in the list (even on empty space) and choose **detach all tags** to remove every tag from the targeted images at once.
+
+### Create a tag
 
 There are several ways to create a new tag:
 
-- _Import a text file_. You can import one or more text files in the Lightroom tagging file format. You can also export your tags, edit the exported file, then re-import it. The import function updates existing tags and creates new tags as required. If you change the name of a tag in an imported file, it will be treated as a new tag.
+- _Type into the sidebar entry and press Enter (or ✓)._ The tag is created and attached to the target images in one step.
+- _Use “create tag…”_ in the dictionary's right-click menu (manage tags window). The tag is created under the selected node (hierarchical) or at the root, and is **not** attached to any image.
+- _Use “set as a tag”_ in the right-click menu to turn a free node (e.g. “`places|England`”) into a real tag, so that it gets implicitly attached to all images carrying its sub-tags (e.g. “`places|England|London`”).
+- _Import a Lightroom keyword text file_ (the _import…_ button). Existing tags are updated, new ones are created. You can export your tags, edit the file, and re-import it.
+- _Import already-tagged images._ Tags found in imported images are added to the dictionary (no opportunity to rename or re-categorize them during import).
 
-- _Import already-tagged images_. This method does not offer any flexibility to change tag names or categories during the import process.
+A number of tags are generated automatically by Ansel for certain actions — for example “`Ansel|exported`” and “`Ansel|styles|your_style`” identify images that have been exported or had a style applied.
 
-- _Use the “create tag” sub-menu_. A tag can be created manually, under an existing one (hierarchical) or at the root level.
+### Edit / rename a tag
 
-- _Use the “set as a tag“ sub-menu_. You can set a free node (e.g. ”`places|England`”) as a tag so that it gets implicitly attached to all images tagged with its sub-tags (e.g. ”`places|England|London`”).
+In the manage tags window, right-click a single tag:
 
-- _Type into the text box and press the “new” button_ or the Enter key. Hierarchical tags are created using the pipe symbol “`|`” to separate nodes. Note that the entered tag is also attached to any selected images.
+edit…
+: Change the tag's name (you cannot move it to another node here — the pipe “`|`” is not allowed in this field), and set its _private_ and _category_ flags and its _synonyms_. The command is aborted if the new name already exists. These attributes are recorded in the `XMP-dc Subject` and `XMP-lr Hierarchical Subject` metadata. Which tags end up in exports is controlled in the [export](./export.md) module.
 
-A number of tags are automatically generated by Ansel when certain actions are undertaken. For example, the tags “`Ansel|exported`” and “`Ansel|styles|your_style`” can be used to identify images that have been exported and had styles applied, respectively.
+: - A tag set as “private” is, by default, not exported.
+: - A tag set as “category” is not exported in `XMP-dc Subject`, but is exported in `XMP-lr Hierarchical Subject` (which holds the organization of your tags).
+: - “synonyms” enrich the tag information and mainly assist search engines — e.g. “juvenile”, “kid” or “youth” as synonyms of “child”. They can also be used to translate tag names to other languages.
 
-### Edit/rename tag
+change path…
+: Available in _tree_ view only. Lets you change the full path of a node, including the nodes it belongs to (use the pipe “`|`” to specify the hierarchy). The dialog shows how many tagged images would be impacted. This is powerful but can significantly rewrite your images' metadata, so use it carefully. The operation is aborted if it would conflict with an existing tag.
 
-The _tag dictionary_ can be maintained via the "edit..." and "change path..." items in the right-click pop-up menu.
+A quick way to reorganize the structure is **drag and drop** of nodes in the _tree_ view: drag any node and drop it onto another node to make it (and its descendants) a child of the target. Dragging over a node opens it automatically (drag over the node's selection indicator to avoid opening it). Drop a node onto the top of the window to move it to the root level. Conflicting moves are aborted.
 
-The "edit..." operation allows you to change the name of a tag, though you cannot change which node it belongs to (you cannot use the pipe "|" symbol in the tag name field). The command is aborted if you try to enter a tag name that already exists. You can set the _private_ and _category_ flags and define _synonyms_ for the tag (see below). These attributes are recorded in the `XMP-dc Subject` and `XMP-lr Hierarchical Subject` metadata entries, respectively. You can control which tags are included in exports by changing settings in the [export](./export.md) module.
+The “copy to entry” right-click item copies the selected tag into the search box, so you can tweak its name and use _new_ to create a similar tag.
 
-- A tag set as “private” is, by default, not exported.
+### Delete a tag
 
-- A tag set as “category” is not exported in `XMP-dc Subject`. However it is exported in `XMP-lr Hierarchical Subject` as this XMP metadata holds the organization of your tags.
+Deleting a tag removes it from **all** images (selected or not) and from the database. Because this can impact many images, a confirmation dialog shows how many images are affected. **Take this warning seriously — there is no undo** (short of restoring your database and/or XMP sidecars from a backup).
 
-- “synonyms” enrich the tag information and are mainly used to assist search engines. For example “juvenile”, “kid” or “youth” can be set as synonyms of “child”. Synonyms can also be used to translate tag names to other languages.
+In the manage tags window:
 
-The "change path..." operation is only available in the _tree_ view mode, and it shows the number of tagged images which would be impacted by a change to the name of this node. The change path window lets the user change the full path of the node, including the nodes to which it belongs (nodes can be specified using the pipe "`|`" symbol). This operation is powerful, but please take care as it can have a significant impact on the metadata of your images. The operation is aborted if the requested change causes a conflict with an existing tag.
+- right-click a tag and choose **delete tag**;
+- select **several** tags (Ctrl-click / Shift-click) and right-click → **delete tags** to remove them all after a single confirmation;
+- right-click a branch node and choose **delete node** to delete that node together with all its child tags.
 
-A quick way to organize the tag structure is to drag and drop the nodes. In the _tree_ view mode, you can drag any node and drop it on top of any other node. The first node and its descendants, if any, become descendants of the second node. Dragging over a node automatically opens that node (to avoid opening a node, drag over the node selection indicator instead). To place a node at the root level, drag it onto the top of the tagging window. If the requested change causes a conflict with an existing tag, the operation is aborted.
-
-### Attach tag
-
-There are a number of ways to attach an existing tag to a group of selected images:
-
-- Click on a tag in the _tag dictionary_ window to select it, then click on the _attach_ button.
-- Right-click on a tag in the _tag dictionary_ window, to show a pop-up menu, then select the “attach tag” menu item.
-- Double-click on a tag in the _tag dictionary_ window.
-- Right-click on a tag shown in the _attached tags_ view to show a pop-up menu. If some of the selected images do not currently have that tag, the "attach tag to all" menu item can be used to attach that tag to all the selected images.
-- Type into the text box and press the "new" button or the Enter key. This will create the tag if it doesn't already exist, and attach it to the selected images.
-- Press Ctrl+T to open a small text box at the bottom of the central view of the lighttable. Type in the name of a tag and press Enter. The tag will be created if it doesn't exist, and attached to all the selected images.
-- Drag an image or group of images and drop it onto the desired tag.
-
-When hovering over the images in the ligthtable you can check which tags are attached to the image, either by looking at the _attached tags_ window in the _tagging_ module, or in the _tags_ attribute in the [image information](./image-information.md) module.
-
-### Detach tag
-
-There are several ways to remove a tag from a group of selected images:
-
-- Click on a tag in the _attached tag_ window of the _tagging_ module to select the tag, then click on the _detach_ button.
-- Double-click on a tag in the _attached tag_ window.
-- Right-click on a tag in the _attached tag_ window, to show a pop-up menu, and select "detach".
-
-### Delete tag
-
-It is possible to completely remove a tag from all images (whether selected or not) and delete the tag from the database. Because this could impact a large number of images, a warning will be displayed indicating how many images currently have this tag attached. Take this warning seriously as there is no way to undo this action (except by restoring your database and/or XMP sidecar files from a backup). A tag in _tag dictionary_ window can be deleted in the following ways:
-
-- Right-click on a tag in the _tag dictionary_ window, to show a pop-up menu, and choose "delete tag".
-- Right-click on a branch node in the _tag dictionary_ window, to show a pop-up menu, and choose "delete node" to delete the selected node together with any child nodes.
+Tags can also be deleted (and renamed) from the [collections](./collections.md) tab of the _Library_ module.
 
 ### Import / export
 
-The “import” button allows you to choose a text file (which must comply with the Lightroom tag text file format) and import its content. If a tag in the imported file already exists, its properties will be updated, otherwise a new tag will be created.
-
-The “export” button exports your entire tag dictionary into a text file of your choice (Lightroom tag text file format).
+The **import…** button reads a text file in the Lightroom tag file format: existing tags are updated, missing ones are created. The **export…** button writes the entire dictionary to such a file. Round-tripping (export, edit, re-import) is a convenient way to bulk-edit tags.
 
 ### Keyboard
 
-The following keys can be used within the tagging module:
-
-- The Tab key can be used to navigate between the _attached tags_ view, the text entry box, and the _tag dictionary_ view. Pressing Tab from within the text entry field selects the first matching tag in the _tag dictionary_ view (if any).
-
-- The Down arrow key is equivalent to the Tab key, when pressed while inside the text entry field.
-
-- Shift+Tab does the same as the Tab key but navigates in the opposite direction. Pressing Shift+Tab from within the text entry field selects the first user tag in the _attached tags_ view (if any).
-
-- The Enter key can be used within the _tag dictionary_ view to attach the selected tag, keeping focus on the attached tag (similar to when a tag is attached using the mouse).
-
-- Pressing Shift+Enter from within the _tag dictionary_ view returns focus to the text entry field.
-
-- The Delete / BackSpace keys can be used within the _attached tags_ view to detach the selected tag.
+- In the sidebar entry, **Enter** attaches the typed/picked tag (creating it if needed). **Shift+Tab** moves focus to the first user tag in the attached list.
+- In the attached list, **Tab** returns focus to the entry; **Delete** / **Backspace** detaches the selected tag(s).
+- In the manage tags window, the dictionary's **Left/Right** arrows collapse/expand the selected node in _tree_ view; **Tab** / **Shift+Tab** move focus to/from the search box.
 
 ### Navigation
 
-To see the images bearing a particular tag in the _tag dictionary_ window, right-click on the tag name and choose "go to tag collection" in the resulting pop-up menu. This opens a collection in the [collections](./collections.md) module showing all images containing this tag. You can also select other tags in the _collections_ module by double-clicking on the collection for the other tag.
+To see the images carrying a particular tag, right-click it in the manage tags window and choose **go to tag collection**. This opens a [collection](./collections.md) showing all images with that tag.
 
-To return to the collection that was selected before opening a tag collection select the "go back to work" item from the pop-up menu. This will allow you to return to the original collection, as long ans you haven't selected any other collections in the meantime.
-
-## Preferences
-
-The "preferences…" option in the presets menu brings up a dialog where you can tweak the behavior of the tag suggestions list. The tag suggestions list comprises two parts, with the best-matched tags on one side and the most-recently-attached tags on the other. The following options are available:
-
-suggested tags level of confidence
-: Level of confidence used to include the tag in the suggestions list (default 50):
-: - 0: display all associated tags,
-: - 99: match tags with a 99% confidence level,
-: - 100: this is essentially an unreachable level of confidence and so returns no matching tags. Use 100% to disable the best-matched tag suggestion list (faster).
-
-number of recently attached tags
-: Number of recently attached tags to include in the suggestions list (default 20). A value of "-1" can be used to disable the the most-recently-attached suggestions list.
+Choose **go back to work** from the same menu to return to the collection you had open before, as long as you have not selected another collection in the meantime.
