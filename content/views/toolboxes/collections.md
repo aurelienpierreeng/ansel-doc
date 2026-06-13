@@ -156,7 +156,14 @@ include sub-folders
 : When the _Tree_ view is active, this checkbox controls whether clicking a folder also includes the images contained in all of its sub-folders. Internally it appends a `*` wildcard to the folder path; if you type a path ending in `*` or `%` by hand, the checkbox updates itself to stay in sync.
 
 sort by / sort direction
-: Choose whether film rolls are ordered by **name** (folder path) or by **id** (roughly the order in which they were first imported), and toggle ascending/descending order. These controls mirror the corresponding [preferences](#preferences).
+: Choose whether film rolls are ordered by **name** (folder path) or by **id** (roughly the order in which they were first imported), and toggle ascending/descending order. These controls only affect the flat **List** view (the **Tree** is always sorted by path), so they are hidden in the Tree view.
+
+folder levels
+: The number of folder levels shown in film-roll names, counting from the right. Only meaningful (and only shown) in the **List** view.
+
+You can **drag images** from the lighttable/filmstrip and drop them onto a folder or film-roll row to physically move the files into that folder (see [drag and drop](#drag-and-drop)).
+
+Right-click a folder or film-roll row for management actions: **remove from library…**, **relocate…**, or **pre-render thumbnails** (fills the on-disk thumbnail cache for every image in the selected folders, as a background task).
 
 ## The Collections tab
 
@@ -166,7 +173,12 @@ This tab lists your tags as a hierarchical tree. Click a tag to filter the colle
 - **shift+click** to include only the exact tag, not its sub-tags (no suffix);
 - **ctrl+click** to include only the sub-tags, excluding the tag itself (appends the `|%` suffix).
 
-Right-click a tag to **rename** it or to **delete** one or more selected tags (deleting a tag also detaches it from every image).
+You can **drag images** from the lighttable/filmstrip and drop them onto a tag row to attach that tag to them (see [drag and drop](#drag-and-drop)).
+
+Right-click a tag to **rename** it, to **delete** one or more selected tags (deleting a tag also detaches it from every image), or to **pre-render thumbnails** of the tagged images.
+
+no 'uncategorized' group
+: When enabled, tags that have no children are not grouped under a synthetic "uncategorized" entry.
 
 ## The Queries tab
 
@@ -276,6 +288,34 @@ id IN (SELECT imgid FROM main.tagged_images ti
        WHERE t.name LIKE 'landscape%')
 ```
 
+## Drag and drop
+
+You can drag images out of the lighttable or the filmstrip and drop them directly onto a row of the Library module. What happens depends on the kind of row you drop them on — a folder/film-roll row, or a tag row:
+
+```mermaid
+flowchart TD
+    A["Select one or more images<br/>in the lighttable or filmstrip"] --> B["Drag them onto a row<br/>of the Library module"]
+    B --> C{"Row under the cursor?"}
+    C -->|"folder / film roll<br/>(Folders tab)"| D{"Confirm the move?"}
+    C -->|"tag<br/>(Collections tab)"| G["Attach the tag to the images<br/>(no file is moved)"]
+    D -->|yes| E["Files are physically moved on disk<br/>into that folder, and the<br/>library database is updated"]
+    D -->|no| F["Nothing happens"]
+    E --> H["The film-roll/tag tree and the<br/>lighttable refresh automatically"]
+    G --> H
+```
+
+The drop always applies to the single row located **under the mouse cursor** when you release the button, regardless of which rows happen to be selected.
+
+drop on a folder or film roll
+: The dragged images are **physically moved on disk** into that folder (a film roll is created for the folder if one does not exist yet), and the library is updated to match. Because this touches the file system, you are asked to confirm first. Any duplicates of the moved images follow along.
+
+drop on a tag
+: The tag of the row is **attached** to the dragged images. This only edits metadata — no file is moved on disk — and the change is written to the images' XMP sidecars.
+
+{{< note >}}
+Drag and drop only works from Ansel's own lighttable/filmstrip (it relies on the internal image identifiers). Dragging image files from an external file manager into this module is not supported — use the regular import for that.
+{{< /note >}}
+
 ## Updating the folder path of moved images
 
 While it is best not to touch imported files behind Ansel's back, this module can help you recover when you have moved or renamed image folders after importing them. The process is:
@@ -288,22 +328,20 @@ This updates Ansel's library database only; it does not move any files on disk.
 
 ## Returning to a previous collection
 
-Your recent collections are kept in a history list. You can revert to a previously-defined collection from the **collections** entry in the top menu bar, which lists the most recent collections you have used. The number of remembered collections is configurable (see [preferences](#preferences)).
+Your recent collections are kept in a history list. You can revert to a previously-defined collection from the **collections** entry in the top menu bar, which lists the most recent collections you have used. The number of remembered collections is configurable from the preferences of that recent-collections list (**number of collections to be stored**).
 
-## Preferences
+## Settings
 
-The "preferences…" option in the presets menu allows you to adjust the behavior of the Library module:
+The Library module no longer hides its settings behind a separate "preferences…" popup: every setting now lives directly in the relevant tab.
 
 do not set the 'uncategorized' entry for tags
-: Do not create an 'uncategorized' category for tags that have no children (default off).
+: The **no 'uncategorized' group** checkbox on the _Collections_ tab. When enabled, tags that have no children are not grouped under a synthetic "uncategorized" entry (default off).
 
 number of folder levels to show in lists
-: The number of folder levels to show in film-roll names, counting from the right (default 1).
+: The **folder levels** spinner on the _Folders_ tab (List view). The number of folder levels to show in film-roll names, counting from the right (default 1).
 
 sort film rolls by
-: Sort film rolls by either the "folder" (path) or the "id" (roughly equivalent to the date the film rolls were first imported) (default "id"). This mirrors the _sort by_ control on the _Folders_ tab.
+: The **sort by** selector on the _Folders_ tab (List view). Sort film rolls by either their **name** (folder path) or **id** (roughly equivalent to the date the film rolls were first imported) (default "id").
 
 sort collection descending
-: Sort the following collections in descending order: "film roll" (when sorted by folder), "folder", and date/time attributes (e.g. date taken) (default on). This mirrors the sort-direction toggle on the _Folders_ tab.
-
-A separate preference, reachable from the recent-collections list, controls the **number of collections to be stored** in the history.
+: The **sort direction** toggle on the _Folders_ tab. Sorts "film roll" (when sorted by folder), "folder", and date/time attributes (e.g. date taken) in descending order (default on).
