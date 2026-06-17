@@ -1,102 +1,93 @@
 ---
 title: Views
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-16
 draft: false
 weight: 20
 author: "people"
 ---
 
-The functionality in Ansel is separated into six different views:
+Ansel separates its functionality into several _views_, each dedicated to one task:
 
 [Lighttable](lighttable/_index.md)
-: Manage images and collections. It is the main view and can be accessed from anywhere in the software by hitting the <kbd>Escape</kbd> key.
+: Manage, sort, cull and tag your image collection. This is the default view, loaded at startup, and you can return to it from anywhere by pressing <kbd>Escape</kbd>.
 
 [Darkroom](darkroom/_index.md)
-: Develop a single image. It can be accessed from the lighttable by double-click on a thumbnail or by hitting the <kbd>Enter</kbd> key when a picture is selected.
+: Develop a single image. Open it from the lighttable by double-clicking a thumbnail, or by selecting a picture and pressing <kbd>Enter</kbd>.
 
 [Map](map/_index.md)
-: Show geo-tagged images on a map and manually geo-tag new images. It is an optional view hidden by default, it can be enabled in the [preferences](../preferences-settings/other-views.md).
+: Show geo-tagged images on a map and geo-tag new images manually. Hidden by default; enable it in the [preferences](../preferences-settings/other-views.md).
 
 [Print](print/_index.md)
-: Send images to a printer for self-made prints. It is an optional view hidden by default, it can be enabled in the [preferences](../preferences-settings/other-views.md). This view is not available on Windows since it relies on [CUPS](http://www.cups.org/).
+: Send images to a printer. Hidden by default; enable it in the [preferences](../preferences-settings/other-views.md). Not available on Windows, as it relies on [CUPS](http://www.cups.org/).
 
 [Slideshow](slideshow/_index.md)
-: Display images as a slideshow, processing them on-the-fly. It is an optional view hidden by default, it can be enabled in the [preferences](../preferences-settings/other-views.md).
+: Display images full-screen as a slideshow, processing them on the fly. Hidden by default; enable it in the [preferences](../preferences-settings/other-views.md).
 
-You can switch between views by clicking the view name at the top of the right-hand panel (the currently active view is highlighted).
+You switch views from the **Ateliers** menu in the top menu bar, which lists every available view and the shortcut to reach it (the current view is greyed out). The darkroom is the exception: because it needs an image to open, you enter it from a lighttable or filmstrip thumbnail, not from the menu.
 
-## Main content
+## Window layout
 
-### Panels
+Every view shares the same window frame: a central work area surrounded by panels. The visibility and size of each panel are remembered independently for each view.
 
-The layout of all Ansel views is similar and consists of a center area with panels at the edges:
+### Header (top panel)
 
-Left panel
-: Can be shown and hidden with <kbd>Shift + Ctrl + L</kbd> :
-    * __In lighttable__ : Shows the file import, export and collections.
-    * __In darkroom__ : Shows various peripheral informations on the currently edited picture.
+The header runs along the top of the window and is common to all views. From left to right it contains:
 
-Right panel
-: Can be shown and hidden with <kbd>Shift + Ctrl + R</kbd> :
-    * __In lighttable__ : Contains metadata editors and bulk processing tools.
-    * __In darkroom__ : Contains the settings to edit the picture.
+The [global menu](global-menu.md) bar
+: **File · Edit · Selection · Image · Styles · Run · Display · Ateliers · Help**. This menu bar is the backbone of the interface: it gathers application-wide commands, image operations, view switching and help. Each menu has a keyboard mnemonic — press <kbd>Alt</kbd> to underline the mnemonic letters, then press one to open that menu, and navigate the open menus with the arrow keys.
 
-Top panel (header)
-: Contains information about the current Ansel version and allows you to switch between views. Also used by some modules to show additional hints and messages. Can be hidden and shown by pressing <kbd>Ctrl + H</kbd>
+_Search actions…_ button
+: Opens the [global action search](../getting-started/keyboard.md#vimkey-like-global-action-search) (default <kbd>Ctrl</kbd>+<kbd>P</kbd>), from which any action can be found and triggered by name, whether or not it has a shortcut.
 
-Top toolbar
-: Provides buttons to access the global settings and shortcuts. Can be hidden and shown by pressing <kbd>Shift + Ctrl + T</kbd>.
+Message area
+: On the right, a text area where some modules display hints and status messages.
 
-Bottom panel
-: Provides buttons to access to view-specific settings and shortcuts. Can be hidden and shown by pressing <kbd>Shift + Ctrl + B</kbd>
+Window buttons
+: A _Go back to lighttable_ button (home icon), plus the minimize and close buttons for the window.
 
-[Filmstrip](./toolboxes/filmstrip.md)
-: An optional panel that can be enabled at the bottom of the screen in Darkroom, Maps and Print view to display a filmstrip of images in the current collection. Can be shown and hidden by pressing <kbd>Shift + Ctrl + F</kbd>.
-
-### Resizing
-
-The left, right and filmstrip panels can be resized by clicking and dragging their inner borders. Some shortcuts allow to globally change the layout :
-
- - <kbd>TAB</kbd> temporarily expands the centre view to fill the whole window (hide all panels). Press again to return to the previous view.
- - <kbd>F11</kbd> toggles fullscreen mode
+The header can be shown and hidden with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>T</kbd>.
 
 {{< note >}}
-The size and visibility of the panels are stored independently for each view.
-{{</ note >}}
+Coming from Darktable: the view switcher, the preferences button, the context-help button and the shortcut-mapping button that used to live in the top toolbar are now reached from the global menu (_Ateliers_, _Edit → Preferences…_, _Help → Open contextual help_ and _Edit → Keyboard shortcuts…_ respectively). The separate top toolbar no longer exists.
+{{< /note >}}
 
+### Second top row
 
-### Top toolbar
+Directly below the header, the lighttable shows a single toolbar that combines the [collection filters](toolboxes/collections.md) (rating, color label, edited status, text search, _restrict to selection_) on one side and the [display options](lighttable/_index.md) (columns, zoom, overlays) on the other. Other views leave this row empty.
 
-The top panel is common to all Ansel views and provides access to a number of common functions.
+### Left panel
 
-Filter / sort
-: Choose how to filter and sort the images. Criteria can be altered in the [collection filters](./toolboxes/collections.md) module.
+Shown and hidden with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd>. It hosts the view's [toolboxes](toolboxes/_index.md):
 
-Sort order
-: Switch the sort order (ascending / descending).
+- **In lighttable**: the _Library_ collection builder and import/export tools.
+- **In darkroom**: peripheral tools about the picture being edited — navigation, snapshots, color pickers, image information, mask manager, etc.
 
-Context-sensitive help
-: Click this icon and then click on a control element to be directed to the appropriate online help page.
+### Right panel
 
-Shortcut mapping
-: Click this icon to enter the [visual shortcut mapping](../preferences-settings/shortcuts.md#visual-shortcut-mapping) mode to create keyboard/mouse shortcuts.
+Shown and hidden with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>R</kbd>. Used only in the **darkroom** (and map/print), where it holds the image-processing modules and the scopes. The lighttable has no right panel.
 
-Preferences
-: View and amend Ansel's [preferences & settings](../preferences-settings/_index.md).
+### Bottom panel (filmstrip)
 
-### Bottom toolbar
+Shown and hidden with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>F</kbd>. Available in the **darkroom**, **map** and **print** views, where it displays the [filmstrip](toolboxes/filmstrip.md): a horizontal strip of the current collection's thumbnails for quick navigation without leaving the view. The lighttable has no filmstrip, since it already shows the whole collection.
 
-Grouping
-: Expand or collapse [grouped images](./lighttable/digital-asset-management/grouping.md).
+### Resizing and global layout
 
-Thumbnail overlays
-: Define what information is overlaid on to thumbnails in the lighttable/filmstrip.
+- Drag the inner border of the left, right or filmstrip panels to resize them.
+- <kbd>Shift</kbd>+<kbd>F11</kbd> toggles the visibility of all panels at once, expanding the work area to fill the window.
+- <kbd>F11</kbd> toggles fullscreen mode.
 
+All these layout commands are also available from the **Display** menu, under _Panels_ and _Full screen_.
 
-### Filmstrip
+## Display menu
 
-The filmstrip, when enabled, is shown at the bottom of the screen and displays the images from the current [collection](../getting-started/library.md) (set in the lighttable view). You can navigate the filmstrip by scrolling with the mouse wheel or with
+The **Display** menu collects the view-level display settings that previously lived in scattered toolbars:
 
-The filmstrip allows you to interact with images while you are not in the lighttable view. For example, while developing an image in darkroom mode, you can switch to another image to by clicking its thumbnail in the filmstrip. You can copy & paste the history stack using keyboard shortcuts (<kbd>Ctrl + C</kbd> and <kbd>Ctrl + V</kbd>).
+- _Panels_ — individually toggle the top, left, right and filmstrip panels.
+- _Thumbnail overlays_ — choose whether thumbnail badges (rating, labels, metadata) are _always hidden_, _shown on hover_ or _always shown_.
+- _Thumbnail source_ — choose how thumbnails are generated: _always process the RAW_, _use the embedded JPEG if the image is unedited_, or _always use the embedded JPEG_. This can be changed at runtime.
+- _Collapse grouped images_ and _Show group borders_ — control how [grouped images](lighttable/digital-asset-management/grouping.md) are displayed.
+- _Monitor color profile_ / _Monitor color intent_ — the display [color management](../color-management/_index.md) settings.
+- _Full screen_.
 
-See the [filmstrip](./toolboxes/filmstrip.md) module documentation for more information.
+See the [global menu reference](global-menu.md) for the complete list of menus and their entries.

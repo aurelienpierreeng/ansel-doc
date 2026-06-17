@@ -1,86 +1,63 @@
 ---
 title: Mask manager
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: mask-manager
-applicable-version: 3.2.1
 tags:
 view: darkroom
 ---
 
-Manage all masks and shapes for the current image.
+The mask manager — labelled **Masking & Blending** in the darkroom [left panel](../darkroom/darkroom-view-layout.md#left-panel) — creates, renames, edits, groups and deletes the drawn shapes used by masks. It shares its shape system with the per-module [masking & blending](../darkroom/masking-and-blending/_index.md) controls: a shape drawn here is the same object a module can use as a mask, and vice-versa.
 
-![mask manager](mask-manager.jpg)
+The top row of buttons creates new shapes — the same brush, circle, ellipse, path and gradient tools as the [drawn mask](../darkroom/masking-and-blending/masks/drawn.md) interface. Below them is a list of every mask and shape defined for the current image.
 
-This module can be used to create, rename, edit and delete shapes. You can add shapes to and remove shapes from a mask, group shapes together, and combine them using set operators.
-
-The top line of the mask manager panel contains buttons that can be used to create new shapes. These are the same as in the [drawn mask](../darkroom/masking-and-blending/masks/drawn.md) interface of in processing modules.
-
-The panel below these buttons displays a list of all masks and individual shapes defined for the current image.
-
-Groups of shapes forming a mask are displayed with a headline in the form "grp <module_name>" indicating the module in which they are used, with the component shapes listed below. The list of mask groups is followed by a list of all individual shapes that have been generated in the context of the current image. If a shape is in use by any masks this is indicated by a symbol to the right of the shape name.
+Groups of shapes that form a module's mask appear with a heading of the form `grp <module name>`, with their component shapes nested below. After the groups comes a list of every individual shape that exists for the image. A symbol to the right of a shape name indicates that it is in use by a mask.
 
 ## Shapes
 
-By default each shape receives an automatically generated name, consisting of the shape type ("brush", "circle", "ellipse", "path", "gradient") and an automatically-incremented integer. You can rename a shape by double-clicking on its current name. It is a good habit to give shapes and groups meaningful names, especially if you intend to reuse the same selection in different masks.
+Each new shape gets an automatic name made of its type (_brush_, _circle_, _ellipse_, _path_, _gradient_) and an incrementing number. Double-click a name to rename it — meaningful names help a lot when reusing a selection across masks.
 
-Click on a shape name to show the selected shape on the image canvas with all of its controls, allowing you to edit the properties of just that shape. This is especially useful where there are many overlapping shapes within a mask, making it difficult to select the right one with the mouse. Similarly if you select a shape on-screen from within the mask controls of a processing module, that shape will be selected in the mask manager.
+- **Click** a shape name to display just that shape and its controls on the canvas. This is the reliable way to grab one shape among many overlapping ones. Selecting a shape on the canvas from within a module's mask controls likewise highlights it here.
+- **Right-click** a shape name for options to remove it, or to remove all shapes not currently in use.
 
-Right-click on a shape name to show a menu containing options to remove the current shape or to remove all shapes not currently in use.
+{{< note >}}
+Ansel keeps every shape ever defined for an image until you explicitly remove it. If you export with the development history, all defined shapes are written to the XMP. A very long list of shapes can exceed the size limit of some file formats and make XMP writing fail on export — prune unused shapes when in doubt.
+{{< /note >}}
 
----
+## Masks and groups
 
-**Note:** Ansel retains all shapes that have ever been defined for the current image unless you explicitly remove them. If you choose to include develop history when exporting an image, all defined shapes will be exported with the image. Beware that if the list of shapes is very long the space required to store those shapes might exceed the size limit of certain file formats. This can cause XMP tag creation to fail during export.
+A mask is a group of shapes applied in list order (top to bottom), each combining with the running mask through one of four [set operators](#set-operators). Because order matters, shapes can be moved up and down the list.
 
----
-
-## Masks & groups
-
-Masks are constructed by adding a group of shapes to the image in the order that they are listed (from top to bottom). Each shape adjusts the existing mask using one of four logical set operators (see below). Because order is important it is also possible to move shapes up and down the list.
-
-Click on the name of a group in the mask manager to expand that group, showing a list of its constituent shapes. The corresponding shapes will be shown on the center image. Similarly if you choose to show a mask from within a processing module, the corresponding group will be expanded within the mask manager.
-
-Right-click on the group name to display a menu with options to add new or existing shapes to the group, or to clean up unused shapes. You can also choose to delete the group.
-
-Right-click on any of the constituent shapes to control how that shape contributes to the overall group mask:
+- **Click** a group name to expand it and show its shapes (also drawn on the image). Showing a mask from within a module expands the matching group here.
+- **Right-click** a group name to add new or existing shapes, clean up unused shapes, or delete the group.
+- **Right-click** a shape inside a group to control its contribution:
 
 remove from group
-: Remove the shape from the current mask.
+: Remove the shape from the mask.
 
 use inverted shape
-: Invert the polarity of the selected shape.
+: Invert the polarity of the shape.
 
 mode
-: Choose how this shape will interact with the preceding mask by selecting one of the four set operators defined below.
+: Choose the [set operator](#set-operators) combining this shape with the preceding mask.
 
-move up/down
-: Move the shape up or down the list.
+move up / down
+: Reorder the shape within the group.
 
-You can also create your own groups using existing shapes by selecting the shapes you wish to group, right-clicking them and choosing "group the forms".
+To build your own group, select the shapes, right-click and choose **group the forms**.
 
 ## Set operators
 
-Set operators are used to define how grouped shapes are combined. In the following examples we will use a mask that combines a gradient followed by a path, to demonstrate the effect of each set operator when applied to the path shape.
-
-![gradient](mask-manager_ex1.jpg)
-
-As a convention we say that a pixel is “selected” in a mask or shape if it has an opacity greater than zero.
+Set operators define how each shape combines with the mask built from the shapes above it. Taking a pixel to be "selected" when its opacity is greater than zero:
 
 union
-: This is the default set operator and is depicted by the ![union-icon](masks_union.jpg) symbol to the left of the shape name. The shape adds to the existing mask in such a way that the resulting mask contains the pixels that are *either* selected in the existing mask *or* in the added shape. In overlapping areas the maximum value is taken:
-
-: ![union](mask-manager_ex3.jpg)
+: The default. The result selects pixels that are in the existing mask **or** in the added shape (the maximum value is taken where they overlap).
 
 intersection
-: This set operator is depicted by the ![intersection-icon](masks_intersection.jpg) symbol to the left of the shape name. The shape adds to the existing mask in such a way that the resulting mask contains only pixels that are selected in *both* the existing mask *and* the added shape. In overlapping areas the minimum value is used. In the given example we use this operator to “imprint” the path with a gradient:
-
-: ![intersection](mask-manager_ex4.jpg)
+: The result selects only pixels that are in **both** the existing mask **and** the added shape (the minimum value is taken where they overlap) — useful to "imprint" one shape onto another.
 
 difference
-: This set operator is depicted by the ![difference-icon](masks_difference.jpg) symbol to the left of the shape name. In the non-overlapping area the existing mask is unchanged. In the resulting mask, pixels are selected only if they are selected in the existing mask but *not* in the added shape. This set operator can be chosen if you want to “cut out” a region from within an existing selection:
-
-: ![difference](mask-manager_ex5.jpg)
+: The result keeps pixels that are in the existing mask but **not** in the added shape — useful to cut a region out of a selection.
 
 exclusion
-: This set operator is depicted by the ![exclusion-icon](masks_exclusion.jpg) symbol to the left of the shape name. The resulting mask selects all pixels that are selected in the existing mask and not in the added shape or vice versa. This is equivalent to an “exclusive or”:
-
-: ![exclusion](mask-manager_ex6.jpg)
+: The result selects pixels that are in the existing mask **or** the added shape but **not both** (an exclusive or).

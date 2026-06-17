@@ -1,21 +1,20 @@
 ---
 title: Soft proof
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2023-10-12
+lastmod: 2026-06-17
 id: soft-proof
-applicable-version: 3.6
 tags:
 view: darkroom
 ---
 
 View your image rendered using a selected color profile.
 
-Click the ![soft proof](soft-proof-icon.jpg) icon to activate the soft proof display mode on your image. This allows you to preview your image rendered using a printer profile to see how colors will end up on the final print. You can also activate soft proof with the keyboard shortcut Ctrl+S. A message “soft proof" on the bottom left of your image tells you that you are in soft proof display mode.
+Click the soft-proof icon in the [bottom toolbar](../darkroom/darkroom-view-layout.md#bottom-panel) to activate soft-proof display mode. This lets you preview your image rendered through a printer profile, to see how colors will end up on the final print. A “soft proof” message at the bottom-left of the image confirms you are in soft-proof mode.
 
-Right-click on the icon to open a dialog with the following configuration parameters. For each of these parameters, the list of available profiles is read from `$DARKTABLE/share/darktable/color/out` and `$HOME/.config/darktable/color/out` (where `$DARKTABLE` represents darktable's installation directory and `$HOME` your home directory).
+Right-click on the icon to open a dialog with the following configuration parameters. For each of these parameters, the list of available profiles is read from `$ANSEL/share/ansel/color/out` and `$HOME/.config/ansel/color/out` (where `$ANSEL` represents Ansel's installation directory and `$HOME` your home directory).
 
 display profile
-: Set the color profile for the display. The option “system display profile” is the preferred setting when working with a calibrated display. The profile is taken either from your system's color manager or from your X display server. The method darktable uses to detect your system display profile can be changed in [preferences > miscellaneous](../../preferences-settings/miscellaneous.md). For more information see the [display profile](../../color-management/display-profile.md) section.
+: Set the color profile for the display. The option “system display profile” is the preferred setting when working with a calibrated display. The profile is taken either from your system's color manager or from your X display server. The method Ansel uses to detect your system display profile can be changed in [preferences > miscellaneous](../../preferences-settings/miscellaneous.md). For more information see the [display profile](../../color-management/display-profile.md) section.
 
 
 intent

@@ -1,6 +1,7 @@
 ---
 title: Combining drawn & parametric masks
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: drawn-and-parametric
 weight: 40
 draft: false

@@ -1,26 +1,24 @@
 ---
 title: Snapshots
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: snapshots
-applicable-version: 3.6
 tags:
 view: darkroom
 ---
 
-Store development snapshots and compare with the current edit.
+Store snapshots of the center image and compare them against the current edit.
 
-A snapshot is a stored bitmap of the center image in the darkroom view. Snapshots can be taken at any point in the development process and later overlaid onto the current center view. This allows you to undertake a side by side comparison (by default left=snapshot, right=active edit) while you are tuning parameters of a module. This can also be combined with the [history stack](./history-stack.md) module to compare a snapshot against different stages of development.
+A snapshot is a frozen bitmap of the darkroom center view, taken at any point during editing and later overlaid onto the current view for a side-by-side comparison while you tune a module. It can also be combined with the [history of changes](history-stack.md) to compare a snapshot against different stages of development.
 
-To take a snapshot, click on the _take snapshot_ button. Above the button you will see a list of the snapshots that have been taken for this editing session. The name of each snapshot reflects the name of the module selected in the history stack and its position at the time the snapshot was taken.
+## Taking and comparing snapshots
 
-Click on the name of a snapshot to show it -- this enables a split view between the saved snapshot image and the current state of the processed image. You can control the position of the split-line by clicking and dragging the line with your mouse. If you hover over the split-line with your mouse, a small rotation icon will appear on the center of the line. Click this icon to change between vertical and horizontal split view -- the positions of the snapshot and current image will be rotated anti-clockwise allowing you to choose whether they appear to the top, bottom, left or right of the screen.
+Click **take snapshot** to capture the current center view. Each snapshot is listed above the button; its name reflects the module selected in the history and its position at the time it was taken.
 
-At all times, an arrow containing the letter "S" is displayed to indicate which side of the image is the snapshot and which is the current edit.
+Click a snapshot's name to display it: this splits the view between the saved snapshot and the current image. Drag the split line to move it. Hover the split line to reveal a small rotation icon at its center; click it to rotate the split orientation (the snapshot and current image cycle between top/bottom/left/right). An arrow marked **S** always indicates which side is the snapshot.
 
-Click on the name of the snapshot again to disable the overlay and return to your editing session. Click the module's reset button to remove all existing snapshots.
+Click the snapshot name again to hide the overlay and return to editing. Use the module's reset button to clear all snapshots.
 
----
-
-**Note:** Snapshots are retained for the duration of your darktable session. This means that you can also use snapshots to compare with a duplicate edit of the same image. Just navigate to that image and enable the snapshot view as normal.
-
----
+{{< note >}}
+Snapshots are kept for the duration of your Ansel session, so you can also use them to compare against a duplicate edit of the same image: take a snapshot, switch to the other version, and enable the snapshot overlay as usual.
+{{< /note >}}

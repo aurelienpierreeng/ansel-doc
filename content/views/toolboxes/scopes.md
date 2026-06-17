@@ -1,92 +1,66 @@
 ---
 title: Scopes
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2023-10-12
+lastmod: 2026-06-17
 id: scopes
-applicable-version: 3.8
 tags:
-view: lighttable, tethering
+view: darkroom
 ---
 
-This module provides various graphical depictions of the developed image's light levels or [chromaticity](../../color-management/color-dimensions#definitions).
+The scopes module, at the top of the darkroom [left panel](../darkroom/darkroom-view-layout.md#left-panel), provides graphical depictions of the image's tones and [chromaticity](../../color-management/color-dimensions.md#definitions). It also hosts the [global color picker](global-color-picker.md).
 
-![scopes module](scopes.jpg)
+Drag the bottom edge of the module to resize the scope vertically.
 
-Move the mouse over the panel to show buttons that allow you to adjust the display. The leftmost button cycles the mode between histogram, waveform scope, RGB parade scope, and vectorscope. The remaining buttons control how the plot for the current scope is drawn.
+{{< note >}}
+For performance, the scopes are computed from the lower-resolution preview pipeline (the same image shown in the [navigation](navigation.md) module), not from the full-resolution center image. Fine detail may therefore not be represented exactly.
+{{< /note >}}
 
-When the mouse is over the scopes panel, scroll with the mouse while holding down the Ctrl key to change the height of the panel. You can show/hide the scopes module entirely with a keyboard shortcut (default Ctrl+Shift+H).
+## Choosing what to show
 
-You can move the scopes module to the left-hand panel in [preferences > miscellaneous > position of the scopes module](../../preferences-settings/miscellaneous.md).
+Two comboboxes at the top of the module control the scope:
 
-For performance reasons, scopes are calculated from the image preview (the image displayed in the [navigation](./navigation.md) module) rather than the higher quality image displayed in the center view. The preview is calculated at a lower resolution and may use shortcuts to bypass more time-consuming image processing steps. Hence the display may not accurately represent fine detail in the image, and may deviate in other ways from the final developed image.
+Show data from
+: Where in the [pixelpipe](../darkroom/pixelpipe/_index.md) the data is sampled, which determines the color space of the plot:
+    - **Raw image** — straight off the sensor, before color processing.
+    - **Output color profile** — at the [output color profile](../darkroom/modules/output-color-profile.md) stage.
+    - **Final display** — after the full pipeline, in display space (what you actually see).
 
-## Histogram
+Display
+: The type of scope to draw: 
+    - **Histogram**, 
+    - **Waveform (horizontal)**, 
+    - **Waveform (vertical)**, 
+    - **Parade (horizontal)**, 
+    - **Parade (vertical)**,
+    - **Vectorscope**.
 
-![histogram](histogram.jpg)
+## Scope types
 
-The histogram shows the distribution of pixels by lightness for each color channel.
+### Histogram
 
-In its default state, data for all three RGB color channels is displayed. The x-axis runs from 0% to 100% lightness for each channel. The y-axis gives the count of pixels with the given lightness.
+The histogram shows the distribution of pixels by lightness for each RGB channel. The x-axis runs from 0 % to 100 % lightness; the y-axis is the pixel count at each lightness. Values piling up against the left or right edge indicate shadow or highlight clipping.
 
-Click the second-to-leftmost button on the panel to toggle between a logarithmic and a linear rendering of the y-axis data.
+### Waveform
 
-The three rightmost colored buttons toggle the display of the red, green and blue color channels.
+The waveform shows the same tonal distribution as the histogram, but in a spatial context.
 
-## Waveform
+In the **horizontal** waveform, the x-axis matches the x-axis of the image: the left of the plot corresponds to the left of the image. The y-axis is lightness — the top is 100 % (values above may clip), the middle 50 %, the bottom 0 %. The brightness of each point is the number of pixels at that image position and lightness.
 
-![waveform scope (horizontal)](waveform.jpg)
+The **vertical** waveform maps the image's y-axis instead, which can be more readable for portrait-format images.
 
-The waveform scope shows similar data to the histogram, but allows you to view that data in a spatial context.
+### Parade
 
-In the "standard" horizontal waveform, the x-axis of the waveform represents the x-axis of the image -- the right-hand side of the waveform represents the right-hand side of the image and the left-hand side of the waveform represents the left-hand side of the image.
+The parade shows the same data as the waveform, but with the red, green and blue channels drawn side by side (again in a horizontal or vertical variant). This is useful for matching the intensities of the three channels and for judging color casts.
 
-The y-axis represents the distribution of pixels by lightness for each channel -- the dotted line at the top represents 100% lightness (values above this may be clipped), the dotted line in the middle represents 50% lightness, and the bottom of the waveform represents 0% lightness.
+### Vectorscope
 
-The brightness of each point on the waveform represents the number of pixels at the given position (the x-axis) having the given lightness (the y-axis).
+The vectorscope shows [chromaticity](https://en.wikipedia.org/wiki/Chromaticity) independently of lightness and of spatial position. Distance from the center is chroma; angle is hue. Regions are tinted with the color they represent, and more frequently used colors appear brighter, so the plot conveys color "volume". A hue ring marks the maximum chroma of each hue for the current profile, with the RGB primaries and secondaries marked by circles.
 
-![waveform scope (vertical)](waveform-vertical.jpg)
+The vectorscope is computed in the [CIELUV](https://en.wikipedia.org/wiki/CIELUV) color space.
 
-Clicking the second-to-leftmost button on the panel toggles between a horizontal and a vertical waveform. In the vertical waveform, the y-axis of the plot represents the y-axis of the image, and the x-axis represents the distribution of pixels by lightness. The vertical waveform can be useful for portrait-format images, or simply to understand an image in a different way.
+#### Caveats
 
-As with the histogram, you can selectively display each of the red, green, and blue channels, by clicking on the appropriate buttons.
-
-See [Of Histograms and Waveforms](https://www.darktable.org/2013/12/of-histograms-and-waveforms/) for more on Ansel's waveform scope.
-
-## Rgb parade
-
-![rgb parade (horizontal)](parade.jpg)
-
-The RGB parade scope shows the same data as the waveform, but with the red, green, and blue channels presented side-by-side.
-
-![rgb parade (vertical)](parade-vertical.jpg)
-
-As with the waveform, clicking the second-to-leftmost button on the panel toggles between horizontal and vertical processing of the image data.
-
-The RGB parade can be useful for matching the intensities of the red, green, and blue channels. It can also help with understanding the differences between and individual qualities of each channel.
-
-## Vectorscope
-
-![vectorscope](vectorscope.jpg)
-
-The vectorscope shows [chromaticity](https://en.wikipedia.org/wiki/Chromaticity) without regard to either lightness or spatial data.
-
-The distance from the center of the graph represents chroma and the angle represents hue. Areas of the graph are colored depending on the chromaticity of the color to which they correspond in the image. The graph represents color "volume" by rendering the more frequently used colors in the image in lighter tones.
-
-The vectorscope chroma scale can either be linear or logarithmic. Click the second-to-leftmost button on the panel to toggle this.
-
-The vectorscope can describe the image in the [CIELUV](https://en.wikipedia.org/wiki/CIELUV), [JzAzBz](https://doi.org/10.1364/OE.25.015131) or [RYB](https://en.wikipedia.org/wiki/RYB_color_model) colorspace. Clicking the third-to-leftmost button on the panel cycles between u\*v\*, AzBz and RYB. The CIELUV graph will be faster to calculate, and is a well-known standard. JzAzBz may be more perceptually accurate.
-
-The graph includes a "hue ring" representing the maximum chroma of each hue (in bounded RGB) of the current histogram profile. The RGB primaries/secondaries are marked by circles.
-
-### Caveats
-
-- The hue ring is not a [gamut check](../toolboxes/gamut.md), as a color can be within the hue ring, yet out of gamut due to its darkness/lightness.
-- When adjusting an image based upon a color checker, faster and more accurate results will come from using [calibrate with a color checker](../darkroom/modules/color-calibration#extracting-settings-using-a-color-checker) in the _color calibration_ module.
-- The vectorscope does not have a "skin tone line", which is a flawed generalization rather than a universal standard.
-- The vectorscope represents a colorimetric encoding of an image, which inevitably diverges from a viewer's perception of the image.
-
-## Histogram profile
-
-Image data is converted to the _histogram profile_ before the scope data is calculated. You can choose this profile by right-clicking on the [soft-proof](../toolboxes/soft-proof.md) or [gamut check](../toolboxes/gamut.md) icons in the bottom panel and then selecting the profile of interest. When soft-proof or gamut check is enabled, the scope is shown in the soft proof profile.
-
-As the scopes module runs at the end of the preview pixelpipe, it receives data in display color space. If you are using a display color space that is not "well behaved" (this is common for a device profile), then colors that are outside of the gamut of the display profile may be clipped or distorted.
+- The hue ring is not a [gamut check](gamut.md): a color can sit inside the ring yet still be out of gamut because of its lightness.
+- There is deliberately no "skin tone line", which is a flawed generalization rather than a standard.
+- The vectorscope is a colorimetric encoding, which inevitably diverges from a viewer's perception.
+- To neutralize a color cast from a reference chart, the color-checker workflow in [color calibration](../darkroom/modules/color-calibration.md#extracting-settings-using-a-color-checker) is faster and more accurate.

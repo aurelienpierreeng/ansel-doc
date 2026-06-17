@@ -1,6 +1,7 @@
 ---
 title: Parametric masks
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: parametric
 weight: 30
 draft: false
@@ -30,8 +31,6 @@ Two sliders can be shown for each associated data channel: one that works on the
 
 The _boost factor_ slider allows the range of values targeted by the parametric mask sliders to be extended. It may be used in scene referred editing, where luminance values may extend beyond 100%, to target highlights. This slider is only available for channels where it is meaningful.
 
-![input and output sliders](input-output-sliders.jpg)
-
 ### Inspecting data channels & masks
 
 Press the letter C while hovering over a channel's input/output slider to view the input/output image data for that color channel. The center image changes to display that color channel either in gray-scale values or in false colors depending on the setting in [preferences > darkroom > display of individual color channels](../../../../preferences-settings/darkroom.md).
@@ -42,7 +41,7 @@ When the mouse pointer leaves the slider the image returns to normal after a sho
 
 ### Linear / log mode
 
-Press the letter A while hovering over the a slider to change its display to 'log' mode. This provides more fine control in the shadows. Press A again to toggle back to 'linear' mode.
+Press the letter A while hovering over a slider to change its display to 'log' mode. This provides more fine control in the shadows. Press A again to toggle back to 'linear' mode.
 
 ## Channel input/output sliders
 
@@ -53,22 +52,10 @@ The filled triangles, or inside markers, indicate the closed (mostly narrower) e
 A polarity (+/-) button to the right of each the slider switches between "range select" and "range de-select" modes, with visual confirmation provided by exchanging the upper and lower triangle markers. These two types of trapezoidal functions are represented graphically in the following images.
 
 **range select**
-
-![range select slider](blendif_2a.jpg)
-
-![range select graph](blendif_2b.jpg)
+: With the inside (filled) markers at the extremes, the whole range of values is selected (an "all at 100%" mask). Moving the markers inwards gradually excludes more of the image, keeping only the remaining narrow range. The outside (open) markers set how soft the transition is at each edge.
 
 **range deselect**
-
-![range deselect slider](blendif_3a.jpg)
-
-![range deselect graph](blendif_3b.jpg)
-
-In their default state all markers are at their extreme positions.
-
-In this state a range select function selects the whole range of values giving an “all at 100%” mask. Starting from there one can move the sliders inwards to gradually exclude more and more parts of the image except for the remaining narrow range.
-
-Conversely a range de-select function (enabled by toggling the polarity) by default deselects the whole range of values, giving an “all-zero” mask as a starting point. Moving the sliders inwards gradually includes more and more parts of the image except for the remaining narrow range.
+: Toggling the polarity swaps the markers: by default the whole range is deselected (an "all-zero" mask), and moving the markers inwards gradually includes more of the image around the remaining range.
 
 ## Color pickers
 

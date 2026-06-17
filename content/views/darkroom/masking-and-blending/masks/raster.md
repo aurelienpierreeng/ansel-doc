@@ -1,6 +1,7 @@
 ---
 title: Raster masks
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: raster
 weight: 60
 draft: false
@@ -10,7 +11,13 @@ As described in the previous sections, the final output of a module's mask (the 
 
 As with any mask, if the opacity value for a pixel in a raster mask is zero the module's input passed through the module unchanged. If the opacity is 1.0 the module has its full effect. For each value between 0 and 1.0 the module's effect is applied proportionally at that location.
 
-You can choose a raster mask from the combobox. Raster masks can be identified by the name of the module against which they were originally generated.
+Enable the raster mask from its tab and choose a source from the combobox. Raster masks can be identified by the name of the module against which they were originally generated.
+
+## Combining with drawn and parametric masks
+
+In Ansel, a raster mask is no longer a mutually-exclusive mode: it can be **combined with a [drawn](drawn.md) and/or [parametric](parametric.md) mask on top**. When you do, the raster mask serves as the **base**, and the drawn and parametric masks refine it — their opacities are multiplied together pixel-by-pixel. Because masks combine multiplicatively, adding a drawn or parametric mask on top of a raster mask can only restrict its area further, never extend it.
+
+This lets you reuse a mask computed elsewhere in the pipeline (for instance a luminance or edge mask produced by another module) and then trim it to a region with a drawn shape, or restrict it by color with a parametric mask, without having to rebuild it from scratch. In Darktable, selecting a raster mask disabled the other mask types entirely.
 
 ---
 

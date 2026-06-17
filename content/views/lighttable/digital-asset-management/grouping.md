@@ -1,6 +1,7 @@
 ---
 title: Image grouping
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: grouping
 draft: false
 weight: 50
@@ -9,21 +10,21 @@ author: "people"
 
 Grouping images helps to improve the structure and clarity of your image collection when displayed in the lighttable view.
 
-You can combine images into a group by selecting them and using the global menu _Image_ 🡒 _Group images_, or by pressing Ctrl+G. Likewise, you can remove selected images from a group by clicking the “ungroup” button, or pressing Ctrl+Shift+G.
+You can combine images into a group by selecting them and using the global menu _Image_ 🡒 _Group images_ (<kbd>Ctrl</kbd>+<kbd>G</kbd>). Likewise, remove selected images from a group with _Image_ 🡒 _Ungroup images_ (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>G</kbd>).
 
 Duplicated images are automatically grouped together. Similarly, if you import multiple images from the same directory, having the same base name, but different extensions (eg. `IMG_1234.CR2` and `IMG_1234.JPG`), those images automatically form a group.
 
-Images that are members of a group are denoted by a group icon ![top panel_grouping icon](top-panel_grouping.jpg).
+Images that are members of a group are denoted by a group icon on their thumbnail.
 
-This icon also appears as a button, in the top panel of the lighttable view, that can be used to toggle grouping on and off. If grouping is off, all images are displayed as individual thumbnails. If grouping is on, the images in a group are represented by a single thumbnail image (the group leader). If you press the group icon in the group leader's thumbnail, that group is expanded (click a second time to collapse). If you then expand another group, the first group collapses.
+Whether groups are collapsed is controlled from the global menu _Display_ 🡒 _Collapse grouped images_. When this is off, all images are displayed as individual thumbnails. When it is on, each group is represented by a single thumbnail (the group leader). Press the group icon on a group leader's thumbnail to expand that group (press again to collapse); expanding another group collapses the first.
 
-An expanded group in the filemanager mode of lighttable view is indicated by an orange frame that appears as soon as your mouse pointer hovers over one of the images. This frame surrounds all images in the group.
+A group can be outlined by a frame around its member thumbnails, enabled with _Display_ 🡒 _Show group borders_ (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>). The border becomes more visible when you hover over one of the group's images.
 
 You can define which image is considered to be the group leader by clicking on the group icon of the desired image while that group is expanded. The group icon is shown only if grouping mode is enabled, so to change the group leader, you need to first enable grouping, expand the appropriate group and finally click the group icon of the desired "group leader" image. The current group leader is shown in a tooltip when you hover over the group icon of an image.
 
 If you collapse an image group and then enter darkroom mode (e.g. by double-clicking on the thumbnail), the group leader image will be opened for developing.
 
-Image groups are also a convenient way to protect an existing history stack against unintentional changes. If you have just finalized an image and want to protect its current version, simply select the image, click “duplicate” in the selected images panel, and make sure that grouping is switched on and that the group is collapsed. Now, whenever you open the image group again in the darkroom, only the group leader will be altered. The underlying duplicate will remain unchanged.
+Image groups are also a convenient way to protect an existing history stack against unintentional changes. If you have just finalized an image and want to protect its current version, select the image, duplicate it with _Edit_ 🡒 _Duplicate existing history_ (<kbd>Ctrl</kbd>+<kbd>D</kbd>), and make sure grouping is collapsed. Now, whenever you open the image group again in the darkroom, only the group leader will be altered, and the underlying duplicate remains unchanged.
 
 ---
 

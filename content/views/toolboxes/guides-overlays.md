@@ -1,8 +1,8 @@
 ---
 title: Guides & overlays
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: guides-overlays
-applicable-version: 4.0
 tags:
 view: darkroom
 ---
@@ -13,15 +13,13 @@ Other darkroom functionality also draws colored overlay lines on the image (for 
 
 ## Global guides
 
- Left-click the ![guides-overlays-icon](guides-overlays-icon.jpg) icon in the bottom bar to globally display guide overlays. The overlays will remain switched on until you click the button a second time to switch them off.
+ Left-click the guides-and-overlays icon in the [bottom toolbar](../darkroom/darkroom-view-layout.md#bottom-panel) to globally display guide overlays. The overlays remain on until you click the button a second time to switch them off.
 
  Right-click the icon to show the settings dialog (see below).
 
 ## Local guides
 
-A more common use is to switch the guides on only when a specific module is activated. The following control is added by default to all modules that crop/distort the image (currently [crop](../darkroom/modules/crop.md), [orientation](../darkroom/modules/orientation.md), [framing](../darkroom/modules/framing.md), [liquify](../darkroom/modules/liquify.md), [lens correction](../darkroom/modules/lens-correction.md), [retouch](../darkroom/modules/retouch.md) and [rotate and perspective](../darkroom/modules/rotate-perspective.md)):
-
-![local-controls](local-controls.jpg)
+A more common use is to switch the guides on only when a specific module is activated. A guides control is added by default to all modules that crop or distort the image (currently [crop](../darkroom/modules/crop.md), [orientation](../darkroom/modules/orientation.md), [framing](../darkroom/modules/framing.md), [liquify](../darkroom/modules/liquify.md), [lens correction](../darkroom/modules/lens-correction.md), [retouch](../darkroom/modules/retouch.md) and [rotate and perspective](../darkroom/modules/rotate-perspective.md)).
 
 Tick the box to show guide overlays whenever the module is active. Click the icon on the right to show the settings dialog (see below).
 

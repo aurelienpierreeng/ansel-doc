@@ -1,11 +1,10 @@
 ---
 title: Tagging
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2026-06-13
+lastmod: 2026-06-17
 id: tagging
-applicable-version: 4.0
 tags:
-view: lighttable, [darkroom], tethering, map
+view: lighttable, map
 ---
 
 Attach tags to images, and manage the tag dictionary.
@@ -99,7 +98,7 @@ From top to bottom, the sidebar contains:
 
 - **Tag entry** — a text box where you type or pick a tag to attach. As you type, an autocompletion list of matching existing tags appears below it; pick one with the arrow keys/mouse, or keep typing a brand-new name. A small clear (✕) icon inside the box empties it.
 
-  ![check-icon](check-icon.jpg) **validate** — the check-mark button to the right of the entry attaches the typed (or picked) tag to the target images, exactly like pressing Enter. It is there so that, after choosing a tag from the autocompletion list with the mouse, you do not have to reach for the keyboard.
+  **validate** — the check-mark button to the right of the entry attaches the typed (or picked) tag to the target images, exactly like pressing Enter. It is there so that, after choosing a tag from the autocompletion list with the mouse, you do not have to reach for the keyboard.
 
 - **Attached tags list** — the tags attached to the image(s) currently under your mouse cursor (if hovering over an image in the lighttable), or to the currently selected image(s) (if not hovering). Each user tag row carries a trash icon on its right that detaches that single tag in one click. Automatically generated Ansel system tags (with names starting “`Ansel|`”) are shown for information only — only when _show system tags_ is enabled — and have no trash icon. The number in brackets next to a tag indicates how many of the targeted images carry it. You can adjust the height of this list by holding Ctrl and scrolling with your mouse wheel. The list is rendered as a flat list or a hierarchical tree according to the _view_ control above (see [Detach tag](#detach-a-tag) for the right-click actions).
 
@@ -124,10 +123,10 @@ Open this window from the module's gear (preset) menu → **manage tags…**. It
   export...
   : Export the whole dictionary to a Lightroom keyword file.
 
-  ![plus-icon](plus-icon.jpg) suggestions
+  suggestions
   : Show a list of suggested keywords based on the keywords already associated with the selected images (see the _suggestion settings_ below). CAUTION: this view queries the database so it might be slow.
 
-  ![list-tree-icon](list-tree-icon.jpg) list/tree
+  list / tree
   : Toggle the dictionary between the flat _list_ view and the hierarchical _tree_ view.
 
 - the **suggestion settings** (formerly a separate _preferences_ dialog), applied immediately:

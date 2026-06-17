@@ -1,24 +1,20 @@
 ---
-title: Display metadata
+title: EXIF and IPTC
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: image-information
-applicable-version: 3.6
 tags:
-view: lighttable, darkroom, tethering, map, slideshow, print
+view: lighttable, darkroom, map, slideshow, print
 ---
 
-Display information embedded within an image's Exif data as well as a number of additional data fields defined by Ansel.
+Display the EXIF and IPTC information (metadata) embedded in an image, plus a number of extra fields Ansel maintains (filmroll, version, local copy, etc.). The module is available in most views, in the left panel.
 
-When hovering with the mouse over image thumbnails, the displayed data is automatically updated to show information about the image currently under the mouse cursor.
+As you **hover** thumbnails in the lighttable or filmstrip, the panel updates to show the image under the cursor. This is a read-only preview and changes nothing.
 
-When several images are selected and the focus is not on a single image, the module only displays information that is the same for all images. If any fields differ between the images, the text "_\<various values\>_" is displayed instead.
+When several images are selected and no single image is highlighted, the module shows only the fields that are identical across the selection; differing fields display _\<various values\>_ instead.
 
-While you are in the lighttable view, you can double-click on the _filmroll_ field for a given image to show all images in that image's film roll.
+In the lighttable, **double-click** the _filmroll_ field to jump to a collection of all images in that film roll.
 
-## Preferences
+## Choosing the displayed fields
 
-The “preferences…” option in the presets menu brings up a dialog with a list of all fields that are available for display.
-
-The _visible_ checkbox allows you to choose which fields to display. You can also drag and drop one row at a time to change the display order.
-
-These preferences can be saved as module presets. Press the module's reset button to make all available information visible and displayed in its default order.
+Open _preferences…_ from the module's presets menu to get the list of all available fields. The **visible** checkbox toggles each field on or off, and you can drag a row to reorder the display. These choices can be saved as module presets. The module's reset button restores all fields, in their default order.

@@ -1,8 +1,8 @@
 ---
 title: Raw overexposed warning
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: raw-overexposed
-applicable-version: 3.2.1
 tags:
 view: darkroom
 ---
@@ -11,7 +11,7 @@ Highlight areas of the image where color channels of the raw input file are clip
 
 Clipped color channels imply an overexposed image with loss of information in the affected areas. Some of this information may be recoverable using the [_highlight reconstruction_](../darkroom/modules/highlight-reconstruction.md), [_color reconstruction_](../darkroom/modules/color-reconstruction.md) or [_filmic rgb_](../darkroom/modules/filmic-rgb.md) modules.
 
-Click on the ![raw overexposed](raw-overexposed-icon.jpg) icon to show/hide the warning overlay. Right-click on the icon to open a dialog containing the following configuration parameters.
+Click the raw-overexposed icon in the [bottom toolbar](../darkroom/darkroom-view-layout.md#bottom-panel) to show/hide the warning overlay. Right-click the icon to open a dialog containing the following configuration parameters.
 
 mode
 : Choose how to mark clipped areas:

@@ -1,6 +1,7 @@
 ---
 title: Drawn masks
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: drawn
 weight: 20
 draft: false
@@ -15,8 +16,6 @@ The controls required to create and alter drawn masks may be enabled by selectin
 ## Creating shapes
 
 Choose a shape by clicking on the appropriate shape icon (from left to right: circle, ellipse, path, brush, gradient).
-
-![shape icons](shape-icons.jpg)
 
 This will take you into the creation mode for that shape. Once you have finished drawing your shape you will automatically be taken into edit mode.
 
@@ -34,7 +33,7 @@ By default, scrolling your mouse up increases the value of the relevant shape pa
 
 ## Editing shapes
 
-Click on the 'show and edit mask elements' icon ![show-and-edit-masks-icon](shape-edit.jpg) are blocked. This is particularly useful to avoid costly mistakes when editing path and brush shapes.
+Click the 'show and edit mask elements' icon to display the current shapes on the canvas and edit them. <kbd>Ctrl</kbd>+click the same icon to enter _restricted_ edit mode, in which the overall position and size of a shape are locked and only its individual nodes and segments can be adjusted. This is particularly useful to avoid costly mistakes when editing path and brush shapes.
 
 Click and drag a shape to move it around the image canvas. Clicking on a shape will also select that shape in the mask manager.
 

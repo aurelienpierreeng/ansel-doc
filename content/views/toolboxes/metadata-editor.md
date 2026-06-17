@@ -1,10 +1,10 @@
 ---
 title: Metadata editor
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: metadata-editor
-applicable-version: 4.0
 tags:
-view: lighttable, tethering
+view: lighttable
 ---
 
 Edit the metadata of selected images.
@@ -22,7 +22,9 @@ metadata entry fields
 : A separate field is displayed for each metadata item. Hold Ctrl while scrolling with your mouse to increase the height of a field. Press Ctrl+Enter to insert a new line. Double-click on a field's label to delete the contents of that field.
 
 apply
-: Apply new settings from the metadata entry fields to the selected images.
+: Write the metadata from the entry fields to the selected images.
+
+The _rights_ field offers a set of ready-made Creative Commons licenses (CC BY, CC BY-SA, CC BY-ND, CC BY-NC, CC BY-NC-SA, CC BY-NC-ND) and _all rights reserved_ as presets, so you can fill it in without typing the full text.
 
 ## Keyboard
 

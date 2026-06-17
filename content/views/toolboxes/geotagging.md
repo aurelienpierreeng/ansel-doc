@@ -1,15 +1,15 @@
 ---
 title: Geotagging
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: geotagging
-applicable-version: 4.0
 tags:
-view: lighttable
+view: lighttable, map
 ---
 
-Import and apply GPX track data to a selection of images.
+Import and apply GPX track data to a selection of images, and correct image date/time.
 
-This module is common to the [lighttable](../lighttable/_index.md) and [map](../map/_index.md) views. The map view provides an enhanced mode that allows you to preview the position of the images along the GPS tracks while adjusting the images' date/time offset and time zone.
+This module — labelled **Datetime and GPS** in the panel — is common to the [lighttable](../lighttable/_index.md) and [map](../map/_index.md) views. The map view provides an enhanced mode that allows you to preview the position of the images along the GPS tracks while adjusting the images' date/time offset and time zone.
 
 ## Workflow overview
 

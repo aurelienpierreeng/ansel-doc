@@ -1,9 +1,11 @@
 ---
 title: Blend modes
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: blend-modes
 weight: 20
 draft: false
+latex: true
 ---
 
 Blend modes define how the input and output of a module are combined (blended) together before the module's final output is passed to the next module in the pixelpipe.
@@ -12,15 +14,15 @@ Classic blending modes, designed for display-referred RGB (constrained to 0-100%
 
 The final output of a module is computed 'per-pixel' as follows:
 
-```
+```math
 final_output = (1.0 - opacity) * module_input + opacity * blended_output
 ```
 
 where the `blended_output` is a combination of the input and output images, depending on the blend mode (below), and the `opacity` is defined 'per-pixel' by a combination of the mask and global opacity parameter. An opacity of 0% outputs an image that is identical to the input image of the module.
 
-The "reverse" button ![blend-reverse](blend-reverse.jpg) effectively reverses the roles of the input and output images in the 'per-pixel' computation:
+The _reverse_ button (the polarity toggle next to the blend-mode selector) effectively reverses the roles of the input and output images in the 'per-pixel' computation:
 
-```
+```math
 final_output = (1.0 - opacity) * module_output + opacity * blended_input
 ```
 

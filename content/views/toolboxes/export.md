@@ -1,16 +1,15 @@
 ---
 title: Export
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2023-10-12
+lastmod: 2026-06-17
 id: export-selected
-applicable-version: 3.6
 tags:
 view: lighttable
 ---
 
-Export selected images.
+Export the selected images to final files.
 
-Files can be exported to a file on disk, email, various online storage locations, a web album, or a book template.
+Open the export panel from the [global menu](../global-menu.md), _File → Export…_ (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>E</kbd>). Files can be exported to a file on disk, email, various online storage locations, a web album, or a book template.
 
 ## Module controls
 
@@ -86,7 +85,7 @@ profile
 : The output color profile. Select “image settings” if you want the settings in the [_output color profile_](../darkroom/modules/output-color-profile.md) module of the individual images to be respected.
 
 intent
-: This option lets you define the intent -- the way in which Ansel will handle out-of-gamut colors. See [rendering intent](../../color-management/rendering-intent) for a more detailed description of the available options.
+: This option lets you define the intent -- the way in which Ansel will handle out-of-gamut colors. See [rendering intent](../../color-management/rendering-intent.md) for a more detailed description of the available options.
 
 style
 : Choose a [style](./styles.md) which Ansel will combine with the existing history stack to generate the output image. These history items are only added temporarily -- the original history stack is not overwritten. You can use this feature to add processing steps and parameters that you want to be applied specifically to images before export. For example you may define a style that adds a stronger level of sharpening when you produce scaled-down JPEG files for the internet or add a certain level of exposure compensation to all of your output images.
@@ -105,11 +104,7 @@ export
 
 ## Metadata preferences
 
-The “preferences…” option in the presets menu brings up a dialog where you can configure what metadata to include in exported files:
-
-![metadata config](metadata-config.jpg)
-
-The parameters entered into this dialog are saved along with other export parameters to user presets and the last entered values are retained when Ansel is closed.
+The “preferences…” option in the presets menu brings up a dialog where you can configure what metadata to include in exported files. The parameters entered into this dialog are saved along with other export parameters to user presets, and the last entered values are retained when Ansel is closed.
 
 ### General settings
 
@@ -146,7 +141,7 @@ develop history
 
 The right-hand-side of this dialog allows you to define formulas to populate image metadata. The formulas defined here have priority over the settings in the left-hand-side of the dialog. The first column identifies the entry to be edited. The second column allows you to define how to calculate the value for that metadata entry using a formula.
 
-See the [variables](../..//variables.md) section for details of the variables you can use in your metadata formula. Press Enter to validate the formula. Leave the formula empty to prevent a given metadata entry from being exported (`Exif.GPSInfo.GPSVersionID` in the above example).
+See the [variables](../../variables.md) section for details of the variables you can use in your metadata formula. Press Enter to validate the formula. Leave the formula empty to prevent a given metadata entry from being exported (for example `Exif.GPSInfo.GPSVersionID`).
 
 Use the “--” icon to remove a metadata entry from the list and the “+” icon to add a new one from a predefined list of available metadata tags.
 

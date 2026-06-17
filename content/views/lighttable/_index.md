@@ -1,7 +1,7 @@
 ---
 title: Lighttable
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2023-10-11
+lastmod: 2026-06-16
 id: lighttable-and-dam
 draft: false
 weight: 20
@@ -65,6 +65,70 @@ To summarize, the _library_ toolbox helps filtering images based on their intrin
 
 Those are, of course, examples that you can adapt to your needs and workflow. Note that you can also use text tags to keep track of all that, but they will not show over thumbnails in the lighttable.
 
+## Selecting and acting on images
+
+The lighttable enforces a simple, safe interaction model:
+
+- Any action that **writes** metadata (ratings, color labels, tags, history…) applies only to **explicitly selected** images.
+- A selection is only ever made by a "hard" interaction: a **mouse click** or a **keyboard keystroke**. Hovering an image never changes a selection and never writes anything — hover events are strictly read-only.
+
+This rules out the accidental metadata changes that a hover-driven workflow can cause. Selection is also _What You See Is What You Get_: you can only select images that are actually visible on screen.
+
+Selecting with the mouse:
+
+- **Click** a thumbnail to select it alone.
+- **<kbd>Ctrl</kbd>+click** to add/remove a thumbnail to/from the selection.
+- **<kbd>Shift</kbd>+click** to extend the selection up to the clicked thumbnail (range selection).
+
+Selecting with the keyboard is described in [shortcuts and keyboard interaction](../../getting-started/keyboard.md#thumbtable); batch helpers (select all, invert, clear) live in the [_Selection_ menu](../global-menu.md#selection).
+
+Double-click a thumbnail, or select it and press <kbd>Enter</kbd>, to open it in the [darkroom](../darkroom/_index.md).
+
 ## Lighttable display
 
-Display options
+The display options live in the [second top row](../_index.md#second-top-row), next to the collection filters, and in the **Display** menu. They control the size of the grid, in-image magnification and the overlays drawn over thumbnails.
+
+### Columns (grid size)
+
+The **Columns** spinner sets how many images are shown per row (1 to 12). Fewer columns means larger thumbnails. You can also:
+
+- **<kbd>Ctrl</kbd>+scroll** over the grid to change the number of columns,
+- press <kbd>Ctrl</kbd>+<kbd>+</kbd> / <kbd>Ctrl</kbd>+<kbd>-</kbd> to add/remove a column.
+
+{{< note >}}
+Coming from Darktable: "zoom" used to mean both the number of images per row and the magnification inside a thumbnail. These are now two distinct controls — **Columns** for the grid size, **Zoom** for the magnification.
+{{< /note >}}
+
+### Zoom (magnification)
+
+The **Zoom** control magnifies the content _inside_ each thumbnail frame: **Fit**, **50 %**, **100 %** or **200 %**. When you zoom in:
+
+- **drag** inside a thumbnail to pan it,
+- **<kbd>Shift</kbd>+drag** to pan across **all** zoomed thumbnails at once,
+- Ansel automatically pans each image toward the barycenter of its details, so faces and subjects roughly line up across pictures with different framing and aspect ratios.
+
+This makes the lighttable a practical tool for comparing sharpness and framing across a series, replacing the dedicated culling/preview views.
+
+### Overlays
+
+Thumbnails can carry overlays: star rating, reject mark, color labels, group borders and metadata. From the **Display → Thumbnail overlays** menu you choose whether overlays are **always hidden** (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd>), **shown on hover**, or **always shown** (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd>).
+
+Two analysis overlays are available from the display toolbar:
+
+Overlay focus zones
+: Shade each thumbnail to indicate the regions in focus.
+
+Overlay focus peaking
+: Highlight the sharpest edges of each thumbnail, to quickly judge focus across a series. See [focus peaking](../toolboxes/focus-peaking.md).
+
+### Thumbnail source and group display
+
+Thumbnail generation and group display are also set from the **Display** menu:
+
+- **Thumbnail source** — process the RAW, use the embedded JPEG only when the image is unedited, or always use the embedded JPEG. Changing this takes effect at runtime.
+- **Collapse grouped images** and **Show group borders** (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) — see [grouping](digital-asset-management/grouping.md).
+
+## Navigation
+
+Scroll the grid with the mouse wheel. From the keyboard, navigate thumbnails with the arrow keys, jump a page with <kbd>Page Up</kbd>/<kbd>Page Down</kbd>, and go to the start/end with <kbd>Home</kbd>/<kbd>End</kbd>. The full keyboard model is documented in [shortcuts and keyboard interaction](../../getting-started/keyboard.md#thumbtable).
+

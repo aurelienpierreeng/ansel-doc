@@ -1,8 +1,8 @@
 ---
 title: Clipping warning
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: clipping
-applicable-version: 3.4
 tags:
 view: darkroom
 ---
@@ -11,7 +11,7 @@ Highlight areas of the image that may exhibit luminance or gamut clipping.
 
 When an image is sent to a display device, each pixel is normally represented as a set of 3 numbers, representing the intensity of the red, green and blue primary colors in the output color space. Because the output color space is usually closely related to hardware with physical limations, there is a maximum permitted value for the [R,G,B] channels, representing the maximum available intensity for that color space. Similarly, there is also a minimum value below which pixel values will be mapped to zero. When we try to convert from a larger color space to the final output color space, any values exceeding this maximum will be clamped to the maximum value, and any values below the minimum will be clamped to zero. This process is called "clipping" and it will lead to lost detail, or "incorrect" colors for any pixels with clipped channels.
 
-Click the ![clipping warning](clipping-icon.jpg) icon to enable the clipping warning.
+Click the clipping-warning icon in the [bottom toolbar](../darkroom/darkroom-view-layout.md#bottom-panel) to enable the clipping warning.
 
 There are two ways in which a pixel might become clipped when represented in the output color space.
 
@@ -19,7 +19,7 @@ There are two ways in which a pixel might become clipped when represented in the
 
 - _gamut clipping_: The output color space defines a set of primary colors that, mixed together in certain ratios, produce the final output color. However, there are only so many colors that can be produced by mixing together a combination of those three primary colors. Highly saturated colors in particular can be difficult to represent, especially for pixels that are very bright or very dark. If there is no set of positive [R,G,B] values that can represent a given color at a given level of brightness, we say that the color is "out of gamut", and we need to settle for another color instead that _can_ be represented by permitted [R,G,B] values within the color space. We can handle gamut clipping by being careful not to over-saturate colors in the highlights and shadows, and possibly by using some color grading/color mapping techniques.
 
-The "clipping warning" module is used to highlight those pixels that cannot be accurately represented in the output color space, either due to luminance or gamut clipping. Prior to darktable 3.4, the clipping highlighted any pixels that exceeded the maximum allowed value on any of the [R,G,B] channels, or that had been completely crushed to black. From darktable 3.4 onwards, the clipping warning indicator has some additional modes to help you to differentiate between luminance and gamut clipping, so that you can make better decisions about how to address any issues.
+The "clipping warning" module highlights those pixels that cannot be accurately represented in the output color space, either due to luminance or gamut clipping. It offers several modes to help you differentiate between luminance and gamut clipping, so that you can make better decisions about how to address any issues.
 
 As the clipping warning runs at the end of the preview pixelpipe, it receives data in display color space then converts it to histogram color space. If you are using a display color space that is not "well behaved" (this is common for a device profile), then colors that are outside of the gamut of the display profile will clip or distort.
 
@@ -36,10 +36,10 @@ Right-click on the clipping icon to show the following options:
 clipping preview mode
 : Choose the type of clipping that you want to highlight:
 
-: - _any RGB channel_: Provides an over-clipping indication if any one of the three [R,G,B] channels exceeds the maximum permitted value for the histogram color space, or an under-clipping indication if the three [R,G,B] channels are too dark and are all forced to black. This was the default mode prior to darktable version 3.4.
+: - _any RGB channel_: Provides an over-clipping indication if any one of the three [R,G,B] channels exceeds the maximum permitted value for the histogram color space, or an under-clipping indication if the three [R,G,B] channels are too dark and are all forced to black.
 : - _luminance only_: Indicates any pixels that are clipped because their luminance falls outside of the range set in the "upper threshold" and "lower threshold" sliders. If this happens, it generally means that tone mapping or exposure settings have been poorly set
 : - _saturation only_: Indicates where over-saturated colors have pushed one or more of the [R,G,B] channels towards a value outside the permitted range of the histogram color space, even though the overall luminance of the pixel may lie within acceptable limits. This means that the pixel's color is impossible to represent in the histogram color space, and can arise from poorly set gamut mapping or saturation settings,
-: - _full gamut_: Shows a combination of the three previous options. This is the default mode from darktable 3.4 onwards, and it gives the most complete indication of potentially problematic pixels.
+: - _full gamut_: Shows a combination of the three previous options. This is the default mode, and it gives the most complete indication of potentially problematic pixels.
 
 color scheme
 : By default, the indicator marks pixels with _red_ where the upper threshold is exceeded (over-clipping) and with _blue_ where the lower threshold is breached (under-clipping). This color scheme can be changed to _black & white_ or _purple & green_ for "over & under" indicators, which may be useful to improve visibility for some images.
