@@ -114,3 +114,9 @@ A toolbar of visual-assessment overlays. From left to right:
 
 [Guides & overlays](../../views/toolboxes/guides-overlays.md)
 : Left-click to toggle the guide overlays; right-click to change the guide settings, including the color of all on-image drawing (masks, crop guides, etc.).
+
+Pipeline node graph
+: Open the [module-order graph](pixelpipe/the-pixelpipe-and-module-order.md#changing-module-order) — a left-to-right view of the pixelpipe where you can inspect and rearrange the order in which modules are applied.
+
+Autoset
+: Run [autoset](_index.md#autoset-auto-developing-an-image) on the chosen modules: each capable module computes its own settings from the image content. Right-click to pick which modules participate.

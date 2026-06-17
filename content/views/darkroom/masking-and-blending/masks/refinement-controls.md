@@ -43,6 +43,8 @@ display mask (mask icon)
 
 ## Example: feathering a drawn mask
 
+![feathering a rough drawn mask onto a subject, step by step](feathering.jpg)
+
 It can be rather tedious to create a drawn mask that precisely covers a particular feature in an image — say, to enhance the color contrast of a foreground subject without affecting the background. Feathering does most of the work:
 
 1. Start from a rough, fuzzy drawn shape that only approximately follows the subject's outline.

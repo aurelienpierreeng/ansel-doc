@@ -40,21 +40,31 @@ Display
 
 The histogram shows the distribution of pixels by lightness for each RGB channel. The x-axis runs from 0 % to 100 % lightness; the y-axis is the pixel count at each lightness. Values piling up against the left or right edge indicate shadow or highlight clipping.
 
+![histogram](histogram.jpg)
+
 ### Waveform
 
 The waveform shows the same tonal distribution as the histogram, but in a spatial context.
 
 In the **horizontal** waveform, the x-axis matches the x-axis of the image: the left of the plot corresponds to the left of the image. The y-axis is lightness — the top is 100 % (values above may clip), the middle 50 %, the bottom 0 %. The brightness of each point is the number of pixels at that image position and lightness.
 
+![horizontal waveform](waveform.jpg)
+
 The **vertical** waveform maps the image's y-axis instead, which can be more readable for portrait-format images.
+
+![vertical waveform](waveform-vertical.jpg)
 
 ### Parade
 
 The parade shows the same data as the waveform, but with the red, green and blue channels drawn side by side (again in a horizontal or vertical variant). This is useful for matching the intensities of the three channels and for judging color casts.
 
+![horizontal RGB parade](parade.jpg)
+
 ### Vectorscope
 
 The vectorscope shows [chromaticity](https://en.wikipedia.org/wiki/Chromaticity) independently of lightness and of spatial position. Distance from the center is chroma; angle is hue. Regions are tinted with the color they represent, and more frequently used colors appear brighter, so the plot conveys color "volume". A hue ring marks the maximum chroma of each hue for the current profile, with the RGB primaries and secondaries marked by circles.
+
+![vectorscope](vectorscope.jpg)
 
 The vectorscope is computed in the [CIELUV](https://en.wikipedia.org/wiki/CIELUV) color space.
 

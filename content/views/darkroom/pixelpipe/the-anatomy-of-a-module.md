@@ -1,9 +1,11 @@
 ---
 title: The anatomy of a processing module
 date: 2022-12-04T02:19:02+01:00
+lastmod: 2026-06-17
 id: the-anatomy-of-a-module
 weight: 10
 draft: false
+latex: true
 ---
 
 The basic element of image processing in Ansel is the [processing module](../modules/_index.md). In order to process a raw image a number of such modules act on the input image in sequence, each performing a different _operation_ on the image data. For those familiar with Adobe Photoshop, the concept of a _processing module_ in Ansel is analogous to that of an _adjustment layer_ in that both make an incremental adjustment to the image, building on top of the adjustments that came before.
@@ -12,7 +14,18 @@ The basic element of image processing in Ansel is the [processing module](../mod
 
 Every processing module acts independently of the others, but all modules perform their processing in a similar manner:
 
-![module anatomy](module-anatomy.jpg)
+```mermaid
+flowchart TD
+    IN([module input]) --> OP[1 · operation]
+    OP --> PO([processed output])
+    IN --> BL[2 · blend operator]
+    PO --> BL
+    BL --> BO([blended output])
+    MK[3 · mask:<br/>per-pixel opacity] --> MIX
+    IN --> MIX[4 · mix by mask]
+    BO --> MIX
+    MIX --> FO([final output → next module])
+```
 
 1. Receive the _module input_ from the last executed module and perform an _operation_ on it to produce the _processed output_. This _operation_ is different for every [module](../modules/_index.md).
 
@@ -24,7 +37,13 @@ Every processing module acts independently of the others, but all modules perfor
 
    If no drawn/parametric mask is used, the output of this step is a mask where every pixel has the same opacity (governed by the global opacity setting). If no opacity is defined (no blending is performed) a global opacity of 1.0 (or 100%) is assumed.
 
-4. Combine the _module input_ and _blended output_ pixel-by-pixel using the _mask_ as a mixing operator, to produce the _final output_. Where the mask opacity is 100%, the _final output_ is the _blended output_ for that pixel. Where the mask opacity is 0 the final output is the _module input_ for that pixel. An intermediate opacity combines the _blended output_ and _module input_ proportionally. The _final output_ is passed to the next module for further processing.
+4. Combine the _module input_ and _blended output_ pixel-by-pixel using the _mask_ as a mixing operator, to produce the _final output_. Writing $o$ for the effective per-pixel opacity (the global opacity multiplied by the mask value at that pixel), the final output of each pixel is:
+
+   ```math
+   \text{final} = (1 - o)\,\text{input} + o\,\text{blended}
+   ```
+
+   Where the mask opacity is 100% ($o = 1$), the _final output_ is the _blended output_ for that pixel; where the mask opacity is 0 ($o = 0$), it is the _module input_; an intermediate opacity combines the two proportionally. The _final output_ is passed to the next module for further processing.
 
 Steps 2 and 3 are optional and not supported by all modules. For example, the [demosaic](../modules/demosaic.md) module must be applied to the entire raw file in order to produce a legible image so it does not make sense to mask or blend its output.
 

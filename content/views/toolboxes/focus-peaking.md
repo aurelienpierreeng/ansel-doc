@@ -17,6 +17,8 @@ Focus peaking works by filtering out most of the image noise, measuring the inte
 - _green_ represents a medium (4σ) jump in gradient, indicating a reasonably sharp edge.
 - _blue_ represents a small (2σ) jump in gradient, indicating a slightly sharp edge.
 
+![focus peaking overlaid on a shallow depth-of-field image](focus-peaking-overview.jpg)
+
 On an image shot with a wide aperture and shallow depth of field, the overlay clusters on the plane the lens focused on (and on any other details that happen to fall within the zone of acceptable sharpness around it), which makes it easy to see where focus actually landed.
 
 {{< note >}}

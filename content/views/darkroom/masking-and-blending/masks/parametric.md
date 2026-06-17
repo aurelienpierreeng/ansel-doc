@@ -54,8 +54,14 @@ A polarity (+/-) button to the right of each the slider switches between "range 
 **range select**
 : With the inside (filled) markers at the extremes, the whole range of values is selected (an "all at 100%" mask). Moving the markers inwards gradually excludes more of the image, keeping only the remaining narrow range. The outside (open) markers set how soft the transition is at each edge.
 
+: ![range select slider](blendif_2a.jpg)
+: ![range select opacity function](blendif_2b.jpg)
+
 **range deselect**
 : Toggling the polarity swaps the markers: by default the whole range is deselected (an "all-zero" mask), and moving the markers inwards gradually includes more of the image around the remaining range.
+
+: ![range deselect slider](blendif_3a.jpg)
+: ![range deselect opacity function](blendif_3b.jpg)
 
 ## Color pickers
 

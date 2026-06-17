@@ -22,11 +22,20 @@ The order in which modules are executed within the pixelpipe has been carefully 
 
 The _scene-referred_ workflow attempts to perform as many operations as possible in a linear RGB color space, only compressing the tones to fit the output medium (with a non-linear tone mapping) at the end of the pixelpipe. This has the advantage of being a more physically-realistic space to do transformations than the traditional _display-referred_ workflow, which attempts to perform operations in a non-linear _perceptual_ color space. Honoring the physical realism (rather than the perceptual realism) makes it much easier to produce predictable processing algorithms with a minimum of artifacts.
 
-The following diagram should help you to understand the difference between these workflows:
+The following diagram should help you to understand the difference between these workflows. The early, _scene-referred_ part of the pipe works on linear light; a non-linear tone mapping then compresses the dynamic range; the remaining, _display-referred_ part finishes the image for the screen or print:
 
-![scene-referred and display-referred modules]../../../the-pixelpipe-and-module-ord../../../scene-display-workflows.png)
+```mermaid
+flowchart LR
+    A([RAW]) --> B[exposure] --> C[color calibration] --> D[color balance RGB]
+    D --> TM{{"tone mapping<br/>(filmic RGB)"}}
+    TM --> E[sharpening] --> F[output profile] --> G([display / export])
+    classDef scene fill:#cfe,stroke:#284,color:#000;
+    classDef display fill:#fed,stroke:#a52,color:#000;
+    class A,B,C,D scene;
+    class E,F,G display;
+```
 
-1. _Scene-referred_ modules process linear data that is proportional to the amount of light collected by the camera at the scene. The dynamic range of an image in the scene-referred section of the pixelpipe is often larger than that of the display medium.
+1. _Scene-referred_ modules (green) process linear data that is proportional to the amount of light collected by the camera at the scene. The dynamic range of an image in the scene-referred section of the pixelpipe is often larger than that of the display medium.
 
 2. At some point in the pixelpipe, these pixel values are compressed by a non-linear tone mapping operation into a smaller dynamic range more suitable for display on a monitor or a print.
 

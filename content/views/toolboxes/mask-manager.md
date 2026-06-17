@@ -48,16 +48,26 @@ To build your own group, select the shapes, right-click and choose **group the f
 
 ## Set operators
 
-Set operators define how each shape combines with the mask built from the shapes above it. Taking a pixel to be "selected" when its opacity is greater than zero:
+Set operators define how each shape combines with the mask built from the shapes above it. Taking a pixel to be "selected" when its opacity is greater than zero. The examples below combine a gradient with a path, showing the effect of each operator applied to the path:
+
+![a gradient mask combined with a path](mask-manager_ex1.jpg)
 
 union
-: The default. The result selects pixels that are in the existing mask **or** in the added shape (the maximum value is taken where they overlap).
+: The default (![union icon](masks_union.jpg)). The result selects pixels that are in the existing mask **or** in the added shape (the maximum value is taken where they overlap).
+
+: ![union result](mask-manager_ex3.jpg)
 
 intersection
-: The result selects only pixels that are in **both** the existing mask **and** the added shape (the minimum value is taken where they overlap) — useful to "imprint" one shape onto another.
+: ![intersection icon](masks_intersection.jpg) The result selects only pixels that are in **both** the existing mask **and** the added shape (the minimum value is taken where they overlap) — useful to "imprint" one shape onto another.
+
+: ![intersection result](mask-manager_ex4.jpg)
 
 difference
-: The result keeps pixels that are in the existing mask but **not** in the added shape — useful to cut a region out of a selection.
+: ![difference icon](masks_difference.jpg) The result keeps pixels that are in the existing mask but **not** in the added shape — useful to cut a region out of a selection.
+
+: ![difference result](mask-manager_ex5.jpg)
 
 exclusion
-: The result selects pixels that are in the existing mask **or** the added shape but **not both** (an exclusive or).
+: ![exclusion icon](masks_exclusion.jpg) The result selects pixels that are in the existing mask **or** the added shape but **not both** (an exclusive or).
+
+: ![exclusion result](mask-manager_ex6.jpg)

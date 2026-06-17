@@ -34,6 +34,8 @@ All thumbnails are fully color managed. Colors are rendered accurately on screen
 
 If for some reason Ansel is unable to generate a thumbnail, it displays an image of a skull instead. Don't panic!
 
+![skull](skull.jpg)
+
 There are three main reasons this could happen:
 
 - _Missing image file_: Ansel remembers all images it has ever imported, as long as they have not been removed from your database. If Ansel wants to create a thumbnail but is not able to open the input file, a skull is displayed instead. Users are advised to remove images from the database using the selected images module before physically removing them from disk. Alternatively you may occasionally run the script [`purge_non_existing_images.sh`](../../../cli/purge_non_existing_images_sh.md) from Ansel's toolset to clean-up your database.
