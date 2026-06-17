@@ -17,7 +17,7 @@ For performance, the scopes are computed from the lower-resolution preview pipel
 
 ## Choosing what to show
 
-Two comboboxes at the top of the module control the scope:
+Use the _hamburger_ menu in the module header to access the following sub-menu items:
 
 Show data from
 : Where in the [pixelpipe](../darkroom/pixelpipe/_index.md) the data is sampled, which determines the color space of the plot:
