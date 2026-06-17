@@ -19,8 +19,6 @@ Click any style name in the **Styles menu** to apply it to all currently active 
 
 Double-clicking a style name in the **Styles toolbox module** applies it to all selected images using the currently saved settings, without showing the dialog.
 
-Hover over a style name in the toolbox to preview the first selected image with that style applied.
-
 {{< note >}}
 Style application and [copy-paste](../lighttable/history-copy-paste.md) share the same underlying merge engine but maintain **independent** default settings. Changing the merge mode for styles has no effect on paste operations, and vice versa.
 {{< /note >}}
