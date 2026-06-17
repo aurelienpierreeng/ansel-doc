@@ -15,7 +15,7 @@ Due to the nature of digital sensors, overexposed highlights lack valid color in
 
 Due to a limitation of the underlying algorithm, reconstructed colors may sometimes be displayed incorrectly if you zoom into the image in the darkroom view. If this happens you might observe a magenta shift in highlight areas close to high contrast edges, or you might see colorless highlight areas when used alongside the “reconstruct color” method of the [_highlight reconstruction_](./highlight-reconstruction.md) module. These artifacts only influence on-screen image display -- the final output remains unaffected. It is recommended that you finetune the parameters of this module only when viewing the fully zoomed-out image.
 
-Note that similar functionality is also available in the _reconstruct_ tab of the [_filmic rgb_](./filmic-rgb.md#reconstruct) module.
+Note that similar functionality is also available in the _reconstruct_ tab of the [_filmic_](./filmic.md#reconstruct) module.
 
 ## Module controls
 

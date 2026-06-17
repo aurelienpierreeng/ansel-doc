@@ -23,7 +23,7 @@ Because the final effect is applied through a 3D LUT, hue, saturation and bright
 
 ## Scene-referred placement
 
-The module is designed to run after [_color balance rgb_](./color-balance-rgb.md) in the pixelpipe.
+The module is designed to run after [_color balance_](./color-balance.md) in the pixelpipe.
 
 Its internal LUT is built and applied in Rec.2020 HLG code values, while the input and output of the module stay in the pipeline working RGB space. Scene-referred RGB is normalized by the module _white level_ before entering the LUT domain and denormalized afterwards.
 
@@ -230,7 +230,7 @@ These interactions affect only the visualization. They do not modify the LUT its
 
 A common workflow is:
 
-1. Use _color balance rgb_ first to establish the global color mood.
+1. Use _color balance_ first to establish the global color mood.
 2. In _color equalizer_, choose one of the three brightness tabs.
 3. Use the module color picker to locate the hue and brightness range you want to target.
 4. Use the live preview cursor over the image to inspect how the active graph affects a real sampled color.
@@ -247,7 +247,7 @@ The module is most effective for creative palette remapping, hue replacement, an
 
 The module is not allowing to modify the achromatic axis, as to tint greys. This is on purpose because the LUT building steps uses a cylindrical 3D interpolation that guarantees its numerical stability. The grey (achromatic) axis is used as the spine on which we base the whole interpolation process. 
 
-Tinting greys is otherwise known as _white balancing_. It can also be achieved in [_color balance RGB_](./color-balance-rgb.md) with regard to luminance. That should be achieved prior to using the _color equalizer_
+Tinting greys is otherwise known as _white balancing_. It can also be achieved in [_color balance_](./color-balance.md) with regard to luminance. That should be achieved prior to using the _color equalizer_
 
 ### Compatibility with Darktable color equalizer
 

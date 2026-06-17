@@ -29,7 +29,7 @@ Resampling non-linear RGB is known to create artifacts such as fringes around sh
 
 Ansel exposes the GUI widget of the _final resampling_ module to give users the opportunity to correct themselves the position of the module in the pipeline, pending a new default pipeline order.
 
-It is recommanded to place the _final resampling_ before the _output color profile_ module, and even before [_filmic_](./filmic-rgb.md) for best results.
+It is recommanded to place the _final resampling_ before the _output color profile_ module, and even before [_filmic_](./filmic.md) for best results.
 
 ## Controls
 

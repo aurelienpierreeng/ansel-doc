@@ -1,7 +1,7 @@
 ---
-title: Rgb levels
+title: Levels
 date: 2022-12-04T02:19:02+01:00
-id: rgb-levels
+id: levels
 applicable-version: 3.2.1
 tags:
 working-color-space: RGB

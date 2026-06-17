@@ -25,7 +25,7 @@ If the image of the negative was obtained using a digital camera, then in order 
 
 When scanning or photographing your film negative, make sure you include some unexposed part of the film within the captured image. This is required to set the _Dmin_ parameter (see below). If this is not possible (e.g. your film holder completely obscures the unexposed parts of the film), you can take a separate image of an unexposed part of the film, measure the _Dmin_ parameter from that image, and then paste that setting to the rest of the images from that film.
 
-When developing the scanned/photographed film negatives, it is recommended that you disable any tone mapping modules such as [_filmic rgb_](filmic-rgb.md).
+When developing the scanned/photographed film negatives, it is recommended that you disable any tone mapping modules such as [_filmic_](filmic.md).
 
 The _working profile_ parameter in Ansel's [_input color profile_](input-color-profile.md) module should be set to either _linear Rec2020 RGB_, or to an ICC profile representing the actual color space of your film emulsion. Some examples of such ICC profiles may be found in the following forum posts:
 
@@ -50,7 +50,7 @@ film stock
 
 ### Film properties
 
-This tab contains a number of basic settings. If, after adjusting these settings, your image is still not quite as you would like it, you can make further adjustments on the [_corrections_](#corrections) tab. These are technical settings, and serve a similar purpose to the _scene_ tab in the [_filmic rgb_](filmic-rgb.md) module, in that they adjust the black and white points and hence define the dynamic range of the negative.
+This tab contains a number of basic settings. If, after adjusting these settings, your image is still not quite as you would like it, you can make further adjustments on the [_corrections_](#corrections) tab. These are technical settings, and serve a similar purpose to the _scene_ tab in the [_filmic_](filmic.md) module, in that they adjust the black and white points and hence define the dynamic range of the negative.
 
 color of the film base
 : Sample an area of the base film stock from your scan. This is the area just outside of the image (an unexposed part of the film). If you are working with black and white negatives, you can leave this slider at its default value (white). If working on color film, click the color picker to the right of the color bar, which will create a bounding box covering about 98% of your image. Then, click and drag across an area of your negative which contains only unexposed film stock. This will automatically calculate values for the _D min_ slider(s). It is likely at this point that your image will still look too dark, but you can correct this later.
@@ -80,9 +80,9 @@ highlights white balance
 
 ### Print properties
 
-This tab contains settings that mimic the tonal effect of the photochemical papers that would have been used to create the hard copy image if you were not developing the photo digitally. These are creative settings, and serve a similar overall purpose to the creative tone curve settings on the _look_ tab of the [_filmic rgb_](filmic-rgb.md) module.
+This tab contains settings that mimic the tonal effect of the photochemical papers that would have been used to create the hard copy image if you were not developing the photo digitally. These are creative settings, and serve a similar overall purpose to the creative tone curve settings on the _look_ tab of the [_filmic_](filmic.md) module.
 
-The _print exposure_, _paper black_ and _paper grade_ are analogous to the _slope_, _offset_ and _power_ controls in the [_color balance RGB_](color-balance-rgb.md) module (which in turn is based on the ASC CDL standard). These settings define a creative tone curve to enforce your contrast intent after the inversion, at the end of the module. The equation governing this slope/offset/power behaviour is:
+The _print exposure_, _paper black_ and _paper grade_ are analogous to the _slope_, _offset_ and _power_ controls in the [_color balance_](color-balance.md) module (which in turn is based on the ASC CDL standard). These settings define a creative tone curve to enforce your contrast intent after the inversion, at the end of the module. The equation governing this slope/offset/power behaviour is:
 
 _RGB_out_ = ( _RGB_in_ × _exposure_ + _black_ ) ᵍʳᵃᵈᵉ
 

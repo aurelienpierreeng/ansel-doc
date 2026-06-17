@@ -1,7 +1,7 @@
 ---
-title: Rgb curve
+title: Curve
 date: 2022-12-04T02:19:02+01:00
-id: rgb-curve
+id: curve
 applicable-version: 3.8
 tags:
 working-color-space:

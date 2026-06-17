@@ -1,5 +1,5 @@
 ---
-title: Color balance rgb
+title: Color balance
 date: 2022-12-04T02:19:02+01:00
 id: color-balance
 applicable-version: 4.0
@@ -24,21 +24,21 @@ Colorists usually split color-grading into two distinct steps:
 1. _Primary color-grading_ aims to fix unwanted color casts and create a neutral starting point,
 2. _Secondary color-grading_ gives the image its final look and atmosphere.
 
-Primary color-grading is best left to the [_color calibration_](./color-calibration.md) module, which operates in a physical framework better suited to illuminant correction. _Color balance RGB_, on the other hand, is mostly concerned with secondary color-grading. Performing a truly neutral primary color-grading should make the secondary color-grading easy to transfer between images (via styles, presets or copy & paste) with a similar effect.
+Primary color-grading is best left to the [_color calibration_](./color-calibration.md) module, which operates in a physical framework better suited to illuminant correction. _color balance_, on the other hand, is mostly concerned with secondary color-grading. Performing a truly neutral primary color-grading should make the secondary color-grading easy to transfer between images (via styles, presets or copy & paste) with a similar effect.
 
 ## General principles
 
-The _color balance RGB_ module is an improvement over the [American Society of Cinematographers Color Decision List](https://en.wikipedia.org/wiki/ASC_CDL) (ASC CDL), and uses alpha masks to allow the effect to be properly split between shadows and highlights. The classic CDL acts on the entire luminance range, and each of its parameters is given more weight on some parts of the image only as a side-effect of the mathematics.
+The _color balance_ module is an improvement over the [American Society of Cinematographers Color Decision List](https://en.wikipedia.org/wiki/ASC_CDL) (ASC CDL), and uses alpha masks to allow the effect to be properly split between shadows and highlights. The classic CDL acts on the entire luminance range, and each of its parameters is given more weight on some parts of the image only as a side-effect of the mathematics.
 
-This module works, for the most part (_4 ways_, _chroma_, _vibrance_, _contrast_), in a linear RGB color space designed specifically for color-grading. This color space exhibits a uniform spacing of perceptual hues while retaining a physically-scaled luminance[^1]. The perceptual part of the module (_saturation_ and _brilliance_) works in the JzAzBz[^2] color space, which provides a perceptual scaling of both lightness and chromaticity suitable for HDR images. Both color spaces ensure that saturation and chroma changes take place at constant hue, which is not the case for most other saturation operators in Ansel (notably in the older [_color balance RGB_](./color-balance-rgb.md) module).
+This module works, for the most part (_4 ways_, _chroma_, _vibrance_, _contrast_), in a linear RGB color space designed specifically for color-grading. This color space exhibits a uniform spacing of perceptual hues while retaining a physically-scaled luminance[^1]. The perceptual part of the module (_saturation_ and _brilliance_) works in the JzAzBz[^2] color space, which provides a perceptual scaling of both lightness and chromaticity suitable for HDR images. Both color spaces ensure that saturation and chroma changes take place at constant hue, which is not the case for most other saturation operators in Ansel (notably in the older [_color balance_](./color-balance.md) module).
 
 [^1]: Richard A. Kirk, Chromaticity coordinates for graphic arts based on CIE 2006 LMS with even spacing of Munsell colours, 2019.
 
 [^2]: Safdar et al., Perceptually uniform color space for image signals including high dynamic range and wide gamut, 2017. <https://doi.org/10.1364/OE.25.015131>
 
-The _color balance RGB_ module expects a scene-referred linear input and produces a scene-referred RGB output, which may or may not be linear, depending on the module settings (_contrast_ and _power_ will delinearize the output).
+The _color balance_ module expects a scene-referred linear input and produces a scene-referred RGB output, which may or may not be linear, depending on the module settings (_contrast_ and _power_ will delinearize the output).
 
-At its output, _color balance RGB_ checks that the graded colors fit inside the pipeline RGB color space (Rec 2020 by default) and applies a soft saturation clipping at constant hue, aiming to retarget out-of-gamut color to the nearest in-gamut color by scaling both chroma and lightness. This prevents the chroma and saturation settings from pushing colors outside of the valid range and allows more drastic adjustments to be safely used.
+At its output, _color balance_ checks that the graded colors fit inside the pipeline RGB color space (Rec 2020 by default) and applies a soft saturation clipping at constant hue, aiming to retarget out-of-gamut color to the nearest in-gamut color by scaling both chroma and lightness. This prevents the chroma and saturation settings from pushing colors outside of the valid range and allows more drastic adjustments to be safely used.
 
 _Note that this module abides by the CIE definitions of chroma and saturation, as explained in the [dimensions of color](../../../color-management/color-dimensions.md) section._
 
@@ -60,7 +60,7 @@ contrast
 
 : The fulcrum has a value of 18.45% by default, which is consistent with the current scene-referred workflow and should fit most use cases (assuming that global brightness has been fixed as recommended using the [_exposure_](./exposure.md) module).
 
-: The contrast algorithm gives natural results that mimic the central part of the contrast curve of analog film. However, it will also increase the image's dynamic range, which may void _filmic_ settings in the pipe. For global contrast adjustments, you should normally use the [_tone equalizer_](./tone-equalizer.md) module -- the _color balance RGB_ contrast slider is best used with masks, e.g. for selective corrections over the foreground or background.
+: The contrast algorithm gives natural results that mimic the central part of the contrast curve of analog film. However, it will also increase the image's dynamic range, which may void _filmic_ settings in the pipe. For global contrast adjustments, you should normally use the [_tone equalizer_](./tone-equalizer.md) module -- the _color balance_ contrast slider is best used with masks, e.g. for selective corrections over the foreground or background.
 
 #### Linear chroma grading
 
@@ -163,7 +163,7 @@ checker board size
 
 ### Saturation or chroma?
 
-As described in the [dimensions of color](../../../color-management/color-dimensions.md) section, saturation and chroma roam the (lightness, chroma) plane in different directions. In addition, the chroma of _color balance RGB_ uses a scene-referred linear space, while the saturation uses a perceptual space, which rescales color for even spacing.
+As described in the [dimensions of color](../../../color-management/color-dimensions.md) section, saturation and chroma roam the (lightness, chroma) plane in different directions. In addition, the chroma of _color balance_ uses a scene-referred linear space, while the saturation uses a perceptual space, which rescales color for even spacing.
 
 In practice, you should use the chroma setting if you want to preserve the scene-linearity of the light emission and/or keep the luminance unchanged. However, these changes might affect some hues more heavily than others, due to the fact that the color space is not fully perceptually-scaled.
 
@@ -175,20 +175,20 @@ Choosing one or the other is mostly a matter of deciding where on the (lightness
 
 The _lift/gamma/gain_ algorithm relies on a display-referred color space, since it assumes a bounded and symmetric dynamic range, with white point at 100% and gray at 50%. As such, it is simply unusable in a scene-referred space. However, the only incompatible part is the _lift_. The _gamma_ is exactly the ASC CDL _power_, and the _gain_ is exactly the ASC CDL _slope_.
 
-The _color balance RGB_ module simply has two slopes instead of one: the _gain_, applied on the highlights extracted from the whole image by a mask, and the _lift_, applied similarly but on the shadows.
+The _color balance_ module simply has two slopes instead of one: the _gain_, applied on the highlights extracted from the whole image by a mask, and the _lift_, applied similarly but on the shadows.
 
 ### Changing contrast
 
-While _color balance RGB_ is mostly about color (other modules handle the global contrast in chromaticity-preserving ways) luminance is as much a part of color as hue or chroma, and it needs to be dealt with here too, because the perception of saturation relies on it. If you wish to turn red into pink, for example, reducing its chroma will turn it gray, so you need to increase its luminance as well.
+While _color balance_ is mostly about color (other modules handle the global contrast in chromaticity-preserving ways) luminance is as much a part of color as hue or chroma, and it needs to be dealt with here too, because the perception of saturation relies on it. If you wish to turn red into pink, for example, reducing its chroma will turn it gray, so you need to increase its luminance as well.
 
-There are several ways to change the contrast in _color balance RGB_, either locally (with masks) or globally (without):
+There are several ways to change the contrast in _color balance_, either locally (with masks) or globally (without):
 
 - In the [_master_](#master-tab) tab, use the _contrast_ setting (possibly alongside the _contrast gray fulcrum_ in the [_masks_](#masks-tab) tab). Be aware that this will raise the white point and therefore increase the dynamic range of the image, which may void filmic settings later in the pipeline.
 - In [_perceptual saturation grading_](#perceptual-saturation-grading), desaturate highlights and resaturate shadows to produce a luminance contrast boost,
 - In [_perceptual brilliance grading_](#perceptual-brilliance-grading), add brilliance in the highlights and remove brilliance in the shadows to produce to a luminance contrast boost,
 - In the [_4 ways_](#4-ways-tab) tab, set the _shadows lift_ luminance to negative values and the _highlights gain_ luminance to positive values, which also produces a luminance contrast boost.
 
-The difference between these methods is how the effect will be weighted relative to the input of the module. You are advised to do the majority of luminance contrast adjustments in the _filmic_ and _tone equalizer_ modules, and then undertake final changes in _color balance RGB_ while examining the colors.
+The difference between these methods is how the effect will be weighted relative to the input of the module. You are advised to do the majority of luminance contrast adjustments in the _filmic_ and _tone equalizer_ modules, and then undertake final changes in _color balance_ while examining the colors.
 
 ### Internal processing
 
@@ -211,8 +211,8 @@ The following is the internal order of operations within the module:
 
 Setting the global chroma to -100% will not produce a real monochrome image, as is customary with other algorithms. The reason for this is that the RGB space used has a D65 white point defined in CIE LMS 2006 space, while Ansel uses a white point defined in CIE XYZ 1931 space, and there is no exact conversion between these spaces. The result will therefore be a slighly tinted black & white image. If your intent is to get a real black & white image using the luminance channel, the _color calibration_ module offers a _B&W : luminance-based_ preset that does exactly the same thing but without the white-point discrepancy.
 
-This module has its gamut-mapping (against pipeline RGB) permanently enabled. This means that if your original image contains some largely out-of-gamut colors to start with, simply enabling _color balance RGB_ with no particular setting will slightly alter its colors. This is probably for the best.
+This module has its gamut-mapping (against pipeline RGB) permanently enabled. This means that if your original image contains some largely out-of-gamut colors to start with, simply enabling _color balance_ with no particular setting will slightly alter its colors. This is probably for the best.
 
-The maximum saturation allowed in the pipeline working RGB space is recorded for each hue when initializing the module, and is later cached in a LUT (look-up table) to save performance. If the working profile is later changed, _color balance RGB_ is not notified, meaning that it will not update its cached hue/saturation LUT. To force a LUT update, you can simply change any setting in the _color balance RGB_ module, then change it back again. It is not recommended that you change the working RGB space half-way through an editing session, as this could result in unexpected chroma and hue changes.
+The maximum saturation allowed in the pipeline working RGB space is recorded for each hue when initializing the module, and is later cached in a LUT (look-up table) to save performance. If the working profile is later changed, _color balance_ is not notified, meaning that it will not update its cached hue/saturation LUT. To force a LUT update, you can simply change any setting in the _color balance_ module, then change it back again. It is not recommended that you change the working RGB space half-way through an editing session, as this could result in unexpected chroma and hue changes.
 
 For performance reasons, the non-linear conversions from and to the working RGB space are bypassed, meaning that the internal colorimetry will be wrong when using non-linear color spaces. Note that there is no reason to use non-linear spaces as working RGB since they make alpha blending more challenging for no benefit.

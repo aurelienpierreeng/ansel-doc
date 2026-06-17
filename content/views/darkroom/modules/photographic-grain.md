@@ -23,7 +23,7 @@ As with any pixel-level modification, the previews are accurate only for a 100% 
 
 ## Scene-referred placement
 
-_Photographic grain_ is a scene-referred module and is meant to run before _filmic rgb_ in the pixelpipe.
+_Photographic grain_ is a scene-referred module and is meant to run before _filmic_ in the pixelpipe.
 
 That matters because the module simulates light being captured by crystals in the emulsion. It therefore belongs before display rendering and before output-referred tone mapping. Grain statistics are built from the scene-referred signal, then later modules shape the final display contrast as usual.
 

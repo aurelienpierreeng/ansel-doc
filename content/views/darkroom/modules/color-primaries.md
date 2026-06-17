@@ -30,7 +30,7 @@ This gives a tool that sits between a classic primary/secondary corrector and a 
 
 ## Scene-referred placement
 
-The module is designed to run before [_color balance rgb_](./color-balance-rgb.md) in the pixelpipe.
+The module is designed to run before [_color balance_](./color-balance.md) in the pixelpipe.
 
 Its internal LUT is built and applied in Rec.2020 HLG code values, while the module input and output stay in the pipeline working RGB space. Scene-referred RGB is normalized by the module _white level_ before entering the LUT domain and denormalized afterwards.
 

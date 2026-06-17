@@ -33,7 +33,7 @@ Chromatic adaptation aims to predict how all surfaces in the scene would look if
 
 Chromatic adaptation is controlled within the Chromatic Adaptation Transformation (CAT) tab of the _color calibration_ module. When used in this way the _white balance_ module is still required as it needs to perform a basic white balance operation (connected to the input color profile values). This technical white balancing ("camera reference" mode) is a flat setting that makes grays lit by a standard D65 illuminant look achromatic, and makes the demosaicing process more accurate, but does not perform any perceptual adaptation according to the scene. The actual chromatic adaptation is then performed by the _color calibration_ module, on top of those corrections performed by the _white balance_ and _input color profile_ modules. The use of custom matrices in the _input color profile_ module is therefore discouraged. Additionally, the RGB coefficients in the _white balance_ module need to be accurate in order for this module to work in a predictable way.
 
-The _color calibration_ and _white balance_ modules can be automatically applied to perform chromatic adaptation for new edits by setting the chromatic adaptation workflow option ([preferences > processing > auto-apply chromatic adaptation defaults](../../../preferences-settings/processing.md)) to "modern". If you prefer to perform all white balancing within the _white balance_ module, a "legacy" option is also provided. Neither option precludes the use of other modules (such as [_color balance RGB_](./color-balance-rgb.md)) for creative color grading further along the pixel pipeline.
+The _color calibration_ and _white balance_ modules can be automatically applied to perform chromatic adaptation for new edits by setting the chromatic adaptation workflow option ([preferences > processing > auto-apply chromatic adaptation defaults](../../../preferences-settings/processing.md)) to "modern". If you prefer to perform all white balancing within the _white balance_ module, a "legacy" option is also provided. Neither option precludes the use of other modules (such as [_color balance_](./color-balance.md)) for creative color grading further along the pixel pipeline.
 
 By default, _color calibration_ performs chromatic adaptation by:
 
@@ -266,7 +266,7 @@ normalize channels
 
 The _Outputs_ tab groups the previous _colorfulness_, _brightness_ and _B&W_ controls into a single page with section labels. These controls are independent from the _Mixer_ tab modes above, but they follow the same overall idea: they use the relative strengths of the R, G and B input channels to build output quantities.
 
-The brightness and colorfulness (color saturation) of pixels in an image can also be adjusted based on the R, G and B input channels. This uses the same basic algorithm that the [_filmic rgb_](filmic-rgb.md) module uses for tone mapping (which preserves RGB ratios) and for mid-tones saturation (which massages them).
+The brightness and colorfulness (color saturation) of pixels in an image can also be adjusted based on the R, G and B input channels. This uses the same basic algorithm that the [_filmic_](filmic.md) module uses for tone mapping (which preserves RGB ratios) and for mid-tones saturation (which massages them).
 
 saturation algorithm
 : This control allows you to upgrade the saturation algorithm to the new 2021 version, for edits produced prior to darktable 3.6 -- it will not appear for edits that already use the latest version.

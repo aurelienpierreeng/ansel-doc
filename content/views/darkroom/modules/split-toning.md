@@ -1,7 +1,7 @@
 ---
-title: Split-toning RGB
+title: Split-toning
 date: 2026-04-03T00:00:00+02:00
-id: split-toning-rgb
+id: split-toning
 applicable-version: 4.0
 working-color-space: RGB
 view: darkroom
@@ -11,7 +11,7 @@ include_toc: true
 
 Blend two CAT16 plus RGB mixer corrections across brightness keyframes.
 
-The _split-toning RGB_ module applies two independent color transforms:
+The _split-toning_ module applies two independent color transforms:
 
 - one keyed on the dark tones,
 - one keyed on the bright tones.

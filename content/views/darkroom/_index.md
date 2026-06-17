@@ -37,8 +37,8 @@ Some modules can compute their own settings from the content of the image instea
 - [Raw black/white point](modules/raw-black-white-point.md) and [exposure](modules/exposure.md) — set the working range and overall brightness;
 - [Highlight reconstruction](modules/highlight-reconstruction.md) — adapt to the clipped channels;
 - [Color calibration](modules/color-calibration.md) — automatic white balance / illuminant detection;
-- [Filmic RGB](modules/filmic-rgb.md) — fit the tone mapping to the image's dynamic range;
-- [Tone equalizer](modules/tone-equalizer.md), [color balance RGB](modules/color-balance-rgb.md), [color equalizer](modules/color-equalizer.md), [color primaries](modules/color-primaries.md) and [denoise (profiled)](modules/denoise-profiled.md).
+- [Filmic RGB](modules/filmic.md) — fit the tone mapping to the image's dynamic range;
+- [Tone equalizer](modules/tone-equalizer.md), [color balance RGB](modules/color-balance.md), [color equalizer](modules/color-equalizer.md), [color primaries](modules/color-primaries.md) and [denoise (profiled)](modules/denoise-profiled.md).
 
 ```mermaid
 flowchart LR

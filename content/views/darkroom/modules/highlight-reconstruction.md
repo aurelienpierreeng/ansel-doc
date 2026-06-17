@@ -29,7 +29,7 @@ guided laplacians
 
 ---
 
-**Note:** When using the highlight reconstruction included with the [_filmic rgb_](./filmic-rgb.md) module it may be useful to avoid using this module in _clip highlights_ mode (so that _filmic rgb_ has more information to work with).
+**Note:** When using the highlight reconstruction included with the [_filmic_](./filmic.md) module it may be useful to avoid using this module in _clip highlights_ mode (so that _filmic_ has more information to work with).
 
 ---
 
@@ -61,7 +61,7 @@ It is important to note that the _highlight reconstruction_ module is quite earl
 
 The _guided laplacians_ approach has been designed specifically to be immune to white-balance discrepancies and to avoid any concept or method related to color (so there is no explicit desaturation). It only handles gradients (transitions) in the signal and aims at connecting them smoothly, in order to fill the missing parts. This process is quite heavy though, since it falls into the category of supervised machine learning (gradient-based optimization through multi-scale curvature), which is a sub-branch of artificial intelligence.
 
-[_Filmic's highlight reconstruction_](./filmic-rgb.md#reconstruct) uses a simpler color propagation algorithm coupled with a desaturation option that can favor an _achromatic_ reconstruction. Not only does it _know_ about color (because it comes after the full color profiling and chromatic adaptation) but it also uses a simplified and faster version of the algorithm used by the _guided laplacians_ approach. Namely, this variant will not try as hard to restore details and will favor a smooth blur instead.
+[_Filmic's highlight reconstruction_](./filmic.md#reconstruct) uses a simpler color propagation algorithm coupled with a desaturation option that can favor an _achromatic_ reconstruction. Not only does it _know_ about color (because it comes after the full color profiling and chromatic adaptation) but it also uses a simplified and faster version of the algorithm used by the _guided laplacians_ approach. Namely, this variant will not try as hard to restore details and will favor a smooth blur instead.
 
 The filmic reconstruction is good enough for very large clipped patches and offers the benefit of being able to degrade to white as a last resort. It is also better and faster to inpaint solid color into clipped areas, at the expense of details. Its main drawback is that it is not as selective in the source of the colors being inpainted in clipped parts, so it may inpaint unrelated colors.
 
