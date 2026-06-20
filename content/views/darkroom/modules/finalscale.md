@@ -33,8 +33,8 @@ It is recommanded to place the _final resampling_ before the _output color profi
 
 ## Controls
 
-The type of interpolation used for this final rescaling is defined globally in the software, in the [_preferences_](../../../preferences-settings/processing.md), under the _pixel interpolator (scaling)_ parameter. _Bilinear_ is safe, fast and robust but will typically be slightly blurrier. _Bicubic_ offers the best all-around quality/cost ratio. _Lanczos_ interpolator are the sharpest but are known to [overshoot](https://mazzo.li/posts/lanczos.html#sinc-problems) at very contrasty edges and may create ringing.
+The type of interpolation used for this final rescaling is defined globally in the software, in the [_preferences_](../../../preferences-settings/processing.md), under the _pixel interpolator (scaling)_ parameter.
 
 ## Enhancements
 
-A common practice is to apply some sharpening after the downsampling. Ansel does not do it by default, but you can by duplicating an instance of [_diffuse and sharpen_](./diffuse.md), [_sharpen_](./sharpen.md) or [_contrast equalizer_](./contrast-equalizer.md) and moving it after (above) the _final resampling_ module. In that case, ensure _final resampling_ is before the display view transform (_filmic_ or the _base curve_) such that your sharpening instance can go in-between. You should also avoid re-sharpening when using _Lanczos_ intepolators (it may worsen its typical artifacts if any) and keep your sharpening at the pixel level, with a radius of 1-2 px maximum.
+A common practice is to apply some sharpening after the downsampling. Ansel does not do it by default, but you can by duplicating an instance of [_diffuse and sharpen_](./diffuse.md), [_sharpen_](./sharpen.md) or [_contrast equalizer_](./contrast-equalizer.md) and moving it after (above) the _final resampling_ module. In that case, ensure _final resampling_ is before the display view transform (_filmic_ or the _base curve_) such that your sharpening instance can go in-between. You should keep your sharpening at the pixel level, with a radius of 1-2 px maximum.

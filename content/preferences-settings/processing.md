@@ -19,10 +19,10 @@ always use LittleCMS 2 to apply output color profile
 pixel interpolator (warp)
 : The pixel interpolator used for rotation, lens correction, liquify, crop and final scaling.
 
-: Whenever we scale or distort an image we have to choose a pixel interpolation algorithm (see [wikipedia](https://en.wikipedia.org/wiki/Image_scaling) for details). For warping modules, Ansel offers bilinear, bicubic or lanczos2. In general, bicubic is a safe option for most cases and is the default value.
+: Whenever we scale or distort an image we have to choose a pixel interpolation algorithm (see [wikipedia](https://en.wikipedia.org/wiki/Image_scaling) for details). For warping modules, Ansel offers bilinear, bicubic or mitchell. In general, mitchell is better both at preserving sharpness and at preventing halos.
 
 pixel interpolator (scaling)
-: The pixel interpolator used for scaling. The same options are provided as for the warp modules, but with the addition of lanczos3.
+: The pixel interpolator used for scaling. The same options are provided as for the warp modules.
 
 : lanczos3 can cause pixel overshoots leading to artefacts but sometimes gives a more crisp visual appearance. This option is therefore only provided for transforming (scaling) algorithms and is the default value.
 
