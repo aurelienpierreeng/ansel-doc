@@ -83,8 +83,10 @@ crash and uploaded the **next** time you start Ansel.
 their limited time where it helps the most. A small open-source project otherwise has almost no
 visibility into how its software is used.
 
-**When** — one summary at the start of each session and one at the end. The data describes the
-session as a whole; it is not a live recording of your actions.
+**When** — a short message the first time you use a given tool or open a given kind of file during a
+session, plus a summary at the start and (on a clean exit) end of the session. It records *that* a
+tool was used or a kind of file was opened — never the order, exact timing, or content of what you
+did.
 
 **What is sent**
 
