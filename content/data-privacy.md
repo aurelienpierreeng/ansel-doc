@@ -64,7 +64,7 @@ crash and uploaded the **next** time you start Ansel.
 - your hardware: number of CPU cores, amount of RAM, graphics card / OpenCL device name;
 - on Linux: whether you use X11 or Wayland, and your desktop environment (GNOME, KDE, …);
 - your screen resolution, the Ansel window size, and display scaling (DPI/PPD);
-- the Ansel version and build type;
+- the Ansel version, build type, and whether it is an official or self-built binary;
 - how long the session ran before crashing, and counts of recent crash-free sessions;
 - *context about the moment of the crash*: which views, panels and editing modules were in use during
   that session (by name and count), and the **kind** of image being processed — its file
@@ -96,7 +96,7 @@ did.
 - your operating system, number of CPU cores, amount of RAM, graphics card, and (on Linux) display
   server and desktop environment;
 - your screen resolution and display scaling;
-- the Ansel version and build type;
+- the Ansel version, build type, and whether it is an official or self-built binary;
 - how long the session lasted;
 - which views, panels and editing modules you used, **as counts only** (e.g. "exposure module
   enabled 4 times") — never in what order or at what time;

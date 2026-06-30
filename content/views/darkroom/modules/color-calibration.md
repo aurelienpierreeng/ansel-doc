@@ -38,8 +38,12 @@ The _color calibration_ and _white balance_ modules can be automatically applied
 By default, _color calibration_ performs chromatic adaptation by:
 
 - Reading the RAW file's Exif data to fetch the scene white balance set by the camera,
-- Adjusting this setting using the camera reference white balance from the _white balance_ module,
+- Adjusting this setting using the camera reference white balance _D65 (daylight)_ preset from the _white balance_ module,
 - Further adjusting this setting with the input color profile in use (standard matrix only).
+
+{{< warning >}}
+The default settings initialization, for _color calibration_ chromatic adaptation, __does not work__ if you used an automatic preset changing the RGB coefficients in _white balance_ module. It only reads the defaults settings of _white balance_, which are _D65 (daylight)_. You will need to manually reset the _color calibration_ module (using the reset button) after the first pipeline run so it can read your custom coefficients if you use some.
+{{< /warning >}}
 
 For consistency, the _color calibration_ module's default settings always assume that the standard matrix is used in the _input color profile_ module -- any non-standard settings in this module are ignored. However, _color calibration_'s defaults can read any auto-applied preset in the _white balance_ module.
 
