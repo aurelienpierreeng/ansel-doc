@@ -208,13 +208,12 @@ hardness (previously _target power factor function_)
 
 : This parameter is the power function applied to the output transfer function, and it is often improperly called the _gamma_ (which can mean too many things in imaging applications, so we should stop using that term). It is used to raise or compress the mid-tones to account for display non-linearities or to avoid quantization artifacts when encoding in 8 bit file formats. This is a common operation when applying ICC color profiles (except for linear RGB spaces, like REC 709 or REC 2020, which have a linear “gamma” of 1.0). However, at the output of _filmic_, the signal is logarithmically encoded, which is not something ICC color profiles know to handle. As a consequence, if we let them apply a gamma of 1/2.2 on top, it will result in a double-up, which would cause the middle-gray to be remapped to 76% instead of 45% as it should in display-referred space.
 
-latitude
-: The latitude is the range between the two nodes enclosing the central linear portion of the curve, expressed as a percentage of the dynamic range defined in the [_scene_](#scene) tab (white relative exposure minus black relative exposure). It is the luminance range that is remapped in priority, and it is remapped to the luminance interval defined by the contrast parameter. It is usually advisable to keep the latitude as large as possible, while avoiding clipping. If clipping is observed, you can compensate by either decreasing the latitude, shifting the latitude interval with the _shadow ↔ highlights balance_ parameter, or decreasing the contrast.
+shadows / highlights
+: These two sliders directly set the position of the toe node (_shadows_) and of the shoulder node (_highlights_) of the S-curve: the points where the central linear portion of the curve ends and the roll-off toward black or white begins. Each is expressed as a percentage of the available room between middle-gray and the point where the current slope would hit the display black (respectively white) level. They replace the _latitude_ and _shadows ↔ highlights balance_ controls of older versions, which set the same two nodes but in linked coordinates (a global width plus an offset) that made adjusting one end without disturbing the other cumbersome. Internally, the module still stores latitude and balance for compatibility -- the sliders are a pure GUI-layer conversion, and old edits are unaffected.
+
+: The range enclosed between the two nodes -- the latitude -- is the luminance range that is remapped in priority, at the constant slope defined by the contrast parameter. With the default _v4 (2026)_ spline (see _spline handling_ in the [_options_](#options) tab), the nodes also act as **tension** controls: values close to 0 % hand the whole curve to the smooth roll-off segments (soft, progressive transitions, the default), while large values force the roll-off into a short, sharp turn near the extremes. With the older polynomial splines it was advisable to keep the latitude as large as possible; with the sigmoid spline the logic is reversed and the small default is the appearance-matched optimum -- raise the nodes only if you deliberately want a harder transition.
 
 : The latitude also defines the range of luminances that are not desaturated at the extremities of the luminance range (See _mid-tones saturation_).
-
-shadows ↔ highlights balance
-: By default, the latitude is centered in the middle of the dynamic range. If this produces clipping at one end of the curve, the balance parameter allows you to slide the latitude along the slope, towards the shadows or towards the highlights. This allows more room to be given to one extremity of the dynamic range than to the other, if the properties of the image demand it.
 
 mid-tones saturation / extreme luminance saturation
 : At extreme luminances, the pixels will tend towards either white or black. Because neither white nor black have color associated with them, the saturation of these pixels must be 0%. In order to gracefully transition towards this 0% saturation point, pixels outside the mid-tone latitude range are progressively desaturated as they approach the extremes. The darker curve in the _filmic_ graph indicates the amount of desaturation that is applied to pixels outside the latitude range. Moving the slider to the right pushes the point where desaturation will start to be applied towards the extremes, resulting in a steeper desaturation curve. If pushed too far, this can result in fringing around the highlights. Moving the slider to the left brings the point at which color desaturation will start to be applied closer to the center, resulting in a gentler desaturation curve. If you would like to see more color saturation in the highlights, and you have checked that the white relative exposure in the [_scene_](#scene) tab is not yet clipping those highlights, move the mid-tones saturation slider to the right to increase the saturation.
@@ -222,6 +221,8 @@ mid-tones saturation / extreme luminance saturation
 : Please note that this desaturation strategy has changed compared to previous versions of _filmic_ (which provided a different slider control labelled _extreme luminance saturation_). You can revert to the previous desaturation behaviour by selecting "v3 (2019)" in the _color science_ setting on the [_options_](#options) tab. Since _filmic_ _v6_ and _v7_ use accurate gamut mapping to the output color space, the desaturation curve is removed and the extreme luminance desaturation becomes in practice an highlights bleaching control.
 
 : This control is set to 0 by default and it is now recommended that saturation is handled earlier in the pipeline. A preset "add basic colorfulness" has been added to the [_color balance_](./color-balance.md) module for this purpose.
+
+: With the _v8 (AgX-like)_ color science, this slider is relabelled _color preservation_ and drives the balance between chromatic character and color fidelity. Negative values increase the per-channel bleaching and hue drift (the stronger "film" character); positive values progressively restore the original chroma **and** hue, measured in a perceptual color space, which keeps bright legitimate colors -- sunsets, blue skies against orange clouds -- saturated; zero (the default) is an equal mix of both strategies, mirroring the _v7_ convention. See the [background](#background) section.
 
 ### Display
 
@@ -243,10 +244,10 @@ target white luminance
 ### Options
 
 color science
-: This setting defaults to _v6 (2022)_ for new images, and defines the algorithms used by the _filmic_ module (e.g. the extreme luminance desaturation strategy). To revert to the behavior of previous versions of _filmic_, set this parameter to _v3 (2019)_, _v4 (2020)_ or _v5 (2021)_. The difference between these methods lies in the way in which they handle desaturation close to pure black and pure white (see the [background](#background) section for details). If you have previously edited an image using older versions of _filmic_, the color science setting will be kept at the earlier version number in order to provide backward compatibility for those edits. The _v7 (2023)_ method removes the _preserve chrominance_ option (see the [background](#background) section for details).
+: This setting defaults to _v7 (2023)_ for new images, and defines the algorithms used by the _filmic_ module (e.g. the extreme luminance desaturation strategy). To revert to the behavior of previous versions of _filmic_, set this parameter to _v3 (2019)_, _v4 (2020)_, _v5 (2021)_ or _v6 (2022)_. The difference between these methods lies in the way in which they handle desaturation close to pure black and pure white (see the [background](#background) section for details). If you have previously edited an image using older versions of _filmic_, the color science setting will be kept at the earlier version number in order to provide backward compatibility for those edits. The _v7 (2023)_ method removes the _preserve chrominance_ option, and the _v8 (AgX-like)_ method applies the tone curve to each RGB channel separately inside a dedicated rendering color space (see the [background](#background) section for details on both).
 
 preserve chrominance
-: _(This setting is not available with the v7 color science)_. Define how the chrominance should be handled by _filmic_ -- either not at all, or using one of the three provided norms.
+: _(This setting is not available with the v7 and v8 color sciences)_. Define how the chrominance should be handled by _filmic_ -- either not at all, or using one of the three provided norms.
 
 : When applying the S-curve transformation independently on each color, the proportions of the colors are modified, which modifies the properties of the underlying spectrum, and ultimately the chrominance of the image. This is what happens if you choose "no" in the preserve chrominance parameter. This value may yield seemingly “better” results than the other values, but it may negatively impact later parts of the pipeline, for example, when it comes to global saturation.
 
@@ -266,11 +267,14 @@ preserve chrominance
 
 : There is no "right" choice for the norm, and the appropriate choice depends strongly on the image to which it is applied. You are advised to experiment and decide for yourself which setting gives the most pleasing result with the fewest artifacts.
 
+spline handling
+: This setting selects the mathematical family used for the toe and shoulder segments of the S-curve, and defaults to _v4 (2026)_ for new images. The _v1_ to _v3_ variants use polynomial or rational segments; polynomials can oscillate and lose monotonicity when the constraints are too tight (the orange overshoot warnings on the graph). The _v4 (2026)_ variant uses generalized sigmoids instead: the curve is monotonic for **any** setting, reaches the black and white endpoints exactly, and degrades gracefully instead of overshooting -- the warnings and the corrective gymnastics they required are obsolete under _v4_. Old edits keep the spline they were made with.
+
 contrast in highlights
-: This control selects the desired curvature at the highlights end of the _filmic_ spline curve. The default setting (_safe_) is guaranteed not to over- or under-shoot but has quite muted contrast near white. Selecting _hard_ places a tighter constraint on the slope of the spline, which makes the curve sharper and hence introduces more tonal compression in the highlights. Selecting _soft_ loosens this constraint, resulting in a gentler curve with less tonal compression in the highlights.
+: This control selects the desired curvature at the highlights end of the _filmic_ spline curve. With the default _v4 (2026)_ spline, all three choices are equally safe (the sigmoid cannot overshoot), so the control becomes a pure shape preference: it selects how long the curve holds the mid-tones slope before rolling off toward white. _hard_ holds the slope almost to the end and then drops quickly (more tonal compression concentrated near white), _soft_ rolls off early and gently, and _safe_ -- the default -- is the perceptual optimum derived from an appearance-preserving model of scene-to-display viewing conditions. With the older polynomial splines, the original meanings apply: _safe_ is guaranteed not to over- or under-shoot, _hard_ is sharper but riskier, _soft_ is gentler.
 
 contrast in shadows
-: This control selects the desired curvature at the shadows end of the _filmic_ spline curve. The default setting (_safe_) is guaranteed not to over- or under-shoot but has quite muted contrast near black. Selecting _hard_ places a tighter constraint on the slope of the spline, which makes the curve sharper and hence introduces more tonal compression in the shadows. Selecting _soft_ loosens this constraint, resulting in a gentler curve with less tonal compression in the shadows.
+: The same control for the shadows end of the curve. Under the _v4 (2026)_ spline, _hard_ holds the slope deep into the shadows then flattens quickly toward black (denser, more compressed blacks), _soft_ releases early (very open shadows), and _safe_ is the derived default, tuned so that shadow gradients survive down to the deepest exposures in demanding viewing conditions (dim room, low-flare display).
 
 use custom middle-gray values
 : Enabling this setting makes the _middle-gray luminance_ slider visible on the [_scene_](#scene) tab. With the current version of _filmic_, you are advised to use the _exposure_ module to set the middle-gray level, so this setting is disabled by default (and the _middle-gray luminance slider_ is hidden).
@@ -323,6 +327,15 @@ Positive values will favour saturated highlights and will be suitable for skies 
 
 The saturation control gives a fine control over the amount of saturation vs. bleaching expected in highlights. In any case, the saturation algo will not allow the output saturation to be higher than the input one, and it should be made very clear that this setting is not designed for creative purposes, but only to drive the complicated trade-off coming from remapping RGB values from one color space to another, having different gamut and dynamic range.
 
+The _v8 (AgX-like)_ color science implements the one genuinely useful idea popularized by Blender's AgX view transform and its darktable port: applying the tone curve to each RGB channel **separately**, inside a rendering color space whose primaries have been slightly compressed and rotated. Per-channel curves couple color to tonality -- highlights bleach toward white and shadows sink toward black *as a function of the tonal compression itself*, which produces the smooth, progressive desaturation of bright saturated subjects (flames, LEDs, stained glass) that norm-based tone mapping renders as flat colored patches. The rendering-space compression controls how fast that bleaching happens and steers the direction of the hue drifts that per-channel curves inevitably produce.
+
+Where _v8_ differs from darktable/Blender AgX:
+
+- **The rendering space is derived, not hand-tuned.** The compression and rotation constants in AgX are unexplained numbers inherited from a forum thread. In Ansel they are computed by an optimization with stated objectives -- neutral (zero-average) hue drift measured in a perceptual hue metric, guaranteed positivity, bounded worst-case drift -- against the module's default curve, and the derivation scripts ship with the source code. Notably, there is **no built-in warm/yellow shift**: AgX's skew toward yellow is a creative decision hard-coded in its constants; in Ansel, if you want warmth, you add it yourself where it belongs (see the emulation section below).
+- **Color fidelity is recoverable.** AgX gives you a hue mix performed in HSV (a non-perceptual space) and no way to keep legitimate bright colors saturated. In _v8_, the _color preservation_ slider spans a continuum from full per-channel character to ratio-preserving color at per-channel lightness, with both chroma and hue restored in a perceptual color space; the default sits at the equal mix.
+- **The output is gamut-mapped.** _v8_ keeps filmic's _v6/v7_ gamut mapping against the export color profile; AgX has none, and its output can leave the display gamut freely.
+- **Everything else is regular filmic.** Scene white/black exposures, contrast, the shadows/highlights nodes, highlight reconstruction, and the display targets work exactly as in the other color sciences -- _v8_ only changes the color handling, not the tone machinery.
+
 ### Caveats
 
 #### Color artifacts
@@ -334,3 +347,30 @@ It is not the purpose of a tone mapping and gamut mapping operators to reconstru
 #### Inconsistent output
 
 With filmic v6, if you export the same image to sRGB and Adobe RGB color spaces, and then compare both images side by side on a large-gamut screen (that can cover Adobe RGB), the sRGB export _should_ have more desaturated highlights than the Adobe RGB version. Since the sRGB color space is shorter than Adobe RGB, its gamut boundary is closer to the neutral grey axis, and therefore the maximum allowed chroma is lower for any given luminance. This is by no means a bug but rather is proof that the gamut mapping is actually doing its job.
+
+## Emulating darktable AgX in Ansel
+
+The darktable _AgX_ module packs 33 parameters into a single module: a tone curve, a channel mixer applied before and after it, an ASC CDL color grading stage ("look"), a gamut compression, and exposure heuristics. This is a pipeline within the pipeline, and it contradicts Ansel's design: one module, one job, so that every job can benefit from masking, blending and multiple instances. Everything AgX does is available in Ansel through dedicated modules -- usually with better color science, and always with more control. Here is the mapping:
+
+tone curve, white/black relative exposure, pivot, contrast
+: _filmic_ itself, [_scene_](#scene) and [_look_](#look) tabs. AgX's pivot corresponds to middle-gray, its "curve y gamma" to filmic's hardness (auto-computed), its toe/shoulder powers to the _contrast in shadows/highlights_ presets combined with the _shadows_/_highlights_ node sliders. Set the color science to _v8 (AgX-like)_ for the per-channel rendering.
+
+per-channel bleaching and hue drift ("primaries inset/rotation")
+: Built into the _v8_ color science with derived constants; the _color preservation_ slider scales the strength (negative half) or recovers the original colors (positive half). If you want *creative* control over primaries beyond that -- what AgX's twelve inset/outset/rotation sliders attempt -- use [_color calibration_](./color-calibration.md) in its **primaries** GUI mode, placed before _filmic_ in the pipeline. It is mathematically the same operation (a 3×3 matrix on RGB), presented with the same primaries-style controls, and it supports masks and multiple instances, which AgX's built-in version does not.
+
+selectively bleaching a region of the chromaticity plane
+: What AgX's inset does globally, _color calibration_'s **simple** GUI mode does surgically: rotate the chroma axes onto the hue you need, compress the U or V axis, and use the _achromatic coupling_ to remap a chosen hue toward the achromatic axis -- desaturating and brightening it at once. This recovers overwhelming stage lights or brings saturated highlights back into gamut with far more precision than a global primaries compression.
+
+the "look" block (slope / offset / power / saturation)
+: [_color balance_](./color-balance.md), which implements the full ASC CDL in a proper perceptual space, with per-range (shadows/mid-tones/highlights) controls, masks and instances -- AgX's look block is a reduced copy of it computed in a worse space.
+
+the baked-in warm shift
+: AgX skews brights toward yellow by construction; Ansel's _v8_ is neutral by design. To add warmth deliberately: a white-balance nudge in _color calibration_ (chromatic adaptation), or a per-range shift in _color balance_, or -- for the mixed-lighting look where highlights warm up while shadows stay cool -- the [_split-toning_](./split-toning.md) module, which applies two chromatic adaptations weighted by luminance. The point: the warm shift becomes an explicit, adjustable, maskable decision instead of an unlabeled constant.
+
+hue-specific adjustments
+: For color shifts confined to the saturated vertices of the gamut (deepening blues without touching neutrals, taming oranges), use [_color primaries_](./color-primaries.md); for hue-wise shifts driven by tonal range, use the [_color equalizer_](./color-equalizer.md). Both blend in RGB and preserve gradients.
+
+gamut compression of out-of-gamut input
+: Handled inside _v8_ (negatives compression, generalized to the working profile) plus filmic's gamut mapping to the export profile -- which AgX lacks entirely. For difficult cases (deep blue LEDs), prefer fixing the input with _color calibration_'s gamut compression, which is where the problem actually lives.
+
+The workflow difference is philosophical: AgX invites you to fix color inside the tone mapper, at the end of the pipeline, with controls that cannot be masked and whose interactions are opaque. Ansel's approach is divide and conquer -- calibrate color first (_color calibration_), grade it (_color balance_, _split-toning_, _color equalizer_, _color primaries_), then let _filmic_ do one job: compress the dynamic range, with the _v8_ color science reproducing the per-channel rendering AgX is known for, minus its hard-coded look. The same results are reachable step by step, and each step is inspectable, maskable and reversible on its own.
