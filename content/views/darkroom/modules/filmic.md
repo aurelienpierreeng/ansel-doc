@@ -65,7 +65,7 @@ The ranges of _filmic_'s sliders are limited to typical and safe values, but you
 **Note**: _filmic_ cannot be set with entirely neutral parameters (resulting in a "no-operation") -- as soon as the module is enabled, the image is always at least slightly affected. You can, however, come close to neutral with the following settings:
 
 - In the [_look_](#look) tab, set contrast to 1.0, latitude to 99 % and mid-tones saturation to 0 %,
-- In the [_options_](#options) tab, set contrast in shadows and in highlights to _soft_.
+- In the [_options_](#options) tab, set contrast in shadows and in highlights to a _soft_ (polynomial) curve type.
 
 In this configuration, filmic will only perform a logarithmic tone mapping between the bounds set in the [_scene_](#scene) tab.
 
@@ -192,7 +192,7 @@ If you see the orange warning indicator at either end of the S-curve, corrective
 
 - Ensuring that the scene-referred black and white relative exposure sliders on the _scene_ tab have been properly set for the characteristics of the scene,
 
-- Setting one or both of the contrast settings on the [_options_](#options) tab to _safe_ or _hard_.
+- Choosing a different curve type for the shadows/highlights contrast on the [_options_](#options) tab.
 
 If the _target black luminance_ setting on the [_display_](#display) tab is non-zero, this can also make it difficult for _filmic_ to find a smooth monotonic spline, and reducing this can also help to relax the constraints. See the [_display_](#display) section to understand the implications of this.
 
@@ -211,7 +211,7 @@ hardness (previously _target power factor function_)
 shadows / highlights
 : These two sliders directly set the position of the toe node (_shadows_) and of the shoulder node (_highlights_) of the S-curve: the points where the central linear portion of the curve ends and the roll-off toward black or white begins. Each is expressed as a percentage of the available room between middle-gray and the point where the current slope would hit the display black (respectively white) level. They replace the _latitude_ and _shadows ↔ highlights balance_ controls of older versions, which set the same two nodes but in linked coordinates (a global width plus an offset) that made adjusting one end without disturbing the other cumbersome. Internally, the module still stores latitude and balance for compatibility -- the sliders are a pure GUI-layer conversion, and old edits are unaffected.
 
-: The range enclosed between the two nodes -- the latitude -- is the luminance range that is remapped in priority, at the constant slope defined by the contrast parameter. With the default _v4 (2026)_ spline (see _spline handling_ in the [_options_](#options) tab), the nodes also act as **tension** controls: values close to 0 % hand the whole curve to the smooth roll-off segments (soft, progressive transitions, the default), while large values force the roll-off into a short, sharp turn near the extremes. With the older polynomial splines it was advisable to keep the latitude as large as possible; with the sigmoid spline the logic is reversed and the small default is the appearance-matched optimum -- raise the nodes only if you deliberately want a harder transition.
+: The range enclosed between the two nodes -- the latitude -- is the luminance range that is remapped in priority, at the constant slope defined by the contrast parameter. With the default _perceptual_ curve type (see _contrast in shadows/highlights_ in the [_options_](#options) tab), the nodes also act as **tension** controls: values close to 0 % hand the whole curve to the smooth sigmoid roll-off, while large values force the roll-off into a short, sharp turn near the extremes. With the older polynomial curve types it was advisable to keep the latitude as large as possible; with the perceptual sigmoid the logic is reversed and the small default is the appearance-matched optimum -- raise the nodes only if you deliberately want a harder transition.
 
 : The latitude also defines the range of luminances that are not desaturated at the extremities of the luminance range (See _mid-tones saturation_).
 
@@ -268,13 +268,13 @@ preserve chrominance
 : There is no "right" choice for the norm, and the appropriate choice depends strongly on the image to which it is applied. You are advised to experiment and decide for yourself which setting gives the most pleasing result with the fewest artifacts.
 
 spline handling
-: This setting selects the mathematical family used for the toe and shoulder segments of the S-curve, and defaults to _v4 (2026)_ for new images. The _v1_ to _v3_ variants use polynomial or rational segments; polynomials can oscillate and lose monotonicity when the constraints are too tight (the orange overshoot warnings on the graph). The _v4 (2026)_ variant uses generalized sigmoids instead: the curve is monotonic for **any** setting, reaches the black and white endpoints exactly, and degrades gracefully instead of overshooting -- the warnings and the corrective gymnastics they required are obsolete under _v4_. Old edits keep the spline they were made with.
+: This setting selects how the _latitude_, _balance_ and _contrast_ place the toe and shoulder **nodes** of the curve -- not the shape of the segments between them, which is chosen by _contrast in shadows/highlights_ below. _v3 (2021)_ is recommended; _v1_ and _v2_ are kept for backward compatibility with older edits. (The shape of the roll-off, including the modern sigmoid, used to live here as a mislabelled "v4"; it now belongs to the curve-type controls.)
 
 contrast in highlights
-: This control selects the desired curvature at the highlights end of the _filmic_ spline curve. With the default _v4 (2026)_ spline, all three choices are equally safe (the sigmoid cannot overshoot), so the control becomes a pure shape preference: it selects how long the curve holds the mid-tones slope before rolling off toward white. _hard_ holds the slope almost to the end and then drops quickly (more tonal compression concentrated near white), _soft_ rolls off early and gently, and _safe_ -- the default -- is the perceptual optimum derived from an appearance-preserving model of scene-to-display viewing conditions. With the older polynomial splines, the original meanings apply: _safe_ is guaranteed not to over- or under-shoot, _hard_ is sharper but riskier, _soft_ is gentler.
+: This control selects the shape of the highlights roll-off of the curve. **_perceptual_** (the default) leaves the straight mid-tone section at exactly the mid-tone slope and then glides smoothly to white -- a "slope-matched" roll-off with no fixed strength: it adapts to the scene, staying nearly straight for a low-dynamic-range studio shot (little to compress) and rolling off more firmly for a wide-range landscape (more to compress), and never over-compresses the brightest stop. The other three are the legacy segment types: _safe_ (rational, guaranteed not to over- or under-shoot but muted near white), _hard_ (sharper, more tonal compression, can overshoot) and _soft_ (gentler). Pick a legacy type only if you want a fixed roll-off character instead of the adaptive perceptual default.
 
 contrast in shadows
-: The same control for the shadows end of the curve. Under the _v4 (2026)_ spline, _hard_ holds the slope deep into the shadows then flattens quickly toward black (denser, more compressed blacks), _soft_ releases early (very open shadows), and _safe_ is the derived default, tuned so that shadow gradients survive down to the deepest exposures in demanding viewing conditions (dim room, low-flare display).
+: The same control for the shadows end of the curve. **_perceptual_** (the default) keeps shadow gradients open down to the deepest exposures (tuned for a dim room and a low-flare display); the legacy _hard_/_soft_/_safe_ segment types behave as for highlights.
 
 use custom middle-gray values
 : Enabling this setting makes the _middle-gray luminance_ slider visible on the [_scene_](#scene) tab. With the current version of _filmic_, you are advised to use the _exposure_ module to set the middle-gray level, so this setting is disabled by default (and the _middle-gray luminance slider_ is hidden).
