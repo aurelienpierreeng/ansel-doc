@@ -87,11 +87,11 @@ The **Apply to the displayed image** button re-applies the whole pool, in order,
 
 The center always shows one capture, full-size, with any styles already baked in. Use the filmstrip at the bottom to look back through the session.
 
-- **Zoom**: `double-click`, `middle-click`, or `scroll` the image to toggle between fit-to-window and 100%.
-- **Pan** at 100%: `drag`, or use the `arrow keys`.
-- **Filmstrip**: `double-click` a thumbnail to preview that capture in the
+- **Zoom**: <kbd>double-click</kbd>, <kbd>middle-click</kbd>, or <kbd>scroll</kbd> the image to toggle between fit-to-window and 100%.
+- **Pan** at 100%: <kbd>drag</kbd>, or use the <kbd>arrow keys</kbd>.
+- **Filmstrip**: <kbd>double-click</kbd> a thumbnail to preview that capture in the
   center.
-- **Open in Darkroom**: press `Return` at any time to open the currently displayed capture for full editing.
+- **Open in Darkroom**: press <kbd>Return</kbd> at any time to open the currently displayed capture for full editing.
 
 ### Color picker
 
