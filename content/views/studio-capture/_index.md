@@ -14,12 +14,21 @@ watches a folder, imports new captures automatically, optionally applies a
 set of styles to them, and always shows you the latest shot full-size — with
 the filmstrip below to review the rest of the session.
 
+{{ warning }}
+Studio Capture doesn't support yet control and loading images directly from a camera. You need to use a third party program such as Digikam or Entangle to take and download images  in a local folder.
+{{ /warning }}
+
 It sits alongside Lighttable, Darkroom, Map and Print in the global menu "Ateliers".
 
 ## Quick start
 
 1. Open **Studio Capture** in the global menu "Ateliers".
 2. In **Auto import**, choose the folder your camera or tethering software writes images into.
+
+{{ warning }}
+Do not choose the on-camera folder as you either will not be able to take pictures or Ansel will not be able to refresh the folder correctly.
+{{ /warning }}
+
 3. Optionally, build a list of styles in **Auto style** to auto-apply to every incoming shot (e.g. a base look, a black & white conversion...).
 4. Press **Start the session**.
 5. Shoot. Each new image appears automatically in the center, with any configured styles already applied, and gets added to the filmstrip.
@@ -44,8 +53,14 @@ At the top of the panel:
 - **Folder to survey** — the folder that receives your camera's images.
 - **Delete original file** — only relevant when copying to another location (see Destination below): removes the source file once the copy has been verified byte-for-byte.
 
+{{ warning }}
+Do not choose the on-camera folder as you either will not be able to take pictures or Ansel will not be able to refresh the folder correctly.
+{{ /warning }}
+
 {{< note >}}
-The source folder and scan frequency are locked while a session is running, since the engine compares each scan against a baseline recorded when monitoring started.
+- Deleting image on-camera is not possible as it could corrupt the memory card.
+- The source folder and scan frequency are locked while a session is running, since the engine compares each scan against a baseline recorded when monitoring started.
+- The source folder cannot contain the destination folder.
 {{< /note >}}
 
 ### Destination tab
@@ -57,6 +72,10 @@ The source folder and scan frequency are locked while a session is running, sinc
     - *Create unique filename* (default): copy the source under a numbered suffix instead of colliding. This is the safest default for tethering, since naming patterns often don't vary from shot to shot.
   - **Base directory**, **Project directory pattern**, **File naming pattern** — where copies land and how they're named. Both patterns accept `$(...)` variables — start typing `$(` in either field to see the list via auto-completion (things like `$(YEAR)`, `$(JOBCODE)`, `$(FILE_NAME)`...).
   - A live preview below shows the destination path your current settings would produce, so you can check it before starting.
+
+{{< note >}}
+- The destination folder cannot be contained in the source folder.
+{{< /note >}}
 
 ### Starting and stopping
 
@@ -121,4 +140,4 @@ If Ansel is closed while a session is still monitoring, it offers to resume that
 
 - Keep the scan frequency low (a few seconds) for a responsive tethering workflow; there's little cost to scanning often.
 - The base directory for copies can never be inside the folder being surveyed, to avoid the copies themselves being picked up as new input.
-- The picker position is remembered between images. 
+- The picker position is remembered between images, so it makes easier to check the value of a particular area. 

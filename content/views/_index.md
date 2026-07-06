@@ -21,6 +21,9 @@ Ansel separates its functionality into several _views_, each dedicated to one ta
 [Print](print/_index.md)
 : Send images to a printer. Hidden by default; enable it in the [preferences](../preferences-settings/other-views.md). Not available on Windows, as it relies on [CUPS](http://www.cups.org/).
 
+[Studio Capture](studio-capture/_index.md)
+: Dedicated view for tethered shooting sessions.
+
 [Slideshow](slideshow/_index.md)
 : Display images full-screen as a slideshow, processing them on the fly. Hidden by default; enable it in the [preferences](../preferences-settings/other-views.md).
 
