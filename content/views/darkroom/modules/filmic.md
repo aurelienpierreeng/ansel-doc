@@ -222,7 +222,7 @@ mid-tones saturation / extreme luminance saturation
 
 : This control is set to 0 by default and it is now recommended that saturation is handled earlier in the pipeline. A preset "add basic colorfulness" has been added to the [_color balance_](./color-balance.md) module for this purpose.
 
-: With the _v8 (AgX)_ color science, this slider is relabelled _color preservation_ and controls **how much of the per-channel hue drift to keep** -- it does not affect saturation. How much saturation the rendering keeps is set by the chosen _v8_ variant, not by this slider: the default _no bleach_ variant preserves the saturation of valid diffuse colors -- skin tones, product colors, blue skies -- completely, because mandatory bleaching of valid midtone colors whitens olive skin tones, which is a bias we refuse to ship as a default (the _low_ and _high bleach_ variants trade some of it deliberately -- see [variants](#variants)). Strongly compressed colors (speculars, clipped lights) bleach at any setting. At **-100 %** the transform runs as pure AgX: the full per-channel hue drift is present (the "film" character). At **0 %** (the default) half of that hue drift is removed. At **+100 %** the original hues are restored exactly, while the tonal bleaching of extreme highlights is unchanged. See the [background](#background) section.
+: With the _v8 (AgX)_ color science, this slider is relabelled _color preservation_ and controls **how much of the per-channel hue drift to keep** -- it does not affect saturation. How much saturation the rendering keeps is set by the chosen _v8_ variant, not by this slider: the _no bleach_ variant preserves the saturation of valid diffuse colors -- skin tones, product colors, blue skies -- completely, because mandatory bleaching of valid midtone colors whitens non-Caucasian skin tones, which is a bias no variant is allowed to inflict on skin (the more-bleached variants trade saturation on non-skin colors deliberately -- see [variants](#variants)). Strongly compressed colors (speculars, clipped lights) bleach at any setting. At **-100 %** the transform runs as pure AgX: the full per-channel hue drift is present (the "film" character). At **0 %** (the default) half of that hue drift is removed. At **+100 %** the original hues are restored exactly, while the tonal bleaching of extreme highlights is unchanged. See the [background](#background) section.
 
 ### Display
 
@@ -244,7 +244,7 @@ target white luminance
 ### Options
 
 color science
-: This setting defaults to _v7 (2023)_ for new images, and defines the algorithms used by the _filmic_ module (e.g. the extreme luminance desaturation strategy). To revert to the behavior of previous versions of _filmic_, set this parameter to _v3 (2019)_, _v4 (2020)_, _v5 (2021)_ or _v6 (2022)_. The difference between these methods lies in the way in which they handle desaturation close to pure black and pure white (see the [background](#background) section for details). If you have previously edited an image using older versions of _filmic_, the color science setting will be kept at the earlier version number in order to provide backward compatibility for those edits. The _v7 (2023)_ method removes the _preserve chrominance_ option, and the _v8 (AgX)_ method applies the tone curve to each RGB channel separately inside a dedicated rendering color space (see the [background](#background) section for details on both). _v8 (AgX)_ comes in **four variants** -- _no bleach_, _low bleach_, _medium bleach_ and _high bleach_ -- which sit on a single trade-off between keeping saturation and keeping hue accurate; see the table in the [background](#background) section to choose one.
+: This setting defaults to _v7 (2023)_ for new images, and defines the algorithms used by the _filmic_ module (e.g. the extreme luminance desaturation strategy). To revert to the behavior of previous versions of _filmic_, set this parameter to _v3 (2019)_, _v4 (2020)_, _v5 (2021)_ or _v6 (2022)_. The difference between these methods lies in the way in which they handle desaturation close to pure black and pure white (see the [background](#background) section for details). If you have previously edited an image using older versions of _filmic_, the color science setting will be kept at the earlier version number in order to provide backward compatibility for those edits. The _v7 (2023)_ method removes the _preserve chrominance_ option, and the _v8 (AgX)_ method applies the tone curve to each RGB channel separately inside a dedicated rendering color space (see the [background](#background) section for details on both). _v8 (AgX)_ comes in **five variants** -- _no bleach_, _low bleach_, _medium bleach_, _high bleach_ and _extra bleach_ -- which sit on a single trade-off between keeping saturation and keeping hue accurate; see the table in the [background](#background) section to choose one.
 
 preserve chrominance
 : _(This setting is not available with the v7 and v8 color sciences)_. Define how the chrominance should be handled by _filmic_ -- either not at all, or using one of the three provided norms.
@@ -336,23 +336,106 @@ Where _v8_ differs from darktable/Blender AgX:
 - **The output is gamut-mapped.** _v8_ keeps filmic's _v6/v7_ gamut mapping against the export color profile; AgX has none, and its output can leave the display gamut freely.
 - **Everything else is regular filmic.** Scene white/black exposures, contrast, the shadows/highlights nodes, highlight reconstruction, and the display targets work exactly as in the other color sciences -- _v8_ only changes the color handling, not the tone machinery.
 
-### The four _v8_ variants {#variants}
+### The five _v8_ variants {#variants}
 
-Per-channel curves inevitably produce two side effects: they **desaturate** colors (bleach toward white as they brighten) and they **shift hue** (the classic blue-to-purple drift). The two cannot both be eliminated by the rendering-space compression -- pushing one down pushes the other up. The crucial asymmetry is that **hue is recoverable and saturation is not**: the _color preservation_ slider restores hue exactly, but nothing downstream can put back chroma the transform has bled away. The three variants are three points on that trade-off, so you can choose what to protect:
+Per-channel curves inevitably produce three coupled side effects on every color they touch, and the rendering-space compression cannot flatten all three at once -- pushing one down pushes another up:
 
-| variant | skin desat avg/max | skin hue drift avg/max | reflective desat avg/max | reflective hue drift avg/max | best suited for |
+- **desaturation** -- colors bleach toward white as they brighten (chroma is lost);
+- **hue drift** -- the classic blue-to-purple, red-to-orange rotation;
+- **apparent-brightness drift** -- a change in how *bright a color looks for its luminance* (the Helmholtz--Kohlrausch effect, below), which is what makes an over-cooked red read "self-luminous".
+
+The five variants are five points on this trade-off, from _no bleach_ (maximum saturation, largest hue drift) to _extra bleach_ (maximum hue and skin fidelity, most muted, most "film-like"). The crucial asymmetry: **hue drift is recoverable** -- the _color preservation_ slider restores it exactly -- but **lost saturation is not**; nothing downstream puts back chroma the transform bled away. So picking a variant is mostly deciding *how much saturation to keep versus how hue-stable and film-like* the render should be, knowing you can always pull hue back with the slider.
+
+#### What the numbers mean
+
+Beyond plain saturation and hue, two perceptual measures are used to fit and describe the variants:
+
+- **$\Delta E$ (color-shift distance)** -- one number for "how far did this color move", folding chroma loss and hue drift together. It is **not** the CIE 1976 or CIE 2000 $\Delta E$: those are built for small differences between reflective print colors and misbehave on the very bright, very saturated colors a tone mapper pushes around. Ours is measured in filmic's own perceptual working space and is *chroma-weighted* -- a hue error on a near-grey color barely counts, while the same error on a vivid color counts fully, the way the eye actually weighs it. Read it as **$0$ = color unchanged, $\approx 1$ = fully bleached to grey.**
+- **H-K apparent-brightness drift** -- the Helmholtz--Kohlrausch effect: a saturated color looks *brighter* than a grey of the same luminance (strongest for blue, red and magenta). Per-channel tone mapping changes this "extra glow" unevenly from hue to hue, which is what makes some renders look garish. "H-K drift" measures how much a variant shifts that glow relative to the original scene; **near $0$ means the render keeps the scene's natural brightness balance between colors** -- no hue popping out or sinking relative to its neighbours.
+
+#### Measured behaviour
+
+Measured over a human skin-tone database and a circle of diffuse "memory" colors (foliage, sky, skin, products) swept across the exposures a photographer would give them. **Saturation drift** is the fraction of chroma lost; **hue drift** is the raw rotation *before* the _color preservation_ slider is applied; averages and maxima are over the whole set.
+
+_Skin tones_
+
+{{< table >}}
+| variant | saturation drift (avg / max) | hue drift ° (avg / max) | $\Delta E$ (avg / max) | H-K drift (avg / max) |
+|---|---|---|---|---|
+| no bleach | 0.0% / 0.0% | 10.5 / 15.4 | 0.18 / 0.27 | +0.030 / +0.081 |
+| low bleach | 0.0% / 0.0% | 7.8 / 11.8 | 0.14 / 0.21 | +0.028 / +0.079 |
+| medium bleach | 0.0% / 0.5% | 5.3 / 8.7 | 0.09 / 0.15 | +0.026 / +0.076 |
+| high bleach | 0.1% / 3.9% | 2.8 / 5.8 | 0.05 / 0.10 | +0.023 / +0.071 |
+| extra bleach | 1.0% / 7.1% | 1.1 / 3.4 | 0.02 / 0.08 | +0.021 / +0.064 |
+{{< /table >}}
+
+_Reflective colors_
+
+{{< table >}}
+| variant | saturation drift (avg / max) | hue drift ° (avg / max) | $\Delta E$ (avg / max) | H-K drift (avg / max) |
+|---|---|---|---|---|
+| no bleach | 5.0% / 58.9% | 5.0 / 23.1 | 0.12 / 0.61 | +0.031 / −0.260 |
+| low bleach | 6.2% / 54.8% | 3.9 / 19.7 | 0.11 / 0.56 | +0.027 / −0.244 |
+| medium bleach | 7.6% / 56.6% | 2.9 / 18.9 | 0.11 / 0.57 | +0.023 / −0.245 |
+| high bleach | 8.9% / 58.9% | 2.1 / 18.3 | 0.11 / 0.60 | +0.020 / −0.248 |
+| extra bleach | 10.1% / 62.1% | 1.7 / 17.4 | 0.12 / 0.65 | +0.016 / −0.255 |
+{{< /table >}}
+
+The single trade-off is visible across every column: from _no_ to _extra bleach_, hue drift and $\Delta E$ fall while saturation drift rises. The high reflective **max** saturation drift (55--62 %) in every variant is the intended bleaching of near-clipping bright colors -- flames, LEDs, speculars -- the effect you chose AgX for; it is roughly the same in all five. Skin is protected in every variant (≤ 1 % average drift), so **no variant whitens skin** the way raw AgX does. Note that skin hue drift is *large* in _no bleach_ (10.5°) and small in _extra bleach_ (1.1°): _no bleach_ spends hue accuracy -- the recoverable quantity -- to protect skin *chroma*, and you buy the hue back with the slider.
+
+#### Per-hue behaviour
+
+For twelve reference hues, the raw hue drift (degrees, before the slider) and the rendered chroma (saturation of the output). Every column is **monotone** from _no_ to _extra bleach_: choosing a stronger variant moves every hue the same way, so the five are consistent renderings of one look, not five different looks.
+
+_Signed hue drift (°), before the slider_
+
+{{< table >}}
+| hue | no | low | medium | high | extra |
 |---|---|---|---|---|---|
-| **no bleach** | **0.0% / 0.0%** | 2.9° / 9.0° | 3.7% / 63.4% | 3.5° / 19.7° | sunsets |
-| **low bleach** | 0.0% / 0.0% | 2.0° / 6.3° | 7.1% / 71.4% | 2.6° / 12.9° | products |
-| **medium bleach** | 0.4% / 9.2% | 1.4° / 4.4° | 10.6% / 75.1% | 2.1° / 10.0° | neutral portraits |
-| **high bleach** | 2.6% / 19.0% | **0.8° / 2.1°** | 15.4% / 78.4% | 1.6° / 6.3° | _"film look"_ |
+| red | 5.5 | 3.8 | 2.3 | 0.7 | −0.8 |
+| red-orange | 6.1 | 4.4 | 2.8 | 1.3 | −0.2 |
+| orange | 4.5 | 3.5 | 2.6 | 1.7 | 0.7 |
+| yellow-green | 1.2 | 0.9 | 0.6 | 0.3 | −0.1 |
+| green | 3.2 | 2.3 | 1.5 | 0.7 | 0.0 |
+| cyan | 7.8 | 5.4 | 3.1 | 0.7 | −1.5 |
+| cyan-blue | 6.1 | 4.1 | 2.0 | −0.2 | −2.4 |
+| blue | 1.5 | 1.4 | 1.2 | 1.0 | 0.8 |
+| blue-magenta | −1.1 | −0.7 | −0.4 | −0.2 | −0.1 |
+| magenta | 2.4 | 1.6 | 1.0 | 0.4 | −0.1 |
+{{< /table >}}
 
-_Measured over a human skin-tone database and a circle of diffuse "memory" colors (foliage, sky, products), across the exposures a photographer might give them. Desaturation is the fraction of chroma lost; hue drift is measured **before** the color-preservation slider is applied. The high reflective **max** desaturation (63–78 %) in every variant is the intended bleaching of near-clipping bright colors -- flames, LEDs, speculars -- which is the effect you chose AgX for, and is roughly the same in all three._
+_Rendered chroma (decreases as bleach increases)_
 
-- **_no bleach_ -- protect saturation, restore hue with the slider.** Skin tones and diffuse colors keep essentially all their saturation (skin desaturation is literally 0 %); in exchange they carry the largest hue drift, which you pull back with the _color preservation_ slider (exact at +100 %). *Choose it* for colorful subjects, portraits and product work where washing colors out is the worst outcome -- the safe, reversible default. *Its cost (hue drift) is fully mitigated* by moving the slider toward +100 %.
-- **_high bleach_ -- protect hue, accept the wash-out.** Drives the raw hue drift to near nothing (skin 0.8°), so colors are hue-accurate even with the slider at -100 % (the pure "film" character), at the price of visibly desaturating bright colors (the strong AgX highlight wash-out look). *Choose it* when you want that highlight roll-off as an aesthetic and want correct hues without touching the slider. *Its cost (lost saturation) cannot be undone later* -- which is why it is not the default.
-- **_low bleach_ (default) -- the perceptual middle ground.** Built as the visual midpoint of _no bleach_ and _high bleach_ (it reproduces the average of their processed outputs), so it bisects the hue drift evenly (skin 2.9°→**2.0°**→0.8°) with an intermediate wash-out on saturated colors -- while still keeping skin fully saturated (0 % skin desaturation), so it does not whiten skin the way _high bleach_ can. *Choose it* for a well-behaved general-purpose rendering: softer color than _no bleach_ without committing to the strong _high bleach_ roll-off.
-- **_medium bleach_ -- the portrait compromise.** Build as the visual midpoint of _low bleach_ and _high bleach_, trades a bit of saturation for a bit hue constancy, and produces arguably more pleasing skin highlights without the full desaturation of _high bleach_.
+{{< table >}}
+| hue | no | low | medium | high | extra |
+|---|---|---|---|---|---|
+| red | 0.163 | 0.158 | 0.154 | 0.148 | 0.143 |
+| red-orange | 0.156 | 0.147 | 0.139 | 0.132 | 0.126 |
+| orange | 0.212 | 0.199 | 0.187 | 0.175 | 0.165 |
+| yellow-green | 0.277 | 0.263 | 0.251 | 0.239 | 0.226 |
+| green | 0.159 | 0.153 | 0.148 | 0.143 | 0.137 |
+| cyan | 0.126 | 0.121 | 0.116 | 0.111 | 0.106 |
+| cyan-blue | 0.228 | 0.223 | 0.216 | 0.208 | 0.199 |
+| blue | 0.246 | 0.242 | 0.237 | 0.230 | 0.223 |
+| blue-magenta | 0.275 | 0.272 | 0.269 | 0.267 | 0.264 |
+| magenta | 0.343 | 0.340 | 0.338 | 0.337 | 0.336 |
+{{< /table >}}
+
+#### How each variant was made, and its strengths and flaws
+
+**None of these is "correct" and none is best in every situation.** They are deliberate compromises on a trade-off with no free lunch; the fitting favoured a different priority for each end and interpolated the middle:
+
+- **_no bleach_ -- keep every bit of color, fix hue later.** Fitted to lose the *least* chroma and $\Delta E$ possible, protecting saturation absolutely (skin 0 %, reflective 5 % avg). *Strength:* the most vivid, punchy render; nothing is washed out. *Flaw:* the largest hue drift (skin 10.5°, reds swing orange), which you must correct with the _color preservation_ slider. *Choose it* when losing saturation is the worst outcome and you don't mind using the slider.
+- **_extra bleach_ -- maximum hue and skin fidelity, film wash-out.** Fitted to minimize hue drift and skin $\Delta E$ and to hold every hue's *apparent brightness* steady, spending chroma to do it. *Strength:* hue-accurate and calm even with the slider at −100 % (the pure "film" character); reds/magentas never read self-luminous. *Flaw:* the most muted colors, and the loss is permanent. *Choose it* for the film-like highlight roll-off as a look, or when hue accuracy without touching the slider matters most.
+- **_low_, _medium_, _high bleach_ -- the interpolated middle.** Each is built as the perceptual **midpoint** of two neighbours (so apparent brightness, hue *and* saturation all step evenly): _medium_ bisects _no_ and _extra_, _low_ bisects _no_ and _medium_, _high_ bisects _medium_ and _extra_. *Strength:* a smooth, even ramp -- pick the point on the saturation-versus-fidelity line you like and every color follows consistently. *Flaw:* none is a specialist; each is a compromise by construction. _medium_ is the neutral all-rounder; _low_ leans vivid; _high_ leans film-like.
+
+#### Choosing a variant
+
+- **Losing saturation is the worst outcome** (vivid subjects, sunsets, product shots, colorful fashion) → _no_ or _low bleach_, and pull hue back with the slider.
+- **Hue accuracy without touching the slider matters most** (skin-critical portraits, mixed lighting, neutral reproduction) → _high_ or _extra bleach_.
+- **You want the pronounced "film" highlight wash-out as a look** → _extra bleach_.
+- **Unsure / general-purpose** → _medium bleach_, the neutral middle (the shipped default is _low bleach_).
+- Remember the asymmetry: any variant's hue drift is reversible with _color preservation_; its saturation loss is not. When in doubt, err toward *less* bleach.
 
 ### Caveats
 
