@@ -8,6 +8,7 @@ working-color-space: RGB
 view: darkroom
 masking: true
 include_toc: true
+latex: true
 ---
 Remap the tonal range of an image by reproducing the tone and color response of classic film.
 
