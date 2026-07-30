@@ -69,29 +69,31 @@ red / green / blue correction
 
 ## Model quality and cost
 
-Quality is measured as **PSNR** (peak signal-to-noise ratio, in decibels):
-the log-scale ratio between the maximum signal and the residual error left
-after denoising, measured against known clean references on held-out cameras
-with physically calibrated synthetic noise. **Higher is better**; +3 dB
-halves the residual error energy. These figures average over ISO 100–102400
-regimes; the multiscale advantage is much larger than the average suggests
-at very high ISO (over +12 dB on flat areas at ISO 51200, where single-scale
-models leave colored blotches).
+Quality is measured as **PSNR gain** (peak signal-to-noise ratio, in
+decibels): PSNR is the log-scale ratio between the maximum signal and the
+residual error against a known clean reference. Absolute PSNR mostly tracks
+the ISO (noisier input, lower numbers everywhere) and says little about the
+reconstruction itself, so the tables report the **gain over the noisy
+input** — how far, from the noisy capture toward the clean target, the
+denoiser actually took the image. **Higher is better**; +3 dB halves the
+residual error energy. Measured on held-out cameras with physically
+calibrated synthetic noise, ISO 3200–51200.
 
-| PSNR (dB), all ISO | single-scale | multiscale |
-| ------------------ | ------------ | ---------- |
-| large              | 50.7         | 51.3       |
-| half               | 50.4         | *(in training)* |
+| PSNR gain (dB), all ISO | single-scale | multiscale |
+| ----------------------- | ------------ | ---------- |
+| large                   | +9.1         | +9.9       |
+| half                    | +8.6         | *(in training)* |
 
-The averages above are dominated by moderate ISO, where all variants are
-close. The choice criterion becomes legible **above ISO 12000**, where
+The choice criterion becomes legible **above ISO 12000**, where
 low-frequency chroma noise is what separates the variants — this is where
-the multiscale models earn their cost:
+the multiscale models earn their cost (and the per-pixel averages still
+understate it: on flat areas at ISO 51200, where single-scale models leave
+colored blotches, the multiscale gain exceeds +12 dB):
 
-| PSNR (dB), ISO > 12000 | single-scale | multiscale |
-| ---------------------- | ------------ | ---------- |
-| large                  | 42.5         | 43.7       |
-| half                   | 41.9         | *(in training)* |
+| PSNR gain (dB), ISO > 12000 | single-scale | multiscale |
+| --------------------------- | ------------ | ---------- |
+| large                       | +10.3        | +11.4      |
+| half                        | +9.7         | *(in training)* |
 
 Relative processing cost on **CPU** (×1 = the half-size, single-scale
 model — the CPU default):
