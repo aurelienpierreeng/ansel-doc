@@ -78,10 +78,20 @@ regimes; the multiscale advantage is much larger than the average suggests
 at very high ISO (over +12 dB on flat areas at ISO 51200, where single-scale
 models leave colored blotches).
 
-| PSNR (dB) | single-scale | multiscale |
-| --------- | ------------ | ---------- |
-| large     | 50.7         | 51.3       |
-| half      | 50.4         | *(in training)* |
+| PSNR (dB), all ISO | single-scale | multiscale |
+| ------------------ | ------------ | ---------- |
+| large              | 50.7         | 51.3       |
+| half               | 50.4         | *(in training)* |
+
+The averages above are dominated by moderate ISO, where all variants are
+close. The choice criterion becomes legible **above ISO 12000**, where
+low-frequency chroma noise is what separates the variants — this is where
+the multiscale models earn their cost:
+
+| PSNR (dB), ISO > 12000 | single-scale | multiscale |
+| ---------------------- | ------------ | ---------- |
+| large                  | 42.5         | 43.7       |
+| half                   | 41.9         | *(in training)* |
 
 Relative processing cost on **CPU** (×1 = the half-size, single-scale
 model — the CPU default):
