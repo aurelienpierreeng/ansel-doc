@@ -43,10 +43,10 @@ model size
 model variant
 : **single-scale** runs the full-resolution denoising pass only — fast, but
   no dedicated handling of low-frequency chroma noise. **multiscale** adds a
-  coarse chroma pass on a downscaled image plus a low-band fusion that pins
-  the largest scales to the sensor's own averaged measurement — the high
-  quality option, recommended at high ISO where single-scale denoising can
-  leave colored blotches.
+  coarse chroma pass on a downscaled image plus a low-band fusion that, on
+  smooth areas, pins the largest scales to the sensor's own averaged
+  measurement — the high quality option, recommended at high ISO where
+  single-scale denoising can leave colored blotches.
 
 ### noise profile correction
 
@@ -81,18 +81,19 @@ calibrated synthetic noise, ISO 3200–51200.
 
 | PSNR gain (dB), all ISO | single-scale | multiscale |
 | ----------------------- | ------------ | ---------- |
-| large                   | +9.1         | +9.9       |
+| large                   | +9.1         | +9.8       |
 | half                    | +8.6         | *(in training)* |
 
 The choice criterion becomes legible **above ISO 12000**, where
 low-frequency chroma noise is what separates the variants — this is where
 the multiscale models earn their cost (and the per-pixel averages still
 understate it: on flat areas at ISO 51200, where single-scale models leave
-colored blotches, the multiscale gain exceeds +12 dB):
+colored blotches, the multiscale gain exceeds +25 dB, about 10 dB beyond
+single-scale on the same charts):
 
 | PSNR gain (dB), ISO > 12000 | single-scale | multiscale |
 | --------------------------- | ------------ | ---------- |
-| large                       | +10.3        | +11.4      |
+| large                       | +10.3        | +11.3      |
 | half                        | +9.7         | *(in training)* |
 
 Relative processing cost on **CPU** (×1 = the half-size, single-scale
