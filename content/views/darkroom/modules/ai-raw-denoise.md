@@ -37,8 +37,8 @@ model version
 
 model size
 : Network width. **large** is the reference quality, practical on GPU;
-  **half** is roughly four times cheaper and is the default when no OpenCL
-  device is available.
+  **half** is roughly four times cheaper and is the default — enable-and-see
+  should never freeze a computer; switch to large once you know the cost.
 
 model variant
 : **single-scale** runs the full-resolution denoising pass only — fast, but
