@@ -54,18 +54,22 @@ The per-pixel noise amplitude fed to the network comes from the camera's
 noise profile at the image ISO. The feedback line under the section header
 shows which profile was matched (a generic profile is used for unprofiled
 cameras). The shipped profiles were measured on demosaiced data and
-systematically understate the true sensor noise; the module corrects this
-with factors calibrated against raw-mosaic measurements over 253 cameras —
-the controls below are trims on top of that calibration.
+systematically understate the true sensor noise; the correction is carried
+entirely by the controls below — what the sliders show is exactly what
+multiplies the profile's noise amplitude, nothing is applied behind the
+scenes.
 
 global correction
 : Scales the assumed noise amplitude for all channels (100 % trusts the
-  calibration). Raise it if noise remains, lower it if fine detail is eaten.
+  sliders as-is). Raise it if noise remains, lower it if fine detail is
+  eaten.
 
 red / green / blue correction
-: Per-channel trims of the profile correction. The demosaicing loss the
+: The per-channel correction factors. The defaults are calibrated against
+  raw-mosaic noise measurements over 253 cameras; the demosaicing loss the
   profiles suffered is channel-dependent (strongest on the dense green
-  lattice), and varies somewhat between camera models.
+  lattice) and varies somewhat between camera models, so per-image
+  adjustment can pay off at very high ISO.
 
 ## Model quality and cost
 
