@@ -103,7 +103,7 @@ the whole image, and the difference between single-scale and multiscale
 lives in *low-frequency chroma*: broad colored blotches that cover few
 pixels' worth of error but are highly visible. A metric that isolates them
 (residual chroma after binning 16×16) puts multiscale ahead by 1.8 dB at
-large size and 2.2 dB above ISO 12000, and on flat high-ISO charts — where
+large size and 2.0 dB above ISO 12000, and on flat high-ISO charts — where
 any chroma structure is error by construction — the gap widens further.
 So: **pick multiscale when you see colored blotches, not because of the
 table above**. At low ISO the two are interchangeable.
@@ -130,18 +130,32 @@ image. The AI models ran at their shipped defaults.
 | AI, half single-scale (the default) | +9.2 | +12.5 |
 | AI, large multiscale | +9.5 | +13.2 |
 
-Two things to take from this. **Tuned to its optimum, the classical module
-is competitive** — within roughly 1 dB of the neural models, and the gap is
-smaller at low ISO than at high. But **its defaults leave 5 to 8 dB on the
-table**, because the shipped noise profiles understate the true sensor
-noise, and no single strength value is right for every camera: the optimum
-found here ranged from 100 % to 200 %, and even the best *algorithm*
-changed between images. The AI models need none of that: they reach a
-slightly better result at their defaults, on every picture tested.
+**Read the second row with caution — it is not a setting you can dial in.**
+Those numbers took an exhaustive parametric sweep: 21 combinations of
+algorithm, colour mode and strength, re-rendered for every picture and
+every ISO, scored against a clean reference that only exists because the
+noise was synthetic. And the winner moved from picture to picture — strength
+between 100 % and 200 %, and on one image wavelets in RGB beat non-local
+means in Y0U0V0, which won everywhere else. There is no single "good"
+configuration to recommend, and on a real photograph you have no clean
+reference to score against: you are tuning by eye, on the same image whose
+correct appearance you are trying to recover.
 
-The measurement is reproducible — `scripts/compare_denoisers.py` in the
-[training repository](https://github.com/aurelienpierreeng/ansel-denoise)
-writes the synthetic raws and drives Ansel itself.
+Its **default** settings — the realistic case — land 5 to 8 dB lower,
+mostly because the shipped noise profiles understate the true sensor noise.
+
+So the fair summary is: **the AI models are somewhat better than the best
+the classical module can be made to do, and far less cumbersome** — they
+reach that result with no tuning at all, identically on every picture
+tested. The classical module remains useful when you want manual control
+over the trade-off, or on images the models handle poorly.
+
+Both measurements are reproducible from the
+[training repository](https://github.com/aurelienpierreeng/ansel-denoise):
+`scripts/compare_denoisers.py` writes the synthetic raws and drives Ansel
+itself, `scripts/speckle_bench.py` produces the model tables above, and
+`scripts/report_doc_tables.py` re-derives every number on this page from
+the committed results.
 
 Relative processing cost on **CPU** (×1 = the half-size, single-scale
 model — the CPU default):
