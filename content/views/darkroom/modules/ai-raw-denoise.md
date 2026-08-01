@@ -67,11 +67,36 @@ global correction
   eaten.
 
 red / green / blue correction
-: The per-channel correction factors. The defaults are calibrated against
-  raw-mosaic noise measurements over 253 cameras; the demosaicing loss the
-  profiles suffered is channel-dependent (strongest on the dense green
-  lattice) and varies somewhat between camera models, so per-image
-  adjustment can pay off at very high ISO.
+: The per-channel correction factors (defaults 282 %, 394 %, 296 %). They
+  are calibrated against raw-mosaic noise measurements over 253 cameras;
+  the demosaicing loss the profiles suffered is channel-dependent
+  (strongest on the dense green lattice) and varies somewhat between camera
+  models, so per-image adjustment can pay off at very high ISO.
+
+#### Cameras whose noise profile needs the correction removed
+
+Ansel's noise profiles are **community-contributed** and were measured
+over many years with varying rigour. For some camera families the values
+are not consistent with the rest of the database, and the calibrated
+defaults above — which assume a consistent profile — then over-state the
+noise enough that the network produces a **large hue and saturation
+shift** over the whole image.
+
+Identified so far: **entry-level Canon DSLRs** and **Panasonic Micro Four
+Thirds** bodies. The list is not exhaustive; the symptom is the reliable
+signal.
+
+The fix is manual, and it is quick: set **red, green and blue correction
+back to 100 %** — or lower if a cast remains. That removes the calibration
+bump entirely and feeds the network the profile's own values. Save it as a
+[preset](../../../preferences-settings/presets.md) auto-applied to that
+camera model and you will not have to think about it again.
+
+This cannot be corrected centrally. Those profiles are legacy data shared
+with [_denoise (profiled)_](./denoise-profiled.md) and the rest of the
+noise-aware modules: rewriting them would silently change how existing
+edits render everywhere else in Ansel, which is a worse outcome than a
+slider you set once per camera.
 
 ## Model quality and cost
 
