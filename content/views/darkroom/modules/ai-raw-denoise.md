@@ -86,11 +86,26 @@ Identified so far: **entry-level Canon DSLRs** and **Panasonic Micro Four
 Thirds** bodies. The list is not exhaustive; the symptom is the reliable
 signal.
 
-The fix is manual, and it is quick: set **red, green and blue correction
-back to 100 %** — or lower if a cast remains. That removes the calibration
-bump entirely and feeds the network the profile's own values. Save it as a
-[preset](../../../preferences-settings/presets.md) auto-applied to that
-camera model and you will not have to think about it again.
+**Very high ISO is a second, separate case, on any camera.** A profile
+covers the ISO settings that were actually measured, and above the highest
+one the last measurement is simply reused. Of the 433 profiled cameras,
+the median stops at **ISO 25 000** and only a quarter reach 51 200 — so
+past roughly ISO 64 000 most bodies are running on a value measured far
+below, describing a sensor regime that no longer applies.
+
+The error there can point either way, so read the symptom before reaching
+for a slider: grain left behind means the assumed noise is too low (raise
+*global correction*), while a tint means the balance *between* channels is
+off (trim the offending channel). Unlike the camera families above, this is
+a property of those frames, not of the body — correct the high-ISO images,
+not the camera.
+
+**The fix, for the camera families above:** set **red, green and blue
+correction back to 100 %** — or lower if a cast remains. That removes the
+calibration bump entirely and feeds the network the profile's own values.
+Save it as a [preset](../../../preferences-settings/presets.md)
+auto-applied to that camera model and you will not have to think about it
+again.
 
 This cannot be corrected centrally. Those profiles are legacy data shared
 with [_denoise (profiled)_](./denoise-profiled.md) and the rest of the
