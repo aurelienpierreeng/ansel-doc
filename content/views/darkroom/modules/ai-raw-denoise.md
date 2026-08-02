@@ -37,10 +37,14 @@ model version
 
 model size
 : Network width. **large** is the reference quality, practical on GPU;
-  **half** is roughly four times cheaper and is the default — enable-and-see
-  should never freeze a computer; switch to large once you know the cost.
-  **quarter** is four times cheaper again, for weak hardware or
-  near-realtime editing.
+  **half** is roughly four times cheaper; **quarter** is four times cheaper
+  again, for weak hardware or near-realtime editing.
+
+  The default depends on your machine, because enable-and-see should never
+  freeze a computer: **half** when OpenCL is available, **quarter** when
+  Ansel runs on the CPU alone. Both default to *multiscale*. Changing the
+  default only affects new edits — existing ones keep the model they were
+  made with.
 
 model variant
 : **single-scale** runs the full-resolution denoising pass only — fast, but
@@ -51,6 +55,11 @@ model variant
   for the **quarter** and **half** networks, which lack the capacity to
   handle low-frequency chroma alone, and very little at **large** size —
   see [model quality](#model-quality-and-cost) below.
+
+custom model
+: Runs a network of your own instead of the shipped ones — see
+  [using your own model](#using-your-own-model) below. Leave it on
+  *(shipped model)* unless you have trained one.
 
 ### noise profile correction
 
@@ -114,6 +123,100 @@ with [_denoise (profiled)_](./denoise-profiled.md) and the rest of the
 noise-aware modules: rewriting them would silently change how existing
 edits render everywhere else in Ansel, which is a worse outcome than a
 slider you set once per camera.
+
+## Using your own model
+
+The module is not tied to the networks Ansel ships. Any `.anselnn` file placed
+in your Ansel configuration directory appears in the **custom model** menu and
+is used instead of the shipped matrix.
+
+The configuration directory is:
+
+| system | path |
+| ------ | ---- |
+| Linux | `~/.config/ansel/` |
+| macOS | `~/.config/ansel/` |
+| Windows | `%LOCALAPPDATA%\ansel\` |
+
+Drop the file in, reopen the module, and it is listed by filename. Nothing
+needs restarting and nothing needs installing system-wide. While a custom
+model is selected, *model version*, *model size* and *model variant* are
+greyed out: they describe the shipped matrix, and no longer say anything about
+what is running.
+
+**Your edit records the file's name, not its position in the menu.** Add or
+remove other models and your existing edits keep pointing at the same network.
+The trade-off is that if you delete or rename a file an edit refers to, that
+edit stops denoising rather than silently switching to another model — the
+networks are not interchangeable, and quietly substituting one would change
+your picture without telling you. The menu keeps showing the missing name so
+you can see what happened; put the file back, or pick another model.
+
+Using a filename that matches a shipped model — `denoise-half-multi-v1.anselnn`
+and friends — *replaces* that shipped model instead of adding an entry. That is
+the way to A/B a retrained network against the one it is meant to supersede
+without touching any edit.
+
+### Training one
+
+Training happens in the companion repository,
+[ansel-denoise](https://github.com/aurelienpierreeng/ansel-denoise), which
+holds the corpus tooling, the training loop and the exporter. Its README is
+the reference; the shape of it is:
+
+```sh
+# 1. get the training corpus (public, base-ISO raw tiles)
+./scripts/fetch_shards.sh
+
+# 2. train — this is the long part, hours to days depending on the GPU
+python3 -m ansel_denoise.train --shards shards/train-all --out runs/mine \
+    --arch unet-ms --base 32 --depth 4 --steps 200000
+
+# 3. export the checkpoint to the format Ansel loads
+python3 -m ansel_denoise.export runs/mine/ckpt-best.pt --out mine.anselnn
+
+# 4. install it
+cp mine.anselnn ~/.config/ansel/
+```
+
+`--arch unet` trains a single-scale network, `--arch unet-ms` the multiscale
+one; `--base` sets the width (32 is *large*, 16 *half*, 8 *quarter*). The
+exporter writes the architecture, widths and the training-code revision into
+the file, so Ansel configures itself from the model rather than from your
+menu selection — a file trained at any width and either architecture loads
+without further ceremony.
+
+You do not need a GPU cluster to experiment, but you do need patience: the
+shipped models are 200 000 steps each. A shorter run produces a working model
+that simply denoises less well.
+
+**Contributing pictures is far cheaper than training.** The corpus is what
+limits quality, and adding your camera to it helps every user of every model —
+see [contributing training data](https://ansel.photos/en/contribute/training-data/).
+About ten minutes, no machine-learning knowledge required.
+
+### What a model must satisfy
+
+Ansel validates the file when it loads and refuses anything it cannot run, so
+a wrong file is a message, not a crash. The contract is:
+
+- the `ANSELDN1` container written by `ansel_denoise.export` — not a raw
+  PyTorch checkpoint, not ONNX;
+- one of the two architectures the executor implements, `unet` or `unet-ms`;
+- trained on the **raw mosaic** in Ansel's post-`raw settings` domain
+  (black-subtracted, normalised), conditioned on the same per-pixel sigma map
+  the module builds from the camera's noise profile.
+
+That last point is the one that bites: a network trained on demosaiced RGB, or
+on a different noise parameterisation, will load and run and produce
+nonsense — the file format cannot detect a semantic mismatch. Start from the
+training repository's own configuration rather than adapting a general-purpose
+denoiser.
+
+A multiscale model additionally declares an `anchor` scale and is fused
+against the sensor's own binned measurement at 16/32/64 px; that fusion
+expects a network trained with the DC-ownership loss the repository uses. A
+multiscale file trained some other way will show drift in deep shadows.
 
 ## Model quality and cost
 
