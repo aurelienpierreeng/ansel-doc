@@ -209,15 +209,20 @@ own per-module timer, keeping the fastest of three exports:
 | AI, large single-scale                     | ×3.5  | ×3.8  |
 | AI, half multiscale                        | ×1.2  | ×1.4  |
 | **AI, half single-scale** (the default)    | **×1**| **×1**|
-| AI, quarter                                | *(in training)* | *(in training)* |
+| AI, quarter multiscale                     | ×0.5  | ×0.5  |
+| AI, quarter single-scale                   | ×0.34 | ×0.29 |
 | *denoise (profiled)*, non-local means      | ×0.5  | ×0.9  |
 | *denoise (profiled)*, wavelets             | ×0.13 | ×0.2  |
 
-So the classical module is the cheap option — in wavelet mode roughly
-**eight times** cheaper than the cheapest AI model, and in non-local-means
-mode (the setting the quality sweep usually preferred) about half its cost
-on CPU and comparable on GPU. That is the trade against the ~1 dB of
-quality and the tuning it demands.
+The classical module in **wavelet** mode is the cheapest thing here by a
+wide margin: about eight times below the default, and still two to three
+times below even the quarter-size networks. Its **non-local-means** mode —
+the setting the quality sweep usually preferred — is a different matter. It
+costs about half the default on CPU, roughly what quarter multiscale costs,
+and on GPU it lands near the default itself: nearly twice quarter
+multiscale and three times quarter single-scale. So on a GPU the classical
+module's *good* mode is no longer the cheap choice; a quarter-size network
+runs faster than it.
 
 Two caveats on the GPU column. The differences there are *steeper* than on
 CPU, not flatter: the models were tiled to fit a 4 GB card, and tiling
