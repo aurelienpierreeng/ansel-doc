@@ -131,7 +131,7 @@ in training.
 | PSNR gain (dB), all ISO | single-scale | multiscale |
 | ----------------------- | ------------ | ---------- |
 | large                   | +10.6        | +10.5      |
-| half                    | +9.9         | +9.8       |
+| half                    | +9.9         | +9.9       |
 | quarter                 | +8.2         | +8.4       |
 
 | PSNR gain (dB), ISO > 12000 | single-scale | multiscale |
@@ -150,7 +150,7 @@ model size:
 | multiscale's chroma advantage | all ISO | ISO > 12000 |
 | ----------------------------- | ------- | ----------- |
 | large                         | 0.2 dB  | 0.3 dB      |
-| half                          | 1.4 dB  | 1.6 dB      |
+| half                          | 1.3 dB  | 1.6 dB      |
 | quarter                       | 2.6 dB  | 2.9 dB      |
 
 **The smaller the network, the more the coarse chroma pass is worth.** A
@@ -181,12 +181,12 @@ image. The AI models ran at their shipped defaults.
 | PSNR gain (dB) | ISO 3200 | ISO 12800 |
 | -------------- | -------- | --------- |
 | denoise (profiled), default settings | +3.4 | +3.5 |
-| denoise (profiled), **best per-image settings** | +8.8 | +11.9 |
-| AI, quarter single-scale | +7.2 | +9.9 |
+| denoise (profiled), **best per-image settings** | +8.8 | +12.0 |
+| AI, quarter single-scale | +7.3 | +9.9 |
 | AI, quarter multiscale | +7.9 | +10.5 |
 | AI, half single-scale (the default) | +9.1 | +12.4 |
-| AI, half multiscale | +9.3 | +12.9 |
-| AI, large multiscale | +9.7 | +13.4 |
+| AI, half multiscale | +9.3 | +13.0 |
+| AI, large multiscale | +9.7 | +13.5 |
 | AI, large single-scale | +9.8 | +13.7 |
 
 **Read the second row with caution — it is not a setting you can dial in.**
@@ -205,12 +205,12 @@ mostly because the shipped noise profiles understate the true sensor noise.
 
 So the fair summary depends on the size you run. **Half and large beat the
 best the classical module can be made to do** — by 0.3 to 1.0 dB at ISO
-3200 and 0.5 to 1.8 dB at 12800 — and they do it with no tuning at all,
+3200 and 0.4 to 1.8 dB at 12800 — and they do it with no tuning at all,
 identically on every picture tested. **The quarter models do not**: a
-perfectly tuned *denoise (profiled)* is 0.9 to 2.0 dB ahead of them. That
+perfectly tuned *denoise (profiled)* is 0.9 to 2.1 dB ahead of them. That
 is the honest price of a network eight times smaller, and it is worth
 knowing before choosing that size — though against the classical module's
-*realistic* settings, quarter is still 4 to 6 dB ahead.
+*realistic* settings, quarter is still 4 to 7 dB ahead.
 
 The classical module also remains useful when you want manual control over
 the trade-off, or on images the models handle poorly.
