@@ -197,25 +197,33 @@ itself, `scripts/speckle_bench.py` produces the model tables above, and
 `scripts/report_doc_tables.py` re-derives every number on this page from
 the committed results.
 
-Relative processing cost on **CPU** (×1 = the half-size, single-scale
-model — the CPU default):
+### Processing cost
 
-| CPU runtime | single-scale | multiscale |
-| ----------- | ------------ | ---------- |
-| large       | ×4           | ×4.2       |
-| half        | ×1           | ×1.2       |
-| quarter     | *(in training)* | *(in training)* |
+Every denoising option on one scale, ×1 being the **half-size,
+single-scale** model — the default. Measured on a 24 Mpx raw with Ansel's
+own per-module timer, keeping the fastest of three exports:
 
-Relative processing cost on **GPU** (×1 = half-size, single-scale; launch
-overheads flatten the differences compared to CPU):
+| relative cost                              | CPU   | GPU   |
+| ------------------------------------------ | ----- | ----- |
+| AI, large multiscale                       | ×3.9  | ×5.0  |
+| AI, large single-scale                     | ×3.5  | ×3.8  |
+| AI, half multiscale                        | ×1.2  | ×1.4  |
+| **AI, half single-scale** (the default)    | **×1**| **×1**|
+| AI, quarter                                | *(in training)* | *(in training)* |
+| *denoise (profiled)*, non-local means      | ×0.5  | ×0.9  |
+| *denoise (profiled)*, wavelets             | ×0.13 | ×0.2  |
 
-| GPU runtime | single-scale | multiscale |
-| ----------- | ------------ | ---------- |
-| large       | ×2.5         | ×2.7       |
-| half        | ×1           | ×1.1       |
-| quarter     | *(in training)* | *(in training)* |
+So the classical module is the cheap option — in wavelet mode roughly
+**eight times** cheaper than the cheapest AI model, and in non-local-means
+mode (the setting the quality sweep usually preferred) about half its cost
+on CPU and comparable on GPU. That is the trade against the ~1 dB of
+quality and the tuning it demands.
 
-CPU-to-GPU comparisons are deliberately absent: the ratio depends entirely
-on which CPU and which GPU. As a rough order of magnitude, a mid-range
+Two caveats on the GPU column. The differences there are *steeper* than on
+CPU, not flatter: the models were tiled to fit a 4 GB card, and tiling
+overlap costs proportionally more for the wider networks — on a card with
+more memory the large models close some of that gap. And CPU-to-GPU
+comparisons are deliberately absent, because that ratio depends entirely on
+which CPU and which GPU. As a rough order of magnitude, a mid-range
 discrete GPU runs the large model faster than a desktop CPU runs the half
-model; on laptops without a discrete GPU, prefer the half size.
+model; on laptops without a discrete GPU, prefer the half or quarter size.
