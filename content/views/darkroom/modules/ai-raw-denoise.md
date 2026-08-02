@@ -47,8 +47,10 @@ model variant
   no dedicated handling of low-frequency chroma noise. **multiscale** adds a
   coarse chroma pass on a downscaled image plus a low-band fusion that, on
   smooth areas, pins the largest scales to the sensor's own averaged
-  measurement — the high quality option, recommended at high ISO where
-  single-scale denoising can leave colored blotches.
+  measurement. How much that is worth depends on the size: it matters most
+  for the **quarter** and **half** networks, which lack the capacity to
+  handle low-frequency chroma alone, and very little at **large** size —
+  see [model quality](#model-quality-and-cost) below.
 
 ### noise profile correction
 
@@ -134,19 +136,32 @@ in training.
 
 | PSNR gain (dB), ISO > 12000 | single-scale | multiscale |
 | --------------------------- | ------------ | ---------- |
-| large                       | +11.7        | +11.9      |
+| large                       | +12.2        | +12.1      |
 | half                        | +11.5        | +11.5      |
 | quarter                     | +9.5         | +9.7       |
 
-**PSNR barely separates the variants — deliberately so.** It averages over
-the whole image, and the difference between single-scale and multiscale
-lives in *low-frequency chroma*: broad colored blotches that cover few
-pixels' worth of error but are highly visible. A metric that isolates them
-(residual chroma after binning 16×16) puts multiscale ahead by 1.8 dB at
-large size and 2.0 dB above ISO 12000, and on flat high-ISO charts — where
-any chroma structure is error by construction — the gap widens further.
-So: **pick multiscale when you see colored blotches, not because of the
-table above**. At low ISO the two are interchangeable.
+**PSNR barely separates the two variants**, because it averages over the
+whole image while their difference lives in *low-frequency chroma*: broad
+coloured blotches that account for little error energy but are very
+visible. A metric that isolates them — residual chroma after binning
+16×16 — shows what the tables above cannot, and it depends strongly on the
+model size:
+
+| multiscale's chroma advantage | all ISO | ISO > 12000 |
+| ----------------------------- | ------- | ----------- |
+| large                         | 0.2 dB  | 0.3 dB      |
+| half                          | 1.4 dB  | 1.6 dB      |
+| quarter                       | 2.6 dB  | 2.9 dB      |
+
+**The smaller the network, the more the coarse chroma pass is worth.** A
+large network has enough capacity to handle low-frequency chroma on its
+own, so multiscale buys it almost nothing; a quarter-size one does not, and
+the coarse pass is what keeps it free of blotches. Practically: **at large
+size prefer single-scale** — it is marginally ahead on PSNR and cheaper
+(×3.5 against ×3.9 on CPU, ×3.8 against ×5.0 on GPU). **At half and
+especially quarter size, prefer multiscale** whenever the image is noisy
+enough to blotch: it costs 20–40 % more at half size and 50–75 % more at
+quarter size, and it is what those sizes need to stay clean.
 
 ### Compared to *denoise (profiled)*
 
@@ -166,9 +181,13 @@ image. The AI models ran at their shipped defaults.
 | PSNR gain (dB) | ISO 3200 | ISO 12800 |
 | -------------- | -------- | --------- |
 | denoise (profiled), default settings | +3.4 | +3.5 |
-| denoise (profiled), **best per-image settings** | +8.8 | +12.0 |
-| AI, half single-scale (the default) | +9.2 | +12.5 |
-| AI, large multiscale | +9.5 | +13.2 |
+| denoise (profiled), **best per-image settings** | +8.8 | +11.9 |
+| AI, quarter single-scale | +7.2 | +9.9 |
+| AI, quarter multiscale | +7.9 | +10.5 |
+| AI, half single-scale (the default) | +9.1 | +12.4 |
+| AI, half multiscale | +9.3 | +12.9 |
+| AI, large multiscale | +9.7 | +13.4 |
+| AI, large single-scale | +9.8 | +13.7 |
 
 **Read the second row with caution — it is not a setting you can dial in.**
 Those numbers took an exhaustive parametric sweep: 21 combinations of
@@ -184,11 +203,17 @@ correct appearance you are trying to recover.
 Its **default** settings — the realistic case — land 5 to 8 dB lower,
 mostly because the shipped noise profiles understate the true sensor noise.
 
-So the fair summary is: **the AI models are somewhat better than the best
-the classical module can be made to do, and far less cumbersome** — they
-reach that result with no tuning at all, identically on every picture
-tested. The classical module remains useful when you want manual control
-over the trade-off, or on images the models handle poorly.
+So the fair summary depends on the size you run. **Half and large beat the
+best the classical module can be made to do** — by 0.3 to 1.0 dB at ISO
+3200 and 0.5 to 1.8 dB at 12800 — and they do it with no tuning at all,
+identically on every picture tested. **The quarter models do not**: a
+perfectly tuned *denoise (profiled)* is 0.9 to 2.0 dB ahead of them. That
+is the honest price of a network eight times smaller, and it is worth
+knowing before choosing that size — though against the classical module's
+*realistic* settings, quarter is still 4 to 6 dB ahead.
+
+The classical module also remains useful when you want manual control over
+the trade-off, or on images the models handle poorly.
 
 Both measurements are reproducible from the
 [training repository](https://github.com/aurelienpierreeng/ansel-denoise):
