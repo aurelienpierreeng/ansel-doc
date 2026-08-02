@@ -128,15 +128,15 @@ in training.
 
 | PSNR gain (dB), all ISO | single-scale | multiscale |
 | ----------------------- | ------------ | ---------- |
-| large                   | +10.1        | +10.2      |
+| large                   | +10.6        | +10.5      |
 | half                    | +9.9         | +9.8       |
-| quarter                 | *(in training)* | *(in training)* |
+| quarter                 | +8.2         | +8.4       |
 
 | PSNR gain (dB), ISO > 12000 | single-scale | multiscale |
 | --------------------------- | ------------ | ---------- |
 | large                       | +11.7        | +11.9      |
 | half                        | +11.5        | +11.5      |
-| quarter                     | *(in training)* | *(in training)* |
+| quarter                     | +9.5         | +9.7       |
 
 **PSNR barely separates the variants — deliberately so.** It averages over
 the whole image, and the difference between single-scale and multiscale
