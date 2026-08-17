@@ -149,9 +149,24 @@ The _scene-referred_ workflow forces a black level correction of --0.0002, in th
 
 ### Reconstruct
 
-This tab provides controls that blend transitions between unclipped and clipped areas within an image and can also help to reconstruct colors from adjacent pixels. It is designed to handle spotlights that could not possibly be unclipped when taking the shot (such as naked light bulbs or the sun disc in the frame) and aims at diffusing their edges as film would do. It is not designed to recover large areas of clipped pixels or in-paint missing parts of the image.
+**This tab is deprecated and is hidden for new edits.** Use the dedicated [_highlight reconstruction_](./highlight-reconstruction.md) module instead.
 
-It can sometimes be useful to disable the [_highlight reconstruction_](./highlight-reconstruction.md) module in order to provide additional data to the reconstruction algorithm (_highlight reconstruction_ clips highlight data by default). You should note that this can lead to magenta highlights, which will need to be handled with the _gray/colorful details_ slider.
+Filmic's highlight reconstruction dates from a time when the dedicated module could only handle mosaiced Bayer raws. That module now reconstructs X-Trans sensors and already-demosaiced input (sRAW, linear DNG) as well, using _harmonic transposition_ by default, which is a far more accurate method than the first-order color propagation implemented here. There is therefore no longer any reason to reconstruct highlights in filmic, and doing it here has a real cost: it happens late in the pipeline, after color profiling, so it works on data whose highlights have already been clipped and demosaiced.
+
+The recommended approach, in order:
+
+1. Leave [_highlight reconstruction_](./highlight-reconstruction.md) on its default _harmonic transposition_ method. This is enough for the large majority of images.
+2. If harmonic transposition alone does not fully recover a difficult area, add a **second instance** of _highlight reconstruction_ set to _guided laplacians_, stacked on top of the harmonic one, and mask it to the area that needs the extra work.
+3. Only if you are re-editing an existing image that already relies on the controls below should you keep using them.
+
+What happens to your existing edits:
+
+- **New edits** get the _threshold_ below at its maximum, +16 EV, which disables the whole feature and hides this tab. The reconstruction code is skipped entirely, so it costs nothing.
+- **Existing edits** keep whatever _threshold_ they were saved with, this tab stays visible for them, and they render exactly as before. Nothing you have already developed will change.
+
+The remainder of this section documents the controls as they behave for edits that still use them.
+
+This tab provides controls that blend transitions between unclipped and clipped areas within an image and can also help to reconstruct colors from adjacent pixels. It is designed to handle spotlights that could not possibly be unclipped when taking the shot (such as naked light bulbs or the sun disc in the frame) and aims at diffusing their edges as film would do. It is not designed to recover large areas of clipped pixels or in-paint missing parts of the image.
 
 Firstly, a mask needs to be set up to identify the parts of the image that will be affected by the highlights reconstruction. There are then some additional controls to fine-tune some of the trade-offs made by the reconstruction algorithm.
 
@@ -160,7 +175,7 @@ Firstly, a mask needs to be set up to identify the parts of the image that will 
 These controls allow you to choose which areas of the image are impacted by the highlight reconstruction algorithms.
 
 threshold
-: Any pixels brighter than this threshold will be affected by the reconstruction algorithm. The units are in EV, relative to the white point set in the _scene_ tab. By default, this control is set to +3 EV, meaning that pixels need to be at least +3 EV brighter than the white point set in the [_scene tab_](#scene) in order for the highlight reconstruction to have any effect. In practise, this means that highlight reconstruction is effectively disabled by default (for performance reasons -- it should only be enabled when required). Therefore, to use the _highlights reconstruction_ feature, first click the _display highlight reconstruction mask_ icon to show the mask, and lower this threshold until the highlight areas you want to reconstruct are selected in white by the mask. It may be useful to first review the image using the [raw overexposed warning](../../toolboxes/raw-overexposed.md) to show you which pixels in the raw file have been clipped, and whether those pixels are clipped on just one RGB channel or all of them.
+: Any pixels brighter than this threshold will be affected by the reconstruction algorithm. The units are in EV, relative to the white point set in the _scene_ tab. **The default is now +16 EV, the maximum, which disables the feature entirely** and hides this tab -- see the deprecation note above. Edits saved with an older version keep their own value (typically +3 EV). To use the feature on such an edit, click the _display highlight reconstruction mask_ icon to show the mask, and lower this threshold until the highlight areas you want to reconstruct are selected in white by the mask. It may be useful to first review the image using the [raw overexposed warning](../../toolboxes/raw-overexposed.md) to show you which pixels in the raw file have been clipped, and whether those pixels are clipped on just one RGB channel or all of them.
 
 transition
 : Use this control to soften the transition between clipped and valid pixels. Moving this control to the right will increase the amount of blur in the mask, so that the transition between clipped and non-clipped areas is softer. This allows for a smoother blending between the clipped and non-clipped regions. Moving this control to the left will reduce the blur in the mask, making the transition in the mask much sharper and therefore reducing the amount of feathering between clipped and non-clipped areas.
