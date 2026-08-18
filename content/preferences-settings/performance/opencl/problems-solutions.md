@@ -27,4 +27,50 @@ Here are a few cases that have been observed in the past:
 
 - Ansel fails to compile its OpenCL source files at run-time. In this case you will see a number of error messages looking like typical compiler errors. This could indicate an incompatibility between your OpenCL implementation and Ansel's interpretation of the standard. In that case please raise an issue on [github](https://github.com/darktable-org/darktable/issues/new/choose) and we will try to assist. Please also report if you see significant differences between CPU and GPU processing of an image.
 
+## When the GPU result differs from the CPU result
+
+The cases above are about OpenCL failing to start. A rarer and more confusing situation is
+OpenCL starting perfectly and then producing *different pixels* from the CPU. Ansel computes the
+same thing either way, so a visible difference means something below Ansel is not doing the
+arithmetic it claims.
+
+The usual culprit is the accuracy of the graphics driver's own math library. Ansel used to ask
+its kernels to be compiled with `-cl-unsafe-math-optimizations`, an option that allows a driver
+to substitute an approximate implementation for any standard mathematical function. Most drivers
+do this harmlessly. Some do not: on Intel integrated graphics, that option makes `erf()` return
+exactly zero for small arguments and `pow()` wrong by tens of percent, which visibly corrupted
+the [AI raw denoise]({{< relref "/views/darkroom/modules/ai-raw-denoise" >}}) module and,
+to a lesser degree, anything using gamma curves.
+
+Current versions no longer request that option, for any vendor. **However, updating Ansel is not
+enough to fix an affected installation.** The kernel compilation options are stored per device in
+`Anselrc`, written the first time a device is seen and never overwritten afterwards, so an old
+setting survives an upgrade. Look for:
+
+```
+cldevice_v4/<number>/<device-name>/building=...
+```
+
+If the value still contains `-cl-fast-relaxed-math` or `-cl-unsafe-math-optimizations`, replace
+it with:
+
+```
+cldevice_v4/<number>/<device-name>/building=-cl-mad-enable -cl-no-signed-zeros
+```
+
+then delete the compiled kernel cache so the kernels are rebuilt with the new options:
+
+```
+rm -rf ~/.cache/ansel/cached_kernels_for_*
+```
+
+Deleting the whole `building` line works too — Ansel will rewrite it with its current default.
+
+Two tools help you decide whether this applies to you. `tools/opencl-math-accuracy.c` in the
+Ansel sources is a small standalone program (it does not link against Ansel) that scores every
+OpenCL device on your machine, under every combination of compilation options, against a
+high-precision reference, and prints the exact `Anselrc` line for any device that needs one. And
+[`Ansel-nn-parity`]({{< relref "/cli/ansel-nn-parity" >}}) checks the neural denoiser
+specifically, telling you whether the CPU, the GPU or neither is the one disagreeing.
+
 A few on-CPU implementations of OpenCL also exist, coming as drivers provided by INTEL or AMD. We have observed that they do not provide any speed gain versus our hand-optimized CPU code. Therefore Ansel simply discards these devices by default. This behavior can be changed by setting the configuration variable `opencl_use_cpu_devices` (in `$HOME/.config/Anselrc`) to `TRUE`.

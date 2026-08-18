@@ -266,6 +266,36 @@ especially quarter size, prefer multiscale** whenever the image is noisy
 enough to blotch: it costs 20–40 % more at half size and 50–75 % more at
 quarter size, and it is what those sizes need to stay clean.
 
+### X-Trans sensors and small models
+
+The tables above are averages over many cameras. On **X-Trans** sensors (Fujifilm) the smaller
+models have one specific weakness they do not have on Bayer sensors: they leave a faint regular
+pattern, aligned with the sensor's 6×6 colour filter array, visible in smooth areas at high
+magnification.
+
+It scales strongly with model size. Measured on a Fujifilm X100F frame, as the strength of
+sensor-aligned structure in a flat area relative to the same frame rendered without denoising:
+
+| model   | residual sensor pattern |
+| ------- | ----------------------- |
+| quarter | ≈ 970×                  |
+| half    | ≈ 84×                   |
+| large   | ≈ 16×                   |
+
+This is a limit of what a small network can learn, not a defect in the CPU or GPU code — the two
+devices agree to three significant figures, and the effect falls by a factor of sixty purely by
+giving the network more parameters. An X-Trans array has 36 distinct site types to treat
+consistently against a Bayer array's four, and a small network does that less well.
+
+**On X-Trans, prefer `large` when the processing time is acceptable, and `half` as the sensible
+compromise.** On Bayer sensors the smaller models are much better behaved and the advice in the
+previous section applies unchanged.
+
+If you see a *strong* grid rather than a faint one — coarse, or clearly tied to rectangular
+tiles — that is a different problem and is not about model size; see [when the GPU result differs
+from the CPU result]({{< relref
+"/preferences-settings/performance/opencl/problems-solutions" >}}).
+
 ### Compared to *denoise (profiled)*
 
 Ansel's classical [_denoise (profiled)_](./denoise-profiled.md) module solves
