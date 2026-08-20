@@ -1,7 +1,7 @@
 ---
 title: Color calibration
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2026-03-31
+lastmod: 2026-08-21
 id: color-calibration
 applicable-version: 4.0
 working-color-space: RGB
@@ -95,7 +95,7 @@ adaptation
 : - _CAT16 (2016)_: This is the default option and is more robust in avoiding imaginary colors while working with large gamut or saturated cyan and purple. It is more accurate than the Bradford CAT in most cases.
 : - _Non-linear Bradford (1985)_: This can sometimes produce better results than the linear version but is unreliable.
 : - _XYZ_: This is the least accurate method and is generally not recommended except for testing and debugging purposes.
-: - _none (disable)_: Disable any adaptation and use the pipeline working RGB space.
+: - _none (bypass)_: Disable any adaptation and use the pipeline working RGB space.
 
 illuminant
 : The type of illuminant assumed to have lit the scene. Choose from the following:
@@ -139,7 +139,7 @@ In all these cases, you **must** enable the "clip negative RGB from gamut" optio
 
 The remainder of this module is a standard channel mixer, allowing you to adjust the output R, G, B, colorfulness, brightness and gray of the module based on the relative strengths of the R, G and B input channels.
 
-The _Mixer_ tab now offers several modes, but these are only different GUI representations of the same backend reality. Internally, the processing still uses the same mixer coefficients in the selected _adaptation_ space. Switching between _Complete_, _Simple_ and _Primaries_ does not select a different algorithm and does not change the backend by itself. It only changes how the same underlying matrix is exposed in the GUI.
+The _Mixer_ tab now offers several modes, but these are only different GUI representations of the same backend reality. Internally, the processing still uses the same mixer coefficients in the selected _adaptation_ space. Switching between _Complete_, _Simple_, _Primaries_ and _White-preserving_ does not select a different algorithm and does not change the backend by itself. It only changes how the same underlying matrix is exposed in the GUI.
 
 Channel mixing is performed in the color space defined by the _adaptation_ control on the [CAT tab](#cat-tab-controls). For all practical purposes, these CAT spaces are particular RGB spaces tied to human physiology and proportional to the light emissions in the scene, but they still behave in the same way as any other RGB space. The use of any of the CAT spaces can make the channel mixer tuning process easier, due to their connection with human physiology, but it is also possible to mix channels in the RGB working space of the pipeline by setting the _adaptation_ to "none (bypass)". To perform channel mixing in one of the _adaptation_ color spaces without chromatic adaptation, set the _illuminant_ to "same as pipeline (D50)".
 
@@ -164,6 +164,26 @@ The channel mixing process is therefore tied to a physical interpretation of the
 ### Mixer modes
 
 All mixer modes describe the same backend 3×3 transform for the RGB output channels. They differ only by the parameterization used in the GUI and by the mathematical constraints required for that parameterization to exist.
+
+A 3×3 matrix has 9 coefficients, so a mode that exposes 9 controls can reach every possible mixer, and a mode that exposes 6 necessarily describes a restricted family. What each restricted mode gives up in reach, it buys back in predictability: the 3 coefficients it does not expose are not free, they are solved so as to keep some property of the transform invariant. That is the real difference between the modes, and it is what should drive your choice:
+
+{{< table >}}
+| mode | controls | what it holds invariant | available when |
+|---|---|---|---|
+| _Complete_ | 9 | nothing | always |
+| _Simple_ | 6 | the (1,1,1) axis of the mixer space | the 3 output rows are normalized and their sums are non-zero |
+| _Primaries_ | 9 | nothing | the matrix is non-singular and every column has a non-zero sum |
+| _White-preserving_ | 6 | the neutral of the mixer space | the matrix already leaves that neutral unchanged |
+{{< /table >}}
+
+In practice:
+
+- reach for _Complete_ when you have actual coefficients to type in, or when no other mode can express what you need;
+- reach for _White-preserving_ when you are grading and want the guarantee that the correction cannot introduce a global cast behind your back;
+- reach for _Simple_ for the same guarantee when _adaptation_ is "none (bypass)", where its invariant axis is the neutral -- but note that in a CAT space it pins `(1,1,1)`, which is not the neutral there (see below);
+- reach for _Primaries_ when you deliberately __want__ to tint the white or change the overall gain, which the two 6-control modes cannot do by construction.
+
+Whenever the current matrix leaves a mode's constraint unsatisfied, that mode is refused and the GUI falls back to _Complete_ rather than silently showing you controls that do not describe the matrix in use.
 
 #### Simple mode
 
@@ -198,6 +218,31 @@ _Primaries_ is another exact GUI representation, this time expressed as a genera
 - 1 _gain_ correction, that accounts for global normalization. 
 
 This mode is exact only for matrices that can be interpreted as a non-degenerate affine basis change in the current adaptation space. In practice, the current 3×3 matrix must be non-singular and the 3 basis vectors plus the white vector must all have non-zero sums. If these requirements are not met, Ansel cannot rebuild the current matrix as primaries parameters and the GUI falls back to _Complete_.
+
+#### White-preserving mode
+
+_White-preserving_ describes the same primaries picture as _Primaries_ above, with the white nailed down. It has 6 degrees of freedom, 2 per primary:
+
+red, green and blue rotation
+: Turn that primary around the white, within the chromaticity plane of the mixer space. This is a hue rotation, but a per-primary one: you can swing the reds without touching the blues, which the global rotation of _Simple_ cannot do.
+
+red, green and blue saturation
+: Scale the distance between that primary and the white. `0%` leaves the primary where the mixer space puts it, `-100%` collapses it onto the white, and `+100%` doubles its distance. Negative values desaturate whatever that primary contributes to the image, positive values push it outward.
+
+All six controls at `0` is the identity matrix, exactly. Setting the three _saturation_ sliders together to the same value is exactly a global saturation control around the neutral: `+100%` doubles the colorfulness of the image, and moving them down together desaturates it.
+
+One asymmetry is worth knowing about. A _single_ primary can go all the way to `-100%`: collapsing one primary onto the neutral still leaves a usable transform. All _three_ at once cannot, because a mixer with every primary sitting on the neutral maps the entire image to a single color and has no inverse to build from. The three-at-once limit measures at about `-86%`, which already leaves only a seventh of the original colorfulness. Past it, the mode reports that the primaries are degenerate and the sliders snap back to the last usable setting -- for a true black-and-white conversion, use the _B&W_ section of the _Outputs_ tab instead.
+
+The distinguishing property is in the name and it is structural, not approximate: __whatever the six sliders do, the neutral of the mixer space comes out unchanged__. This is not a constraint applied on top of the model, it __is__ the model. Only the 3 primary chromaticities are yours to set; the 3 magnitudes that go with them are solved from the requirement that the neutral maps to itself, which is exactly how 6 controls can describe the whole family of neutral-preserving mixers and nothing else.
+
+Which neutral is preserved depends on the _adaptation_ setting of the CAT tab, because that is what defines the mixer space:
+
+- with _adaptation_ set to "none (bypass)", the mixer runs in the pipeline working RGB and the preserved neutral is `(1,1,1)` there;
+- with any CAT space (_Bradford_, _CAT16_, _XYZ_), the mixer runs after the chromatic adaptation, where a neutral pixel carries the D50 white expressed in that space -- and that is the vector this mode preserves.
+
+This is worth knowing because it is where _White-preserving_ and _Simple_ part company. _Simple_ pins the `(1,1,1)` axis of whatever space it runs in. In "none (bypass)" that __is__ the neutral, and the two modes then describe exactly the same family of matrices with different controls -- pick whichever set of sliders suits the correction you have in mind. In a CAT space, however, `(1,1,1)` is not the neutral the pipeline carries, so a _Simple_ setting can shift neutrals there, while _White-preserving_ cannot.
+
+The mode is available when the current matrix already leaves the mixer neutral unchanged, every column has a non-zero sum, and the 3 primaries are not collinear -- two primaries turned onto the same direction flatten the model and are refused. Note that a matrix with all 3 _normalize channels_ checkboxes enabled preserves `(1,1,1)`, which qualifies in "none (bypass)" but generally not in a CAT space.
 
 ### Complete mode
 
