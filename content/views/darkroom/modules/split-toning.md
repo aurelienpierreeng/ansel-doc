@@ -1,6 +1,7 @@
 ---
 title: Split-toning
 date: 2026-04-03T00:00:00+02:00
+lastmod: 2026-08-21
 id: split-toning
 applicable-version: 4.0
 working-color-space: RGB
@@ -74,7 +75,7 @@ Each tab contains three sections:
 
 - a brightness keyframe,
 - a CAT16 temperature,
-- one of three RGB mixer GUI modes.
+- one of four RGB mixer GUI modes.
 
 ### Brightness
 
@@ -103,9 +104,25 @@ mode
 
 - _Complete_,
 - _Simple_,
-- _Primaries_.
+- _Primaries_,
+- _White-preserving_.
 
 These are only different parameterizations of the same backend 3×3 mixer. Switching mode does not select a different processing algorithm. It only changes how the matrix is edited.
+
+A 3×3 matrix has 9 coefficients, so a mode exposing 9 controls reaches every mixer, and a mode exposing 6 describes a restricted family. The 3 coefficients a 6-control mode does not expose are not dropped, they are solved to keep something invariant -- which is the property you are really choosing between:
+
+{{< table >}}
+| mode | controls | what it holds invariant | available when |
+|---|---|---|---|
+| _Complete_ | 9 | nothing | always |
+| _Simple_ | 6 | the neutral axis | the 3 output rows are normalized and their sums are non-zero |
+| _Primaries_ | 9 | nothing | the matrix is non-singular and every column has a non-zero sum |
+| _White-preserving_ | 6 | the neutral axis | the matrix already leaves the neutral unchanged |
+{{< /table >}}
+
+Unlike [_color calibration_](./color-calibration.md), this module always mixes in the pipeline working RGB, never in a CAT space -- the CAT16 adaptation here is a separate step applied before the mixer, not the space the mixer runs in. The neutral is therefore always `(1,1,1)`, and _Simple_ and _White-preserving_ turn out to describe __exactly the same family of matrices__, just through different controls. Choose between them by which set of sliders matches the correction you have in mind, not by what they can reach.
+
+When the current matrix does not satisfy a mode's constraint, that mode is refused and the GUI falls back to _Complete_, rather than showing controls that do not describe the matrix actually in use.
 
 #### Complete mode
 
@@ -161,6 +178,24 @@ _Primaries_ is another exact GUI representation, this time expressed as a genera
 
 This mode is exact only when the current 3×3 mixer can be interpreted as a non-degenerate affine basis change with non-zero affine sums. If not, the GUI falls back to _Complete_.
 
+It is the only mode of the four that can tint the neutral or change the overall gain of the keyframe. Use it when that is what you want; use one of the 6-control modes when it is not.
+
+#### White-preserving mode
+
+_White-preserving_ is the primaries picture with the white nailed down. It exposes 6 parameters, 2 per primary:
+
+red, green and blue rotation
+: Turn that primary around the neutral in the chromaticity plane. This is a per-primary hue rotation: you can swing the reds of a keyframe without touching its blues, which the single global rotation of _Simple_ cannot do.
+
+red, green and blue saturation
+: Scale the distance between that primary and the neutral. `0%` leaves it alone, `-100%` collapses it onto the neutral, `+100%` doubles its distance.
+
+All six controls at `0` is the identity matrix. Setting the three _saturation_ sliders together to the same value is a plain saturation control for that keyframe: `+100%` doubles the colorfulness of the keyed tones, and moving them down together desaturates them. A single primary can be taken all the way down to `-100%`, but all three at once stop at about `-86%`: a keyframe with every primary sitting on the neutral maps everything to one color and has no transform left to describe. Past that limit the sliders snap back to the last usable setting.
+
+The property the mode guarantees is that the neutral of the keyframe is left exactly where it is, no matter what the six sliders do. The 3 column magnitudes are solved from that requirement rather than exposed, which is what lets 6 controls describe every neutral-preserving mixer and nothing else. In a split-toning context this gives a clean division of labour: the CAT16 _temperature_ is what tints the neutral of a keyframe, and the mixer then reshapes the colors around that neutral without moving it. If you want the split to come from the temperature alone, this mode guarantees the mixer will not add a cast of its own on top.
+
+This mode requires the current matrix to leave the neutral unchanged, every column to have a non-zero sum, and the 3 primaries not to be collinear -- two primaries turned onto the same direction flatten the model and are refused. If those are not met, the GUI falls back to _Complete_.
+
 ## Practical guidance
 
 This module works best when the two keyframes reflect real exposure zones in the scene.
@@ -183,7 +218,8 @@ For creative grading:
 
 - place the two keyframes closer together to concentrate the transition in the midtones,
 - push them farther apart to make the blend more gradual,
-- use different mixer modes for exploration, but remember they all write the same backend matrix.
+- use different mixer modes for exploration, but remember they all write the same backend matrix,
+- prefer _White-preserving_ (or _Simple_) when you want the split to come purely from the keyed blend, since neither can move the neutral of a keyframe.
 
 If the image starts to feel synthetic, simplify the transform first:
 
