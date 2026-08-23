@@ -79,7 +79,7 @@ Each of the three flaws this module fixes — vignetting, distortion and chromat
 
 That is decided per flaw, not per file, because manufacturers do not all publish the same set. Olympus bodies, for instance, embed distortion and chromatic aberration but no vignetting — so on those images the first two default to the camera's own profile while vignetting stays on the database, which is exactly what you want and needs no action from you.
 
-> **Note:** distortion and chromatic aberration are corrected together, by one and the same calculation — the manufacturers' profiles do not separate them either. If you set them to different sources, both follow the one you chose for distortion.
+> **Note:** a manufacturer's profile describes distortion and chromatic aberration as a single measurement, so "embedded correction" is offered for chromatic aberration only when distortion is using it too. The other way round is free: an embedded distortion works with a database or hand-typed aberration, which is what you want if you are chasing residual fringing your camera's profile leaves behind.
 
 ## Module controls
 
