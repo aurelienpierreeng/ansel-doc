@@ -102,6 +102,14 @@ Ansel runs on **Linux, Windows, and macOS**, and the manual is read by users of 
 - **Cross-references**: prefer relative Markdown links to other content files for stability; use `{{< relref >}}` where the existing pages do (e.g. linking across language/section boundaries).
 - **Tables**: use the `{{< table >}}` shortcode where existing pages do (for anything beyond a trivial Markdown table), for consistent styling.
 
+## Accuracy: stay in sync with the source code
+
+This is user-facing documentation for a real, actively-developed application ([github.com/aurelienpierreeng/ansel](https://github.com/aurelienpierreeng/ansel)) — it must describe what Ansel *actually* does, not what it used to do or what seems plausible.
+
+- Don't describe a control, default value, keyboard shortcut, preference, or behavior from memory, from an old version, or by analogy with darktable — verify it against the current source (or a current build/screenshot) when in doubt, especially for anything numeric (defaults, ranges) or anything likely to have changed recently.
+- When a change in the source code (a new option, a renamed control, a changed default, a removed feature) makes a page inaccurate, update that page as part of the change rather than leaving it stale — see the existing pattern of `{{< note >}}` callouts flagging behavior that moved or changed (e.g. `content/preferences-settings/darkroom.md`).
+- If unsure whether current wording still matches the application, say so rather than guessing, and prefer checking the source over leaving an unverified claim.
+
 ## Citations
 
 If a claim benefits from an external/scientific source, use Markdown footnote syntax with numeric references, and prefer a DOI or other long-term-stable URL over an ephemeral link. Follow IEEE-style citation formatting for the reference list.
@@ -115,5 +123,6 @@ If a claim benefits from an external/scientific source, use Markdown footnote sy
 
 1. Check whether the concept already has a page — link to it instead of duplicating an explanation.
 2. Check what section/weight it belongs in, and whether existing sibling pages set a pattern (frontmatter fields, heading structure, definition-list vs. prose) worth following.
-3. After writing, add links *to* the new page from related existing pages where it genuinely helps navigation — a page that nothing links to is much harder to discover.
-4. If the page answers a question that repeatedly comes up (e.g. on the forum), consider whether it should also be linked from a higher-level overview/FAQ-style page, not just buried in a subsection.
+3. Verify against the current source code rather than assuming — see "Accuracy" above.
+4. After writing, add links *to* the new page from related existing pages where it genuinely helps navigation — a page that nothing links to is much harder to discover.
+5. If the page answers a question that repeatedly comes up (e.g. on the forum), consider whether it should also be linked from a higher-level overview/FAQ-style page, not just buried in a subsection.
