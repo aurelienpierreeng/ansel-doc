@@ -74,9 +74,15 @@ Most existing module pages predate this requirement and don't have a `## Workflo
 **Preference/setting reference pages** (`content/preferences-settings/*.md`):
 1. A one-line intro linking to the relevant view/feature.
 2. `##` sections grouping related settings (e.g. `## General`, `## Modules`).
-3. Each setting as a Markdown definition list entry (term = setting name as it appears in the UI, definition = what it does, including the default value), per the existing "Structure and formatting conventions" below.
+3. Each setting as a Markdown definition list entry (term = setting name, capitalized per "Spelling and capitalization" below even though the UI label itself is lowercase; definition = what it does, including the default value), per the existing "Structure and formatting conventions" below.
 
 ## Documentation style
+
+**Spelling and capitalization:**
+
+- Use correct English spelling and grammar throughout — proofread before committing.
+- Capitalize the first letter of every sentence.
+- Capitalize the first letter of parameter/setting names when naming them in the documentation, even where the Ansel UI itself displays the label in lowercase (e.g. write "Invert the direction of the mouse vertical/horizontal scroll", not "invert the direction..."). This applies to definition-list terms, inline mentions, and table entries alike. Existing pages predate this rule and mostly use the raw lowercase UI label — whenever you come across one, fix its casing to match this rule, even if that setting isn't otherwise the focus of your change.
 
 Ansel runs on **Linux, Windows, and macOS**, and the manual is read by users of all three — write with a cross-platform audience in mind by default:
 
@@ -90,6 +96,8 @@ Ansel runs on **Linux, Windows, and macOS**, and the manual is read by users of 
   - macOS: `<kbd>⌘</kbd>+<kbd>Z</kbd>`
 - Other modifiers (<kbd>Shift</kbd>, <kbd>Alt</kbd>/<kbd>Option</kbd>) should also be given per platform where they differ.
 - If a shortcuts table/list is being written, prefer a layout with separate columns (or rows) for Linux/Windows vs. macOS rather than a single ambiguous column.
+
+**Never compare Ansel to darktable** in regular feature/module/preference pages. Ansel is a fork, but it is documented on its own terms: describe what a feature does and how to use it, not how it differs from, improves on, or removes something from darktable, and don't editorialize about darktable's own choices. This keeps pages accurate and readable for users who have never used darktable, and it keeps that framing out of pages where it will silently rot as both projects diverge further. The narrow exceptions are the pages whose whole purpose is migration/compatibility — `content/install/darktable.md`, `content/from-darktable.md`, and "Coming from Darktable" `{{< note >}}` callouts pointing to where a relocated feature now lives — where a direct comparison is the point.
 
 ## Structure and formatting conventions
 
