@@ -11,7 +11,7 @@ masking: false
 
 Automatically correct for (and simulate) lens distortion, transversal chromatic aberrations (TCA) and vignetting.
 
-This module identifies the camera/lens combination from the image's Exif data, then corrects each flaw from one of two places: a database of lens calibrations that ships with Ansel, or a profile your own camera wrote into the raw file. See [where corrections come from](#where-corrections-come-from) below.
+This module identifies the camera/lens combination from the image's Exif data, then corrects each flaw from one of two places: a *community profile* from the calibration database that ships with Ansel, or a *vendor profile* your own camera wrote into the raw file. See [where corrections come from](#where-corrections-come-from) below.
 
 The database is built from the calibrations published by the [lensfun project](https://lensfun.github.io/), whose community measures and maintains them. Ansel does not use the lensfun library itself to correct your pictures — it reads the calibrations and does the arithmetic on its own, which is what lets the correction run on the GPU — but the profiles are lensfun's, and everything below about finding, adding or creating a profile applies unchanged.
 
@@ -63,10 +63,10 @@ Run `ansel-lens-db-update --help` for the options, which mostly matter if you ke
 
 Each of the three flaws this module fixes — vignetting, distortion and chromatic aberration — is corrected from a *source*, and you choose one per flaw:
 
-**database correction**
-: From the calibration database Ansel ships. Measured by the lensfun community for your lens model.
+**community profile**
+: From the calibration database Ansel ships. Measured by the lensfun community for your lens *model* — someone else's copy of the same lens, which is normally close enough.
 
-**embedded correction**
+**vendor profile**
 : From the profile your camera wrote into the raw file itself. Sony, Fujifilm and Olympus bodies publish one, as do many cameras that shoot DNG. The manufacturer measured the actual lens on a bench, so this is usually the better of the two, and Ansel picks it by default wherever the file offers it.
 
 **manual correction**
@@ -75,11 +75,11 @@ Each of the three flaws this module fixes — vignetting, distortion and chromat
 **no correction**
 : Leave this flaw alone.
 
-**A source only appears if it can actually be used on the image in front of you.** If your lens is not in the database, "database correction" is not offered for it. If your camera embedded nothing, neither is "embedded correction". So the list you see *is* the list of things that will work — there is nothing to try and find out.
+**A source only appears if it can actually be used on the image in front of you.** If your lens is not in the database, "community profile" is not offered for it. If your camera wrote nothing into the file, neither is "vendor profile". So the list you see *is* the list of things that will work — there is nothing to try and find out.
 
 That is decided per flaw, not per file, because manufacturers do not all publish the same set. Olympus bodies, for instance, embed distortion and chromatic aberration but no vignetting — so on those images the first two default to the camera's own profile while vignetting stays on the database, which is exactly what you want and needs no action from you.
 
-> **Note:** a manufacturer's profile describes distortion and chromatic aberration as a single measurement, so "embedded correction" is offered for chromatic aberration only when distortion is using it too. The other way round is free: an embedded distortion works with a database or hand-typed aberration, which is what you want if you are chasing residual fringing your camera's profile leaves behind.
+> **Note:** a manufacturer's profile describes distortion and chromatic aberration as a single measurement, so "vendor profile" is offered for chromatic aberration only when distortion is using it too. The other way round is free: a vendor distortion works with a community or hand-typed aberration, which is what you want if you are chasing residual fringing your camera's profile leaves behind.
 
 ## Module controls
 
@@ -101,12 +101,12 @@ distortion
 : Correct the bending of straight lines — barrel or pincushion. Choose the source, as described above. The two controls below belong to this correction and appear with it.
 
 geometry
-: Change the projection of your image, for example to render a fish-eye frame as rectilinear. Only offered with **database correction**, because the projection of a lens is something the database describes and a manufacturer's profile does not — the manufacturer measured the lens in the projection it was built for. To correct the aspect ratio of an anamorphic lens, use the [_rotate and perspective_](./rotate-perspective.md) module instead.
+: Change the projection of your image, for example to render a fish-eye frame as rectilinear. Only offered with **community profile**, because the projection of a lens is something the database describes and a vendor profile does not — the manufacturer measured the lens in the projection it was built for. To correct the aspect ratio of an anamorphic lens, use the [_rotate and perspective_](./rotate-perspective.md) module instead.
 
 scale
 : Correcting distortion pushes some of the frame outside its own borders and pulls empty corners in. This zooms the image to hide them. Press the button to the right of the slider to let Ansel find the smallest zoom that just removes the black corners.
 
-: With **embedded correction** the manufacturer's own zoom factor is already applied, so this slider starts at 1 and is what you want *on top of* it.
+: With a **vendor profile** the manufacturer's own zoom factor is already applied, so this slider starts at 1 and is what you want *on top of* it.
 
 chromatic aberration
 : Correct the coloured fringes at high-contrast edges, caused by the lens focusing colours at slightly different sizes. Choose the source, as described above. Not offered on images your camera recorded as monochrome, which have no colour channels to misalign.
@@ -121,17 +121,17 @@ mode
 
 Worth knowing before you go looking for a control that is not there.
 
-**Embedded corrections are all-or-nothing.** The manufacturers' own editing software lets you dial a profile's strength down — half the distortion, three quarters of the vignetting. Ansel applies the profile as measured. If you want less than the full correction, the database is the source that gives you a scale to play with, or use the [_rotate and perspective_](./rotate-perspective.md) module for distortion you want to shape by hand.
+**Vendor profiles are all-or-nothing.** The manufacturers' own editing software lets you dial a profile's strength down — half the distortion, three quarters of the vignetting. Ansel applies the profile as measured. If you want less than the full correction, the community profile is the source that gives you a scale to play with, or use the [_rotate and perspective_](./rotate-perspective.md) module for distortion you want to shape by hand.
 
-**Not every manufacturer publishes every correction.** Olympus bodies embed distortion and chromatic aberration but no vignetting; a DNG carries whichever corrections its writer chose to record, which is sometimes none at all. Ansel does not invent the missing ones — the row simply is not offered, and the database covers that flaw if it knows your lens.
+**Not every manufacturer publishes every correction.** Olympus bodies record distortion and chromatic aberration but no vignetting; a DNG carries whichever corrections its writer chose to record, which is sometimes none at all. Ansel does not invent the missing ones — the row simply is not offered, and the community profile covers that flaw if it knows your lens.
 
-**Only Sony, Fujifilm, Olympus and DNG profiles can be read.** This is a gap in Ansel rather than in your camera: Canon raws, for instance, do carry a vignetting correction block of their own, and Ansel simply has no reader for it yet. Files from makers not in that list use the database, which for popular lenses is usually well populated. If your camera's profile matters to you, say so — knowing which bodies people actually want is what decides which reader gets written next.
+**Only Sony, Fujifilm, Olympus and DNG vendor profiles can be read.** This is a gap in Ansel rather than in your camera: Canon raws, for instance, do carry a vignetting correction block of their own, and Ansel simply has no reader for it yet. Files from makers not in that list use the community profile, which for popular lenses is usually well populated. If your camera's profile matters to you, say so — knowing which bodies people actually want is what decides which reader gets written next.
 
-**Changing the projection needs the database.** The "geometry" control turns a fish-eye frame into a rectilinear one, and it only appears when distortion is set to **database correction**. A manufacturer measured the lens in the projection it was built for and describes no other, so there is nothing in an embedded profile to reproject from.
+**Changing the projection needs the community profile.** The "geometry" control turns a fish-eye frame into a rectilinear one, and it only appears when distortion is set to **community profile**. A manufacturer measured the lens in the projection it was built for and describes no other, so there is nothing in a vendor profile to reproject from.
 
-**Chromatic aberration cannot borrow a profile it was not measured against.** "Embedded correction" is offered for it only when distortion is using the embedded profile too, because a manufacturer measures the colour fringing as a departure from *their* distortion figures. Pairing it with the database's distortion would combine two different measurements of the same lens. The useful direction works: embedded distortion with database or hand-typed chromatic aberration.
+**Chromatic aberration cannot borrow a profile it was not measured against.** "Vendor profile" is offered for it only when distortion is using the vendor profile too, because a manufacturer measures the colour fringing as a departure from *their* distortion figures. Pairing it with the community profile's distortion would combine two different measurements of the same lens. The useful direction works: vendor distortion with a community or hand-typed chromatic aberration.
 
-**Corrections are read from the raw file each time it is opened.** Nothing about the embedded profile is stored in your library, so if a file is edited on another machine whose Ansel is older, or the file itself is replaced, the correction follows the file rather than your edit. Ansel tells you in its log when it falls back to the database because a profile could not be found or read.
+**Corrections are read from the raw file each time it is opened.** Nothing about the vendor profile is stored in your library, so if a file is edited on another machine whose Ansel is older, or the file itself is replaced, the correction follows the file rather than your edit. Ansel tells you in its log when it falls back to the community profile because a vendor profile could not be found or read.
 
 **Very old edits still follow the database of the day.** Images corrected automatically by much older versions of Ansel did not record which corrections they used — they asked the database again on every open. If such an edit renders differently after a database update, that is why. Any edit you make or touch from now on writes its choice down and is reproducible.
 
