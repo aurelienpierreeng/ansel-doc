@@ -84,10 +84,14 @@ That is decided per flaw, not per file, because manufacturers do not all publish
 ## Module controls
 
 camera
-: The camera make and model as determined by the image's Exif data. You can override this manually and select your camera from a hierarchical menu. Only lenses with correction profiles matching the selected camera will be shown.
+: The camera make and model, as read from the image's Exif data. Click it to choose a different one from the full list of bodies the database knows. Only lenses that fit the selected body's mount are then offered.
+
+: Worth overriding when your body is not in the database at all. If an earlier version of the same camera is listed, it usually carries the same lens mount and, on a fixed-lens compact, often the very same lens — picking it deliberately is the way to get a correction the automatic match cannot find.
 
 lens
-: The lens make and model as determined by the image's Exif data. You can override this manually and select your lens from a hierarchical menu. This is mainly required for pure mechanical lenses, but may also be needed for off-brand / third party lenses.
+: The lens make and model, as read from the image's Exif data. Click it to choose a different one from the lenses fitting the selected body.
+
+: This is what you need for a lens with no electronic contacts: it reports nothing to the camera, so nothing reaches the Exif data and nothing can be matched automatically. It is also useful for off-brand lenses whose reported name does not resemble the catalogue's.
 
 photometric parameters (focal length, aperture, focal distance)
 : Lens corrections depend on certain photometric parameters that are read from the image's Exif data: focal length (for distortion, TCA, vignetting), aperture (for TCA, vignetting) and focal distance (for vignetting). Many cameras do not record focal distance in their Exif data, in which case you will need to set this manually.
