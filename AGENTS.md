@@ -56,8 +56,14 @@ masking: true               # optional: on module pages, whether masking & blend
 
 Beyond markup conventions, existing content follows a few recurring page anatomies depending on the kind of page. Match the one that fits rather than improvising a new layout:
 
+**Index/section pages** (`_index.md`, e.g. `content/views/toolboxes/_index.md`):
+1. A short, succinct opening paragraph giving the essential summary in one or two sentences (what this category of page is), followed by a more detailed paragraph elaborating on it and linking it to neighboring categories.
+2. A `{{< note >}}` for any important caveat about scope (e.g. what moved elsewhere, what's out of scope).
+3. A `## Working with X` section for interactions that apply across the whole category.
+4. One `##`/`###` section per logical grouping, each holding a short bullet list of links to the child pages with a one-line description — this is the primary place that makes child pages discoverable, so don't skip it when adding a new child page.
+
 **Module pages** (`content/views/darkroom/modules/*.md`):
-1. One or two short paragraphs of intro right after the frontmatter: what the module does and when to reach for it (no heading).
+1. A short, succinct opening paragraph giving the essential summary in one or two sentences (what the module does), followed by a more detailed paragraph elaborating on when to reach for it — right after the frontmatter, no heading.
 2. Optional context/theory sections if the module needs background to use well (e.g. `## Introduction`, `## General principles`, `## Prerequisites`) — use footnotes for any cited sources.
 3. `## Workflow` — **required**, not optional: a concrete, usually numbered, recommended procedure for getting good results with the module (what order to touch the controls in, what to do before/after, what to combine it with). This is the practical "how do I actually use this" answer that `## Module controls` alone doesn't give — every module page should have one, even a short one, unless the module truly has only one control and no meaningful order of operations.
 4. `## Module controls` — by far the most common heading in this section of the manual; walk through the module's actual UI controls here (often as a definition list, see below).
@@ -65,11 +71,6 @@ Beyond markup conventions, existing content follows a few recurring page anatomi
 
 Most existing module pages predate this requirement and don't have a `## Workflow` section yet — add one when writing a new module page, and when substantially editing an existing one that's missing it.
 
-**Index/section pages** (`_index.md`, e.g. `content/views/toolboxes/_index.md`):
-1. One or two intro paragraphs explaining what this category of page covers and how it relates to neighboring categories (with links).
-2. A `{{< note >}}` for any important caveat about scope (e.g. what moved elsewhere, what's out of scope).
-3. A `## Working with X` section for interactions that apply across the whole category.
-4. One `##`/`###` section per logical grouping, each holding a short bullet list of links to the child pages with a one-line description — this is the primary place that makes child pages discoverable, so don't skip it when adding a new child page.
 
 **Preference/setting reference pages** (`content/preferences-settings/*.md`):
 1. A one-line intro linking to the relevant view/feature.
