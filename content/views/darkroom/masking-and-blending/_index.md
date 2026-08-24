@@ -40,13 +40,18 @@ A fourth tab, _Contours_, carries no _Disable_ checkbox of its own because it de
 
 ## Blending options
 
-The button at the right end of the tab row opens a menu of options for the [parametric mask](./masks/parametric.md); it stays grayed out on modules that don't support one. Use it to pick the color space the parametric mask is computed in, and to show the output-channel sliders (a parametric mask is normally built from the input channels coming into the module):
+{{< figure src="mask/mask-blend-option.jpg" />}}
 
-- _Reset to default blend colorspace_: Go back to the module's own default color space.
-- _Lab_: Use the Lab color space. Offered only for modules that natively work in Lab, so that Lab blending is not applied where it doesn't belong.
-- _RGB (display)_: Use the display-referred RGB/HSL color space.
-- _RGB (scene)_: Use the scene-referred RGB/J<sub>z</sub>C<sub>z</sub>h<sub>z</sub> color space.
-- _Show output channels_: Show the output channel sliders, so the parametric mask can also be defined in terms of the module's output. Once they are shown, this entry becomes _Reset and hide output channels_.
+
+The button {{< icon src="icon/icon-hamburger.jpg" alt="" >}} at the right end of the tab row opens a menu of options for the [parametric mask](./masks/parametric.md); it stays grayed out on modules that don't support one. Use it to pick the color space the parametric mask is computed in, and to show the output-channel sliders (a parametric mask is normally built from the input channels coming into the module):
+
+{{< param-table >}}
+| **Reset to default blend colorspace**<div>Goes back to the module's own default color space.</div> |
+| **Lab**<div>Uses the Lab color space. Offered only for modules that natively work in Lab, so that Lab blending is not applied where it doesn't belong.</div> |
+| **RGB (display)**<div>Uses the display-referred RGB/HSL color space.</div> |
+| **RGB (scene)**<div>Uses the scene-referred RGB/J<sub>z</sub>C<sub>z</sub>h<sub>z</sub> color space.</div> |
+| **Show output channels**<div>Shows the output channel sliders, so the parametric mask can also be defined in terms of the module's output. Once they are shown, this entry becomes **Reset and hide output channels**.</div> |
+{{< /param-table >}}
 
 {{< note >}}
 Not every blend mode or blending option is available for every module -- the choices on offer depend on the color space the module works in.
@@ -58,14 +63,16 @@ The three masking methods are **independent toggles that can be combined**. A [r
 
 How those masks are folded together is set by _Combine masks_, whose two modes are mirror images of each other:
 
-- _Exclusive_, the default, multiplies the masks together before applying the global _Opacity_ slider. A pixel excluded by any one mask (opacity 0) stays excluded, so each mask you add can only ever _restrict_ the affected area.
-- _Inclusive_ inverts each mask, multiplies, then inverts the result. A pixel fully included by any one mask (opacity 1.0) stays included, so each mask you add can only ever _extend_ the affected area.
+{{< param-table >}}
+| **Exclusive** (default)<div>Multiplies the masks together before applying the global _Opacity_ slider. A pixel excluded by any one mask (opacity 0) stays excluded, so each mask you add can only ever _restrict_ the affected area.</div> |
+| **Inclusive**<div>Inverts each mask, multiplies, then inverts the result. A pixel fully included by any one mask (opacity 1.0) stays included, so each mask you add can only ever _extend_ the affected area.</div> |
+{{< /param-table >}}
 
 Deciding which of the two you want before you start is the easiest way to keep a complex mask predictable — see [combining drawn & parametric masks](./masks/drawn-and-parametric.md) for the polarity settings that go with each.
 
 ## Previewing the mask
 
-{{< figure src="masked-image.jpg" height="500" caption="Masked image" />}}
+{{< figure src="mask/masked-image.jpg" height="500" caption="Masked image" />}}
 
 A mask is easier to judge when you can see it. The mask icon, both in the module's header and in the blending panel, replaces the center view with a preview of the mask the module is currently using.
 
@@ -79,17 +86,14 @@ The checkerboard pattern is deliberate: it makes a partly transparent mask legib
 
 ### Mask preview settings
 
-{{< figure src="options-display-masking.png" caption="Mask display options." />}}
+{{< figure src="mask/options-display-masking.png" />}}
 
-The look of the preview is set in the _Picture display options_ popover, opened by the _Display_ button in the toolbox at the bottom of the darkroom [left panel](../darkroom-view-layout.md#left-panel). Its _Mask preview settings_ section holds:
+The look of the preview is set in the _Picture display options_ popover, opened by the _Display_ button {{< icon src="lighttable-bottom-panel_display.jpg" alt="" >}} in the toolbox at the bottom of the darkroom [left panel](../darkroom-view-layout.md#left-panel). Its _Mask preview settings_ section holds:
 
-_Checkerboard color 1_ and _Checkerboard color 2_
-: The two alternating squares. Picking colors that clash with the image you are working on is what makes the masked areas obvious — a neutral pair disappears against a busy picture.
-
-_Checkerboard size_
-: The size of a square, from 2 to 32 px (default 8). Larger squares are easier to see; smaller ones obscure less of a finely detailed mask edge.
-
-_Show a greyscaled mask image_
-: Converts the visible part of the image to grayscale during the preview, so the only colors on screen are the checkerboard's. Useful when the picture's own colors make the mask boundary hard to follow.
+{{< param-table >}}
+| **Checkerboard color 1** and **Checkerboard color 2**<div>The two alternating squares. Picking colors that clash with the image you are working on is what makes the masked areas obvious — a neutral pair disappears against a busy picture.</div> |
+| **Checkerboard size**<div>The size of a square, from 2 to 32 px (default 8). Larger squares are easier to see; smaller ones obscure less of a finely detailed mask edge.</div> |
+| **Show a greyscaled mask image**<div>Converts the visible part of the image to grayscale during the preview, so the only colors on screen are the checkerboard's. Useful when the picture's own colors make the mask boundary hard to follow.</div> |
+{{< /param-table >}}
 
 The same popover carries _Fast drawn mask rasterization_, which trades a little accuracy in how brush and polygon masks are drawn on screen for speed when zoomed out. Exports, thumbnails and snapshots stay pixel-accurate either way.

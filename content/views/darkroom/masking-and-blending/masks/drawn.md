@@ -47,13 +47,9 @@ Brush options
 
 The panel has two lists that share the same slot; the _Attach shapes_ button picks which one is showing.
 
-The **mask list** is the default view and holds the shapes this module's mask is built from, applied in list order from top to bottom. Each row carries, from left to right: the [set operator](../../../toolboxes/mask-manager.md#set-operators) combining that shape with the ones above it, an icon if its polarity is inverted, its name, an _unlink_ icon that detaches the shape from this mask while keeping it available elsewhere, and a _trash_ icon that deletes the shape outright. Right-clicking a row opens the shape-level part of [the context menu](#the-context-menu) — its parameter sliders, the _Operation_ submenu and _Move Up_ / _Move Down_ — which is handy for a shape that is hard to reach on the canvas, or hidden behind others.
+The **Shape list** is the default view and holds the shapes this module's mask is built from, applied in list order from top to bottom. Each row carries, from left to right: the [set operator](../../../toolboxes/mask-manager.md#set-operators) combining that shape with the ones above it, an icon if its polarity is inverted, its name, an _unlink_ icon that detaches the shape from this mask while keeping it available elsewhere, and a _trash_ icon that deletes the shape outright. Right-clicking a row opens the shape-level part of [the context menu](#the-context-menu) — its parameter sliders, the **Operation** submenu and **Move Up** / **Move Down** — which is handy for a shape that is hard to reach on the canvas, or hidden behind others.
 
-The **all-shapes list**, shown while _Attach shapes_ is pressed, lists every shape defined for the current image. A checkbox on each row attaches it to this module's mask or detaches it, and its name can be edited in place by double-clicking. A row reading _Already in '&lt;group&gt;'_ is greyed out because the shape is part of a group that is itself already attached, so it is spoken for. Right-clicking a row here offers only _Duplicate_ and _Rename_.
-
-{{< note >}}
-Both lists can be resized by dragging their lower edge, and the height you set is remembered.
-{{< /note >}}
+The **All-shapes list**, shown while _Attach shapes_ is pressed, lists every shape defined for the current image. A checkbox on each row attaches it to this module's mask or detaches it, and its name can be edited in place by double-clicking. A row reading _Already in '&lt;group&gt;'_ is greyed out because the shape is part of a group that is itself already attached, so it is spoken for. Right-clicking a row here offers only **Duplicate** and **Rename**.
 
 ## The context menu
 
@@ -63,9 +59,11 @@ The same menu is reachable without the canvas: right-clicking a row in the panel
 
 ### While creating a shape
 
-- _Close path_ (Polygon only) — closes the outline, once at least three nodes are placed. <kbd>Enter</kbd> does the same
-- _Remove last point_ (Polygon only) — deletes the node you just placed. <kbd>Backspace</kbd> does the same
-- _Done shape creation_ — leaves creation mode. <kbd>Escape</kbd> does the same
+{{< param-table >}}
+| **Close path** (or <kbd>Enter</kbd>)<div>Closes the outline, once at least three nodes are placed. Polygon only.</div> |
+| **Remove last point** (or <kbd>Backspace</kbd>)<div>Deletes the node you just placed. Polygon only.</div> |
+| **Done shape creation** (or <kbd>Escape</kbd>)<div>Leaves creation mode.</div> |
+{{< /param-table >}}
 
 ### Over the shape itself
 
@@ -74,34 +72,41 @@ The menu opens with sliders for the shape's parameters. Which ones depends on th
 {{< table >}}
 | Shape | Sliders |
 | --- | --- |
-| Circle, Polygon, Brush | _Size_, _Fading_, _Opacity_ |
-| Ellipse | _Size_, _Fading_, _Rotation_, _Opacity_ |
-| Gradient | _Curvature_, _Fade_, _Rotation_, _Opacity_ |
+| Circle, Polygon, Brush | **Size**, **Fading**, **Opacity** |
+| Ellipse | **Size**, **Fading**, **Rotation**, **Opacity** |
+| Gradient | **Curvature**, **Fade**, **Rotation**, **Opacity** |
 {{< /table >}}
 
-They set the same values that scroll and its modifiers reach directly on the canvas, listed per shape under [Shapes](#shapes) below; the menu is simply the precise way in. _Opacity_ is how strongly this one shape contributes to the mask.
+They set the same values that scroll and its modifiers reach directly on the canvas, listed per shape under [Shapes](#shapes) below; the menu is simply the precise way in. **Opacity** is how strongly this one shape contributes to the mask. The **Operation** submenu below them offers the [set operators](../../../toolboxes/mask-manager.md#set-operators) described in the mask manager.
 
-Below the sliders:
+{{< param-table >}}
+| **Operation** | **Invert**<div>Inverts this shape's polarity within the mask.</div> |
+| | **Union**, **Intersection**, **Difference**, **Exclusion**<div>How this shape combines with the ones above it in the mask.</div> |
+{{< /param-table >}}
 
-- _Operation → Invert_ — inverts this shape's polarity within the mask
-- _Operation → Union_, _Intersection_, _Difference_, _Exclusion_ — the [set operator](../../../toolboxes/mask-manager.md#set-operators) combining this shape with the ones above it in the mask
-- _Move up_ / _Move down_ — reorders the shape within the mask
-- _Remove shape from mask_ — detaches it, leaving it available to other modules. <kbd>Delete</kbd> does the same
-- _Delete shape_ — deletes it for good
+{{< param-table >}}
+| **Move up** / **Move down**<div>Reorders the shape within the mask.</div> |
+| **Remove shape from mask** (or <kbd>Delete</kbd>)<div>Detaches it, leaving it available to other modules.</div> |
+| **Delete shape**<div>Deletes it for good.</div> |
+{{< /param-table >}}
 
 ### Over a node
 
-Polygon and Brush only. The parameter sliders appear as above, followed by the entries below. The _Operation_ submenu and the reordering entries are not offered here, and _Delete node_ takes the place of _Remove shape from mask_ and _Delete shape_ — so a slip of the mouse deletes a node, never the whole shape.
+Polygon and Brush only. The parameter sliders appear as above, followed by the entries below. The **Operation** submenu and the reordering entries are not offered here, and **Delete node** takes the place of **Remove shape from mask** and **Delete shape** — so a slip of the mouse deletes a node, never the whole shape.
 
-- _Switch to round node_ / _Switch to cusp node_ — turns a corner into a smooth curve, or the reverse. <kbd>Ctrl</kbd>+click (<kbd>⌘</kbd>+click on macOS) on the node does the same
-- _Reset round node_ — discards curvature handles you dragged by hand and restores the automatically computed curve
-- _Delete node_ — removes that node only, leaving the rest of the shape. <kbd>Delete</kbd> does the same
+{{< param-table >}}
+| **Switch to round node** / **to cusp node** (or <kbd>Ctrl</kbd>+click) (<kbd>⌘</kbd>+click on macOS)<div>Turns a corner into a smooth curve, or the reverse.</div> |
+| **Reset round node**<div>Discards curvature handles you dragged by hand and restores the automatically computed curve.</div> |
+| **Delete node** (or <kbd>Delete</kbd>)<div>Removes that node only, leaving the rest of the shape.</div> |
+{{< /param-table >}}
 
 ### Over a segment
 
-Polygon and Brush only. This adds one entry to the shape-level ones (_Operation_, _Remove shape from mask_ and _Delete shape_); the parameter sliders and the reordering entries are not shown.
+Polygon and Brush only. This adds one entry to the shape-level ones (**Operation**, **Remove shape from mask** and **Delete shape**); the parameter sliders and the reordering entries are not shown.
 
-- _Add a node here_ — inserts a node at that point of the outline. <kbd>Ctrl</kbd>+click (<kbd>⌘</kbd>+click on macOS) on the segment does the same
+{{< param-table >}}
+| **Add a node here** (or <kbd>Ctrl</kbd>+click) (<kbd>⌘</kbd>+click on macOS)<div>Inserts a node at that point of the outline.</div> |
+{{< /param-table >}}
 
 ## Shapes
 
@@ -153,9 +158,9 @@ A painted stroke, converted into connected nodes when you release the button; th
 
 The last two live in the _Brush options_ section of the panel.
 
-{{< note >}}
+{{< warning >}}
 Rendering a complex brush shape can consume a significant number of CPU cycles. Consider using a Circle, Ellipse or Polygon instead where possible.
-{{< /note >}}
+{{< /warning >}}
 
 ### Gradient
 
@@ -180,7 +185,7 @@ Creation mode then stays active: as soon as one shape is finished, another of th
 
 Two shapes depart from that cursor. The Brush hides the cursor entirely and draws its own filled circle instead, showing the current brush size and hardness at the pointer. The Polygon switches to a pointing hand as you come back within reach of your first node, telling you that clicking there will close the outline.
 
-To leave creation mode, click the shape's button again, press <kbd>Escape</kbd>, or right-click the canvas and choose _Done shape creation_. Any of these drops you into edit mode with the shapes you have placed.
+To leave creation mode, click the shape's button again, press <kbd>Escape</kbd>, or right-click the canvas and choose **Done shape creation**. Any of these drops you into edit mode with the shapes you have placed.
 
 The scroll actions that adjust a shape being created also update the _defaults_ for that shape type, which the next shape you create will start from.
 
@@ -198,10 +203,10 @@ For nodes, segments and per-shape parameters, right-click on the shape and work 
 
 There are two distinct outcomes, and the menu keeps them apart:
 
-- _Remove shape from mask_ detaches the shape from this module's mask. The shape survives, still listed for the image and still usable by other modules — this is what the _unlink_ icon in the mask list does too.
-- _Delete shape_ removes it altogether, everywhere it was used. The _trash_ icon in the lists does the same.
+- **Remove shape from mask** detaches the shape from this module's mask. The shape survives, still listed for the image and still usable by other modules — this is what the _unlink_ icon in the mask list does too.
+- **Delete shape** removes it altogether, everywhere it was used. The _trash_ icon in the lists does the same.
 
-With the pointer over one of a Polygon's or Brush's nodes, the menu offers _Delete node_ instead, which removes that single node rather than the shape.
+With the pointer over one of a Polygon's or Brush's nodes, the menu offers **Delete node** instead, which removes that single node rather than the shape.
 
 ## Reusing a shape
 
