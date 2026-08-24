@@ -4,7 +4,9 @@ Guidance for AI agents (and human contributors) working on this repository, the 
 
 ## What this repo is
 
-A [Hugo](https://gohugo.io/) static site. Source content lives in `content/` (English, the canonical language); translations live as `.po` files under `po/`. There is no local theme/shortcode source in this repo — shortcodes such as `note`, `warning`, `figure`, `table`, `gallery`, and `relref` come from the Hugo module configured in `config.yaml`; don't try to invent new ones without checking whether an existing one already covers the need.
+A [Hugo](https://gohugo.io/) static site. Source content lives in `content/` (English, the canonical language); translations live as `.po` files under `po/`. Most shortcodes — `note`, `warning`, `figure`, `table`, `gallery`, `relref` — come from the Hugo module configured in `config.yaml`; don't invent new ones without checking whether an existing one already covers the need.
+
+Two shortcodes are local to this repo, in `layouts/shortcodes/`, because the theme has no equivalent: `param-table` and `icon` (see "Structure and formatting conventions" below).
 
 ## Core philosophy: documentation is a graph, not a list
 
@@ -111,11 +113,15 @@ Ansel runs on **Linux, Windows, and macOS**, and the manual is read by users of 
 - **Sections**: use `##` (h2) headings to break up a page — Hugo auto-generates a right-sidebar table of contents from `<h2>` (and down to level 3, per `config.yaml`). Don't rely on `#`/h1 for in-page sections; the title from frontmatter already serves that role.
 - **Definition lists**: for preference/setting reference pages, the established pattern is a Markdown definition list — the setting name as the term, a colon-indented description as the definition (see `content/preferences-settings/darkroom.md`). Follow this pattern for new settings rather than bullet lists.
 - **Callouts**: use the `{{< note >}}...{{< /note >}}` and `{{< warning >}}...{{< /warning >}}` shortcodes for asides and caveats — don't fake these with blockquotes or bold text.
-- **Screenshots/figures**: use the `{{< figure src="..." caption="..." />}}` shortcode, not raw `![]()` Markdown image syntax, so captions and styling stay consistent.
+- **Screenshots/figures**: use the `{{< figure src="..." caption="..." />}}` shortcode, not raw `![]()` Markdown image syntax, so captions and styling stay consistent. Images live flat in `assets/` (or a subfolder of it, e.g. `mask/`) and are referenced by that path, with no leading slash; the theme generates the responsive `srcset` itself, so supply the full-resolution file. To constrain a figure, pass `width` and `height` together in the image's own ratio — `height` alone letterboxes it, and the `style` parameter is silently dropped by Go's contextual escaping.
+- **Inline icons**: to name a button in the middle of a sentence, use `{{< icon src="..." alt="..." >}}`. The theme's render-image hook turns every `![]()` into a block `<figure>` with lightbox controls, which breaks the paragraph around it; `icon` emits a plain `<img>` scaled to the text (optional `height`, in em, defaults to 1.4). Reserve it for genuinely small images — a screenshot still belongs in a `figure`.
 - **Keyboard keys**: wrap key names in `<kbd>` tags — see "Documentation style" above for the cross-platform (Linux/Windows/macOS) convention.
-- **Emphasis conventions**: italics (`_..._`) for introducing a term or naming a UI concept inline, bold (`__...__`) sparingly for strong emphasis — follow the existing balance in nearby pages rather than over-emphasizing.
+- **Emphasis conventions**: bold (`**...**`, the form used throughout the content) for **menu entries** — anything that appears as a line in a menu, including a parameter shown there as a slider — and, sparingly, for strong emphasis. Italics (`_..._`) for every other UI element named inline (tabs, buttons, checkboxes, panel settings, option values, status text) and for introducing a term. Within one menu, emphasize every entry the same way rather than splitting actions from parameters. Follow the existing balance in nearby pages rather than over-emphasizing.
 - **Cross-references**: prefer relative Markdown links to other content files for stability; use `{{< relref >}}` where the existing pages do (e.g. linking across language/section boundaries).
-- **Tables**: use the `{{< table >}}` shortcode where existing pages do (for anything beyond a trivial Markdown table), for consistent styling.
+- **Tables**: use the `{{< table >}}` shortcode where existing pages do (for anything beyond a trivial Markdown table), for consistent styling. It renders through `markdownify`, which loses the page context, so a relative `.md` link inside a cell collapses to the site root — put such links in the sentence introducing the table instead.
+- **Menu and parameter listings**: use `{{< param-table >}}` rather than `table` or a bullet list. Write data rows only — it generates the header Markdown requires and then strips it, since the theme paints `<thead>` as an empty dark bar. Each row names the entry (bold, followed by any shortcut as `(or <kbd>Key</kbd>)`), then wraps the explanation in a bare `<div>` to indent it underneath. An optional leading column carries the submenu an entry sits in, on the same row as that submenu's first entry. Consecutive blocks butt together with no gap, so one menu can be split into several tables — submenu, then top level — and still read as a single listing. Unlike `table`, relative `.md` links work inside cells.
+
+For a menu, organize the listing around what the menu actually branches on — typically what is under the pointer, or which mode the user is in — rather than around an abstraction of your own, and give each case its own listing.
 
 ## Accuracy: stay in sync with the source code
 
