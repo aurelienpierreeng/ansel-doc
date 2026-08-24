@@ -4,9 +4,9 @@ Guidance for AI agents (and human contributors) working on this repository, the 
 
 ## What this repo is
 
-A [Hugo](https://gohugo.io/) static site. Source content lives in `content/` (English, the canonical language); translations live as `.po` files under `po/`. Most shortcodes — `note`, `warning`, `figure`, `table`, `gallery`, `relref` — come from the Hugo module configured in `config.yaml`; don't invent new ones without checking whether an existing one already covers the need.
+A [Hugo](https://gohugo.io/) static site. Source content lives in `content/` (English, the canonical language); translations live as `.po` files under `po/`. Shortcodes — `note`, `warning`, `figure`, `table`, `gallery`, `relref` — come from the theme, a Hugo module configured in `config.yaml`; don't invent new ones without checking whether an existing one already covers the need.
 
-Two shortcodes are local to this repo, in `layouts/shortcodes/`, because the theme has no equivalent: `param-table` and `icon` (see "Structure and formatting conventions" below).
+Every shortcode comes from the theme, including `param-table` and `icon`, which were written for these docs but live in `themes/ansel/layouts/shortcodes/` in the [ansel-website](https://github.com/aurelienpierreeng/ansel-website) repo. Nothing in this repo's `layouts/` reaches the published site: ansel-website imports this repo as a Hugo module with an explicit list of mounts (`content`, `assets`, `po`, `tools`), and Hugo drops a module's default mounts as soon as one is declared for it. A new shortcode therefore has to be added to the theme, in that repo; `layouts/` here is only for local-preview overrides, which the site never sees.
 
 ## Core philosophy: documentation is a graph, not a list
 
