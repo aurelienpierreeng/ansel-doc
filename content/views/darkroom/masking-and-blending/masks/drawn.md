@@ -1,111 +1,222 @@
 ---
 title: Drawn masks
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2026-06-17
+lastmod: 2026-08-23
 id: drawn
 weight: 20
 draft: false
 ---
 
-With the drawn mask feature you can construct a mask by drawing shapes directly onto the image canvas. Shapes can be used alone or in combination. Once a shape has been drawn on an image it can be adjusted, removed, or reused in other modules.
+A drawn mask builds the per-pixel opacity handed to [blending](../_index.md) from shapes you draw directly on the image, so a module's effect lands exactly where you place them.
 
-Shapes are stored internally as vectors and are rendered with the required resolution during pixelpipe processing. Shapes are expressed in the coordinate system of the original image and are transformed along with the rest of the image by any active distorting modules in the pipe ([_lens correction_](../../modules/lens-correction.md), [_rotate and perspective_](../../modules/rotate-perspective.md) for example). This means that a shape will always work on the same image area regardless of any modifications that may be subsequently applied.
+Shapes are stored internally as vectors, rendered at whatever resolution the pixelpipe needs, and expressed in the coordinate system of the original image. A shape therefore keeps covering the same part of the picture no matter what you change elsewhere in the edit -- with one visual side effect worth knowing about, see [shape distortions](#shape-distortions) below. Once drawn, a shape can be adjusted, removed, or reused by any other module.
 
-The controls required to create and alter drawn masks may be enabled by selecting either the "drawn mask" or "drawn & parametric mask" icon at the bottom of a module. You can also create and edit shapes using the [mask manager](../../../toolboxes/mask-manager.md) module.
+Drawn masks are handled from the _Drawn_ tab of the _Masking & Blending_ tool, in the darkroom [left panel](../../darkroom-view-layout.md#left-panel), for whichever module currently has focus. The tab works alongside the [_Parametric_](./parametric.md) and [_Raster_](./raster.md) ones, since any combination of masking methods can be active at once (see [combining masks](../_index.md#combining-masks)).
 
-## Creating shapes
+## The Drawn panel
 
-Choose a shape by clicking on the appropriate shape icon (from left to right: circle, ellipse, path, brush, gradient).
+The tab holds:
 
-This will take you into the creation mode for that shape. Once you have finished drawing your shape you will automatically be taken into edit mode.
+Enable
+: Blending is switched on per module by the _Enable_ checkbox at the top of the tool, above the row of tabs, and the whole panel stays grayed out until you check it. The _Drawn_ tab is armed by default -- as are _Parametric_ and _Raster_ -- so it is ready to use as soon as blending is on. Its own _Disable_ checkbox turns drawn masking back off when you want it out of the way.
 
-Ctrl+click on the shape icon to continuously draw multiple shapes of the same type -- each time a shape is completed, you will re-enter creation mode for a new instance of that shape. While in continuous creation mode, right-click on the image to stop drawing shapes and enter edit mode.
+Mask name
+: A text field naming this module's mask. It starts out showing `Mask <module name>` as a placeholder; type your own name and press <kbd>Enter</kbd> to replace it. Meaningful names pay off as soon as several modules carry masks.
 
-For all drawn shapes, you can hold Shift while scrolling with the mouse wheel to change the extent of the shape's feathering (the blur at the edge of the shape) and use Ctrl+scroll to change the shape's opacity (how transparent it is). These operations are available in both creation and edit modes (as long as your mouse is over the shape in question).
+Polarity ( ± icon )
+: Reverses the polarity of the whole drawn mask. A circle, by default, restricts the module to the area inside it; flipping the polarity applies the module everywhere _except_ inside that circle.
 
-By default, scrolling your mouse up increases the value of the relevant shape parameters. This behavior can be changed in [preferences > darkroom > scroll down to increase mask parameters](../../../../preferences-settings/darkroom.md).
+Show and edit mask elements
+: Displays the mask's shapes on the canvas so you can edit them. <kbd>Ctrl</kbd>+click (<kbd>⌘</kbd>+click on macOS) enters _restricted_ edit mode instead, in which a shape's overall position and size are locked -- neither dragging nor scrolling over it moves or resizes it -- and only its individual nodes and segments respond. This is the safe way to fine-tune Polygon and Brush shapes.
 
----
+Shape list
+: The shapes making up this module's mask, described in [the shape lists](#the-shape-lists) below.
 
-**Note:** When used in shape creation mode, the preceding scroll operations will also cause the _default_ feathering or opacity to be changed. The new default values will be used the next time you create a new shape.
+Attach shapes
+: Switches the list above to every shape defined for the image, so you can attach or detach them. See [reusing a shape](#reusing-a-shape).
 
----
+Shape buttons
+: Five buttons at the bottom right create a new shape: Circle, Ellipse, Polygon, Brush and Gradient. See [creating a shape](#creating-a-shape).
 
-## Editing shapes
+Brush options
+: A collapsible section holding two settings that apply to Brush shapes only: _Brush strokes smoothing_ and _Pen pressure mapping_, both described under [Brush](#shapes).
 
-Click the 'show and edit mask elements' icon to display the current shapes on the canvas and edit them. <kbd>Ctrl</kbd>+click the same icon to enter _restricted_ edit mode, in which the overall position and size of a shape are locked and only its individual nodes and segments can be adjusted. This is particularly useful to avoid costly mistakes when editing path and brush shapes.
+## The shape lists
 
-Click and drag a shape to move it around the image canvas. Clicking on a shape will also select that shape in the mask manager.
+The panel has two lists that share the same slot; the _Attach shapes_ button picks which one is showing.
 
-## Removing shapes
+The **mask list** is the default view and holds the shapes this module's mask is built from, applied in list order from top to bottom. Each row carries, from left to right: the [set operator](../../../toolboxes/mask-manager.md#set-operators) combining that shape with the ones above it, an icon if its polarity is inverted, its name, an _unlink_ icon that detaches the shape from this mask while keeping it available elsewhere, and a _trash_ icon that deletes the shape outright. Right-clicking a row opens the shape-level part of [the context menu](#the-context-menu) — its parameter sliders, the _Operation_ submenu and _Move Up_ / _Move Down_ — which is handy for a shape that is hard to reach on the canvas, or hidden behind others.
 
-While in edit mode right-click on a shape to remove it.
+The **all-shapes list**, shown while _Attach shapes_ is pressed, lists every shape defined for the current image. A checkbox on each row attaches it to this module's mask or detaches it, and its name can be edited in place by double-clicking. A row reading _Already in '&lt;group&gt;'_ is greyed out because the shape is part of a group that is itself already attached, so it is spoken for. Right-clicking a row here offers only _Duplicate_ and _Rename_.
 
-## Reusing shapes
+{{< note >}}
+Both lists can be resized by dragging their lower edge, and the height you set is remembered.
+{{< /note >}}
 
-You can reuse shapes that you have drawn in other modules. Click on the shapes drop-down (next to the 'show and edit mask elements' button) to choose previously-drawn shapes individually or to use the same group of shapes as used by another module. The following options are available for selection:
+## The context menu
 
-add existing shape
-: Choose either an individual shape or a group of shapes that you've drawn previously (either within the [mask manager](../../../toolboxes/mask-manager.md) or from within the drawn mask of another module). If that shape or group is used elsewhere, any changes you make will be reflected everywhere the shape or group is used.
+Right-clicking on the canvas opens a menu headed by the shape's name. What follows depends on one thing: what sits under the pointer. There are four cases.
 
-use same shapes as
-: Add a list of shapes used in another module to the current module's mask. This differs from the previous option in that it creates a new group of shapes, allowing shapes to be added to or removed from the group independently of the module from which they were copied. All shapes that are common to both groups remain linked.
+The same menu is reachable without the canvas: right-clicking a row in the panel's [mask list](#the-shape-lists) opens its shape-level part, described under [over the shape itself](#over-the-shape-itself) below, minus the removal entries — the row's own _unlink_ and _trash_ icons cover those.
 
-## Combining and managing shapes
+### While creating a shape
 
-The [mask manager](../../../toolboxes/mask-manager.md) module can be used to manage your drawn shapes. This module also allows you to group and combine drawn masks using set operators (union, intersection, difference, exclusion).
+- _Close path_ (Polygon only) — closes the outline, once at least three nodes are placed. <kbd>Enter</kbd> does the same
+- _Remove last point_ (Polygon only) — deletes the node you just placed. <kbd>Backspace</kbd> does the same
+- _Done shape creation_ — leaves creation mode. <kbd>Escape</kbd> does the same
+
+### Over the shape itself
+
+The menu opens with sliders for the shape's parameters. Which ones depends on the shape:
+
+{{< table >}}
+| Shape | Sliders |
+| --- | --- |
+| Circle, Polygon, Brush | _Size_, _Fading_, _Opacity_ |
+| Ellipse | _Size_, _Fading_, _Rotation_, _Opacity_ |
+| Gradient | _Curvature_, _Fade_, _Rotation_, _Opacity_ |
+{{< /table >}}
+
+They set the same values that scroll and its modifiers reach directly on the canvas, listed per shape under [Shapes](#shapes) below; the menu is simply the precise way in. _Opacity_ is how strongly this one shape contributes to the mask.
+
+Below the sliders:
+
+- _Operation → Invert_ — inverts this shape's polarity within the mask
+- _Operation → Union_, _Intersection_, _Difference_, _Exclusion_ — the [set operator](../../../toolboxes/mask-manager.md#set-operators) combining this shape with the ones above it in the mask
+- _Move up_ / _Move down_ — reorders the shape within the mask
+- _Remove shape from mask_ — detaches it, leaving it available to other modules. <kbd>Delete</kbd> does the same
+- _Delete shape_ — deletes it for good
+
+### Over a node
+
+Polygon and Brush only. The parameter sliders appear as above, followed by the entries below. The _Operation_ submenu and the reordering entries are not offered here, and _Delete node_ takes the place of _Remove shape from mask_ and _Delete shape_ — so a slip of the mouse deletes a node, never the whole shape.
+
+- _Switch to round node_ / _Switch to cusp node_ — turns a corner into a smooth curve, or the reverse. <kbd>Ctrl</kbd>+click (<kbd>⌘</kbd>+click on macOS) on the node does the same
+- _Reset round node_ — discards curvature handles you dragged by hand and restores the automatically computed curve
+- _Delete node_ — removes that node only, leaving the rest of the shape. <kbd>Delete</kbd> does the same
+
+### Over a segment
+
+Polygon and Brush only. This adds one entry to the shape-level ones (_Operation_, _Remove shape from mask_ and _Delete shape_); the parameter sliders and the reordering entries are not shown.
+
+- _Add a node here_ — inserts a node at that point of the outline. <kbd>Ctrl</kbd>+click (<kbd>⌘</kbd>+click on macOS) on the segment does the same
+
+## Shapes
+
+Five shapes are available. Scroll always changes the size and <kbd>Shift</kbd>+scroll the feathering, in creation as well as in edit mode, wherever the pointer sits over the shape. Below each shape are the actions specific to it.
+
+### Circle
+
+A disc with a soft edge, placed with a single click.
+
+- Scroll: diameter
+- <kbd>Shift</kbd>+scroll: width of the feathering
+
+### Ellipse
+
+Behaves like the Circle, with four nodes on its outline to stretch it.
+
+- Drag a node: eccentricity
+- Drag the border ring: rotation, with no modifier needed
+- <kbd>Shift</kbd>+<kbd>Ctrl</kbd>+scroll (<kbd>Shift</kbd>+<kbd>⌘</kbd>+scroll on macOS): rotation in precise increments
+- <kbd>Shift</kbd>+click inside the shape: switches the feathering between equidistant and proportional decay
+
+### Polygon
+
+A free-form outline through three or more nodes, joined by smooth curves by default.
+
+While creating it:
+
+- Click: adds a node
+- <kbd>Ctrl</kbd>+click (<kbd>⌘</kbd>+click on macOS): adds a sharp corner instead
+- <kbd>Backspace</kbd>: removes the node you just placed
+- Click near the first node, or <kbd>Enter</kbd>: closes the shape
+
+Once closed:
+
+- Drag a node or a segment: reshapes the outline
+- Click a node: reveals its curvature handle, which can then be dragged
+- Drag a control point on the border: adjusts the feathering around that part only
+- Scroll: resizes the whole shape
+- <kbd>Shift</kbd>+scroll: border width, from anywhere inside the shape
+
+### Brush
+
+A painted stroke, converted into connected nodes when you release the button; those nodes are then edited exactly like a Polygon's.
+
+- Left-click and drag: paints the stroke
+- Scroll while drawing: brush size
+- _Brush strokes smoothing_ (_low_, _medium_ or _high_): how many nodes the conversion produces -- more smoothing means fewer nodes, which eases later editing at the expense of accuracy
+- _Pen pressure mapping_: applies a graphics tablet's recorded pressure to the brush's width, hardness or opacity. _Relative_ scales the attribute between zero and its default value, _absolute_ maps pressure straight onto the 0% to 100% range
+
+The last two live in the _Brush options_ section of the panel.
+
+{{< note >}}
+Rendering a complex brush shape can consume a significant number of CPU cycles. Consider using a Circle, Ellipse or Polygon instead where possible.
+{{< /note >}}
+
+### Gradient
+
+A linear gradient running from a line you place to the edge of the image. A single click places the 50% opacity line, and dotted lines mark where the opacity reaches 100% and 0%. Each new gradient reuses the extent, curvature and rotation of the last one you placed or edited.
+
+- Scroll: extent, the distance between the two dotted lines
+- <kbd>Shift</kbd>+scroll: bends the line into a curve
+- Double-click: resets the curvature
+- Drag the pivot at the center of the line: rotation
+- <kbd>Shift</kbd>+<kbd>Ctrl</kbd>+scroll (<kbd>Shift</kbd>+<kbd>⌘</kbd>+scroll on macOS): rotation in precise increments
+- <kbd>Shift</kbd>+click, while still in creation mode: switches the opacity transition between a _linear_ ramp and a _sigmoidal_ (S-curve) one, which concentrates the transition closer to the center line. The choice sticks for the gradients you create afterwards
+
+Depending on the module and the image, a gradient can provoke banding artifacts. Activating the [_dithering_](../../modules/dithering.md) module alleviates this.
+
+## Creating a shape
+
+Click one of the five shape buttons to enter creation mode for that shape. The mouse cursor turns into a cross over the image, confirming that the next click will place a shape rather than interact with the picture.
+
+{{< note >}}
+Creation mode then stays active: as soon as one shape is finished, another of the same type begins, so you can place several in a row without going back to the button.
+{{< /note >}}
+
+Two shapes depart from that cursor. The Brush hides the cursor entirely and draws its own filled circle instead, showing the current brush size and hardness at the pointer. The Polygon switches to a pointing hand as you come back within reach of your first node, telling you that clicking there will close the outline.
+
+To leave creation mode, click the shape's button again, press <kbd>Escape</kbd>, or right-click the canvas and choose _Done shape creation_. Any of these drops you into edit mode with the shapes you have placed.
+
+The scroll actions that adjust a shape being created also update the _defaults_ for that shape type, which the next shape you create will start from.
+
+{{< note >}}
+Scrolling up increases the value being adjusted. [Preferences > Invert the direction of the mouse vertical scroll](../../../../preferences-settings/darkroom.md) reverses this -- a general scroll-direction setting that affects every slider in Ansel, not just masks.
+{{< /note >}}
+
+## Editing a shape
+
+Click _Show and edit mask elements_ to display the mask's shapes on the canvas, then drag a shape to move it. Clicking a shape also selects it in the [shape list](#the-shape-lists).
+
+For nodes, segments and per-shape parameters, right-click on the shape and work from [the context menu](#the-context-menu).
+
+## Removing a shape
+
+There are two distinct outcomes, and the menu keeps them apart:
+
+- _Remove shape from mask_ detaches the shape from this module's mask. The shape survives, still listed for the image and still usable by other modules — this is what the _unlink_ icon in the mask list does too.
+- _Delete shape_ removes it altogether, everywhere it was used. The _trash_ icon in the lists does the same.
+
+With the pointer over one of a Polygon's or Brush's nodes, the menu offers _Delete node_ instead, which removes that single node rather than the shape.
+
+## Reusing a shape
+
+A shape is a single object shared by every mask that uses it: edit it in one module and every other module using it follows.
+
+Press _Attach shapes_ to swap the panel's list for every shape defined on the image, then tick a shape's checkbox to add it to the current module's mask, or untick it to detach it. Shapes greyed out as _Already in '&lt;group&gt;'_ are reached through a group that is itself attached.
+
+The [mask manager](../../../toolboxes/mask-manager.md) covers the same shapes from a separate window, where they can also be grouped, reordered and renamed across all modules at once.
 
 ## Shape distortions
 
-In order to ensure a consistent co-ordinate system, when you place a shape on the image, it is actually drawn on the original RAW file. This shape then passes up through the pixelpipe before finally being used by the module and drawn on the screen. This means that, if you have any enabled any distorting modules (such as lens correction), drawn shapes may appear distorted on the screen and in the final image. This can lead, for example, to circles being rendered as ellipses and gradient lines becoming curved. If you need to create a more accurate shape (to overcome these distortions) it is recommended that you avoid using the simple shapes (circles / ellipses) in favor of the path shape (which can be drawn using more points, reducing distortions). You can adjust the curve on gradient lines to overcome the simple distortions introduced by lens correction.
+Because a shape is stored in the coordinate system of the original image, it travels up the pixelpipe before the module uses it and draws it on screen. Any distorting module active in between -- [_lens correction_](../../modules/lens-correction.md) or [_rotate and perspective_](../../modules/rotate-perspective.md), for instance -- therefore distorts the shape too, on screen and in the exported image alike: circles can render as ellipses, and gradient lines can end up curved.
 
-## Available shapes
+To draw a shape that follows the subject accurately despite this, prefer a Polygon over a Circle or an Ellipse, since its extra nodes let you compensate for the distortion. For a Gradient, bending its line counteracts the simpler distortion that lens correction introduces.
 
-circle
-: Click on the image canvas to place the circle. Scroll while hovering over the circle to change its diameter. Scroll while hovering over the circle's border to change the width of the feathering (the same effect as holding Shift while scrolling with the mouse wheel within the main shape).
+## Panning and zooming
 
-ellipse
-: The general principle is the same as for the circle shape. In addition, four nodes are shown on the ellipse line. Click and drag the nodes to adjust the ellipse's eccentricity. Ctrl+click and drag the nodes or use Shift+Ctrl+scroll (with the mouse wheel) to rotate the ellipse. Shift+click within the shape to toggle the gradual decay between equidistant and proportional mode.
+Mouse actions over a shape, or over its nodes and handles, apply to that shape. Away from it, dragging and scrolling pan and zoom the center view as usual, so there is no need to leave creation or edit mode to reposition the canvas.
 
-path
-: Click on the image canvas to place three or more nodes and generate a free-format enclosed shape. Terminate the path by right-clicking after having set the last point. By default, nodes are connected with smooth lines. If you want a node to instead define a sharp corner, you can do so by creating it with Ctrl+click.
-
-: In edit mode Ctrl+click on an existing node to convert it from smooth to sharp corners and vice versa. Ctrl+click on one of the line segments to insert an additional node. Right-click on a node to delete it. Take care to ensure that the mouse pointer is over the desired node and the node is highlighted, to avoid accidentally removing the whole path.
-
-: The size of the completed shape can be modified by scrolling. The same holds true for the width of the border (the area with a gradual opacity decay), which can also be changed with Shift+scroll (with the mouse wheel) from anywhere within the shape. Single nodes as well as path segments can be moved by dragging them with the mouse. If a node is selected by clicking on it, a further control point appears which allows you to modify the curvature of the line (reset to default by right-clicking). Dragging one of the control points on the border adjusts the border width just in that part of the shape.
-
-: Consider fine-tuning paths in restricted edit mode (enabled by Ctrl+clicking on the 'show and edit mask elements' icon). This allows you to adjust single nodes and segments without the risk of accidentally shifting or resizing the whole shape.
-
-brush
-: Start drawing a brush stroke by left-clicking on the image canvas and moving the mouse while keeping the button pressed. The brush stroke is finalized once you release the mouse button. Scroll the mouse to change the shape size and Shift+scroll to change the feathering (hardness), either before you start drawing or at any time during the operation. Likewise you can use the "`{`" and "`}`" keys to decrease/increase hardness, and the "`<`" and "`>`" keys to decrease/increase opacity.
-
-: If you have a graphics tablet with pen pressure sensitivity, Ansel can apply the recorded pen pressure to certain attributes of the brush stroke. This operation can be controlled in [preferences > darkroom > pen pressure control for brush masks](../../../../preferences-settings/darkroom.md).
-
-: On lifting the tablet pen or releasing the left mouse button the brush stroke is converted into a number of connected nodes, which define the final shape. A configuration option ([preferences > darkroom > smoothing of brush strokes](../../../../preferences-settings/darkroom.md)) controls how much smoothing is applied. A higher level of smoothing leads to fewer nodes being created – this eases subsequent editing at the expense of lower accuracy.
-
-: Nodes and segments of a brush stroke can be modified individually. See the documentation on path shapes (above) for more details. Change the size or hardness of a node by scrolling and Shift+scrolling over a node, respectively.
-
----
-
-**Note:** Rendering a complex brush shape can consume a significant number of CPU cycles. Consider using the circle, ellipse or path shapes instead where possible.
-
----
-
-gradient
-: The gradient shape is a linear gradient which extends from a given point to the edge of the image.
-
-: Click on the image canvas to define the position of the line that defines 50% opacity. Dotted lines indicate the distance beyond which the opacity is 100% and 0%. Between these dotted lines the opacity changes linearly.
-
-: The line has two anchor nodes which you can drag to change the rotation of the gradient. You can also set the rotation angle when placing the gradient shape by clicking and dragging to place the shape.
-
-: Gradient lines can also be curved by scrolling with your mouse while hovering close to the center line. This can be useful to counteract the distortion caused by the [_lens correction_](../../modules/lens-correction.md) module.
-
-: Depending on the module and the underlying image, using a gradient shape might provoke banding artifacts. You should consider activating the [_dithering_](../../modules/dithering.md) module to alleviate this.
-
-## Reversing the polarity of a drawn mask
-
-Click on the "`+/-`" button to reverse the polarity of the entire drawn mask. For example, a circular mask will, by default, cause the module to be applied only to the area inside the drawn circle. Reversing its polarity will cause the module to apply to the whole image, _except for_ that circle.
-
-## Panning and zooming the image
-
-While creating or editing a shape, mouse actions are applied to the current shape.  If you need to move or zoom the portion of the image shown in the center view, hold down the 'a' key while dragging the mouse or using the scroll wheel.  While the key is held down, the mouse actions will apply to the entire image rather than the current shape.
+On a zoomed-in image, dragging a shape towards the edge of the viewport pans the view in that direction on its own, and keeps panning while you hold the pointer there, so a shape can be moved past the visible area without interrupting the drag. The pan accelerates the closer to the edge you get. It also works while placing a new shape, but not while painting a Brush stroke, where dragging is the drawing action itself.
