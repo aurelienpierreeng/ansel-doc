@@ -1,58 +1,95 @@
 ---
 title: Masking & blending
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2026-06-17
+lastmod: 2026-08-23
 id: masking-and-blending
 weight: 50
 draft: false
 author: "people"
 ---
-Each processing module takes its input from the preceding module in the pixelpipe, performs its operation on the image data, and then hands the output to the next module in the pixelpipe.
+Masking and blending decide how much of a processing module's effect actually reaches the image, and where -- from applying it uniformly across the whole frame down to targeting a handful of pixels.
 
-A module's output data can optionally be reprocessed (combined) with its input data before being handed to the next module. This additional processing step is called _blending_ -- input and output data is reprocessed using algorithms called blending operators or [blend modes](./blend-modes.md).
+Each module takes its input from the preceding module in the pixelpipe, performs its operation, and hands the output to the next module. Blending is the optional step in between: a module's output data can be reprocessed (combined) with its input data using algorithms called blending operators, or [blend modes](./blend-modes.md), before being handed onward.
 
-Each blend mode is further controlled by the _opacity_ parameter (having a value between 0% and 100%) which defines how much the input and output images contribute to the final result. Typically an opacity of 0% outputs an image which is identical to the input image (the module has no effect) whereas an opacity of 100% delivers the maximum effect of the module.
+Each blend mode is further controlled by the _opacity_ parameter (having a value between 0% and 100%) which defines how much the input or output images contribute to the final result. Typically an opacity of 0% outputs an image which is identical to the input image (the module has no effect) whereas an opacity of 100% delivers the maximum effect of the module.
 
-This opacity can be the same for every pixel (using the global opacity slider), in which case blending acts uniformly over the entire image. Alternatively the opacity values can vary depending on the properties or location of each pixel. This local modification of opacity is called a _mask_. Masks provide the user with fine control over which parts of an image are affected by a module and to what extent. You may activate a [drawn mask](./masks/drawn.md), a [parametric mask](./masks/parametric.md), a [raster mask](./masks/raster.md), or **any combination of the three** (see [combining masks](#combining-masks) below).
+This opacity can be the same for every pixel (using the global _Opacity_ slider), in which case blending acts uniformly over the entire image. Alternatively the opacity values can vary depending on the properties or location of each pixel. This local modification of opacity is called a _mask_, and it is what gives you fine control over which parts of an image a module affects, and to what extent.
 
-Blending and masking functionality is controlled from a set of tabs at the bottom of each applicable module, one per masking method, each with its own _Enable_/_Disable_ toggle. The drawn shapes you create here are the same objects listed in the [mask manager](../../toolboxes/mask-manager.md) (the _Masking & Blending_ tool in the left panel), and can be reused across modules.
+These controls are shown in the _Masking & Blending_ tool in the darkroom [left panel](../darkroom-view-layout.md#left-panel): focus a module that supports blending (click its header) and this panel switches to show that module's blending controls. With no module focused, or a module that doesn't support blending, the panel says so instead.
 
-The available masking and blending methods are:
+The drawn shapes you create there are the same objects managed by the [mask manager](../../toolboxes/mask-manager.md), a separate floating window, and can be reused across modules.
 
-off
-: Module output is passed to the next module in the pixelpipe without additional reprocessing. No further controls are displayed.
+## Enabling blending and masking
 
-uniformly
-: Input and output images are reprocessed uniformly with the chosen blend mode, where the amount of blending is controlled by a single opacity slider. Additional controls are displayed to allow the blend mode and opacity to be selected. The default is a blend mode of “normal” with an opacity of 100%.
+Blending is switched on per module by the _Enable_ checkbox at the top of the panel. While it is unchecked, blending and masking are off entirely: the module's output goes straight to the next module in the pixelpipe with no additional reprocessing, and the rest of the panel stays grayed out.
 
-[drawn mask](./masks/drawn.md)
-: Reprocessing takes place with the chosen blend mode and an opacity based on pixel location as defined by one or more drawn shapes. Additional controls are displayed to allow mask elements to be drawn. If no mask elements are drawn then all pixels have the same opacity, as defined by the opacity slider.
+Check it and blending applies _uniformly_ over the whole image, which is the state you get before any mask is involved: input and output are combined with the chosen blend mode, in an amount set by the global _Opacity_ slider. The defaults -- a blend mode of “Normal” at 100% opacity -- reproduce the module's plain effect.
 
-[parametric mask](./masks/parametric.md)
-: Reprocessing takes place with the chosen blend mode and an opacity based on the properties of individual pixels. Additional controls are displayed to allow the opacity to be adjusted on a per-pixel basis, determined by pixel values.
+Adding a mask is what makes that opacity vary from pixel to pixel instead of being the same everywhere. Each masking method has its own tab, and all three -- _Raster_, _Drawn_ and _Parametric_ -- are enabled by default: switching blending on is enough to start using any of them, and they stay uniform until you actually draw a shape, move a parametric slider or pick a raster source. Use as many at once as you need (see [combining masks](#combining-masks) below); each masking tab has its own _Disable_ checkbox to turn that method off when you want it out of the way.
 
-[raster mask](./masks/raster.md)
-: Reprocessing takes place with the chosen blend mode and an opacity based on a mask that was generated by another module earlier in the pixelpipe.
+[Drawn mask](./masks/drawn.md)
+: The opacity is based on pixel location, as defined by one or more shapes drawn on the image. Until you draw a shape, every pixel keeps the same opacity, as set by the global _Opacity_ slider.
 
-blending options
-: Choose which color space to use when calculating the blending mask, and specify whether or not to allow a mask to be generated based on the module's output channels (normally a parametric mask is generated based on the input channels coming into the module). The following options are available:
-: - _reset to default blend colorspace_: Use the default color space for the module to specify the parametric mask.
-: - _Lab_: Use the Lab color space (where available) to specify the parametric mask.
-: - _RGB (display)_: Use the display-referred RGB/HSL color space to specify the parametric mask.
-: - _RGB (scene)_: Use the scene-referred RGB/J<sub>z</sub>C<sub>z</sub>h<sub>z</sub> color space to specify the parametric mask.
-: - _show output channels_: Show the [parametric mask](./masks/parametric.md) output channel controls, so that the parametric mask can be defined in terms of the module's output channels.
+[Parametric mask](./masks/parametric.md)
+: The opacity is based on the properties of individual pixels, computed per-pixel from their values in the color channels you choose.
 
----
+[Raster mask](./masks/raster.md)
+: The opacity is based on a mask that was generated by another module earlier in the pixelpipe.
 
-**Note:** Not all of these blending options are available for every module.
+A fourth tab, _Contours_, carries no _Disable_ checkbox of its own because it defines no mask: it refines whichever mask the other tabs produce, blurring and feathering it so its edges follow the details of the image. See [mask contours](./masks/refinement-controls.md).
 
----
+## Blending options
+
+The button at the right end of the tab row opens a menu of options for the [parametric mask](./masks/parametric.md); it stays grayed out on modules that don't support one. Use it to pick the color space the parametric mask is computed in, and to show the output-channel sliders (a parametric mask is normally built from the input channels coming into the module):
+
+- _Reset to default blend colorspace_: Go back to the module's own default color space.
+- _Lab_: Use the Lab color space. Offered only for modules that natively work in Lab, so that Lab blending is not applied where it doesn't belong.
+- _RGB (display)_: Use the display-referred RGB/HSL color space.
+- _RGB (scene)_: Use the scene-referred RGB/J<sub>z</sub>C<sub>z</sub>h<sub>z</sub> color space.
+- _Show output channels_: Show the output channel sliders, so the parametric mask can also be defined in terms of the module's output. Once they are shown, this entry becomes _Reset and hide output channels_.
+
+{{< note >}}
+Not every blend mode or blending option is available for every module -- the choices on offer depend on the color space the module works in.
+{{< /note >}}
 
 ## Combining masks
 
-Unlike Darktable, where you had to pick a single masking mode, Ansel exposes drawn, parametric and raster masking as **independent toggles that can be combined**. Each method has its own tab, and you enable as many as you need at once:
+The three masking methods are **independent toggles that can be combined**. A [raster mask](./masks/raster.md) serves as the base when one is active, and the [drawn](./masks/drawn.md) and [parametric](./masks/parametric.md) masks refine it from there.
 
-- A [drawn mask](./masks/drawn.md) and a [parametric mask](./masks/parametric.md) combine according to the _combine masks_ setting — see [combining drawn & parametric masks](./masks/drawn-and-parametric.md).
-- A [raster mask](./masks/raster.md) can now be combined **on top of** a drawn and/or parametric mask: the raster mask is used as the base, and the drawn and parametric masks refine it further. In Darktable, a raster mask was mutually exclusive with the other mask types and could not be refined.
+How those masks are folded together is set by _Combine masks_, whose two modes are mirror images of each other:
 
-The final per-pixel opacity is the product of every active mask, multiplied by the global opacity slider. A pixel excluded by any one mask (opacity 0) stays excluded, so adding a mask on top can only ever _restrict_ the affected area, never extend it.
+- _Exclusive_, the default, multiplies the masks together before applying the global _Opacity_ slider. A pixel excluded by any one mask (opacity 0) stays excluded, so each mask you add can only ever _restrict_ the affected area.
+- _Inclusive_ inverts each mask, multiplies, then inverts the result. A pixel fully included by any one mask (opacity 1.0) stays included, so each mask you add can only ever _extend_ the affected area.
+
+Deciding which of the two you want before you start is the easiest way to keep a complex mask predictable — see [combining drawn & parametric masks](./masks/drawn-and-parametric.md) for the polarity settings that go with each.
+
+## Previewing the mask
+
+{{< figure src="masked-image.jpg" height="500" caption="Masked image" />}}
+
+A mask is easier to judge when you can see it. The mask icon, both in the module's header and in the blending panel, replaces the center view with a preview of the mask the module is currently using.
+
+Read it as a cut-out rather than as a highlight:
+
+- Where the image **shows through**, the mask is at full opacity and the module's effect is **applied**.
+- Where the **checkerboard** shows, the mask is at zero and the module is **not applied** — that part of the picture is masked out, so it is hidden from view.
+- In between, the image and the checkerboard mix in proportion, so a soft edge fades from one to the other.
+
+The checkerboard pattern is deliberate: it makes a partly transparent mask legible in a way a flat color cannot, since you can tell a half-hidden area from a fully hidden one at a glance.
+
+### Mask preview settings
+
+{{< figure src="options-display-masking.png" caption="Mask display options." />}}
+
+The look of the preview is set in the _Picture display options_ popover, opened by the _Display_ button in the toolbox at the bottom of the darkroom [left panel](../darkroom-view-layout.md#left-panel). Its _Mask preview settings_ section holds:
+
+_Checkerboard color 1_ and _Checkerboard color 2_
+: The two alternating squares. Picking colors that clash with the image you are working on is what makes the masked areas obvious — a neutral pair disappears against a busy picture.
+
+_Checkerboard size_
+: The size of a square, from 2 to 32 px (default 8). Larger squares are easier to see; smaller ones obscure less of a finely detailed mask edge.
+
+_Show a greyscaled mask image_
+: Converts the visible part of the image to grayscale during the preview, so the only colors on screen are the checkerboard's. Useful when the picture's own colors make the mask boundary hard to follow.
+
+The same popover carries _Fast drawn mask rasterization_, which trades a little accuracy in how brush and polygon masks are drawn on screen for speed when zoomed out. Exports, thumbnails and snapshots stay pixel-accurate either way.

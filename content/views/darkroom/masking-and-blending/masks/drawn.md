@@ -43,6 +43,8 @@ Brush options
 
 ## The shape lists
 
+{{< figure src="mask/drawn/shape-list.jpg" caption="The shape list in the Drawn tab." />}}
+
 The panel has two lists that share the same slot; the _Attach shapes_ button picks which one is showing.
 
 The **mask list** is the default view and holds the shapes this module's mask is built from, applied in list order from top to bottom. Each row carries, from left to right: the [set operator](../../../toolboxes/mask-manager.md#set-operators) combining that shape with the ones above it, an icon if its polarity is inverted, its name, an _unlink_ icon that detaches the shape from this mask while keeping it available elsewhere, and a _trash_ icon that deletes the shape outright. Right-clicking a row opens the shape-level part of [the context menu](#the-context-menu) — its parameter sliders, the _Operation_ submenu and _Move Up_ / _Move Down_ — which is handy for a shape that is hard to reach on the canvas, or hidden behind others.
