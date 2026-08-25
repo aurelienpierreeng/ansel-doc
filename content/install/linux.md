@@ -126,9 +126,13 @@ These scripts install the build/runtime dependencies used by CI and packaging.
 
 Note that optional dependencies don't make the script abort when they are not found, but will disable the corresponding features. You need to read the build script output to find out if everything works as you expect it.
 
-{{< warning >}}
-Fedora (and possibly other distributions) builds the Exiv2 library (required by Ansel to read image metadata) without the ISOBMFF support. Since Canon CR3 raw files are ISOBMFF containers, this makes Ansel built on Fedora unable to open .CR3 files. You will need to build Exiv2 yourself too (see below).
-{{</ warning >}}
+{{< note >}}
+Ansel builds its own copy of Exiv2 — the library it uses to read image metadata — from the `src/external/exiv2` git submodule, and links it statically. You therefore don't need `libexiv2-dev` (or `exiv2-devel`) installed, and you no longer need to build Exiv2 by hand.
+
+This used to be a real obstacle: Fedora, and some other distributions, build Exiv2 without ISOBMFF support. Canon CR3 raw files are ISOBMFF containers, so an Ansel linked against such a build simply could not open them. Ansel now enables ISOBMFF itself, so CR3 works everywhere.
+
+Make sure you clone with `--recurse-submodules`, or run `git submodule update --init` in an existing clone.
+{{</ note >}}
 
 ### Compile the application
 
@@ -194,16 +198,15 @@ Then run the building script above, same as when you installed.
 
 ### Caveats
 
-If you need to build Exiv2 yourself, either because the version provided by your distribution is too old, or it is built without ISOBMFF support and therefore does not support Canon CR3, here is the sequence of commands to input in terminal:
+#### Linking the system Exiv2 instead
+
+Ansel builds its own Exiv2 by default, and that is the configuration we test and ship. If you are packaging Ansel for a distribution and must link the system library instead, configure with:
 
 ```bash
-$ git clone https://github.com/Exiv2/exiv2.git
-$ cd exiv2
-$ git checkout 0.27-maintenance
-$ cmake -B build -G Ninja -DEXIV2_ENABLE_XMP=ON -DEXIV2_ENABLE_BMFF=ON
-$ ninja -C build
-$ sudo ninja -C build install
+$ cmake -DUSE_BUNDLED_EXIV2=OFF ...
 ```
+
+That build **requires an Exiv2 compiled with `-DEXIV2_ENABLE_BMFF=ON`**, and the configure step will stop with an error if it isn't. ISOBMFF is what reads the metadata of Canon CR3, AVIF and HEIF files; CR3 is one of the most common formats among Ansel users, and an editor that cannot open its users' raw files is not something we can let build quietly. Fedora in particular still disables it.
 
 It appears that most Linux distributions provide outdated Lensfun databases (even though the binary is up-to-date), so you may want to update it: `sudo lensfun-update-data`
 

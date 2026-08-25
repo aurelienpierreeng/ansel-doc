@@ -71,4 +71,4 @@ This method is derived from the repository scripts in `packaging/macosx/`.
 
 ## MacPorts method (legacy, Intel-only)
 
-A legacy Intel-only method using MacPorts exists in `packaging/macosx/BUILD.txt`. It includes custom patches for `exiv2`, `gnutls`, and `gtk-osx-application`, and uses `gtk-mac-bundler` to produce a DMG. Use this only if you specifically need a MacPorts-based build.
+A legacy Intel-only method using MacPorts exists in `packaging/macosx/BUILD.txt`. It includes custom patches for `gnutls` and `gtk-osx-application`, and uses `gtk-mac-bundler` to produce a DMG. Use this only if you specifically need a MacPorts-based build.
