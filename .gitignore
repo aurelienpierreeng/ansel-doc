@@ -6,3 +6,14 @@ public-pdf/*
 content/.obsidian/
 _vendor/*
 _gen/*
+
+# Local Hugo module workspace: it hard-codes a path to a sibling ansel-website
+# checkout, so it must never reach a clone that doesn't have one.
+hugo.work
+hugo.work.sum
+
+# Local-preview layout overrides. Nothing in layouts/ reaches the published site:
+# ansel-website imports this repo with an explicit mount list (see AGENTS.md), so
+# anything here is a development convenience. Use `git add -f` to track one anyway.
+/layouts/*
+!/layouts/.gitkeep

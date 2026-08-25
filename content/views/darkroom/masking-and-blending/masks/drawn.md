@@ -15,31 +15,16 @@ Drawn masks are handled from the _Drawn_ tab of the _Masking & Blending_ tool, i
 
 ## The Drawn panel
 
-The tab holds:
-
-Enable
-: Blending is switched on per module by the _Enable_ checkbox at the top of the tool, above the row of tabs, and the whole panel stays grayed out until you check it. The _Drawn_ tab is armed by default -- as are _Parametric_ and _Raster_ -- so it is ready to use as soon as blending is on. Its own _Disable_ checkbox turns drawn masking back off when you want it out of the way.
-
-Mask name
-: A text field naming this module's mask. It starts out showing `Mask <module name>` as a placeholder; type your own name and press <kbd>Enter</kbd> to replace it. Meaningful names pay off as soon as several modules carry masks.
-
-Polarity ( ± icon )
-: Reverses the polarity of the whole drawn mask. A circle, by default, restricts the module to the area inside it; flipping the polarity applies the module everywhere _except_ inside that circle.
-
-Show and edit mask elements
-: Displays the mask's shapes on the canvas so you can edit them. <kbd>Ctrl</kbd>+click (<kbd>⌘</kbd>+click on macOS) enters _restricted_ edit mode instead, in which a shape's overall position and size are locked -- neither dragging nor scrolling over it moves or resizes it -- and only its individual nodes and segments respond. This is the safe way to fine-tune Polygon and Brush shapes.
-
-Shape list
-: The shapes making up this module's mask, described in [the shape lists](#the-shape-lists) below.
-
-Attach shapes
-: Switches the list above to every shape defined for the image, so you can attach or detach them. See [reusing a shape](#reusing-a-shape).
-
-Shape buttons
-: Five buttons at the bottom right create a new shape: Circle, Ellipse, Polygon, Brush and Gradient. See [creating a shape](#creating-a-shape).
-
-Brush options
-: A collapsible section holding two settings that apply to Brush shapes only: _Brush strokes smoothing_ and _Pen pressure mapping_, both described under [Brush](#shapes).
+{{< param-table >}}
+| **Enable**<div>Blending is switched on per module by this checkbox at the top of the tool, above the row of tabs, and the whole panel stays grayed out until you check it. The _Drawn_ tab is armed by default -- as are _Parametric_ and _Raster_ -- so it is ready to use as soon as blending is on. Its own _Disable_ checkbox turns drawn masking back off when you want it out of the way.</div> |
+| **Mask name**<div>A text field naming this module's mask. It starts out showing `Mask <module name>` as a placeholder; type your own name and press <kbd>Enter</kbd> to replace it. Meaningful names pay off as soon as several modules carry masks.</div> |
+| **Polarity** (± icon)<div>Reverses the polarity of the whole drawn mask. A circle, by default, restricts the module to the area inside it; flipping the polarity applies the module everywhere _except_ inside that circle.</div> |
+| **Show and edit mask elements**<div>Displays the mask's shapes on the canvas so you can edit them. <kbd>Ctrl</kbd>+click (<kbd>⌘</kbd>+click on macOS) enters _restricted_ edit mode instead, in which a shape's overall position and size are locked -- neither dragging nor scrolling over it moves or resizes it -- and only its individual nodes and segments respond. This is the safe way to fine-tune Polygon and Brush shapes.</div> |
+| **Shape list**<div>The shapes making up this module's mask, described in [the shape lists](#the-shape-lists) below.</div> |
+| **Attach shapes**<div>Switches the list above to every shape defined for the image, so you can attach or detach them. See [reusing a shape](#reusing-a-shape).</div> |
+| **Shape buttons**<div>Five buttons at the bottom right create a new shape: Circle, Ellipse, Polygon, Brush and Gradient. See [creating a shape](#creating-a-shape).</div> |
+| **Brush options**<div>A collapsible section holding two settings that apply to Brush shapes only: _Brush strokes smoothing_ and _Pen pressure mapping_, both described under [Brush](#shapes).</div> |
+{{< /param-table >}}
 
 ## The shape lists
 

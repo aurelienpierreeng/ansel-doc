@@ -2,8 +2,16 @@ baseURL:  /
 defaultContentLanguage: en
 defaultContentLanguageInSubdir: true
 title: Ansel documentation
+refLinksErrorLevel: WARNING
 
 markup:
+  goldmark:
+    renderer:
+      # Shortcodes and content both emit inline HTML the docs rely on: <kbd> for key
+      # names (mandated by AGENTS.md), <br> inside table cells, and the <div> grids the
+      # theme's row/column/gallery shortcodes produce. Goldmark's default (unsafe: false)
+      # strips all of it and renders "<!-- raw HTML omitted -->" instead.
+      unsafe: true
   highlight:
     style: algol_nu
   tableOfContents:
@@ -12,6 +20,11 @@ markup:
     startLevel: 2
 
 module:
+  # Build the theme from the sibling ansel-website checkout rather than the module
+  # published on GitHub, so theme edits show up here without a commit, push and
+  # `hugo mod get -u`. Requires ansel-website to sit next to this repository; see
+  # hugo.work. Drop this line (or set it to "off") to go back to the published module.
+  workspace: hugo.work
   mounts:
   - disableWatch: false
     excludeFiles: null

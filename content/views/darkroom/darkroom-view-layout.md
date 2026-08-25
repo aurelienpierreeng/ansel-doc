@@ -1,7 +1,7 @@
 ---
 title: Darkroom view layout
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2026-06-16
+lastmod: 2026-08-23
 id: the-darkroom-view
 weight: 20
 draft: false
@@ -25,8 +25,8 @@ Shown and hidden with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd>. It holds th
 [Duplicate manager](../../views/toolboxes/duplicate-manager.md)
 : View and manage the duplicates (versions) of the current image.
 
-[Mask manager](../../views/toolboxes/mask-manager.md)
-: View and edit the [drawn shapes](masking-and-blending/masks/drawn.md) used by masks.
+[Masking & Blending](masking-and-blending/_index.md)
+: The blend mode, opacity and [masking](masking-and-blending/masks/_index.md) controls for whichever module currently has focus. Shapes themselves are created and managed from the separate [mask manager](../../views/toolboxes/mask-manager.md) window, opened from the [bottom toolbar](#bottom-panel).
 
 [History of changes](../../views/toolboxes/history-stack.md)
 : The editing history of the current image, where you can step back to any previous state, compress or reset the history.
@@ -114,6 +114,12 @@ A toolbar of visual-assessment overlays. From left to right:
 
 [Guides & overlays](../../views/toolboxes/guides-overlays.md)
 : Left-click to toggle the guide overlays; right-click to change the guide settings, including the color of all on-image drawing (masks, crop guides, etc.).
+
+Display
+: Opens the _Picture display options_ popover: background brightness and margins, the rendering size of the center view, and the [mask preview settings](masking-and-blending/_index.md#mask-preview-settings).
+
+[Mask manager](../../views/toolboxes/mask-manager.md)
+: Open or close the separate floating window used to create and manage the [drawn shapes](masking-and-blending/masks/drawn.md) used by masks, across all modules at once.
 
 Pipeline node graph
 : Open the [module-order graph](pixelpipe/the-pixelpipe-and-module-order.md#changing-module-order) — a left-to-right view of the pixelpipe where you can inspect and rearrange the order in which modules are applied.

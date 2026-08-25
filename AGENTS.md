@@ -8,6 +8,20 @@ A [Hugo](https://gohugo.io/) static site. Source content lives in `content/` (En
 
 Every shortcode comes from the theme, including `param-table` and `icon`, which were written for these docs but live in `themes/ansel/layouts/shortcodes/` in the [ansel-website](https://github.com/aurelienpierreeng/ansel-website) repo. Nothing in this repo's `layouts/` reaches the published site: ansel-website imports this repo as a Hugo module with an explicit list of mounts (`content`, `assets`, `po`, `tools`), and Hugo drops a module's default mounts as soon as one is declared for it. A new shortcode therefore has to be added to the theme, in that repo; `layouts/` here is only for local-preview overrides, which the site never sees.
 
+## Building the site locally
+
+`hugo` (extended, matching the version in ansel-website's `.github/workflows/hugo.yml`) and `go` both have to be on `PATH` — Hugo shells out to `go` to resolve the theme module. Then `hugo server` from the repo root, or `hugo` for a one-shot build.
+
+The theme is pinned by commit in `go.mod`. A shortcode added to `themes/ansel/` in ansel-website is invisible here until that pin moves, and the build then fails outright with `template for shortcode "<name>" not found`. Push the theme change first, then bump the pin:
+
+```
+hugo mod get github.com/aurelienpierreeng/ansel-website/themes/ansel@master
+```
+
+and commit the resulting `go.mod`/`go.sum`.
+
+To iterate on the theme itself, `module.workspace: hugo.work` in `config.yaml` builds against a sibling `../ansel-website` checkout instead of the published module, so theme edits show up here without a commit / push / bump round trip. `hugo.work` is gitignored because it hard-codes that sibling path — which means the `module.workspace` line must not be committed either: a clone without the file fails immediately with `module workspace ... does not exist`. Keep the workspace enabled locally and out of what you push, and remember it also hides a stale pin, so re-check the build against the published module before pushing content that uses a new shortcode.
+
 ## Core philosophy: documentation is a graph, not a list
 
 > "Knowledge is a network graph anyway. You just have to mind the links between the nodes. They are at least as important as the content."
