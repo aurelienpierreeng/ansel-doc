@@ -17,7 +17,7 @@ This opacity can be the same for every pixel (using the global _Opacity_ slider)
 
 These controls are shown in the _Masking & Blending_ tool in the darkroom [left panel](../darkroom-view-layout.md#left-panel): focus a module that supports blending (click its header) and this panel switches to show that module's blending controls. With no module focused, or a module that doesn't support blending, the panel says so instead.
 
-The drawn shapes you create there are the same objects managed by the [mask manager](../../toolboxes/mask-manager.md), a separate floating window, and can be reused across modules.
+The drawn shapes you create there are the same objects managed by the [shape manager](../../toolboxes/shape-manager.md), a separate floating window, and can be reused across modules.
 
 ## Enabling blending and masking
 

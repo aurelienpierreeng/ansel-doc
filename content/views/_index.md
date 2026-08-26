@@ -64,7 +64,7 @@ Directly below the header, the lighttable shows a single toolbar that combines t
 Shown and hidden with <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>L</kbd>. It hosts the view's [toolboxes](toolboxes/_index.md):
 
 - **In lighttable**: the _Library_ collection builder and import/export tools.
-- **In darkroom**: peripheral tools about the picture being edited — navigation, snapshots, color pickers, image information, mask manager, etc.
+- **In darkroom**: peripheral tools about the picture being edited — navigation, snapshots, color pickers, image information, shape manager, etc.
 
 ### Right panel
 

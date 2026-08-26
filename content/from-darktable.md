@@ -219,7 +219,7 @@ DAM modules removed from darkroom
 Modules reorganized
 : Darktable's "modules" lumped two different things behind the same look: image-processing filters (which live in the pipeline) and arbitrary toolboxes (which are just panels of buttons). The toolboxes have been renamed to plain functional names and sorted by where they belong.
 : In the lighttable, a single **left** sidebar holds the file and metadata tools — "Library" (the old "collect"/"collections"), the metadata editor, tagging, "Datetime and GPS" (geotagging) and image information. The whole **right** sidebar of the lighttable has been removed: once the toolboxes-that-are-really-menus moved out, there was nothing worth keeping there, and the freed space went to the thumbnails.
-: In the darkroom, the **right** sidebar is reserved for the image-processing modules, and the **left** sidebar holds the editing helpers (scopes, snapshots, history of changes, duplicates, mask manager…).
+: In the darkroom, the **right** sidebar is reserved for the image-processing modules, and the **left** sidebar holds the editing helpers (scopes, snapshots, history of changes, duplicates, shape manager…).
 
 Toolboxes moved to the global menu
 : The "modules" that took no user input and only displayed buttons — selection helpers, image actions, history copy/paste, styles management, the maintenance scripts — have been moved into the global menu, where hierarchical lists of buttons have belonged since graphic designers invented drop-down menues in the 1980's. Another thing darktable failed at, for years, while shipping grids of cryptic icons instead.
