@@ -1,7 +1,7 @@
 ---
 title: Drawn masks
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2026-08-23
+lastmod: 2026-08-28
 id: drawn
 weight: 20
 draft: false
@@ -24,6 +24,7 @@ Drawn masks are handled from the _Drawn_ tab of the _Masking & Blending_ tool, i
 | **Attach shapes**<div>Switches the list above to every shape defined for the image, so you can attach or detach them. See [reusing a shape](#reusing-a-shape).</div> |
 | **Shape buttons**<div>Five buttons at the bottom right create a new shape: Circle, Ellipse, Polygon, Brush and Gradient. See [creating a shape](#creating-a-shape).</div> |
 | **Brush options**<div>A collapsible section holding two settings that apply to Brush shapes only: _Brush strokes smoothing_ and _Pen pressure mapping_, both described under [Brush](#shapes).</div> |
+| **Mouse wheel**<div>A second collapsible section, holding the grid that decides which property of a shape each wheel combination edits. It is shared by every mask of every module -- see [the mouse wheel](#the-mouse-wheel).</div> |
 {{< /param-table >}}
 
 ## The shape lists
@@ -62,11 +63,11 @@ The menu opens with sliders for the shape's parameters. Which ones depends on th
 | Gradient | **Curvature**, **Fade**, **Rotation**, **Opacity** |
 {{< /table >}}
 
-They set the same values that scroll and its modifiers reach directly on the canvas, listed per shape under [Shapes](#shapes) below; the menu is simply the precise way in. **Opacity** is how strongly this one shape contributes to the mask. The **Operation** submenu below them offers the [set operators](../../../toolboxes/shape-manager.md#set-operators) described in the shape manager.
+They set the same values [the mouse wheel](#the-mouse-wheel) reaches directly on the canvas, listed per shape under [Shapes](#shapes) below; the menu is simply the precise way in. **Opacity** is how strongly this one shape contributes to the mask.
 
 {{< param-table >}}
 | **Operation** | **Invert**<div>Inverts this shape's polarity within the mask.</div> |
-| | **Union**, **Intersection**, **Difference**, **Exclusion**<div>How this shape combines with the ones above it in the mask.</div> |
+| | **Union**, **Intersection**, **Difference**, **Exclusion**<div>How this shape combines with the ones above it in the mask. See [set operators](../../../toolboxes/shape-manager.md#set-operators).</div> |
 {{< /param-table >}}
 
 {{< param-table >}}
@@ -80,7 +81,7 @@ They set the same values that scroll and its modifiers reach directly on the can
 Polygon and Brush only. The parameter sliders appear as above, followed by the entries below. The **Operation** submenu and the reordering entries are not offered here, and **Delete node** takes the place of **Remove shape from mask** and **Delete shape** — so a slip of the mouse deletes a node, never the whole shape.
 
 {{< param-table >}}
-| **Switch to round node** / **to cusp node** (or <kbd>Ctrl</kbd>+<kbd class="mouse">click</kbd>) (<kbd>⌘</kbd>+<kbd class="mouse">click</kbd> on macOS)<div>Turns a corner into a smooth curve, or the reverse.</div> |
+| **Switch to round node** / **cusp node** (or <kbd>Ctrl</kbd>+<kbd class="mouse">click</kbd>) (<kbd>⌘</kbd>+<kbd class="mouse">click</kbd> on macOS)<div>Turns a corner into a smooth curve, or the reverse.</div> |
 | **Reset round node**<div>Discards curvature handles you dragged by hand and restores the automatically computed curve.</div> |
 | **Delete node** (or <kbd>Delete</kbd>)<div>Removes that node only, leaving the rest of the shape.</div> |
 {{< /param-table >}}
@@ -93,72 +94,115 @@ Polygon and Brush only. This adds one entry to the shape-level ones (**Operation
 | **Add a node here** (or <kbd>Ctrl</kbd>+<kbd class="mouse">click</kbd>) (<kbd>⌘</kbd>+<kbd class="mouse">click</kbd> on macOS)<div>Inserts a node at that point of the outline.</div> |
 {{< /param-table >}}
 
+## The mouse wheel
+
+{{< figure src="mask/drawn/mask-drawn-wheel.en.png" />}}
+
+Turning the wheel with the pointer over a shape edits one of its properties, and which combination edits which property is your call. The _Mouse wheel_ collapsible section, at the bottom of the _Drawn_ tab beside _Brush options_, holds a grid with one row per wheel combination and one column per property it can reach; ticking a cell maps that row to that property. No combination carries a meaning of its own, so any of them can be pointed at any property, or at none.
+
+Out of the box, the rows are mapped like this:
+
+{{< table >}}
+| Wheel combination | Default property |
+| --- | --- |
+| <kbd class="mouse">Scroll</kbd> | Size / Fade |
+| <kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd> | Hardness / Curvature |
+| <kbd>Ctrl</kbd>+<kbd class="mouse">scroll</kbd> (<kbd>⌘</kbd>+<kbd class="mouse">scroll</kbd> on macOS) | Opacity |
+| <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd> (<kbd>⌘</kbd>+<kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd> on macOS) | Rotation |
+{{< /table >}}
+
+The columns are the properties themselves:
+
+{{< param-table >}}
+| **Size / Fade**<div>The size of the shape, and for a Gradient the extent of its fade -- the value the context menu calls _Size_, or _Fade_ on a Gradient.</div> |
+| **Hardness / Curvature**<div>The width of the feathering, and for a Gradient the curvature of its line -- the context menu's _Fading_, or _Curvature_ on a Gradient.</div> |
+| **Opacity**<div>How strongly the shape contributes to the mask.</div> |
+| **Rotation**<div>The orientation of an Ellipse or of a Gradient.</div> |
+| **Nothing**<div>Unmaps the row: that combination is then ignored over a shape.</div> |
+{{< /param-table >}}
+
+Two columns carry two names because a Gradient spells those properties its own way, exactly as [the context menu](#over-the-shape-itself) renames the matching sliders. One cell covers both vocabularies.
+
+The grid is application-wide. Which property the wheel edits is a habit of yours rather than a property of one shape or of the module owning the mask, so a change made from one module's _Drawn_ tab applies to every mask of every module, and it is remembered between sessions.
+
+A shape only answers for the properties it actually has. A Circle, a Polygon and a Brush have no rotation, so a combination mapped to _Rotation_ does nothing over them, just like a row set to _Nothing_.
+
+{{< note >}}
+Because the mapping is yours to set, the lists below name the property each shape reads, not the keys that reach it: read _Size_ as "whichever combination is mapped to _Size_" -- <kbd class="mouse">scroll</kbd> alone, unless you changed it.
+{{< /note >}}
+
 ## Shapes
 
-Five shapes are available. <kbd class="mouse">Scroll</kbd> always changes the size and <kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd> the feathering, in creation as well as in edit mode, wherever the pointer sits over the shape. Below each shape are the actions specific to it.
+Five shapes are available. The wheel acts in creation as well as in edit mode, wherever the pointer sits over the shape.<br>
+The actions specific to each shape are:
 
-### Circle
 
-A disc with a soft edge, placed with a single click.
+{{< param-table indent="0" >}}
+| **Circle** | A disc with a soft edge, placed with a single click. |
+| | <div>
+- _Size_: diameter
+- _Hardness_: width of the feathering
+</div> |
 
-- <kbd class="mouse">Scroll</kbd>: diameter
-- <kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd>: width of the feathering
-
-### Ellipse
-
-Behaves like the Circle, with four nodes on its outline to stretch it.
-
+| **Ellipse** | Behaves like the Circle, with four nodes on its outline to stretch it. |
+| | <div>
+- _Size_, _Hardness_: as for the Circle
+- _Rotation_: turns the ellipse in precise increments
 - <kbd class="mouse">Drag</kbd> a node: eccentricity
 - <kbd class="mouse">Drag</kbd> the border ring: rotation, with no modifier needed
-- <kbd>Shift</kbd>+<kbd>Ctrl</kbd>+<kbd class="mouse">scroll</kbd> (<kbd>Shift</kbd>+<kbd>⌘</kbd>+<kbd class="mouse">scroll</kbd> on macOS): rotation in precise increments
 - <kbd>Shift</kbd>+<kbd class="mouse">click</kbd> inside the shape: switches the feathering between equidistant and proportional decay
+</div> |
 
-### Polygon
-
-A free-form outline through three or more nodes, joined by smooth curves by default.
-
-While creating it:
-
+| **Polygon** | A free-form outline through three or more nodes, joined by smooth curves by default. |
+| | While creating:
+<div>
 - <kbd class="mouse">Click</kbd>: adds a node
 - <kbd>Ctrl</kbd>+<kbd class="mouse">click</kbd> (<kbd>⌘</kbd>+<kbd class="mouse">click</kbd> on macOS): adds a sharp corner instead
 - <kbd>Backspace</kbd>: removes the node you just placed
 - <kbd class="mouse">Click</kbd> near the first node, or <kbd>Enter</kbd>: closes the shape
-
-Once closed:
-
+</div> | |
+| | While editing:
+<div>
 - <kbd class="mouse">Drag</kbd> a node or a segment: reshapes the outline
 - <kbd class="mouse">Click</kbd> a node: reveals its curvature handle, which can then be dragged
 - <kbd class="mouse">Drag</kbd> a control point on the border: adjusts the feathering around that part only
-- <kbd class="mouse">Scroll</kbd>: resizes the whole shape
-- <kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd>: border width, from anywhere inside the shape
+- _Size_: resizes the shape
+- _Hardness_: border width, from anywhere inside the shape
+- _Size_ and _Hardness_ act on the selected node alone when one is selected, and on every node otherwise
+</div> | |
 
-### Brush
-
-A painted stroke, converted into connected nodes when you release the button; those nodes are then edited exactly like a Polygon's.
-
+| **Brush** | A painted stroke, converted into connected nodes when you release the button; those nodes are then edited exactly like a Polygon's. |
+| | <div>
 - <kbd class="mouse">Left-click</kbd> and <kbd class="mouse">drag</kbd>: paints the stroke
-- <kbd class="mouse">Scroll</kbd> while drawing: brush size
+- _Size_ while drawing: brush size
+- Once the stroke is painted, _Size_ and _Hardness_ act on its nodes exactly like a Polygon's: the selected node alone when one is selected, every node otherwise
+</div> |
+| | In the _Brush options_ section of the panel:
+<div>
 - _Brush strokes smoothing_ (_low_, _medium_ or _high_): how many nodes the conversion produces -- more smoothing means fewer nodes, which eases later editing at the expense of accuracy
 - _Pen pressure mapping_: applies a graphics tablet's recorded pressure to the brush's width, hardness or opacity. _Relative_ scales the attribute between zero and its default value, _absolute_ maps pressure straight onto the 0% to 100% range
-
-The last two live in the _Brush options_ section of the panel.
+</div> |
+{{< /param-table >}}
 
 {{< warning >}}
 Rendering a complex brush shape can consume a significant number of CPU cycles. Consider using a Circle, Ellipse or Polygon instead where possible.
 {{< /warning >}}
 
-### Gradient
-
-A linear gradient running from a line you place to the edge of the image. A single click places the 50% opacity line, and dotted lines mark where the opacity reaches 100% and 0%. Each new gradient reuses the extent, curvature and rotation of the last one you placed or edited.
-
-- <kbd class="mouse">Scroll</kbd>: extent, the distance between the two dotted lines
-- <kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd>: bends the line into a curve
+{{< param-table indent="0" >}}
+| **Gradient** | A linear gradient running from a line you place to the edge of the image. A single click places the 50% opacity line, and dotted lines mark where the opacity reaches 100% and 0%. Each new gradient reuses the extent, curvature and rotation of the last one you placed or edited. |
+| | <div>
+- _Size_, the gradient's _Fade_: extent, the distance between the two dotted lines
+- _Hardness_, the gradient's _Curvature_: bends the line into a curve
+- _Rotation_: turns the gradient in precise increments
 - <kbd class="mouse">Double-click</kbd>: resets the curvature
 - <kbd class="mouse">Drag</kbd> the pivot at the center of the line: rotation
-- <kbd>Shift</kbd>+<kbd>Ctrl</kbd>+<kbd class="mouse">scroll</kbd> (<kbd>Shift</kbd>+<kbd>⌘</kbd>+<kbd class="mouse">scroll</kbd> on macOS): rotation in precise increments
 - <kbd>Shift</kbd>+<kbd class="mouse">click</kbd>, while still in creation mode: switches the opacity transition between a _linear_ ramp and a _sigmoidal_ (S-curve) one, which concentrates the transition closer to the center line. The choice sticks for the gradients you create afterwards
+</div> |
+{{< /param-table >}}
 
+{{< note >}}
 Depending on the module and the image, a gradient can provoke banding artifacts. Activating the [_dithering_](../../modules/dithering.md) module alleviates this.
+{{< /note >}}
 
 ## Creating a shape
 
@@ -172,7 +216,7 @@ Two shapes depart from that cursor. The Brush hides the cursor entirely and draw
 
 To leave creation mode, click the shape's button again, press <kbd>Escape</kbd>, or right-click the canvas and choose **Done shape creation**. Any of these drops you into edit mode with the shapes you have placed.
 
-The scroll actions that adjust a shape being created also update the _defaults_ for that shape type, which the next shape you create will start from.
+The [wheel](#the-mouse-wheel) adjustments made on a shape being created also update the _defaults_ for that shape type, which the next shape you create will start from.
 
 {{< note >}}
 Scrolling up increases the value being adjusted. [Preferences > Invert the direction of the mouse vertical scroll](../../../../preferences-settings/darkroom.md) reverses this -- a general scroll-direction setting that affects every slider in Ansel, not just masks.
@@ -180,9 +224,12 @@ Scrolling up increases the value being adjusted. [Preferences > Invert the direc
 
 ## Editing a shape
 
-Click _Show and edit mask elements_ to display the mask's shapes on the canvas, then drag a shape to move it. Clicking a shape also selects it in the [shape list](#the-shape-lists).
+<kbd class="mouse">Click</kbd> on _Show and edit mask elements_ {{< icon src="icon/icon-edit-shape.png" alt="" >}} to display the mask's shapes on the canvas, then <kbd class="mouse">drag</kbd> a shape to move it.
+Clicking a shape also selects it in the [shape list](#the-shape-lists).
 
-For nodes, segments and per-shape parameters, right-click on the shape and work from [the context menu](#the-context-menu).
+The wheel edits whichever property you mapped it to in [the mouse wheel](#the-mouse-wheel) grid -- by default the shape's size, its feathering with <kbd>Shift</kbd>, and its opacity with <kbd>Ctrl</kbd>.
+
+For nodes, segments and per-shape parameters, <kbd class="mouse">right-click</kbd> on the shape and work from [the context menu](#the-context-menu).
 
 ## Removing a shape
 
@@ -197,7 +244,7 @@ With the pointer over one of a Polygon's or Brush's nodes, the menu offers **Del
 
 A shape is a single object shared by every mask that uses it: edit it in one module and every other module using it follows.
 
-Press _Attach shapes_ to swap the panel's list for every shape defined on the image, then tick a shape's checkbox to add it to the current module's mask, or untick it to detach it. Shapes greyed out as _Already in '&lt;group&gt;'_ are reached through a group that is itself attached.
+Press **Attach shapes** to swap the panel's list for every shape defined on the image, then tick a shape's checkbox to add it to the current module's mask, or untick it to detach it. Shapes greyed out as **_Already in '&lt;group&gt;'_** are reached through a group that is itself attached.
 
 The [shape manager](../../../toolboxes/shape-manager.md) covers the same shapes from a separate window, where they can also be grouped, reordered and renamed across all modules at once.
 
