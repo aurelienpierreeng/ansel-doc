@@ -8,7 +8,7 @@ author: "people"
 ---
 
 The `Ansel-nn-parity` binary checks that the neural network behind the [AI raw
-denoise]({{< relref "/views/darkroom/modules/ai-raw-denoise" >}}) module computes the same
+denoise](../views/darkroom/modules/ai-raw-denoise.md) module computes the same
 thing on your CPU and on your graphics card as it did on the machine that trained it.
 
 You should not normally need it. It exists for one specific situation: **the denoised image
@@ -55,8 +55,7 @@ What a failure tells you depends on **which line** fails:
 
 - **`torch vs OpenCL` fails while `torch vs CPU` passes** — your graphics driver is the
   problem, not Ansel and not the model. The usual cause is an inaccurate math library in the
-  driver; see [possible problems & solutions]({{< relref
-  "/preferences-settings/performance/opencl/problems-solutions" >}}).
+  driver; see [possible problems & solutions](../preferences-settings/performance/opencl/problems-solutions.md).
 - **Both fail by the same amount** — the fixture does not belong to that model. Check that you
   paired them correctly.
 - **`torch vs CPU` fails alone** — that would be a genuine bug in Ansel. Please report it.

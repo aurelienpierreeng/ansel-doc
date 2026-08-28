@@ -293,8 +293,7 @@ previous section applies unchanged.
 
 If you see a *strong* grid rather than a faint one — coarse, or clearly tied to rectangular
 tiles — that is a different problem and is not about model size; see [when the GPU result differs
-from the CPU result]({{< relref
-"/preferences-settings/performance/opencl/problems-solutions" >}}).
+from the CPU result](../../../preferences-settings/performance/opencl/problems-solutions.md).
 
 ### Compared to *denoise (profiled)*
 

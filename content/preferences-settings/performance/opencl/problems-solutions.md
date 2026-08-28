@@ -39,7 +39,7 @@ its kernels to be compiled with `-cl-unsafe-math-optimizations`, an option that 
 to substitute an approximate implementation for any standard mathematical function. Most drivers
 do this harmlessly. Some do not: on Intel integrated graphics, that option makes `erf()` return
 exactly zero for small arguments and `pow()` wrong by tens of percent, which visibly corrupted
-the [AI raw denoise]({{< relref "/views/darkroom/modules/ai-raw-denoise" >}}) module and,
+the [AI raw denoise](../../../views/darkroom/modules/ai-raw-denoise.md) module and,
 to a lesser degree, anything using gamma curves.
 
 Current versions no longer request that option, for any vendor. **However, updating Ansel is not
@@ -70,7 +70,7 @@ Two tools help you decide whether this applies to you. `tools/opencl-math-accura
 Ansel sources is a small standalone program (it does not link against Ansel) that scores every
 OpenCL device on your machine, under every combination of compilation options, against a
 high-precision reference, and prints the exact `Anselrc` line for any device that needs one. And
-[`Ansel-nn-parity`]({{< relref "/cli/ansel-nn-parity" >}}) checks the neural denoiser
+[`Ansel-nn-parity`](../../../cli/ansel-nn-parity.md) checks the neural denoiser
 specifically, telling you whether the CPU, the GPU or neither is the one disagreeing.
 
 A few on-CPU implementations of OpenCL also exist, coming as drivers provided by INTEL or AMD. We have observed that they do not provide any speed gain versus our hand-optimized CPU code. Therefore Ansel simply discards these devices by default. This behavior can be changed by setting the configuration variable `opencl_use_cpu_devices` (in `$HOME/.config/Anselrc`) to `TRUE`.
