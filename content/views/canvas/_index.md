@@ -132,14 +132,24 @@ Transparency is set through each colour's own opacity, in the colour picker.
 
 Turn on _Edit_ in the Cutout row of the property bar and the shape's handles appear over the frame: its centre or anchor, its radius or radii, and its feather on the dashed ring. Over the frame, <kbd class="mouse">scroll</kbd> sets the feather, <kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd> the opacity, and <kbd>Ctrl</kbd>+<kbd class="mouse">scroll</kbd> (macOS <kbd>⌘</kbd>+<kbd class="mouse">scroll</kbd>) the gradient's curvature or the ellipse's rotation.
 
-On a polygon: <kbd>Ctrl</kbd>+<kbd class="mouse">click</kbd> (macOS <kbd>⌘</kbd>+<kbd class="mouse">click</kbd>) on an edge inserts a node, <kbd>Shift</kbd>+<kbd class="mouse">click</kbd> on a node removes it, and a double click makes it smooth or sharp. The right-click menu offers the same actions plus the shape's properties as sliders.
+On a polygon: <kbd>Ctrl</kbd>+<kbd class="mouse">click</kbd> (macOS <kbd>⌘</kbd>+<kbd class="mouse">click</kbd>) on an edge inserts a node, <kbd>Shift</kbd>+<kbd class="mouse">click</kbd> on a node removes it, and a double click switches it between a cusp and a smooth node. The right-click menu offers the same actions plus the shape's properties as sliders — _Switch to a smooth node_ or _Switch to a cusp node_ for the node under the pointer, _Give this node its computed curve back_ once you have steered it by hand, and _Remove this node_.
 
 A polygon node also owns two things the shape as a whole does not, and they appear on whichever node you bring the pointer near — one node at a time, so the handles never bury the shape:
 
 - Its own **fall-off**, on the dashed tether leaving the node. Drag its end away from the node to widen the fall-off there and towards the node to tighten it. A node you have never touched simply follows the shape's Feather, so a polygon behaves as one piece until you pull a node's fall-off out.
-- Its two **control points**, the round handles tethered either side, which steer how the curve enters and leaves the node. Dragging one turns the node into a hand-shaped one: the curve stops being computed through it, and the other side keeps the shape it had.
+- Its two **control points**, the round handles tethered either side, which steer how the curve enters and leaves the node.
 
-The three handles are told apart by shape: a square is the node itself, a circle is its curve, and the end of the dashed tether is its fall-off.
+What dragging a control point does depends on the node's kind, and that is the point of the two:
+
+Smooth node
+: The two handles stay opposite each other, so one of them sets **both** the direction the curve leaves in and the **tension** it leaves with — drag it round the node to turn the curve, away from the node to make it pull harder, towards the node to slacken it. The curve keeps running smoothly through the node however far you take it.
+
+Cusp node
+: The two sides are free of each other, so each handle shapes its own side alone and the curve may turn a corner at the node.
+
+A node starts as a cusp with its handles folded onto it, which is why a new polygon has straight edges. Make it smooth and its curve is computed from its neighbours until you steer a handle; from then on the curve is the one you gave it, and _Give this node its computed curve back_ in the right-click menu hands it over to the neighbours again.
+
+The handles are told apart by shape: a **square** is a cusp node, a **circle** is a smooth one, a circle on a short tether is its curve, and the end of the dashed tether is its fall-off.
 
 ## Locking a handle while you drag it
 
