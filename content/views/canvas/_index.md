@@ -82,8 +82,10 @@ Sidecar notes
 Connectors
 : _Add → Connector_ (<kbd>C</kbd>) draws a line between two frames. Click the anchor dot on the first frame, then on the second. A connector can be straight, square or a cubic spline, solid or dashed, with an arrow head at either end, both ends or neither, and it carries a draggable waypoint to route it around other frames. It follows its frames when they move.
 
+Each frame offers nine anchor points: the middle of each edge, the four corners, and the centre. They are the frame's own points, so they turn with it. The centre is the one to pick when you do not care which side the line leaves by: its dot sits at the middle of the frame, drawn as a ring, and the line itself touches whichever edge faces the other end, sliding around as that end moves.
+
 {{< note >}}
-Connectors attach to the cardinal points of a frame — top, right, bottom, left — chosen automatically as the pair nearest each other, or by hand.
+A connector can also resolve its anchor automatically, choosing the pair of edge midpoints nearest each other.
 {{< /note >}}
 
 ## Arranging
@@ -127,6 +129,14 @@ Transparency is set through each colour's own opacity, in the colour picker.
 Turn on _Edit_ in the Cutout row of the property bar and the shape's handles appear over the frame: its centre or anchor, its radius or radii, and its feather on the dashed ring. Over the frame, <kbd class="mouse">scroll</kbd> sets the feather, <kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd> the opacity, and <kbd>Ctrl</kbd>+<kbd class="mouse">scroll</kbd> (macOS <kbd>⌘</kbd>+<kbd class="mouse">scroll</kbd>) the gradient's curvature or the ellipse's rotation.
 
 On a polygon: <kbd>Ctrl</kbd>+<kbd class="mouse">click</kbd> (macOS <kbd>⌘</kbd>+<kbd class="mouse">click</kbd>) on an edge inserts a node, <kbd>Shift</kbd>+<kbd class="mouse">click</kbd> on a node removes it, and a double click makes it smooth or sharp. The right-click menu offers the same actions plus the shape's properties as sliders.
+
+## Locking a handle while you drag it
+
+Hold <kbd>Ctrl</kbd> (macOS <kbd>⌘</kbd>) while dragging a handle and it is constrained:
+
+- A handle that moves to a **place** — a cutout's centre, its radius, its feather, a polygon node, a connector's waypoint — keeps to one axis, whichever it has travelled furthest along since you pressed. Move mostly sideways and it stays level; move mostly up or down and it stays in its column.
+- A handle that sets a **direction** — a connector's tangent handles, which are the gradient its curve leaves by — snaps that direction to 45° steps around the point it turns about, keeping the length you pulled it to.
+- A frame's **rotation** handle snaps to 45° steps, where <kbd>Shift</kbd> snaps to 15°.
 
 The shapes are the same [drawn masks](../darkroom/masking-and-blending/masks/drawn.md) the darkroom uses, so what you already know about them applies here.
 
