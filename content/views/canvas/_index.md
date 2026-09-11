@@ -92,7 +92,7 @@ A connector can also resolve its anchor automatically, choosing the pair of edge
 
 ## Arranging
 
-Frames snap while you drag them, in this order: to the grid, to their neighbours' edges one *gutter* apart, and to the page borders, margins and bleed lines. A resized frame can also take a neighbour's width or height. Which of these are active is set under _Guides_ in the toolbar.
+Frames snap while you drag them, in this order: to the grid, to their neighbours, and to the page borders, margins and bleed lines. Every frame keeps a clear *padding* around itself, so two frames snapped side by side sit **two paddings apart** and their padding boxes meet on one shared line. A resized frame can also take a neighbour's width or height. Which of these are active is set under _Guides_ in the toolbar.
 
 _Arrange_ lays the whole canvas out at once as a **grid**, a **masonry**, a **row** or a **column** (<kbd>1</kbd> to <kbd>4</kbd>), with the gutter as the spacing. _Sort by_ decides the order the frames are laid out in — canvas order, file name, capture time, import order, or full path — and _Auto_ applies the layout.
 
@@ -163,11 +163,23 @@ The shapes are the same [drawn masks](../darkroom/masking-and-blending/masks/dra
 
 ## Pages
 
-A canvas can be divided into **pages**, tiled from the origin and outlined with dashed lines. Set the size under _Guides_ in the toolbar: ISO A0 to A6, US Letter, or one of the screen formats a picture is usually made for — Instagram square and portrait, a story, reel or Short, a Facebook post or cover, a YouTube thumbnail or channel banner.
+A canvas can be divided into **pages**, tiled from the origin. Set the size under _Guides_ in the toolbar: ISO A0 to A6, US Letter, or one of the screen formats a picture is usually made for — Instagram square and portrait, a story, reel or Short, a Facebook post or cover, a YouTube thumbnail or channel banner.
 
-One canvas unit is one point, so a print size is its size in points and a screen format is its size in pixels at 72 dpi: a story page is 1080 by 1920 units, and exported at 72 dpi it comes out at exactly 1080 by 1920 pixels.
+The guides follow the printer's convention, so a page laid out here looks like the template a print shop would send you: the page border is the **trim** and is black, the **bleed** red, the **margins** violet, the **padding** around each frame blue, and a **fold** is the one dashed line. _Over_ draws them on top of the content instead of under it, which is how you place a frame that deliberately crosses a page break.
 
-Two more guides are drawn from the page, each with its own _Show_, _Size_, _Colour_ and _Snap_, next to the page borders':
+A canvas unit is a screen pixel, and _Resolution_ says how many go to the inch. That is what turns a sheet of paper into a size on the plane: at 300, an A4 page is 2480 units wide. A screen format is its own pixel size whatever the resolution says — a story page is 1080 by 1920 units — so the two kinds of page keep their real relative sizes side by side.
+
+### Spreads and folds
+
+A **spread** is the block of pages that stays on one sheet of paper: so many _Across_ by so many _Down_. A book is 2 by 1 — two facing pages, one fold down the middle — a zine folded both ways is 2 by 2, and a poster you print at home and tape together is as many as it takes. Leave both at 0 and the canvas is tiled evenly, every page on its own.
+
+Inside a spread the pages touch and the line between them is a **fold**, drawn dashed: a picture laid across it carries on over both pages and is not cut. Between one spread and the next the canvas opens up by twice the bleed, because those are two different sheets and each needs its own bleed all round — so what you see on the plane is what comes off the press.
+
+_Bind gutter_ is the allowance the binding takes out of the middle. It is kept clear inside each page **at the fold only**, on top of the margin, so a perfect binding does not swallow the centre of a picture that crosses it.
+
+The export writes one page per **sheet**, not per canvas page: a book's spread comes out as one wide file with the fold in the middle.
+
+Two more guides are drawn from the page, each with its own _Show_, _Size_, _Colour_ and _Snap_, next to the page borders' — and on a spread both belong to the sheet rather than to the page, so a page in the middle of a spread has no bleed at its folds:
 
 Margins
 : Kept clear **inside** every page edge. Nothing enforces it — it is a line to lay frames against and a rule for them to snap to — and nothing is moved.
