@@ -82,7 +82,9 @@ Sidecar notes
 Connectors
 : _Add → Connector_ (<kbd>C</kbd>) draws a line between two frames. Click the anchor dot on the first frame, then on the second. A connector can be straight, square or a cubic spline, solid or dashed, with an arrow head at either end, both ends or neither, and it carries a draggable waypoint to route it around other frames. It follows its frames when they move.
 
-Each frame offers nine anchor points: the middle of each edge, the four corners, and the centre. They are the frame's own points, so they turn with it. The centre is the one to pick when you do not care which side the line leaves by: its dot sits at the middle of the frame, drawn as a ring, and the line itself touches whichever edge faces the other end, sliding around as that end moves.
+Each frame offers nine anchor points: the middle of each edge, the four corners, and the centre. They are the frame's own points, so they turn with it. The centre is the one to pick when you do not care which side the line leaves by: its dot sits at the middle of the frame, drawn as a ring, and the line itself touches whichever side faces the other end, sliding around as that end moves.
+
+A line on the centre stops where the frame actually draws something rather than on the rectangle around it. Round off a frame's corners and the line follows the curve; cut the frame to a circle, an ellipse or a polygon and the line meets that shape, including its fall-off and its border, instead of ending in the empty corner beside it.
 
 {{< note >}}
 A connector can also resolve its anchor automatically, choosing the pair of edge midpoints nearest each other.
