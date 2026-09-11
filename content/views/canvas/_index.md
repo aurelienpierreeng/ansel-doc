@@ -100,7 +100,7 @@ The right-click menu on an object changes its depth in the stack: bring to front
 
 ## Backgrounds
 
-The plane is painted with **transparent**, with a solid colour, or with one of five procedurally generated papers: **Moleskine**, an ivory notebook paper with a soft texture; **watercolour**, a white paper with a thick tooth; **embossed**, dried on a metallic mesh whose imprint stays in the fibres; **Japanese** washi, with large soft clouds and long wrinkles; and **psychedelic washi**, the same sheet with its wrinkles dyed in saturated threads of colour rather than lit as pale ridges.
+The plane is painted with **transparent**, with a solid colour, or with one of eight procedurally generated papers: **Moleskine**, an ivory notebook paper with a soft texture; **watercolour**, a white paper with a thick tooth; **laid**, a cloudy cream sheet carrying the papermaking mould's own wires — close-set laid lines about a millimetre apart, crossed by a chain line every 23 mm; **embossed**, dried on a metallic mesh whose imprint stays in the fibres; **Japanese** washi, with large soft clouds and long wrinkles; **psychedelic washi**, the same sheet with its wrinkles dyed in saturated threads of colour rather than lit as pale ridges; **kraft**, unbleached brown wrapping paper with long fibres and the odd dark fleck of bark; and **charcoal card**, a near-black sheet whose tooth catches the light instead of casting shade.
 
 Transparent leaves the plane a hole. It is shown as a chequerboard the size of the grid, and it is carried all the way out: an exported page keeps the hole as an alpha channel, so JPEG — which has none — is not offered while the canvas is transparent.
 
