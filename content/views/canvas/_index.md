@@ -130,6 +130,13 @@ Turn on _Edit_ in the Cutout row of the property bar and the shape's handles app
 
 On a polygon: <kbd>Ctrl</kbd>+<kbd class="mouse">click</kbd> (macOS <kbd>⌘</kbd>+<kbd class="mouse">click</kbd>) on an edge inserts a node, <kbd>Shift</kbd>+<kbd class="mouse">click</kbd> on a node removes it, and a double click makes it smooth or sharp. The right-click menu offers the same actions plus the shape's properties as sliders.
 
+A polygon node also owns two things the shape as a whole does not, and they appear on whichever node you bring the pointer near — one node at a time, so the handles never bury the shape:
+
+- Its own **fall-off**, on the dashed tether leaving the node. Drag its end away from the node to widen the fall-off there and towards the node to tighten it. A node you have never touched simply follows the shape's Feather, so a polygon behaves as one piece until you pull a node's fall-off out.
+- Its two **control points**, the round handles tethered either side, which steer how the curve enters and leaves the node. Dragging one turns the node into a hand-shaped one: the curve stops being computed through it, and the other side keeps the shape it had.
+
+The three handles are told apart by shape: a square is the node itself, a circle is its curve, and the end of the dashed tether is its fall-off.
+
 ## Locking a handle while you drag it
 
 Hold <kbd>Ctrl</kbd> (macOS <kbd>⌘</kbd>) while dragging a handle and it is constrained:
