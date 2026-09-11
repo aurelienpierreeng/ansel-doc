@@ -92,7 +92,7 @@ A connector can also resolve its anchor automatically, choosing the pair of edge
 
 ## Arranging
 
-Frames snap while you drag them, in this order: to the grid, to their neighbours' edges one *gutter* apart, and to the page borders. A resized frame can also take a neighbour's width or height. Which of these are active is set under _Guides_ in the toolbar.
+Frames snap while you drag them, in this order: to the grid, to their neighbours' edges one *gutter* apart, and to the page borders, margins and bleed lines. A resized frame can also take a neighbour's width or height. Which of these are active is set under _Guides_ in the toolbar.
 
 _Arrange_ lays the whole canvas out at once as a **grid**, a **masonry**, a **row** or a **column** (<kbd>1</kbd> to <kbd>4</kbd>), with the gutter as the spacing. _Sort by_ decides the order the frames are laid out in — canvas order, file name, capture time, import order, or full path — and _Auto_ applies the layout.
 
@@ -100,7 +100,9 @@ The right-click menu on an object changes its depth in the stack: bring to front
 
 ## Backgrounds
 
-The plane is painted either with a solid colour or with one of four procedurally generated papers: **Moleskine**, an ivory notebook paper with a soft texture; **watercolour**, a white paper with a thick tooth; **embossed**, dried on a metallic mesh whose imprint stays in the fibres; and **Japanese** washi, with large soft clouds and long wrinkles.
+The plane is painted with **transparent**, with a solid colour, or with one of five procedurally generated papers: **Moleskine**, an ivory notebook paper with a soft texture; **watercolour**, a white paper with a thick tooth; **embossed**, dried on a metallic mesh whose imprint stays in the fibres; **Japanese** washi, with large soft clouds and long wrinkles; and **psychedelic washi**, the same sheet with its wrinkles dyed in saturated threads of colour rather than lit as pale ridges.
+
+Transparent leaves the plane a hole. It is shown as a chequerboard the size of the grid, and it is carried all the way out: an exported page keeps the hole as an alpha channel, so JPEG — which has none — is not offered while the canvas is transparent.
 
 A paper is tinted by the background colour, so the same texture serves a warm ivory and a cool grey. _Texture_ opens four sliders that tune it: _Contrast_ for the relief's body, _Detail_ for its fine structure, _Scale_ for the size of the features, and _Grain_ for the pixel-level dither that finishes it. One everywhere is the paper as designed.
 
@@ -151,9 +153,17 @@ The shapes are the same [drawn masks](../darkroom/masking-and-blending/masks/dra
 
 ## Pages
 
-A canvas can be divided into **pages**, tiled from the origin and outlined with dashed lines. Set the size under _Guides_ in the toolbar: ISO A2 to A6, US Letter, or one of the screen formats a picture is usually made for — Instagram square and portrait, a story, reel or Short, a Facebook post or cover, a YouTube thumbnail or channel banner.
+A canvas can be divided into **pages**, tiled from the origin and outlined with dashed lines. Set the size under _Guides_ in the toolbar: ISO A0 to A6, US Letter, or one of the screen formats a picture is usually made for — Instagram square and portrait, a story, reel or Short, a Facebook post or cover, a YouTube thumbnail or channel banner.
 
 One canvas unit is one point, so a print size is its size in points and a screen format is its size in pixels at 72 dpi: a story page is 1080 by 1920 units, and exported at 72 dpi it comes out at exactly 1080 by 1920 pixels.
+
+Two more guides are drawn from the page, each with its own _Show_, _Size_, _Colour_ and _Snap_, next to the page borders':
+
+Margins
+: Kept clear **inside** every page edge. Nothing enforces it — it is a line to lay frames against and a rule for them to snap to — and nothing is moved.
+
+Bleed
+: How far the sheet keeps going **past** every page edge. A frame a page break cuts in two carries on into the bleed on both sheets, which is what a binding folds around and a trim cuts into. It is a property of the canvas, so the export simply writes the sheet it describes.
 
 Showing the page borders is how you prepare a simple photo book: mind the borders while you lay frames out, and the export splits the plane into pages from left to right, top to bottom, skipping any page with nothing on it.
 
@@ -167,9 +177,6 @@ Format
 Resolution
 : How many pixels per inch of the page's own size. A page is rasterised at exactly that and no more.
 
-Bleed
-: How far past every page edge the picture keeps going, in centimetres, inches or pixels. A frame that a page break cuts in two carries on into the bleed on both sheets, which is what a binding folds around and a trim cuts into. It is not a margin: nothing is moved, the sheet is simply larger than the page.
-
 Quality
 : How hard the pages are compressed. A PDF page is a photograph and is carried as one, which is what keeps the file from weighing what its pixels weigh; 100 keeps every code and makes it several times larger. PNG and TIFF are always lossless.
 
@@ -177,7 +184,7 @@ Output profile and rendering intent
 : The [colour profile](../../color-management/_index.md) the pages are converted to, embedded in the file that is written.
 
 {{< note >}}
-The page size and its orientation are the canvas's own, set under _Guides_ in the toolbar, so what you laid out is what comes out. A canvas with no page size exports as one page around every frame.
+The page size, its orientation and its bleed are the canvas's own, set under _Guides_ in the toolbar, so what you laid out is what comes out. A canvas with no page size exports as one page around every frame.
 {{< /note >}}
 
 Text and connectors are rasterised along with everything else, so an exported page is pixels rather than vectors.
