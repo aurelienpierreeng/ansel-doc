@@ -74,7 +74,7 @@ Maps
 : _Add → Map_ (<kbd>M</kbd>) drops a map frame at the centre of the view. It takes its position from the GPS metadata of the selected image, or from coordinates you type, and fetches its tiles from the provider you choose. Give the frame the place and zoom level you want and it covers the frame at the tiles' own aspect ratio, cropped rather than stretched.
 
 Text frames
-: _Add → Text_ (<kbd>T</kbd>) adds a free text frame. Text is written in Markdown and laid out at the frame's inner width.
+: _Add → Text_ (<kbd>T</kbd>) adds a free text frame. Text is written in Markdown and laid out at the frame's inner width. Its property bar carries the typography — see [Setting text](#setting-text) below.
 
 Sidecar notes
 : _Add → Notes_ (<kbd>Shift</kbd>+<kbd>T</kbd>) adds one text frame per selected image, linked to that image's `.txt` sidecar. The frame shows the note; _Refresh_ pulls in what the file says now.
@@ -105,6 +105,32 @@ The plane is painted with **transparent**, with a solid colour, or with one of e
 Transparent leaves the plane a hole. It is shown as a chequerboard the size of the grid, and it is carried all the way out: an exported page keeps the hole as an alpha channel, so JPEG — which has none — is not offered while the canvas is transparent.
 
 A paper is tinted by the background colour, so the same texture serves a warm ivory and a cool grey. _Texture_ opens four sliders that tune it: _Contrast_ for the relief's body, _Detail_ for its fine structure, _Scale_ for the size of the features, and _Grain_ for the pixel-level dither that finishes it. One everywhere is the paper as designed.
+
+## Setting text
+
+A text frame's property bar carries more than a font and an alignment.
+
+_Padding_
+: How far the text is held off each of the frame's four edges, inside its border. This is what keeps a coloured frame from having its text run into the edge. Set any one side and all four become literal, so a side really can be zero.
+
+_Line height_ and _Letter spacing_
+: The leading as a multiple of what the font asks for, and the tracking in thousandths of an em — so the spacing follows the type size rather than the frame. Negative tracking condenses a line, positive opens it out. A condensed **cut** is a different thing and is chosen in the font name.
+
+_Features_
+: What the font is asked to do with its own alternates: ligatures, small capitals, old-style or tabular figures, fractions, swashes and the rest. A font that does not ship one simply ignores it.
+
+_Auto height_
+: The frame's height follows its content, so the box grows and shrinks as you write.
+
+_Optical_
+: Hangs punctuation just outside the column, so the edge reads from the letters' stems rather than from a quote or a comma. It works at both edges: a line beginning with a quotation mark starts a little further left, and in justified text a line ending in a comma reaches a little further right.
+
+_Wrap_ and its standoff
+: Flows the text around the frames laid **over** it, keeping the distance you set. It follows what each frame actually draws, not the box around it — cut a photo to a circle and the text follows the curve, leaving the empty corners beside it usable. Only frames above the text in the stack push it; anything behind it is simply behind it. A line goes into the widest clear space beside an object, so something standing in the middle of a column pushes the whole column to one side rather than splitting each line in two.
+
+{{< note >}}
+Automatic hyphenation is not available. A soft hyphen you insert yourself is honoured and breaks where you put it.
+{{< /note >}}
 
 ## Frames, shadows and cutouts
 
