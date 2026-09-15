@@ -21,9 +21,9 @@ Blending has to be enabled for the module before any of it responds: the checkbo
 
 {{< param-table >}}
 | **Disable**<div>Turns drawn masking back off when you want it out of the way; the shapes stay attached and come back with it.</div> |
-| **Mask name**<div>A text field naming this module's mask. It starts out showing `Mask <module name>` as a placeholder; type your own name and press <kbd>Enter</kbd> to replace it. Meaningful names pay off as soon as several modules carry masks.</div> |
+| **Mask name**<div>A text field naming this module's mask. It starts out showing `Group <module name>` as a placeholder; type your own name and press <kbd>Enter</kbd> to replace it, or empty the field to go back to that default. Meaningful names pay off as soon as several modules carry masks.</div> |
 | {{< icon src="icon/icon-polarity.png" >}} **Polarity**<div>Reverses the polarity of the whole drawn mask. A circle, by default, restricts the module to the area inside it; flipping the polarity applies the module everywhere _except_ inside that circle.</div> |
-| {{< icon src="icon/icon-edit-shape.png" >}} **Show and edit mask elements**<div>Displays the mask's shapes on the canvas so you can edit them.<br>
+| {{< icon src="icon/icon-edit-shape.png" >}} **Show and edit mask elements**<div>Displays the mask's shapes on the canvas so you can edit them. Selecting this module's group in the [shape manager](../../../toolboxes/shape-manager.md) switches it on too.<br>
 <kbd>Ctrl</kbd>+<kbd class="mouse">click</kbd> (<kbd>⌘</kbd>+<kbd class="mouse">click</kbd> on macOS) enters _restricted_ edit mode instead, in which a shape's overall position and size are locked -- neither dragging nor scrolling over it moves or resizes it -- and only its individual nodes and segments respond. This is the safe way to fine-tune Polygon and Brush shapes.</div> |
 | **Shape list**<div>The shapes making up this module's mask, described in [the shape lists](#the-shape-lists) below.</div> |
 | **Attach shapes**<div>Switches the list above to every shape defined for the image, so you can attach or detach them. See [reusing a shape](#reusing-a-shape).</div> |
@@ -39,7 +39,7 @@ The panel has two lists that share the same slot; the _Attach shapes_ button pic
 {{< param-table image-height="7rem" >}}
 | **Shape list** ![](mask/drawn/mask-drawn-shape-list.en.png?class=framed) | <div>The default view, holding the shapes this module's mask is built from, applied in list order from top to bottom.<br>
 Each row carries, from left to right:
-- the [set operator](../../../toolboxes/shape-manager.md#set-operators) combining that shape with the ones above it, with an icon if **Invert** is on,
+- the [set operator](./set-operators.md) combining that shape with the ones applied before it, with an icon if **Invert** is on,
 - the shape's name,
 - an _unlink_ icon that detaches the shape from this mask while keeping it available elsewhere,
 - and a _trash_ icon that deletes the shape outright.
@@ -190,11 +190,11 @@ To set a parameter precisely instead, <kbd class="mouse">right-click</kbd> on th
 | ![](mask/drawn/mask-drawn-shape-node-fading.png) | On a shape built from nodes -- a Polygon or a Brush -- _Size_ and _Fading_ act on the selected node alone when one is selected, and on every node otherwise, which is how one part of an outline is given a wider feathering than the rest. |
 {{< /param-table >}}
 
-Size, fading and rotation describe the shape itself, so they follow it into every mask it is [attached to](#reusing-a-shape). Opacity does not: like the [set operator](../../../toolboxes/shape-manager.md#set-operators) and **Invert**, it belongs to the row the shape occupies in one mask, and the same shape can therefore carry a different opacity in each module using it.
+Size, fading and rotation describe the shape itself, so they follow it into every mask it is [attached to](#reusing-a-shape). Opacity does not: like the [set operator](./set-operators.md) and **Invert**, it belongs to the row the shape occupies in one mask, and the same shape can therefore carry a different opacity in each module using it.
 
 ### Invert and set operators
 
-**Invert** flips the shape over, the mask then covering everything but what it encloses, and the **set operator** -- _Union_, _Intersection_, _Difference_ or _Exclusion_ -- decides what the shape adds to, or takes from, the mask built by the shapes above it. Both are set from the **Operation** submenu of [the context menu](#over-the-shape-itself), whether you open it on the canvas or on the shape's row in [the shape list](#the-shape-lists), and the [shape manager](../../../toolboxes/shape-manager.md#set-operators) shows each operator on an example.
+**Invert** flips the shape over, the mask then covering everything but what it encloses, and the **set operator** -- _Union_, _Intersection_, _Difference_ or _Exclusion_ -- decides what the shape adds to, or takes from, the mask built by the shapes applied before it. Both are set from the **Operation** submenu of [the context menu](#over-the-shape-itself), whether you open it on the canvas or on the shape's row in [the shape list](#the-shape-lists), and each operator is shown on an example in [set operators](./set-operators.md).
 
 Because an operator works on what sits above, order is part of the result: **Move Up** and **Move Down** in the same menu change the outcome, not just the display.
 
@@ -257,7 +257,7 @@ Press **Attach shapes** to swap the panel's list for every shape defined on the 
 {{< figure src="mask/drawn/mask-drawn-shape-list-all2.en.png" style="width:19rem" class="align-left borderless tight framed" />}}
 A row reading `Already in '<group>'` is greyed out because the shape is reached through a group that is itself attached, so it is already spoken for.
 
-The [shape manager](../../../toolboxes/shape-manager.md) covers the same shapes from a separate window, where they can also be grouped, reordered and renamed across all modules at once.
+The [shape manager](../../../toolboxes/shape-manager.md) covers the same shapes from a separate window, which lists every mask the image carries beside them: a shape can be grouped, reordered and renamed there, and handed to several modules at once.
 
 
 ## The context menu
@@ -282,7 +282,7 @@ The menu opens with sliders for the shape's parameters, all described under [sha
 
 {{< param-table >}}
 | **Operation** | **Invert**<div>Flips this shape over within the mask: everything it does not enclose is masked instead.</div> |
-| | **Union**, **Intersection**, **Difference**, **Exclusion**<div>How this shape combines with the ones above it in the mask. See [set operators](../../../toolboxes/shape-manager.md#set-operators).</div> |
+| | **Union**, **Intersection**, **Difference**, **Exclusion**<div>How this shape combines with the ones applied before it in the mask. See [set operators](./set-operators.md).</div> |
 {{< /param-table >}}
 
 {{< param-table >}}

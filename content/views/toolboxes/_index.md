@@ -52,7 +52,7 @@ Left panel:
 - [Scopes](scopes.md) — histogram, waveform and vectorscope, including the [global color picker](global-color-picker.md).
 - [Snapshots](snapshots.md) — freeze and compare edit states.
 - [Duplicate manager](duplicate-manager.md) — manage the versions of the current image.
-- [Shape manager](shape-manager.md) — list and edit the [drawn shapes](../darkroom/masking-and-blending/masks/drawn.md) used by masks.
+- [Shape manager](shape-manager.md) — draw, group and rename every [drawn shape](../darkroom/masking-and-blending/masks/drawn.md) of an image, and choose which modules apply each of them.
 - [History of changes](history-stack.md) — step through, compress or reset the editing history.
 - [Image information](image-information.md) and [Notes](notes.md).
 

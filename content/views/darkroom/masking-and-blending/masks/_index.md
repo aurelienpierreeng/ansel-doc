@@ -26,5 +26,6 @@ Three methods can set that per-pixel opacity. Each works on its own, or [combine
 
 ## Combining and refining masks
 
+- [Set operators](./set-operators.md) — how each shape of a drawn mask combines with the ones applied before it.
 - [Combining drawn & parametric masks](./drawn-and-parametric.md) — how polarity and the _Combine masks_ setting merge a drawn mask with a parametric one.
 - [Mask contours](./refinement-controls.md) — blur and feather a finished mask so that its edges follow the details of the image.
