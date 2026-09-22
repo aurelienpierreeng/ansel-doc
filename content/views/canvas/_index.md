@@ -233,7 +233,7 @@ _Flow around frames_ and its _Gap_
 
 ### Text shadow
 
-A shadow cast by the letters themselves, with _Right_ and _Down_ offsets, a _Blur_, an _Extent_ and a _Colour_ whose opacity is its strength. It falls over the frame's own background and under the letters, and a blur of zero gives a hard-edged copy of the text — a drop shadow as a typesetter draws one. It is independent of the frame's _Shadow_, which the frame's box casts.
+A shadow cast by the letters themselves, with a _Direction_, _Right_ and _Down_ offsets, a _Blur_, an _Extent_ and a _Colour_ whose opacity is its strength. Dropped _Outside_, it falls over the frame's own background and under the letters, and a blur of zero gives a hard-edged copy of the text — a drop shadow as a typesetter draws one. Cast _Inside_, it falls on the letters themselves, along their own edges, like type pressed into the page. It is independent of the frame's _Shadow_, which the frame's box casts.
 
 The strokes of a letter are thin, so a wide blur spreads them into almost nothing. _Extent_ thickens the letters' silhouette before the blur, so a soft glow behind a caption keeps its strength. With no blur and no offset, _Extent_ alone draws a crisp outline around the letters — the easiest way to keep a caption readable over a busy picture.
 
@@ -318,7 +318,7 @@ The _Line_ section holds its _Width_, its _Colour_ — also on the strip — and
 
 ## Frames, borders, shadows and cutouts
 
-The canvas's own border, corner rounding and shadow are set from _Borders_ (_Width_, _Colour_, _Corners_) and _Shadows_ (_Right_, _Down_, _Radius_, _Extent_, _Colour_) in the toolbar. An object overrides them from its own _Border_, _Corners_ and _Shadow_ sections — see [Following the canvas, or owning a value](#following-the-canvas-or-owning-a-value).
+The canvas's own border, corner rounding and shadow are set from _Borders_ (_Width_, _Colour_, _Corners_) and _Shadows_ (_Direction_, _Right_, _Down_, _Radius_, _Extent_, _Colour_) in the toolbar. An object overrides them from its own _Border_, _Corners_ and _Shadow_ sections — see [Following the canvas, or owning a value](#following-the-canvas-or-owning-a-value).
 
 Border
 : A width and a colour. On a rectangular frame it sits inside the frame's edge, with the content inset by it; on a cut-out frame it follows the cut shape.
@@ -327,8 +327,8 @@ Corners
 : How far the frame's corners are rounded. Zero is square, and the rounding never goes past half the frame's shorter side.
 
 Shadow
-: An offset, a blur radius, an extent and a colour whose opacity is the shadow's strength. **The radius is the shadow's own switch**: at zero there is no shadow, a positive radius drops it outside the object, and a negative one casts it inside, along the edges. The shadow is taken from the object as it is drawn — after its cutout, its border and its opacity — so a feathered frame casts a feathered shadow and a translucent one a fainter shadow.
-: A blur only spreads the shadow, it never adds to it: the wider the radius, the fainter the shadow, until a thin object's shadow all but disappears. **The extent grows the object's silhouette before the blur** — outward for a shadow dropped outside, inward for one cast inside — so the shadow keeps its full strength that much further, and a wide radius then fades it softly instead of washing it out. A feathered cutout keeps its feathering: its whole soft edge moves out by the extent. The extent does not switch a shadow on by itself; it grows whichever side the radius names.
+: A direction, an offset, a blur radius, an extent and a colour whose opacity is the shadow's strength. **The direction** says where the shadow falls: _Outside_ drops it behind the object, _Inside_ casts it inside the object, along its own edges. A shadow shows once it has a blur or an extent; with both at zero there is none, whatever the offset. The shadow is taken from the object as it is drawn — after its cutout, its border and its opacity — so a feathered frame casts a feathered shadow and a translucent one a fainter shadow.
+: A blur only spreads the shadow, it never adds to it: the wider the radius, the fainter the shadow, until a thin object's shadow all but disappears. **The extent grows the object's silhouette before the blur** — outward for a shadow dropped outside, inward for one cast inside — so the shadow keeps its full strength that much further, and a wide radius then fades it softly instead of washing it out. A feathered cutout keeps its feathering: its whole soft edge moves out by the extent. With no blur at all, the extent gives a hard edge: a solid outline behind the object, or a solid band along its inner edges.
 
 Fill
 : The object's _Opacity_, and a frame's _Background_: the colour laid under its content, which is what fills a text frame's box.
