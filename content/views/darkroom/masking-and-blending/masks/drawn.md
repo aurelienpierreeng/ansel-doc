@@ -65,10 +65,10 @@ The grid is application-wide. Which parameter the wheel edits is a habit of your
 Out of the box, the grid maps:
 
 {{< param-table indent="0" >}}
-| <kbd class="mouse">Scroll</kbd> | <div>_Size_</div> |
-| <kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd> | <div>_Fading_ -- widens or narrows the dashed border, or bends a Gradient</div> |
-| <kbd>Ctrl</kbd>+<kbd class="mouse">scroll</kbd><br>(<kbd>⌘</kbd>+<kbd class="mouse">scroll</kbd> on macOS) | <div>_Opacity_</div> |
-| <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd><br>(<kbd>⌘</kbd>+<kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd> on macOS) | <div>_Rotation_</div> |
+| _Size_ | <div><kbd class="mouse">Scroll</kbd></div> |
+| _Fading_ (width of the dashed border, curvature of a Gradient) | <div><kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd></div> |
+| _Opacity_ | <div><kbd>Ctrl</kbd>+<kbd class="mouse">scroll</kbd><br>(<kbd>⌘</kbd>+<kbd class="mouse">scroll</kbd> on macOS)</div> |
+| _Rotation_ | <div><kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd><br>(<kbd>⌘</kbd>+<kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd> on macOS)</div> |
 {{< /param-table >}}
 
 A shape only answers for the parameters it actually has, so a combination mapped to _Rotation_ does nothing over a Circle, a Polygon or a Brush, just like a row set to _Nothing_.
@@ -209,7 +209,7 @@ The shape at the top of the list has nothing to combine with, so the four operat
 
 ### Gestures by shape
 
-Each shape answers to gestures of its own, some of them while you are still placing it. A Circle has none: it is dragged to move it and set through its parameters, and that is all.
+Each shape answers to gestures of its own, some of them while you are still placing it. A Circle has none: it is dragged to move it and set through its parameters. On every shape, the [mouse wheel](#mouse-wheel) combinations apply as well, in creation as in edit mode, for whichever of its parameters the shape has.
 
 {{< param-table indent="0" >}}
 | **Ellipse** | <div>
