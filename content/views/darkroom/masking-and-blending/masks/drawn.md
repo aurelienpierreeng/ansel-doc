@@ -62,10 +62,19 @@ There is one column per parameter -- _Size_, _Fading / Curvature_, _Opacity_ and
 
 The grid is application-wide. Which parameter the wheel edits is a habit of yours rather than a property of one shape or of the module owning the mask, so a change made from one module's _Drawn_ tab applies to every mask of every module, and it is remembered between sessions.
 
+Out of the box, the grid maps:
+
+{{< param-table indent="0" >}}
+| <kbd class="mouse">Scroll</kbd> | <div>_Size_</div> |
+| <kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd> | <div>_Fading_ -- widens or narrows the dashed border, or bends a Gradient</div> |
+| <kbd>Ctrl</kbd>+<kbd class="mouse">scroll</kbd><br>(<kbd>⌘</kbd>+<kbd class="mouse">scroll</kbd> on macOS) | <div>_Opacity_</div> |
+| <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd><br>(<kbd>⌘</kbd>+<kbd>Shift</kbd>+<kbd class="mouse">scroll</kbd> on macOS) | <div>_Rotation_</div> |
+{{< /param-table >}}
+
 A shape only answers for the parameters it actually has, so a combination mapped to _Rotation_ does nothing over a Circle, a Polygon or a Brush, just like a row set to _Nothing_.
 
 {{< note >}}
-Because the mapping is yours to set, the listings below name the parameter each shape reads, not the keys that reach it: read _Size_ as "whichever combination is mapped to _Size_" -- <kbd class="mouse">scroll</kbd> alone, unless you changed it.
+Because the mapping is yours to set, the listings below name the parameter each shape reads, not the keys that reach it: read _Size_ as "whichever combination is mapped to _Size_" -- <kbd class="mouse">scroll</kbd> alone with the default mapping above.
 {{< /note >}}
 
 ### Brush options
@@ -151,10 +160,6 @@ To leave creation mode, click the shape's button again, press <kbd>Escape</kbd>,
 
 The [wheel](#mouse-wheel) adjustments made on a shape being created also update the _defaults_ for that shape type, which the next shape you create will start from. The gestures each shape answers to while you place it are listed with its editing ones under [gestures by shape](#gestures-by-shape).
 
-{{< note >}}
-Scrolling up increases the value being adjusted. [Preferences > Invert the direction of the mouse vertical scroll](../../../../preferences-settings/darkroom.md) reverses this -- a general scroll-direction setting that affects every slider in Ansel, not just masks.
-{{< /note >}}
-
 ## Editing a shape
 
 ### Selecting and moving
@@ -238,6 +243,10 @@ Each shape answers to gestures of its own, some of them while you are still plac
 - <kbd>Shift</kbd>+<kbd class="mouse">click</kbd>, while still in creation mode: switches the opacity transition between a _linear_ ramp and a _sigmoidal_ (S-curve) one, which concentrates the transition closer to the center line. The choice sticks for the gradients you create afterwards
 </div> |
 {{< /param-table >}}
+
+{{< note >}}
+Scrolling up increases the value being adjusted. [Preferences > Invert the direction of the mouse vertical scroll](../../../../preferences-settings/darkroom.md) reverses this -- a general scroll-direction setting that affects every slider in Ansel, not just masks.
+{{< /note >}}
 
 ## Removing a shape
 
