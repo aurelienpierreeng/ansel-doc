@@ -209,6 +209,7 @@ The view switcher. It lists every available view and switches to the one you pic
 - **Lighttable** (<kbd>Escape</kbd>)
 - **Darkroom** (<kbd>Enter</kbd> — opens the selected image)
 - **Studio capture** — to survey and import new image automatically to see them directly into darktable
+- **Canvas** — lay pictures out on an infinite plane and export the result as pages
 - **Map**, **Print**, **Slideshow** (when enabled in the [preferences](../preferences-settings/other-views.md))
 
 ## Help

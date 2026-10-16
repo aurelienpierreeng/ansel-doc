@@ -1,7 +1,7 @@
 ---
 title: Views
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2026-06-16
+lastmod: 2026-09-11
 draft: false
 weight: 20
 author: "people"
@@ -14,6 +14,9 @@ Ansel separates its functionality into several _views_, each dedicated to one ta
 
 [Darkroom](darkroom/_index.md)
 : Develop a single image. Open it from the lighttable by double-clicking a thumbnail, or by selecting a picture and pressing <kbd>Enter</kbd>.
+
+[Canvas](canvas/_index.md)
+: Lay pictures out on an infinite plane, annotate them, and export the result as pages. A sketchbook for moodboards, storyboards, collages, culling boards and simple photo books.
 
 [Map](map/_index.md)
 : Show geo-tagged images on a map and geo-tag new images manually. Hidden by default; enable it in the [preferences](../preferences-settings/other-views.md).
