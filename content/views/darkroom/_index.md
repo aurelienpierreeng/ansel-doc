@@ -18,9 +18,11 @@ How an image is processed is the subject of the [pixelpipe](pixelpipe/_index.md)
 
 ## Zoom and pan
 
-Middle-click the center area to cycle between **fit to screen**, **1:1** and **2:1**.
+Middle-click the center area to step through **fit to screen**, **100%**, **200%**, **400%** and **800%**, then back to fit to screen.
 
-Scroll with the mouse wheel to zoom between fit-to-screen and 1:1. Hold <kbd>Ctrl</kbd> while scrolling to extend the range from 2:1 up to 1:10. When zoomed in past the window, drag the image to pan.
+Scroll with the mouse wheel to zoom gradually, from a third of the fit-to-screen size up to 1600%; the zoom stops on fit to screen as it passes it. Both the middle click and the scroll zoom around the point under the pointer. When zoomed in past the window, drag the image to pan.
+
+From the keyboard, <kbd>Ctrl</kbd>+<kbd>0</kbd> (<kbd>⌘</kbd>+<kbd>0</kbd> on macOS) fits the image to the window, and <kbd>Ctrl</kbd>+<kbd>1</kbd> (<kbd>⌘</kbd>+<kbd>1</kbd> on macOS) shows it at 100%, both around the center of the view. They are the _Zoom to fit_ and _Zoom to 100%_ actions under `Darkroom/Main image`, which can be rebound in the [shortcuts window](../../getting-started/keyboard.md#finding-default-shortcuts-setting-new-ones).
 
 ## Working with modules
 

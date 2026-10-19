@@ -106,7 +106,7 @@ The **Apply to the displayed image** button re-applies the whole pool, in order,
 
 The center always shows one capture, full-size, with any styles already baked in. Use the filmstrip at the bottom to look back through the session.
 
-- **Zoom**: <kbd>double-click</kbd>, <kbd>middle-click</kbd>, or <kbd>scroll</kbd> the image to toggle between fit-to-window and 100%.
+- **Zoom**: <kbd>double-click</kbd>, <kbd>middle-click</kbd>, or <kbd>scroll</kbd> the image to toggle between fit-to-window and 100%. From the keyboard, <kbd>Ctrl</kbd>+<kbd>+</kbd> zooms to 100% and <kbd>Ctrl</kbd>+<kbd>-</kbd> back to fit-to-window (<kbd>⌘</kbd>+<kbd>+</kbd> and <kbd>⌘</kbd>+<kbd>-</kbd> on macOS).
 - **Pan** at 100%: <kbd>drag</kbd>, or use the <kbd>arrow keys</kbd>.
 - **Filmstrip**: <kbd>double-click</kbd> a thumbnail to preview that capture in the
   center.

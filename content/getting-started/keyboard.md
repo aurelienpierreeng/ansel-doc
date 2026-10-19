@@ -114,6 +114,10 @@ You can filter the current collection by text using the search entry, which will
 
 ### Darkroom
 
+#### Zoom
+
+<kbd>Ctrl</kbd>+<kbd>0</kbd> (<kbd>⌘</kbd>+<kbd>0</kbd> on macOS) fits the main image to the window, and <kbd>Ctrl</kbd>+<kbd>1</kbd> (<kbd>⌘</kbd>+<kbd>1</kbd> on macOS) shows it at 100%. Both are listed under `Darkroom/Main image` in the shortcuts window, where they can be rebound. The mouse equivalents are described under [zoom and pan](../views/darkroom/_index.md#zoom-and-pan).
+
 #### Modules
 
 To collapse/expand and focus a module, you can:
@@ -178,5 +182,7 @@ Certain shortcuts are already reserved by your operating system and desktop envi
 ## Key variants and alternatives
 
 The numpad key alternatives (digits, enter, delete, home, end, insert, page up/down, arrows) are decoded as the non-numpad alternatives by all shortcuts, which means numbers will be seen as the same object no matter where they are typed. They respond to numlock as they should (numlock on enables digits and arithmetic operators, numlock off enables navigation).
+
+Shortcuts also match the character typed rather than the key it is on: a <kbd>Shift</kbd> needed to type a digit or a symbol is not part of the shortcut. On a layout that types digits with <kbd>Shift</kbd>, such as AZERTY, <kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>&amp;</kbd> is therefore read as <kbd>Ctrl</kbd>+<kbd>1</kbd>.
 
 Ansel allows single-key shortcuts, without modifier, which is non-standard and may cause issues with some keys. For this reason, shortcuts are temporarily disabled when a text entry is active. If that causes issues on your system, consider using typical double-key shortcuts (with a modifier).
