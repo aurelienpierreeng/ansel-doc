@@ -16172,6 +16172,22 @@ msgstr ""
 msgid "Scroll the grid with the mouse wheel. From the keyboard, navigate thumbnails with the arrow keys, jump a page with <kbd>Page Up</kbd>/<kbd>Page Down</kbd>, and go to the start/end with <kbd>Home</kbd>/<kbd>End</kbd>. The full keyboard model is documented in [shortcuts and keyboard interaction](../../getting-started/keyboard.md#thumbtable).\n"
 msgstr "Faites défiler la grille avec la molette de la souris. Au clavier, naviguez entre les miniatures avec les touches fléchées, sautez d'une page avec <kbd>Page préc.</kbd>/<kbd>Page suiv.</kbd>, et allez au début/à la fin avec <kbd>Origine</kbd>/<kbd>Fin</kbd>. Le modèle complet du clavier est documenté dans [raccourcis et interaction au clavier](../../getting-started/keyboard.md#thumbtable).\n"
 
+#. type: Plain text
+#: content/views/lighttable/_index.md
+#, markdown-text, no-wrap
+msgid ""
+"- **Thumbnail source** — process the RAW, use the embedded JPEG only when "
+"the image is unedited, or always use the embedded JPEG. Changing this takes "
+"effect at runtime. With **Always use embedded JPG**, an image that carries "
+"no usable preview shows a "
+"[skull](digital-asset-management/thumbnails.md#skulls).\n"
+"- **Collapse grouped images** and **Show group borders** "
+"(<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) — see "
+"[grouping](digital-asset-management/grouping.md).\n"
+msgstr ""
+"- **Source de la miniature** — traiter le RAW, utiliser le JPEG embarqué uniquement lorsque l'image n'est pas modifiée, ou toujours utiliser le JPEG embarqué. Cette modification prend effet en cours d'exécution. Avec **Toujours utiliser le JPG embarqué**, une image qui ne contient aucun aperçu utilisable affiche une [tête de mort](digital-asset-management/thumbnails.md#têtes-de-mort).\n"
+"- **Replier les images groupées** et **Afficher les bordures de groupe** (<kbd>Ctrl</kbd>+<kbd>Maj</kbd>+<kbd>P</kbd>) — voir [groupement](digital-asset-management/grouping.md).\n"
+
 #. type: Yaml Front Matter Hash Value: title
 #: content/views/lighttable/history-copy-paste.md
 #, no-wrap
@@ -16913,6 +16929,176 @@ msgstr "- _Format d'image invalide_ : bien que l'extension d'une image puisse se
 #, no-wrap
 msgid "- _Low memory_: If Ansel runs out of memory while generating a thumbnail, it will warn you and display a skull. This can happen if Ansel is run with sub-optimal settings, especially on a 32-bit system. See [memory and performance tuning](../../../preferences-settings/performance/mem-performance.md) for more information.\n"
 msgstr "- _Mémoire insuffisante_ : si Ansel manque de mémoire lors de la génération d'une miniature, il vous en avertira et affichera une tête de mort. Cela peut se produire si Ansel est exécuté avec des paramètres sous-optimaux, en particulier sur un système 32 bits. Voir [réglage de la mémoire et des performances](../../../preferences-settings/performance/mem-performance.md) pour plus d'informations.\n"
+
+#. type: Plain text
+#: content/views/lighttable/digital-asset-management/thumbnails.md
+#, no-wrap
+msgid "When an image is imported for the first time Ansel can either try to extract an embedded thumbnail from the input image (most raw files contain these, usually in JPEG format) or process the raw image itself using default settings. Choose how Ansel obtains its thumbnails from the global menu **Display** 🡒 **Thumbnail source** — **Always process the RAW**, **Use embedded JPG if unedited**, or **Always use embedded JPG**. This can be changed at runtime.\n"
+msgstr "Lorsqu'une image est importée pour la première fois, Ansel peut soit essayer d'extraire une miniature intégrée à l'image d'entrée (la plupart des fichiers RAW en contiennent, généralement au format JPEG), soit traiter l'image RAW elle-même en utilisant les paramètres par défaut. Choisissez comment Ansel obtient ses miniatures depuis le menu global **Affichage** 🡒 **Source de la miniature** — **Toujours traiter le RAW**, **Utiliser le JPG embarqué si non modifié**, ou **Toujours utiliser le JPG embarqué**. Ceci peut être modifié en cours d'exécution.\n"
+
+#. type: Plain text
+#: content/views/lighttable/digital-asset-management/thumbnails.md
+#, no-wrap
+msgid "You can pre-render or purge cached thumbnails for the selected images at runtime from the global menu **Run** 🡒 **Preload selected thumbnails in cache** and **Purge selected thumbnails from cache**.\n"
+msgstr "Vous pouvez pré-générer ou purger les miniatures en cache pour les images sélectionnées en cours d'exécution depuis le menu global **Exécuter** 🡒 **Précharger les miniatures sélectionnées dans le cache** et **Purger les miniatures sélectionnées du cache**.\n"
+
+#. type: Plain text
+#: content/views/lighttable/digital-asset-management/thumbnails.md
+#, no-wrap
+msgid "When Ansel cannot produce a thumbnail, it shows a skull in its place, with a short message naming the reason. A skull only concerns the thumbnail: the image file, its editing history and its sidecar are left untouched, and the thumbnail comes back once the cause is fixed.\n"
+msgstr "Quand Ansel ne parvient pas à produire une miniature, il affiche une tête de mort à sa place, avec un court message qui en donne la raison. Une tête de mort ne concerne que la miniature : le fichier de l'image, son historique de développement et son fichier lié restent intacts, et la miniature revient une fois la cause corrigée.\n"
+
+#. type: Plain text
+#: content/views/lighttable/digital-asset-management/thumbnails.md
+#, no-wrap
+msgid "{{< figure src=\"skull.jpg\" alt=\"skull thumbnail\" class=\"align-left borderless tight\" />}}\n"
+msgstr "{{< figure src=\"skull.jpg\" alt=\"miniature en tête de mort\" class=\"align-left borderless tight\" />}}\n"
+
+#. type: Plain text
+#: content/views/lighttable/digital-asset-management/thumbnails.md
+#, no-wrap
+msgid ""
+"{{< note >}}\n"
+"- On a small thumbnail, the message may be cut short with an ellipsis: lower the number of [columns](../_index.md#columns-grid-size) of the lighttable grid to make the thumbnails larger and read it in full.\n"
+"- A skull stays there even after its cause has gone away. Once you have fixed the cause, select the affected images and choose **Run** 🡒 **Purge selected thumbnails from cache** to have their thumbnails generated again. A purge does not reload a file that Ansel had already decoded successfully: if you replaced such a file and the skull comes back, restart Ansel.\n"
+"{{< /note >}}\n"
+msgstr ""
+"{{< note >}}\n"
+"- Sur une petite miniature, le message peut être tronqué par des points de suspension : réduisez le nombre de [colonnes](../_index.md#colonnes-taille-de-la-grille) de la grille de la table lumineuse pour agrandir les miniatures et le lire en entier.\n"
+"- Une tête de mort reste affichée même après la disparition de sa cause. Une fois la cause corrigée, sélectionnez les images concernées et choisissez **Exécuter** 🡒 **Purger les miniatures sélectionnées du cache** pour que leurs miniatures soient générées à nouveau. Une purge ne recharge pas un fichier qu'Ansel avait déjà décodé avec succès : si vous avez remplacé un tel fichier et que la tête de mort revient, redémarrez Ansel.\n"
+"{{< /note >}}\n"
+
+#. type: Plain text
+#: content/views/lighttable/digital-asset-management/thumbnails.md
+#, no-wrap
+msgid "Each message names one cause, listed here with what to do about it. When the skull comes from a file Ansel could not decode — _I/O error_, _Corrupted file_, _Unsupported camera_, _Unsupported feature_ or _Loading error_ — a notification also says _The file … is supported by none of our decoders_.\n"
+msgstr "Chaque message désigne une cause, donnée ici avec ce qu'il faut faire. Quand la tête de mort vient d'un fichier qu'Ansel n'a pas pu décoder — _Erreur d'E/S_, _Fichier corrompu_, _Boîtier non supporté_, _Fonction non supportée_ ou _Erreur de chargement_ —, une notification indique aussi _Le fichier … n'est pris en charge par aucun de nos décodeurs_.\n"
+
+#. type: Plain text
+#: content/views/lighttable/digital-asset-management/thumbnails.md
+#, no-wrap
+msgid ""
+"{{< param-table >}}\n"
+"| **File not found**<div>\n"
+"Ansel found the image file neither at the location recorded in its library nor as a [local copy](local-copies.md). Ansel does not follow files that are changed outside of it: the file was moved, renamed or deleted, or it is stored on a drive that is not connected at the moment — an external disk, a memory card or a network share.\n"
+msgstr ""
+"{{< param-table >}}\n"
+"| **Fichier non trouvé**<div>\n"
+"Ansel n'a trouvé le fichier de l'image ni à l'emplacement enregistré dans sa bibliothèque, ni sous forme de [copie locale](local-copies.md). Ansel ne suit pas les fichiers modifiés en dehors de lui : le fichier a été déplacé, renommé ou supprimé, ou bien il se trouve sur un support qui n'est pas connecté pour le moment — un disque externe, une carte mémoire ou un partage réseau.\n"
+
+#. type: Plain text
+#: content/views/lighttable/digital-asset-management/thumbnails.md
+#, no-wrap
+msgid ""
+"- If the drive is disconnected, connect it again so that the file is back at the same path, then purge the thumbnail.\n"
+"- If you moved or renamed the folder, give Ansel its new location with **relocate…** in the _Folders_ tab of the [Library module](../../toolboxes/collections.md#updating-the-folder-path-of-moved-images), then purge the thumbnail.\n"
+"- If you deleted the file on purpose, remove the image from the library as well, with **File** 🡒 **Remove from library**. To find and remove every image whose file is gone, close Ansel and run [`purge_non_existing_images.sh`](../../../cli/purge_non_existing_images_sh.md).\n"
+"</div> |\n"
+"| **I/O error**<div>\n"
+"The file is where Ansel expects it, but Ansel could not read it: the file is empty, or your user account is not allowed to read it. Ansel refuses such a file at import, so it has changed since — emptied by an interrupted copy or synchronization, for instance, or given other permissions.\n"
+msgstr ""
+"- Si le support est déconnecté, reconnectez-le pour que le fichier se retrouve au même chemin, puis purgez la miniature.\n"
+"- Si vous avez déplacé ou renommé le dossier, indiquez à Ansel son nouvel emplacement avec **relocaliser…** dans l'onglet _Dossiers_ du [module Bibliothèque](../../toolboxes/collections.md#mettre-à-jour-le-chemin-du-dossier-des-images-déplacées), puis purgez la miniature.\n"
+"- Si vous avez supprimé le fichier volontairement, retirez aussi l'image de la bibliothèque, avec **Fichier** 🡒 **Retirer de la bibliothèque**. Pour trouver et retirer toutes les images dont le fichier a disparu, fermez Ansel et lancez [`purge_non_existing_images.sh`](../../../cli/purge_non_existing_images_sh.md).\n"
+"</div> |\n"
+"| **Erreur d'E/S**<div>\n"
+"Le fichier est là où Ansel l'attend, mais Ansel n'a pas pu le lire : le fichier est vide, ou votre compte utilisateur n'a pas le droit de le lire. Ansel refuse un tel fichier à l'import, il a donc changé depuis — vidé par une copie ou une synchronisation interrompue, par exemple, ou ses permissions ont été modifiées.\n"
+
+#. type: Plain text
+#: content/views/lighttable/digital-asset-management/thumbnails.md
+#, no-wrap
+msgid ""
+"- If the file is empty, copy it again from the memory card or from a backup, then purge the thumbnail.\n"
+"- If the file cannot be read, give your user account the permission to read it, then purge the thumbnail.\n"
+"</div> |\n"
+"| **Corrupted file**<div>\n"
+"The file is there, but none of Ansel's decoders could read it: either it is damaged — typically cut short by an interrupted copy from the memory card, or by a failing disk — or it holds data in a format Ansel does not know, whatever its extension.\n"
+msgstr ""
+"- Si le fichier est vide, copiez-le à nouveau depuis la carte mémoire ou depuis une sauvegarde, puis purgez la miniature.\n"
+"- Si le fichier ne peut pas être lu, donnez à votre compte utilisateur le droit de le lire, puis purgez la miniature.\n"
+"</div> |\n"
+"| **Fichier corrompu**<div>\n"
+"Le fichier est là, mais aucun des décodeurs d'Ansel n'a pu le lire : soit il est endommagé — typiquement tronqué par une copie interrompue depuis la carte mémoire, ou par un disque défaillant —, soit il contient des données dans un format qu'Ansel ne connaît pas, quelle que soit son extension.\n"
+
+#. type: Plain text
+#: content/views/lighttable/digital-asset-management/thumbnails.md
+#, no-wrap
+msgid ""
+"1. Try to open the file in another application. If it fails there too, the file is damaged: copy it again from the memory card or from a backup, then purge the thumbnail.\n"
+"2. If the file opens elsewhere, Ansel does not support its format: report it on the [Ansel issue tracker](https://github.com/aurelienpierreeng/ansel/issues).\n"
+"</div> |\n"
+"| **Unsupported camera**<div>\n"
+"The file is a raw file from a camera model that none of Ansel's raw decoders supports.\n"
+msgstr ""
+"1. Essayez d'ouvrir le fichier dans une autre application. S'il ne s'ouvre pas là non plus, le fichier est endommagé : copiez-le à nouveau depuis la carte mémoire ou depuis une sauvegarde, puis purgez la miniature.\n"
+"2. Si le fichier s'ouvre ailleurs, Ansel ne prend pas en charge son format : signalez-le sur le [gestionnaire de tickets d'Ansel](https://github.com/aurelienpierreeng/ansel/issues).\n"
+"</div> |\n"
+"| **Boîtier non supporté**<div>\n"
+"Le fichier est un fichier RAW provenant d'un modèle de boîtier qu'aucun des décodeurs RAW d'Ansel ne prend en charge.\n"
+
+#. type: Plain text
+#: content/views/lighttable/digital-asset-management/thumbnails.md
+#, no-wrap
+msgid ""
+"Report the camera model on the [Ansel issue tracker](https://github.com/aurelienpierreeng/ansel/issues), attaching a raw file from that camera if you can.\n"
+"</div> |\n"
+"| **Unsupported feature**<div>The file is a raw file that uses a feature of its format that Ansel's raw decoders do not handle. Report it on the [Ansel issue tracker](https://github.com/aurelienpierreeng/ansel/issues), attaching the file.</div> |\n"
+"| **Loading error**<div>Ansel's raw decoder recognized the file but could not load its image data. Report it on the [Ansel issue tracker](https://github.com/aurelienpierreeng/ansel/issues), attaching the file.</div> |\n"
+"| **Out of RAM**<div>\n"
+"Ansel could not get the memory it needed to produce the thumbnail, either to load the image at full size — a _Not enough memory_ alert is then shown as well — or to process it. This depends on what else was using memory at that moment, inside or outside of Ansel, so the same image may render without trouble later.\n"
+msgstr ""
+"Signalez le modèle de boîtier sur le [gestionnaire de tickets d'Ansel](https://github.com/aurelienpierreeng/ansel/issues), en joignant si possible un fichier RAW de ce boîtier.\n"
+"</div> |\n"
+"| **Fonction non supportée**<div>Le fichier est un fichier RAW qui utilise une fonction de son format que les décodeurs RAW d'Ansel ne gèrent pas. Signalez-le sur le [gestionnaire de tickets d'Ansel](https://github.com/aurelienpierreeng/ansel/issues), en joignant le fichier.</div> |\n"
+"| **Erreur de chargement**<div>Le décodeur RAW d'Ansel a reconnu le fichier, mais n'a pas pu charger ses données d'image. Signalez-le sur le [gestionnaire de tickets d'Ansel](https://github.com/aurelienpierreeng/ansel/issues), en joignant le fichier.</div> |\n"
+"| **RAM insuffisante**<div>\n"
+"Ansel n'a pas pu obtenir la mémoire nécessaire pour produire la miniature, soit pour charger l'image en pleine résolution — une alerte _Mémoire insuffisante_ s'affiche alors aussi —, soit pour la traiter. Cela dépend de ce qui utilisait la mémoire à ce moment-là, dans Ansel ou en dehors, si bien que la même image peut s'afficher sans problème plus tard.\n"
+
+#. type: Plain text
+#: content/views/lighttable/digital-asset-management/thumbnails.md
+#, no-wrap
+msgid ""
+"Close other applications to free memory, then purge the thumbnail. If it happens often, review the memory settings in [Preferences > Processing > CPU, GPU, Memory](../../../preferences-settings/processing.md#cpu-gpu-memory), with the help of [memory and performance tuning](../../../preferences-settings/performance/mem-performance.md).\n"
+"</div> |\n"
+"| **No embedded thumbnail**<div>\n"
+"**Display** 🡒 **Thumbnail source** is set to **Always use embedded JPG**, which forbids Ansel to process the image itself, and there is no JPEG it could use for this image: neither a companion JPEG — a file with the same name and a `.jpg` or `.jpeg` extension, in the same folder — nor a readable preview embedded in the file. Not every file carries an embedded preview.\n"
+msgstr ""
+"Fermez d'autres applications pour libérer de la mémoire, puis purgez la miniature. Si cela arrive souvent, revoyez les réglages de mémoire dans [Préférences > Traitement > CPU, GPU, Mémoire](../../../preferences-settings/processing.md#cpu-gpu-memory), en vous aidant du [réglage de la mémoire et des performances](../../../preferences-settings/performance/mem-performance.md).\n"
+"</div> |\n"
+"| **Aucune miniature embarquée**<div>\n"
+"**Affichage** 🡒 **Source de la miniature** est réglé sur **Toujours utiliser le JPG embarqué**, ce qui interdit à Ansel de traiter l'image lui-même, et il n'existe aucun JPEG qu'il puisse utiliser pour cette image : ni JPEG compagnon — un fichier de même nom avec une extension `.jpg` ou `.jpeg`, dans le même dossier —, ni aperçu lisible intégré au fichier. Tous les fichiers ne contiennent pas d'aperçu intégré.\n"
+
+#. type: Plain text
+#: content/views/lighttable/digital-asset-management/thumbnails.md
+#, no-wrap
+msgid ""
+"Choose **Use embedded JPG if unedited** in **Display** 🡒 **Thumbnail source**: Ansel then processes any image that has no usable preview, instead of showing a skull. Changing the thumbnail source regenerates the thumbnails of the whole collection, so no purge is needed.\n"
+"</div> |\n"
+"| **Processing error**<div>\n"
+"The file was read, but processing it produced no thumbnail: the processing pipeline could not be set up, or one of the modules in the image's history failed. A module that runs out of memory also ends up here, rather than under _Out of RAM_.\n"
+msgstr ""
+"Choisissez **Utiliser le JPG embarqué si non modifié** dans **Affichage** 🡒 **Source de la miniature** : Ansel traite alors toute image qui n'a pas d'aperçu utilisable, au lieu d'afficher une tête de mort. Changer la source des miniatures régénère les miniatures de toute la collection, il n'y a donc pas besoin de purger.\n"
+"</div> |\n"
+"| **Erreur de traitement**<div>\n"
+"Le fichier a été lu, mais son traitement n'a produit aucune miniature : le pipeline de traitement n'a pas pu être mis en place, ou l'un des modules de l'historique de l'image a échoué. Un module qui manque de mémoire aboutit aussi ici, plutôt que sous _RAM insuffisante_.\n"
+
+#. type: Plain text
+#: content/views/lighttable/digital-asset-management/thumbnails.md
+#, no-wrap
+msgid ""
+"1. Purge the thumbnail to try again, in case the failure was momentary.\n"
+"2. If the skull comes back, open the image in the [darkroom](../../darkroom/_index.md) to check whether it renders there.\n"
+"3. Report the problem on the [Ansel issue tracker](https://github.com/aurelienpierreeng/ansel/issues), attaching the image file and its [XMP sidecar](sidecar.md), which holds the history needed to reproduce the failure.\n"
+"</div> |\n"
+"| **Aborted**<div>The processing of the thumbnail was stopped before it finished. Nothing is wrong with the image: purge the thumbnail to have it generated again.</div> |\n"
+"{{< /param-table >}}\n"
+msgstr ""
+"1. Purgez la miniature pour réessayer, au cas où l'échec était passager.\n"
+"2. Si la tête de mort revient, ouvrez l'image dans la [chambre noire](../../darkroom/_index.md) pour vérifier si elle s'y affiche.\n"
+"3. Signalez le problème sur le [gestionnaire de tickets d'Ansel](https://github.com/aurelienpierreeng/ansel/issues), en joignant le fichier de l'image et son [fichier lié XMP](sidecar.md), qui contient l'historique nécessaire pour reproduire l'échec.\n"
+"</div> |\n"
+"| **Interrompu**<div>Le traitement de la miniature a été arrêté avant d'aboutir. L'image n'a aucun problème : purgez la miniature pour la faire générer à nouveau.</div> |\n"
+"{{< /param-table >}}\n"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/views/lighttable/digital-asset-management/sidecar-import.md
@@ -17746,6 +17932,32 @@ msgid ""
 msgstr ""
 "À propos\n"
 ": Affiche la boîte de dialogue de version et de crédits.\n"
+
+#. type: Plain text
+#: content/views/global-menu.md
+#, markdown-text, no-wrap
+msgid ""
+"Purge selected thumbnails from cache\n"
+": Delete the cached thumbnails of the selected images, in memory and on "
+"disk, so they are regenerated next time — for instance once the cause of a "
+"[skull](lighttable/digital-asset-management/thumbnails.md#skulls) is "
+"fixed.\n"
+msgstr ""
+"Purger les miniatures sélectionnées du cache\n"
+": Supprime les miniatures en cache des images sélectionnées, en mémoire et sur le disque, afin qu'elles soient régénérées la prochaine fois — par exemple une fois corrigée la cause d'une [tête de mort](lighttable/digital-asset-management/thumbnails.md#têtes-de-mort).\n"
+
+#. type: Plain text
+#: content/views/global-menu.md
+#, markdown-text, no-wrap
+msgid ""
+"Thumbnail source\n"
+": How thumbnails are generated: **Always process the RAW**, **Use embedded "
+"JPG if unedited**, or **Always use embedded JPG**. With the last one, an "
+"image that carries no usable preview shows a "
+"[skull](lighttable/digital-asset-management/thumbnails.md#skulls).\n"
+msgstr ""
+"Source de la miniature\n"
+": Comment les miniatures sont générées : **Toujours traiter le RAW**, **Utiliser le JPG embarqué si non modifié**, ou **Toujours utiliser le JPG embarqué**. Avec cette dernière, une image qui ne contient aucun aperçu utilisable affiche une [tête de mort](lighttable/digital-asset-management/thumbnails.md#têtes-de-mort).\n"
 
 #. type: Yaml Front Matter Hash Value: title
 #: content/views/slideshow/_index.md

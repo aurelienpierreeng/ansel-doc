@@ -28,7 +28,7 @@ Copy to disk
 
 ### Importing without copy
 
-You will need to ensure that those images stay available on the same storage in the future, at the exact same address, because Ansel needs to access them prior to applying any history or generating exports and thumbnails. Ansel does not keep track of file moves on the filesystem,[^2] meaning displaced images will appear lost in the interface (displayed as skull thumbnails).
+You will need to ensure that those images stay available on the same storage in the future, at the exact same address, because Ansel needs to access them prior to applying any history or generating exports and thumbnails. Ansel does not keep track of file moves on the filesystem,[^2] meaning displaced images will appear lost in the interface (displayed as [skull thumbnails](../views/lighttable/digital-asset-management/thumbnails.md#skulls)).
 
 ### Importing with copy
 

@@ -125,7 +125,7 @@ Overlay focus peaking
 
 Thumbnail generation and group display are also set from the **Display** menu:
 
-- **Thumbnail source** — process the RAW, use the embedded JPEG only when the image is unedited, or always use the embedded JPEG. Changing this takes effect at runtime.
+- **Thumbnail source** — process the RAW, use the embedded JPEG only when the image is unedited, or always use the embedded JPEG. Changing this takes effect at runtime. With **Always use embedded JPG**, an image that carries no usable preview shows a [skull](digital-asset-management/thumbnails.md#skulls).
 - **Collapse grouped images** and **Show group borders** (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>) — see [grouping](digital-asset-management/grouping.md).
 
 ## Navigation

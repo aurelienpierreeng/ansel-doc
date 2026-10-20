@@ -159,7 +159,7 @@ Preload selected thumbnails in cache
 : Pre-render the thumbnails of the selected images into the on-disk cache, up to a chosen resolution (from _360×225 px_ up to _8K_, or _for current grid size_). Runs as a background task.
 
 Purge selected thumbnails from cache
-: Delete the cached thumbnails of the selected images from disk, so they are regenerated next time.
+: Delete the cached thumbnails of the selected images, in memory and on disk, so they are regenerated next time — for instance once the cause of a [skull](lighttable/digital-asset-management/thumbnails.md#skulls) is fixed.
 
 Defragment the library
 : Optimize the library database file.
@@ -194,7 +194,7 @@ Thumbnail overlays
 : When the badges drawn over thumbnails are shown: **Always hide** (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>H</kbd>), **Show on hover**, or **Always show** (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>O</kbd>).
 
 Thumbnail source
-: How thumbnails are generated: **Always process the RAW**, **Use embedded JPG if unedited**, or **Always use embedded JPG**.
+: How thumbnails are generated: **Always process the RAW**, **Use embedded JPG if unedited**, or **Always use embedded JPG**. With the last one, an image that carries no usable preview shows a [skull](lighttable/digital-asset-management/thumbnails.md#skulls).
 
 Collapse grouped images / Show group borders (<kbd>Ctrl</kbd>+<kbd>Shift</kbd>+<kbd>P</kbd>)
 : Control the display of [grouped images](lighttable/digital-asset-management/grouping.md).
