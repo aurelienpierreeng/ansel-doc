@@ -1,7 +1,7 @@
 ---
 title: Studio Capture
 date: 2026-07-06T03:15:02+01:00
-lastmod: 2026-07-06
+lastmod: 2026-11-17
 id: studio-capture
 draft: false
 weight: 20
@@ -114,7 +114,7 @@ The center always shows one capture, full-size, with any styles already baked in
 
 ### Color picker
 
-The Scopes module's color picker (point or box sample) works directly on the image shown here, the same way it does in Darkroom.
+The [global color picker](../toolboxes/global-color-picker.md) of the Scopes module works directly on the image shown here, with the [same gestures as in Darkroom](../darkroom/_index.md#picking-colors-on-the-image): with the picker on, click in the image to sample a point, or drag to sample an area. Holding <kbd>Ctrl</kbd> (<kbd>⌘</kbd> on macOS) and clicking or dragging in the image samples without turning the picker on, provided its _Color picker_ section is unfolded.
 
 ## Display toolbox
 

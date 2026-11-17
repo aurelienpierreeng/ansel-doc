@@ -1,7 +1,7 @@
 ---
 title: Darkroom
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2026-06-16
+lastmod: 2026-11-17
 id: darkroom
 weight: 30
 draft: false
@@ -29,6 +29,38 @@ From the keyboard, <kbd>Ctrl</kbd>+<kbd>0</kbd> (<kbd>⌘</kbd>+<kbd>0</kbd> on 
 The image-processing modules in the right panel are organized into [workflow tabs](darkroom-view-layout.md#module-workflow-tabs) that follow the order of the pixelpipe. The recommended way to edit is to move through the tabs from left to right, and through each module stack from bottom to top.
 
 Modules and their controls are fully navigable from the keyboard, and any module or control can be reached directly through the [global action search](../../getting-started/keyboard.md#vimkey-like-global-action-search) (<kbd>Ctrl</kbd>+<kbd>P</kbd>) or an [assigned shortcut](../../getting-started/keyboard.md#darkroom). The [anatomy of a module](pixelpipe/the-anatomy-of-a-module.md) page explains the common module controls (enable, reset, presets, multiple instances, masking & blending).
+
+## Picking colors on the image
+
+Many [modules](modules/_index.md) have a color picker button next to the control it sets, and the [scopes](../toolboxes/scopes.md) module holds the [global color picker](../toolboxes/global-color-picker.md), which only reads values. All of them sample the image with the same gestures.
+
+Click a picker's button to turn it on, then, on the image:
+
+- <kbd class="mouse">Click</kbd>: sample the point under the pointer.
+- <kbd class="mouse">Drag</kbd>: draw a rectangle and sample the area inside it.
+- <kbd class="mouse">Drag</kbd> a corner of the rectangle: resize the area.
+
+The picker stays on, and every click or drag samples again, until you click its button a second time or turn on another picker. The next time it is turned on, it shows the point or the area it held last.
+
+What a picker accepts depends on what its module does with the sample:
+
+- A picker that averages the sample takes a point or an area. This is the case in [exposure](modules/exposure.md), [color calibration](modules/color-calibration.md) and [drawing](modules/drawing.md), for the left-hand picker of the [curve](modules/curve.md) and [color zones](modules/color-zones.md) graphs, and for the global color picker.
+- Other pickers always sample an area, among them all those that search the sample for its darkest or brightest pixel, like the _white relative exposure_ and _black relative exposure_ pickers of [filmic](modules/filmic.md#scene). A click then leaves a small square around the pointer instead of a point.
+- A picker that reads a single color, like those of [levels](modules/levels.md), takes a point only. A drag moves that point.
+
+### Picking with a modifier key
+
+Hold <kbd>Ctrl</kbd> (<kbd>⌘</kbd> on macOS) while the pointer is over the image to pick without going to a picker's button. Whenever a color can be picked this way, the pointer becomes a cross: a click samples a point and a drag samples an area. The picker turns off when you release the key, and the pointer goes back to the tool it had before.
+
+The sample goes to the picker displayed by the module that has the [focus](../../getting-started/keyboard.md#modules):
+
+- If the module displays one picker, that picker receives the sample. This sets the exposure in [exposure](modules/exposure.md), the illuminant on the _CAT_ tab of [color calibration](modules/color-calibration.md), and the brush color in [drawing](modules/drawing.md).
+- If the module displays several pickers, as the _scene_ tab of [filmic](modules/filmic.md#scene) does, the key does nothing because nothing tells which picker is meant. The pointer keeps its shape, and the pickers are used from their buttons.
+- If the module displays no picker, or if no module has the focus, the [global color picker](../toolboxes/global-color-picker.md) receives the sample, provided its _Color picker_ section is unfolded in the scopes module. A module that uses clicks on the image for a tool of its own keeps them instead.
+
+Only the pickers visible on screen count: a picker on another tab of the module, or in a folded section, is ignored. The two pickers of the [parametric mask](masking-and-blending/masks/parametric.md#color-pickers) never count, so a module that has a mask still picks for its own control.
+
+The key does not pick while a picker turned on from its button is active, since that picker keeps receiving the clicks, nor while the shapes of a [drawn mask](masking-and-blending/masks/drawn.md) are displayed on the image, where the clicks belong to the shapes.
 
 ## Autoset: auto-developing an image
 

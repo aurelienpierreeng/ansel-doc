@@ -1,7 +1,7 @@
 ---
 title: Color calibration
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2026-08-21
+lastmod: 2026-11-17
 id: color-calibration
 applicable-version: 4.0
 working-color-space: RGB
@@ -55,7 +55,7 @@ To achieve this, create an instance of the _color calibration_ module to perform
 
 The default illuminant and color space used by the chromatic adaptation are initialised from the Exif metadata of the RAW file. There are four options available in the CAT tab to set these parameters manually:
 
-- Use the color picker (to the right of the color patch) to select a neutral color from the image or, if one is unavailable, select the entire image. In this case, the algorithm finds the average color within the chosen area and sets that color as the illuminant. This method relies on the "gray-world" assumption, which predicts that the average color of a natural scene will be neutral. This method will not work for artificial scenes, for example those with painted surfaces.
+- Use the color picker (to the right of the color patch) to select a neutral color from the image: click on it, or drag a rectangle over a neutral surface. If none is available, keep the whole image, which is what the picker samples the first time it is turned on. The algorithm finds the average color within the chosen area and sets that color as the illuminant. While the module has the focus and displays the _CAT_ tab, holding <kbd>Ctrl</kbd> (<kbd>⌘</kbd> on macOS) and clicking or dragging in the image samples in the same way without turning the picker on (see [picking colors on the image](../_index.md#picking-colors-on-the-image)). This method relies on the "gray-world" assumption, which predicts that the average color of a natural scene will be neutral. This method will not work for artificial scenes, for example those with painted surfaces.
 
 - Select "_(AI) detect from edges_", which uses a machine-learning technique to detect the illuminant using the entire image. This algorithm finds the average gradient color over the edges in the image and sets that color as the illuminant. This method relies on the "gray-edge" assumption, which may fail if large chromatic aberrations are present. As with any edge-detection method, it is sensitive to noise and poorly suited to high-ISO images, but it is very well suited for artificial scenes where no neutral colors are available.
 
@@ -377,7 +377,7 @@ The mapping process consists of two steps.
 There are two ways of setting the target chromaticity for your control sample:
 
 1. If you know or expect an arbitrary color for the control sample (for example, a gray card, a color chart, a product or a logo of a specified color), you can set its L, h and c values directly, in Lch derived from CIE Lab 1976 space,
-2. If you simply want to match the development of your reference image, set the _spot mode_ to _measure_, then enable the color picker (to the right of the color patch) and draw a rectangle over your control sample. The _input_ column will then be updated with the L, h, c values of the control sample before the color correction, and the _target_ column will show the resulting L, h, c values of the control sample after the current calibration setting is applied.
+2. If you simply want to match the development of your reference image, set the _spot mode_ to _measure_, then enable the color picker (to the right of the color patch) and click on your control sample, or draw a rectangle over it. The _input_ column will then be updated with the L, h, c values of the control sample before the color correction, and the _target_ column will show the resulting L, h, c values of the control sample after the current calibration setting is applied.
 
 If you reset the L, h, c values, the default value is a neutral color at 50% lightness (middle-gray) -- this can be useful to quickly set the average white balance of any image. If you want to match the control sample against neutral gray, you only need to reset the chroma slider because the lightness and hue settings have no effect on chromaticity for neutral grays.
 
@@ -393,7 +393,7 @@ The _take channel mixing into account_ option lets you choose where the target i
 
 ### Step 2 : match the target
 
-When you open a new image, the _spot mode_ is automatically reset to _correction_. Using the color picker attached to the color patch, you can then directly reselect your control sample in the new image. The proper illuminant settings required for the control sample to match the memorized target chromaticity will be automatically computed, and the setting will be updated in the same operation.
+When you open a new image, the _spot mode_ is automatically reset to _correction_. Using the color picker attached to the color patch, or holding <kbd>Ctrl</kbd> (<kbd>⌘</kbd> on macOS) and clicking in the image while the _CAT_ tab is displayed, you can then directly reselect your control sample in the new image. The proper illuminant settings required for the control sample to match the memorized target chromaticity will be automatically computed, and the setting will be updated in the same operation.
 
 The _take channel mixing into account_ option will need to be set the same as when the measurement of the target was performed to ensure consistent results. Note that the target matching only defines the illuminant settings used in the Chromatic Adaptation Transform  -- it does not alter the channel mixer settings, since the calibration is handled in the color checker calibration tool. However, the channel mixer settings can be used or discarded in the computation of the illuminant settings, depending on this option.
 
