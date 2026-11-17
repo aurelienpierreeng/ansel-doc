@@ -119,14 +119,27 @@ smudge
 
 ### Color
 
-color
-: Sets the brush color in display RGB.
+The color, its swatches and the color picker are displayed in _paint_ mode only, the one mode that lays down a color.
 
-pick from
-: Choose whether the color picker samples from the module input or output.
+Color
+: The brush color. The module keeps it in the working RGB space of the [pixelpipe](../pixelpipe/_index.md), which is the space the layer is painted in, and converts it to the [profile of your display](../../../color-management/display-profile.md) only to draw it in the interface. The color shown in the module, the one filling the brush cursor on the image and the one painted therefore match, and a saved color means the same on every display.
+: The ten colors chosen last are kept in the swatches underneath. Click one to paint with it again.
+
+Color picker
+: Takes the brush color from the image. Turn it on, then click in the image to take the color of the point under the pointer, or drag to take the average color of a rectangle. It stays on until you click its button again, so use [the modifier key](#picking-a-color-while-painting) to pick in the middle of painting.
+
+Pick from
+: Choose where the color picker samples the image: at the module _input_, which is the image without this layer, or at its _output_, which is the image with the layer painted over it.
 
 HDR exposure
 : Raises the brush color intensity above display white. This is useful if the layer is meant to live in a scene-referred HDR pipeline rather than as a simple display-referred overlay.
+: The gain is applied when the brush paints, and taken back out of a picked color, so picking a patch this brush painted gives back the color that was chosen for it.
+
+#### Picking a color while painting
+
+In _paint_ mode, hold <kbd>Ctrl</kbd> (<kbd>⌘</kbd> on macOS) over the image to turn the brush into the color picker for as long as the key is held. The brush circle is replaced by a cross: a click takes the color of the point under it, and a drag takes the average color of the rectangle it draws. Release the key and the brush paints again, with the new color.
+
+The color is sampled at the module input or output, as set in _Pick from_, and no layer needs to exist yet. This is the [modifier-key picking](../_index.md#picking-with-a-modifier-key) common to the darkroom, which this module applies to its brush.
 
 ### Geometry
 

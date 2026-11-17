@@ -165,6 +165,10 @@ Once a control is focused, you can focus to the previous/next with <kbd>Up</kbd>
 
 Once a shortcut is attached to a control (slider or combobox) focusing action, as long as the shortcut keys are kept pressed, all mouse scrolling events are sent to this control even when the mouse is not over the widget (as it would normally require to record scrolling events). This allows a 2-hands mixed workflow where one hand, on the keyboard, selects the target control, while the other scrolls on the mouse to adjust the value. It replaces MIDI support that achieves the same through mapping exactly one potentiometer to exactly one control, which will quickly run out of knobs to control Ansel.
 
+#### Color pickers
+
+Hold <kbd>Ctrl</kbd> (<kbd>⌘</kbd> on macOS) over the image and click or drag to sample for the color picker of the focused module, without clicking its button. [Picking with a modifier key](../views/darkroom/_index.md#picking-with-a-modifier-key) explains which picker receives the sample.
+
 #### Module instances
 
 When several instances of modules are in use, shortcuts are always attached to the first-added instance, which may not necessarily be the first in the pixel pipeline: the first instance is always the unnamed, base instance, until it gets deleted (then the next replaces it).[^1]

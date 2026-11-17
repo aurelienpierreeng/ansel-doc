@@ -1,7 +1,7 @@
 ---
 title: Parametric masks
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2026-06-17
+lastmod: 2026-11-17
 id: parametric
 weight: 30
 draft: false
@@ -65,9 +65,11 @@ A polarity (+/-) button to the right of each the slider switches between "range 
 
 ## Color pickers
 
-With the left-hand color picker button you can select a point or area probe from your image. The corresponding values for the real and virtual data channels are then displayed within each color channel slider.
+With the left-hand color picker button you can select a point or area probe from your image: with the picker on, click in the image for a point, or drag for an area. The corresponding values for the real and virtual data channels are then displayed within each color channel slider.
 
-With the right-hand color picker button you can automatically set the slider's values based on the selected range. Click and drag to set the parameters for the input slider from the drawn rectangle; Ctrl+click and drag to set the parameters for the output slider.
+With the right-hand color picker button you can automatically set the slider's values based on the selected range. Drag in the image to set the parameters for the input slider from the drawn rectangle; hold <kbd>Ctrl</kbd> (<kbd>⌘</kbd> on macOS) while dragging to set the parameters for the output slider.
+
+These two pickers are turned on from their buttons only: [picking with a modifier key](../../_index.md#picking-with-a-modifier-key) never selects them.
 
 ## Invert
 

@@ -16,33 +16,31 @@ Increase or decrease the overall brightness of an image.
 This module has two modes of operation:
 
 manual
-: Set the _exposure_, _black level_ and _clipping threshold_ manually
+: Set the _exposure_ and _black level_ manually
 
 automatic (RAW images only)
 : Use an analysis of the image's histogram to automatically set the exposure. Ansel automatically selects the exposure compensation that is required to shift the selected _percentile_ to the selected _target level_ (see definitions below). This mode is particularly useful for automatically altering a large number of images to have the same exposure. A typical use case of automatic mode is deflickering of time-lapse photographs.
 
 ## Module controls
 
-mode
+Mode
 : Choose the mode of operation (automatic/manual).
 
-compensate camera exposure (manual mode)
+Compensate camera exposure (manual mode)
 : Automatically remove the camera exposure bias (taken from the image's Exif data).
 
-exposure (manual mode)
+Exposure (manual mode)
 : Increase (move to the right) or decrease (move to the left) the exposure value (EV). To adjust by more than the default limits shown on the slider, right click and enter the desired value up to +/-18 EV.
-: The color picker tool on the right sets the exposure such that the average of the selected region matches the target lightness defined in [spot exposure mapping](#spot-exposure-mapping) options.
+: The color picker on the right sets the exposure such that the average of the sampled region matches the target lightness defined in the [spot exposure mapping](#spot-exposure-mapping) options. The first time it is turned on, it samples nearly the whole image. Then click in the image to sample a point, or drag to sample a rectangular area.
+: While the module has the focus, holding <kbd>Ctrl</kbd> (<kbd>⌘</kbd> on macOS) and clicking or dragging in the image samples in the same way without turning the picker on. See [picking colors on the image](../_index.md#picking-colors-on-the-image).
 
-clipping threshold (manual mode)
-: Define what percentage of bright values are to be clipped in the calculation of the _exposure_ and _black level correction_. Use the color picker to sample a portion of the image to be used for this calcuation.
-
-percentile (automatic mode)
+Percentile (automatic mode)
 : Define a location in the histogram to use for automatic exposure correction. A percentile of 50% denotes a position in the histogram where 50% of pixel values are above and 50% of pixel values are below that exposure.
 
-target level (automatic mode)
+Target level (automatic mode)
 : Define the target level for automatic exposure correction (EV) relative to the white point of the camera.
 
-black level correction (manual and automatic modes)
+Black level correction (manual and automatic modes)
 : Adjust the black level point to unclip negative RGB values.
 
 ---
@@ -66,7 +64,7 @@ The mapping process consists of two steps.
 There are two ways of setting the target brightness for your control sample:
 
 1. If you know or expect an arbitrary lightness for the control sample (for example, a gray card, a color chart, a product or a logo of a specified brightness), you can set its L value directly, in CIE Lab 1976 space,
-2. If you simply want to match the development of your reference image, set the _spot mode_ to _measure_, then enable the color picker (to the right of the _exposure_ slider) and draw a rectangle over your control sample. The _input_ column will then be updated with the lightness value of the control sample before the exposure correction, and the _target_ column will show the resulting lightness of the control sample after the current exposure setting is applied.
+2. If you simply want to match the development of your reference image, set the _spot mode_ to _measure_, then enable the color picker (to the right of the _exposure_ slider) and click on your control sample, or draw a rectangle over it. The _input_ column will then be updated with the lightness value of the control sample before the exposure correction, and the _target_ column will show the resulting lightness of the control sample after the current exposure setting is applied.
 
 If you reset the lightness value, the default value is 50% (middle-gray) -- this can be useful to quickly set the average exposure of any image.
 
@@ -74,7 +72,7 @@ Note that the target value is not reset when you reset the module itself, but is
 
 ### Step 2 : match the target
 
-When you open a new image, the _spot mode_ is automatically reset to _correction_. Using the color picker attached to the exposure slider, you can then directly reselect your control sample in the new image. The proper exposure setting required for the control sample to match the memorized target lightness will be automatically computed, and the setting will be updated in the same operation.
+When you open a new image, the _spot mode_ is automatically reset to _correction_. Using the color picker attached to the exposure slider, or holding <kbd>Ctrl</kbd> (<kbd>⌘</kbd> on macOS) and clicking in the image, you can then directly reselect your control sample in the new image. The proper exposure setting required for the control sample to match the memorized target lightness will be automatically computed, and the setting will be updated in the same operation.
 
 This operation can be repeated as many times as you have images in your series with no further work.
 

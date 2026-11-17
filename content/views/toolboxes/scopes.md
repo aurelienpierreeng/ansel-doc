@@ -1,7 +1,7 @@
 ---
 title: Scopes
 date: 2022-12-04T02:19:02+01:00
-lastmod: 2026-06-17
+lastmod: 2026-11-17
 id: scopes
 tags:
 view: darkroom
@@ -23,11 +23,11 @@ Show data from
 : Where in the [pixelpipe](../darkroom/pixelpipe/_index.md) the data is sampled, which determines the color space of the plot:
     - **Raw image** — straight off the sensor, before color processing.
     - **Output color profile** — at the [output color profile](../darkroom/modules/output-color-profile.md) stage.
-    - **Final display** — after the full pipeline, in display space (what you actually see).
+    - **Final display** — after the full pipeline, in display space (what you actually see). This is the default.
 
 Display
 : The type of scope to draw: 
-    - **Histogram**, 
+    - **Histogram** (the default),
     - **Waveform (horizontal)**, 
     - **Waveform (vertical)**, 
     - **Parade (horizontal)**, 
