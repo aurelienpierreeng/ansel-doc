@@ -11,7 +11,7 @@ The global color picker samples colors from the current image, displays their va
 
 Activate it with the color-picker button. It keeps sampling until you turn it off or leave the darkroom.
 
-When the focused module displays no color picker of its own, you can also hold <kbd>Ctrl</kbd> (<kbd>⌘</kbd> on macOS) and click or drag in the image: the global picker samples without being turned on, and turns off again when you release the key. [Picking colors on the image](../darkroom/_index.md#picking-colors-on-the-image) describes the gestures and how the picker is chosen.
+When the focused module displays no color picker of its own, you can also hold <kbd>Ctrl</kbd> (<kbd>⌘</kbd> on macOS) and click or drag in the image: the global picker turns on by itself, samples, and turns off again when you release the key. [Picking colors on the image](../darkroom/_index.md#picking-colors-on-the-image) describes the gestures and how the picker is chosen.
 
 {{< note >}}
 This **global** color picker is distinct from the **local** color pickers found inside many [modules](../darkroom/modules/_index.md) (e.g. [RGB curve](../darkroom/modules/curve.md)), which set that module's parameters. The two do not work in the same color space: the global picker samples at the **end of the preview pipeline** (display space), whereas a local picker reads the input or output of the module it belongs to.
