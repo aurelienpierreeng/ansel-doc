@@ -122,8 +122,9 @@ smudge
 The color, its swatches and the color picker are displayed in _paint_ mode only, the one mode that lays down a color.
 
 Color
-: The brush color. The module keeps it in the working RGB space of the [pixelpipe](../pixelpipe/_index.md), which is the space the layer is painted in, and converts it to the [profile of your display](../../../color-management/display-profile.md) only to draw it in the interface. The color shown in the module, the one filling the brush cursor on the image and the one painted therefore match, and a saved color means the same on every display.
-: The ten colors chosen last are kept in the swatches underneath. Click one to paint with it again.
+: The brush color, chosen on the gradient: the left-hand shape sets its hue and saturation, the right-hand one its lightness and saturation. The module keeps the color in the working RGB space of the [pixelpipe](../pixelpipe/_index.md), which is the space the layer is painted in, so a saved color means the same on every display.
+: The ten colors chosen last are kept in the swatches underneath. Click one to paint with it again. The swatches, and the color filling the brush cursor on the image, show the color converted to the [profile of your display](../../../color-management/display-profile.md).
+: The paint is then processed along with the image by the modules that come after this one in the pixelpipe, such as [filmic](filmic.md), so it can look different on the image than in the swatches.
 
 Color picker
 : Takes the brush color from the image. Turn it on, then click in the image to take the color of the point under the pointer, or drag to take the average color of a rectangle. It stays on until you click its button again, so use [the modifier key](#picking-a-color-while-painting) to pick in the middle of painting.
